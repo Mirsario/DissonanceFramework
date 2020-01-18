@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Test": {
+      "commandName": "Project",
+      "workingDirectory": "Build/Windows"
+    }
+  }
+}

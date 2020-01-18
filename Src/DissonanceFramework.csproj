@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<OutputType>Library</OutputType>
+	<TargetFramework>netcoreapp3.0</TargetFramework>
+	<Platforms>AnyCPU;x64</Platforms>
+	<AssemblyName>DissonanceFramework</AssemblyName>
+	<RootNamespace>Dissonance</RootNamespace>
+	<ApplicationIcon />
+	<StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<DefineConstants>TRACE;UNSAFE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<Compile Remove="Build\**" />
+	<EmbeddedResource Remove="Build\**" />
+	<None Remove="Build\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Update="glfw3.dll">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="References\glfw3.dll">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+  </ItemGroup>
+
+</Project>
