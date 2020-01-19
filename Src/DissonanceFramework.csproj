@@ -17,17 +17,54 @@
 
   <ItemGroup>
 	<Compile Remove="Build\**" />
+	<Compile Remove="References\**" />
 	<EmbeddedResource Remove="Build\**" />
+	<EmbeddedResource Remove="References\**" />
 	<None Remove="Build\**" />
+	<None Remove="References\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="MonoMod.RuntimeDetour.dll" />
+    <None Remove="MonoMod.Utils.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>References\MonoMod.RuntimeDetour.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>References\MonoMod.Utils.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
 	<None Update="glfw3.dll">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="References\glfw3.dll">
-	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	</None>
   </ItemGroup>
+
+  <Import Project="$(SolutionDir)SolutionDefines.targets" Condition="exists('$(SolutionDir)SolutionDefines.targets')" />
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="set POSTBUILD=PostBuild.bat&#xD;&#xA;&#xD;&#xA;if exist &quot;$(SolutionDir)%25POSTBUILD%25&quot; (&#xD;&#xA;    echo Running solution's %25POSTBUILD%25...&#xD;&#xA;    call &quot;$(SolutionDir)%25POSTBUILD%25&quot; &quot;$(ProjectName)&quot; &quot;$(TargetPath)&quot; &quot;$(SolutionDir)&quot;&#xD;&#xA;) else (&#xD;&#xA;    echo Solution's %25POSTBUILD%25 is not present.&#xD;&#xA;)" />
+  </Target>
 
 </Project>

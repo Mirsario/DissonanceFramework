@@ -5,10 +5,11 @@ using CC = System.Runtime.InteropServices.CallingConvention;
 
 namespace Dissonance.Framework.OpenGL
 {
-	public static partial class GLDirect
+	partial class GLDirect
 	{
 		#region OpenGL 1.0 + OpenGL 1.1
 
+		/*
 		[UFP(CC.StdCall)] public delegate void ArrayElementExtFunc(int i);
 		[UFP(CC.StdCall)] public delegate void DrawArraysExtFunc(uint mode,int first,int count);
 		[UFP(CC.StdCall)] public delegate void VertexPointerExtFunc(int size,uint type,int stride,int count,IntPtr pointer);
@@ -26,6 +27,8 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate void GetColorTableExtFunc(uint target,uint format,uint type,IntPtr data);
 		[UFP(CC.StdCall)] public delegate void GetColorTableParameterIVExtFunc(uint target,uint pname,int[] parameters);
 		[UFP(CC.StdCall)] public delegate void GetColorTableParameterFVExtFunc(uint target,uint pname,float[] parameters);
+		*/
+
 		[UFP(CC.StdCall)] public delegate void AccumFunc(uint op,float value);
 		[UFP(CC.StdCall)] public delegate void AlphaFuncFunc(uint func,float alpha);
 		[UFP(CC.StdCall)] public delegate byte AreTexturesResidentFunc(int n,uint[] textures,IntPtr residences);
@@ -83,23 +86,23 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate void CopyTexImage2DFunc(uint target,int level,uint internalFormat,int x,int y,int width,int height,int border);
 		[UFP(CC.StdCall)] public delegate void CopyTexSubImage1DFunc(uint target,int level,int xoffset,int x,int y,int width);
 		[UFP(CC.StdCall)] public delegate void CopyTexSubImage2DFunc(uint target,int level,int xoffset,int yoffset,int x,int y,int width,int height);
-		[UFP(CC.StdCall)] public delegate void CullFaceFunc(uint mode);
+		[UFP(CC.StdCall)] public delegate void CullFaceFunc(CullFaceMode mode);
 		[UFP(CC.StdCall)] public delegate void DeleteListsFunc(uint list,int range);
 		[UFP(CC.StdCall)] public delegate void DeleteTexturesFunc(int n,uint[] textures);
-		[UFP(CC.StdCall)] public delegate void DepthFuncFunc(uint func);
+		[UFP(CC.StdCall)] public delegate void DepthFuncFunc(DepthFunction func);
 		[UFP(CC.StdCall)] public delegate void DepthMaskFunc(byte flag);
 		[UFP(CC.StdCall)] public delegate void DepthRangeFunc(double zNear,double zFar);
-		[UFP(CC.StdCall)] public delegate void DisableFunc(uint cap);
-		[UFP(CC.StdCall)] public delegate void DisableClientStateFunc(uint array);
-		[UFP(CC.StdCall)] public delegate void DrawArraysFunc(uint mode,int first,int count);
-		[UFP(CC.StdCall)] public delegate void DrawBufferFunc(uint mode);
+		[UFP(CC.StdCall)] public delegate void DisableFunc(EnableCap cap);
+		[UFP(CC.StdCall)] public delegate void DisableClientStateFunc(uint capability);
+		[UFP(CC.StdCall)] public delegate void DrawArraysFunc(PrimitiveType mode,int first,int count);
+		[UFP(CC.StdCall)] public delegate void DrawBufferFunc(DrawBufferMode mode);
 		[UFP(CC.StdCall)] public delegate void DrawElementsFunc(uint mode,int count,uint type,IntPtr indices);
 		[UFP(CC.StdCall)] public delegate void DrawPixelsFunc(int width,int height,uint format,uint type,IntPtr pixels);
 		[UFP(CC.StdCall)] public delegate void EdgeFlagFunc(byte flag);
 		[UFP(CC.StdCall)] public delegate void EdgeFlagPointerFunc(int stride,IntPtr pointer);
 		[UFP(CC.StdCall)] public delegate void EdgeFlagvFunc([In] [MarshalAs(UnmanagedType.LPStr)] string flag);
-		[UFP(CC.StdCall)] public delegate void EnableFunc(uint cap);
-		[UFP(CC.StdCall)] public delegate void EnableClientStateFunc(uint array);
+		[UFP(CC.StdCall)] public delegate void EnableFunc(EnableCap cap);
+		[UFP(CC.StdCall)] public delegate void EnableClientStateFunc(uint capability);
 		[UFP(CC.StdCall)] public delegate void EndFunc();
 		[UFP(CC.StdCall)] public delegate void EndListFunc();
 		[UFP(CC.StdCall)] public delegate void EvalCoord1dFunc(double u);
@@ -128,7 +131,7 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate void GetBooleanvFunc(uint pname,IntPtr parameters);
 		[UFP(CC.StdCall)] public delegate void GetClipPlaneFunc(uint plane,double[] equation);
 		[UFP(CC.StdCall)] public delegate void GetDoublevFunc(uint pname,double[] parameters);
-		[UFP(CC.StdCall)] public delegate uint GetErrorFunc();
+		[UFP(CC.StdCall)] public delegate GraphicsError GetErrorFunc();
 		[UFP(CC.StdCall)] public delegate void GetFloatvFunc(uint pname,float[] parameters);
 		[UFP(CC.StdCall)] public delegate void GetIntegervFunc(uint pname,int[] parameters);
 		[UFP(CC.StdCall)] public delegate void GetLightfvFunc(uint light,uint pname,float[] parameters);
@@ -168,7 +171,7 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate void IndexubvFunc([In] [MarshalAs(UnmanagedType.LPStr)] string c);
 		[UFP(CC.StdCall)] public delegate void InitNamesFunc();
 		[UFP(CC.StdCall)] public delegate void InterleavedArraysFunc(uint format,int stride,IntPtr pointer);
-		[UFP(CC.StdCall)] public delegate byte IsEnabledFunc(uint cap);
+		[UFP(CC.StdCall)] public delegate byte IsEnabledFunc(EnableCap cap);
 		[UFP(CC.StdCall)] public delegate byte IsListFunc(uint list);
 		[UFP(CC.StdCall)] public delegate byte IsTextureFunc(uint texture);
 		[UFP(CC.StdCall)] public delegate void LightModelfFunc(uint pname,float param);
@@ -361,7 +364,7 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate void Vertex4svFunc(short[] v);
 		[UFP(CC.StdCall)] public delegate void VertexPointerFunc(int size,uint type,int stride,IntPtr pointer);
 		[UFP(CC.StdCall)] public delegate void ViewportFunc(int x,int y,int width,int height);
-		[UFP(CC.StdCall)] public delegate IntPtr GetStringFunc(uint name);
+		[UFP(CC.StdCall)] public delegate IntPtr GetStringFunc(StringName name);
 
 		#endregion
 
@@ -412,17 +415,17 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate void GetQueryivFunc(uint target,uint pname,ref int parameters);
 		[UFP(CC.StdCall)] public delegate void GetQueryObjectivFunc(uint id,uint pname,ref int parameters);
 		[UFP(CC.StdCall)] public delegate void GetQueryObjectuivFunc(uint id,uint pname,ref uint parameters);
-		[UFP(CC.StdCall)] public delegate void BindBufferFunc(uint target,uint buffer);
+		[UFP(CC.StdCall)] public delegate void BindBufferFunc(BufferTarget target,uint buffer);
 		[UFP(CC.StdCall)] public delegate void DeleteBuffersFunc(int n,ref uint buffers);
 		[UFP(CC.StdCall)] public delegate void GenBuffersFunc(int n,ref uint buffers);
 		[UFP(CC.StdCall)] public delegate byte IsBufferFunc(uint buffer);
-		[UFP(CC.StdCall)] public delegate void BufferDataFunc(uint target,int size,IntPtr data,uint usage);
-		[UFP(CC.StdCall)] public delegate void BufferSubDataFunc(uint target,int offset,int size,IntPtr data);
-		[UFP(CC.StdCall)] public delegate void GetBufferSubDataFunc(uint target,int offset,int size,IntPtr data);
-		[UFP(CC.StdCall)] public delegate IntPtr MapBufferFunc(uint target,uint access);
-		[UFP(CC.StdCall)] public delegate byte UnmapBufferFunc(uint target);
-		[UFP(CC.StdCall)] public delegate void GetBufferParameterivFunc(uint target,uint pname,ref int parameters);
-		[UFP(CC.StdCall)] public delegate void GetBufferPointervFunc(uint target,uint pname,ref IntPtr parameters);
+		[UFP(CC.StdCall)] public delegate void BufferDataFunc(BufferTarget target,int size,IntPtr data,uint usage);
+		[UFP(CC.StdCall)] public delegate void BufferSubDataFunc(BufferTarget target,int offset,int size,IntPtr data);
+		[UFP(CC.StdCall)] public delegate void GetBufferSubDataFunc(BufferTarget target,int offset,int size,IntPtr data);
+		[UFP(CC.StdCall)] public delegate IntPtr MapBufferFunc(BufferTarget target,uint access);
+		[UFP(CC.StdCall)] public delegate byte UnmapBufferFunc(BufferTarget target);
+		[UFP(CC.StdCall)] public delegate void GetBufferParameterivFunc(BufferTarget target,uint pname,ref int parameters);
+		[UFP(CC.StdCall)] public delegate void GetBufferPointervFunc(BufferTarget target,uint pname,ref IntPtr parameters);
 
 		#endregion
 
@@ -447,7 +450,7 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate void GetActiveUniformFunc(uint program,uint index,int bufSize,ref int length,ref int size,ref uint type,IntPtr name);
 		[UFP(CC.StdCall)] public delegate void GetAttachedShadersFunc(uint program,int maxCount,ref int count,ref uint shaders);
 		[UFP(CC.StdCall)] public delegate int GetAttribLocationFunc(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name);
-		[UFP(CC.StdCall)] public delegate void GetProgramivFunc(uint program,uint pname,ref int parameters);
+		[UFP(CC.StdCall)] public delegate void GetProgramivFunc(uint program,GetProgramParameter parameter,out int results);
 		[UFP(CC.StdCall)] public delegate void GetProgramInfoLogFunc(uint program,int bufSize,ref int length,IntPtr infoLog);
 		[UFP(CC.StdCall)] public delegate void GetShaderivFunc(uint shader,uint pname,ref int parameters);
 		[UFP(CC.StdCall)] public delegate void GetShaderInfoLogFunc(uint shader,int bufSize,ref int length,IntPtr infoLog);
@@ -545,8 +548,8 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate byte IsEnablediFunc(uint target,uint index);
 		[UFP(CC.StdCall)] public delegate void BeginTransformFeedbackFunc(uint primitiveMode);
 		[UFP(CC.StdCall)] public delegate void EndTransformFeedbackFunc();
-		[UFP(CC.StdCall)] public delegate void BindBufferRangeFunc(uint target,uint index,uint buffer,int offset,int size);
-		[UFP(CC.StdCall)] public delegate void BindBufferBaseFunc(uint target,uint index,uint buffer);
+		[UFP(CC.StdCall)] public delegate void BindBufferRangeFunc(BufferRangeTarget target,uint index,uint buffer,int offset,int size);
+		[UFP(CC.StdCall)] public delegate void BindBufferBaseFunc(BufferRangeTarget target,uint index,uint buffer);
 		[UFP(CC.StdCall)] public delegate void TransformFeedbackVaryingsFunc(uint program,int count,IntPtr varyings,uint bufferMode);
 		[UFP(CC.StdCall)] public delegate void GetTransformFeedbackVaryingFunc(uint program,uint index,int bufSize,ref int length,ref int size,ref uint type,IntPtr name);
 		[UFP(CC.StdCall)] public delegate void ClampColorFunc(uint target,uint clamp);
@@ -602,21 +605,21 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate void RenderbufferStorageFunc(uint target,uint internalformat,int width,int height);
 		[UFP(CC.StdCall)] public delegate void GetRenderbufferParameterivFunc(uint target,uint pname,ref int parameters);
 		[UFP(CC.StdCall)] public delegate byte IsFramebufferFunc(uint framebuffer);
-		[UFP(CC.StdCall)] public delegate void BindFramebufferFunc(uint target,uint framebuffer);
+		[UFP(CC.StdCall)] public delegate void BindFramebufferFunc(FramebufferTarget target,uint framebuffer);
 		[UFP(CC.StdCall)] public delegate void DeleteFramebuffersFunc(int n,ref uint framebuffers);
 		[UFP(CC.StdCall)] public delegate void GenFramebuffersFunc(int n,ref uint framebuffers);
-		[UFP(CC.StdCall)] public delegate uint CheckFramebufferStatusFunc(uint target);
-		[UFP(CC.StdCall)] public delegate void FramebufferTexture1DFunc(uint target,uint attachment,uint texTarget,uint texture,int level);
-		[UFP(CC.StdCall)] public delegate void FramebufferTexture2DFunc(uint target,uint attachment,uint texTarget,uint texture,int level);
-		[UFP(CC.StdCall)] public delegate void FramebufferTexture3DFunc(uint target,uint attachment,uint texTarget,uint texture,int level,int zoffset);
-		[UFP(CC.StdCall)] public delegate void FramebufferRenderbufferFunc(uint target,uint attachment,uint renderbuffertarget,uint renderbuffer);
-		[UFP(CC.StdCall)] public delegate void GetFramebufferAttachmentParameterivFunc(uint target,uint attachment,uint pname,ref int parameters);
-		[UFP(CC.StdCall)] public delegate void GenerateMipmapFunc(uint target);
+		[UFP(CC.StdCall)] public delegate uint CheckFramebufferStatusFunc(FramebufferTarget target);
+		[UFP(CC.StdCall)] public delegate void FramebufferTexture1DFunc(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level);
+		[UFP(CC.StdCall)] public delegate void FramebufferTexture2DFunc(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level);
+		[UFP(CC.StdCall)] public delegate void FramebufferTexture3DFunc(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level,int zoffset);
+		[UFP(CC.StdCall)] public delegate void FramebufferRenderbufferFunc(FramebufferTarget target,uint attachment,uint renderbuffertarget,uint renderbuffer);
+		[UFP(CC.StdCall)] public delegate void GetFramebufferAttachmentParameterivFunc(FramebufferTarget target,uint attachment,uint pname,ref int parameters);
+		[UFP(CC.StdCall)] public delegate void GenerateMipmapFunc(GenerateMipmapTarget target);
 		[UFP(CC.StdCall)] public delegate void BlitFramebufferFunc(int srcX0,int srcY0,int srcX1,int srcY1,int dstX0,int dstY0,int dstX1,int dstY1,uint mask,uint filter);
 		[UFP(CC.StdCall)] public delegate void RenderbufferStorageMultisampleFunc(uint target,int samples,uint internalformat,int width,int height);
-		[UFP(CC.StdCall)] public delegate void FramebufferTextureLayerFunc(uint target,uint attachment,uint texture,int level,int layer);
-		[UFP(CC.StdCall)] public delegate IntPtr MapBufferRangeFunc(uint target,int offset,int length,uint access);
-		[UFP(CC.StdCall)] public delegate void FlushMappedBufferRangeFunc(uint target,int offset,int length);
+		[UFP(CC.StdCall)] public delegate void FramebufferTextureLayerFunc(FramebufferTarget target,uint attachment,uint texture,int level,int layer);
+		[UFP(CC.StdCall)] public delegate IntPtr MapBufferRangeFunc(BufferTarget target,int offset,int length,uint access);
+		[UFP(CC.StdCall)] public delegate void FlushMappedBufferRangeFunc(BufferTarget target,int offset,int length);
 		[UFP(CC.StdCall)] public delegate void BindVertexArrayFunc(uint array);
 		[UFP(CC.StdCall)] public delegate void DeleteVertexArraysFunc(int n,ref uint arrays);
 		[UFP(CC.StdCall)] public delegate void GenVertexArraysFunc(int n,ref uint arrays);
@@ -656,8 +659,8 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate void GetInteger64vFunc(uint pname,ref int data);
 		[UFP(CC.StdCall)] public delegate void GetSyncivFunc(IntPtr sync,uint pname,int bufSize,ref int length,ref int values);
 		[UFP(CC.StdCall)] public delegate void GetInteger64i_vFunc(uint target,uint index,ref long data);
-		[UFP(CC.StdCall)] public delegate void GetBufferParameteri64vFunc(uint target,uint pname,ref long parameters);
-		[UFP(CC.StdCall)] public delegate void FramebufferTextureFunc(uint target,uint attachment,uint texture,int level);
+		[UFP(CC.StdCall)] public delegate void GetBufferParameteri64vFunc(BufferTarget target,uint pname,ref long parameters);
+		[UFP(CC.StdCall)] public delegate void FramebufferTextureFunc(FramebufferTarget target,uint attachment,uint texture,int level);
 		[UFP(CC.StdCall)] public delegate void TexImage2DMultisampleFunc(uint target,int samples,uint internalformat,int width,int height,byte fixedsamplelocations);
 		[UFP(CC.StdCall)] public delegate void TexImage3DMultisampleFunc(uint target,int samples,uint internalformat,int width,int height,int depth,byte fixedsamplelocations);
 		[UFP(CC.StdCall)] public delegate void GetMultisamplefvFunc(uint pname,uint index,ref float val);
@@ -862,20 +865,20 @@ namespace Dissonance.Framework.OpenGL
 		#region OpenGL 4.3
 
 		[UFP(CC.Cdecl)] public delegate void DebugFunc(uint source,uint type,uint id,uint severity,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string message,IntPtr userParam);
-		[UFP(CC.StdCall)] public delegate void ClearBufferDataFunc(uint target,uint internalformat,uint format,uint type,IntPtr data);
-		[UFP(CC.StdCall)] public delegate void ClearBufferSubDataFunc(uint target,uint internalformat,int offset,int size,uint format,uint type,IntPtr data);
+		[UFP(CC.StdCall)] public delegate void ClearBufferDataFunc(BufferTarget target,uint internalformat,uint format,uint type,IntPtr data);
+		[UFP(CC.StdCall)] public delegate void ClearBufferSubDataFunc(BufferTarget target,uint internalformat,int offset,int size,uint format,uint type,IntPtr data);
 		[UFP(CC.StdCall)] public delegate void DispatchComputeFunc(uint num_groups_x,uint num_groups_y,uint num_groups_z);
 		[UFP(CC.StdCall)] public delegate void DispatchComputeIndirectFunc(int indirect);
 		[UFP(CC.StdCall)] public delegate void CopyImageSubDataFunc(uint srcName,uint srcTarget,int srcLevel,int srcX,int srcY,int srcZ,uint dstName,uint dstTarget,int dstLevel,int dstX,int dstY,int dstZ,int srcWidth,int srcHeight,int srcDepth);
-		[UFP(CC.StdCall)] public delegate void FramebufferParameteriFunc(uint target,uint pname,int param);
-		[UFP(CC.StdCall)] public delegate void GetFramebufferParameterivFunc(uint target,uint pname,ref int parameters);
+		[UFP(CC.StdCall)] public delegate void FramebufferParameteriFunc(FramebufferTarget target,uint pname,int param);
+		[UFP(CC.StdCall)] public delegate void GetFramebufferParameterivFunc(FramebufferTarget target,uint pname,ref int parameters);
 		[UFP(CC.StdCall)] public delegate void GetInternalformati64vFunc(uint target,uint internalformat,uint pname,int bufSize,ref long parameters);
 		[UFP(CC.StdCall)] public delegate void InvalidateTexSubImageFunc(uint texture,int level,int xoffset,int yoffset,int zoffset,int width,int height,int depth);
 		[UFP(CC.StdCall)] public delegate void InvalidateTexImageFunc(uint texture,int level);
 		[UFP(CC.StdCall)] public delegate void InvalidateBufferSubDataFunc(uint buffer,int offset,int length);
 		[UFP(CC.StdCall)] public delegate void InvalidateBufferDataFunc(uint buffer);
-		[UFP(CC.StdCall)] public delegate void InvalidateFramebufferFunc(uint target,int numAttachments,ref uint attachments);
-		[UFP(CC.StdCall)] public delegate void InvalidateSubFramebufferFunc(uint target,int numAttachments,ref uint attachments,int x,int y,int width,int height);
+		[UFP(CC.StdCall)] public delegate void InvalidateFramebufferFunc(FramebufferTarget target,int numAttachments,ref uint attachments);
+		[UFP(CC.StdCall)] public delegate void InvalidateSubFramebufferFunc(FramebufferTarget target,int numAttachments,ref uint attachments,int x,int y,int width,int height);
 		[UFP(CC.StdCall)] public delegate void MultiDrawArraysIndirectFunc(uint mode,IntPtr indirect,int drawcount,int stride);
 		[UFP(CC.StdCall)] public delegate void MultiDrawElementsIndirectFunc(uint mode,uint type,IntPtr indirect,int drawcount,int stride);
 		[UFP(CC.StdCall)] public delegate void GetProgramInterfaceivFunc(uint program,uint programInterface,uint pname,ref int parameters);
@@ -910,11 +913,11 @@ namespace Dissonance.Framework.OpenGL
 
 		#region OpenGL 4.4
 
-		[UFP(CC.StdCall)] public delegate void BufferStorageFunc(uint target,int size,IntPtr data,uint flags);
+		[UFP(CC.StdCall)] public delegate void BufferStorageFunc(BufferTarget target,int size,IntPtr data,uint flags);
 		[UFP(CC.StdCall)] public delegate void ClearTexImageFunc(uint texture,int level,uint format,uint type,IntPtr data);
 		[UFP(CC.StdCall)] public delegate void ClearTexSubImageFunc(uint texture,int level,int xoffset,int yoffset,int zoffset,int width,int height,int depth,uint format,uint type,IntPtr data);
-		[UFP(CC.StdCall)] public delegate void BindBuffersBaseFunc(uint target,uint first,int count,ref uint buffers);
-		[UFP(CC.StdCall)] public delegate void BindBuffersRangeFunc(uint target,uint first,int count,ref uint buffers,ref int offsets,ref int sizes);
+		[UFP(CC.StdCall)] public delegate void BindBuffersBaseFunc(BufferRangeTarget target,uint first,int count,ref uint buffers);
+		[UFP(CC.StdCall)] public delegate void BindBuffersRangeFunc(BufferRangeTarget target,uint first,int count,ref uint buffers,ref int offsets,ref int sizes);
 		[UFP(CC.StdCall)] public delegate void BindTexturesFunc(uint first,int count,ref uint textures);
 		[UFP(CC.StdCall)] public delegate void BindSamplersFunc(uint first,int count,ref uint samplers);
 		[UFP(CC.StdCall)] public delegate void BindImageTexturesFunc(uint first,int count,ref uint textures);
@@ -951,8 +954,8 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate void NamedFramebufferParameteriFunc(uint framebuffer,uint pname,int param);
 		[UFP(CC.StdCall)] public delegate void NamedFramebufferTextureFunc(uint framebuffer,uint attachment,uint texture,int level);
 		[UFP(CC.StdCall)] public delegate void NamedFramebufferTextureLayerFunc(uint framebuffer,uint attachment,uint texture,int level,int layer);
-		[UFP(CC.StdCall)] public delegate void NamedFramebufferDrawBufferFunc(uint framebuffer,uint buf);
-		[UFP(CC.StdCall)] public delegate void NamedFramebufferDrawBuffersFunc(uint framebuffer,int n,ref uint bufs);
+		[UFP(CC.StdCall)] public delegate void NamedFramebufferDrawBufferFunc(uint framebuffer,DrawBufferMode buf);
+		[UFP(CC.StdCall)] public delegate void NamedFramebufferDrawBuffersFunc(uint framebuffer,int n,DrawBufferMode[] bufs);
 		[UFP(CC.StdCall)] public delegate void NamedFramebufferReadBufferFunc(uint framebuffer,uint src);
 		[UFP(CC.StdCall)] public delegate void InvalidateNamedFramebufferDataFunc(uint framebuffer,int numAttachments,ref uint attachments);
 		[UFP(CC.StdCall)] public delegate void InvalidateNamedFramebufferSubDataFunc(uint framebuffer,int numAttachments,ref uint attachments,int x,int y,int width,int height);
@@ -961,7 +964,7 @@ namespace Dissonance.Framework.OpenGL
 		[UFP(CC.StdCall)] public delegate void ClearNamedFramebufferfvFunc(uint framebuffer,uint buffer,int drawbuffer,ref float value);
 		[UFP(CC.StdCall)] public delegate void ClearNamedFramebufferfiFunc(uint framebuffer,uint buffer,int drawbuffer,float depth,int stencil);
 		[UFP(CC.StdCall)] public delegate void BlitNamedFramebufferFunc(uint readFramebuffer,uint drawFramebuffer,int srcX0,int srcY0,int srcX1,int srcY1,int dstX0,int dstY0,int dstX1,int dstY1,uint mask,uint filter);
-		[UFP(CC.StdCall)] public delegate uint CheckNamedFramebufferStatusFunc(uint framebuffer,uint target);
+		[UFP(CC.StdCall)] public delegate uint CheckNamedFramebufferStatusFunc(uint framebuffer,FramebufferTarget target);
 		[UFP(CC.StdCall)] public delegate void GetNamedFramebufferParameterivFunc(uint framebuffer,uint pname,ref int param);
 		[UFP(CC.StdCall)] public delegate void GetNamedFramebufferAttachmentParameterivFunc(uint framebuffer,uint attachment,uint pname,ref int parameters);
 		[UFP(CC.StdCall)] public delegate void CreateRenderbuffersFunc(int n,ref uint renderbuffers);

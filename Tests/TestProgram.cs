@@ -1,12 +1,13 @@
 ﻿using System;
+using System.IO;
 using Dissonance.Framework.GLFW3;
 using Dissonance.Framework.OpenGL;
 using Dissonance.Framework.OpenAL;
-using System.IO;
+//using GL = Dissonance.Framework.OpenGL.GLNew;
 
 namespace Test
 {
-	public static class Program
+	public static class TestProgram
 	{
 		public static IntPtr window;
 
@@ -41,7 +42,7 @@ namespace Test
 				colorG = Math.Max(colorG,0.5f);
 				colorB = Math.Max(colorB,0.5f);
 
-				GL.ClearColor(70,130,180);
+				GL.ClearColor(70/255f,130/255f,180/255f);
 				GL.Clear(ClearBufferMask.ColorBufferBit);
 
 				GL.Color3(colorR,colorG,colorB);
@@ -98,6 +99,8 @@ namespace Test
 			GL.Load();
 
 			CheckGLErrors();
+
+			Console.WriteLine($"Loaded {GL.GetString(StringName.Version)}");
 		}
 		private static void PrepareOpenAL()
 		{
@@ -130,7 +133,7 @@ namespace Test
 		{
 			var error = GL.GetError();
 
-			if(error!=GLDirect.NO_ERROR) {
+			if(error!=GraphicsError.NoError) {
 				throw new Exception($"OpenGL Error: {error}");
 			}
 		}

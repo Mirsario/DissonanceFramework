@@ -1,6 +1,6 @@
 ﻿namespace Dissonance.Framework.OpenGL
 {
-	public enum GetProgramParameterName
+	public enum GetProgramParameter
 	{
 		ProgramBinaryRetrievableHint = 33367,
 		ProgramSeparable = 33368,

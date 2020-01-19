@@ -1,6 +1,6 @@
 ﻿namespace Dissonance.Framework.OpenGL
 {
-	public static partial class GLDirect
+	partial class GLDirect
 	{
 		#region OpenGL 1.0 + OpenGL 1.1
 

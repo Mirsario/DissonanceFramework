@@ -1,21 +1,21 @@
-﻿using Dissonance.Framework.OpenAL;
-using Dissonance.Utils;
-using System;
+﻿using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using Dissonance.Framework.OpenAL;
+using Dissonance.Utils;
 
 #pragma warning disable IDE1006 //Naming rule violation
 
 namespace Dissonance.Framework
 {
-	public static partial class DllManager
+	internal static partial class DllManager
 	{
 		private const int RTLD_NOW = 2;
 
 		private static readonly Type DelegateType = typeof(MulticastDelegate);
 
-		private static bool linuxSet = false;
-		private static bool linux = false;
+		private static bool linuxSet;
+		private static bool linux;
 
 		public static bool Linux {
 			get {
@@ -32,21 +32,34 @@ namespace Dissonance.Framework
 
 		static DllManager()
 		{
-			NativeLibrary.SetDllImportResolver(typeof(DllManager).Assembly,(name,assembly,path) => {
-				string lib = null;
+			//public delegate IntPtr DllImportResolver(string libraryName,Assembly assembly,DllImportSearchPath? searchPath);
 
-				if(name==AL.Library) {
-					lib = InternalUtils.GetOS() switch
-					{
+			NativeLibrary.SetDllImportResolver(typeof(DllManager).Assembly,(name,assembly,path) => {
+				string lib = name switch {
+					/*GLNew.Library => InternalUtils.GetOS() switch {
+						OS.Windows => GLNew.LibraryWindows,
+						OS.Linux => GLNew.LibraryLinux,
+						OS.OSX => GLNew.LibraryMac,
+						_ => null,
+					},*/
+					AL.Library => InternalUtils.GetOS() switch {
 						OS.Windows => AL.LibraryWindows,
 						OS.Linux => AL.LibraryLinux,
 						OS.OSX => AL.LibraryMac,
 						_ => null,
-					};
-				}
+					},
+					_ => null
+				};
 
 				return lib!=null ? NativeLibrary.Load(lib,assembly,path) : IntPtr.Zero;
 			});
+
+			AppDomain.CurrentDomain.AssemblyResolve += (obj,args) => {
+				Console.WriteLine($"{nameof(args.Name)}: {args.Name}");
+				Console.WriteLine($"e");
+
+				return null;
+			};
 		}
 
 		public static IntPtr DllLoad(string fileName)

@@ -94,23 +94,23 @@ namespace Dissonance.Framework.OpenGL
 		[MI(AI)] public static void CopyTexImage2D(uint target,int level,uint internalFormat,int x,int y,int width,int height,int border) => GLDirect.CopyTexImage2D(target,level,internalFormat,x,y,width,height,border);
 		[MI(AI)] public static void CopyTexSubImage1D(uint target,int level,int xOffset,int x,int y,int width) => GLDirect.CopyTexSubImage1D(target,level,xOffset,x,y,width);
 		[MI(AI)] public static void CopyTexSubImage2D(uint target,int level,int xOffset,int yOffset,int x,int y,int width,int height) => GLDirect.CopyTexSubImage2D(target,level,xOffset,yOffset,x,y,width,height);
-		[MI(AI)] public static void CullFace(uint mode) => GLDirect.CullFace(mode);
+		[MI(AI)] public static void CullFace(CullFaceMode mode) => GLDirect.CullFace(mode);
 		[MI(AI)] public static void DeleteLists(uint list,int range) => GLDirect.DeleteLists(list,range);
 		[MI(AI)] public static void DeleteTextures(int n,uint[] textures) => GLDirect.DeleteTextures(n,textures);
-		[MI(AI)] public static void DepthFunc(uint func) => GLDirect.DepthFunc(func);
+		[MI(AI)] public static void DepthFunc(DepthFunction func) => GLDirect.DepthFunc(func);
 		[MI(AI)] public static void DepthMask(byte flag) => GLDirect.DepthMask(flag);
 		[MI(AI)] public static void DepthRange(double zNear,double zFar) => GLDirect.DepthRange(zNear,zFar);
-		[MI(AI)] public static void Disable(uint cap) => GLDirect.Disable(cap);
-		[MI(AI)] public static void DisableClientState(uint array) => GLDirect.DisableClientState(array);
-		[MI(AI)] public static void DrawArrays(uint mode,int first,int count) => GLDirect.DrawArrays(mode,first,count);
-		[MI(AI)] public static void DrawBuffer(uint mode) => GLDirect.DrawBuffer(mode);
+		[MI(AI)] public static void Disable(EnableCap cap) => GLDirect.Disable(cap);
+		[MI(AI)] public static void DisableClientState(uint capability) => GLDirect.DisableClientState(capability);
+		[MI(AI)] public static void DrawArrays(PrimitiveType mode,int first,int count) => GLDirect.DrawArrays(mode,first,count);
+		[MI(AI)] public static void DrawBuffer(DrawBufferMode mode) => GLDirect.DrawBuffer(mode);
 		[MI(AI)] public static void DrawElements(uint mode,int count,uint type,IntPtr indices) => GLDirect.DrawElements(mode,count,type,indices);
 		[MI(AI)] public static void DrawPixels(int width,int height,uint format,uint type,IntPtr pixels) => GLDirect.DrawPixels(width,height,format,type,pixels);
 		[MI(AI)] public static void EdgeFlag(byte flag) => GLDirect.EdgeFlag(flag);
 		[MI(AI)] public static void EdgeFlagPointer(int stride,IntPtr pointer) => GLDirect.EdgeFlagPointer(stride,pointer);
 		[MI(AI)] public static void EdgeFlag([In] [MarshalAs(UnmanagedType.LPStr)] string flag) => GLDirect.EdgeFlagv(flag);
-		[MI(AI)] public static void Enable(uint cap) => GLDirect.Enable(cap);
-		[MI(AI)] public static void EnableClientState(uint array) => GLDirect.EnableClientState(array);
+		[MI(AI)] public static void Enable(EnableCap cap) => GLDirect.Enable(cap);
+		[MI(AI)] public static void EnableClientState(uint capability) => GLDirect.EnableClientState(capability);
 		[MI(AI)] public static void End() => GLDirect.End();
 		[MI(AI)] public static void EndList() => GLDirect.EndList();
 		[MI(AI)] public static void EvalCoord1(double u) => GLDirect.EvalCoord1d(u);
@@ -139,7 +139,7 @@ namespace Dissonance.Framework.OpenGL
 		[MI(AI)] public static void GetBoolean(uint pName,IntPtr parameters) => GLDirect.GetBooleanv(pName,parameters);
 		[MI(AI)] public static void GetClipPlane(uint plane,double[] equation) => GLDirect.GetClipPlane(plane,equation);
 		[MI(AI)] public static void GetDouble(uint pName,double[] parameters) => GLDirect.GetDoublev(pName,parameters);
-		[MI(AI)] public static uint GetError() => GLDirect.GetError();
+		[MI(AI)] public static GraphicsError GetError() => GLDirect.GetError();
 		[MI(AI)] public static void GetFloat(uint pName,float[] parameters) => GLDirect.GetFloatv(pName,parameters);
 		[MI(AI)] public static void GetInteger(uint pName,int[] parameters) => GLDirect.GetIntegerv(pName,parameters);
 		[MI(AI)] public static void GetLight(uint light,uint pName,float[] parameters) => GLDirect.GetLightfv(light,pName,parameters);
@@ -179,7 +179,7 @@ namespace Dissonance.Framework.OpenGL
 		[MI(AI)] public static void Index([In] [MarshalAs(UnmanagedType.LPStr)] string c) => GLDirect.Indexubv(c);
 		[MI(AI)] public static void InitNames() => GLDirect.InitNames();
 		[MI(AI)] public static void InterleavedArrays(uint format,int stride,IntPtr pointer) => GLDirect.InterleavedArrays(format,stride,pointer);
-		[MI(AI)] public static byte IsEnabled(uint cap) => GLDirect.IsEnabled(cap);
+		[MI(AI)] public static byte IsEnabled(EnableCap cap) => GLDirect.IsEnabled(cap);
 		[MI(AI)] public static byte IsList(uint list) => GLDirect.IsList(list);
 		[MI(AI)] public static byte IsTexture(uint texture) => GLDirect.IsTexture(texture);
 		[MI(AI)] public static void LightMode(uint pName,float param) => GLDirect.LightModelf(pName,param);
@@ -372,7 +372,7 @@ namespace Dissonance.Framework.OpenGL
 		[MI(AI)] public static void Vertex4(short[] v) => GLDirect.Vertex4sv(v);
 		[MI(AI)] public static void VertexPointer(int size,uint type,int stride,IntPtr pointer) => GLDirect.VertexPointer(size,type,stride,pointer);
 		[MI(AI)] public static void Viewport(int x,int y,int width,int height) => GLDirect.Viewport(x,y,width,height);
-		[MI(AI)] public static IntPtr GetString(uint name) => GLDirect.GetString(name);
+		[MI(AI)] public static string GetString(StringName name) => Marshal.PtrToStringAnsi(GLDirect.GetString(name));
 
 		#endregion
 
@@ -423,17 +423,17 @@ namespace Dissonance.Framework.OpenGL
 		[MI(AI)] public static void GetQuery(uint target,uint pName,ref int parameters) => GLDirect.GetQueryiv(target,pName,ref parameters);
 		[MI(AI)] public static void GetQueryObject(uint id,uint pName,ref int parameters) => GLDirect.GetQueryObjectiv(id,pName,ref parameters);
 		[MI(AI)] public static void GetQueryObject(uint id,uint pName,ref uint parameters) => GLDirect.GetQueryObjectuiv(id,pName,ref parameters);
-		[MI(AI)] public static void BindBuffer(uint target,uint buffer) => GLDirect.BindBuffer(target,buffer);
+		[MI(AI)] public static void BindBuffer(BufferTarget target,uint buffer) => GLDirect.BindBuffer(target,buffer);
 		[MI(AI)] public static void DeleteBuffers(int n,ref uint buffers) => GLDirect.DeleteBuffers(n,ref buffers);
 		[MI(AI)] public static void GenBuffers(int n,ref uint buffers) => GLDirect.GenBuffers(n,ref buffers);
 		[MI(AI)] public static byte IsBuffer(uint buffer) => GLDirect.IsBuffer(buffer);
-		[MI(AI)] public static void BufferData(uint target,int size,IntPtr data,uint usage) => GLDirect.BufferData(target,size,data,usage);
-		[MI(AI)] public static void BufferSubData(uint target,int offset,int size,IntPtr data) => GLDirect.BufferSubData(target,offset,size,data);
-		[MI(AI)] public static void GetBufferSubData(uint target,int offset,int size,IntPtr data) => GLDirect.GetBufferSubData(target,offset,size,data);
-		[MI(AI)] public static IntPtr MapBuffer(uint target,uint access) => GLDirect.MapBuffer(target,access);
-		[MI(AI)] public static byte UnmapBuffer(uint target) => GLDirect.UnmapBuffer(target);
-		[MI(AI)] public static void GetBufferParameter(uint target,uint pName,ref int parameters) => GLDirect.GetBufferParameteriv(target,pName,ref parameters);
-		[MI(AI)] public static void GetBufferPointer(uint target,uint pName,ref IntPtr parameters) => GLDirect.GetBufferPointerv(target,pName,ref parameters);
+		[MI(AI)] public static void BufferData(BufferTarget target,int size,IntPtr data,uint usage) => GLDirect.BufferData(target,size,data,usage);
+		[MI(AI)] public static void BufferSubData(BufferTarget target,int offset,int size,IntPtr data) => GLDirect.BufferSubData(target,offset,size,data);
+		[MI(AI)] public static void GetBufferSubData(BufferTarget target,int offset,int size,IntPtr data) => GLDirect.GetBufferSubData(target,offset,size,data);
+		[MI(AI)] public static IntPtr MapBuffer(BufferTarget target,uint access) => GLDirect.MapBuffer(target,access);
+		[MI(AI)] public static byte UnmapBuffer(BufferTarget target) => GLDirect.UnmapBuffer(target);
+		[MI(AI)] public static void GetBufferParameter(BufferTarget target,uint pName,ref int parameters) => GLDirect.GetBufferParameteriv(target,pName,ref parameters);
+		[MI(AI)] public static void GetBufferPointer(BufferTarget target,uint pName,ref IntPtr parameters) => GLDirect.GetBufferPointerv(target,pName,ref parameters);
 
 		#endregion
 
@@ -458,7 +458,7 @@ namespace Dissonance.Framework.OpenGL
 		[MI(AI)] public static void GetActiveUniform(uint program,uint index,int bufSize,ref int length,ref int size,ref uint type,IntPtr name) => GLDirect.GetActiveUniform(program,index,bufSize,ref length,ref size,ref type,name);
 		[MI(AI)] public static void GetAttachedShaders(uint program,int maxCount,ref int count,ref uint shaders) => GLDirect.GetAttachedShaders(program,maxCount,ref count,ref shaders);
 		[MI(AI)] public static int GetAttribLocation(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.GetAttribLocation(program,name);
-		[MI(AI)] public static void GetProgram(uint program,uint pName,ref int parameters) => GLDirect.GetProgramiv(program,pName,ref parameters);
+		[MI(AI)] public static void GetProgram(uint program,GetProgramParameter parameter,out int results) => GLDirect.GetProgramiv(program,parameter,out results);
 		[MI(AI)] public static void GetProgramInfoLog(uint program,int bufSize,ref int length,IntPtr infoLog) => GLDirect.GetProgramInfoLog(program,bufSize,ref length,infoLog);
 		[MI(AI)] public static void GetShader(uint shader,uint pName,ref int parameters) => GLDirect.GetShaderiv(shader,pName,ref parameters);
 		[MI(AI)] public static void GetShaderInfoLog(uint shader,int bufSize,ref int length,IntPtr infoLog) => GLDirect.GetShaderInfoLog(shader,bufSize,ref length,infoLog);
@@ -556,8 +556,8 @@ namespace Dissonance.Framework.OpenGL
 		[MI(AI)] public static byte IsEnabled(uint target,uint index) => GLDirect.IsEnabledi(target,index);
 		[MI(AI)] public static void BeginTransformFeedback(uint primitiveMode) => GLDirect.BeginTransformFeedback(primitiveMode);
 		[MI(AI)] public static void EndTransformFeedback() => GLDirect.EndTransformFeedback();
-		[MI(AI)] public static void BindBufferRange(uint target,uint index,uint buffer,int offset,int size) => GLDirect.BindBufferRange(target,index,buffer,offset,size);
-		[MI(AI)] public static void BindBufferBase(uint target,uint index,uint buffer) => GLDirect.BindBufferBase(target,index,buffer);
+		[MI(AI)] public static void BindBufferRange(BufferRangeTarget target,uint index,uint buffer,int offset,int size) => GLDirect.BindBufferRange(target,index,buffer,offset,size);
+		[MI(AI)] public static void BindBufferBase(BufferRangeTarget target,uint index,uint buffer) => GLDirect.BindBufferBase(target,index,buffer);
 		[MI(AI)] public static void TransformFeedbackVaryings(uint program,int count,IntPtr varyings,uint bufferMode) => GLDirect.TransformFeedbackVaryings(program,count,varyings,bufferMode);
 		[MI(AI)] public static void GetTransformFeedbackVarying(uint program,uint index,int bufSize,ref int length,ref int size,ref uint type,IntPtr name) => GLDirect.GetTransformFeedbackVarying(program,index,bufSize,ref length,ref size,ref type,name);
 		[MI(AI)] public static void ClampColor(uint target,uint clamp) => GLDirect.ClampColor(target,clamp);
@@ -613,21 +613,21 @@ namespace Dissonance.Framework.OpenGL
 		[MI(AI)] public static void RenderbufferStorage(uint target,uint internalFormat,int width,int height) => GLDirect.RenderbufferStorage(target,internalFormat,width,height);
 		[MI(AI)] public static void GetRenderbufferParameter(uint target,uint pName,ref int parameters) => GLDirect.GetRenderbufferParameteriv(target,pName,ref parameters);
 		[MI(AI)] public static byte IsFramebuffer(uint framebuffer) => GLDirect.IsFramebuffer(framebuffer);
-		[MI(AI)] public static void BindFramebuffer(uint target,uint framebuffer) => GLDirect.BindFramebuffer(target,framebuffer);
+		[MI(AI)] public static void BindFramebuffer(FramebufferTarget target,uint framebuffer) => GLDirect.BindFramebuffer(target,framebuffer);
 		[MI(AI)] public static void DeleteFramebuffers(int n,ref uint framebuffers) => GLDirect.DeleteFramebuffers(n,ref framebuffers);
 		[MI(AI)] public static void GenFramebuffers(int n,ref uint framebuffers) => GLDirect.GenFramebuffers(n,ref framebuffers);
-		[MI(AI)] public static uint CheckFramebufferStatus(uint target) => GLDirect.CheckFramebufferStatus(target);
-		[MI(AI)] public static void FramebufferTexture1D(uint target,uint attachment,uint texTarget,uint texture,int level) => GLDirect.FramebufferTexture1D(target,attachment,texTarget,texture,level);
-		[MI(AI)] public static void FramebufferTexture2D(uint target,uint attachment,uint texTarget,uint texture,int level) => GLDirect.FramebufferTexture2D(target,attachment,texTarget,texture,level);
-		[MI(AI)] public static void FramebufferTexture3D(uint target,uint attachment,uint texTarget,uint texture,int level,int zOffset) => GLDirect.FramebufferTexture3D(target,attachment,texTarget,texture,level,zOffset);
-		[MI(AI)] public static void FramebufferRenderbuffer(uint target,uint attachment,uint renderbuffertarget,uint renderbuffer) => GLDirect.FramebufferRenderbuffer(target,attachment,renderbuffertarget,renderbuffer);
-		[MI(AI)] public static void GetFramebufferAttachmentParameter(uint target,uint attachment,uint pName,ref int parameters) => GLDirect.GetFramebufferAttachmentParameteriv(target,attachment,pName,ref parameters);
-		[MI(AI)] public static void GenerateMipmap(uint target) => GLDirect.GenerateMipmap(target);
+		[MI(AI)] public static uint CheckFramebufferStatus(FramebufferTarget target) => GLDirect.CheckFramebufferStatus(target);
+		[MI(AI)] public static void FramebufferTexture1D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level) => GLDirect.FramebufferTexture1D(target,attachment,texTarget,texture,level);
+		[MI(AI)] public static void FramebufferTexture2D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level) => GLDirect.FramebufferTexture2D(target,attachment,texTarget,texture,level);
+		[MI(AI)] public static void FramebufferTexture3D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level,int zOffset) => GLDirect.FramebufferTexture3D(target,attachment,texTarget,texture,level,zOffset);
+		[MI(AI)] public static void FramebufferRenderbuffer(FramebufferTarget target,uint attachment,uint renderbuffertarget,uint renderbuffer) => GLDirect.FramebufferRenderbuffer(target,attachment,renderbuffertarget,renderbuffer);
+		[MI(AI)] public static void GetFramebufferAttachmentParameter(FramebufferTarget target,uint attachment,uint pName,ref int parameters) => GLDirect.GetFramebufferAttachmentParameteriv(target,attachment,pName,ref parameters);
+		[MI(AI)] public static void GenerateMipmap(GenerateMipmapTarget target) => GLDirect.GenerateMipmap(target);
 		[MI(AI)] public static void BlitFramebuffer(int srcX0,int srcY0,int srcX1,int srcY1,int dstX0,int dstY0,int dstX1,int dstY1,uint mask,uint filter) => GLDirect.BlitFramebuffer(srcX0,srcY0,srcX1,srcY1,dstX0,dstY0,dstX1,dstY1,mask,filter);
 		[MI(AI)] public static void RenderbufferStorageMultisample(uint target,int samples,uint internalFormat,int width,int height) => GLDirect.RenderbufferStorageMultisample(target,samples,internalFormat,width,height);
-		[MI(AI)] public static void FramebufferTextureLayer(uint target,uint attachment,uint texture,int level,int layer) => GLDirect.FramebufferTextureLayer(target,attachment,texture,level,layer);
-		[MI(AI)] public static IntPtr MapBufferRange(uint target,int offset,int length,uint access) => GLDirect.MapBufferRange(target,offset,length,access);
-		[MI(AI)] public static void FlushMappedBufferRange(uint target,int offset,int length) => GLDirect.FlushMappedBufferRange(target,offset,length);
+		[MI(AI)] public static void FramebufferTextureLayer(FramebufferTarget target,uint attachment,uint texture,int level,int layer) => GLDirect.FramebufferTextureLayer(target,attachment,texture,level,layer);
+		[MI(AI)] public static IntPtr MapBufferRange(BufferTarget target,int offset,int length,uint access) => GLDirect.MapBufferRange(target,offset,length,access);
+		[MI(AI)] public static void FlushMappedBufferRange(BufferTarget target,int offset,int length) => GLDirect.FlushMappedBufferRange(target,offset,length);
 		[MI(AI)] public static void BindVertexArray(uint array) => GLDirect.BindVertexArray(array);
 		[MI(AI)] public static void DeleteVertexArrays(int n,ref uint arrays) => GLDirect.DeleteVertexArrays(n,ref arrays);
 		[MI(AI)] public static void GenVertexArrays(int n,ref uint arrays) => GLDirect.GenVertexArrays(n,ref arrays);
@@ -667,8 +667,8 @@ namespace Dissonance.Framework.OpenGL
 		[MI(AI)] public static void GetInteger(uint pName,ref int data) => GLDirect.GetInteger64v(pName,ref data);
 		[MI(AI)] public static void GetSync(IntPtr sync,uint pName,int bufSize,ref int length,ref int values) => GLDirect.GetSynciv(sync,pName,bufSize,ref length,ref values);
 		[MI(AI)] public static void GetInteger(uint target,uint index,ref long data) => GLDirect.GetInteger64i_v(target,index,ref data);
-		[MI(AI)] public static void GetBufferParameter(uint target,uint pName,ref long parameters) => GLDirect.GetBufferParameteri64v(target,pName,ref parameters);
-		[MI(AI)] public static void FramebufferTexture(uint target,uint attachment,uint texture,int level) => GLDirect.FramebufferTexture(target,attachment,texture,level);
+		[MI(AI)] public static void GetBufferParameter(BufferTarget target,uint pName,ref long parameters) => GLDirect.GetBufferParameteri64v(target,pName,ref parameters);
+		[MI(AI)] public static void FramebufferTexture(FramebufferTarget target,uint attachment,uint texture,int level) => GLDirect.FramebufferTexture(target,attachment,texture,level);
 		[MI(AI)] public static void TexImage2DMultisample(uint target,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations) => GLDirect.TexImage2DMultisample(target,samples,internalFormat,width,height,fixedsamplelocations);
 		[MI(AI)] public static void TexImage3DMultisample(uint target,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations) => GLDirect.TexImage3DMultisample(target,samples,internalFormat,width,height,depth,fixedsamplelocations);
 		[MI(AI)] public static void GetMultisample(uint pName,uint index,ref float val) => GLDirect.GetMultisamplefv(pName,index,ref val);
@@ -872,20 +872,20 @@ namespace Dissonance.Framework.OpenGL
 
 		#region OpenGL 4.3
 
-		[MI(AI)] public static void ClearBufferData(uint target,uint internalFormat,uint format,uint type,IntPtr data) => GLDirect.ClearBufferData(target,internalFormat,format,type,data);
-		[MI(AI)] public static void ClearBufferSubData(uint target,uint internalFormat,int offset,int size,uint format,uint type,IntPtr data) => GLDirect.ClearBufferSubData(target,internalFormat,offset,size,format,type,data);
+		[MI(AI)] public static void ClearBufferData(BufferTarget target,uint internalFormat,uint format,uint type,IntPtr data) => GLDirect.ClearBufferData(target,internalFormat,format,type,data);
+		[MI(AI)] public static void ClearBufferSubData(BufferTarget target,uint internalFormat,int offset,int size,uint format,uint type,IntPtr data) => GLDirect.ClearBufferSubData(target,internalFormat,offset,size,format,type,data);
 		[MI(AI)] public static void DispatchCompute(uint num_groups_x,uint num_groups_y,uint num_groups_z) => GLDirect.DispatchCompute(num_groups_x,num_groups_y,num_groups_z);
 		[MI(AI)] public static void DispatchComputeIndirect(int indirect) => GLDirect.DispatchComputeIndirect(indirect);
 		[MI(AI)] public static void CopyImageSubData(uint srcName,uint srcTarget,int srcLevel,int srcX,int srcY,int srcZ,uint dstName,uint dstTarget,int dstLevel,int dstX,int dstY,int dstZ,int srcWidth,int srcHeight,int srcDepth) => GLDirect.CopyImageSubData(srcName,srcTarget,srcLevel,srcX,srcY,srcZ,dstName,dstTarget,dstLevel,dstX,dstY,dstZ,srcWidth,srcHeight,srcDepth);
-		[MI(AI)] public static void FramebufferParameter(uint target,uint pName,int param) => GLDirect.FramebufferParameteri(target,pName,param);
-		[MI(AI)] public static void GetFramebufferParameter(uint target,uint pName,ref int parameters) => GLDirect.GetFramebufferParameteriv(target,pName,ref parameters);
+		[MI(AI)] public static void FramebufferParameter(FramebufferTarget target,uint pName,int param) => GLDirect.FramebufferParameteri(target,pName,param);
+		[MI(AI)] public static void GetFramebufferParameter(FramebufferTarget target,uint pName,ref int parameters) => GLDirect.GetFramebufferParameteriv(target,pName,ref parameters);
 		[MI(AI)] public static void GetInternalformat(uint target,uint internalFormat,uint pName,int bufSize,ref long parameters) => GLDirect.GetInternalformati64v(target,internalFormat,pName,bufSize,ref parameters);
 		[MI(AI)] public static void InvalidateTexSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth) => GLDirect.InvalidateTexSubImage(texture,level,xOffset,yOffset,zOffset,width,height,depth);
 		[MI(AI)] public static void InvalidateTexImage(uint texture,int level) => GLDirect.InvalidateTexImage(texture,level);
 		[MI(AI)] public static void InvalidateBufferSubData(uint buffer,int offset,int length) => GLDirect.InvalidateBufferSubData(buffer,offset,length);
 		[MI(AI)] public static void InvalidateBufferData(uint buffer) => GLDirect.InvalidateBufferData(buffer);
-		[MI(AI)] public static void InvalidateFramebuffer(uint target,int numAttachments,ref uint attachments) => GLDirect.InvalidateFramebuffer(target,numAttachments,ref attachments);
-		[MI(AI)] public static void InvalidateSubFramebuffer(uint target,int numAttachments,ref uint attachments,int x,int y,int width,int height) => GLDirect.InvalidateSubFramebuffer(target,numAttachments,ref attachments,x,y,width,height);
+		[MI(AI)] public static void InvalidateFramebuffer(FramebufferTarget target,int numAttachments,ref uint attachments) => GLDirect.InvalidateFramebuffer(target,numAttachments,ref attachments);
+		[MI(AI)] public static void InvalidateSubFramebuffer(FramebufferTarget target,int numAttachments,ref uint attachments,int x,int y,int width,int height) => GLDirect.InvalidateSubFramebuffer(target,numAttachments,ref attachments,x,y,width,height);
 		[MI(AI)] public static void MultiDrawArraysIndirect(uint mode,IntPtr indirect,int drawcount,int stride) => GLDirect.MultiDrawArraysIndirect(mode,indirect,drawcount,stride);
 		[MI(AI)] public static void MultiDrawElementsIndirect(uint mode,uint type,IntPtr indirect,int drawcount,int stride) => GLDirect.MultiDrawElementsIndirect(mode,type,indirect,drawcount,stride);
 		[MI(AI)] public static void GetProgramInterface(uint program,uint programInterface,uint pName,ref int parameters) => GLDirect.GetProgramInterfaceiv(program,programInterface,pName,ref parameters);
@@ -920,11 +920,11 @@ namespace Dissonance.Framework.OpenGL
 
 		#region OpenGL 4.4
 
-		[MI(AI)] public static void BufferStorage(uint target,int size,IntPtr data,uint flags) => GLDirect.BufferStorage(target,size,data,flags);
+		[MI(AI)] public static void BufferStorage(BufferTarget target,int size,IntPtr data,uint flags) => GLDirect.BufferStorage(target,size,data,flags);
 		[MI(AI)] public static void ClearTexImage(uint texture,int level,uint format,uint type,IntPtr data) => GLDirect.ClearTexImage(texture,level,format,type,data);
 		[MI(AI)] public static void ClearTexSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr data) => GLDirect.ClearTexSubImage(texture,level,xOffset,yOffset,zOffset,width,height,depth,format,type,data);
-		[MI(AI)] public static void BindBuffersBase(uint target,uint first,int count,ref uint buffers) => GLDirect.BindBuffersBase(target,first,count,ref buffers);
-		[MI(AI)] public static void BindBuffersRange(uint target,uint first,int count,ref uint buffers,ref int offsets,ref int sizes) => GLDirect.BindBuffersRange(target,first,count,ref buffers,ref offsets,ref sizes);
+		[MI(AI)] public static void BindBuffersBase(BufferRangeTarget target,uint first,int count,ref uint buffers) => GLDirect.BindBuffersBase(target,first,count,ref buffers);
+		[MI(AI)] public static void BindBuffersRange(BufferRangeTarget target,uint first,int count,ref uint buffers,ref int offsets,ref int sizes) => GLDirect.BindBuffersRange(target,first,count,ref buffers,ref offsets,ref sizes);
 		[MI(AI)] public static void BindTextures(uint first,int count,ref uint textures) => GLDirect.BindTextures(first,count,ref textures);
 		[MI(AI)] public static void BindSamplers(uint first,int count,ref uint samplers) => GLDirect.BindSamplers(first,count,ref samplers);
 		[MI(AI)] public static void BindImageTextures(uint first,int count,ref uint textures) => GLDirect.BindImageTextures(first,count,ref textures);
@@ -961,8 +961,8 @@ namespace Dissonance.Framework.OpenGL
 		[MI(AI)] public static void NamedFramebufferParameter(uint framebuffer,uint pName,int param) => GLDirect.NamedFramebufferParameteri(framebuffer,pName,param);
 		[MI(AI)] public static void NamedFramebufferTexture(uint framebuffer,uint attachment,uint texture,int level) => GLDirect.NamedFramebufferTexture(framebuffer,attachment,texture,level);
 		[MI(AI)] public static void NamedFramebufferTextureLayer(uint framebuffer,uint attachment,uint texture,int level,int layer) => GLDirect.NamedFramebufferTextureLayer(framebuffer,attachment,texture,level,layer);
-		[MI(AI)] public static void NamedFramebufferDrawBuffer(uint framebuffer,uint buf) => GLDirect.NamedFramebufferDrawBuffer(framebuffer,buf);
-		[MI(AI)] public static void NamedFramebufferDrawBuffers(uint framebuffer,int n,ref uint bufs) => GLDirect.NamedFramebufferDrawBuffers(framebuffer,n,ref bufs);
+		[MI(AI)] public static void NamedFramebufferDrawBuffer(uint framebuffer,DrawBufferMode buf) => GLDirect.NamedFramebufferDrawBuffer(framebuffer,buf);
+		[MI(AI)] public static void NamedFramebufferDrawBuffers(uint framebuffer,int n,DrawBufferMode[] bufs) => GLDirect.NamedFramebufferDrawBuffers(framebuffer,n,bufs);
 		[MI(AI)] public static void NamedFramebufferReadBuffer(uint framebuffer,uint src) => GLDirect.NamedFramebufferReadBuffer(framebuffer,src);
 		[MI(AI)] public static void InvalidateNamedFramebufferData(uint framebuffer,int numAttachments,ref uint attachments) => GLDirect.InvalidateNamedFramebufferData(framebuffer,numAttachments,ref attachments);
 		[MI(AI)] public static void InvalidateNamedFramebufferSubData(uint framebuffer,int numAttachments,ref uint attachments,int x,int y,int width,int height) => GLDirect.InvalidateNamedFramebufferSubData(framebuffer,numAttachments,ref attachments,x,y,width,height);
@@ -971,7 +971,7 @@ namespace Dissonance.Framework.OpenGL
 		[MI(AI)] public static void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,ref float value) => GLDirect.ClearNamedFramebufferfv(framebuffer,buffer,drawbuffer,ref value);
 		[MI(AI)] public static void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,float depth,int stencil) => GLDirect.ClearNamedFramebufferfi(framebuffer,buffer,drawbuffer,depth,stencil);
 		[MI(AI)] public static void BlitNamedFramebuffer(uint readFramebuffer,uint drawFramebuffer,int srcX0,int srcY0,int srcX1,int srcY1,int dstX0,int dstY0,int dstX1,int dstY1,uint mask,uint filter) => GLDirect.BlitNamedFramebuffer(readFramebuffer,drawFramebuffer,srcX0,srcY0,srcX1,srcY1,dstX0,dstY0,dstX1,dstY1,mask,filter);
-		[MI(AI)] public static uint CheckNamedFramebufferStatus(uint framebuffer,uint target) => GLDirect.CheckNamedFramebufferStatus(framebuffer,target);
+		[MI(AI)] public static uint CheckNamedFramebufferStatus(uint framebuffer,FramebufferTarget target) => GLDirect.CheckNamedFramebufferStatus(framebuffer,target);
 		[MI(AI)] public static void GetNamedFramebufferParameter(uint framebuffer,uint pName,ref int param) => GLDirect.GetNamedFramebufferParameteriv(framebuffer,pName,ref param);
 		[MI(AI)] public static void GetNamedFramebufferAttachmentParameter(uint framebuffer,uint attachment,uint pName,ref int parameters) => GLDirect.GetNamedFramebufferAttachmentParameteriv(framebuffer,attachment,pName,ref parameters);
 		[MI(AI)] public static void CreateRenderbuffers(int n,ref uint renderbuffers) => GLDirect.CreateRenderbuffers(n,ref renderbuffers);

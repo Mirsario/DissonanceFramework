@@ -3,7 +3,7 @@
 	/// <summary> OpenAL errors, returned by AL.GetError. </summary>
 	public enum AudioError
 	{
-		/// <summary> No audio error. </summary>
+		/// <summary> No audio errors have occured. </summary>
 		NoError = 0x0000,
 		/// <summary> An invalid name parameter has been passed to an OpenAL call. </summary>
 		InvalidName = 0xA001,

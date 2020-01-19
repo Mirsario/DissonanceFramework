@@ -738,8 +738,8 @@
 		public const uint CURRENT_QUERY = 34917;
 		public const uint QUERY_RESULT = 34918;
 		public const uint QUERY_RESULT_AVAILABLE = 34919;
-		public const uint ARRAY_BUFFER = 34962;
-		public const uint ELEMENT_ARRAY_BUFFER = 34963;
+		//public const uint ARRAY_BUFFER = 34962;
+		//public const uint ELEMENT_ARRAY_BUFFER = 34963;
 		public const uint ARRAY_BUFFER_BINDING = 34964;
 		public const uint ELEMENT_ARRAY_BUFFER_BINDING = 34965;
 		public const uint VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 34975;
@@ -850,8 +850,8 @@
 
 		#region OpenGL 2.1
 
-		public const uint PIXEL_PACK_BUFFER = 35051;
-		public const uint PIXEL_UNPACK_BUFFER = 35052;
+		//public const uint PIXEL_PACK_BUFFER = 35051;
+		//public const uint PIXEL_UNPACK_BUFFER = 35052;
 		public const uint PIXEL_PACK_BUFFER_BINDING = 35053;
 		public const uint PIXEL_UNPACK_BUFFER_BINDING = 35055;
 		public const uint FLOAT_MAT2x3 = 35685;
@@ -923,7 +923,7 @@
 		public const uint MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS = 35979;
 		public const uint INTERLEAVED_ATTRIBS = 35980;
 		public const uint SEPARATE_ATTRIBS = 35981;
-		public const uint TRANSFORM_FEEDBACK_BUFFER = 35982;
+		//public const uint TRANSFORM_FEEDBACK_BUFFER = 35982;
 		public const uint TRANSFORM_FEEDBACK_BUFFER_BINDING = 35983;
 		public const uint RGBA32UI = 36208;
 		public const uint RGB32UI = 36209;
@@ -1114,7 +1114,7 @@
 		public const uint INT_SAMPLER_BUFFER = 36304;
 		public const uint UNSIGNED_INT_SAMPLER_2D_RECT = 36309;
 		public const uint UNSIGNED_INT_SAMPLER_BUFFER = 36312;
-		public const uint TEXTURE_BUFFER = 35882;
+		//public const uint TEXTURE_BUFFER = 35882;
 		public const uint MAX_TEXTURE_BUFFER_SIZE = 35883;
 		public const uint TEXTURE_BINDING_BUFFER = 35884;
 		public const uint TEXTURE_BUFFER_DATA_STORE_BINDING = 35885;
@@ -1133,9 +1133,9 @@
 		public const uint SIGNED_NORMALIZED = 36764;
 		public const uint PRIMITIVE_RESTART = 36765;
 		public const uint PRIMITIVE_RESTART_INDEX = 36766;
-		public const uint COPY_READ_BUFFER = 36662;
-		public const uint COPY_WRITE_BUFFER = 36663;
-		public const uint UNIFORM_BUFFER = 35345;
+		//public const uint COPY_READ_BUFFER = 36662;
+		//public const uint COPY_WRITE_BUFFER = 36663;
+		//public const uint UNIFORM_BUFFER = 35345;
 		public const uint UNIFORM_BUFFER_BINDING = 35368;
 		public const uint UNIFORM_BUFFER_START = 35369;
 		public const uint UNIFORM_BUFFER_SIZE = 35370;
@@ -1274,7 +1274,7 @@
 		public const uint SAMPLER_CUBE_MAP_ARRAY_SHADOW = 36877;
 		public const uint INT_SAMPLER_CUBE_MAP_ARRAY = 36878;
 		public const uint UNSIGNED_INT_SAMPLER_CUBE_MAP_ARRAY = 36879;
-		public const uint DRAW_INDIRECT_BUFFER = 36671;
+		//public const uint DRAW_INDIRECT_BUFFER = 36671;
 		public const uint DRAW_INDIRECT_BUFFER_BINDING = 36675;
 		public const uint GEOMETRY_SHADER_INVOCATIONS = 34943;
 		public const uint MAX_GEOMETRY_SHADER_INVOCATIONS = 36442;
@@ -1399,7 +1399,7 @@
 		public const uint PACK_COMPRESSED_BLOCK_SIZE = 37166;
 		public const uint NUM_SAMPLE_COUNTS = 37760;
 		public const uint MIN_MAP_BUFFER_ALIGNMENT = 37052;
-		public const uint ATOMIC_COUNTER_BUFFER = 37568;
+		//public const uint ATOMIC_COUNTER_BUFFER = 37568;
 		public const uint ATOMIC_COUNTER_BUFFER_BINDING = 37569;
 		public const uint ATOMIC_COUNTER_BUFFER_START = 37570;
 		public const uint ATOMIC_COUNTER_BUFFER_SIZE = 37571;
@@ -1532,7 +1532,7 @@
 		public const uint COMPUTE_WORK_GROUP_SIZE = 33383;
 		public const uint UNIFORM_BLOCK_REFERENCED_BY_COMPUTE_SHADER = 37100;
 		public const uint ATOMIC_COUNTER_BUFFER_REFERENCED_BY_COMPUTE_SHADER = 37101;
-		public const uint DISPATCH_INDIRECT_BUFFER = 37102;
+		//public const uint DISPATCH_INDIRECT_BUFFER = 37102;
 		public const uint DISPATCH_INDIRECT_BUFFER_BINDING = 37103;
 		public const uint COMPUTE_SHADER_BIT = 32;
 		public const uint DEBUG_OUTPUT_SYNCHRONOUS = 33346;
@@ -1727,7 +1727,7 @@
 		public const uint LOCATION = 37646;
 		public const uint LOCATION_INDEX = 37647;
 		public const uint IS_PER_PATCH = 37607;
-		public const uint SHADER_STORAGE_BUFFER = 37074;
+		//public const uint SHADER_STORAGE_BUFFER = 37074;
 		public const uint SHADER_STORAGE_BUFFER_BINDING = 37075;
 		public const uint SHADER_STORAGE_BUFFER_START = 37076;
 		public const uint SHADER_STORAGE_BUFFER_SIZE = 37077;
@@ -1779,7 +1779,7 @@
 		public const uint LOCATION_COMPONENT = 37706;
 		public const uint TRANSFORM_FEEDBACK_BUFFER_INDEX = 37707;
 		public const uint TRANSFORM_FEEDBACK_BUFFER_STRIDE = 37708;
-		public const uint QUERY_BUFFER = 37266;
+		//public const uint QUERY_BUFFER = 37266;
 		public const uint QUERY_BUFFER_BARRIER_BIT = 32768;
 		public const uint QUERY_BUFFER_BINDING = 37267;
 		public const uint QUERY_RESULT_NO_WAIT = 37268;
