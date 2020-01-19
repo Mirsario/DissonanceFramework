@@ -14,1036 +14,3865 @@ namespace Dissonance.Framework.OpenGL
 		#region OpenGL 1.0 + OpenGL 1.1
 
 		/*
-		[MI(AI)] public static void ArrayElementExt(int i) => GLDirect.ArrayElementExt(i);
-		[MI(AI)] public static void DrawArraysExt(uint mode,int first,int count) => GLDirect.DrawArraysExt(mode,first,count);
-		[MI(AI)] public static void VertexPointerExt(int size,uint type,int stride,int count,IntPtr pointer) => GLDirect.VertexPointerExt(size,type,stride,count,pointer);
-		[MI(AI)] public static void NormalPointerExt(uint type,int stride,int count,IntPtr pointer) => GLDirect.NormalPointerExt(type,stride,count,pointer);
-		[MI(AI)] public static void ColorPointerExt(int size,uint type,int stride,int count,IntPtr pointer) => GLDirect.ColorPointerExt(size,type,stride,count,pointer);
-		[MI(AI)] public static void IndexPointerExt(uint type,int stride,int count,IntPtr pointer) => GLDirect.IndexPointerExt(type,stride,count,pointer);
-		[MI(AI)] public static void TexCoordPointerExt(int size,uint type,int stride,int count,IntPtr pointer) => GLDirect.TexCoordPointerExt(size,type,stride,count,pointer);
-		[MI(AI)] public static void EdgeFlagPointerExt(int stride,int count,[In] [MarshalAs(UnmanagedType.LPStr)] string pointer) => GLDirect.EdgeFlagPointerExt(stride,count,pointer);
-		[MI(AI)] public static void GetPointerVExt(uint pName,IntPtr[] parameters) => GLDirect.GetPointerVExt(pName,parameters);
-		[MI(AI)] public static void ArrayElementArrayExt(uint mode,int count,IntPtr pi) => GLDirect.ArrayElementArrayExt(mode,count,pi);
-		[MI(AI)] public static void DrawRangeElementsWin(uint mode,uint start,uint end,int count,uint type,IntPtr indices) => GLDirect.DrawRangeElementsWin(mode,start,end,count,type,indices);
-		[MI(AI)] public static void AddSwapHintRectWin(int x,int y,int width,int height) => GLDirect.AddSwapHintRectWin(x,y,width,height);
-		[MI(AI)] public static void ColorTableExt(uint target,uint internalFormat,int width,uint format,uint type,IntPtr data) => GLDirect.ColorTableExt(target,internalFormat,width,format,type,data);
-		[MI(AI)] public static void ColorSubtableExt(uint target,int start,int count,uint format,uint type,IntPtr data) => GLDirect.ColorSubtableExt(target,start,count,format,type,data);
-		[MI(AI)] public static void GetColorTableExt(uint target,uint format,uint type,IntPtr data) => GLDirect.GetColorTableExt(target,format,type,data);
-		[MI(AI)] public static void GetColorTableParameterIVExt(uint target,uint pName,int[] parameters) => GLDirect.GetColorTableParameterIVExt(target,pName,parameters);
-		[MI(AI)] public static void GetColorTableParameterFVExt(uint target,uint pName,float[] parameters) => GLDirect.GetColorTableParameterFVExt(target,pName,parameters);
+		[MethodImport("glArrayElementExt","4.5")]
+		public static void ArrayElementExt(int i)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawArraysExt","4.5")]
+		public static void DrawArraysExt(uint mode,int first,int count)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexPointerExt","4.5")]
+		public static void VertexPointerExt(int size,uint type,int stride,int count,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormalPointerExt","4.5")]
+		public static void NormalPointerExt(uint type,int stride,int count,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColorPointerExt","4.5")]
+		public static void ColorPointerExt(int size,uint type,int stride,int count,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexPointerExt","4.5")]
+		public static void IndexPointerExt(uint type,int stride,int count,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoordPointerExt","4.5")]
+		public static void TexCoordPointerExt(int size,uint type,int stride,int count,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEdgeFlagPointerExt","4.5")]
+		public static void EdgeFlagPointerExt(int stride,int count,[In] [MarshalAs(UnmanagedType.LPStr)] string pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetPointerVExt","4.5")]
+		public static void GetPointerVExt(uint pName,IntPtr[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glArrayElementArrayExt","4.5")]
+		public static void ArrayElementArrayExt(uint mode,int count,IntPtr pi)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawRangeElementsWin","4.5")]
+		public static void DrawRangeElementsWin(uint mode,uint start,uint end,int count,uint type,IntPtr indices)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glAddSwapHintRectWin","4.5")]
+		public static void AddSwapHintRectWin(int x,int y,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColorTableExt","4.5")]
+		public static void ColorTableExt(uint target,uint internalFormat,int width,uint format,uint type,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColorSubtableExt","4.5")]
+		public static void ColorSubtableExt(uint target,int start,int count,uint format,uint type,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetColorTableExt","4.5")]
+		public static void GetColorTableExt(uint target,uint format,uint type,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetColorTableParameterIVExt","4.5")]
+		public static void GetColorTableParameterIVExt(uint target,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetColorTableParameterFVExt","4.5")]
+		public static void GetColorTableParameterFVExt(uint target,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
 		*/
 
-		[MI(AI)] public static void Accum(uint op,float value) => GLDirect.Accum(op,value);
-		[MI(AI)] public static void AlphaFunc(uint func,float alpha) => GLDirect.AlphaFunc(func,alpha);
-		[MI(AI)] public static byte AreTexturesResident(int n,uint[] textures,IntPtr residences) => GLDirect.AreTexturesResident(n,textures,residences);
-		[MI(AI)] public static void ArrayElement(int i) => GLDirect.ArrayElement(i);
-		[MI(AI)] public static void Begin(PrimitiveType mode) => GLDirect.Begin((uint)mode);
-		[MI(AI)] public static void BindTexture(uint target,uint texture) => GLDirect.BindTexture(target,texture);
-		[MI(AI)] public static void Bitmap(int width,int height,float xOrig,float yOrig,float xMove,float yMove,[In] [MarshalAs(UnmanagedType.LPStr)] string bitmap) => GLDirect.Bitmap(width,height,xOrig,yOrig,xMove,yMove,bitmap);
-		[MI(AI)] public static void BlendFunc(BlendingFactor sfactor,BlendingFactor dfactor) => GLDirect.BlendFunc((uint)sfactor,(uint)dfactor);
-		[MI(AI)] public static void CallList(uint list) => GLDirect.CallList(list);
-		[MI(AI)] public static void CallLists(int n,uint type,IntPtr lists) => GLDirect.CallLists(n,type,lists);
-		[MI(AI)] public static void Clear(ClearBufferMask mask) => GLDirect.Clear((uint)mask);
-		[MI(AI)] public static void ClearAccum(float red,float green,float blue,float alpha = 1f) => GLDirect.ClearAccum(red,green,blue,alpha);
-		[MI(AI)] public static void ClearAccum(int red,int green,int blue,int alpha = 255) => GLDirect.ClearAccum(red/255f,green/255f,blue/255f,alpha/255f);
-		[MI(AI)] public static void ClearAccum(byte red,byte green,byte blue,byte alpha = 255) => GLDirect.ClearAccum(red/255f,green/255f,blue/255f,alpha/255f);
-		[MI(AI)] public static void ClearColor(float red,float green,float blue,float alpha = 1f) => GLDirect.ClearColor(red,green,blue,alpha);
-		[MI(AI)] public static void ClearColor(int red,int green,int blue,int alpha = 255) => GLDirect.ClearColor(red/255f,green/255f,blue/255f,alpha/255f);
-		[MI(AI)] public static void ClearColor(byte red,byte green,byte blue,byte alpha = 255) => GLDirect.ClearColor(red/255f,green/255f,blue/255f,alpha/255f);
-		[MI(AI)] public static void ClearDepth(double depth) => GLDirect.ClearDepth(depth);
-		[MI(AI)] public static void ClearIndex(float c) => GLDirect.ClearIndex(c);
-		[MI(AI)] public static void ClearStencil(int s) => GLDirect.ClearStencil(s);
-		[MI(AI)] public static void ClipPlane(uint plane,double[] equation) => GLDirect.ClipPlane(plane,equation);
-		[MI(AI)] public static void Color3(sbyte red,sbyte green,sbyte blue) => GLDirect.Color3b(red,green,blue);
-		[MI(AI)] public static void Color3(sbyte[] v) => GLDirect.Color3bv(v);
-		[MI(AI)] public static void Color3(double red,double green,double blue) => GLDirect.Color3d(red,green,blue);
-		[MI(AI)] public static void Color3(double[] v) => GLDirect.Color3dv(v);
-		[MI(AI)] public static void Color3(float red,float green,float blue) => GLDirect.Color3f(red,green,blue);
-		[MI(AI)] public static void Color3(float[] v) => GLDirect.Color3fv(v);
-		[MI(AI)] public static void Color3(int red,int green,int blue) => GLDirect.Color3i(red,green,blue);
-		[MI(AI)] public static void Color3(int[] v) => GLDirect.Color3iv(v);
-		[MI(AI)] public static void Color3(short red,short green,short blue) => GLDirect.Color3s(red,green,blue);
-		[MI(AI)] public static void Color3(short[] v) => GLDirect.Color3sv(v);
-		[MI(AI)] public static void Color3(byte red,byte green,byte blue) => GLDirect.Color3ub(red,green,blue);
-		[MI(AI)] public static void Color3(byte[] v) => GLDirect.Color3ubv(v);
-		[MI(AI)] public static void Color3(uint red,uint green,uint blue) => GLDirect.Color3ui(red,green,blue);
-		[MI(AI)] public static void Color3(uint[] v) => GLDirect.Color3uiv(v);
-		[MI(AI)] public static void Color3(ushort red,ushort green,ushort blue) => GLDirect.Color3us(red,green,blue);
-		[MI(AI)] public static void Color3(ushort[] v) => GLDirect.Color3usv(v);
-		[MI(AI)] public static void Color4(sbyte red,sbyte green,sbyte blue,sbyte alpha) => GLDirect.Color4b(red,green,blue,alpha);
-		[MI(AI)] public static void Color4(sbyte[] v) => GLDirect.Color4bv(v);
-		[MI(AI)] public static void Color4(double red,double green,double blue,double alpha) => GLDirect.Color4d(red,green,blue,alpha);
-		[MI(AI)] public static void Color4(double[] v) => GLDirect.Color4dv(v);
-		[MI(AI)] public static void Color4(float red,float green,float blue,float alpha) => GLDirect.Color4f(red,green,blue,alpha);
-		[MI(AI)] public static void Color4(float[] v) => GLDirect.Color4fv(v);
-		[MI(AI)] public static void Color4(int red,int green,int blue,int alpha) => GLDirect.Color4i(red,green,blue,alpha);
-		[MI(AI)] public static void Color4(int[] v) => GLDirect.Color4iv(v);
-		[MI(AI)] public static void Color4(short red,short green,short blue,short alpha) => GLDirect.Color4s(red,green,blue,alpha);
-		[MI(AI)] public static void Color4(short[] v) => GLDirect.Color4sv(v);
-		[MI(AI)] public static void Color4(byte red,byte green,byte blue,byte alpha) => GLDirect.Color4ub(red,green,blue,alpha);
-		[MI(AI)] public static void Color4(byte[] v) => GLDirect.Color4ubv(v);
-		[MI(AI)] public static void Color4(uint red,uint green,uint blue,uint alpha) => GLDirect.Color4ui(red,green,blue,alpha);
-		[MI(AI)] public static void Color4(uint[] v) => GLDirect.Color4uiv(v);
-		[MI(AI)] public static void Color4(ushort red,ushort green,ushort blue,ushort alpha) => GLDirect.Color4us(red,green,blue,alpha);
-		[MI(AI)] public static void Color4(ushort[] v) => GLDirect.Color4usv(v);
-		[MI(AI)] public static void ColorMask(byte red,byte green,byte blue,byte alpha) => GLDirect.ColorMask(red,green,blue,alpha);
-		[MI(AI)] public static void ColorMaterial(uint face,uint mode) => GLDirect.ColorMaterial(face,mode);
-		[MI(AI)] public static void ColorPointer(int size,uint type,int stride,IntPtr pointer) => GLDirect.ColorPointer(size,type,stride,pointer);
-		[MI(AI)] public static void CopyPixels(int x,int y,int width,int height,uint type) => GLDirect.CopyPixels(x,y,width,height,type);
-		[MI(AI)] public static void CopyTexImage1D(uint target,int level,uint internalFormat,int x,int y,int width,int border) => GLDirect.CopyTexImage1D(target,level,internalFormat,x,y,width,border);
-		[MI(AI)] public static void CopyTexImage2D(uint target,int level,uint internalFormat,int x,int y,int width,int height,int border) => GLDirect.CopyTexImage2D(target,level,internalFormat,x,y,width,height,border);
-		[MI(AI)] public static void CopyTexSubImage1D(uint target,int level,int xOffset,int x,int y,int width) => GLDirect.CopyTexSubImage1D(target,level,xOffset,x,y,width);
-		[MI(AI)] public static void CopyTexSubImage2D(uint target,int level,int xOffset,int yOffset,int x,int y,int width,int height) => GLDirect.CopyTexSubImage2D(target,level,xOffset,yOffset,x,y,width,height);
-		[MI(AI)] public static void CullFace(CullFaceMode mode) => GLDirect.CullFace(mode);
-		[MI(AI)] public static void DeleteLists(uint list,int range) => GLDirect.DeleteLists(list,range);
-		[MI(AI)] public static void DeleteTextures(int n,uint[] textures) => GLDirect.DeleteTextures(n,textures);
-		[MI(AI)] public static void DepthFunc(DepthFunction func) => GLDirect.DepthFunc(func);
-		[MI(AI)] public static void DepthMask(byte flag) => GLDirect.DepthMask(flag);
-		[MI(AI)] public static void DepthRange(double zNear,double zFar) => GLDirect.DepthRange(zNear,zFar);
-		[MI(AI)] public static void Disable(EnableCap cap) => GLDirect.Disable(cap);
-		[MI(AI)] public static void DisableClientState(uint capability) => GLDirect.DisableClientState(capability);
-		[MI(AI)] public static void DrawArrays(PrimitiveType mode,int first,int count) => GLDirect.DrawArrays(mode,first,count);
-		[MI(AI)] public static void DrawBuffer(DrawBufferMode mode) => GLDirect.DrawBuffer(mode);
-		[MI(AI)] public static void DrawElements(uint mode,int count,uint type,IntPtr indices) => GLDirect.DrawElements(mode,count,type,indices);
-		[MI(AI)] public static void DrawPixels(int width,int height,uint format,uint type,IntPtr pixels) => GLDirect.DrawPixels(width,height,format,type,pixels);
-		[MI(AI)] public static void EdgeFlag(byte flag) => GLDirect.EdgeFlag(flag);
-		[MI(AI)] public static void EdgeFlagPointer(int stride,IntPtr pointer) => GLDirect.EdgeFlagPointer(stride,pointer);
-		[MI(AI)] public static void EdgeFlag([In] [MarshalAs(UnmanagedType.LPStr)] string flag) => GLDirect.EdgeFlagv(flag);
-		[MI(AI)] public static void Enable(EnableCap cap) => GLDirect.Enable(cap);
-		[MI(AI)] public static void EnableClientState(uint capability) => GLDirect.EnableClientState(capability);
-		[MI(AI)] public static void End() => GLDirect.End();
-		[MI(AI)] public static void EndList() => GLDirect.EndList();
-		[MI(AI)] public static void EvalCoord1(double u) => GLDirect.EvalCoord1d(u);
-		[MI(AI)] public static void EvalCoord1(double[] u) => GLDirect.EvalCoord1dv(u);
-		[MI(AI)] public static void EvalCoord1(float u) => GLDirect.EvalCoord1f(u);
-		[MI(AI)] public static void EvalCoord1(float[] u) => GLDirect.EvalCoord1fv(u);
-		[MI(AI)] public static void EvalCoord2(double u,double v) => GLDirect.EvalCoord2d(u,v);
-		[MI(AI)] public static void EvalCoord2(double[] u) => GLDirect.EvalCoord2dv(u);
-		[MI(AI)] public static void EvalCoord2(float u,float v) => GLDirect.EvalCoord2f(u,v);
-		[MI(AI)] public static void EvalCoord2(float[] u) => GLDirect.EvalCoord2fv(u);
-		[MI(AI)] public static void EvalMesh1(uint mode,int i1,int i2) => GLDirect.EvalMesh1(mode,i1,i2);
-		[MI(AI)] public static void EvalMesh2(uint mode,int i1,int i2,int j1,int j2) => GLDirect.EvalMesh2(mode,i1,i2,j1,j2);
-		[MI(AI)] public static void EvalPoint1(int i) => GLDirect.EvalPoint1(i);
-		[MI(AI)] public static void EvalPoint2(int i,int j) => GLDirect.EvalPoint2(i,j);
-		[MI(AI)] public static void FeedbackBuffer(int size,uint type,float[] buffer) => GLDirect.FeedbackBuffer(size,type,buffer);
-		[MI(AI)] public static void Finish() => GLDirect.Finish();
-		[MI(AI)] public static void Flush() => GLDirect.Flush();
-		[MI(AI)] public static void Fog(uint pName,float param) => GLDirect.Fogf(pName,param);
-		[MI(AI)] public static void Fog(uint pName,float[] parameters) => GLDirect.Fogfv(pName,parameters);
-		[MI(AI)] public static void Fog(uint pName,int param) => GLDirect.Fogi(pName,param);
-		[MI(AI)] public static void Fog(uint pName,int[] parameters) => GLDirect.Fogiv(pName,parameters);
-		[MI(AI)] public static void FrontFace(uint mode) => GLDirect.FrontFace(mode);
-		[MI(AI)] public static void Frustum(double left,double right,double bottom,double top,double zNear,double zFar) => GLDirect.Frustum(left,right,bottom,top,zNear,zFar);
-		[MI(AI)] public static uint GenLists(int range) => GLDirect.GenLists(range);
-		[MI(AI)] public static void GenTextures(int n,ref uint textures) => GLDirect.GenTextures(n,ref textures);
-		[MI(AI)] public static void GetBoolean(uint pName,IntPtr parameters) => GLDirect.GetBooleanv(pName,parameters);
-		[MI(AI)] public static void GetClipPlane(uint plane,double[] equation) => GLDirect.GetClipPlane(plane,equation);
-		[MI(AI)] public static void GetDouble(uint pName,double[] parameters) => GLDirect.GetDoublev(pName,parameters);
-		[MI(AI)] public static GraphicsError GetError() => GLDirect.GetError();
-		[MI(AI)] public static void GetFloat(uint pName,float[] parameters) => GLDirect.GetFloatv(pName,parameters);
-		[MI(AI)] public static void GetInteger(uint pName,int[] parameters) => GLDirect.GetIntegerv(pName,parameters);
-		[MI(AI)] public static void GetLight(uint light,uint pName,float[] parameters) => GLDirect.GetLightfv(light,pName,parameters);
-		[MI(AI)] public static void GetLight(uint light,uint pName,int[] parameters) => GLDirect.GetLightiv(light,pName,parameters);
-		[MI(AI)] public static void GetMap(uint target,uint query,double[] v) => GLDirect.GetMapdv(target,query,v);
-		[MI(AI)] public static void GetMap(uint target,uint query,float[] v) => GLDirect.GetMapfv(target,query,v);
-		[MI(AI)] public static void GetMap(uint target,uint query,int[] v) => GLDirect.GetMapiv(target,query,v);
-		[MI(AI)] public static void GetMaterial(uint face,uint pName,float[] parameters) => GLDirect.GetMaterialfv(face,pName,parameters);
-		[MI(AI)] public static void GetMaterial(uint face,uint pName,int[] parameters) => GLDirect.GetMaterialiv(face,pName,parameters);
-		[MI(AI)] public static void GetPixelMap(uint map,float[] values) => GLDirect.GetPixelMapfv(map,values);
-		[MI(AI)] public static void GetPixelMap(uint map,uint[] values) => GLDirect.GetPixelMapuiv(map,values);
-		[MI(AI)] public static void GetPixelMap(uint map,ushort[] values) => GLDirect.GetPixelMapusv(map,values);
-		[MI(AI)] public static void GetPointer(uint pName,ref IntPtr parameters) => GLDirect.GetPointerv(pName,ref parameters);
-		[MI(AI)] public static void GetPolygonStipple(IntPtr mask) => GLDirect.GetPolygonStipple(mask);
-		[MI(AI)] public static void GetTexEnv(uint target,uint pName,float[] parameters) => GLDirect.GetTexEnvfv(target,pName,parameters);
-		[MI(AI)] public static void GetTexEnv(uint target,uint pName,int[] parameters) => GLDirect.GetTexEnviv(target,pName,parameters);
-		[MI(AI)] public static void GetTexGen(uint coord,uint pName,double[] parameters) => GLDirect.GetTexGendv(coord,pName,parameters);
-		[MI(AI)] public static void GetTexGen(uint coord,uint pName,float[] parameters) => GLDirect.GetTexGenfv(coord,pName,parameters);
-		[MI(AI)] public static void GetTexGen(uint coord,uint pName,int[] parameters) => GLDirect.GetTexGeniv(coord,pName,parameters);
-		[MI(AI)] public static void GetTexImage(uint target,int level,uint format,uint type,IntPtr pixels) => GLDirect.GetTexImage(target,level,format,type,pixels);
-		[MI(AI)] public static void GetTexLevelParameter(uint target,int level,uint pName,float[] parameters) => GLDirect.GetTexLevelParameterfv(target,level,pName,parameters);
-		[MI(AI)] public static void GetTexLevelParameter(uint target,int level,uint pName,int[] parameters) => GLDirect.GetTexLevelParameteriv(target,level,pName,parameters);
-		[MI(AI)] public static void GetTexParameter(uint target,uint pName,float[] parameters) => GLDirect.GetTexParameterfv(target,pName,parameters);
-		[MI(AI)] public static void GetTexParameter(uint target,uint pName,int[] parameters) => GLDirect.GetTexParameteriv(target,pName,parameters);
-		[MI(AI)] public static void Hint(uint target,uint mode) => GLDirect.Hint(target,mode);
-		[MI(AI)] public static void IndexMask(uint mask) => GLDirect.IndexMask(mask);
-		[MI(AI)] public static void IndexPointer(uint type,int stride,IntPtr pointer) => GLDirect.IndexPointer(type,stride,pointer);
-		[MI(AI)] public static void Index(double c) => GLDirect.Indexd(c);
-		[MI(AI)] public static void Index(double[] c) => GLDirect.Indexdv(c);
-		[MI(AI)] public static void Index(float c) => GLDirect.Indexf(c);
-		[MI(AI)] public static void Index(float[] c) => GLDirect.Indexfv(c);
-		[MI(AI)] public static void Index(int c) => GLDirect.Indexi(c);
-		[MI(AI)] public static void Index(int[] c) => GLDirect.Indexiv(c);
-		[MI(AI)] public static void Index(short c) => GLDirect.Indexs(c);
-		[MI(AI)] public static void Index(short[] c) => GLDirect.Indexsv(c);
-		[MI(AI)] public static void Index(byte c) => GLDirect.Indexub(c);
-		[MI(AI)] public static void Index([In] [MarshalAs(UnmanagedType.LPStr)] string c) => GLDirect.Indexubv(c);
-		[MI(AI)] public static void InitNames() => GLDirect.InitNames();
-		[MI(AI)] public static void InterleavedArrays(uint format,int stride,IntPtr pointer) => GLDirect.InterleavedArrays(format,stride,pointer);
-		[MI(AI)] public static byte IsEnabled(EnableCap cap) => GLDirect.IsEnabled(cap);
-		[MI(AI)] public static byte IsList(uint list) => GLDirect.IsList(list);
-		[MI(AI)] public static byte IsTexture(uint texture) => GLDirect.IsTexture(texture);
-		[MI(AI)] public static void LightMode(uint pName,float param) => GLDirect.LightModelf(pName,param);
-		[MI(AI)] public static void LightMode(uint pName,float[] parameters) => GLDirect.LightModelfv(pName,parameters);
-		[MI(AI)] public static void LightMode(uint pName,int param) => GLDirect.LightModeli(pName,param);
-		[MI(AI)] public static void LightMode(uint pName,int[] parameters) => GLDirect.LightModeliv(pName,parameters);
-		[MI(AI)] public static void Light(uint light,uint pName,float param) => GLDirect.Lightf(light,pName,param);
-		[MI(AI)] public static void Light(uint light,uint pName,float[] parameters) => GLDirect.Lightfv(light,pName,parameters);
-		[MI(AI)] public static void Light(uint light,uint pName,int param) => GLDirect.Lighti(light,pName,param);
-		[MI(AI)] public static void Light(uint light,uint pName,int[] parameters) => GLDirect.Lightiv(light,pName,parameters);
-		[MI(AI)] public static void LineStipple(int factor,ushort pattern) => GLDirect.LineStipple(factor,pattern);
-		[MI(AI)] public static void LineWidth(float width) => GLDirect.LineWidth(width);
-		[MI(AI)] public static void ListBase(uint b) => GLDirect.ListBase(b);
-		[MI(AI)] public static void LoadIdentity() => GLDirect.LoadIdentity();
-		[MI(AI)] public static void LoadMatrix(double[] m) => GLDirect.LoadMatrixd(m);
-		[MI(AI)] public static void LoadMatrix(float[] m) => GLDirect.LoadMatrixf(m);
-		[MI(AI)] public static void LoadName(uint name) => GLDirect.LoadName(name);
-		[MI(AI)] public static void LogicOp(uint opcode) => GLDirect.LogicOp(opcode);
-		[MI(AI)] public static void Map1(uint target,double u1,double u2,int stride,int order,double[] points) => GLDirect.Map1d(target,u1,u2,stride,order,points);
-		[MI(AI)] public static void Map1(uint target,float u1,float u2,int stride,int order,float[] points) => GLDirect.Map1f(target,u1,u2,stride,order,points);
-		[MI(AI)] public static void Map2(uint target,double u1,double u2,int ustride,int uorder,double v1,double v2,int vstride,int vorder,double[] points) => GLDirect.Map2d(target,u1,u2,ustride,uorder,v1,v2,vstride,vorder,points);
-		[MI(AI)] public static void Map2(uint target,float u1,float u2,int ustride,int uorder,float v1,float v2,int vstride,int vorder,float[] points) => GLDirect.Map2f(target,u1,u2,ustride,uorder,v1,v2,vstride,vorder,points);
-		[MI(AI)] public static void MapGrid1(int un,double u1,double u2) => GLDirect.MapGrid1d(un,u1,u2);
-		[MI(AI)] public static void MapGrid1(int un,float u1,float u2) => GLDirect.MapGrid1f(un,u1,u2);
-		[MI(AI)] public static void MapGrid2(int un,double u1,double u2,int vn,double v1,double v2) => GLDirect.MapGrid2d(un,u1,u2,vn,v1,v2);
-		[MI(AI)] public static void MapGrid2(int un,float u1,float u2,int vn,float v1,float v2) => GLDirect.MapGrid2f(un,u1,u2,vn,v1,v2);
-		[MI(AI)] public static void Material(uint face,uint pName,float param) => GLDirect.Materialf(face,pName,param);
-		[MI(AI)] public static void Material(uint face,uint pName,float[] parameters) => GLDirect.Materialfv(face,pName,parameters);
-		[MI(AI)] public static void Material(uint face,uint pName,int param) => GLDirect.Materiali(face,pName,param);
-		[MI(AI)] public static void Material(uint face,uint pName,int[] parameters) => GLDirect.Materialiv(face,pName,parameters);
-		[MI(AI)] public static void MatrixMode(uint mode) => GLDirect.MatrixMode(mode);
-		[MI(AI)] public static void MultMatrix(double[] m) => GLDirect.MultMatrixd(m);
-		[MI(AI)] public static void MultMatrix(float[] m) => GLDirect.MultMatrixf(m);
-		[MI(AI)] public static void NewList(uint list,uint mode) => GLDirect.NewList(list,mode);
-		[MI(AI)] public static void Normal3(sbyte nx,sbyte ny,sbyte nz) => GLDirect.Normal3b(nx,ny,nz);
-		[MI(AI)] public static void Normal3([In] [MarshalAs(UnmanagedType.LPStr)] string v) => GLDirect.Normal3bv(v);
-		[MI(AI)] public static void Normal3(double nx,double ny,double nz) => GLDirect.Normal3d(nx,ny,nz);
-		[MI(AI)] public static void Normal3(double[] v) => GLDirect.Normal3dv(v);
-		[MI(AI)] public static void Normal3(float nx,float ny,float nz) => GLDirect.Normal3f(nx,ny,nz);
-		[MI(AI)] public static void Normal3(float[] v) => GLDirect.Normal3fv(v);
-		[MI(AI)] public static void Normal3(int nx,int ny,int nz) => GLDirect.Normal3i(nx,ny,nz);
-		[MI(AI)] public static void Normal3(int[] v) => GLDirect.Normal3iv(v);
-		[MI(AI)] public static void Normal3(short nx,short ny,short nz) => GLDirect.Normal3s(nx,ny,nz);
-		[MI(AI)] public static void Normal3(short[] v) => GLDirect.Normal3sv(v);
-		[MI(AI)] public static void NormalPointer(uint type,int stride,IntPtr pointer) => GLDirect.NormalPointer(type,stride,pointer);
-		[MI(AI)] public static void Ortho(double left,double right,double bottom,double top,double zNear,double zFar) => GLDirect.Ortho(left,right,bottom,top,zNear,zFar);
-		[MI(AI)] public static void PassThrough(float token) => GLDirect.PassThrough(token);
-		[MI(AI)] public static void PixelMap(uint map,int mapSize,float[] values) => GLDirect.PixelMapfv(map,mapSize,values);
-		[MI(AI)] public static void PixelMap(uint map,int mapSize,uint[] values) => GLDirect.PixelMapuiv(map,mapSize,values);
-		[MI(AI)] public static void PixelMap(uint map,int mapSize,ushort[] values) => GLDirect.PixelMapusv(map,mapSize,values);
-		[MI(AI)] public static void PixelStore(uint pName,float param) => GLDirect.PixelStoref(pName,param);
-		[MI(AI)] public static void PixelStore(uint pName,int param) => GLDirect.PixelStorei(pName,param);
-		[MI(AI)] public static void PixelTransfer(uint pName,float param) => GLDirect.PixelTransferf(pName,param);
-		[MI(AI)] public static void PixelTransfer(uint pName,int param) => GLDirect.PixelTransferi(pName,param);
-		[MI(AI)] public static void PixelZoom(float xFactor,float yFactor) => GLDirect.PixelZoom(xFactor,yFactor);
-		[MI(AI)] public static void PointSize(float size) => GLDirect.PointSize(size);
-		[MI(AI)] public static void PolygonMode(uint face,uint mode) => GLDirect.PolygonMode(face,mode);
-		[MI(AI)] public static void PolygonOffset(float factor,float units) => GLDirect.PolygonOffset(factor,units);
-		[MI(AI)] public static void PolygonStipple([In] [MarshalAs(UnmanagedType.LPStr)] string mask) => GLDirect.PolygonStipple(mask);
-		[MI(AI)] public static void PopAttrib() => GLDirect.PopAttrib();
-		[MI(AI)] public static void PopClientAttrib() => GLDirect.PopClientAttrib();
-		[MI(AI)] public static void PopMatrix() => GLDirect.PopMatrix();
-		[MI(AI)] public static void PopName() => GLDirect.PopName();
-		[MI(AI)] public static void PrioritizeTextures(int n,uint[] textures,float[] priorities) => GLDirect.PrioritizeTextures(n,textures,priorities);
-		[MI(AI)] public static void PushAttrib(uint mask) => GLDirect.PushAttrib(mask);
-		[MI(AI)] public static void PushClientAttrib(uint mask) => GLDirect.PushClientAttrib(mask);
-		[MI(AI)] public static void PushMatrix() => GLDirect.PushMatrix();
-		[MI(AI)] public static void PushName(uint name) => GLDirect.PushName(name);
-		[MI(AI)] public static void RasterPos2(double x,double y) => GLDirect.RasterPos2d(x,y);
-		[MI(AI)] public static void RasterPos2(double[] v) => GLDirect.RasterPos2dv(v);
-		[MI(AI)] public static void RasterPos2(float x,float y) => GLDirect.RasterPos2f(x,y);
-		[MI(AI)] public static void RasterPos2(float[] v) => GLDirect.RasterPos2fv(v);
-		[MI(AI)] public static void RasterPos2(int x,int y) => GLDirect.RasterPos2i(x,y);
-		[MI(AI)] public static void RasterPos2(int[] v) => GLDirect.RasterPos2iv(v);
-		[MI(AI)] public static void RasterPos2(short x,short y) => GLDirect.RasterPos2s(x,y);
-		[MI(AI)] public static void RasterPos2(short[] v) => GLDirect.RasterPos2sv(v);
-		[MI(AI)] public static void RasterPos3(double x,double y,double z) => GLDirect.RasterPos3d(x,y,z);
-		[MI(AI)] public static void RasterPos3(double[] v) => GLDirect.RasterPos3dv(v);
-		[MI(AI)] public static void RasterPos3(float x,float y,float z) => GLDirect.RasterPos3f(x,y,z);
-		[MI(AI)] public static void RasterPos3(float[] v) => GLDirect.RasterPos3fv(v);
-		[MI(AI)] public static void RasterPos3(int x,int y,int z) => GLDirect.RasterPos3i(x,y,z);
-		[MI(AI)] public static void RasterPos3(int[] v) => GLDirect.RasterPos3iv(v);
-		[MI(AI)] public static void RasterPos3(short x,short y,short z) => GLDirect.RasterPos3s(x,y,z);
-		[MI(AI)] public static void RasterPos3(short[] v) => GLDirect.RasterPos3sv(v);
-		[MI(AI)] public static void RasterPos4(double x,double y,double z,double w) => GLDirect.RasterPos4d(x,y,z,w);
-		[MI(AI)] public static void RasterPos4(double[] v) => GLDirect.RasterPos4dv(v);
-		[MI(AI)] public static void RasterPos4(float x,float y,float z,float w) => GLDirect.RasterPos4f(x,y,z,w);
-		[MI(AI)] public static void RasterPos4(float[] v) => GLDirect.RasterPos4fv(v);
-		[MI(AI)] public static void RasterPos4(int x,int y,int z,int w) => GLDirect.RasterPos4i(x,y,z,w);
-		[MI(AI)] public static void RasterPos4(int[] v) => GLDirect.RasterPos4iv(v);
-		[MI(AI)] public static void RasterPos4(short x,short y,short z,short w) => GLDirect.RasterPos4s(x,y,z,w);
-		[MI(AI)] public static void RasterPos4(short[] v) => GLDirect.RasterPos4sv(v);
-		[MI(AI)] public static void ReadBuffer(uint mode) => GLDirect.ReadBuffer(mode);
-		[MI(AI)] public static void ReadPixels(int x,int y,int width,int height,uint format,uint type,IntPtr pixels) => GLDirect.ReadPixels(x,y,width,height,format,type,pixels);
-		[MI(AI)] public static void Rect(double x1,double y1,double x2,double y2) => GLDirect.Rectd(x1,y1,x2,y2);
-		[MI(AI)] public static void Rect(double[] v1,double[] v2) => GLDirect.Rectdv(v1,v2);
-		[MI(AI)] public static void Rect(float x1,float y1,float x2,float y2) => GLDirect.Rectf(x1,y1,x2,y2);
-		[MI(AI)] public static void Rect(float[] v1,float[] v2) => GLDirect.Rectfv(v1,v2);
-		[MI(AI)] public static void Rect(int x1,int y1,int x2,int y2) => GLDirect.Recti(x1,y1,x2,y2);
-		[MI(AI)] public static void Rect(int[] v1,int[] v2) => GLDirect.Rectiv(v1,v2);
-		[MI(AI)] public static void Rect(short x1,short y1,short x2,short y2) => GLDirect.Rects(x1,y1,x2,y2);
-		[MI(AI)] public static void Rect(short[] v1,short[] v2) => GLDirect.Rectsv(v1,v2);
-		[MI(AI)] public static int RenderMode(uint mode) => GLDirect.RenderMode(mode);
-		[MI(AI)] public static void Rotate(double angle,double x,double y,double z) => GLDirect.Rotated(angle,x,y,z);
-		[MI(AI)] public static void Rotate(float angle,float x,float y,float z) => GLDirect.Rotatef(angle,x,y,z);
-		[MI(AI)] public static void Scale(double x,double y,double z) => GLDirect.Scaled(x,y,z);
-		[MI(AI)] public static void Scale(float x,float y,float z) => GLDirect.Scalef(x,y,z);
-		[MI(AI)] public static void Scissor(int x,int y,int width,int height) => GLDirect.Scissor(x,y,width,height);
-		[MI(AI)] public static void SelectBuffer(int size,uint[] buffer) => GLDirect.SelectBuffer(size,buffer);
-		[MI(AI)] public static void ShadeModel(uint mode) => GLDirect.ShadeModel(mode);
-		[MI(AI)] public static void StencilFunc(uint func,int refer,uint mask) => GLDirect.StencilFunc(func,refer,mask);
-		[MI(AI)] public static void StencilMask(uint mask) => GLDirect.StencilMask(mask);
-		[MI(AI)] public static void StencilOp(uint fail,uint zfail,uint zpass) => GLDirect.StencilOp(fail,zfail,zpass);
-		[MI(AI)] public static void TexCoord1(double s) => GLDirect.TexCoord1d(s);
-		[MI(AI)] public static void TexCoord1(double[] v) => GLDirect.TexCoord1dv(v);
-		[MI(AI)] public static void TexCoord1(float s) => GLDirect.TexCoord1f(s);
-		[MI(AI)] public static void TexCoord1(float[] v) => GLDirect.TexCoord1fv(v);
-		[MI(AI)] public static void TexCoord1(int s) => GLDirect.TexCoord1i(s);
-		[MI(AI)] public static void TexCoord1(int[] v) => GLDirect.TexCoord1iv(v);
-		[MI(AI)] public static void TexCoord1(short s) => GLDirect.TexCoord1s(s);
-		[MI(AI)] public static void TexCoord1(short[] v) => GLDirect.TexCoord1sv(v);
-		[MI(AI)] public static void TexCoord2(double s,double t) => GLDirect.TexCoord2d(s,t);
-		[MI(AI)] public static void TexCoord2(double[] v) => GLDirect.TexCoord2dv(v);
-		[MI(AI)] public static void TexCoord2(float s,float t) => GLDirect.TexCoord2f(s,t);
-		[MI(AI)] public static void TexCoord2(float[] v) => GLDirect.TexCoord2fv(v);
-		[MI(AI)] public static void TexCoord2(int s,int t) => GLDirect.TexCoord2i(s,t);
-		[MI(AI)] public static void TexCoord2(int[] v) => GLDirect.TexCoord2iv(v);
-		[MI(AI)] public static void TexCoord2(short s,short t) => GLDirect.TexCoord2s(s,t);
-		[MI(AI)] public static void TexCoord2(short[] v) => GLDirect.TexCoord2sv(v);
-		[MI(AI)] public static void TexCoord3(double s,double t,double r) => GLDirect.TexCoord3d(s,t,r);
-		[MI(AI)] public static void TexCoord3(double[] v) => GLDirect.TexCoord3dv(v);
-		[MI(AI)] public static void TexCoord3(float s,float t,float r) => GLDirect.TexCoord3f(s,t,r);
-		[MI(AI)] public static void TexCoord3(float[] v) => GLDirect.TexCoord3fv(v);
-		[MI(AI)] public static void TexCoord3(int s,int t,int r) => GLDirect.TexCoord3i(s,t,r);
-		[MI(AI)] public static void TexCoord3(int[] v) => GLDirect.TexCoord3iv(v);
-		[MI(AI)] public static void TexCoord3(short s,short t,short r) => GLDirect.TexCoord3s(s,t,r);
-		[MI(AI)] public static void TexCoord3(short[] v) => GLDirect.TexCoord3sv(v);
-		[MI(AI)] public static void TexCoord4(double s,double t,double r,double q) => GLDirect.TexCoord4d(s,t,r,q);
-		[MI(AI)] public static void TexCoord4(double[] v) => GLDirect.TexCoord4dv(v);
-		[MI(AI)] public static void TexCoord4(float s,float t,float r,float q) => GLDirect.TexCoord4f(s,t,r,q);
-		[MI(AI)] public static void TexCoord4(float[] v) => GLDirect.TexCoord4fv(v);
-		[MI(AI)] public static void TexCoord4(int s,int t,int r,int q) => GLDirect.TexCoord4i(s,t,r,q);
-		[MI(AI)] public static void TexCoord4(int[] v) => GLDirect.TexCoord4iv(v);
-		[MI(AI)] public static void TexCoord4(short s,short t,short r,short q) => GLDirect.TexCoord4s(s,t,r,q);
-		[MI(AI)] public static void TexCoord4(short[] v) => GLDirect.TexCoord4sv(v);
-		[MI(AI)] public static void TexCoordPointer(int size,uint type,int stride,IntPtr pointer) => GLDirect.TexCoordPointer(size,type,stride,pointer);
-		[MI(AI)] public static void TexEnv(uint target,uint pName,float param) => GLDirect.TexEnvf(target,pName,param);
-		[MI(AI)] public static void TexEnv(uint target,uint pName,float[] parameters) => GLDirect.TexEnvfv(target,pName,parameters);
-		[MI(AI)] public static void TexEnv(uint target,uint pName,int param) => GLDirect.TexEnvi(target,pName,param);
-		[MI(AI)] public static void TexEnv(uint target,uint pName,int[] parameters) => GLDirect.TexEnviv(target,pName,parameters);
-		[MI(AI)] public static void TexGen(uint coord,uint pName,double param) => GLDirect.TexGend(coord,pName,param);
-		[MI(AI)] public static void TexGen(uint coord,uint pName,double[] parameters) => GLDirect.TexGendv(coord,pName,parameters);
-		[MI(AI)] public static void TexGen(uint coord,uint pName,float param) => GLDirect.TexGenf(coord,pName,param);
-		[MI(AI)] public static void TexGen(uint coord,uint pName,float[] parameters) => GLDirect.TexGenfv(coord,pName,parameters);
-		[MI(AI)] public static void TexGen(uint coord,uint pName,int param) => GLDirect.TexGeni(coord,pName,param);
-		[MI(AI)] public static void TexGen(uint coord,uint pName,int[] parameters) => GLDirect.TexGeniv(coord,pName,parameters);
-		[MI(AI)] public static void TexImage1D(uint target,int level,int internalFormat,int width,int border,uint format,uint type,IntPtr pixels) => GLDirect.TexImage1D(target,level,internalFormat,width,border,format,type,pixels);
-		[MI(AI)] public static void TexImage2D(uint target,int level,int internalFormat,int width,int height,int border,uint format,uint type,IntPtr pixels) => GLDirect.TexImage2D(target,level,internalFormat,width,height,border,format,type,pixels);
-		[MI(AI)] public static void TexParameter(uint target,uint pName,float param) => GLDirect.TexParameterf(target,pName,param);
-		[MI(AI)] public static void TexParameter(uint target,uint pName,float[] parameters) => GLDirect.TexParameterfv(target,pName,parameters);
-		[MI(AI)] public static void TexParameter(uint target,uint pName,int param) => GLDirect.TexParameteri(target,pName,param);
-		[MI(AI)] public static void TexParameter(uint target,uint pName,int[] parameters) => GLDirect.TexParameteriv(target,pName,parameters);
-		[MI(AI)] public static void TexSubImage1D(uint target,int level,int xOffset,int width,uint format,uint type,IntPtr pixels) => GLDirect.TexSubImage1D(target,level,xOffset,width,format,type,pixels);
-		[MI(AI)] public static void TexSubImage2D(uint target,int level,int xOffset,int yOffset,int width,int height,uint format,uint type,IntPtr pixels) => GLDirect.TexSubImage2D(target,level,xOffset,yOffset,width,height,format,type,pixels);
-		[MI(AI)] public static void Translate(double x,double y,double z) => GLDirect.Translated(x,y,z);
-		[MI(AI)] public static void Translate(float x,float y,float z) => GLDirect.Translatef(x,y,z);
-		[MI(AI)] public static void Vertex2(double x,double y) => GLDirect.Vertex2d(x,y);
-		[MI(AI)] public static void Vertex2(double[] v) => GLDirect.Vertex2dv(v);
-		[MI(AI)] public static void Vertex2(float x,float y) => GLDirect.Vertex2f(x,y);
-		[MI(AI)] public static void Vertex2(float[] v) => GLDirect.Vertex2fv(v);
-		[MI(AI)] public static void Vertex2(int x,int y) => GLDirect.Vertex2i(x,y);
-		[MI(AI)] public static void Vertex2(int[] v) => GLDirect.Vertex2iv(v);
-		[MI(AI)] public static void Vertex2(short x,short y) => GLDirect.Vertex2s(x,y);
-		[MI(AI)] public static void Vertex2(short[] v) => GLDirect.Vertex2sv(v);
-		[MI(AI)] public static void Vertex3(double x,double y,double z) => GLDirect.Vertex3d(x,y,z);
-		[MI(AI)] public static void Vertex3(double[] v) => GLDirect.Vertex3dv(v);
-		[MI(AI)] public static void Vertex3(float x,float y,float z) => GLDirect.Vertex3f(x,y,z);
-		[MI(AI)] public static void Vertex3(float[] v) => GLDirect.Vertex3fv(v);
-		[MI(AI)] public static void Vertex3(int x,int y,int z) => GLDirect.Vertex3i(x,y,z);
-		[MI(AI)] public static void Vertex3(int[] v) => GLDirect.Vertex3iv(v);
-		[MI(AI)] public static void Vertex3(short x,short y,short z) => GLDirect.Vertex3s(x,y,z);
-		[MI(AI)] public static void Vertex3(short[] v) => GLDirect.Vertex3sv(v);
-		[MI(AI)] public static void Vertex4(double x,double y,double z,double w) => GLDirect.Vertex4d(x,y,z,w);
-		[MI(AI)] public static void Vertex4(double[] v) => GLDirect.Vertex4dv(v);
-		[MI(AI)] public static void Vertex4(float x,float y,float z,float w) => GLDirect.Vertex4f(x,y,z,w);
-		[MI(AI)] public static void Vertex4(float[] v) => GLDirect.Vertex4fv(v);
-		[MI(AI)] public static void Vertex4(int x,int y,int z,int w) => GLDirect.Vertex4i(x,y,z,w);
-		[MI(AI)] public static void Vertex4(int[] v) => GLDirect.Vertex4iv(v);
-		[MI(AI)] public static void Vertex4(short x,short y,short z,short w) => GLDirect.Vertex4s(x,y,z,w);
-		[MI(AI)] public static void Vertex4(short[] v) => GLDirect.Vertex4sv(v);
-		[MI(AI)] public static void VertexPointer(int size,uint type,int stride,IntPtr pointer) => GLDirect.VertexPointer(size,type,stride,pointer);
-		[MI(AI)] public static void Viewport(int x,int y,int width,int height) => GLDirect.Viewport(x,y,width,height);
-		[MI(AI)] public static string GetString(StringName name) => Marshal.PtrToStringAnsi(GLDirect.GetString(name));
+		[MethodImport("glAccum","4.5")]
+		public static void Accum(uint op,float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glAlphaFunc","4.5")]
+		public static void AlphaFunc(uint func,float alpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glAreTexturesResident","4.5")]
+		public static byte AreTexturesResident(int n,uint[] textures,IntPtr residences)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glArrayElement","4.5")]
+		public static void ArrayElement(int i)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBegin","4.5")]
+		public static void Begin(PrimitiveType mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindTexture","4.5")]
+		public static void BindTexture(uint target,uint texture)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBitmap","4.5")]
+		public static void Bitmap(int width,int height,float xOrig,float yOrig,float xMove,float yMove,[In] [MarshalAs(UnmanagedType.LPStr)] string bitmap)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBlendFunc","4.5")]
+		public static void BlendFunc(BlendingFactor sfactor,BlendingFactor dfactor)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCallList","4.5")]
+		public static void CallList(uint list)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCallLists","4.5")]
+		public static void CallLists(int n,uint type,IntPtr lists)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClear","4.5")]
+		public static void Clear(ClearBufferMask mask)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearAccum","4.5")]
+		public static void ClearAccum(float red,float green,float blue,float alpha = 1f)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearAccum","4.5")]
+		public static void ClearAccum(int red,int green,int blue,int alpha = 255)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearAccum","4.5")]
+		public static void ClearAccum(byte red,byte green,byte blue,byte alpha = 255)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearColor","4.5")]
+		public static void ClearColor(float red,float green,float blue,float alpha = 1f)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearColor","4.5")]
+		public static void ClearColor(int red,int green,int blue,int alpha = 255)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearColor","4.5")]
+		public static void ClearColor(byte red,byte green,byte blue,byte alpha = 255)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearDepth","4.5")]
+		public static void ClearDepth(double depth)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearIndex","4.5")]
+		public static void ClearIndex(float c)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearStencil","4.5")]
+		public static void ClearStencil(int s)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClipPlane","4.5")]
+		public static void ClipPlane(uint plane,double[] equation)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3b","4.5")]
+		public static void Color3(sbyte red,sbyte green,sbyte blue)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3bv","4.5")]
+		public static void Color3(sbyte[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3d","4.5")]
+		public static void Color3(double red,double green,double blue)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3dv","4.5")]
+		public static void Color3(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3f","4.5")]
+		public static void Color3(float red,float green,float blue)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3fv","4.5")]
+		public static void Color3(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3i","4.5")]
+		public static void Color3(int red,int green,int blue)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3iv","4.5")]
+		public static void Color3(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3s","4.5")]
+		public static void Color3(short red,short green,short blue)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3sv","4.5")]
+		public static void Color3(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3ub","4.5")]
+		public static void Color3(byte red,byte green,byte blue)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3ubv","4.5")]
+		public static void Color3(byte[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3ui","4.5")]
+		public static void Color3(uint red,uint green,uint blue)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3uiv","4.5")]
+		public static void Color3(uint[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3us","4.5")]
+		public static void Color3(ushort red,ushort green,ushort blue)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor3usv","4.5")]
+		public static void Color3(ushort[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4b","4.5")]
+		public static void Color4(sbyte red,sbyte green,sbyte blue,sbyte alpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4bv","4.5")]
+		public static void Color4(sbyte[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4d","4.5")]
+		public static void Color4(double red,double green,double blue,double alpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4dv","4.5")]
+		public static void Color4(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4f","4.5")]
+		public static void Color4(float red,float green,float blue,float alpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4fv","4.5")]
+		public static void Color4(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4i","4.5")]
+		public static void Color4(int red,int green,int blue,int alpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4iv","4.5")]
+		public static void Color4(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4s","4.5")]
+		public static void Color4(short red,short green,short blue,short alpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4sv","4.5")]
+		public static void Color4(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4ub","4.5")]
+		public static void Color4(byte red,byte green,byte blue,byte alpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4ubv","4.5")]
+		public static void Color4(byte[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4ui","4.5")]
+		public static void Color4(uint red,uint green,uint blue,uint alpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4uiv","4.5")]
+		public static void Color4(uint[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4us","4.5")]
+		public static void Color4(ushort red,ushort green,ushort blue,ushort alpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColor4usv","4.5")]
+		public static void Color4(ushort[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColorMask","4.5")]
+		public static void ColorMask(byte red,byte green,byte blue,byte alpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColorMaterial","4.5")]
+		public static void ColorMaterial(uint face,uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glColorPointer","4.5")]
+		public static void ColorPointer(int size,uint type,int stride,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyPixels","4.5")]
+		public static void CopyPixels(int x,int y,int width,int height,uint type)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyTexImage1D","4.5")]
+		public static void CopyTexImage1D(uint target,int level,uint internalFormat,int x,int y,int width,int border)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyTexImage2D","4.5")]
+		public static void CopyTexImage2D(uint target,int level,uint internalFormat,int x,int y,int width,int height,int border)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyTexSubImage1D","4.5")]
+		public static void CopyTexSubImage1D(uint target,int level,int xOffset,int x,int y,int width)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyTexSubImage2D","4.5")]
+		public static void CopyTexSubImage2D(uint target,int level,int xOffset,int yOffset,int x,int y,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCullFace","4.5")]
+		public static void CullFace(CullFaceMode mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteLists","4.5")]
+		public static void DeleteLists(uint list,int range)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteTextures","4.5")]
+		public static void DeleteTextures(int n,uint[] textures)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDepthFunc","4.5")]
+		public static void DepthFunc(DepthFunction func)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDepthMask","4.5")]
+		public static void DepthMask(byte flag)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDepthRange","4.5")]
+		public static void DepthRange(double zNear,double zFar)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDisable","4.5")]
+		public static void Disable(EnableCap cap)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDisableClientState","4.5")]
+		public static void DisableClientState(uint capability)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawArrays","4.5")]
+		public static void DrawArrays(PrimitiveType mode,int first,int count)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawBuffer","4.5")]
+		public static void DrawBuffer(DrawBufferMode mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawElements","4.5")]
+		public static void DrawElements(uint mode,int count,uint type,IntPtr indices)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawPixels","4.5")]
+		public static void DrawPixels(int width,int height,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEdgeFlag","4.5")]
+		public static void EdgeFlag(byte flag)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEdgeFlagPointer","4.5")]
+		public static void EdgeFlagPointer(int stride,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEdgeFlagv","4.5")]
+		public static void EdgeFlag([In] [MarshalAs(UnmanagedType.LPStr)] string flag)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEnable","4.5")]
+		public static void Enable(EnableCap cap)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEnableClientState","4.5")]
+		public static void EnableClientState(uint capability)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEnd","4.5")]
+		public static void End()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEndList","4.5")]
+		public static void EndList()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalCoord1d","4.5")]
+		public static void EvalCoord1(double u)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalCoord1dv","4.5")]
+		public static void EvalCoord1(double[] u)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalCoord1f","4.5")]
+		public static void EvalCoord1(float u)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalCoord1fv","4.5")]
+		public static void EvalCoord1(float[] u)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalCoord2d","4.5")]
+		public static void EvalCoord2(double u,double v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalCoord2dv","4.5")]
+		public static void EvalCoord2(double[] u)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalCoord2f","4.5")]
+		public static void EvalCoord2(float u,float v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalCoord2fv","4.5")]
+		public static void EvalCoord2(float[] u)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalMesh1","4.5")]
+		public static void EvalMesh1(uint mode,int i1,int i2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalMesh2","4.5")]
+		public static void EvalMesh2(uint mode,int i1,int i2,int j1,int j2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalPoint1","4.5")]
+		public static void EvalPoint1(int i)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEvalPoint2","4.5")]
+		public static void EvalPoint2(int i,int j)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFeedbackBuffer","4.5")]
+		public static void FeedbackBuffer(int size,uint type,float[] buffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFinish","4.5")]
+		public static void Finish()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFlush","4.5")]
+		public static void Flush()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFogf","4.5")]
+		public static void Fog(uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFogfv","4.5")]
+		public static void Fog(uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFogi","4.5")]
+		public static void Fog(uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFogiv","4.5")]
+		public static void Fog(uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFrontFace","4.5")]
+		public static void FrontFace(uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFrustum","4.5")]
+		public static void Frustum(double left,double right,double bottom,double top,double zNear,double zFar)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGenLists","4.5")]
+		public static uint GenLists(int range)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGenTextures","4.5")]
+		public static void GenTextures(int n,ref uint textures)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetBooleanv","4.5")]
+		public static void GetBoolean(uint pName,IntPtr parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetClipPlane","4.5")]
+		public static void GetClipPlane(uint plane,double[] equation)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetDoublev","4.5")]
+		public static void GetDouble(uint pName,double[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetError","4.5")]
+		public static GraphicsError GetError()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetFloatv","4.5")]
+		public static void GetFloat(uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetIntegerv","4.5")]
+		public static void GetInteger(uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetLightfv","4.5")]
+		public static void GetLight(uint light,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetLightiv","4.5")]
+		public static void GetLight(uint light,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetMapdv","4.5")]
+		public static void GetMap(uint target,uint query,double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetMapfv","4.5")]
+		public static void GetMap(uint target,uint query,float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetMapiv","4.5")]
+		public static void GetMap(uint target,uint query,int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetMaterialfv","4.5")]
+		public static void GetMaterial(uint face,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetMaterialiv","4.5")]
+		public static void GetMaterial(uint face,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetPixelMapfv","4.5")]
+		public static void GetPixelMap(uint map,float[] values)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetPixelMapuiv","4.5")]
+		public static void GetPixelMap(uint map,uint[] values)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetPixelMapusv","4.5")]
+		public static void GetPixelMap(uint map,ushort[] values)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetPointerv","4.5")]
+		public static void GetPointer(uint pName,ref IntPtr parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetPolygonStipple","4.5")]
+		public static void GetPolygonStipple(IntPtr mask)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexEnvfv","4.5")]
+		public static void GetTexEnv(uint target,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexEnviv","4.5")]
+		public static void GetTexEnv(uint target,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexGendv","4.5")]
+		public static void GetTexGen(uint coord,uint pName,double[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexGenfv","4.5")]
+		public static void GetTexGen(uint coord,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexGeniv","4.5")]
+		public static void GetTexGen(uint coord,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexImage","4.5")]
+		public static void GetTexImage(uint target,int level,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexLevelParameterfv","4.5")]
+		public static void GetTexLevelParameter(uint target,int level,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexLevelParameteriv","4.5")]
+		public static void GetTexLevelParameter(uint target,int level,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexParameterfv","4.5")]
+		public static void GetTexParameter(uint target,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexParameteriv","4.5")]
+		public static void GetTexParameter(uint target,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glHint","4.5")]
+		public static void Hint(uint target,uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexMask","4.5")]
+		public static void IndexMask(uint mask)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexPointer","4.5")]
+		public static void IndexPointer(uint type,int stride,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexd","4.5")]
+		public static void Index(double c)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexdv","4.5")]
+		public static void Index(double[] c)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexf","4.5")]
+		public static void Index(float c)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexfv","4.5")]
+		public static void Index(float[] c)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexi","4.5")]
+		public static void Index(int c)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexiv","4.5")]
+		public static void Index(int[] c)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexs","4.5")]
+		public static void Index(short c)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexsv","4.5")]
+		public static void Index(short[] c)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexub","4.5")]
+		public static void Index(byte c)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIndexubv","4.5")]
+		public static void Index([In] [MarshalAs(UnmanagedType.LPStr)] string c)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glInitNames","4.5")]
+		public static void InitNames()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glInterleavedArrays","4.5")]
+		public static void InterleavedArrays(uint format,int stride,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsEnabled","4.5")]
+		public static byte IsEnabled(EnableCap cap)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsList","4.5")]
+		public static byte IsList(uint list)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsTexture","4.5")]
+		public static byte IsTexture(uint texture)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLightModelf","4.5")]
+		public static void LightMode(uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLightModelfv","4.5")]
+		public static void LightMode(uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLightModeli","4.5")]
+		public static void LightMode(uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLightModeliv","4.5")]
+		public static void LightMode(uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLightf","4.5")]
+		public static void Light(uint light,uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLightfv","4.5")]
+		public static void Light(uint light,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLighti","4.5")]
+		public static void Light(uint light,uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLightiv","4.5")]
+		public static void Light(uint light,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLineStipple","4.5")]
+		public static void LineStipple(int factor,ushort pattern)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLineWidth","4.5")]
+		public static void LineWidth(float width)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glListBase","4.5")]
+		public static void ListBase(uint b)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLoadIdentity","4.5")]
+		public static void LoadIdentity()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLoadMatrixd","4.5")]
+		public static void LoadMatrix(double[] m)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLoadMatrixf","4.5")]
+		public static void LoadMatrix(float[] m)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLoadName","4.5")]
+		public static void LoadName(uint name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLogicOp","4.5")]
+		public static void LogicOp(uint opcode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMap1d","4.5")]
+		public static void Map1(uint target,double u1,double u2,int stride,int order,double[] points)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMap1f","4.5")]
+		public static void Map1(uint target,float u1,float u2,int stride,int order,float[] points)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMap2d","4.5")]
+		public static void Map2(uint target,double u1,double u2,int ustride,int uorder,double v1,double v2,int vstride,int vorder,double[] points)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMap2f","4.5")]
+		public static void Map2(uint target,float u1,float u2,int ustride,int uorder,float v1,float v2,int vstride,int vorder,float[] points)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMapGrid1d","4.5")]
+		public static void MapGrid1(int un,double u1,double u2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMapGrid1f","4.5")]
+		public static void MapGrid1(int un,float u1,float u2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMapGrid2d","4.5")]
+		public static void MapGrid2(int un,double u1,double u2,int vn,double v1,double v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMapGrid2f","4.5")]
+		public static void MapGrid2(int un,float u1,float u2,int vn,float v1,float v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMaterialf","4.5")]
+		public static void Material(uint face,uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMaterialfv","4.5")]
+		public static void Material(uint face,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMateriali","4.5")]
+		public static void Material(uint face,uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMaterialiv","4.5")]
+		public static void Material(uint face,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMatrixMode","4.5")]
+		public static void MatrixMode(uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMultMatrixd","4.5")]
+		public static void MultMatrix(double[] m)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMultMatrixf","4.5")]
+		public static void MultMatrix(float[] m)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNewList","4.5")]
+		public static void NewList(uint list,uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormal3b","4.5")]
+		public static void Normal3(sbyte nx,sbyte ny,sbyte nz)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormal3bv","4.5")]
+		public static void Normal3([In] [MarshalAs(UnmanagedType.LPStr)] string v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormal3d","4.5")]
+		public static void Normal3(double nx,double ny,double nz)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormal3dv","4.5")]
+		public static void Normal3(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormal3f","4.5")]
+		public static void Normal3(float nx,float ny,float nz)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormal3fv","4.5")]
+		public static void Normal3(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormal3i","4.5")]
+		public static void Normal3(int nx,int ny,int nz)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormal3iv","4.5")]
+		public static void Normal3(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormal3s","4.5")]
+		public static void Normal3(short nx,short ny,short nz)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormal3sv","4.5")]
+		public static void Normal3(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNormalPointer","4.5")]
+		public static void NormalPointer(uint type,int stride,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glOrtho","4.5")]
+		public static void Ortho(double left,double right,double bottom,double top,double zNear,double zFar)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPassThrough","4.5")]
+		public static void PassThrough(float token)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPixelMapfv","4.5")]
+		public static void PixelMap(uint map,int mapSize,float[] values)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPixelMapuiv","4.5")]
+		public static void PixelMap(uint map,int mapSize,uint[] values)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPixelMapusv","4.5")]
+		public static void PixelMap(uint map,int mapSize,ushort[] values)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPixelStoref","4.5")]
+		public static void PixelStore(uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPixelStorei","4.5")]
+		public static void PixelStore(uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPixelTransferf","4.5")]
+		public static void PixelTransfer(uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPixelTransferi","4.5")]
+		public static void PixelTransfer(uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPixelZoom","4.5")]
+		public static void PixelZoom(float xFactor,float yFactor)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPointSize","4.5")]
+		public static void PointSize(float size)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPolygonMode","4.5")]
+		public static void PolygonMode(uint face,uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPolygonOffset","4.5")]
+		public static void PolygonOffset(float factor,float units)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPolygonStipple","4.5")]
+		public static void PolygonStipple([In] [MarshalAs(UnmanagedType.LPStr)] string mask)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPopAttrib","4.5")]
+		public static void PopAttrib()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPopClientAttrib","4.5")]
+		public static void PopClientAttrib()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPopMatrix","4.5")]
+		public static void PopMatrix()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPopName","4.5")]
+		public static void PopName()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPrioritizeTextures","4.5")]
+		public static void PrioritizeTextures(int n,uint[] textures,float[] priorities)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPushAttrib","4.5")]
+		public static void PushAttrib(uint mask)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPushClientAttrib","4.5")]
+		public static void PushClientAttrib(uint mask)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPushMatrix","4.5")]
+		public static void PushMatrix()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPushName","4.5")]
+		public static void PushName(uint name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos2d","4.5")]
+		public static void RasterPos2(double x,double y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos2dv","4.5")]
+		public static void RasterPos2(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos2f","4.5")]
+		public static void RasterPos2(float x,float y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos2fv","4.5")]
+		public static void RasterPos2(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos2i","4.5")]
+		public static void RasterPos2(int x,int y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos2iv","4.5")]
+		public static void RasterPos2(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos2s","4.5")]
+		public static void RasterPos2(short x,short y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos2sv","4.5")]
+		public static void RasterPos2(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos3d","4.5")]
+		public static void RasterPos3(double x,double y,double z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos3dv","4.5")]
+		public static void RasterPos3(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos3f","4.5")]
+		public static void RasterPos3(float x,float y,float z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos3fv","4.5")]
+		public static void RasterPos3(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos3i","4.5")]
+		public static void RasterPos3(int x,int y,int z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos3iv","4.5")]
+		public static void RasterPos3(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos3s","4.5")]
+		public static void RasterPos3(short x,short y,short z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos3sv","4.5")]
+		public static void RasterPos3(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos4d","4.5")]
+		public static void RasterPos4(double x,double y,double z,double w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos4dv","4.5")]
+		public static void RasterPos4(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos4f","4.5")]
+		public static void RasterPos4(float x,float y,float z,float w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos4fv","4.5")]
+		public static void RasterPos4(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos4i","4.5")]
+		public static void RasterPos4(int x,int y,int z,int w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos4iv","4.5")]
+		public static void RasterPos4(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos4s","4.5")]
+		public static void RasterPos4(short x,short y,short z,short w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRasterPos4sv","4.5")]
+		public static void RasterPos4(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glReadBuffer","4.5")]
+		public static void ReadBuffer(uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glReadPixels","4.5")]
+		public static void ReadPixels(int x,int y,int width,int height,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRectd","4.5")]
+		public static void Rect(double x1,double y1,double x2,double y2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRectdv","4.5")]
+		public static void Rect(double[] v1,double[] v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRectf","4.5")]
+		public static void Rect(float x1,float y1,float x2,float y2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRectfv","4.5")]
+		public static void Rect(float[] v1,float[] v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRecti","4.5")]
+		public static void Rect(int x1,int y1,int x2,int y2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRectiv","4.5")]
+		public static void Rect(int[] v1,int[] v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRects","4.5")]
+		public static void Rect(short x1,short y1,short x2,short y2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRectsv","4.5")]
+		public static void Rect(short[] v1,short[] v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRenderMode","4.5")]
+		public static int RenderMode(uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRotated","4.5")]
+		public static void Rotate(double angle,double x,double y,double z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRotatef","4.5")]
+		public static void Rotate(float angle,float x,float y,float z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glScaled","4.5")]
+		public static void Scale(double x,double y,double z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glScalef","4.5")]
+		public static void Scale(float x,float y,float z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glScissor","4.5")]
+		public static void Scissor(int x,int y,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glSelectBuffer","4.5")]
+		public static void SelectBuffer(int size,uint[] buffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glShadeModel","4.5")]
+		public static void ShadeModel(uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glStencilFunc","4.5")]
+		public static void StencilFunc(uint func,int refer,uint mask)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glStencilMask","4.5")]
+		public static void StencilMask(uint mask)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glStencilOp","4.5")]
+		public static void StencilOp(uint fail,uint zfail,uint zpass)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord1d","4.5")]
+		public static void TexCoord1(double s)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord1dv","4.5")]
+		public static void TexCoord1(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord1f","4.5")]
+		public static void TexCoord1(float s)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord1fv","4.5")]
+		public static void TexCoord1(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord1i","4.5")]
+		public static void TexCoord1(int s)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord1iv","4.5")]
+		public static void TexCoord1(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord1s","4.5")]
+		public static void TexCoord1(short s)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord1sv","4.5")]
+		public static void TexCoord1(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord2d","4.5")]
+		public static void TexCoord2(double s,double t)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord2dv","4.5")]
+		public static void TexCoord2(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord2f","4.5")]
+		public static void TexCoord2(float s,float t)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord2fv","4.5")]
+		public static void TexCoord2(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord2i","4.5")]
+		public static void TexCoord2(int s,int t)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord2iv","4.5")]
+		public static void TexCoord2(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord2s","4.5")]
+		public static void TexCoord2(short s,short t)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord2sv","4.5")]
+		public static void TexCoord2(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord3d","4.5")]
+		public static void TexCoord3(double s,double t,double r)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord3dv","4.5")]
+		public static void TexCoord3(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord3f","4.5")]
+		public static void TexCoord3(float s,float t,float r)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord3fv","4.5")]
+		public static void TexCoord3(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord3i","4.5")]
+		public static void TexCoord3(int s,int t,int r)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord3iv","4.5")]
+		public static void TexCoord3(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord3s","4.5")]
+		public static void TexCoord3(short s,short t,short r)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord3sv","4.5")]
+		public static void TexCoord3(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord4d","4.5")]
+		public static void TexCoord4(double s,double t,double r,double q)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord4dv","4.5")]
+		public static void TexCoord4(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord4f","4.5")]
+		public static void TexCoord4(float s,float t,float r,float q)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord4fv","4.5")]
+		public static void TexCoord4(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord4i","4.5")]
+		public static void TexCoord4(int s,int t,int r,int q)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord4iv","4.5")]
+		public static void TexCoord4(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord4s","4.5")]
+		public static void TexCoord4(short s,short t,short r,short q)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoord4sv","4.5")]
+		public static void TexCoord4(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexCoordPointer","4.5")]
+		public static void TexCoordPointer(int size,uint type,int stride,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexEnvf","4.5")]
+		public static void TexEnv(uint target,uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexEnvfv","4.5")]
+		public static void TexEnv(uint target,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexEnvi","4.5")]
+		public static void TexEnv(uint target,uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexEnviv","4.5")]
+		public static void TexEnv(uint target,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexGend","4.5")]
+		public static void TexGen(uint coord,uint pName,double param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexGendv","4.5")]
+		public static void TexGen(uint coord,uint pName,double[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexGenf","4.5")]
+		public static void TexGen(uint coord,uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexGenfv","4.5")]
+		public static void TexGen(uint coord,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexGeni","4.5")]
+		public static void TexGen(uint coord,uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexGeniv","4.5")]
+		public static void TexGen(uint coord,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexImage1D","4.5")]
+		public static void TexImage1D(uint target,int level,int internalFormat,int width,int border,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexImage2D","4.5")]
+		public static void TexImage2D(uint target,int level,int internalFormat,int width,int height,int border,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexParameterf","4.5")]
+		public static void TexParameter(uint target,uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexParameterfv","4.5")]
+		public static void TexParameter(uint target,uint pName,float[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexParameteri","4.5")]
+		public static void TexParameter(uint target,uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexParameteriv","4.5")]
+		public static void TexParameter(uint target,uint pName,int[] parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexSubImage1D","4.5")]
+		public static void TexSubImage1D(uint target,int level,int xOffset,int width,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexSubImage2D","4.5")]
+		public static void TexSubImage2D(uint target,int level,int xOffset,int yOffset,int width,int height,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTranslated","4.5")]
+		public static void Translate(double x,double y,double z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTranslatef","4.5")]
+		public static void Translate(float x,float y,float z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex2d","4.5")]
+		public static void Vertex2(double x,double y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex2dv","4.5")]
+		public static void Vertex2(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex2f","4.5")]
+		public static void Vertex2(float x,float y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex2fv","4.5")]
+		public static void Vertex2(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex2i","4.5")]
+		public static void Vertex2(int x,int y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex2iv","4.5")]
+		public static void Vertex2(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex2s","4.5")]
+		public static void Vertex2(short x,short y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex2sv","4.5")]
+		public static void Vertex2(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex3d","4.5")]
+		public static void Vertex3(double x,double y,double z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex3dv","4.5")]
+		public static void Vertex3(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex3f","4.5")]
+		public static void Vertex3(float x,float y,float z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex3fv","4.5")]
+		public static void Vertex3(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex3i","4.5")]
+		public static void Vertex3(int x,int y,int z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex3iv","4.5")]
+		public static void Vertex3(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex3s","4.5")]
+		public static void Vertex3(short x,short y,short z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex3sv","4.5")]
+		public static void Vertex3(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex4d","4.5")]
+		public static void Vertex4(double x,double y,double z,double w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex4dv","4.5")]
+		public static void Vertex4(double[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex4f","4.5")]
+		public static void Vertex4(float x,float y,float z,float w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex4fv","4.5")]
+		public static void Vertex4(float[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex4i","4.5")]
+		public static void Vertex4(int x,int y,int z,int w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex4iv","4.5")]
+		public static void Vertex4(int[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex4s","4.5")]
+		public static void Vertex4(short x,short y,short z,short w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertex4sv","4.5")]
+		public static void Vertex4(short[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexPointer","4.5")]
+		public static void VertexPointer(int size,uint type,int stride,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glViewport","4.5")]
+		public static void Viewport(int x,int y,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetString","4.5")]
+		private static IntPtr GetStringInternal(StringName name)
+			=> throw new NotImplementedException();
+
+		[MI(AI)] public static string GetString(StringName name) => Marshal.PtrToStringAnsi(GetStringInternal(name));
 
 		#endregion
 
 		#region OpenGL 1.2
 
-		[MI(AI)] public static void DrawRangeElements(uint mode,uint start,uint end,int count,uint type,IntPtr indices) => GLDirect.DrawRangeElements(mode,start,end,count,type,indices);
-		[MI(AI)] public static void TexImage3D(uint target,int level,int internalFormat,int width,int height,int depth,int border,uint format,uint type,IntPtr pixels) => GLDirect.TexImage3D(target,level,internalFormat,width,height,depth,border,format,type,pixels);
-		[MI(AI)] public static void TexSubImage3D(uint target,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr pixels) => GLDirect.TexSubImage3D(target,level,xOffset,yOffset,zOffset,width,height,depth,format,type,pixels);
-		[MI(AI)] public static void CopyTexSubImage3D(uint target,int level,int xOffset,int yOffset,int zOffset,int x,int y,int width,int height) => GLDirect.CopyTexSubImage3D(target,level,xOffset,yOffset,zOffset,x,y,width,height);
-
+		[MethodImport("glDrawRangeElements","1.2")]
+		public static void DrawRangeElements(uint mode,uint start,uint end,int count,uint type,IntPtr indices)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexImage3D","1.2")]
+		public static void TexImage3D(uint target,int level,int internalFormat,int width,int height,int depth,int border,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexSubImage3D","1.2")]
+		public static void TexSubImage3D(uint target,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyTexSubImage3D","1.2")]
+		public static void CopyTexSubImage3D(uint target,int level,int xOffset,int yOffset,int zOffset,int x,int y,int width,int height)
+			=> throw new NotImplementedException();
+		
 		#endregion
 
 		#region OpenGL 1.3
 
-		[MI(AI)] public static void ActiveTexture(uint texture) => GLDirect.ActiveTexture(texture);
-		[MI(AI)] public static void SampleCoverage(float value,byte invert) => GLDirect.SampleCoverage(value,invert);
-		[MI(AI)] public static void CompressedTexImage3D(uint target,int level,uint internalFormat,int width,int height,int depth,int border,int imageSize,IntPtr data) => GLDirect.CompressedTexImage3D(target,level,internalFormat,width,height,depth,border,imageSize,data);
-		[MI(AI)] public static void CompressedTexImage2D(uint target,int level,uint internalFormat,int width,int height,int border,int imageSize,IntPtr data) => GLDirect.CompressedTexImage2D(target,level,internalFormat,width,height,border,imageSize,data);
-		[MI(AI)] public static void CompressedTexImage1D(uint target,int level,uint internalFormat,int width,int border,int imageSize,IntPtr data) => GLDirect.CompressedTexImage1D(target,level,internalFormat,width,border,imageSize,data);
-		[MI(AI)] public static void CompressedTexSubImage3D(uint target,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,int imageSize,IntPtr data) => GLDirect.CompressedTexSubImage3D(target,level,xOffset,yOffset,zOffset,width,height,depth,format,imageSize,data);
-		[MI(AI)] public static void CompressedTexSubImage2D(uint target,int level,int xOffset,int yOffset,int width,int height,uint format,int imageSize,IntPtr data) => GLDirect.CompressedTexSubImage2D(target,level,xOffset,yOffset,width,height,format,imageSize,data);
-		[MI(AI)] public static void CompressedTexSubImage1D(uint target,int level,int xOffset,int width,uint format,int imageSize,IntPtr data) => GLDirect.CompressedTexSubImage1D(target,level,xOffset,width,format,imageSize,data);
-		[MI(AI)] public static void GetCompressedTexImage(uint target,int level,IntPtr img) => GLDirect.GetCompressedTexImage(target,level,img);
-
+		[MethodImport("glActiveTexture","1.3")]
+		public static void ActiveTexture(uint texture)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glSampleCoverage","1.3")]
+		public static void SampleCoverage(float value,byte invert)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCompressedTexImage3D","1.3")]
+		public static void CompressedTexImage3D(uint target,int level,uint internalFormat,int width,int height,int depth,int border,int imageSize,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCompressedTexImage2D","1.3")]
+		public static void CompressedTexImage2D(uint target,int level,uint internalFormat,int width,int height,int border,int imageSize,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCompressedTexImage1D","1.3")]
+		public static void CompressedTexImage1D(uint target,int level,uint internalFormat,int width,int border,int imageSize,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCompressedTexSubImage3D","1.3")]
+		public static void CompressedTexSubImage3D(uint target,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,int imageSize,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCompressedTexSubImage2D","1.3")]
+		public static void CompressedTexSubImage2D(uint target,int level,int xOffset,int yOffset,int width,int height,uint format,int imageSize,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCompressedTexSubImage1D","1.3")]
+		public static void CompressedTexSubImage1D(uint target,int level,int xOffset,int width,uint format,int imageSize,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetCompressedTexImage","1.3")]
+		public static void GetCompressedTexImage(uint target,int level,IntPtr img)
+			=> throw new NotImplementedException();
+		
 		#endregion
 
 		#region OpenGL 1.4
 
-		[MI(AI)] public static void BlendFuncSeparate(uint sfactorRGB,uint dfactorRGB,uint sfactorAlpha,uint dfactorAlpha) => GLDirect.BlendFuncSeparate(sfactorRGB,dfactorRGB,sfactorAlpha,dfactorAlpha);
-		[MI(AI)] public static void MultiDrawArrays(uint mode,ref int first,ref int count,int drawcount) => GLDirect.MultiDrawArrays(mode,ref first,ref count,drawcount);
-		[MI(AI)] public static void MultiDrawElements(uint mode,ref int count,uint type,IntPtr indices,int drawcount) => GLDirect.MultiDrawElements(mode,ref count,type,indices,drawcount);
-		[MI(AI)] public static void PointParameter(uint pName,float param) => GLDirect.PointParameterf(pName,param);
-		[MI(AI)] public static void PointParameter(uint pName,ref float parameters) => GLDirect.PointParameterfv(pName,ref parameters);
-		[MI(AI)] public static void PointParameter(uint pName,int param) => GLDirect.PointParameteri(pName,param);
-		[MI(AI)] public static void PointParameter(uint pName,ref int parameters) => GLDirect.PointParameteriv(pName,ref parameters);
-		[MI(AI)] public static void BlendColor(float red,float green,float blue,float alpha) => GLDirect.BlendColor(red,green,blue,alpha);
-		[MI(AI)] public static void BlendEquation(uint mode) => GLDirect.BlendEquation(mode);
-
+		[MethodImport("glBlendFuncSeparate","1.4")]
+		public static void BlendFuncSeparate(uint sfactorRGB,uint dfactorRGB,uint sfactorAlpha,uint dfactorAlpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMultiDrawArrays","1.4")]
+		public static void MultiDrawArrays(uint mode,ref int first,ref int count,int drawcount)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMultiDrawElements","1.4")]
+		public static void MultiDrawElements(uint mode,ref int count,uint type,IntPtr indices,int drawcount)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPointParameterf","1.4")]
+		public static void PointParameter(uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPointParameterfv","1.4")]
+		public static void PointParameter(uint pName,ref float parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPointParameteri","1.4")]
+		public static void PointParameter(uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPointParameteriv","1.4")]
+		public static void PointParameter(uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBlendColor","1.4")]
+		public static void BlendColor(float red,float green,float blue,float alpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBlendEquation","1.4")]
+		public static void BlendEquation(uint mode)
+			=> throw new NotImplementedException();
+		
 		#endregion
 
 		#region OpenGL 1.5
 
-		[MI(AI)] public static void GenQueries(int n,ref uint ids) => GLDirect.GenQueries(n,ref ids);
-		[MI(AI)] public static void DeleteQueries(int n,ref uint ids) => GLDirect.DeleteQueries(n,ref ids);
-		[MI(AI)] public static byte IsQuery(uint id) => GLDirect.IsQuery(id);
-		[MI(AI)] public static void BeginQuery(uint target,uint id) => GLDirect.BeginQuery(target,id);
-		[MI(AI)] public static void EndQuery(uint target) => GLDirect.EndQuery(target);
-		[MI(AI)] public static void GetQuery(uint target,uint pName,ref int parameters) => GLDirect.GetQueryiv(target,pName,ref parameters);
-		[MI(AI)] public static void GetQueryObject(uint id,uint pName,ref int parameters) => GLDirect.GetQueryObjectiv(id,pName,ref parameters);
-		[MI(AI)] public static void GetQueryObject(uint id,uint pName,ref uint parameters) => GLDirect.GetQueryObjectuiv(id,pName,ref parameters);
-		[MI(AI)] public static void BindBuffer(BufferTarget target,uint buffer) => GLDirect.BindBuffer(target,buffer);
-		[MI(AI)] public static void DeleteBuffers(int n,ref uint buffers) => GLDirect.DeleteBuffers(n,ref buffers);
-		[MI(AI)] public static void GenBuffers(int n,ref uint buffers) => GLDirect.GenBuffers(n,ref buffers);
-		[MI(AI)] public static byte IsBuffer(uint buffer) => GLDirect.IsBuffer(buffer);
-		[MI(AI)] public static void BufferData(BufferTarget target,int size,IntPtr data,uint usage) => GLDirect.BufferData(target,size,data,usage);
-		[MI(AI)] public static void BufferSubData(BufferTarget target,int offset,int size,IntPtr data) => GLDirect.BufferSubData(target,offset,size,data);
-		[MI(AI)] public static void GetBufferSubData(BufferTarget target,int offset,int size,IntPtr data) => GLDirect.GetBufferSubData(target,offset,size,data);
-		[MI(AI)] public static IntPtr MapBuffer(BufferTarget target,uint access) => GLDirect.MapBuffer(target,access);
-		[MI(AI)] public static byte UnmapBuffer(BufferTarget target) => GLDirect.UnmapBuffer(target);
-		[MI(AI)] public static void GetBufferParameter(BufferTarget target,uint pName,ref int parameters) => GLDirect.GetBufferParameteriv(target,pName,ref parameters);
-		[MI(AI)] public static void GetBufferPointer(BufferTarget target,uint pName,ref IntPtr parameters) => GLDirect.GetBufferPointerv(target,pName,ref parameters);
-
+		[MethodImport("glGenQueries","1.5")]
+		public static void GenQueries(int n,ref uint ids)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteQueries","1.5")]
+		public static void DeleteQueries(int n,ref uint ids)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsQuery","1.5")]
+		public static byte IsQuery(uint id)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBeginQuery","1.5")]
+		public static void BeginQuery(uint target,uint id)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEndQuery","1.5")]
+		public static void EndQuery(uint target)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetQueryiv","1.5")]
+		public static void GetQuery(uint target,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetQueryObjectiv","1.5")]
+		public static void GetQueryObject(uint id,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetQueryObjectuiv","1.5")]
+		public static void GetQueryObject(uint id,uint pName,ref uint parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindBuffer","1.5")]
+		public static void BindBuffer(BufferTarget target,uint buffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteBuffers","1.5")]
+		public static void DeleteBuffers(int n,ref uint buffers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGenBuffers","1.5")]
+		public static void GenBuffers(int n,ref uint buffers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsBuffer","1.5")]
+		public static byte IsBuffer(uint buffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBufferData","1.5")]
+		public static void BufferData(BufferTarget target,int size,IntPtr data,uint usage)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBufferSubData","1.5")]
+		public static void BufferSubData(BufferTarget target,int offset,int size,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetBufferSubData","1.5")]
+		public static void GetBufferSubData(BufferTarget target,int offset,int size,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMapBuffer","1.5")]
+		public static IntPtr MapBuffer(BufferTarget target,uint access)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUnmapBuffer","1.5")]
+		public static byte UnmapBuffer(BufferTarget target)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetBufferParameteriv","1.5")]
+		public static void GetBufferParameter(BufferTarget target,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetBufferPointerv","1.5")]
+		public static void GetBufferPointer(BufferTarget target,uint pName,ref IntPtr parameters)
+			=> throw new NotImplementedException();
+		
 		#endregion
 
 		#region OpenGL 2.0
 
-		[MI(AI)] public static void BlendEquationSeparate(uint modeRGB,uint modeAlpha) => GLDirect.BlendEquationSeparate(modeRGB,modeAlpha);
-		[MI(AI)] public static void DrawBuffers(int n,ref uint bufs) => GLDirect.DrawBuffers(n,ref bufs);
-		[MI(AI)] public static void StencilOpSeparate(uint face,uint sfail,uint dpfail,uint dppass) => GLDirect.StencilOpSeparate(face,sfail,dpfail,dppass);
-		[MI(AI)] public static void StencilFuncSeparate(uint face,uint func,int refer,uint mask) => GLDirect.StencilFuncSeparate(face,func,refer,mask);
-		[MI(AI)] public static void StencilMaskSeparate(uint face,uint mask) => GLDirect.StencilMaskSeparate(face,mask);
-		[MI(AI)] public static void AttachShader(uint program,uint shader) => GLDirect.AttachShader(program,shader);
-		[MI(AI)] public static void BindAttribLocation(uint program,uint index,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.BindAttribLocation(program,index,name);
-		[MI(AI)] public static void CompileShader(uint shader) => GLDirect.CompileShader(shader);
-		[MI(AI)] public static uint CreateProgram() => GLDirect.CreateProgram();
-		[MI(AI)] public static uint CreateShader(uint type) => GLDirect.CreateShader(type);
-		[MI(AI)] public static void DeleteProgram(uint program) => GLDirect.DeleteProgram(program);
-		[MI(AI)] public static void DeleteShader(uint shader) => GLDirect.DeleteShader(shader);
-		[MI(AI)] public static void DetachShader(uint program,uint shader) => GLDirect.DetachShader(program,shader);
-		[MI(AI)] public static void DisableVertexAttribArray(uint index) => GLDirect.DisableVertexAttribArray(index);
-		[MI(AI)] public static void EnableVertexAttribArray(uint index) => GLDirect.EnableVertexAttribArray(index);
-		[MI(AI)] public static void GetActiveAttrib(uint program,uint index,int bufSize,ref int length,ref int size,ref uint type,IntPtr name) => GLDirect.GetActiveAttrib(program,index,bufSize,ref length,ref size,ref type,name);
-		[MI(AI)] public static void GetActiveUniform(uint program,uint index,int bufSize,ref int length,ref int size,ref uint type,IntPtr name) => GLDirect.GetActiveUniform(program,index,bufSize,ref length,ref size,ref type,name);
-		[MI(AI)] public static void GetAttachedShaders(uint program,int maxCount,ref int count,ref uint shaders) => GLDirect.GetAttachedShaders(program,maxCount,ref count,ref shaders);
-		[MI(AI)] public static int GetAttribLocation(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.GetAttribLocation(program,name);
-		[MI(AI)] public static void GetProgram(uint program,GetProgramParameter parameter,out int results) => GLDirect.GetProgramiv(program,parameter,out results);
-		[MI(AI)] public static void GetProgramInfoLog(uint program,int bufSize,ref int length,IntPtr infoLog) => GLDirect.GetProgramInfoLog(program,bufSize,ref length,infoLog);
-		[MI(AI)] public static void GetShader(uint shader,uint pName,ref int parameters) => GLDirect.GetShaderiv(shader,pName,ref parameters);
-		[MI(AI)] public static void GetShaderInfoLog(uint shader,int bufSize,ref int length,IntPtr infoLog) => GLDirect.GetShaderInfoLog(shader,bufSize,ref length,infoLog);
-		[MI(AI)] public static void GetShaderSource(uint shader,int bufSize,ref int length,IntPtr source) => GLDirect.GetShaderSource(shader,bufSize,ref length,source);
-		[MI(AI)] public static int GetUniformLocation(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.GetUniformLocation(program,name);
-		[MI(AI)] public static void GetUniform(uint program,int location,ref float parameters) => GLDirect.GetUniformfv(program,location,ref parameters);
-		[MI(AI)] public static void GetUniform(uint program,int location,ref int parameters) => GLDirect.GetUniformiv(program,location,ref parameters);
-		[MI(AI)] public static void GetVertexAttrib(uint index,uint pName,ref double parameters) => GLDirect.GetVertexAttribdv(index,pName,ref parameters);
-		[MI(AI)] public static void GetVertexAttrib(uint index,uint pName,ref float parameters) => GLDirect.GetVertexAttribfv(index,pName,ref parameters);
-		[MI(AI)] public static void GetVertexAttrib(uint index,uint pName,ref int parameters) => GLDirect.GetVertexAttribiv(index,pName,ref parameters);
-		[MI(AI)] public static void GetVertexAttribPointer(uint index,uint pName,ref IntPtr pointer) => GLDirect.GetVertexAttribPointerv(index,pName,ref pointer);
-		[MI(AI)] public static byte IsProgram(uint program) => GLDirect.IsProgram(program);
-		[MI(AI)] public static byte IsShader(uint shader) => GLDirect.IsShader(shader);
-		[MI(AI)] public static void LinkProgram(uint program) => GLDirect.LinkProgram(program);
-		[MI(AI)] public static void ShaderSource(uint shader,int count,ref IntPtr str,ref int length) => GLDirect.ShaderSource(shader,count,ref str,ref length);
-		[MI(AI)] public static void UseProgram(uint program) => GLDirect.UseProgram(program);
-		[MI(AI)] public static void Uniform1(int location,float v0) => GLDirect.Uniform1f(location,v0);
-		[MI(AI)] public static void Uniform2(int location,float v0,float v1) => GLDirect.Uniform2f(location,v0,v1);
-		[MI(AI)] public static void Uniform3(int location,float v0,float v1,float v2) => GLDirect.Uniform3f(location,v0,v1,v2);
-		[MI(AI)] public static void Uniform4(int location,float v0,float v1,float v2,float v3) => GLDirect.Uniform4f(location,v0,v1,v2,v3);
-		[MI(AI)] public static void Uniform1(int location,int v0) => GLDirect.Uniform1i(location,v0);
-		[MI(AI)] public static void Uniform2(int location,int v0,int v1) => GLDirect.Uniform2i(location,v0,v1);
-		[MI(AI)] public static void Uniform3(int location,int v0,int v1,int v2) => GLDirect.Uniform3i(location,v0,v1,v2);
-		[MI(AI)] public static void Uniform4(int location,int v0,int v1,int v2,int v3) => GLDirect.Uniform4i(location,v0,v1,v2,v3);
-		[MI(AI)] public static void Uniform1(int location,int count,ref float value) => GLDirect.Uniform1fv(location,count,ref value);
-		[MI(AI)] public static void Uniform2(int location,int count,ref float value) => GLDirect.Uniform2fv(location,count,ref value);
-		[MI(AI)] public static void Uniform3(int location,int count,ref float value) => GLDirect.Uniform3fv(location,count,ref value);
-		[MI(AI)] public static void Uniform4(int location,int count,ref float value) => GLDirect.Uniform4fv(location,count,ref value);
-		[MI(AI)] public static void Uniform1(int location,int count,ref int value) => GLDirect.Uniform1iv(location,count,ref value);
-		[MI(AI)] public static void Uniform2(int location,int count,ref int value) => GLDirect.Uniform2iv(location,count,ref value);
-		[MI(AI)] public static void Uniform3(int location,int count,ref int value) => GLDirect.Uniform3iv(location,count,ref value);
-		[MI(AI)] public static void Uniform4(int location,int count,ref int value) => GLDirect.Uniform4iv(location,count,ref value);
-		[MI(AI)] public static void UniformMatrix2(int location,int count,byte transpose,ref float value) => GLDirect.UniformMatrix2fv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix3(int location,int count,byte transpose,ref float value) => GLDirect.UniformMatrix3fv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix4(int location,int count,byte transpose,ref float value) => GLDirect.UniformMatrix4fv(location,count,transpose,ref value);
-		[MI(AI)] public static void ValidateProgram(uint program) => GLDirect.ValidateProgram(program);
-		[MI(AI)] public static void VertexAttrib1(uint index,double x) => GLDirect.VertexAttrib1d(index,x);
-		[MI(AI)] public static void VertexAttrib1(uint index,ref double v) => GLDirect.VertexAttrib1dv(index,ref v);
-		[MI(AI)] public static void VertexAttrib1(uint index,float x) => GLDirect.VertexAttrib1f(index,x);
-		[MI(AI)] public static void VertexAttrib1(uint index,ref float v) => GLDirect.VertexAttrib1fv(index,ref v);
-		[MI(AI)] public static void VertexAttrib1(uint index,short x) => GLDirect.VertexAttrib1s(index,x);
-		[MI(AI)] public static void VertexAttrib1(uint index,ref short v) => GLDirect.VertexAttrib1sv(index,ref v);
-		[MI(AI)] public static void VertexAttrib2(uint index,double x,double y) => GLDirect.VertexAttrib2d(index,x,y);
-		[MI(AI)] public static void VertexAttrib2(uint index,ref double v) => GLDirect.VertexAttrib2dv(index,ref v);
-		[MI(AI)] public static void VertexAttrib2(uint index,float x,float y) => GLDirect.VertexAttrib2f(index,x,y);
-		[MI(AI)] public static void VertexAttrib2(uint index,ref float v) => GLDirect.VertexAttrib2fv(index,ref v);
-		[MI(AI)] public static void VertexAttrib2(uint index,short x,short y) => GLDirect.VertexAttrib2s(index,x,y);
-		[MI(AI)] public static void VertexAttrib2(uint index,ref short v) => GLDirect.VertexAttrib2sv(index,ref v);
-		[MI(AI)] public static void VertexAttrib3(uint index,double x,double y,double z) => GLDirect.VertexAttrib3d(index,x,y,z);
-		[MI(AI)] public static void VertexAttrib3(uint index,ref double v) => GLDirect.VertexAttrib3dv(index,ref v);
-		[MI(AI)] public static void VertexAttrib3(uint index,float x,float y,float z) => GLDirect.VertexAttrib3f(index,x,y,z);
-		[MI(AI)] public static void VertexAttrib3(uint index,ref float v) => GLDirect.VertexAttrib3fv(index,ref v);
-		[MI(AI)] public static void VertexAttrib3(uint index,short x,short y,short z) => GLDirect.VertexAttrib3s(index,x,y,z);
-		[MI(AI)] public static void VertexAttrib3(uint index,ref short v) => GLDirect.VertexAttrib3sv(index,ref v);
-		[MI(AI)] public static void VertexAttrib4N(uint index,sbyte[] v) => GLDirect.VertexAttrib4Nbv(index,v);
-		[MI(AI)] public static void VertexAttrib4N(uint index,ref int v) => GLDirect.VertexAttrib4Niv(index,ref v);
-		[MI(AI)] public static void VertexAttrib4N(uint index,ref short v) => GLDirect.VertexAttrib4Nsv(index,ref v);
-		[MI(AI)] public static void VertexAttrib4N(uint index,byte x,byte y,byte z,byte w) => GLDirect.VertexAttrib4Nub(index,x,y,z,w);
-		[MI(AI)] public static void VertexAttrib4N(uint index,byte[] v) => GLDirect.VertexAttrib4Nubv(index,v);
-		[MI(AI)] public static void VertexAttrib4N(uint index,ref uint v) => GLDirect.VertexAttrib4Nuiv(index,ref v);
-		[MI(AI)] public static void VertexAttrib4N(uint index,ref ushort v) => GLDirect.VertexAttrib4Nusv(index,ref v);
-		[MI(AI)] public static void VertexAttrib4(uint index,sbyte[] v) => GLDirect.VertexAttrib4bv(index,v);
-		[MI(AI)] public static void VertexAttrib4(uint index,double x,double y,double z,double w) => GLDirect.VertexAttrib4d(index,x,y,z,w);
-		[MI(AI)] public static void VertexAttrib4(uint index,ref double v) => GLDirect.VertexAttrib4dv(index,ref v);
-		[MI(AI)] public static void VertexAttrib4(uint index,float x,float y,float z,float w) => GLDirect.VertexAttrib4f(index,x,y,z,w);
-		[MI(AI)] public static void VertexAttrib4(uint index,ref float v) => GLDirect.VertexAttrib4fv(index,ref v);
-		[MI(AI)] public static void VertexAttrib4(uint index,ref int v) => GLDirect.VertexAttrib4iv(index,ref v);
-		[MI(AI)] public static void VertexAttrib4(uint index,short x,short y,short z,short w) => GLDirect.VertexAttrib4s(index,x,y,z,w);
-		[MI(AI)] public static void VertexAttrib4(uint index,ref short v) => GLDirect.VertexAttrib4sv(index,ref v);
-		[MI(AI)] public static void VertexAttrib4(uint index,byte[] v) => GLDirect.VertexAttrib4ubv(index,v);
-		[MI(AI)] public static void VertexAttrib4(uint index,ref uint v) => GLDirect.VertexAttrib4uiv(index,ref v);
-		[MI(AI)] public static void VertexAttrib4(uint index,ref ushort v) => GLDirect.VertexAttrib4usv(index,ref v);
-		[MI(AI)] public static void VertexAttribPointer(uint index,int size,uint type,byte normalized,int stride,IntPtr pointer) => GLDirect.VertexAttribPointer(index,size,type,normalized,stride,pointer);
-
+		[MethodImport("glBlendEquationSeparate","2.0")]
+		public static void BlendEquationSeparate(uint modeRGB,uint modeAlpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawBuffers","2.0")]
+		public static void DrawBuffers(int n,ref uint bufs)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glStencilOpSeparate","2.0")]
+		public static void StencilOpSeparate(uint face,uint sfail,uint dpfail,uint dppass)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glStencilFuncSeparate","2.0")]
+		public static void StencilFuncSeparate(uint face,uint func,int refer,uint mask)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glStencilMaskSeparate","2.0")]
+		public static void StencilMaskSeparate(uint face,uint mask)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glAttachShader","2.0")]
+		public static void AttachShader(uint program,uint shader)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindAttribLocation","2.0")]
+		public static void BindAttribLocation(uint program,uint index,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCompileShader","2.0")]
+		public static void CompileShader(uint shader)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateProgram","2.0")]
+		public static uint CreateProgram()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateShader","2.0")]
+		public static uint CreateShader(uint type)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteProgram","2.0")]
+		public static void DeleteProgram(uint program)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteShader","2.0")]
+		public static void DeleteShader(uint shader)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDetachShader","2.0")]
+		public static void DetachShader(uint program,uint shader)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDisableVertexAttribArray","2.0")]
+		public static void DisableVertexAttribArray(uint index)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEnableVertexAttribArray","2.0")]
+		public static void EnableVertexAttribArray(uint index)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetActiveAttrib","2.0")]
+		public static void GetActiveAttrib(uint program,uint index,int bufSize,ref int length,ref int size,ref uint type,IntPtr name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetActiveUniform","2.0")]
+		public static void GetActiveUniform(uint program,uint index,int bufSize,ref int length,ref int size,ref uint type,IntPtr name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetAttachedShaders","2.0")]
+		public static void GetAttachedShaders(uint program,int maxCount,ref int count,ref uint shaders)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetAttribLocation","2.0")]
+		public static int GetAttribLocation(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramiv","2.0")]
+		public static void GetProgram(uint program,GetProgramParameter parameter,out int results)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramInfoLog","2.0")]
+		public static void GetProgramInfoLog(uint program,int bufSize,ref int length,IntPtr infoLog)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetShaderiv","2.0")]
+		public static void GetShader(uint shader,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetShaderInfoLog","2.0")]
+		public static void GetShaderInfoLog(uint shader,int bufSize,ref int length,IntPtr infoLog)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetShaderSource","2.0")]
+		public static void GetShaderSource(uint shader,int bufSize,ref int length,IntPtr source)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetUniformLocation","2.0")]
+		public static int GetUniformLocation(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetUniformfv","2.0")]
+		public static void GetUniform(uint program,int location,ref float parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetUniformiv","2.0")]
+		public static void GetUniform(uint program,int location,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetVertexAttribdv","2.0")]
+		public static void GetVertexAttrib(uint index,uint pName,ref double parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetVertexAttribfv","2.0")]
+		public static void GetVertexAttrib(uint index,uint pName,ref float parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetVertexAttribiv","2.0")]
+		public static void GetVertexAttrib(uint index,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetVertexAttribPointerv","2.0")]
+		public static void GetVertexAttribPointer(uint index,uint pName,ref IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsProgram","2.0")]
+		public static byte IsProgram(uint program)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsShader","2.0")]
+		public static byte IsShader(uint shader)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glLinkProgram","2.0")]
+		public static void LinkProgram(uint program)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glShaderSource","2.0")]
+		public static void ShaderSource(uint shader,int count,ref IntPtr str,ref int length)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUseProgram","2.0")]
+		public static void UseProgram(uint program)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform1f","2.0")]
+		public static void Uniform1(int location,float v0)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform2f","2.0")]
+		public static void Uniform2(int location,float v0,float v1)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform3f","2.0")]
+		public static void Uniform3(int location,float v0,float v1,float v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform4f","2.0")]
+		public static void Uniform4(int location,float v0,float v1,float v2,float v3)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform1i","2.0")]
+		public static void Uniform1(int location,int v0)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform2i","2.0")]
+		public static void Uniform2(int location,int v0,int v1)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform3i","2.0")]
+		public static void Uniform3(int location,int v0,int v1,int v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform4i","2.0")]
+		public static void Uniform4(int location,int v0,int v1,int v2,int v3)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform1fv","2.0")]
+		public static void Uniform1(int location,int count,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform2fv","2.0")]
+		public static void Uniform2(int location,int count,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform3fv","2.0")]
+		public static void Uniform3(int location,int count,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform4fv","2.0")]
+		public static void Uniform4(int location,int count,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform1iv","2.0")]
+		public static void Uniform1(int location,int count,ref int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform2iv","2.0")]
+		public static void Uniform2(int location,int count,ref int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform3iv","2.0")]
+		public static void Uniform3(int location,int count,ref int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform4iv","2.0")]
+		public static void Uniform4(int location,int count,ref int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix2fv","2.0")]
+		public static void UniformMatrix2(int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix3fv","2.0")]
+		public static void UniformMatrix3(int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix4fv","2.0")]
+		public static void UniformMatrix4(int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glValidateProgram","2.0")]
+		public static void ValidateProgram(uint program)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib1d","2.0")]
+		public static void VertexAttrib1(uint index,double x)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib1dv","2.0")]
+		public static void VertexAttrib1(uint index,ref double v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib1f","2.0")]
+		public static void VertexAttrib1(uint index,float x)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib1fv","2.0")]
+		public static void VertexAttrib1(uint index,ref float v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib1s","2.0")]
+		public static void VertexAttrib1(uint index,short x)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib1sv","2.0")]
+		public static void VertexAttrib1(uint index,ref short v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib2d","2.0")]
+		public static void VertexAttrib2(uint index,double x,double y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib2dv","2.0")]
+		public static void VertexAttrib2(uint index,ref double v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib2f","2.0")]
+		public static void VertexAttrib2(uint index,float x,float y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib2fv","2.0")]
+		public static void VertexAttrib2(uint index,ref float v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib2s","2.0")]
+		public static void VertexAttrib2(uint index,short x,short y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib2sv","2.0")]
+		public static void VertexAttrib2(uint index,ref short v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib3d","2.0")]
+		public static void VertexAttrib3(uint index,double x,double y,double z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib3dv","2.0")]
+		public static void VertexAttrib3(uint index,ref double v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib3f","2.0")]
+		public static void VertexAttrib3(uint index,float x,float y,float z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib3fv","2.0")]
+		public static void VertexAttrib3(uint index,ref float v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib3s","2.0")]
+		public static void VertexAttrib3(uint index,short x,short y,short z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib3sv","2.0")]
+		public static void VertexAttrib3(uint index,ref short v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4Nbv","2.0")]
+		public static void VertexAttrib4N(uint index,sbyte[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4Niv","2.0")]
+		public static void VertexAttrib4N(uint index,ref int v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4Nsv","2.0")]
+		public static void VertexAttrib4N(uint index,ref short v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4Nub","2.0")]
+		public static void VertexAttrib4N(uint index,byte x,byte y,byte z,byte w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4Nubv","2.0")]
+		public static void VertexAttrib4N(uint index,byte[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4Nuiv","2.0")]
+		public static void VertexAttrib4N(uint index,ref uint v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4Nusv","2.0")]
+		public static void VertexAttrib4N(uint index,ref ushort v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4bv","2.0")]
+		public static void VertexAttrib4(uint index,sbyte[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4d","2.0")]
+		public static void VertexAttrib4(uint index,double x,double y,double z,double w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4dv","2.0")]
+		public static void VertexAttrib4(uint index,ref double v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4f","2.0")]
+		public static void VertexAttrib4(uint index,float x,float y,float z,float w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4fv","2.0")]
+		public static void VertexAttrib4(uint index,ref float v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4iv","2.0")]
+		public static void VertexAttrib4(uint index,ref int v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4s","2.0")]
+		public static void VertexAttrib4(uint index,short x,short y,short z,short w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4sv","2.0")]
+		public static void VertexAttrib4(uint index,ref short v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4ubv","2.0")]
+		public static void VertexAttrib4(uint index,byte[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4uiv","2.0")]
+		public static void VertexAttrib4(uint index,ref uint v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttrib4usv","2.0")]
+		public static void VertexAttrib4(uint index,ref ushort v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribPointer","2.0")]
+		public static void VertexAttribPointer(uint index,int size,uint type,byte normalized,int stride,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
 		#endregion
 
 		#region OpenGL 2.1
 
-		[MI(AI)] public static void UniformMatrix2x3(int location,int count,byte transpose,ref float value) => GLDirect.UniformMatrix2x3fv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix3x2(int location,int count,byte transpose,ref float value) => GLDirect.UniformMatrix3x2fv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix2x4(int location,int count,byte transpose,ref float value) => GLDirect.UniformMatrix2x4fv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix4x2(int location,int count,byte transpose,ref float value) => GLDirect.UniformMatrix4x2fv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix3x4(int location,int count,byte transpose,ref float value) => GLDirect.UniformMatrix3x4fv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix4x3(int location,int count,byte transpose,ref float value) => GLDirect.UniformMatrix4x3fv(location,count,transpose,ref value);
-
+		[MethodImport("glUniformMatrix2x3fv","2.1")]
+		public static void UniformMatrix2x3(int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix3x2fv","2.1")]
+		public static void UniformMatrix3x2(int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix2x4fv","2.1")]
+		public static void UniformMatrix2x4(int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix4x2fv","2.1")]
+		public static void UniformMatrix4x2(int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix3x4fv","2.1")]
+		public static void UniformMatrix3x4(int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix4x3fv","2.1")]
+		public static void UniformMatrix4x3(int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
 		#endregion
 
 		#region OpenGL 3.0
 
-		[MI(AI)] public static void ColorMask(uint index,byte r,byte g,byte b,byte a) => GLDirect.ColorMaski(index,r,g,b,a);
-		[MI(AI)] public static void GetBoolean(uint target,uint index,IntPtr data) => GLDirect.GetBooleani_v(target,index,data);
-		[MI(AI)] public static void GetInteger(uint target,uint index,ref int data) => GLDirect.GetIntegeri_v(target,index,ref data);
-		[MI(AI)] public static void Enable(uint target,uint index) => GLDirect.Enablei(target,index);
-		[MI(AI)] public static void Disable(uint target,uint index) => GLDirect.Disablei(target,index);
-		[MI(AI)] public static byte IsEnabled(uint target,uint index) => GLDirect.IsEnabledi(target,index);
-		[MI(AI)] public static void BeginTransformFeedback(uint primitiveMode) => GLDirect.BeginTransformFeedback(primitiveMode);
-		[MI(AI)] public static void EndTransformFeedback() => GLDirect.EndTransformFeedback();
-		[MI(AI)] public static void BindBufferRange(BufferRangeTarget target,uint index,uint buffer,int offset,int size) => GLDirect.BindBufferRange(target,index,buffer,offset,size);
-		[MI(AI)] public static void BindBufferBase(BufferRangeTarget target,uint index,uint buffer) => GLDirect.BindBufferBase(target,index,buffer);
-		[MI(AI)] public static void TransformFeedbackVaryings(uint program,int count,IntPtr varyings,uint bufferMode) => GLDirect.TransformFeedbackVaryings(program,count,varyings,bufferMode);
-		[MI(AI)] public static void GetTransformFeedbackVarying(uint program,uint index,int bufSize,ref int length,ref int size,ref uint type,IntPtr name) => GLDirect.GetTransformFeedbackVarying(program,index,bufSize,ref length,ref size,ref type,name);
-		[MI(AI)] public static void ClampColor(uint target,uint clamp) => GLDirect.ClampColor(target,clamp);
-		[MI(AI)] public static void BeginConditionalRender(uint id,uint mode) => GLDirect.BeginConditionalRender(id,mode);
-		[MI(AI)] public static void EndConditionalRender() => GLDirect.EndConditionalRender();
-		[MI(AI)] public static void VertexAttribIPointer(uint index,int size,uint type,int stride,IntPtr pointer) => GLDirect.VertexAttribIPointer(index,size,type,stride,pointer);
-		[MI(AI)] public static void GetVertexAttribI(uint index,uint pName,ref int parameters) => GLDirect.GetVertexAttribIiv(index,pName,ref parameters);
-		[MI(AI)] public static void GetVertexAttribI(uint index,uint pName,ref uint parameters) => GLDirect.GetVertexAttribIuiv(index,pName,ref parameters);
-		[MI(AI)] public static void VertexAttribI1(uint index,int x) => GLDirect.VertexAttribI1i(index,x);
-		[MI(AI)] public static void VertexAttribI2(uint index,int x,int y) => GLDirect.VertexAttribI2i(index,x,y);
-		[MI(AI)] public static void VertexAttribI3(uint index,int x,int y,int z) => GLDirect.VertexAttribI3i(index,x,y,z);
-		[MI(AI)] public static void VertexAttribI4(uint index,int x,int y,int z,int w) => GLDirect.VertexAttribI4i(index,x,y,z,w);
-		[MI(AI)] public static void VertexAttribI1(uint index,uint x) => GLDirect.VertexAttribI1ui(index,x);
-		[MI(AI)] public static void VertexAttribI2(uint index,uint x,uint y) => GLDirect.VertexAttribI2ui(index,x,y);
-		[MI(AI)] public static void VertexAttribI3(uint index,uint x,uint y,uint z) => GLDirect.VertexAttribI3ui(index,x,y,z);
-		[MI(AI)] public static void VertexAttribI4(uint index,uint x,uint y,uint z,uint w) => GLDirect.VertexAttribI4ui(index,x,y,z,w);
-		[MI(AI)] public static void VertexAttribI1(uint index,ref int v) => GLDirect.VertexAttribI1iv(index,ref v);
-		[MI(AI)] public static void VertexAttribI2(uint index,ref int v) => GLDirect.VertexAttribI2iv(index,ref v);
-		[MI(AI)] public static void VertexAttribI3(uint index,ref int v) => GLDirect.VertexAttribI3iv(index,ref v);
-		[MI(AI)] public static void VertexAttribI4(uint index,ref int v) => GLDirect.VertexAttribI4iv(index,ref v);
-		[MI(AI)] public static void VertexAttribI1(uint index,ref uint v) => GLDirect.VertexAttribI1uiv(index,ref v);
-		[MI(AI)] public static void VertexAttribI2(uint index,ref uint v) => GLDirect.VertexAttribI2uiv(index,ref v);
-		[MI(AI)] public static void VertexAttribI3(uint index,ref uint v) => GLDirect.VertexAttribI3uiv(index,ref v);
-		[MI(AI)] public static void VertexAttribI4(uint index,ref uint v) => GLDirect.VertexAttribI4uiv(index,ref v);
-		[MI(AI)] public static void VertexAttribI4(uint index,sbyte[] v) => GLDirect.VertexAttribI4bv(index,v);
-		[MI(AI)] public static void VertexAttribI4(uint index,ref short v) => GLDirect.VertexAttribI4sv(index,ref v);
-		[MI(AI)] public static void VertexAttribI4(uint index,byte[] v) => GLDirect.VertexAttribI4ubv(index,v);
-		[MI(AI)] public static void VertexAttribI4(uint index,ref ushort v) => GLDirect.VertexAttribI4usv(index,ref v);
-		[MI(AI)] public static void GetUniform(uint program,int location,ref uint parameters) => GLDirect.GetUniformuiv(program,location,ref parameters);
-		[MI(AI)] public static void BindFragDataLocation(uint program,uint color,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.BindFragDataLocation(program,color,name);
-		[MI(AI)] public static int GetFragDataLocation(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.GetFragDataLocation(program,name);
-		[MI(AI)] public static void Uniform1(int location,uint v0) => GLDirect.Uniform1ui(location,v0);
-		[MI(AI)] public static void Uniform2(int location,uint v0,uint v1) => GLDirect.Uniform2ui(location,v0,v1);
-		[MI(AI)] public static void Uniform3(int location,uint v0,uint v1,uint v2) => GLDirect.Uniform3ui(location,v0,v1,v2);
-		[MI(AI)] public static void Uniform4(int location,uint v0,uint v1,uint v2,uint v3) => GLDirect.Uniform4ui(location,v0,v1,v2,v3);
-		[MI(AI)] public static void Uniform1(int location,int count,ref uint value) => GLDirect.Uniform1uiv(location,count,ref value);
-		[MI(AI)] public static void Uniform2(int location,int count,ref uint value) => GLDirect.Uniform2uiv(location,count,ref value);
-		[MI(AI)] public static void Uniform3(int location,int count,ref uint value) => GLDirect.Uniform3uiv(location,count,ref value);
-		[MI(AI)] public static void Uniform4(int location,int count,ref uint value) => GLDirect.Uniform4uiv(location,count,ref value);
-		[MI(AI)] public static void TexParameterI(uint target,uint pName,ref int parameters) => GLDirect.TexParameterIiv(target,pName,ref parameters);
-		[MI(AI)] public static void TexParameterI(uint target,uint pName,ref uint parameters) => GLDirect.TexParameterIuiv(target,pName,ref parameters);
-		[MI(AI)] public static void GetTexParameterI(uint target,uint pName,ref int parameters) => GLDirect.GetTexParameterIiv(target,pName,ref parameters);
-		[MI(AI)] public static void GetTexParameterI(uint target,uint pName,ref uint parameters) => GLDirect.GetTexParameterIuiv(target,pName,ref parameters);
-		[MI(AI)] public static void ClearBuffer(uint buffer,int drawbuffer,ref int value) => GLDirect.ClearBufferiv(buffer,drawbuffer,ref value);
-		[MI(AI)] public static void ClearBuffer(uint buffer,int drawbuffer,ref uint value) => GLDirect.ClearBufferuiv(buffer,drawbuffer,ref value);
-		[MI(AI)] public static void ClearBuffer(uint buffer,int drawbuffer,ref float value) => GLDirect.ClearBufferfv(buffer,drawbuffer,ref value);
-		[MI(AI)] public static void ClearBuffer(uint buffer,int drawbuffer,float depth,int stencil) => GLDirect.ClearBufferfi(buffer,drawbuffer,depth,stencil);
-		[MI(AI)] public static IntPtr GetString(uint name,uint index) => GLDirect.GetStringi(name,index);
-		[MI(AI)] public static byte IsRenderbuffer(uint renderbuffer) => GLDirect.IsRenderbuffer(renderbuffer);
-		[MI(AI)] public static void BindRenderbuffer(uint target,uint renderbuffer) => GLDirect.BindRenderbuffer(target,renderbuffer);
-		[MI(AI)] public static void DeleteRenderbuffers(int n,ref uint renderbuffers) => GLDirect.DeleteRenderbuffers(n,ref renderbuffers);
-		[MI(AI)] public static void GenRenderbuffers(int n,ref uint renderbuffers) => GLDirect.GenRenderbuffers(n,ref renderbuffers);
-		[MI(AI)] public static void RenderbufferStorage(uint target,uint internalFormat,int width,int height) => GLDirect.RenderbufferStorage(target,internalFormat,width,height);
-		[MI(AI)] public static void GetRenderbufferParameter(uint target,uint pName,ref int parameters) => GLDirect.GetRenderbufferParameteriv(target,pName,ref parameters);
-		[MI(AI)] public static byte IsFramebuffer(uint framebuffer) => GLDirect.IsFramebuffer(framebuffer);
-		[MI(AI)] public static void BindFramebuffer(FramebufferTarget target,uint framebuffer) => GLDirect.BindFramebuffer(target,framebuffer);
-		[MI(AI)] public static void DeleteFramebuffers(int n,ref uint framebuffers) => GLDirect.DeleteFramebuffers(n,ref framebuffers);
-		[MI(AI)] public static void GenFramebuffers(int n,ref uint framebuffers) => GLDirect.GenFramebuffers(n,ref framebuffers);
-		[MI(AI)] public static uint CheckFramebufferStatus(FramebufferTarget target) => GLDirect.CheckFramebufferStatus(target);
-		[MI(AI)] public static void FramebufferTexture1D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level) => GLDirect.FramebufferTexture1D(target,attachment,texTarget,texture,level);
-		[MI(AI)] public static void FramebufferTexture2D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level) => GLDirect.FramebufferTexture2D(target,attachment,texTarget,texture,level);
-		[MI(AI)] public static void FramebufferTexture3D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level,int zOffset) => GLDirect.FramebufferTexture3D(target,attachment,texTarget,texture,level,zOffset);
-		[MI(AI)] public static void FramebufferRenderbuffer(FramebufferTarget target,uint attachment,uint renderbuffertarget,uint renderbuffer) => GLDirect.FramebufferRenderbuffer(target,attachment,renderbuffertarget,renderbuffer);
-		[MI(AI)] public static void GetFramebufferAttachmentParameter(FramebufferTarget target,uint attachment,uint pName,ref int parameters) => GLDirect.GetFramebufferAttachmentParameteriv(target,attachment,pName,ref parameters);
-		[MI(AI)] public static void GenerateMipmap(GenerateMipmapTarget target) => GLDirect.GenerateMipmap(target);
-		[MI(AI)] public static void BlitFramebuffer(int srcX0,int srcY0,int srcX1,int srcY1,int dstX0,int dstY0,int dstX1,int dstY1,uint mask,uint filter) => GLDirect.BlitFramebuffer(srcX0,srcY0,srcX1,srcY1,dstX0,dstY0,dstX1,dstY1,mask,filter);
-		[MI(AI)] public static void RenderbufferStorageMultisample(uint target,int samples,uint internalFormat,int width,int height) => GLDirect.RenderbufferStorageMultisample(target,samples,internalFormat,width,height);
-		[MI(AI)] public static void FramebufferTextureLayer(FramebufferTarget target,uint attachment,uint texture,int level,int layer) => GLDirect.FramebufferTextureLayer(target,attachment,texture,level,layer);
-		[MI(AI)] public static IntPtr MapBufferRange(BufferTarget target,int offset,int length,uint access) => GLDirect.MapBufferRange(target,offset,length,access);
-		[MI(AI)] public static void FlushMappedBufferRange(BufferTarget target,int offset,int length) => GLDirect.FlushMappedBufferRange(target,offset,length);
-		[MI(AI)] public static void BindVertexArray(uint array) => GLDirect.BindVertexArray(array);
-		[MI(AI)] public static void DeleteVertexArrays(int n,ref uint arrays) => GLDirect.DeleteVertexArrays(n,ref arrays);
-		[MI(AI)] public static void GenVertexArrays(int n,ref uint arrays) => GLDirect.GenVertexArrays(n,ref arrays);
-		[MI(AI)] public static byte IsVertexArray(uint array) => GLDirect.IsVertexArray(array);
+		[MethodImport("glColorMaski","3.0")]
+		public static void ColorMask(uint index,byte r,byte g,byte b,byte a)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetBooleani_v","3.0")]
+		public static void GetBoolean(uint target,uint index,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetIntegeri_v","3.0")]
+		public static void GetInteger(uint target,uint index,ref int data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEnablei","3.0")]
+		public static void Enable(uint target,uint index)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDisablei","3.0")]
+		public static void Disable(uint target,uint index)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsEnabledi","3.0")]
+		public static byte IsEnabled(uint target,uint index)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBeginTransformFeedback","3.0")]
+		public static void BeginTransformFeedback(uint primitiveMode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEndTransformFeedback","3.0")]
+		public static void EndTransformFeedback()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindBufferRange","3.0")]
+		public static void BindBufferRange(BufferRangeTarget target,uint index,uint buffer,int offset,int size)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindBufferBase","3.0")]
+		public static void BindBufferBase(BufferRangeTarget target,uint index,uint buffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTransformFeedbackVaryings","3.0")]
+		public static void TransformFeedbackVaryings(uint program,int count,IntPtr varyings,uint bufferMode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTransformFeedbackVarying","3.0")]
+		public static void GetTransformFeedbackVarying(uint program,uint index,int bufSize,ref int length,ref int size,ref uint type,IntPtr name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClampColor","3.0")]
+		public static void ClampColor(uint target,uint clamp)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBeginConditionalRender","3.0")]
+		public static void BeginConditionalRender(uint id,uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEndConditionalRender","3.0")]
+		public static void EndConditionalRender()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribIPointer","3.0")]
+		public static void VertexAttribIPointer(uint index,int size,uint type,int stride,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetVertexAttribIiv","3.0")]
+		public static void GetVertexAttribI(uint index,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetVertexAttribIuiv","3.0")]
+		public static void GetVertexAttribI(uint index,uint pName,ref uint parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI1i","3.0")]
+		public static void VertexAttribI1(uint index,int x)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI2i","3.0")]
+		public static void VertexAttribI2(uint index,int x,int y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI3i","3.0")]
+		public static void VertexAttribI3(uint index,int x,int y,int z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI4i","3.0")]
+		public static void VertexAttribI4(uint index,int x,int y,int z,int w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI1ui","3.0")]
+		public static void VertexAttribI1(uint index,uint x)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI2ui","3.0")]
+		public static void VertexAttribI2(uint index,uint x,uint y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI3ui","3.0")]
+		public static void VertexAttribI3(uint index,uint x,uint y,uint z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI4ui","3.0")]
+		public static void VertexAttribI4(uint index,uint x,uint y,uint z,uint w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI1iv","3.0")]
+		public static void VertexAttribI1(uint index,ref int v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI2iv","3.0")]
+		public static void VertexAttribI2(uint index,ref int v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI3iv","3.0")]
+		public static void VertexAttribI3(uint index,ref int v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI4iv","3.0")]
+		public static void VertexAttribI4(uint index,ref int v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI1uiv","3.0")]
+		public static void VertexAttribI1(uint index,ref uint v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI2uiv","3.0")]
+		public static void VertexAttribI2(uint index,ref uint v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI3uiv","3.0")]
+		public static void VertexAttribI3(uint index,ref uint v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI4uiv","3.0")]
+		public static void VertexAttribI4(uint index,ref uint v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI4bv","3.0")]
+		public static void VertexAttribI4(uint index,sbyte[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI4sv","3.0")]
+		public static void VertexAttribI4(uint index,ref short v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI4ubv","3.0")]
+		public static void VertexAttribI4(uint index,byte[] v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribI4usv","3.0")]
+		public static void VertexAttribI4(uint index,ref ushort v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetUniformuiv","3.0")]
+		public static void GetUniform(uint program,int location,ref uint parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindFragDataLocation","3.0")]
+		public static void BindFragDataLocation(uint program,uint color,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetFragDataLocation","3.0")]
+		public static int GetFragDataLocation(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform1ui","3.0")]
+		public static void Uniform1(int location,uint v0)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform2ui","3.0")]
+		public static void Uniform2(int location,uint v0,uint v1)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform3ui","3.0")]
+		public static void Uniform3(int location,uint v0,uint v1,uint v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform4ui","3.0")]
+		public static void Uniform4(int location,uint v0,uint v1,uint v2,uint v3)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform1uiv","3.0")]
+		public static void Uniform1(int location,int count,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform2uiv","3.0")]
+		public static void Uniform2(int location,int count,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform3uiv","3.0")]
+		public static void Uniform3(int location,int count,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform4uiv","3.0")]
+		public static void Uniform4(int location,int count,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexParameterIiv","3.0")]
+		public static void TexParameterI(uint target,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexParameterIuiv","3.0")]
+		public static void TexParameterI(uint target,uint pName,ref uint parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexParameterIiv","3.0")]
+		public static void GetTexParameterI(uint target,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTexParameterIuiv","3.0")]
+		public static void GetTexParameterI(uint target,uint pName,ref uint parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearBufferiv","3.0")]
+		public static void ClearBuffer(uint buffer,int drawbuffer,ref int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearBufferuiv","3.0")]
+		public static void ClearBuffer(uint buffer,int drawbuffer,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearBufferfv","3.0")]
+		public static void ClearBuffer(uint buffer,int drawbuffer,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearBufferfi","3.0")]
+		public static void ClearBuffer(uint buffer,int drawbuffer,float depth,int stencil)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetStringi","3.0")]
+		public static IntPtr GetString(uint name,uint index)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsRenderbuffer","3.0")]
+		public static byte IsRenderbuffer(uint renderbuffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindRenderbuffer","3.0")]
+		public static void BindRenderbuffer(uint target,uint renderbuffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteRenderbuffers","3.0")]
+		public static void DeleteRenderbuffers(int n,ref uint renderbuffers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGenRenderbuffers","3.0")]
+		public static void GenRenderbuffers(int n,ref uint renderbuffers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRenderbufferStorage","3.0")]
+		public static void RenderbufferStorage(uint target,uint internalFormat,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetRenderbufferParameteriv","3.0")]
+		public static void GetRenderbufferParameter(uint target,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsFramebuffer","3.0")]
+		public static byte IsFramebuffer(uint framebuffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindFramebuffer","3.0")]
+		public static void BindFramebuffer(FramebufferTarget target,uint framebuffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteFramebuffers","3.0")]
+		public static void DeleteFramebuffers(int n,ref uint framebuffers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGenFramebuffers","3.0")]
+		public static void GenFramebuffers(int n,ref uint framebuffers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCheckFramebufferStatus","3.0")]
+		public static uint CheckFramebufferStatus(FramebufferTarget target)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFramebufferTexture1D","3.0")]
+		public static void FramebufferTexture1D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFramebufferTexture2D","3.0")]
+		public static void FramebufferTexture2D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFramebufferTexture3D","3.0")]
+		public static void FramebufferTexture3D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level,int zOffset)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFramebufferRenderbuffer","3.0")]
+		public static void FramebufferRenderbuffer(FramebufferTarget target,uint attachment,uint renderbuffertarget,uint renderbuffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetFramebufferAttachmentParameteriv","3.0")]
+		public static void GetFramebufferAttachmentParameter(FramebufferTarget target,uint attachment,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGenerateMipmap","3.0")]
+		public static void GenerateMipmap(GenerateMipmapTarget target)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBlitFramebuffer","3.0")]
+		public static void BlitFramebuffer(int srcX0,int srcY0,int srcX1,int srcY1,int dstX0,int dstY0,int dstX1,int dstY1,uint mask,uint filter)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glRenderbufferStorageMultisample","3.0")]
+		public static void RenderbufferStorageMultisample(uint target,int samples,uint internalFormat,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFramebufferTextureLayer","3.0")]
+		public static void FramebufferTextureLayer(FramebufferTarget target,uint attachment,uint texture,int level,int layer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMapBufferRange","3.0")]
+		public static IntPtr MapBufferRange(BufferTarget target,int offset,int length,uint access)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFlushMappedBufferRange","3.0")]
+		public static void FlushMappedBufferRange(BufferTarget target,int offset,int length)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindVertexArray","3.0")]
+		public static void BindVertexArray(uint array)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteVertexArrays","3.0")]
+		public static void DeleteVertexArrays(int n,ref uint arrays)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGenVertexArrays","3.0")]
+		public static void GenVertexArrays(int n,ref uint arrays)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsVertexArray","3.0")]
+		public static byte IsVertexArray(uint array)
+			=> throw new NotImplementedException();
 
 		#endregion
 
 		#region OpenGL 3.1
 
-		[MI(AI)] public static void DrawArraysInstanced(uint mode,int first,int count,int instanceCount) => GLDirect.DrawArraysInstanced(mode,first,count,instanceCount);
-		[MI(AI)] public static void DrawElementsInstanced(uint mode,int count,uint type,IntPtr indices,int instanceCount) => GLDirect.DrawElementsInstanced(mode,count,type,indices,instanceCount);
-		[MI(AI)] public static void TexBuffer(uint target,uint internalFormat,uint buffer) => GLDirect.TexBuffer(target,internalFormat,buffer);
-		[MI(AI)] public static void PrimitiveRestartIndex(uint index) => GLDirect.PrimitiveRestartIndex(index);
-		[MI(AI)] public static void CopyBufferSubData(uint readTarget,uint writeTarget,int readOffset,int writeOffset,int size) => GLDirect.CopyBufferSubData(readTarget,writeTarget,readOffset,writeOffset,size);
-		[MI(AI)] public static void GetUniformIndices(uint program,int uniformCount,IntPtr uniformNames,ref uint uniformIndices) => GLDirect.GetUniformIndices(program,uniformCount,uniformNames,ref uniformIndices);
-		[MI(AI)] public static void GetActiveUniforms(uint program,int uniformCount,ref uint uniformIndices,uint pName,ref int parameters) => GLDirect.GetActiveUniformsiv(program,uniformCount,ref uniformIndices,pName,ref parameters);
-		[MI(AI)] public static void GetActiveUniformName(uint program,uint uniformIndex,int bufSize,ref int length,IntPtr uniformName) => GLDirect.GetActiveUniformName(program,uniformIndex,bufSize,ref length,uniformName);
-		[MI(AI)] public static uint GetUniformBlockIndex(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string uniformBlockName) => GLDirect.GetUniformBlockIndex(program,uniformBlockName);
-		[MI(AI)] public static void GetActiveUniformBlock(uint program,uint uniformBlockIndex,uint pName,ref int parameters) => GLDirect.GetActiveUniformBlockiv(program,uniformBlockIndex,pName,ref parameters);
-		[MI(AI)] public static void GetActiveUniformBlockName(uint program,uint uniformBlockIndex,int bufSize,ref int length,IntPtr uniformBlockName) => GLDirect.GetActiveUniformBlockName(program,uniformBlockIndex,bufSize,ref length,uniformBlockName);
-		[MI(AI)] public static void UniformBlockBinding(uint program,uint uniformBlockIndex,uint uniformBlockBinding) => GLDirect.UniformBlockBinding(program,uniformBlockIndex,uniformBlockBinding);
-
+		[MethodImport("glDrawArraysInstanced","3.1")]
+		public static void DrawArraysInstanced(uint mode,int first,int count,int instanceCount)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawElementsInstanced","3.1")]
+		public static void DrawElementsInstanced(uint mode,int count,uint type,IntPtr indices,int instanceCount)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexBuffer","3.1")]
+		public static void TexBuffer(uint target,uint internalFormat,uint buffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPrimitiveRestartIndex","3.1")]
+		public static void PrimitiveRestartIndex(uint index)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyBufferSubData","3.1")]
+		public static void CopyBufferSubData(uint readTarget,uint writeTarget,int readOffset,int writeOffset,int size)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetUniformIndices","3.1")]
+		public static void GetUniformIndices(uint program,int uniformCount,IntPtr uniformNames,ref uint uniformIndices)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetActiveUniformsiv","3.1")]
+		public static void GetActiveUniforms(uint program,int uniformCount,ref uint uniformIndices,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetActiveUniformName","3.1")]
+		public static void GetActiveUniformName(uint program,uint uniformIndex,int bufSize,ref int length,IntPtr uniformName)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetUniformBlockIndex","3.1")]
+		public static uint GetUniformBlockIndex(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string uniformBlockName)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetActiveUniformBlockiv","3.1")]
+		public static void GetActiveUniformBlock(uint program,uint uniformBlockIndex,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetActiveUniformBlockName","3.1")]
+		public static void GetActiveUniformBlockName(uint program,uint uniformBlockIndex,int bufSize,ref int length,IntPtr uniformBlockName)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformBlockBinding","3.1")]
+		public static void UniformBlockBinding(uint program,uint uniformBlockIndex,uint uniformBlockBinding)
+			=> throw new NotImplementedException();
+		
 		#endregion
 
 		#region OpenGL 3.2
 
-		[MI(AI)] public static void DrawElementsBaseVertex(uint mode,int count,uint type,IntPtr indices,int basevertex) => GLDirect.DrawElementsBaseVertex(mode,count,type,indices,basevertex);
-		[MI(AI)] public static void DrawRangeElementsBaseVertex(uint mode,uint start,uint end,int count,uint type,IntPtr indices,int basevertex) => GLDirect.DrawRangeElementsBaseVertex(mode,start,end,count,type,indices,basevertex);
-		[MI(AI)] public static void DrawElementsInstancedBaseVertex(uint mode,int count,uint type,IntPtr indices,int instanceCount,int basevertex) => GLDirect.DrawElementsInstancedBaseVertex(mode,count,type,indices,instanceCount,basevertex);
-		[MI(AI)] public static void MultiDrawElementsBaseVertex(uint mode,ref int count,uint type,IntPtr indices,int drawcount,ref int basevertex) => GLDirect.MultiDrawElementsBaseVertex(mode,ref count,type,indices,drawcount,ref basevertex);
-		[MI(AI)] public static void ProvokingVertex(uint mode) => GLDirect.ProvokingVertex(mode);
-		[MI(AI)] public static IntPtr FenceSync(uint condition,uint flags) => GLDirect.FenceSync(condition,flags);
-		[MI(AI)] public static byte IsSync(IntPtr sync) => GLDirect.IsSync(sync);
-		[MI(AI)] public static void DeleteSync(IntPtr sync) => GLDirect.DeleteSync(sync);
-		[MI(AI)] public static uint ClientWaitSync(IntPtr sync,uint flags,uint timeout) => GLDirect.ClientWaitSync(sync,flags,timeout);
-		[MI(AI)] public static void WaitSync(IntPtr sync,uint flags,uint timeout) => GLDirect.WaitSync(sync,flags,timeout);
-		[MI(AI)] public static void GetInteger(uint pName,ref int data) => GLDirect.GetInteger64v(pName,ref data);
-		[MI(AI)] public static void GetSync(IntPtr sync,uint pName,int bufSize,ref int length,ref int values) => GLDirect.GetSynciv(sync,pName,bufSize,ref length,ref values);
-		[MI(AI)] public static void GetInteger(uint target,uint index,ref long data) => GLDirect.GetInteger64i_v(target,index,ref data);
-		[MI(AI)] public static void GetBufferParameter(BufferTarget target,uint pName,ref long parameters) => GLDirect.GetBufferParameteri64v(target,pName,ref parameters);
-		[MI(AI)] public static void FramebufferTexture(FramebufferTarget target,uint attachment,uint texture,int level) => GLDirect.FramebufferTexture(target,attachment,texture,level);
-		[MI(AI)] public static void TexImage2DMultisample(uint target,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations) => GLDirect.TexImage2DMultisample(target,samples,internalFormat,width,height,fixedsamplelocations);
-		[MI(AI)] public static void TexImage3DMultisample(uint target,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations) => GLDirect.TexImage3DMultisample(target,samples,internalFormat,width,height,depth,fixedsamplelocations);
-		[MI(AI)] public static void GetMultisample(uint pName,uint index,ref float val) => GLDirect.GetMultisamplefv(pName,index,ref val);
-		[MI(AI)] public static void SampleMask(uint maskNumber,uint mask) => GLDirect.SampleMaski(maskNumber,mask);
+		[MethodImport("glDrawElementsBaseVertex","3.2")]
+		public static void DrawElementsBaseVertex(uint mode,int count,uint type,IntPtr indices,int basevertex)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawRangeElementsBaseVertex","3.2")]
+		public static void DrawRangeElementsBaseVertex(uint mode,uint start,uint end,int count,uint type,IntPtr indices,int basevertex)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawElementsInstancedBaseVertex","3.2")]
+		public static void DrawElementsInstancedBaseVertex(uint mode,int count,uint type,IntPtr indices,int instanceCount,int basevertex)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMultiDrawElementsBaseVertex","3.2")]
+		public static void MultiDrawElementsBaseVertex(uint mode,ref int count,uint type,IntPtr indices,int drawcount,ref int basevertex)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProvokingVertex","3.2")]
+		public static void ProvokingVertex(uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFenceSync","3.2")]
+		public static IntPtr FenceSync(uint condition,uint flags)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsSync","3.2")]
+		public static byte IsSync(IntPtr sync)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteSync","3.2")]
+		public static void DeleteSync(IntPtr sync)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClientWaitSync","3.2")]
+		public static uint ClientWaitSync(IntPtr sync,uint flags,uint timeout)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glWaitSync","3.2")]
+		public static void WaitSync(IntPtr sync,uint flags,uint timeout)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetInteger64v","3.2")]
+		public static void GetInteger(uint pName,ref int data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetSynciv","3.2")]
+		public static void GetSync(IntPtr sync,uint pName,int bufSize,ref int length,ref int values)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetInteger64i_v","3.2")]
+		public static void GetInteger(uint target,uint index,ref long data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetBufferParameteri64v","3.2")]
+		public static void GetBufferParameter(BufferTarget target,uint pName,ref long parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFramebufferTexture","3.2")]
+		public static void FramebufferTexture(FramebufferTarget target,uint attachment,uint texture,int level)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexImage2DMultisample","3.2")]
+		public static void TexImage2DMultisample(uint target,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexImage3DMultisample","3.2")]
+		public static void TexImage3DMultisample(uint target,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetMultisamplefv","3.2")]
+		public static void GetMultisample(uint pName,uint index,ref float val)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glSampleMaski","3.2")]
+		public static void SampleMask(uint maskNumber,uint mask)
+			=> throw new NotImplementedException();
 
 		#endregion
 
 		#region OpenGL 3.3
 
-		[MI(AI)] public static void BindFragDataLocationIndexed(uint program,uint colorNumber,uint index,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.BindFragDataLocationIndexed(program,colorNumber,index,name);
-		[MI(AI)] public static int GetFragDataIndex(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.GetFragDataIndex(program,name);
-		[MI(AI)] public static void GenSamplers(int count,ref uint samplers) => GLDirect.GenSamplers(count,ref samplers);
-		[MI(AI)] public static void DeleteSamplers(int count,ref uint samplers) => GLDirect.DeleteSamplers(count,ref samplers);
-		[MI(AI)] public static byte IsSampler(uint sampler) => GLDirect.IsSampler(sampler);
-		[MI(AI)] public static void BindSampler(uint unit,uint sampler) => GLDirect.BindSampler(unit,sampler);
-		[MI(AI)] public static void SamplerParameter(uint sampler,uint pName,int param) => GLDirect.SamplerParameteri(sampler,pName,param);
-		[MI(AI)] public static void SamplerParameter(uint sampler,uint pName,ref int param) => GLDirect.SamplerParameteriv(sampler,pName,ref param);
-		[MI(AI)] public static void SamplerParameter(uint sampler,uint pName,float param) => GLDirect.SamplerParameterf(sampler,pName,param);
-		[MI(AI)] public static void SamplerParameter(uint sampler,uint pName,ref float param) => GLDirect.SamplerParameterfv(sampler,pName,ref param);
-		[MI(AI)] public static void SamplerParameterI(uint sampler,uint pName,ref int param) => GLDirect.SamplerParameterIiv(sampler,pName,ref param);
-		[MI(AI)] public static void SamplerParameterI(uint sampler,uint pName,ref uint param) => GLDirect.SamplerParameterIuiv(sampler,pName,ref param);
-		[MI(AI)] public static void GetSamplerParameter(uint sampler,uint pName,ref int parameters) => GLDirect.GetSamplerParameteriv(sampler,pName,ref parameters);
-		[MI(AI)] public static void GetSamplerParameterI(uint sampler,uint pName,ref int parameters) => GLDirect.GetSamplerParameterIiv(sampler,pName,ref parameters);
-		[MI(AI)] public static void GetSamplerParameter(uint sampler,uint pName,ref float parameters) => GLDirect.GetSamplerParameterfv(sampler,pName,ref parameters);
-		[MI(AI)] public static void GetSamplerParameterI(uint sampler,uint pName,ref uint parameters) => GLDirect.GetSamplerParameterIuiv(sampler,pName,ref parameters);
-		[MI(AI)] public static void QueryCounter(uint id,uint target) => GLDirect.QueryCounter(id,target);
-		[MI(AI)] public static void GetQueryObject(uint id,uint pName,ref long parameters) => GLDirect.GetQueryObjecti64v(id,pName,ref parameters);
-		[MI(AI)] public static void GetQueryObject(uint id,uint pName,ref ulong parameters) => GLDirect.GetQueryObjectui64v(id,pName,ref parameters);
-		[MI(AI)] public static void VertexAttribDivisor(uint index,uint divisor) => GLDirect.VertexAttribDivisor(index,divisor);
-		[MI(AI)] public static void VertexAttribP1(uint index,uint type,byte normalized,uint value) => GLDirect.VertexAttribP1ui(index,type,normalized,value);
-		[MI(AI)] public static void VertexAttribP1(uint index,uint type,byte normalized,ref uint value) => GLDirect.VertexAttribP1uiv(index,type,normalized,ref value);
-		[MI(AI)] public static void VertexAttribP2(uint index,uint type,byte normalized,uint value) => GLDirect.VertexAttribP2ui(index,type,normalized,value);
-		[MI(AI)] public static void VertexAttribP2(uint index,uint type,byte normalized,ref uint value) => GLDirect.VertexAttribP2uiv(index,type,normalized,ref value);
-		[MI(AI)] public static void VertexAttribP3(uint index,uint type,byte normalized,uint value) => GLDirect.VertexAttribP3ui(index,type,normalized,value);
-		[MI(AI)] public static void VertexAttribP3(uint index,uint type,byte normalized,ref uint value) => GLDirect.VertexAttribP3uiv(index,type,normalized,ref value);
-		[MI(AI)] public static void VertexAttribP4(uint index,uint type,byte normalized,uint value) => GLDirect.VertexAttribP4ui(index,type,normalized,value);
-		[MI(AI)] public static void VertexAttribP4(uint index,uint type,byte normalized,ref uint value) => GLDirect.VertexAttribP4uiv(index,type,normalized,ref value);
+		[MethodImport("glBindFragDataLocationIndexed","3.3")]
+		public static void BindFragDataLocationIndexed(uint program,uint colorNumber,uint index,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetFragDataIndex","3.3")]
+		public static int GetFragDataIndex(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGenSamplers","3.3")]
+		public static void GenSamplers(int count,ref uint samplers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteSamplers","3.3")]
+		public static void DeleteSamplers(int count,ref uint samplers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsSampler","3.3")]
+		public static byte IsSampler(uint sampler)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindSampler","3.3")]
+		public static void BindSampler(uint unit,uint sampler)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glSamplerParameteri","3.3")]
+		public static void SamplerParameter(uint sampler,uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glSamplerParameteriv","3.3")]
+		public static void SamplerParameter(uint sampler,uint pName,ref int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glSamplerParameterf","3.3")]
+		public static void SamplerParameter(uint sampler,uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glSamplerParameterfv","3.3")]
+		public static void SamplerParameter(uint sampler,uint pName,ref float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glSamplerParameterIiv","3.3")]
+		public static void SamplerParameterI(uint sampler,uint pName,ref int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glSamplerParameterIuiv","3.3")]
+		public static void SamplerParameterI(uint sampler,uint pName,ref uint param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetSamplerParameteriv","3.3")]
+		public static void GetSamplerParameter(uint sampler,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetSamplerParameterIiv","3.3")]
+		public static void GetSamplerParameterI(uint sampler,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetSamplerParameterfv","3.3")]
+		public static void GetSamplerParameter(uint sampler,uint pName,ref float parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetSamplerParameterIuiv","3.3")]
+		public static void GetSamplerParameterI(uint sampler,uint pName,ref uint parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glQueryCounter","3.3")]
+		public static void QueryCounter(uint id,uint target)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetQueryObjecti64v","3.3")]
+		public static void GetQueryObject(uint id,uint pName,ref long parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetQueryObjectui64v","3.3")]
+		public static void GetQueryObject(uint id,uint pName,ref ulong parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribDivisor","3.3")]
+		public static void VertexAttribDivisor(uint index,uint divisor)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribP1ui","3.3")]
+		public static void VertexAttribP1(uint index,uint type,byte normalized,uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribP1uiv","3.3")]
+		public static void VertexAttribP1(uint index,uint type,byte normalized,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribP2ui","3.3")]
+		public static void VertexAttribP2(uint index,uint type,byte normalized,uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribP2uiv","3.3")]
+		public static void VertexAttribP2(uint index,uint type,byte normalized,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribP3ui","3.3")]
+		public static void VertexAttribP3(uint index,uint type,byte normalized,uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribP3uiv","3.3")]
+		public static void VertexAttribP3(uint index,uint type,byte normalized,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribP4ui","3.3")]
+		public static void VertexAttribP4(uint index,uint type,byte normalized,uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribP4uiv","3.3")]
+		public static void VertexAttribP4(uint index,uint type,byte normalized,ref uint value)
+			=> throw new NotImplementedException();
 
 		#endregion
 
 		#region OpenGL 4.0
 
-		[MI(AI)] public static void MinSampleShading(float value) => GLDirect.MinSampleShading(value);
-		[MI(AI)] public static void BlendEquation(uint buf,uint mode) => GLDirect.BlendEquationi(buf,mode);
-		[MI(AI)] public static void BlendEquationSeparate(uint buf,uint modeRGB,uint modeAlpha) => GLDirect.BlendEquationSeparatei(buf,modeRGB,modeAlpha);
-		[MI(AI)] public static void BlendFunc(uint buf,BlendingFactor src,BlendingFactor dst) => GLDirect.BlendFunci(buf,src,dst);
-		[MI(AI)] public static void BlendFuncSeparate(uint buf,uint srcRGB,uint dstRGB,uint srcAlpha,uint dstAlpha) => GLDirect.BlendFuncSeparatei(buf,srcRGB,dstRGB,srcAlpha,dstAlpha);
-		[MI(AI)] public static void DrawArraysIndirect(uint mode,IntPtr indirect) => GLDirect.DrawArraysIndirect(mode,indirect);
-		[MI(AI)] public static void DrawElementsIndirect(uint mode,uint type,IntPtr indirect) => GLDirect.DrawElementsIndirect(mode,type,indirect);
-		[MI(AI)] public static void Uniform1(int location,double x) => GLDirect.Uniform1d(location,x);
-		[MI(AI)] public static void Uniform2(int location,double x,double y) => GLDirect.Uniform2d(location,x,y);
-		[MI(AI)] public static void Uniform3(int location,double x,double y,double z) => GLDirect.Uniform3d(location,x,y,z);
-		[MI(AI)] public static void Uniform4(int location,double x,double y,double z,double w) => GLDirect.Uniform4d(location,x,y,z,w);
-		[MI(AI)] public static void Uniform1(int location,int count,ref double value) => GLDirect.Uniform1dv(location,count,ref value);
-		[MI(AI)] public static void Uniform2(int location,int count,ref double value) => GLDirect.Uniform2dv(location,count,ref value);
-		[MI(AI)] public static void Uniform3(int location,int count,ref double value) => GLDirect.Uniform3dv(location,count,ref value);
-		[MI(AI)] public static void Uniform4(int location,int count,ref double value) => GLDirect.Uniform4dv(location,count,ref value);
-		[MI(AI)] public static void UniformMatrix2(int location,int count,byte transpose,ref double value) => GLDirect.UniformMatrix2dv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix3(int location,int count,byte transpose,ref double value) => GLDirect.UniformMatrix3dv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix4(int location,int count,byte transpose,ref double value) => GLDirect.UniformMatrix4dv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix2x3(int location,int count,byte transpose,ref double value) => GLDirect.UniformMatrix2x3dv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix2x4(int location,int count,byte transpose,ref double value) => GLDirect.UniformMatrix2x4dv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix3x2(int location,int count,byte transpose,ref double value) => GLDirect.UniformMatrix3x2dv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix3x4(int location,int count,byte transpose,ref double value) => GLDirect.UniformMatrix3x4dv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix4x2(int location,int count,byte transpose,ref double value) => GLDirect.UniformMatrix4x2dv(location,count,transpose,ref value);
-		[MI(AI)] public static void UniformMatrix4x3(int location,int count,byte transpose,ref double value) => GLDirect.UniformMatrix4x3dv(location,count,transpose,ref value);
-		[MI(AI)] public static void GetUniform(uint program,int location,ref double parameters) => GLDirect.GetUniformdv(program,location,ref parameters);
-		[MI(AI)] public static int GetSubroutineUniformLocation(uint program,uint shadertype,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.GetSubroutineUniformLocation(program,shadertype,name);
-		[MI(AI)] public static uint GetSubroutineIndex(uint program,uint shadertype,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.GetSubroutineIndex(program,shadertype,name);
-		[MI(AI)] public static void GetActiveSubroutineUniform(uint program,uint shadertype,uint index,uint pName,ref int values) => GLDirect.GetActiveSubroutineUniformiv(program,shadertype,index,pName,ref values);
-		[MI(AI)] public static void GetActiveSubroutineUniformName(uint program,uint shadertype,uint index,int bufsize,ref int length,IntPtr name) => GLDirect.GetActiveSubroutineUniformName(program,shadertype,index,bufsize,ref length,name);
-		[MI(AI)] public static void GetActiveSubroutineName(uint program,uint shadertype,uint index,int bufsize,ref int length,IntPtr name) => GLDirect.GetActiveSubroutineName(program,shadertype,index,bufsize,ref length,name);
-		[MI(AI)] public static void UniformSubroutines(uint shadertype,int count,ref uint indices) => GLDirect.UniformSubroutinesuiv(shadertype,count,ref indices);
-		[MI(AI)] public static void GetUniformSubroutine(uint shadertype,int location,ref uint parameters) => GLDirect.GetUniformSubroutineuiv(shadertype,location,ref parameters);
-		[MI(AI)] public static void GetProgramStage(uint program,uint shadertype,uint pName,ref int values) => GLDirect.GetProgramStageiv(program,shadertype,pName,ref values);
-		[MI(AI)] public static void PatchParameter(uint pName,int value) => GLDirect.PatchParameteri(pName,value);
-		[MI(AI)] public static void PatchParameter(uint pName,ref float values) => GLDirect.PatchParameterfv(pName,ref values);
-		[MI(AI)] public static void BindTransformFeedback(uint target,uint id) => GLDirect.BindTransformFeedback(target,id);
-		[MI(AI)] public static void DeleteTransformFeedbacks(int n,ref uint ids) => GLDirect.DeleteTransformFeedbacks(n,ref ids);
-		[MI(AI)] public static void GenTransformFeedbacks(int n,ref uint ids) => GLDirect.GenTransformFeedbacks(n,ref ids);
-		[MI(AI)] public static byte IsTransformFeedback(uint id) => GLDirect.IsTransformFeedback(id);
-		[MI(AI)] public static void PauseTransformFeedback() => GLDirect.PauseTransformFeedback();
-		[MI(AI)] public static void ResumeTransformFeedback() => GLDirect.ResumeTransformFeedback();
-		[MI(AI)] public static void DrawTransformFeedback(uint mode,uint id) => GLDirect.DrawTransformFeedback(mode,id);
-		[MI(AI)] public static void DrawTransformFeedbackStream(uint mode,uint id,uint stream) => GLDirect.DrawTransformFeedbackStream(mode,id,stream);
-		[MI(AI)] public static void BeginQueryIndexed(uint target,uint index,uint id) => GLDirect.BeginQueryIndexed(target,index,id);
-		[MI(AI)] public static void EndQueryIndexed(uint target,uint index) => GLDirect.EndQueryIndexed(target,index);
-		[MI(AI)] public static void GetQueryIndexed(uint target,uint index,uint pName,ref int parameters) => GLDirect.GetQueryIndexediv(target,index,pName,ref parameters);
-
+		[MethodImport("glMinSampleShading","4.0")]
+		public static void MinSampleShading(float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBlendEquationi","4.0")]
+		public static void BlendEquation(uint buf,uint mode)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBlendEquationSeparatei","4.0")]
+		public static void BlendEquationSeparate(uint buf,uint modeRGB,uint modeAlpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBlendFunci","4.0")]
+		public static void BlendFunc(uint buf,BlendingFactor src,BlendingFactor dst)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBlendFuncSeparatei","4.0")]
+		public static void BlendFuncSeparate(uint buf,uint srcRGB,uint dstRGB,uint srcAlpha,uint dstAlpha)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawArraysIndirect","4.0")]
+		public static void DrawArraysIndirect(uint mode,IntPtr indirect)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawElementsIndirect","4.0")]
+		public static void DrawElementsIndirect(uint mode,uint type,IntPtr indirect)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform1d","4.0")]
+		public static void Uniform1(int location,double x)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform2d","4.0")]
+		public static void Uniform2(int location,double x,double y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform3d","4.0")]
+		public static void Uniform3(int location,double x,double y,double z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform4d","4.0")]
+		public static void Uniform4(int location,double x,double y,double z,double w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform1dv","4.0")]
+		public static void Uniform1(int location,int count,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform2dv","4.0")]
+		public static void Uniform2(int location,int count,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform3dv","4.0")]
+		public static void Uniform3(int location,int count,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniform4dv","4.0")]
+		public static void Uniform4(int location,int count,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix2dv","4.0")]
+		public static void UniformMatrix2(int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix3dv","4.0")]
+		public static void UniformMatrix3(int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix4dv","4.0")]
+		public static void UniformMatrix4(int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix2x3dv","4.0")]
+		public static void UniformMatrix2x3(int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix2x4dv","4.0")]
+		public static void UniformMatrix2x4(int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix3x2dv","4.0")]
+		public static void UniformMatrix3x2(int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix3x4dv","4.0")]
+		public static void UniformMatrix3x4(int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix4x2dv","4.0")]
+		public static void UniformMatrix4x2(int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformMatrix4x3dv","4.0")]
+		public static void UniformMatrix4x3(int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetUniformdv","4.0")]
+		public static void GetUniform(uint program,int location,ref double parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetSubroutineUniformLocation","4.0")]
+		public static int GetSubroutineUniformLocation(uint program,uint shadertype,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetSubroutineIndex","4.0")]
+		public static uint GetSubroutineIndex(uint program,uint shadertype,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetActiveSubroutineUniformiv","4.0")]
+		public static void GetActiveSubroutineUniform(uint program,uint shadertype,uint index,uint pName,ref int values)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetActiveSubroutineUniformName","4.0")]
+		public static void GetActiveSubroutineUniformName(uint program,uint shadertype,uint index,int bufsize,ref int length,IntPtr name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetActiveSubroutineName","4.0")]
+		public static void GetActiveSubroutineName(uint program,uint shadertype,uint index,int bufsize,ref int length,IntPtr name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUniformSubroutinesuiv","4.0")]
+		public static void UniformSubroutines(uint shadertype,int count,ref uint indices)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetUniformSubroutineuiv","4.0")]
+		public static void GetUniformSubroutine(uint shadertype,int location,ref uint parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramStageiv","4.0")]
+		public static void GetProgramStage(uint program,uint shadertype,uint pName,ref int values)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPatchParameteri","4.0")]
+		public static void PatchParameter(uint pName,int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPatchParameterfv","4.0")]
+		public static void PatchParameter(uint pName,ref float values)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindTransformFeedback","4.0")]
+		public static void BindTransformFeedback(uint target,uint id)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteTransformFeedbacks","4.0")]
+		public static void DeleteTransformFeedbacks(int n,ref uint ids)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGenTransformFeedbacks","4.0")]
+		public static void GenTransformFeedbacks(int n,ref uint ids)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsTransformFeedback","4.0")]
+		public static byte IsTransformFeedback(uint id)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPauseTransformFeedback","4.0")]
+		public static void PauseTransformFeedback()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glResumeTransformFeedback","4.0")]
+		public static void ResumeTransformFeedback()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawTransformFeedback","4.0")]
+		public static void DrawTransformFeedback(uint mode,uint id)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawTransformFeedbackStream","4.0")]
+		public static void DrawTransformFeedbackStream(uint mode,uint id,uint stream)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBeginQueryIndexed","4.0")]
+		public static void BeginQueryIndexed(uint target,uint index,uint id)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEndQueryIndexed","4.0")]
+		public static void EndQueryIndexed(uint target,uint index)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetQueryIndexediv","4.0")]
+		public static void GetQueryIndexed(uint target,uint index,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
 		#endregion
 
 		#region OpenGL 4.1
 
-		[MI(AI)] public static void ReleaseShaderCompiler() => GLDirect.ReleaseShaderCompiler();
-		[MI(AI)] public static void ShaderBinary(int count,ref uint shaders,uint binaryformat,IntPtr binary,int length) => GLDirect.ShaderBinary(count,ref shaders,binaryformat,binary,length);
-		[MI(AI)] public static void GetShaderPrecisionFormat(uint shadertype,uint precisiontype,ref int range,ref int precision) => GLDirect.GetShaderPrecisionFormat(shadertype,precisiontype,ref range,ref precision);
-		[MI(AI)] public static void DepthRange(float n,float f) => GLDirect.DepthRangef(n,f);
-		[MI(AI)] public static void ClearDepth(float d) => GLDirect.ClearDepthf(d);
-		[MI(AI)] public static void GetProgramBinary(uint program,int bufSize,ref int length,ref uint binaryFormat,IntPtr binary) => GLDirect.GetProgramBinary(program,bufSize,ref length,ref binaryFormat,binary);
-		[MI(AI)] public static void ProgramBinary(uint program,uint binaryFormat,IntPtr binary,int length) => GLDirect.ProgramBinary(program,binaryFormat,binary,length);
-		[MI(AI)] public static void ProgramParameter(uint program,uint pName,int value) => GLDirect.ProgramParameteri(program,pName,value);
-		[MI(AI)] public static void UseProgramStages(uint pipeline,uint stages,uint program) => GLDirect.UseProgramStages(pipeline,stages,program);
-		[MI(AI)] public static void ActiveShaderProgram(uint pipeline,uint program) => GLDirect.ActiveShaderProgram(pipeline,program);
-		[MI(AI)] public static uint CreateShaderProgram(uint type,int count,IntPtr strings) => GLDirect.CreateShaderProgramv(type,count,strings);
-		[MI(AI)] public static void BindProgramPipeline(uint pipeline) => GLDirect.BindProgramPipeline(pipeline);
-		[MI(AI)] public static void DeleteProgramPipelines(int n,ref uint pipelines) => GLDirect.DeleteProgramPipelines(n,ref pipelines);
-		[MI(AI)] public static void GenProgramPipelines(int n,ref uint pipelines) => GLDirect.GenProgramPipelines(n,ref pipelines);
-		[MI(AI)] public static byte IsProgramPipeline(uint pipeline) => GLDirect.IsProgramPipeline(pipeline);
-		[MI(AI)] public static void GetProgramPipeline(uint pipeline,uint pName,ref int parameters) => GLDirect.GetProgramPipelineiv(pipeline,pName,ref parameters);
-		[MI(AI)] public static void ProgramUniform1(uint program,int location,int v0) => GLDirect.ProgramUniform1i(program,location,v0);
-		[MI(AI)] public static void ProgramUniform1(uint program,int location,int count,ref int value) => GLDirect.ProgramUniform1iv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform1(uint program,int location,float v0) => GLDirect.ProgramUniform1f(program,location,v0);
-		[MI(AI)] public static void ProgramUniform1(uint program,int location,int count,ref float value) => GLDirect.ProgramUniform1fv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform1(uint program,int location,double v0) => GLDirect.ProgramUniform1d(program,location,v0);
-		[MI(AI)] public static void ProgramUniform1(uint program,int location,int count,ref double value) => GLDirect.ProgramUniform1dv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform1(uint program,int location,uint v0) => GLDirect.ProgramUniform1ui(program,location,v0);
-		[MI(AI)] public static void ProgramUniform1(uint program,int location,int count,ref uint value) => GLDirect.ProgramUniform1uiv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform2(uint program,int location,int v0,int v1) => GLDirect.ProgramUniform2i(program,location,v0,v1);
-		[MI(AI)] public static void ProgramUniform2(uint program,int location,int count,ref int value) => GLDirect.ProgramUniform2iv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform2(uint program,int location,float v0,float v1) => GLDirect.ProgramUniform2f(program,location,v0,v1);
-		[MI(AI)] public static void ProgramUniform2(uint program,int location,int count,ref float value) => GLDirect.ProgramUniform2fv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform2(uint program,int location,double v0,double v1) => GLDirect.ProgramUniform2d(program,location,v0,v1);
-		[MI(AI)] public static void ProgramUniform2(uint program,int location,int count,ref double value) => GLDirect.ProgramUniform2dv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform2(uint program,int location,uint v0,uint v1) => GLDirect.ProgramUniform2ui(program,location,v0,v1);
-		[MI(AI)] public static void ProgramUniform2(uint program,int location,int count,ref uint value) => GLDirect.ProgramUniform2uiv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform3(uint program,int location,int v0,int v1,int v2) => GLDirect.ProgramUniform3i(program,location,v0,v1,v2);
-		[MI(AI)] public static void ProgramUniform3(uint program,int location,int count,ref int value) => GLDirect.ProgramUniform3iv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform3(uint program,int location,float v0,float v1,float v2) => GLDirect.ProgramUniform3f(program,location,v0,v1,v2);
-		[MI(AI)] public static void ProgramUniform3(uint program,int location,int count,ref float value) => GLDirect.ProgramUniform3fv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform3(uint program,int location,double v0,double v1,double v2) => GLDirect.ProgramUniform3d(program,location,v0,v1,v2);
-		[MI(AI)] public static void ProgramUniform3(uint program,int location,int count,ref double value) => GLDirect.ProgramUniform3dv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform3(uint program,int location,uint v0,uint v1,uint v2) => GLDirect.ProgramUniform3ui(program,location,v0,v1,v2);
-		[MI(AI)] public static void ProgramUniform3(uint program,int location,int count,ref uint value) => GLDirect.ProgramUniform3uiv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform4(uint program,int location,int v0,int v1,int v2,int v3) => GLDirect.ProgramUniform4i(program,location,v0,v1,v2,v3);
-		[MI(AI)] public static void ProgramUniform4(uint program,int location,int count,ref int value) => GLDirect.ProgramUniform4iv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform4(uint program,int location,float v0,float v1,float v2,float v3) => GLDirect.ProgramUniform4f(program,location,v0,v1,v2,v3);
-		[MI(AI)] public static void ProgramUniform4(uint program,int location,int count,ref float value) => GLDirect.ProgramUniform4fv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform4(uint program,int location,double v0,double v1,double v2,double v3) => GLDirect.ProgramUniform4d(program,location,v0,v1,v2,v3);
-		[MI(AI)] public static void ProgramUniform4(uint program,int location,int count,ref double value) => GLDirect.ProgramUniform4dv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniform4(uint program,int location,uint v0,uint v1,uint v2,uint v3) => GLDirect.ProgramUniform4ui(program,location,v0,v1,v2,v3);
-		[MI(AI)] public static void ProgramUniform4(uint program,int location,int count,ref uint value) => GLDirect.ProgramUniform4uiv(program,location,count,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix2(uint program,int location,int count,byte transpose,ref float value) => GLDirect.ProgramUniformMatrix2fv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix3(uint program,int location,int count,byte transpose,ref float value) => GLDirect.ProgramUniformMatrix3fv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix4(uint program,int location,int count,byte transpose,ref float value) => GLDirect.ProgramUniformMatrix4fv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix2(uint program,int location,int count,byte transpose,ref double value) => GLDirect.ProgramUniformMatrix2dv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix3(uint program,int location,int count,byte transpose,ref double value) => GLDirect.ProgramUniformMatrix3dv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix4(uint program,int location,int count,byte transpose,ref double value) => GLDirect.ProgramUniformMatrix4dv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix2x3(uint program,int location,int count,byte transpose,ref float value) => GLDirect.ProgramUniformMatrix2x3fv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix3x2(uint program,int location,int count,byte transpose,ref float value) => GLDirect.ProgramUniformMatrix3x2fv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix2x4(uint program,int location,int count,byte transpose,ref float value) => GLDirect.ProgramUniformMatrix2x4fv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix4x2(uint program,int location,int count,byte transpose,ref float value) => GLDirect.ProgramUniformMatrix4x2fv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix3x4(uint program,int location,int count,byte transpose,ref float value) => GLDirect.ProgramUniformMatrix3x4fv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix4x3(uint program,int location,int count,byte transpose,ref float value) => GLDirect.ProgramUniformMatrix4x3fv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix2x3(uint program,int location,int count,byte transpose,ref double value) => GLDirect.ProgramUniformMatrix2x3dv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix3x2(uint program,int location,int count,byte transpose,ref double value) => GLDirect.ProgramUniformMatrix3x2dv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix2x4(uint program,int location,int count,byte transpose,ref double value) => GLDirect.ProgramUniformMatrix2x4dv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix4x2(uint program,int location,int count,byte transpose,ref double value) => GLDirect.ProgramUniformMatrix4x2dv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix3x4(uint program,int location,int count,byte transpose,ref double value) => GLDirect.ProgramUniformMatrix3x4dv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ProgramUniformMatrix4x3(uint program,int location,int count,byte transpose,ref double value) => GLDirect.ProgramUniformMatrix4x3dv(program,location,count,transpose,ref value);
-		[MI(AI)] public static void ValidateProgramPipeline(uint pipeline) => GLDirect.ValidateProgramPipeline(pipeline);
-		[MI(AI)] public static void GetProgramPipelineInfoLog(uint pipeline,int bufSize,ref int length,IntPtr infoLog) => GLDirect.GetProgramPipelineInfoLog(pipeline,bufSize,ref length,infoLog);
-		[MI(AI)] public static void VertexAttribL1(uint index,double x) => GLDirect.VertexAttribL1d(index,x);
-		[MI(AI)] public static void VertexAttribL2(uint index,double x,double y) => GLDirect.VertexAttribL2d(index,x,y);
-		[MI(AI)] public static void VertexAttribL3(uint index,double x,double y,double z) => GLDirect.VertexAttribL3d(index,x,y,z);
-		[MI(AI)] public static void VertexAttribL4(uint index,double x,double y,double z,double w) => GLDirect.VertexAttribL4d(index,x,y,z,w);
-		[MI(AI)] public static void VertexAttribL1(uint index,ref double v) => GLDirect.VertexAttribL1dv(index,ref v);
-		[MI(AI)] public static void VertexAttribL2(uint index,ref double v) => GLDirect.VertexAttribL2dv(index,ref v);
-		[MI(AI)] public static void VertexAttribL3(uint index,ref double v) => GLDirect.VertexAttribL3dv(index,ref v);
-		[MI(AI)] public static void VertexAttribL4(uint index,ref double v) => GLDirect.VertexAttribL4dv(index,ref v);
-		[MI(AI)] public static void VertexAttribLPointer(uint index,int size,uint type,int stride,IntPtr pointer) => GLDirect.VertexAttribLPointer(index,size,type,stride,pointer);
-		[MI(AI)] public static void GetVertexAttribL(uint index,uint pName,ref double parameters) => GLDirect.GetVertexAttribLdv(index,pName,ref parameters);
-		[MI(AI)] public static void ViewportArray(uint first,int count,ref float v) => GLDirect.ViewportArrayv(first,count,ref v);
-		[MI(AI)] public static void ViewportIndexed(uint index,float x,float y,float w,float h) => GLDirect.ViewportIndexedf(index,x,y,w,h);
-		[MI(AI)] public static void ViewportIndexed(uint index,ref float v) => GLDirect.ViewportIndexedfv(index,ref v);
-		[MI(AI)] public static void ScissorArray(uint first,int count,ref int v) => GLDirect.ScissorArrayv(first,count,ref v);
-		[MI(AI)] public static void ScissorIndexed(uint index,int left,int bottom,int width,int height) => GLDirect.ScissorIndexed(index,left,bottom,width,height);
-		[MI(AI)] public static void ScissorIndexed(uint index,ref int v) => GLDirect.ScissorIndexedv(index,ref v);
-		[MI(AI)] public static void DepthRangeArray(uint first,int count,ref double v) => GLDirect.DepthRangeArrayv(first,count,ref v);
-		[MI(AI)] public static void DepthRangeIndexed(uint index,double n,double f) => GLDirect.DepthRangeIndexed(index,n,f);
-		[MI(AI)] public static void GetFloat(uint target,uint index,ref float data) => GLDirect.GetFloati_v(target,index,ref data);
-		[MI(AI)] public static void GetDouble(uint target,uint index,ref double data) => GLDirect.GetDoublei_v(target,index,ref data);
+		[MethodImport("glReleaseShaderCompiler","4.1")]
+		public static void ReleaseShaderCompiler()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glShaderBinary","4.1")]
+		public static void ShaderBinary(int count,ref uint shaders,uint binaryformat,IntPtr binary,int length)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetShaderPrecisionFormat","4.1")]
+		public static void GetShaderPrecisionFormat(uint shadertype,uint precisiontype,ref int range,ref int precision)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDepthRangef","4.1")]
+		public static void DepthRange(float n,float f)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearDepthf","4.1")]
+		public static void ClearDepth(float d)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramBinary","4.1")]
+		public static void GetProgramBinary(uint program,int bufSize,ref int length,ref uint binaryFormat,IntPtr binary)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramBinary","4.1")]
+		public static void ProgramBinary(uint program,uint binaryFormat,IntPtr binary,int length)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramParameteri","4.1")]
+		public static void ProgramParameter(uint program,uint pName,int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUseProgramStages","4.1")]
+		public static void UseProgramStages(uint pipeline,uint stages,uint program)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glActiveShaderProgram","4.1")]
+		public static void ActiveShaderProgram(uint pipeline,uint program)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateShaderProgramv","4.1")]
+		public static uint CreateShaderProgram(uint type,int count,IntPtr strings)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindProgramPipeline","4.1")]
+		public static void BindProgramPipeline(uint pipeline)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDeleteProgramPipelines","4.1")]
+		public static void DeleteProgramPipelines(int n,ref uint pipelines)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGenProgramPipelines","4.1")]
+		public static void GenProgramPipelines(int n,ref uint pipelines)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glIsProgramPipeline","4.1")]
+		public static byte IsProgramPipeline(uint pipeline)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramPipelineiv","4.1")]
+		public static void GetProgramPipeline(uint pipeline,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform1i","4.1")]
+		public static void ProgramUniform1(uint program,int location,int v0)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform1iv","4.1")]
+		public static void ProgramUniform1(uint program,int location,int count,ref int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform1f","4.1")]
+		public static void ProgramUniform1(uint program,int location,float v0)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform1fv","4.1")]
+		public static void ProgramUniform1(uint program,int location,int count,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform1d","4.1")]
+		public static void ProgramUniform1(uint program,int location,double v0)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform1dv","4.1")]
+		public static void ProgramUniform1(uint program,int location,int count,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform1ui","4.1")]
+		public static void ProgramUniform1(uint program,int location,uint v0)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform1uiv","4.1")]
+		public static void ProgramUniform1(uint program,int location,int count,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform2i","4.1")]
+		public static void ProgramUniform2(uint program,int location,int v0,int v1)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform2iv","4.1")]
+		public static void ProgramUniform2(uint program,int location,int count,ref int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform2f","4.1")]
+		public static void ProgramUniform2(uint program,int location,float v0,float v1)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform2fv","4.1")]
+		public static void ProgramUniform2(uint program,int location,int count,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform2d","4.1")]
+		public static void ProgramUniform2(uint program,int location,double v0,double v1)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform2dv","4.1")]
+		public static void ProgramUniform2(uint program,int location,int count,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform2ui","4.1")]
+		public static void ProgramUniform2(uint program,int location,uint v0,uint v1)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform2uiv","4.1")]
+		public static void ProgramUniform2(uint program,int location,int count,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform3i","4.1")]
+		public static void ProgramUniform3(uint program,int location,int v0,int v1,int v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform3iv","4.1")]
+		public static void ProgramUniform3(uint program,int location,int count,ref int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform3f","4.1")]
+		public static void ProgramUniform3(uint program,int location,float v0,float v1,float v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform3fv","4.1")]
+		public static void ProgramUniform3(uint program,int location,int count,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform3d","4.1")]
+		public static void ProgramUniform3(uint program,int location,double v0,double v1,double v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform3dv","4.1")]
+		public static void ProgramUniform3(uint program,int location,int count,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform3ui","4.1")]
+		public static void ProgramUniform3(uint program,int location,uint v0,uint v1,uint v2)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform3uiv","4.1")]
+		public static void ProgramUniform3(uint program,int location,int count,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform4i","4.1")]
+		public static void ProgramUniform4(uint program,int location,int v0,int v1,int v2,int v3)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform4iv","4.1")]
+		public static void ProgramUniform4(uint program,int location,int count,ref int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform4f","4.1")]
+		public static void ProgramUniform4(uint program,int location,float v0,float v1,float v2,float v3)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform4fv","4.1")]
+		public static void ProgramUniform4(uint program,int location,int count,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform4d","4.1")]
+		public static void ProgramUniform4(uint program,int location,double v0,double v1,double v2,double v3)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform4dv","4.1")]
+		public static void ProgramUniform4(uint program,int location,int count,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform4ui","4.1")]
+		public static void ProgramUniform4(uint program,int location,uint v0,uint v1,uint v2,uint v3)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniform4uiv","4.1")]
+		public static void ProgramUniform4(uint program,int location,int count,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix2fv","4.1")]
+		public static void ProgramUniformMatrix2(uint program,int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix3fv","4.1")]
+		public static void ProgramUniformMatrix3(uint program,int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix4fv","4.1")]
+		public static void ProgramUniformMatrix4(uint program,int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix2dv","4.1")]
+		public static void ProgramUniformMatrix2(uint program,int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix3dv","4.1")]
+		public static void ProgramUniformMatrix3(uint program,int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix4dv","4.1")]
+		public static void ProgramUniformMatrix4(uint program,int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix2x3fv","4.1")]
+		public static void ProgramUniformMatrix2x3(uint program,int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix3x2fv","4.1")]
+		public static void ProgramUniformMatrix3x2(uint program,int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix2x4fv","4.1")]
+		public static void ProgramUniformMatrix2x4(uint program,int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix4x2fv","4.1")]
+		public static void ProgramUniformMatrix4x2(uint program,int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix3x4fv","4.1")]
+		public static void ProgramUniformMatrix3x4(uint program,int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix4x3fv","4.1")]
+		public static void ProgramUniformMatrix4x3(uint program,int location,int count,byte transpose,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix2x3dv","4.1")]
+		public static void ProgramUniformMatrix2x3(uint program,int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix3x2dv","4.1")]
+		public static void ProgramUniformMatrix3x2(uint program,int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix2x4dv","4.1")]
+		public static void ProgramUniformMatrix2x4(uint program,int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix4x2dv","4.1")]
+		public static void ProgramUniformMatrix4x2(uint program,int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix3x4dv","4.1")]
+		public static void ProgramUniformMatrix3x4(uint program,int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glProgramUniformMatrix4x3dv","4.1")]
+		public static void ProgramUniformMatrix4x3(uint program,int location,int count,byte transpose,ref double value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glValidateProgramPipeline","4.1")]
+		public static void ValidateProgramPipeline(uint pipeline)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramPipelineInfoLog","4.1")]
+		public static void GetProgramPipelineInfoLog(uint pipeline,int bufSize,ref int length,IntPtr infoLog)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribL1d","4.1")]
+		public static void VertexAttribL1(uint index,double x)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribL2d","4.1")]
+		public static void VertexAttribL2(uint index,double x,double y)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribL3d","4.1")]
+		public static void VertexAttribL3(uint index,double x,double y,double z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribL4d","4.1")]
+		public static void VertexAttribL4(uint index,double x,double y,double z,double w)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribL1dv","4.1")]
+		public static void VertexAttribL1(uint index,ref double v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribL2dv","4.1")]
+		public static void VertexAttribL2(uint index,ref double v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribL3dv","4.1")]
+		public static void VertexAttribL3(uint index,ref double v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribL4dv","4.1")]
+		public static void VertexAttribL4(uint index,ref double v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribLPointer","4.1")]
+		public static void VertexAttribLPointer(uint index,int size,uint type,int stride,IntPtr pointer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetVertexAttribLdv","4.1")]
+		public static void GetVertexAttribL(uint index,uint pName,ref double parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glViewportArrayv","4.1")]
+		public static void ViewportArray(uint first,int count,ref float v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glViewportIndexedf","4.1")]
+		public static void ViewportIndexed(uint index,float x,float y,float w,float h)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glViewportIndexedfv","4.1")]
+		public static void ViewportIndexed(uint index,ref float v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glScissorArrayv","4.1")]
+		public static void ScissorArray(uint first,int count,ref int v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glScissorIndexed","4.1")]
+		public static void ScissorIndexed(uint index,int left,int bottom,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glScissorIndexedv","4.1")]
+		public static void ScissorIndexed(uint index,ref int v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDepthRangeArrayv","4.1")]
+		public static void DepthRangeArray(uint first,int count,ref double v)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDepthRangeIndexed","4.1")]
+		public static void DepthRangeIndexed(uint index,double n,double f)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetFloati_v","4.1")]
+		public static void GetFloat(uint target,uint index,ref float data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetDoublei_v","4.1")]
+		public static void GetDouble(uint target,uint index,ref double data)
+			=> throw new NotImplementedException();
 
 		#endregion
 
 		#region OpenGL 4.2
 
-		[MI(AI)] public static void DrawArraysInstancedBaseInstance(uint mode,int first,int count,int instanceCount,uint baseinstance) => GLDirect.DrawArraysInstancedBaseInstance(mode,first,count,instanceCount,baseinstance);
-		[MI(AI)] public static void DrawElementsInstancedBaseInstance(uint mode,int count,uint type,IntPtr indices,int instanceCount,uint baseinstance) => GLDirect.DrawElementsInstancedBaseInstance(mode,count,type,indices,instanceCount,baseinstance);
-		[MI(AI)] public static void DrawElementsInstancedBaseVertexBaseInstance(uint mode,int count,uint type,IntPtr indices,int instanceCount,int basevertex,uint baseinstance) => GLDirect.DrawElementsInstancedBaseVertexBaseInstance(mode,count,type,indices,instanceCount,basevertex,baseinstance);
-		[MI(AI)] public static void GetInternalformat(uint target,uint internalFormat,uint pName,int bufSize,ref int parameters) => GLDirect.GetInternalformativ(target,internalFormat,pName,bufSize,ref parameters);
-		[MI(AI)] public static void GetActiveAtomicCounterBuffer(uint program,uint bufferIndex,uint pName,ref int parameters) => GLDirect.GetActiveAtomicCounterBufferiv(program,bufferIndex,pName,ref parameters);
-		[MI(AI)] public static void BindImageTexture(uint unit,uint texture,int level,byte layered,int layer,uint access,uint format) => GLDirect.BindImageTexture(unit,texture,level,layered,layer,access,format);
-		[MI(AI)] public static void MemoryBarrier(uint barriers) => GLDirect.MemoryBarrier(barriers);
-		[MI(AI)] public static void TexStorage1D(uint target,int levels,uint internalFormat,int width) => GLDirect.TexStorage1D(target,levels,internalFormat,width);
-		[MI(AI)] public static void TexStorage2D(uint target,int levels,uint internalFormat,int width,int height) => GLDirect.TexStorage2D(target,levels,internalFormat,width,height);
-		[MI(AI)] public static void TexStorage3D(uint target,int levels,uint internalFormat,int width,int height,int depth) => GLDirect.TexStorage3D(target,levels,internalFormat,width,height,depth);
-		[MI(AI)] public static void DrawTransformFeedbackInstanced(uint mode,uint id,int instanceCount) => GLDirect.DrawTransformFeedbackInstanced(mode,id,instanceCount);
-		[MI(AI)] public static void DrawTransformFeedbackStreamInstanced(uint mode,uint id,uint stream,int instanceCount) => GLDirect.DrawTransformFeedbackStreamInstanced(mode,id,stream,instanceCount);
-
+		[MethodImport("glDrawArraysInstancedBaseInstance","4.2")]
+		public static void DrawArraysInstancedBaseInstance(uint mode,int first,int count,int instanceCount,uint baseinstance)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawElementsInstancedBaseInstance","4.2")]
+		public static void DrawElementsInstancedBaseInstance(uint mode,int count,uint type,IntPtr indices,int instanceCount,uint baseinstance)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawElementsInstancedBaseVertexBaseInstance","4.2")]
+		public static void DrawElementsInstancedBaseVertexBaseInstance(uint mode,int count,uint type,IntPtr indices,int instanceCount,int basevertex,uint baseinstance)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetInternalformativ","4.2")]
+		public static void GetInternalformat(uint target,uint internalFormat,uint pName,int bufSize,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetActiveAtomicCounterBufferiv","4.2")]
+		public static void GetActiveAtomicCounterBuffer(uint program,uint bufferIndex,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindImageTexture","4.2")]
+		public static void BindImageTexture(uint unit,uint texture,int level,byte layered,int layer,uint access,uint format)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMemoryBarrier","4.2")]
+		public static void MemoryBarrier(uint barriers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexStorage1D","4.2")]
+		public static void TexStorage1D(uint target,int levels,uint internalFormat,int width)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexStorage2D","4.2")]
+		public static void TexStorage2D(uint target,int levels,uint internalFormat,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexStorage3D","4.2")]
+		public static void TexStorage3D(uint target,int levels,uint internalFormat,int width,int height,int depth)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawTransformFeedbackInstanced","4.2")]
+		public static void DrawTransformFeedbackInstanced(uint mode,uint id,int instanceCount)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDrawTransformFeedbackStreamInstanced","4.2")]
+		public static void DrawTransformFeedbackStreamInstanced(uint mode,uint id,uint stream,int instanceCount)
+			=> throw new NotImplementedException();
+		
 		#endregion
 
 		#region OpenGL 4.3
 
-		[MI(AI)] public static void ClearBufferData(BufferTarget target,uint internalFormat,uint format,uint type,IntPtr data) => GLDirect.ClearBufferData(target,internalFormat,format,type,data);
-		[MI(AI)] public static void ClearBufferSubData(BufferTarget target,uint internalFormat,int offset,int size,uint format,uint type,IntPtr data) => GLDirect.ClearBufferSubData(target,internalFormat,offset,size,format,type,data);
-		[MI(AI)] public static void DispatchCompute(uint num_groups_x,uint num_groups_y,uint num_groups_z) => GLDirect.DispatchCompute(num_groups_x,num_groups_y,num_groups_z);
-		[MI(AI)] public static void DispatchComputeIndirect(int indirect) => GLDirect.DispatchComputeIndirect(indirect);
-		[MI(AI)] public static void CopyImageSubData(uint srcName,uint srcTarget,int srcLevel,int srcX,int srcY,int srcZ,uint dstName,uint dstTarget,int dstLevel,int dstX,int dstY,int dstZ,int srcWidth,int srcHeight,int srcDepth) => GLDirect.CopyImageSubData(srcName,srcTarget,srcLevel,srcX,srcY,srcZ,dstName,dstTarget,dstLevel,dstX,dstY,dstZ,srcWidth,srcHeight,srcDepth);
-		[MI(AI)] public static void FramebufferParameter(FramebufferTarget target,uint pName,int param) => GLDirect.FramebufferParameteri(target,pName,param);
-		[MI(AI)] public static void GetFramebufferParameter(FramebufferTarget target,uint pName,ref int parameters) => GLDirect.GetFramebufferParameteriv(target,pName,ref parameters);
-		[MI(AI)] public static void GetInternalformat(uint target,uint internalFormat,uint pName,int bufSize,ref long parameters) => GLDirect.GetInternalformati64v(target,internalFormat,pName,bufSize,ref parameters);
-		[MI(AI)] public static void InvalidateTexSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth) => GLDirect.InvalidateTexSubImage(texture,level,xOffset,yOffset,zOffset,width,height,depth);
-		[MI(AI)] public static void InvalidateTexImage(uint texture,int level) => GLDirect.InvalidateTexImage(texture,level);
-		[MI(AI)] public static void InvalidateBufferSubData(uint buffer,int offset,int length) => GLDirect.InvalidateBufferSubData(buffer,offset,length);
-		[MI(AI)] public static void InvalidateBufferData(uint buffer) => GLDirect.InvalidateBufferData(buffer);
-		[MI(AI)] public static void InvalidateFramebuffer(FramebufferTarget target,int numAttachments,ref uint attachments) => GLDirect.InvalidateFramebuffer(target,numAttachments,ref attachments);
-		[MI(AI)] public static void InvalidateSubFramebuffer(FramebufferTarget target,int numAttachments,ref uint attachments,int x,int y,int width,int height) => GLDirect.InvalidateSubFramebuffer(target,numAttachments,ref attachments,x,y,width,height);
-		[MI(AI)] public static void MultiDrawArraysIndirect(uint mode,IntPtr indirect,int drawcount,int stride) => GLDirect.MultiDrawArraysIndirect(mode,indirect,drawcount,stride);
-		[MI(AI)] public static void MultiDrawElementsIndirect(uint mode,uint type,IntPtr indirect,int drawcount,int stride) => GLDirect.MultiDrawElementsIndirect(mode,type,indirect,drawcount,stride);
-		[MI(AI)] public static void GetProgramInterface(uint program,uint programInterface,uint pName,ref int parameters) => GLDirect.GetProgramInterfaceiv(program,programInterface,pName,ref parameters);
-		[MI(AI)] public static uint GetProgramResourceIndex(uint program,uint programInterface,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.GetProgramResourceIndex(program,programInterface,name);
-		[MI(AI)] public static void GetProgramResourceName(uint program,uint programInterface,uint index,int bufSize,ref int length,IntPtr name) => GLDirect.GetProgramResourceName(program,programInterface,index,bufSize,ref length,name);
-		[MI(AI)] public static void GetProgramResource(uint program,uint programInterface,uint index,int propCount,ref uint props,int bufSize,ref int length,ref int parameters) => GLDirect.GetProgramResourceiv(program,programInterface,index,propCount,ref props,bufSize,ref length,ref parameters);
-		[MI(AI)] public static int GetProgramResourceLocation(uint program,uint programInterface,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.GetProgramResourceLocation(program,programInterface,name);
-		[MI(AI)] public static int GetProgramResourceLocationIndex(uint program,uint programInterface,[In] [MarshalAs(UnmanagedType.LPStr)] string name) => GLDirect.GetProgramResourceLocationIndex(program,programInterface,name);
-		[MI(AI)] public static void ShaderStorageBlockBinding(uint program,uint storageBlockIndex,uint storageBlockBinding) => GLDirect.ShaderStorageBlockBinding(program,storageBlockIndex,storageBlockBinding);
-		[MI(AI)] public static void TexBufferRange(uint target,uint internalFormat,uint buffer,int offset,int size) => GLDirect.TexBufferRange(target,internalFormat,buffer,offset,size);
-		[MI(AI)] public static void TexStorage2DMultisample(uint target,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations) => GLDirect.TexStorage2DMultisample(target,samples,internalFormat,width,height,fixedsamplelocations);
-		[MI(AI)] public static void TexStorage3DMultisample(uint target,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations) => GLDirect.TexStorage3DMultisample(target,samples,internalFormat,width,height,depth,fixedsamplelocations);
-		[MI(AI)] public static void TextureView(uint texture,uint target,uint origtexture,uint internalFormat,uint minlevel,uint numlevels,uint minlayer,uint numlayers) => GLDirect.TextureView(texture,target,origtexture,internalFormat,minlevel,numlevels,minlayer,numlayers);
-		[MI(AI)] public static void BindVertexBuffer(uint bindingindex,uint buffer,int offset,int stride) => GLDirect.BindVertexBuffer(bindingindex,buffer,offset,stride);
-		[MI(AI)] public static void VertexAttribFormat(uint attribindex,int size,uint type,byte normalized,uint relativeoffset) => GLDirect.VertexAttribFormat(attribindex,size,type,normalized,relativeoffset);
-		[MI(AI)] public static void VertexAttribIFormat(uint attribindex,int size,uint type,uint relativeoffset) => GLDirect.VertexAttribIFormat(attribindex,size,type,relativeoffset);
-		[MI(AI)] public static void VertexAttribLFormat(uint attribindex,int size,uint type,uint relativeoffset) => GLDirect.VertexAttribLFormat(attribindex,size,type,relativeoffset);
-		[MI(AI)] public static void VertexAttribBinding(uint attribindex,uint bindingindex) => GLDirect.VertexAttribBinding(attribindex,bindingindex);
-		[MI(AI)] public static void VertexBindingDivisor(uint bindingindex,uint divisor) => GLDirect.VertexBindingDivisor(bindingindex,divisor);
-		[MI(AI)] public static void DebugMessageControl(uint source,uint type,uint severity,int count,ref uint ids,byte enabled) => GLDirect.DebugMessageControl(source,type,severity,count,ref ids,enabled);
-		[MI(AI)] public static void DebugMessageInsert(uint source,uint type,uint id,uint severity,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string buf) => GLDirect.DebugMessageInsert(source,type,id,severity,length,buf);
-		[MI(AI)] public static void DebugMessageCallback(GLDirect.DebugFunc callback,IntPtr userParam) => GLDirect.DebugMessageCallback(callback,userParam);
-		[MI(AI)] public static uint GetDebugMessageLog(uint count,int bufSize,ref uint sources,ref uint types,ref uint ids,ref uint severities,ref int lengths,IntPtr messageLog) => GLDirect.GetDebugMessageLog(count,bufSize,ref sources,ref types,ref ids,ref severities,ref lengths,messageLog);
-		[MI(AI)] public static void PushDebugGroup(uint source,uint id,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string message) => GLDirect.PushDebugGroup(source,id,length,message);
-		[MI(AI)] public static void PopDebugGroup() => GLDirect.PopDebugGroup();
-		[MI(AI)] public static void ObjectLabel(uint identifier,uint name,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string label) => GLDirect.ObjectLabel(identifier,name,length,label);
-		[MI(AI)] public static void GetObjectLabel(uint identifier,uint name,int bufSize,ref int length,IntPtr label) => GLDirect.GetObjectLabel(identifier,name,bufSize,ref length,label);
-		[MI(AI)] public static void ObjectPtrLabel(IntPtr ptr,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string label) => GLDirect.ObjectPtrLabel(ptr,length,label);
-		[MI(AI)] public static void GetObjectPtrLabel(IntPtr ptr,int bufSize,ref int length,IntPtr label) => GLDirect.GetObjectPtrLabel(ptr,bufSize,ref length,label);
-
+		[MethodImport("glClearBufferData","4.3")]
+		public static void ClearBufferData(BufferTarget target,uint internalFormat,uint format,uint type,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearBufferSubData","4.3")]
+		public static void ClearBufferSubData(BufferTarget target,uint internalFormat,int offset,int size,uint format,uint type,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDispatchCompute","4.3")]
+		public static void DispatchCompute(uint num_groups_x,uint num_groups_y,uint num_groups_z)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDispatchComputeIndirect","4.3")]
+		public static void DispatchComputeIndirect(int indirect)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyImageSubData","4.3")]
+		public static void CopyImageSubData(uint srcName,uint srcTarget,int srcLevel,int srcX,int srcY,int srcZ,uint dstName,uint dstTarget,int dstLevel,int dstX,int dstY,int dstZ,int srcWidth,int srcHeight,int srcDepth)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFramebufferParameteri","4.3")]
+		public static void FramebufferParameter(FramebufferTarget target,uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetFramebufferParameteriv","4.3")]
+		public static void GetFramebufferParameter(FramebufferTarget target,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetInternalformati64v","4.3")]
+		public static void GetInternalformat(uint target,uint internalFormat,uint pName,int bufSize,ref long parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glInvalidateTexSubImage","4.3")]
+		public static void InvalidateTexSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glInvalidateTexImage","4.3")]
+		public static void InvalidateTexImage(uint texture,int level)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glInvalidateBufferSubData","4.3")]
+		public static void InvalidateBufferSubData(uint buffer,int offset,int length)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glInvalidateBufferData","4.3")]
+		public static void InvalidateBufferData(uint buffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glInvalidateFramebuffer","4.3")]
+		public static void InvalidateFramebuffer(FramebufferTarget target,int numAttachments,ref uint attachments)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glInvalidateSubFramebuffer","4.3")]
+		public static void InvalidateSubFramebuffer(FramebufferTarget target,int numAttachments,ref uint attachments,int x,int y,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMultiDrawArraysIndirect","4.3")]
+		public static void MultiDrawArraysIndirect(uint mode,IntPtr indirect,int drawcount,int stride)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMultiDrawElementsIndirect","4.3")]
+		public static void MultiDrawElementsIndirect(uint mode,uint type,IntPtr indirect,int drawcount,int stride)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramInterfaceiv","4.3")]
+		public static void GetProgramInterface(uint program,uint programInterface,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramResourceIndex","4.3")]
+		public static uint GetProgramResourceIndex(uint program,uint programInterface,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramResourceName","4.3")]
+		public static void GetProgramResourceName(uint program,uint programInterface,uint index,int bufSize,ref int length,IntPtr name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramResourceiv","4.3")]
+		public static void GetProgramResource(uint program,uint programInterface,uint index,int propCount,ref uint props,int bufSize,ref int length,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramResourceLocation","4.3")]
+		public static int GetProgramResourceLocation(uint program,uint programInterface,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetProgramResourceLocationIndex","4.3")]
+		public static int GetProgramResourceLocationIndex(uint program,uint programInterface,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glShaderStorageBlockBinding","4.3")]
+		public static void ShaderStorageBlockBinding(uint program,uint storageBlockIndex,uint storageBlockBinding)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexBufferRange","4.3")]
+		public static void TexBufferRange(uint target,uint internalFormat,uint buffer,int offset,int size)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexStorage2DMultisample","4.3")]
+		public static void TexStorage2DMultisample(uint target,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTexStorage3DMultisample","4.3")]
+		public static void TexStorage3DMultisample(uint target,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureView","4.3")]
+		public static void TextureView(uint texture,uint target,uint origtexture,uint internalFormat,uint minlevel,uint numlevels,uint minlayer,uint numlayers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindVertexBuffer","4.3")]
+		public static void BindVertexBuffer(uint bindingindex,uint buffer,int offset,int stride)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribFormat","4.3")]
+		public static void VertexAttribFormat(uint attribindex,int size,uint type,byte normalized,uint relativeoffset)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribIFormat","4.3")]
+		public static void VertexAttribIFormat(uint attribindex,int size,uint type,uint relativeoffset)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribLFormat","4.3")]
+		public static void VertexAttribLFormat(uint attribindex,int size,uint type,uint relativeoffset)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexAttribBinding","4.3")]
+		public static void VertexAttribBinding(uint attribindex,uint bindingindex)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexBindingDivisor","4.3")]
+		public static void VertexBindingDivisor(uint bindingindex,uint divisor)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDebugMessageControl","4.3")]
+		public static void DebugMessageControl(uint source,uint type,uint severity,int count,ref uint ids,byte enabled)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDebugMessageInsert","4.3")]
+		public static void DebugMessageInsert(uint source,uint type,uint id,uint severity,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string buf)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDebugMessageCallback","4.3")]
+		public static void DebugMessageCallback(DebugCallback callback,IntPtr userParameter)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetDebugMessageLog","4.3")]
+		public static uint GetDebugMessageLog(uint count,int bufSize,ref uint sources,ref uint types,ref uint ids,ref uint severities,ref int lengths,IntPtr messageLog)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPushDebugGroup","4.3")]
+		public static void PushDebugGroup(uint source,uint id,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string message)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glPopDebugGroup","4.3")]
+		public static void PopDebugGroup()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glObjectLabel","4.3")]
+		public static void ObjectLabel(uint identifier,uint name,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string label)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetObjectLabel","4.3")]
+		public static void GetObjectLabel(uint identifier,uint name,int bufSize,ref int length,IntPtr label)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glObjectPtrLabel","4.3")]
+		public static void ObjectPtrLabel(IntPtr ptr,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string label)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetObjectPtrLabel","4.3")]
+		public static void GetObjectPtrLabel(IntPtr ptr,int bufSize,ref int length,IntPtr label)
+			=> throw new NotImplementedException();
+		
 		#endregion
 
 		#region OpenGL 4.4
 
-		[MI(AI)] public static void BufferStorage(BufferTarget target,int size,IntPtr data,uint flags) => GLDirect.BufferStorage(target,size,data,flags);
-		[MI(AI)] public static void ClearTexImage(uint texture,int level,uint format,uint type,IntPtr data) => GLDirect.ClearTexImage(texture,level,format,type,data);
-		[MI(AI)] public static void ClearTexSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr data) => GLDirect.ClearTexSubImage(texture,level,xOffset,yOffset,zOffset,width,height,depth,format,type,data);
-		[MI(AI)] public static void BindBuffersBase(BufferRangeTarget target,uint first,int count,ref uint buffers) => GLDirect.BindBuffersBase(target,first,count,ref buffers);
-		[MI(AI)] public static void BindBuffersRange(BufferRangeTarget target,uint first,int count,ref uint buffers,ref int offsets,ref int sizes) => GLDirect.BindBuffersRange(target,first,count,ref buffers,ref offsets,ref sizes);
-		[MI(AI)] public static void BindTextures(uint first,int count,ref uint textures) => GLDirect.BindTextures(first,count,ref textures);
-		[MI(AI)] public static void BindSamplers(uint first,int count,ref uint samplers) => GLDirect.BindSamplers(first,count,ref samplers);
-		[MI(AI)] public static void BindImageTextures(uint first,int count,ref uint textures) => GLDirect.BindImageTextures(first,count,ref textures);
-		[MI(AI)] public static void BindVertexBuffers(uint first,int count,ref uint buffers,ref int offsets,ref int strides) => GLDirect.BindVertexBuffers(first,count,ref buffers,ref offsets,ref strides);
-
+		[MethodImport("glBufferStorage","4.4")]
+		public static void BufferStorage(BufferTarget target,int size,IntPtr data,uint flags)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearTexImage","4.4")]
+		public static void ClearTexImage(uint texture,int level,uint format,uint type,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearTexSubImage","4.4")]
+		public static void ClearTexSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindBuffersBase","4.4")]
+		public static void BindBuffersBase(BufferRangeTarget target,uint first,int count,ref uint buffers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindBuffersRange","4.4")]
+		public static void BindBuffersRange(BufferRangeTarget target,uint first,int count,ref uint buffers,ref int offsets,ref int sizes)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindTextures","4.4")]
+		public static void BindTextures(uint first,int count,ref uint textures)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindSamplers","4.4")]
+		public static void BindSamplers(uint first,int count,ref uint samplers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindImageTextures","4.4")]
+		public static void BindImageTextures(uint first,int count,ref uint textures)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindVertexBuffers","4.4")]
+		public static void BindVertexBuffers(uint first,int count,ref uint buffers,ref int offsets,ref int strides)
+			=> throw new NotImplementedException();
+		
 		#endregion
 
 		#region OpenGL 4.5
 
-		[MI(AI)] public static void ClipControl(uint origin,uint depth) => GLDirect.ClipControl(origin,depth);
-		[MI(AI)] public static void CreateTransformFeedbacks(int n,ref uint ids) => GLDirect.CreateTransformFeedbacks(n,ref ids);
-		[MI(AI)] public static void TransformFeedbackBufferBase(uint xfb,uint index,uint buffer) => GLDirect.TransformFeedbackBufferBase(xfb,index,buffer);
-		[MI(AI)] public static void TransformFeedbackBufferRange(uint xfb,uint index,uint buffer,int offset,int size) => GLDirect.TransformFeedbackBufferRange(xfb,index,buffer,offset,size);
-		[MI(AI)] public static void GetTransformFeedback(uint xfb,uint pName,ref int param) => GLDirect.GetTransformFeedbackiv(xfb,pName,ref param);
-		[MI(AI)] public static void GetTransformFeedback(uint xfb,uint pName,uint index,ref int param) => GLDirect.GetTransformFeedbacki_v(xfb,pName,index,ref param);
-		[MI(AI)] public static void GetTransformFeedback(uint xfb,uint pName,uint index,ref long param) => GLDirect.GetTransformFeedbacki64_v(xfb,pName,index,ref param);
-		[MI(AI)] public static void CreateBuffers(int n,ref uint buffers) => GLDirect.CreateBuffers(n,ref buffers);
-		[MI(AI)] public static void NamedBufferStorage(uint buffer,int size,IntPtr data,uint flags) => GLDirect.NamedBufferStorage(buffer,size,data,flags);
-		[MI(AI)] public static void NamedBufferData(uint buffer,int size,IntPtr data,uint usage) => GLDirect.NamedBufferData(buffer,size,data,usage);
-		[MI(AI)] public static void NamedBufferSubData(uint buffer,int offset,int size,IntPtr data) => GLDirect.NamedBufferSubData(buffer,offset,size,data);
-		[MI(AI)] public static void CopyNamedBufferSubData(uint readBuffer,uint writeBuffer,int readOffset,int writeOffset,int size) => GLDirect.CopyNamedBufferSubData(readBuffer,writeBuffer,readOffset,writeOffset,size);
-		[MI(AI)] public static void ClearNamedBufferData(uint buffer,uint internalFormat,uint format,uint type,IntPtr data) => GLDirect.ClearNamedBufferData(buffer,internalFormat,format,type,data);
-		[MI(AI)] public static void ClearNamedBufferSubData(uint buffer,uint internalFormat,int offset,int size,uint format,uint type,IntPtr data) => GLDirect.ClearNamedBufferSubData(buffer,internalFormat,offset,size,format,type,data);
-		[MI(AI)] public static IntPtr MapNamedBuffer(uint buffer,uint access) => GLDirect.MapNamedBuffer(buffer,access);
-		[MI(AI)] public static IntPtr MapNamedBufferRange(uint buffer,int offset,int length,uint access) => GLDirect.MapNamedBufferRange(buffer,offset,length,access);
-		[MI(AI)] public static byte UnmapNamedBuffer(uint buffer) => GLDirect.UnmapNamedBuffer(buffer);
-		[MI(AI)] public static void FlushMappedNamedBufferRange(uint buffer,int offset,int length) => GLDirect.FlushMappedNamedBufferRange(buffer,offset,length);
-		[MI(AI)] public static void GetNamedBufferParameter(uint buffer,uint pName,ref int parameters) => GLDirect.GetNamedBufferParameteriv(buffer,pName,ref parameters);
-		[MI(AI)] public static void GetNamedBufferParameter(uint buffer,uint pName,ref long parameters) => GLDirect.GetNamedBufferParameteri64v(buffer,pName,ref parameters);
-		[MI(AI)] public static void GetNamedBufferPointer(uint buffer,uint pName,ref IntPtr parameters) => GLDirect.GetNamedBufferPointerv(buffer,pName,ref parameters);
-		[MI(AI)] public static void GetNamedBufferSubData(uint buffer,int offset,int size,IntPtr data) => GLDirect.GetNamedBufferSubData(buffer,offset,size,data);
-		[MI(AI)] public static void CreateFramebuffers(int n,ref uint framebuffers) => GLDirect.CreateFramebuffers(n,ref framebuffers);
-		[MI(AI)] public static void NamedFramebufferRenderbuffer(uint framebuffer,uint attachment,uint renderbuffertarget,uint renderbuffer) => GLDirect.NamedFramebufferRenderbuffer(framebuffer,attachment,renderbuffertarget,renderbuffer);
-		[MI(AI)] public static void NamedFramebufferParameter(uint framebuffer,uint pName,int param) => GLDirect.NamedFramebufferParameteri(framebuffer,pName,param);
-		[MI(AI)] public static void NamedFramebufferTexture(uint framebuffer,uint attachment,uint texture,int level) => GLDirect.NamedFramebufferTexture(framebuffer,attachment,texture,level);
-		[MI(AI)] public static void NamedFramebufferTextureLayer(uint framebuffer,uint attachment,uint texture,int level,int layer) => GLDirect.NamedFramebufferTextureLayer(framebuffer,attachment,texture,level,layer);
-		[MI(AI)] public static void NamedFramebufferDrawBuffer(uint framebuffer,DrawBufferMode buf) => GLDirect.NamedFramebufferDrawBuffer(framebuffer,buf);
-		[MI(AI)] public static void NamedFramebufferDrawBuffers(uint framebuffer,int n,DrawBufferMode[] bufs) => GLDirect.NamedFramebufferDrawBuffers(framebuffer,n,bufs);
-		[MI(AI)] public static void NamedFramebufferReadBuffer(uint framebuffer,uint src) => GLDirect.NamedFramebufferReadBuffer(framebuffer,src);
-		[MI(AI)] public static void InvalidateNamedFramebufferData(uint framebuffer,int numAttachments,ref uint attachments) => GLDirect.InvalidateNamedFramebufferData(framebuffer,numAttachments,ref attachments);
-		[MI(AI)] public static void InvalidateNamedFramebufferSubData(uint framebuffer,int numAttachments,ref uint attachments,int x,int y,int width,int height) => GLDirect.InvalidateNamedFramebufferSubData(framebuffer,numAttachments,ref attachments,x,y,width,height);
-		[MI(AI)] public static void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,ref int value) => GLDirect.ClearNamedFramebufferiv(framebuffer,buffer,drawbuffer,ref value);
-		[MI(AI)] public static void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,ref uint value) => GLDirect.ClearNamedFramebufferuiv(framebuffer,buffer,drawbuffer,ref value);
-		[MI(AI)] public static void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,ref float value) => GLDirect.ClearNamedFramebufferfv(framebuffer,buffer,drawbuffer,ref value);
-		[MI(AI)] public static void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,float depth,int stencil) => GLDirect.ClearNamedFramebufferfi(framebuffer,buffer,drawbuffer,depth,stencil);
-		[MI(AI)] public static void BlitNamedFramebuffer(uint readFramebuffer,uint drawFramebuffer,int srcX0,int srcY0,int srcX1,int srcY1,int dstX0,int dstY0,int dstX1,int dstY1,uint mask,uint filter) => GLDirect.BlitNamedFramebuffer(readFramebuffer,drawFramebuffer,srcX0,srcY0,srcX1,srcY1,dstX0,dstY0,dstX1,dstY1,mask,filter);
-		[MI(AI)] public static uint CheckNamedFramebufferStatus(uint framebuffer,FramebufferTarget target) => GLDirect.CheckNamedFramebufferStatus(framebuffer,target);
-		[MI(AI)] public static void GetNamedFramebufferParameter(uint framebuffer,uint pName,ref int param) => GLDirect.GetNamedFramebufferParameteriv(framebuffer,pName,ref param);
-		[MI(AI)] public static void GetNamedFramebufferAttachmentParameter(uint framebuffer,uint attachment,uint pName,ref int parameters) => GLDirect.GetNamedFramebufferAttachmentParameteriv(framebuffer,attachment,pName,ref parameters);
-		[MI(AI)] public static void CreateRenderbuffers(int n,ref uint renderbuffers) => GLDirect.CreateRenderbuffers(n,ref renderbuffers);
-		[MI(AI)] public static void NamedRenderbufferStorage(uint renderbuffer,uint internalFormat,int width,int height) => GLDirect.NamedRenderbufferStorage(renderbuffer,internalFormat,width,height);
-		[MI(AI)] public static void NamedRenderbufferStorageMultisample(uint renderbuffer,int samples,uint internalFormat,int width,int height) => GLDirect.NamedRenderbufferStorageMultisample(renderbuffer,samples,internalFormat,width,height);
-		[MI(AI)] public static void GetNamedRenderbufferParameter(uint renderbuffer,uint pName,ref int parameters) => GLDirect.GetNamedRenderbufferParameteriv(renderbuffer,pName,ref parameters);
-		[MI(AI)] public static void CreateTextures(uint target,int n,ref uint textures) => GLDirect.CreateTextures(target,n,ref textures);
-		[MI(AI)] public static void TextureBuffer(uint texture,uint internalFormat,uint buffer) => GLDirect.TextureBuffer(texture,internalFormat,buffer);
-		[MI(AI)] public static void TextureBufferRange(uint texture,uint internalFormat,uint buffer,int offset,int size) => GLDirect.TextureBufferRange(texture,internalFormat,buffer,offset,size);
-		[MI(AI)] public static void TextureStorage1D(uint texture,int levels,uint internalFormat,int width) => GLDirect.TextureStorage1D(texture,levels,internalFormat,width);
-		[MI(AI)] public static void TextureStorage2D(uint texture,int levels,uint internalFormat,int width,int height) => GLDirect.TextureStorage2D(texture,levels,internalFormat,width,height);
-		[MI(AI)] public static void TextureStorage3D(uint texture,int levels,uint internalFormat,int width,int height,int depth) => GLDirect.TextureStorage3D(texture,levels,internalFormat,width,height,depth);
-		[MI(AI)] public static void TextureStorage2DMultisample(uint texture,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations) => GLDirect.TextureStorage2DMultisample(texture,samples,internalFormat,width,height,fixedsamplelocations);
-		[MI(AI)] public static void TextureStorage3DMultisample(uint texture,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations) => GLDirect.TextureStorage3DMultisample(texture,samples,internalFormat,width,height,depth,fixedsamplelocations);
-		[MI(AI)] public static void TextureSubImage1D(uint texture,int level,int xOffset,int width,uint format,uint type,IntPtr pixels) => GLDirect.TextureSubImage1D(texture,level,xOffset,width,format,type,pixels);
-		[MI(AI)] public static void TextureSubImage2D(uint texture,int level,int xOffset,int yOffset,int width,int height,uint format,uint type,IntPtr pixels) => GLDirect.TextureSubImage2D(texture,level,xOffset,yOffset,width,height,format,type,pixels);
-		[MI(AI)] public static void TextureSubImage3D(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr pixels) => GLDirect.TextureSubImage3D(texture,level,xOffset,yOffset,zOffset,width,height,depth,format,type,pixels);
-		[MI(AI)] public static void CompressedTextureSubImage1D(uint texture,int level,int xOffset,int width,uint format,int imageSize,IntPtr data) => GLDirect.CompressedTextureSubImage1D(texture,level,xOffset,width,format,imageSize,data);
-		[MI(AI)] public static void CompressedTextureSubImage2D(uint texture,int level,int xOffset,int yOffset,int width,int height,uint format,int imageSize,IntPtr data) => GLDirect.CompressedTextureSubImage2D(texture,level,xOffset,yOffset,width,height,format,imageSize,data);
-		[MI(AI)] public static void CompressedTextureSubImage3D(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,int imageSize,IntPtr data) => GLDirect.CompressedTextureSubImage3D(texture,level,xOffset,yOffset,zOffset,width,height,depth,format,imageSize,data);
-		[MI(AI)] public static void CopyTextureSubImage1D(uint texture,int level,int xOffset,int x,int y,int width) => GLDirect.CopyTextureSubImage1D(texture,level,xOffset,x,y,width);
-		[MI(AI)] public static void CopyTextureSubImage2D(uint texture,int level,int xOffset,int yOffset,int x,int y,int width,int height) => GLDirect.CopyTextureSubImage2D(texture,level,xOffset,yOffset,x,y,width,height);
-		[MI(AI)] public static void CopyTextureSubImage3D(uint texture,int level,int xOffset,int yOffset,int zOffset,int x,int y,int width,int height) => GLDirect.CopyTextureSubImage3D(texture,level,xOffset,yOffset,zOffset,x,y,width,height);
-		[MI(AI)] public static void TextureParameter(uint texture,uint pName,float param) => GLDirect.TextureParameterf(texture,pName,param);
-		[MI(AI)] public static void TextureParameter(uint texture,uint pName,ref float param) => GLDirect.TextureParameterfv(texture,pName,ref param);
-		[MI(AI)] public static void TextureParameter(uint texture,uint pName,int param) => GLDirect.TextureParameteri(texture,pName,param);
-		[MI(AI)] public static void TextureParameterI(uint texture,uint pName,ref int parameters) => GLDirect.TextureParameterIiv(texture,pName,ref parameters);
-		[MI(AI)] public static void TextureParameterI(uint texture,uint pName,ref uint parameters) => GLDirect.TextureParameterIuiv(texture,pName,ref parameters);
-		[MI(AI)] public static void TextureParameter(uint texture,uint pName,ref int param) => GLDirect.TextureParameteriv(texture,pName,ref param);
-		[MI(AI)] public static void GenerateTextureMipmap(uint texture) => GLDirect.GenerateTextureMipmap(texture);
-		[MI(AI)] public static void BindTextureUnit(uint unit,uint texture) => GLDirect.BindTextureUnit(unit,texture);
-		[MI(AI)] public static void GetTextureImage(uint texture,int level,uint format,uint type,int bufSize,IntPtr pixels) => GLDirect.GetTextureImage(texture,level,format,type,bufSize,pixels);
-		[MI(AI)] public static void GetCompressedTextureImage(uint texture,int level,int bufSize,IntPtr pixels) => GLDirect.GetCompressedTextureImage(texture,level,bufSize,pixels);
-		[MI(AI)] public static void GetTextureLevelParameter(uint texture,int level,uint pName,ref float parameters) => GLDirect.GetTextureLevelParameterfv(texture,level,pName,ref parameters);
-		[MI(AI)] public static void GetTextureLevelParameter(uint texture,int level,uint pName,ref int parameters) => GLDirect.GetTextureLevelParameteriv(texture,level,pName,ref parameters);
-		[MI(AI)] public static void GetTextureParameter(uint texture,uint pName,ref float parameters) => GLDirect.GetTextureParameterfv(texture,pName,ref parameters);
-		[MI(AI)] public static void GetTextureParameterI(uint texture,uint pName,ref int parameters) => GLDirect.GetTextureParameterIiv(texture,pName,ref parameters);
-		[MI(AI)] public static void GetTextureParameterI(uint texture,uint pName,ref uint parameters) => GLDirect.GetTextureParameterIuiv(texture,pName,ref parameters);
-		[MI(AI)] public static void GetTextureParameter(uint texture,uint pName,ref int parameters) => GLDirect.GetTextureParameteriv(texture,pName,ref parameters);
-		[MI(AI)] public static void CreateVertexArrays(int n,ref uint arrays) => GLDirect.CreateVertexArrays(n,ref arrays);
-		[MI(AI)] public static void DisableVertexArrayAttrib(uint vaobj,uint index) => GLDirect.DisableVertexArrayAttrib(vaobj,index);
-		[MI(AI)] public static void EnableVertexArrayAttrib(uint vaobj,uint index) => GLDirect.EnableVertexArrayAttrib(vaobj,index);
-		[MI(AI)] public static void VertexArrayElementBuffer(uint vaobj,uint buffer) => GLDirect.VertexArrayElementBuffer(vaobj,buffer);
-		[MI(AI)] public static void VertexArrayVertexBuffer(uint vaobj,uint bindingindex,uint buffer,int offset,int stride) => GLDirect.VertexArrayVertexBuffer(vaobj,bindingindex,buffer,offset,stride);
-		[MI(AI)] public static void VertexArrayVertexBuffers(uint vaobj,uint first,int count,ref uint buffers,ref int offsets,ref int strides) => GLDirect.VertexArrayVertexBuffers(vaobj,first,count,ref buffers,ref offsets,ref strides);
-		[MI(AI)] public static void VertexArrayAttribBinding(uint vaobj,uint attribindex,uint bindingindex) => GLDirect.VertexArrayAttribBinding(vaobj,attribindex,bindingindex);
-		[MI(AI)] public static void VertexArrayAttribFormat(uint vaobj,uint attribindex,int size,uint type,byte normalized,uint relativeoffset) => GLDirect.VertexArrayAttribFormat(vaobj,attribindex,size,type,normalized,relativeoffset);
-		[MI(AI)] public static void VertexArrayAttribIFormat(uint vaobj,uint attribindex,int size,uint type,uint relativeoffset) => GLDirect.VertexArrayAttribIFormat(vaobj,attribindex,size,type,relativeoffset);
-		[MI(AI)] public static void VertexArrayAttribLFormat(uint vaobj,uint attribindex,int size,uint type,uint relativeoffset) => GLDirect.VertexArrayAttribLFormat(vaobj,attribindex,size,type,relativeoffset);
-		[MI(AI)] public static void VertexArrayBindingDivisor(uint vaobj,uint bindingindex,uint divisor) => GLDirect.VertexArrayBindingDivisor(vaobj,bindingindex,divisor);
-		[MI(AI)] public static void GetVertexArray(uint vaobj,uint pName,ref int param) => GLDirect.GetVertexArrayiv(vaobj,pName,ref param);
-		[MI(AI)] public static void GetVertexArrayIndexed(uint vaobj,uint index,uint pName,ref int param) => GLDirect.GetVertexArrayIndexediv(vaobj,index,pName,ref param);
-		[MI(AI)] public static void GetVertexArrayIndexed(uint vaobj,uint index,uint pName,ref long param) => GLDirect.GetVertexArrayIndexed64iv(vaobj,index,pName,ref param);
-		[MI(AI)] public static void CreateSamplers(int n,ref uint samplers) => GLDirect.CreateSamplers(n,ref samplers);
-		[MI(AI)] public static void CreateProgramPipelines(int n,ref uint pipelines) => GLDirect.CreateProgramPipelines(n,ref pipelines);
-		[MI(AI)] public static void CreateQueries(uint target,int n,ref uint ids) => GLDirect.CreateQueries(target,n,ref ids);
-		[MI(AI)] public static void GetQueryBufferObjectLong(uint id,uint buffer,uint pName,int offset) => GLDirect.GetQueryBufferObjecti64v(id,buffer,pName,offset);
-		[MI(AI)] public static void GetQueryBufferObjectInt(uint id,uint buffer,uint pName,int offset) => GLDirect.GetQueryBufferObjectiv(id,buffer,pName,offset);
-		[MI(AI)] public static void GetQueryBufferObjectULong(uint id,uint buffer,uint pName,int offset) => GLDirect.GetQueryBufferObjectui64v(id,buffer,pName,offset);
-		[MI(AI)] public static void GetQueryBufferObjectUInt(uint id,uint buffer,uint pName,int offset) => GLDirect.GetQueryBufferObjectuiv(id,buffer,pName,offset);
-		[MI(AI)] public static void MemoryBarrierByRegion(uint barriers) => GLDirect.MemoryBarrierByRegion(barriers);
-		[MI(AI)] public static void GetTextureSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,int bufSize,IntPtr pixels) => GLDirect.GetTextureSubImage(texture,level,xOffset,yOffset,zOffset,width,height,depth,format,type,bufSize,pixels);
-		[MI(AI)] public static void GetCompressedTextureSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,int bufSize,IntPtr pixels) => GLDirect.GetCompressedTextureSubImage(texture,level,xOffset,yOffset,zOffset,width,height,depth,bufSize,pixels);
-		[MI(AI)] public static uint GetGraphicsResetStatus() => GLDirect.GetGraphicsResetStatus();
-		[MI(AI)] public static void GetnCompressedTexImage(uint target,int lod,int bufSize,IntPtr pixels) => GLDirect.GetnCompressedTexImage(target,lod,bufSize,pixels);
-		[MI(AI)] public static void GetnTexImage(uint target,int level,uint format,uint type,int bufSize,IntPtr pixels) => GLDirect.GetnTexImage(target,level,format,type,bufSize,pixels);
-		[MI(AI)] public static void GetnUniform(uint program,int location,int bufSize,ref double parameters) => GLDirect.GetnUniformdv(program,location,bufSize,ref parameters);
-		[MI(AI)] public static void GetnUniform(uint program,int location,int bufSize,ref float parameters) => GLDirect.GetnUniformfv(program,location,bufSize,ref parameters);
-		[MI(AI)] public static void GetnUniform(uint program,int location,int bufSize,ref int parameters) => GLDirect.GetnUniformiv(program,location,bufSize,ref parameters);
-		[MI(AI)] public static void GetnUniform(uint program,int location,int bufSize,ref uint parameters) => GLDirect.GetnUniformuiv(program,location,bufSize,ref parameters);
-		[MI(AI)] public static void ReadnPixels(int x,int y,int width,int height,uint format,uint type,int bufSize,IntPtr data) => GLDirect.ReadnPixels(x,y,width,height,format,type,bufSize,data);
-		[MI(AI)] public static void TextureBarrier() => GLDirect.TextureBarrier();
+		[MethodImport("glClipControl","4.5")]
+		public static void ClipControl(uint origin,uint depth)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateTransformFeedbacks","4.5")]
+		public static void CreateTransformFeedbacks(int n,ref uint ids)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTransformFeedbackBufferBase","4.5")]
+		public static void TransformFeedbackBufferBase(uint xfb,uint index,uint buffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTransformFeedbackBufferRange","4.5")]
+		public static void TransformFeedbackBufferRange(uint xfb,uint index,uint buffer,int offset,int size)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTransformFeedbackiv","4.5")]
+		public static void GetTransformFeedback(uint xfb,uint pName,ref int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTransformFeedbacki_v","4.5")]
+		public static void GetTransformFeedback(uint xfb,uint pName,uint index,ref int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTransformFeedbacki64_v","4.5")]
+		public static void GetTransformFeedback(uint xfb,uint pName,uint index,ref long param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateBuffers","4.5")]
+		public static void CreateBuffers(int n,ref uint buffers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedBufferStorage","4.5")]
+		public static void NamedBufferStorage(uint buffer,int size,IntPtr data,uint flags)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedBufferData","4.5")]
+		public static void NamedBufferData(uint buffer,int size,IntPtr data,uint usage)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedBufferSubData","4.5")]
+		public static void NamedBufferSubData(uint buffer,int offset,int size,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyNamedBufferSubData","4.5")]
+		public static void CopyNamedBufferSubData(uint readBuffer,uint writeBuffer,int readOffset,int writeOffset,int size)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearNamedBufferData","4.5")]
+		public static void ClearNamedBufferData(uint buffer,uint internalFormat,uint format,uint type,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearNamedBufferSubData","4.5")]
+		public static void ClearNamedBufferSubData(uint buffer,uint internalFormat,int offset,int size,uint format,uint type,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMapNamedBuffer","4.5")]
+		public static IntPtr MapNamedBuffer(uint buffer,uint access)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMapNamedBufferRange","4.5")]
+		public static IntPtr MapNamedBufferRange(uint buffer,int offset,int length,uint access)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glUnmapNamedBuffer","4.5")]
+		public static byte UnmapNamedBuffer(uint buffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glFlushMappedNamedBufferRange","4.5")]
+		public static void FlushMappedNamedBufferRange(uint buffer,int offset,int length)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetNamedBufferParameteriv","4.5")]
+		public static void GetNamedBufferParameter(uint buffer,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetNamedBufferParameteri64v","4.5")]
+		public static void GetNamedBufferParameter(uint buffer,uint pName,ref long parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetNamedBufferPointerv","4.5")]
+		public static void GetNamedBufferPointer(uint buffer,uint pName,ref IntPtr parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetNamedBufferSubData","4.5")]
+		public static void GetNamedBufferSubData(uint buffer,int offset,int size,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateFramebuffers","4.5")]
+		public static void CreateFramebuffers(int n,ref uint framebuffers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedFramebufferRenderbuffer","4.5")]
+		public static void NamedFramebufferRenderbuffer(uint framebuffer,uint attachment,uint renderbuffertarget,uint renderbuffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedFramebufferParameteri","4.5")]
+		public static void NamedFramebufferParameter(uint framebuffer,uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedFramebufferTexture","4.5")]
+		public static void NamedFramebufferTexture(uint framebuffer,uint attachment,uint texture,int level)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedFramebufferTextureLayer","4.5")]
+		public static void NamedFramebufferTextureLayer(uint framebuffer,uint attachment,uint texture,int level,int layer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedFramebufferDrawBuffer","4.5")]
+		public static void NamedFramebufferDrawBuffer(uint framebuffer,DrawBufferMode buf)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedFramebufferDrawBuffers","4.5")]
+		public static void NamedFramebufferDrawBuffers(uint framebuffer,int n,DrawBufferMode[] bufs)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedFramebufferReadBuffer","4.5")]
+		public static void NamedFramebufferReadBuffer(uint framebuffer,uint src)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glInvalidateNamedFramebufferData","4.5")]
+		public static void InvalidateNamedFramebufferData(uint framebuffer,int numAttachments,ref uint attachments)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glInvalidateNamedFramebufferSubData","4.5")]
+		public static void InvalidateNamedFramebufferSubData(uint framebuffer,int numAttachments,ref uint attachments,int x,int y,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearNamedFramebufferiv","4.5")]
+		public static void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,ref int value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearNamedFramebufferuiv","4.5")]
+		public static void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,ref uint value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearNamedFramebufferfv","4.5")]
+		public static void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,ref float value)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glClearNamedFramebufferfi","4.5")]
+		public static void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,float depth,int stencil)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBlitNamedFramebuffer","4.5")]
+		public static void BlitNamedFramebuffer(uint readFramebuffer,uint drawFramebuffer,int srcX0,int srcY0,int srcX1,int srcY1,int dstX0,int dstY0,int dstX1,int dstY1,uint mask,uint filter)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCheckNamedFramebufferStatus","4.5")]
+		public static uint CheckNamedFramebufferStatus(uint framebuffer,FramebufferTarget target)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetNamedFramebufferParameteriv","4.5")]
+		public static void GetNamedFramebufferParameter(uint framebuffer,uint pName,ref int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetNamedFramebufferAttachmentParameteriv","4.5")]
+		public static void GetNamedFramebufferAttachmentParameter(uint framebuffer,uint attachment,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateRenderbuffers","4.5")]
+		public static void CreateRenderbuffers(int n,ref uint renderbuffers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedRenderbufferStorage","4.5")]
+		public static void NamedRenderbufferStorage(uint renderbuffer,uint internalFormat,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glNamedRenderbufferStorageMultisample","4.5")]
+		public static void NamedRenderbufferStorageMultisample(uint renderbuffer,int samples,uint internalFormat,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetNamedRenderbufferParameteriv","4.5")]
+		public static void GetNamedRenderbufferParameter(uint renderbuffer,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateTextures","4.5")]
+		public static void CreateTextures(uint target,int n,ref uint textures)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureBuffer","4.5")]
+		public static void TextureBuffer(uint texture,uint internalFormat,uint buffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureBufferRange","4.5")]
+		public static void TextureBufferRange(uint texture,uint internalFormat,uint buffer,int offset,int size)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureStorage1D","4.5")]
+		public static void TextureStorage1D(uint texture,int levels,uint internalFormat,int width)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureStorage2D","4.5")]
+		public static void TextureStorage2D(uint texture,int levels,uint internalFormat,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureStorage3D","4.5")]
+		public static void TextureStorage3D(uint texture,int levels,uint internalFormat,int width,int height,int depth)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureStorage2DMultisample","4.5")]
+		public static void TextureStorage2DMultisample(uint texture,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureStorage3DMultisample","4.5")]
+		public static void TextureStorage3DMultisample(uint texture,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureSubImage1D","4.5")]
+		public static void TextureSubImage1D(uint texture,int level,int xOffset,int width,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureSubImage2D","4.5")]
+		public static void TextureSubImage2D(uint texture,int level,int xOffset,int yOffset,int width,int height,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureSubImage3D","4.5")]
+		public static void TextureSubImage3D(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCompressedTextureSubImage1D","4.5")]
+		public static void CompressedTextureSubImage1D(uint texture,int level,int xOffset,int width,uint format,int imageSize,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCompressedTextureSubImage2D","4.5")]
+		public static void CompressedTextureSubImage2D(uint texture,int level,int xOffset,int yOffset,int width,int height,uint format,int imageSize,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCompressedTextureSubImage3D","4.5")]
+		public static void CompressedTextureSubImage3D(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,int imageSize,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyTextureSubImage1D","4.5")]
+		public static void CopyTextureSubImage1D(uint texture,int level,int xOffset,int x,int y,int width)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyTextureSubImage2D","4.5")]
+		public static void CopyTextureSubImage2D(uint texture,int level,int xOffset,int yOffset,int x,int y,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCopyTextureSubImage3D","4.5")]
+		public static void CopyTextureSubImage3D(uint texture,int level,int xOffset,int yOffset,int zOffset,int x,int y,int width,int height)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureParameterf","4.5")]
+		public static void TextureParameter(uint texture,uint pName,float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureParameterfv","4.5")]
+		public static void TextureParameter(uint texture,uint pName,ref float param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureParameteri","4.5")]
+		public static void TextureParameter(uint texture,uint pName,int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureParameterIiv","4.5")]
+		public static void TextureParameterI(uint texture,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureParameterIuiv","4.5")]
+		public static void TextureParameterI(uint texture,uint pName,ref uint parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureParameteriv","4.5")]
+		public static void TextureParameter(uint texture,uint pName,ref int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGenerateTextureMipmap","4.5")]
+		public static void GenerateTextureMipmap(uint texture)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glBindTextureUnit","4.5")]
+		public static void BindTextureUnit(uint unit,uint texture)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTextureImage","4.5")]
+		public static void GetTextureImage(uint texture,int level,uint format,uint type,int bufSize,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetCompressedTextureImage","4.5")]
+		public static void GetCompressedTextureImage(uint texture,int level,int bufSize,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTextureLevelParameterfv","4.5")]
+		public static void GetTextureLevelParameter(uint texture,int level,uint pName,ref float parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTextureLevelParameteriv","4.5")]
+		public static void GetTextureLevelParameter(uint texture,int level,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTextureParameterfv","4.5")]
+		public static void GetTextureParameter(uint texture,uint pName,ref float parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTextureParameterIiv","4.5")]
+		public static void GetTextureParameterI(uint texture,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTextureParameterIuiv","4.5")]
+		public static void GetTextureParameterI(uint texture,uint pName,ref uint parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTextureParameteriv","4.5")]
+		public static void GetTextureParameter(uint texture,uint pName,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateVertexArrays","4.5")]
+		public static void CreateVertexArrays(int n,ref uint arrays)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glDisableVertexArrayAttrib","4.5")]
+		public static void DisableVertexArrayAttrib(uint vaobj,uint index)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glEnableVertexArrayAttrib","4.5")]
+		public static void EnableVertexArrayAttrib(uint vaobj,uint index)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexArrayElementBuffer","4.5")]
+		public static void VertexArrayElementBuffer(uint vaobj,uint buffer)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexArrayVertexBuffer","4.5")]
+		public static void VertexArrayVertexBuffer(uint vaobj,uint bindingindex,uint buffer,int offset,int stride)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexArrayVertexBuffers","4.5")]
+		public static void VertexArrayVertexBuffers(uint vaobj,uint first,int count,ref uint buffers,ref int offsets,ref int strides)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexArrayAttribBinding","4.5")]
+		public static void VertexArrayAttribBinding(uint vaobj,uint attribindex,uint bindingindex)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexArrayAttribFormat","4.5")]
+		public static void VertexArrayAttribFormat(uint vaobj,uint attribindex,int size,uint type,byte normalized,uint relativeoffset)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexArrayAttribIFormat","4.5")]
+		public static void VertexArrayAttribIFormat(uint vaobj,uint attribindex,int size,uint type,uint relativeoffset)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexArrayAttribLFormat","4.5")]
+		public static void VertexArrayAttribLFormat(uint vaobj,uint attribindex,int size,uint type,uint relativeoffset)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glVertexArrayBindingDivisor","4.5")]
+		public static void VertexArrayBindingDivisor(uint vaobj,uint bindingindex,uint divisor)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetVertexArrayiv","4.5")]
+		public static void GetVertexArray(uint vaobj,uint pName,ref int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetVertexArrayIndexediv","4.5")]
+		public static void GetVertexArrayIndexed(uint vaobj,uint index,uint pName,ref int param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetVertexArrayIndexed64iv","4.5")]
+		public static void GetVertexArrayIndexed(uint vaobj,uint index,uint pName,ref long param)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateSamplers","4.5")]
+		public static void CreateSamplers(int n,ref uint samplers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateProgramPipelines","4.5")]
+		public static void CreateProgramPipelines(int n,ref uint pipelines)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glCreateQueries","4.5")]
+		public static void CreateQueries(uint target,int n,ref uint ids)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetQueryBufferObjecti64v","4.5")]
+		public static void GetQueryBufferObjectLong(uint id,uint buffer,uint pName,int offset)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetQueryBufferObjectiv","4.5")]
+		public static void GetQueryBufferObjectInt(uint id,uint buffer,uint pName,int offset)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetQueryBufferObjectui64v","4.5")]
+		public static void GetQueryBufferObjectULong(uint id,uint buffer,uint pName,int offset)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetQueryBufferObjectuiv","4.5")]
+		public static void GetQueryBufferObjectUInt(uint id,uint buffer,uint pName,int offset)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glMemoryBarrierByRegion","4.5")]
+		public static void MemoryBarrierByRegion(uint barriers)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetTextureSubImage","4.5")]
+		public static void GetTextureSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,int bufSize,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetCompressedTextureSubImage","4.5")]
+		public static void GetCompressedTextureSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,int bufSize,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetGraphicsResetStatus","4.5")]
+		public static uint GetGraphicsResetStatus()
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetnCompressedTexImage","4.5")]
+		public static void GetnCompressedTexImage(uint target,int lod,int bufSize,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetnTexImage","4.5")]
+		public static void GetnTexImage(uint target,int level,uint format,uint type,int bufSize,IntPtr pixels)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetnUniformdv","4.5")]
+		public static void GetnUniform(uint program,int location,int bufSize,ref double parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetnUniformfv","4.5")]
+		public static void GetnUniform(uint program,int location,int bufSize,ref float parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetnUniformiv","4.5")]
+		public static void GetnUniform(uint program,int location,int bufSize,ref int parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glGetnUniformuiv","4.5")]
+		public static void GetnUniform(uint program,int location,int bufSize,ref uint parameters)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glReadnPixels","4.5")]
+		public static void ReadnPixels(int x,int y,int width,int height,uint format,uint type,int bufSize,IntPtr data)
+			=> throw new NotImplementedException();
+		
+		[MethodImport("glTextureBarrier","4.5")]
+		public static void TextureBarrier()
+			=> throw new NotImplementedException();
 
 		#endregion
 	}

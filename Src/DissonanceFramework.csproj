@@ -15,6 +15,10 @@
 	<DefineConstants>TRACE;UNSAFE</DefineConstants>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
   <ItemGroup>
 	<Compile Remove="Build\**" />
 	<Compile Remove="References\**" />

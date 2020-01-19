@@ -1,6 +1,6 @@
 ﻿namespace Dissonance.Framework.GLFW3
 {
-	public static partial class GLFW
+	partial class GLFW
 	{
 		public const int VERSION_MAJOR = 3;
 		public const int VERSION_MINOR = 2;

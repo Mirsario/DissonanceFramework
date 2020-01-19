@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Dissonance.Framework.OpenGL
+﻿namespace Dissonance.Framework.OpenGL
 {
 	/// <summary> OpenGL errors, returned by GL.GetError. </summary>
 	public enum GraphicsError

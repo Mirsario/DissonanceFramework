@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Text;
 using Dissonance.Framework.OpenAL;
 using Dissonance.Utils;
+using MonoMod.RuntimeDetour;
 
 #pragma warning disable IDE1006 //Naming rule violation
 
@@ -12,36 +14,13 @@ namespace Dissonance.Framework
 	{
 		private const int RTLD_NOW = 2;
 
-		private static readonly Type DelegateType = typeof(MulticastDelegate);
-
-		private static bool linuxSet;
-		private static bool linux;
-
-		public static bool Linux {
-			get {
-				if(!linuxSet) {
-					int p = (int)Environment.OSVersion.Platform;
-
-					linux = p==4 || p==6 || p==128;
-					linuxSet = true;
-				}
-
-				return linux;
-			}
-		}
+		private static Assembly monoModRuntimeDetourAssembly;
+		private static Assembly monoModUtilsAssembly;
 
 		static DllManager()
 		{
-			//public delegate IntPtr DllImportResolver(string libraryName,Assembly assembly,DllImportSearchPath? searchPath);
-
 			NativeLibrary.SetDllImportResolver(typeof(DllManager).Assembly,(name,assembly,path) => {
 				string lib = name switch {
-					/*GLNew.Library => InternalUtils.GetOS() switch {
-						OS.Windows => GLNew.LibraryWindows,
-						OS.Linux => GLNew.LibraryLinux,
-						OS.OSX => GLNew.LibraryMac,
-						_ => null,
-					},*/
 					AL.Library => InternalUtils.GetOS() switch {
 						OS.Windows => AL.LibraryWindows,
 						OS.Linux => AL.LibraryLinux,
@@ -55,21 +34,49 @@ namespace Dissonance.Framework
 			});
 
 			AppDomain.CurrentDomain.AssemblyResolve += (obj,args) => {
-				Console.WriteLine($"{nameof(args.Name)}: {args.Name}");
-				Console.WriteLine($"e");
+				if(args.Name.StartsWith("MonoMod.RuntimeDetour")) {
+					return monoModRuntimeDetourAssembly ?? (monoModRuntimeDetourAssembly = Assembly.Load(Properties.Resources.MonoMod_RuntimeDetour));
+				}
+
+				if(args.Name.StartsWith("MonoMod.Utils")) {
+					return monoModUtilsAssembly ?? (monoModUtilsAssembly = Assembly.Load(Properties.Resources.MonoMod_Utils));
+				}
 
 				return null;
 			};
 		}
 
+		public static void ImportTypeMethods(Type type,Func<string,IntPtr> functionToPointer)
+		{
+			foreach(MethodInfo method in type.GetMethods(BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Static)) {
+				var attribute = method.GetCustomAttribute<MethodImportAttribute>();
+
+				if(attribute==null) {
+					continue;
+				}
+
+				var encodingSrc = Encoding.UTF8;
+				var encodingDst = Encoding.ASCII;
+
+				string functionName = encodingDst.GetString(Encoding.Convert(encodingSrc,encodingDst,encodingSrc.GetBytes(attribute.Function)));
+
+				IntPtr ptr = functionToPointer(functionName);
+
+				if(ptr!=IntPtr.Zero) {
+					new NativeDetour(method,ptr,new NativeDetourConfig() { SkipILCopy = true });
+				} else {
+					Console.WriteLine($"Unable to find function '{attribute.Function}'.");
+				}
+			}
+		}
 		public static IntPtr DllLoad(string fileName)
 		{
 			IntPtr mHnd;
 
-			if(Linux) {
-				mHnd = dlopen(fileName,RTLD_NOW);
-			} else {
+			if(InternalUtils.IsOS(OS.Windows)) {
 				mHnd = LoadLibrary(fileName);
+			} else {
+				mHnd = dlopen(fileName,RTLD_NOW);
 			}
 
 			if(mHnd!=IntPtr.Zero) {
@@ -84,10 +91,10 @@ namespace Dissonance.Framework
 		{
 			IntPtr symPtr;
 
-			if(Linux) {
-				symPtr = dlsym(mHnd,symbol);
-			} else {
+			if(InternalUtils.IsOS(OS.Windows)) {
 				symPtr = GetProcAddress(mHnd,symbol);
+			} else {
+				symPtr = dlsym(mHnd,symbol);
 			}
 
 			return symPtr;
@@ -96,28 +103,12 @@ namespace Dissonance.Framework
 		{
 			return Marshal.GetDelegateForFunctionPointer(DllSymbol(mHnd,symbol),delegateType);
 		}
-		public static void DllLinkAllDelegates(Type ofType,IntPtr mHnd,string prefix = null)
+		public static void MemoryCopy(IntPtr dest,IntPtr source,uint count)
 		{
-			FieldInfo[] fields = ofType.GetFields(BindingFlags.Public|BindingFlags.Static);
-
-			foreach(FieldInfo fi in fields) {
-				if(fi.FieldType.BaseType!=DelegateType) {
-					continue;
-				}
-
-				IntPtr ptr = DllSymbol(mHnd,prefix+fi.Name);
-
-				if(ptr!=IntPtr.Zero) {
-					fi.SetValue(null,Marshal.GetDelegateForFunctionPointer(ptr,fi.FieldType));
-				}
-			}
-		}
-		public static void Memcpy(IntPtr dest,IntPtr source,uint count)
-		{
-			if(Linux) {
-				memcpy(dest,source,count);
-			} else {
+			if(InternalUtils.IsOS(OS.Windows)) {
 				CopyMemory(dest,source,count);
+			} else {
+				memcpy(dest,source,count);
 			}
 		}
 

@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace Dissonance.Framework.GLFW3
 {
-	public static partial class GLFW
+	partial class GLFW
 	{
 		[StructLayout(LayoutKind.Sequential)]
 		public struct VideoMode

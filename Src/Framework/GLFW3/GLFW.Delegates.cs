@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using UFP = System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute;
 using CC = System.Runtime.InteropServices.CallingConvention;
+using System.Runtime.InteropServices;
 
 namespace Dissonance.Framework.GLFW3
 {
-	public static partial class GLFW
+	partial class GLFW
 	{
 		[UFP(CC.Cdecl)] public delegate void vk();
 		[UFP(CC.Cdecl)] public delegate void errorfun(int code,[In] [MarshalAs(UnmanagedType.LPStr)] string description);
@@ -26,98 +26,5 @@ namespace Dissonance.Framework.GLFW3
 		[UFP(CC.Cdecl)] public delegate void dropfun(IntPtr window,int count,[Out] string[] paths);
 		[UFP(CC.Cdecl)] public delegate void monitorfun(IntPtr window,int ev);
 		[UFP(CC.Cdecl)] public delegate void joystickfun(int window,int ev);
-
-		[UFP(CC.Cdecl)] public delegate int LFWINIT();
-		[UFP(CC.Cdecl)] public delegate void LFWTERMINATE();
-		[UFP(CC.Cdecl)] public delegate void LFWGETVERSION(ref int major,ref int minor,ref int rev);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETVERSIONSTRING();
-		[UFP(CC.Cdecl)] public delegate errorfun LFWSETERRORCALLBACK(errorfun cbfun);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETMONITORS(ref int count);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETPRIMARYMONITOR();
-		[UFP(CC.Cdecl)] public delegate void LFWGETMONITORPOS(IntPtr monitor,ref int xpos,ref int ypos);
-		[UFP(CC.Cdecl)] public delegate void LFWGETMONITORPHYSICALSIZE(IntPtr monitor,ref int widthMM,ref int heightMM);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETMONITORNAME(IntPtr monitor);
-		[UFP(CC.Cdecl)] public delegate monitorfun LFWSETMONITORCALLBACK(monitorfun cbfun);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETVIDEOMODES(IntPtr monitor,ref int count);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETVIDEOMODE(IntPtr monitor);
-		[UFP(CC.Cdecl)] public delegate void LFWSETGAMMA(IntPtr monitor,float gamma);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETGAMMARAMP(IntPtr monitor);
-		[UFP(CC.Cdecl)] public delegate void LFWSETGAMMARAMP(IntPtr monitor,ref GammaRamp ramp);
-		[UFP(CC.Cdecl)] public delegate void LFWDEFAULTWINDOWHINTS();
-		[UFP(CC.Cdecl)] public delegate void LFWWINDOWHINT(int hint,int value);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWCREATEWINDOW(int width,int height,[In] [MarshalAs(UnmanagedType.LPStr)] string title,IntPtr monitor,IntPtr share);
-		[UFP(CC.Cdecl)] public delegate void LFWDESTROYWINDOW(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate int LFWWINDOWSHOULDCLOSE(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate void LFWSETWINDOWSHOULDCLOSE(IntPtr window,int value);
-		[UFP(CC.Cdecl)] public delegate void LFWSETWINDOWTITLE(IntPtr window,[In] [MarshalAs(UnmanagedType.LPStr)] string title);
-		[UFP(CC.Cdecl)] public delegate void LFWSETWINDOWICON(IntPtr window,int count,ref Image images);
-		[UFP(CC.Cdecl)] public delegate void LFWGETWINDOWPOS(IntPtr window,ref int xpos,ref int ypos);
-		[UFP(CC.Cdecl)] public delegate void LFWSETWINDOWPOS(IntPtr window,int xpos,int ypos);
-		[UFP(CC.Cdecl)] public delegate void LFWGETWINDOWSIZE(IntPtr window,ref int width,ref int height);
-		[UFP(CC.Cdecl)] public delegate void LFWSETWINDOWSIZELIMITS(IntPtr window,int minwidth,int minheight,int maxwidth,int maxheight);
-		[UFP(CC.Cdecl)] public delegate void LFWSETWINDOWASPECTRATIO(IntPtr window,int numer,int denom);
-		[UFP(CC.Cdecl)] public delegate void LFWSETWINDOWSIZE(IntPtr window,int width,int height);
-		[UFP(CC.Cdecl)] public delegate void LFWGETFRAMEBUFFERSIZE(IntPtr window,ref int width,ref int height);
-		[UFP(CC.Cdecl)] public delegate void LFWGETWINDOWFRAMESIZE(IntPtr window,ref int left,ref int top,ref int right,ref int bottom);
-		[UFP(CC.Cdecl)] public delegate void LFWICONIFYWINDOW(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate void LFWRESTOREWINDOW(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate void LFWMAXIMIZEWINDOW(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate void LFWSHOWWINDOW(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate void LFWHIDEWINDOW(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate void LFWFOCUSWINDOW(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETWINDOWMONITOR(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate void LFWSETWINDOWMONITOR(IntPtr window,IntPtr monitor,int xpos,int ypos,int width,int height,int refreshRate);
-		[UFP(CC.Cdecl)] public delegate int LFWGETWINDOWATTRIB(IntPtr window,int attrib);
-		[UFP(CC.Cdecl)] public delegate void LFWSETWINDOWUSERPOINTER(IntPtr window,IntPtr pointer);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETWINDOWUSERPOINTER(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate windowposfun LFWSETWINDOWPOSCALLBACK(IntPtr window,windowposfun cbfun);
-		[UFP(CC.Cdecl)] public delegate windowsizefun LFWSETWINDOWSIZECALLBACK(IntPtr window,windowsizefun cbfun);
-		[UFP(CC.Cdecl)] public delegate windowclosefun LFWSETWINDOWCLOSECALLBACK(IntPtr window,windowclosefun cbfun);
-		[UFP(CC.Cdecl)] public delegate windowrefreshfun LFWSETWINDOWREFRESHCALLBACK(IntPtr window,windowrefreshfun cbfun);
-		[UFP(CC.Cdecl)] public delegate windowfocusfun LFWSETWINDOWFOCUSCALLBACK(IntPtr window,windowfocusfun cbfun);
-		[UFP(CC.Cdecl)] public delegate windowiconifyfun LFWSETWINDOWICONIFYCALLBACK(IntPtr window,windowiconifyfun cbfun);
-		[UFP(CC.Cdecl)] public delegate framebuffersizefun LFWSETFRAMEBUFFERSIZECALLBACK(IntPtr window,framebuffersizefun cbfun);
-		[UFP(CC.Cdecl)] public delegate void LFWPOLLEVENTS();
-		[UFP(CC.Cdecl)] public delegate void LFWWAITEVENTS();
-		[UFP(CC.Cdecl)] public delegate void LFWWAITEVENTSTIMEOUT(double timeout);
-		[UFP(CC.Cdecl)] public delegate void LFWPOSTEMPTYEVENT();
-		[UFP(CC.Cdecl)] public delegate int LFWGETINPUTMODE(IntPtr window,int mode);
-		[UFP(CC.Cdecl)] public delegate void LFWSETINPUTMODE(IntPtr window,int mode,int value);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETKEYNAME(int key,int scancode);
-		[UFP(CC.Cdecl)] public delegate int LFWGETKEY(IntPtr window,int key);
-		[UFP(CC.Cdecl)] public delegate int LFWGETMOUSEBUTTON(IntPtr window,int button);
-		[UFP(CC.Cdecl)] public delegate void LFWGETCURSORPOS(IntPtr window,ref double xpos,ref double ypos);
-		[UFP(CC.Cdecl)] public delegate void LFWSETCURSORPOS(IntPtr window,double xpos,double ypos);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWCREATECURSOR(ref Image image,int xhot,int yhot);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWCREATESTANDARDCURSOR(int shape);
-		[UFP(CC.Cdecl)] public delegate void LFWDESTROYCURSOR(IntPtr cursor);
-		[UFP(CC.Cdecl)] public delegate void LFWSETCURSOR(IntPtr window,IntPtr cursor);
-		[UFP(CC.Cdecl)] public delegate keyfun LFWSETKEYCALLBACK(IntPtr window,keyfun cbfun);
-		[UFP(CC.Cdecl)] public delegate charfun LFWSETCHARCALLBACK(IntPtr window,charfun cbfun);
-		[UFP(CC.Cdecl)] public delegate charmodsfun LFWSETCHARMODSCALLBACK(IntPtr window,charmodsfun cbfun);
-		[UFP(CC.Cdecl)] public delegate mousebuttonfun LFWSETMOUSEBUTTONCALLBACK(IntPtr window,mousebuttonfun cbfun);
-		[UFP(CC.Cdecl)] public delegate cursorposfun LFWSETCURSORPOSCALLBACK(IntPtr window,cursorposfun cbfun);
-		[UFP(CC.Cdecl)] public delegate cursorenterfun LFWSETCURSORENTERCALLBACK(IntPtr window,cursorenterfun cbfun);
-		[UFP(CC.Cdecl)] public delegate scrollfun LFWSETSCROLLCALLBACK(IntPtr window,scrollfun cbfun);
-		[UFP(CC.Cdecl)] public delegate dropfun LFWSETDROPCALLBACK(IntPtr window,dropfun cbfun);
-		[UFP(CC.Cdecl)] public delegate int LFWJOYSTICKPRESENT(int joy);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETJOYSTICKAXES(int joy,ref int count);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETJOYSTICKBUTTONS(int joy,ref int count);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETJOYSTICKNAME(int joy);
-		[UFP(CC.Cdecl)] public delegate joystickfun LFWSETJOYSTICKCALLBACK(joystickfun cbfun);
-		[UFP(CC.Cdecl)] public delegate void LFWSETCLIPBOARDSTRING(IntPtr window,[In] [MarshalAs(UnmanagedType.LPStr)] string @string);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETCLIPBOARDSTRING(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate double LFWGETTIME();
-		[UFP(CC.Cdecl)] public delegate void LFWSETTIME(double time);
-		[UFP(CC.Cdecl)] public delegate uint LFWGETTIMERVALUE();
-		[UFP(CC.Cdecl)] public delegate uint LFWGETTIMERFREQUENCY();
-		[UFP(CC.Cdecl)] public delegate void LFWMAKECONTEXTCURRENT(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETCURRENTCONTEXT();
-		[UFP(CC.Cdecl)] public delegate void LFWSWAPBUFFERS(IntPtr window);
-		[UFP(CC.Cdecl)] public delegate void LFWSWAPINTERVAL(int interval);
-		[UFP(CC.Cdecl)] public delegate int LFWEXTENSIONSUPPORTED([In] [MarshalAs(UnmanagedType.LPStr)] string extension);
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETADDRESS([In] [MarshalAs(UnmanagedType.LPStr)] string name);
-		[UFP(CC.Cdecl)] public delegate int LFWVULKANSUPPORTED();
-		[UFP(CC.Cdecl)] public delegate IntPtr LFWGETREQUIREDINSTANCEEXTENSIONS(ref uint count);
 	}
 }

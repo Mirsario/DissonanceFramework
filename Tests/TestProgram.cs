@@ -17,19 +17,14 @@ namespace Test
 			PrepareOpenGL();
 			PrepareOpenAL();
 
-			var random = new Random();
-
-			double time = 0d;
 			double timePrev = 0d;
 
 			while(GLFW.WindowShouldClose(window)==0) {
 				int width = 0;
 				int height = 0;
 
-				time = GLFW.GetTime();
-
+				double time = GLFW.GetTime();
 				double deltaTime = time-timePrev;
-
 				timePrev = time;
 
 				GLFW.GetFramebufferSize(window,ref width,ref height);
