@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using Dissonance.Framework.OpenAL;
@@ -58,12 +59,12 @@ namespace Dissonance.Framework
 				var encodingSrc = Encoding.UTF8;
 				var encodingDst = Encoding.ASCII;
 
-				string functionName = encodingDst.GetString(Encoding.Convert(encodingSrc,encodingDst,encodingSrc.GetBytes(attribute.Function)));
+				string functionName = attribute.Function; //encodingDst.GetString(Encoding.Convert(encodingSrc,encodingDst,encodingSrc.GetBytes(attribute.Function)));
 
 				IntPtr ptr = functionToPointer(functionName);
 
 				if(ptr!=IntPtr.Zero) {
-					new NativeDetour(method,ptr,new NativeDetourConfig() { SkipILCopy = true });
+					CreatePermanentDetour(method,ptr);
 				} else {
 					Console.WriteLine($"Unable to find function '{attribute.Function}'.");
 				}
@@ -110,6 +111,12 @@ namespace Dissonance.Framework
 			} else {
 				memcpy(dest,source,count);
 			}
+		}
+
+		[MethodImpl(MethodImplOptions.NoInlining|MethodImplOptions.NoOptimization)]
+		private static void CreatePermanentDetour(MethodInfo from,IntPtr to)
+		{
+			new NativeDetour(from,to,new NativeDetourConfig() { SkipILCopy = true });
 		}
 
 		[DllImport("kernel32.dll")] private static extern IntPtr LoadLibrary(string filename);

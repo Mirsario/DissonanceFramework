@@ -3,6 +3,7 @@ using System.IO;
 using Dissonance.Framework.GLFW3;
 using Dissonance.Framework.OpenGL;
 using Dissonance.Framework.OpenAL;
+using System.Runtime.InteropServices;
 //using GL = Dissonance.Framework.OpenGL.GLNew;
 
 namespace Test
@@ -14,7 +15,6 @@ namespace Test
 		static void Main()
 		{
 			PrepareGLFW();
-			PrepareOpenGL();
 			PrepareOpenAL();
 
 			double timePrev = 0d;
@@ -79,15 +79,45 @@ namespace Test
 
 		private static void PrepareGLFW()
 		{
-			GLFW.Load();
-			GLFW.Init();
+			//GLFW.Load();
+
+			try {
+				Console.WriteLine("Trying to set error callbacks...");
+
+				unsafe {
+					GLFW.SetErrorCallback(Marshal.GetFunctionPointerForDelegate<GLFW.ErrorFunc>((int code,IntPtr description) => Console.WriteLine($"GLFW Error {code}")));
+				}
+
+				Console.WriteLine("Error callbacks set.");
+			}
+			catch(Exception e) {
+				Console.WriteLine($"Exception {e.GetType().Name} thrown: {e.Message}");
+			}
+
+			if(GLFW.Init()==0) {
+				throw new Exception("Unable to initialize GLFW");
+			}
+
+
+			Console.WriteLine("1...");
 
 			GLFW.WindowHint(GLFW.CONTEXT_VERSION_MAJOR,3); //Targeted major version
+
+			Console.WriteLine("2...");
+
 			GLFW.WindowHint(GLFW.CONTEXT_VERSION_MINOR,0); //Targeted minor version
+
+			PrepareOpenGL();
+
+			Console.WriteLine("3...");
 
 			window = GLFW.CreateWindow(640,480,"Unnamed Window",IntPtr.Zero,IntPtr.Zero);
 
+			Console.WriteLine("4...");
+
 			GLFW.MakeContextCurrent(window);
+
+			Console.WriteLine("5...");
 		}
 		private static void PrepareOpenGL()
 		{

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
-using MI = System.Runtime.CompilerServices.MethodImplAttribute;
 
 #pragma warning disable IDE0060 //Unused parameter.
 
@@ -13,1367 +12,1353 @@ namespace Dissonance.Framework.OpenGL
 
 		#region OpenGL 1.0 + OpenGL 1.1
 
-		[MethodImport("glAccum","4.5")]
+		[MethodImport("glAccum","1.0")]
 		public static void Accum(uint op,float value)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glAlphaFunc","4.5")]
+		[MethodImport("glAlphaFunc","1.0")]
 		public static void AlphaFunc(uint func,float alpha)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glAreTexturesResident","4.5")]
+		[MethodImport("glAreTexturesResident","1.0")]
 		public static byte AreTexturesResident(int n,uint[] textures,IntPtr residences)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glArrayElement","4.5")]
+		[MethodImport("glArrayElement","1.0")]
 		public static void ArrayElement(int i)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glBegin","4.5")]
+		[MethodImport("glBegin","1.0")]
 		public static void Begin(PrimitiveType mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glBindTexture","4.5")]
-		public static void BindTexture(uint target,uint texture)
+		[MethodImport("glBindTexture","1.0")]
+		public static void BindTexture(TextureTarget target,uint texture)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glBitmap","4.5")]
+		[MethodImport("glBitmap","1.0")]
 		public static void Bitmap(int width,int height,float xOrig,float yOrig,float xMove,float yMove,[In] [MarshalAs(UnmanagedType.LPStr)] string bitmap)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glBlendFunc","4.5")]
+		[MethodImport("glBlendFunc","1.0")]
 		public static void BlendFunc(BlendingFactor sfactor,BlendingFactor dfactor)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glCallList","4.5")]
+		[MethodImport("glCallList","1.0")]
 		public static void CallList(uint list)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glCallLists","4.5")]
+		[MethodImport("glCallLists","1.0")]
 		public static void CallLists(int n,uint type,IntPtr lists)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glClear","4.5")]
+		[MethodImport("glClear","1.0")]
 		public static void Clear(ClearBufferMask mask)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glClearAccum","4.5")]
+		[MethodImport("glClearAccum","1.0")]
 		public static void ClearAccum(float red,float green,float blue,float alpha = 1f)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glClearAccum","4.5")]
+		[MethodImport("glClearAccum","1.0")]
 		public static void ClearAccum(int red,int green,int blue,int alpha = 255)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glClearAccum","4.5")]
+		[MethodImport("glClearAccum","1.0")]
 		public static void ClearAccum(byte red,byte green,byte blue,byte alpha = 255)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glClearColor","4.5")]
+		[MethodImport("glClearColor","1.0")]
 		public static void ClearColor(float red,float green,float blue,float alpha = 1f)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glClearColor","4.5")]
+		[MethodImport("glClearColor","1.0")]
 		public static void ClearColor(int red,int green,int blue,int alpha = 255)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glClearColor","4.5")]
+		[MethodImport("glClearColor","1.0")]
 		public static void ClearColor(byte red,byte green,byte blue,byte alpha = 255)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glClearDepth","4.5")]
+		[MethodImport("glClearDepth","1.0")]
 		public static void ClearDepth(double depth)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glClearIndex","4.5")]
+		[MethodImport("glClearIndex","1.0")]
 		public static void ClearIndex(float c)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glClearStencil","4.5")]
+		[MethodImport("glClearStencil","1.0")]
 		public static void ClearStencil(int s)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glClipPlane","4.5")]
+		[MethodImport("glClipPlane","1.0")]
 		public static void ClipPlane(uint plane,double[] equation)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3b","4.5")]
+		[MethodImport("glColor3b","1.0")]
 		public static void Color3(sbyte red,sbyte green,sbyte blue)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3bv","4.5")]
+		[MethodImport("glColor3bv","1.0")]
 		public static void Color3(sbyte[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3d","4.5")]
+		[MethodImport("glColor3d","1.0")]
 		public static void Color3(double red,double green,double blue)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3dv","4.5")]
+		[MethodImport("glColor3dv","1.0")]
 		public static void Color3(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3f","4.5")]
+		[MethodImport("glColor3f","1.0")]
 		public static void Color3(float red,float green,float blue)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3fv","4.5")]
+		[MethodImport("glColor3fv","1.0")]
 		public static void Color3(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3i","4.5")]
+		[MethodImport("glColor3i","1.0")]
 		public static void Color3(int red,int green,int blue)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3iv","4.5")]
+		[MethodImport("glColor3iv","1.0")]
 		public static void Color3(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3s","4.5")]
+		[MethodImport("glColor3s","1.0")]
 		public static void Color3(short red,short green,short blue)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3sv","4.5")]
+		[MethodImport("glColor3sv","1.0")]
 		public static void Color3(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3ub","4.5")]
+		[MethodImport("glColor3ub","1.0")]
 		public static void Color3(byte red,byte green,byte blue)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3ubv","4.5")]
+		[MethodImport("glColor3ubv","1.0")]
 		public static void Color3(byte[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3ui","4.5")]
+		[MethodImport("glColor3ui","1.0")]
 		public static void Color3(uint red,uint green,uint blue)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3uiv","4.5")]
+		[MethodImport("glColor3uiv","1.0")]
 		public static void Color3(uint[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3us","4.5")]
+		[MethodImport("glColor3us","1.0")]
 		public static void Color3(ushort red,ushort green,ushort blue)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor3usv","4.5")]
+		[MethodImport("glColor3usv","1.0")]
 		public static void Color3(ushort[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4b","4.5")]
+		[MethodImport("glColor4b","1.0")]
 		public static void Color4(sbyte red,sbyte green,sbyte blue,sbyte alpha)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4bv","4.5")]
+		[MethodImport("glColor4bv","1.0")]
 		public static void Color4(sbyte[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4d","4.5")]
+		[MethodImport("glColor4d","1.0")]
 		public static void Color4(double red,double green,double blue,double alpha)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4dv","4.5")]
+		[MethodImport("glColor4dv","1.0")]
 		public static void Color4(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4f","4.5")]
+		[MethodImport("glColor4f","1.0")]
 		public static void Color4(float red,float green,float blue,float alpha)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4fv","4.5")]
+		[MethodImport("glColor4fv","1.0")]
 		public static void Color4(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4i","4.5")]
+		[MethodImport("glColor4i","1.0")]
 		public static void Color4(int red,int green,int blue,int alpha)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4iv","4.5")]
+		[MethodImport("glColor4iv","1.0")]
 		public static void Color4(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4s","4.5")]
+		[MethodImport("glColor4s","1.0")]
 		public static void Color4(short red,short green,short blue,short alpha)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4sv","4.5")]
+		[MethodImport("glColor4sv","1.0")]
 		public static void Color4(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4ub","4.5")]
+		[MethodImport("glColor4ub","1.0")]
 		public static void Color4(byte red,byte green,byte blue,byte alpha)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4ubv","4.5")]
+		[MethodImport("glColor4ubv","1.0")]
 		public static void Color4(byte[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4ui","4.5")]
+		[MethodImport("glColor4ui","1.0")]
 		public static void Color4(uint red,uint green,uint blue,uint alpha)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4uiv","4.5")]
+		[MethodImport("glColor4uiv","1.0")]
 		public static void Color4(uint[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4us","4.5")]
+		[MethodImport("glColor4us","1.0")]
 		public static void Color4(ushort red,ushort green,ushort blue,ushort alpha)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColor4usv","4.5")]
+		[MethodImport("glColor4usv","1.0")]
 		public static void Color4(ushort[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColorMask","4.5")]
+		[MethodImport("glColorMask","1.0")]
 		public static void ColorMask(byte red,byte green,byte blue,byte alpha)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColorMaterial","4.5")]
+		[MethodImport("glColorMaterial","1.0")]
 		public static void ColorMaterial(uint face,uint mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glColorPointer","4.5")]
+		[MethodImport("glColorPointer","1.0")]
 		public static void ColorPointer(int size,uint type,int stride,IntPtr pointer)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glCopyPixels","4.5")]
+		[MethodImport("glCopyPixels","1.0")]
 		public static void CopyPixels(int x,int y,int width,int height,uint type)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glCopyTexImage1D","4.5")]
-		public static void CopyTexImage1D(uint target,int level,uint internalFormat,int x,int y,int width,int border)
+		[MethodImport("glCopyTexImage1D","1.0")]
+		public static void CopyTexImage1D(TextureTarget target,int level,uint internalFormat,int x,int y,int width,int border)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glCopyTexImage2D","4.5")]
-		public static void CopyTexImage2D(uint target,int level,uint internalFormat,int x,int y,int width,int height,int border)
+		[MethodImport("glCopyTexImage2D","1.0")]
+		public static void CopyTexImage2D(TextureTarget target,int level,uint internalFormat,int x,int y,int width,int height,int border)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glCopyTexSubImage1D","4.5")]
-		public static void CopyTexSubImage1D(uint target,int level,int xOffset,int x,int y,int width)
+		[MethodImport("glCopyTexSubImage1D","1.0")]
+		public static void CopyTexSubImage1D(TextureTarget target,int level,int xOffset,int x,int y,int width)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glCopyTexSubImage2D","4.5")]
-		public static void CopyTexSubImage2D(uint target,int level,int xOffset,int yOffset,int x,int y,int width,int height)
+		[MethodImport("glCopyTexSubImage2D","1.0")]
+		public static void CopyTexSubImage2D(TextureTarget target,int level,int xOffset,int yOffset,int x,int y,int width,int height)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glCullFace","4.5")]
+		[MethodImport("glCullFace","1.0")]
 		public static void CullFace(CullFaceMode mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glDeleteLists","4.5")]
+		[MethodImport("glDeleteLists","1.0")]
 		public static void DeleteLists(uint list,int range)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glDeleteTextures","4.5")]
-		public static void DeleteTextures(int n,uint[] textures)
-			=> throw new NotImplementedException();
-		
-		[MethodImport("glDepthFunc","4.5")]
+		[MethodImport("glDepthFunc","1.0")]
 		public static void DepthFunc(DepthFunction func)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glDepthMask","4.5")]
-		public static void DepthMask(byte flag)
+		[MethodImport("glDepthMask","1.0")]
+		public static void DepthMask(bool flag)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glDepthRange","4.5")]
+		[MethodImport("glDepthRange","1.0")]
 		public static void DepthRange(double zNear,double zFar)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glDisable","4.5")]
+		[MethodImport("glDisable","1.0")]
 		public static void Disable(EnableCap cap)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glDisableClientState","4.5")]
+		[MethodImport("glDisableClientState","1.0")]
 		public static void DisableClientState(uint capability)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glDrawArrays","4.5")]
+		[MethodImport("glDrawArrays","1.0")]
 		public static void DrawArrays(PrimitiveType mode,int first,int count)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glDrawBuffer","4.5")]
+		[MethodImport("glDrawBuffer","1.0")]
 		public static void DrawBuffer(DrawBufferMode mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glDrawElements","4.5")]
+		[MethodImport("glDrawElements","1.0")]
 		public static void DrawElements(uint mode,int count,uint type,IntPtr indices)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glDrawPixels","4.5")]
+		[MethodImport("glDrawPixels","1.0")]
 		public static void DrawPixels(int width,int height,uint format,uint type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEdgeFlag","4.5")]
+		[MethodImport("glEdgeFlag","1.0")]
 		public static void EdgeFlag(byte flag)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEdgeFlagPointer","4.5")]
+		[MethodImport("glEdgeFlagPointer","1.0")]
 		public static void EdgeFlagPointer(int stride,IntPtr pointer)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEdgeFlagv","4.5")]
+		[MethodImport("glEdgeFlagv","1.0")]
 		public static void EdgeFlag([In] [MarshalAs(UnmanagedType.LPStr)] string flag)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEnable","4.5")]
+		[MethodImport("glEnable","1.0")]
 		public static void Enable(EnableCap cap)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEnableClientState","4.5")]
+		[MethodImport("glEnableClientState","1.0")]
 		public static void EnableClientState(uint capability)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEnd","4.5")]
+		[MethodImport("glEnd","1.0")]
 		public static void End()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEndList","4.5")]
+		[MethodImport("glEndList","1.0")]
 		public static void EndList()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalCoord1d","4.5")]
+		[MethodImport("glEvalCoord1d","1.0")]
 		public static void EvalCoord1(double u)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalCoord1dv","4.5")]
+		[MethodImport("glEvalCoord1dv","1.0")]
 		public static void EvalCoord1(double[] u)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalCoord1f","4.5")]
+		[MethodImport("glEvalCoord1f","1.0")]
 		public static void EvalCoord1(float u)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalCoord1fv","4.5")]
+		[MethodImport("glEvalCoord1fv","1.0")]
 		public static void EvalCoord1(float[] u)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalCoord2d","4.5")]
+		[MethodImport("glEvalCoord2d","1.0")]
 		public static void EvalCoord2(double u,double v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalCoord2dv","4.5")]
+		[MethodImport("glEvalCoord2dv","1.0")]
 		public static void EvalCoord2(double[] u)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalCoord2f","4.5")]
+		[MethodImport("glEvalCoord2f","1.0")]
 		public static void EvalCoord2(float u,float v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalCoord2fv","4.5")]
+		[MethodImport("glEvalCoord2fv","1.0")]
 		public static void EvalCoord2(float[] u)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalMesh1","4.5")]
+		[MethodImport("glEvalMesh1","1.0")]
 		public static void EvalMesh1(uint mode,int i1,int i2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalMesh2","4.5")]
+		[MethodImport("glEvalMesh2","1.0")]
 		public static void EvalMesh2(uint mode,int i1,int i2,int j1,int j2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalPoint1","4.5")]
+		[MethodImport("glEvalPoint1","1.0")]
 		public static void EvalPoint1(int i)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glEvalPoint2","4.5")]
+		[MethodImport("glEvalPoint2","1.0")]
 		public static void EvalPoint2(int i,int j)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glFeedbackBuffer","4.5")]
+		[MethodImport("glFeedbackBuffer","1.0")]
 		public static void FeedbackBuffer(int size,uint type,float[] buffer)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glFinish","4.5")]
+		[MethodImport("glFinish","1.0")]
 		public static void Finish()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glFlush","4.5")]
+		[MethodImport("glFlush","1.0")]
 		public static void Flush()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glFogf","4.5")]
+		[MethodImport("glFogf","1.0")]
 		public static void Fog(uint pName,float param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glFogfv","4.5")]
+		[MethodImport("glFogfv","1.0")]
 		public static void Fog(uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glFogi","4.5")]
+		[MethodImport("glFogi","1.0")]
 		public static void Fog(uint pName,int param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glFogiv","4.5")]
+		[MethodImport("glFogiv","1.0")]
 		public static void Fog(uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glFrontFace","4.5")]
+		[MethodImport("glFrontFace","1.0")]
 		public static void FrontFace(uint mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glFrustum","4.5")]
+		[MethodImport("glFrustum","1.0")]
 		public static void Frustum(double left,double right,double bottom,double top,double zNear,double zFar)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGenLists","4.5")]
+		[MethodImport("glGenLists","1.0")]
 		public static uint GenLists(int range)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGenTextures","4.5")]
-		public static void GenTextures(int n,ref uint textures)
-			=> throw new NotImplementedException();
-		
-		[MethodImport("glGetBooleanv","4.5")]
+		[MethodImport("glGetBooleanv","1.0")]
 		public static void GetBoolean(uint pName,IntPtr parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetClipPlane","4.5")]
+		[MethodImport("glGetClipPlane","1.0")]
 		public static void GetClipPlane(uint plane,double[] equation)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetDoublev","4.5")]
+		[MethodImport("glGetDoublev","1.0")]
 		public static void GetDouble(uint pName,double[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetError","4.5")]
+		[MethodImport("glGetError","1.0")]
 		public static GraphicsError GetError()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetFloatv","4.5")]
+		[MethodImport("glGetFloatv","1.0")]
 		public static void GetFloat(uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetIntegerv","4.5")]
+		[MethodImport("glGetIntegerv","1.0")]
 		public static void GetInteger(uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetLightfv","4.5")]
+		[MethodImport("glGetLightfv","1.0")]
 		public static void GetLight(uint light,uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetLightiv","4.5")]
+		[MethodImport("glGetLightiv","1.0")]
 		public static void GetLight(uint light,uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetMapdv","4.5")]
+		[MethodImport("glGetMapdv","1.0")]
 		public static void GetMap(uint target,uint query,double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetMapfv","4.5")]
+		[MethodImport("glGetMapfv","1.0")]
 		public static void GetMap(uint target,uint query,float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetMapiv","4.5")]
+		[MethodImport("glGetMapiv","1.0")]
 		public static void GetMap(uint target,uint query,int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetMaterialfv","4.5")]
+		[MethodImport("glGetMaterialfv","1.0")]
 		public static void GetMaterial(uint face,uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetMaterialiv","4.5")]
+		[MethodImport("glGetMaterialiv","1.0")]
 		public static void GetMaterial(uint face,uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetPixelMapfv","4.5")]
+		[MethodImport("glGetPixelMapfv","1.0")]
 		public static void GetPixelMap(uint map,float[] values)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetPixelMapuiv","4.5")]
+		[MethodImport("glGetPixelMapuiv","1.0")]
 		public static void GetPixelMap(uint map,uint[] values)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetPixelMapusv","4.5")]
+		[MethodImport("glGetPixelMapusv","1.0")]
 		public static void GetPixelMap(uint map,ushort[] values)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetPointerv","4.5")]
+		[MethodImport("glGetPointerv","1.0")]
 		public static void GetPointer(uint pName,ref IntPtr parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetPolygonStipple","4.5")]
+		[MethodImport("glGetPolygonStipple","1.0")]
 		public static void GetPolygonStipple(IntPtr mask)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetTexEnvfv","4.5")]
-		public static void GetTexEnv(uint target,uint pName,float[] parameters)
+		[MethodImport("glGetTexEnvfv","1.0")]
+		public static void GetTexEnv(TextureEnvTarget target,uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetTexEnviv","4.5")]
-		public static void GetTexEnv(uint target,uint pName,int[] parameters)
+		[MethodImport("glGetTexEnviv","1.0")]
+		public static void GetTexEnv(TextureEnvTarget target,uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetTexGendv","4.5")]
+		[MethodImport("glGetTexGendv","1.0")]
 		public static void GetTexGen(uint coord,uint pName,double[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetTexGenfv","4.5")]
+		[MethodImport("glGetTexGenfv","1.0")]
 		public static void GetTexGen(uint coord,uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetTexGeniv","4.5")]
+		[MethodImport("glGetTexGeniv","1.0")]
 		public static void GetTexGen(uint coord,uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetTexImage","4.5")]
-		public static void GetTexImage(uint target,int level,uint format,uint type,IntPtr pixels)
+		[MethodImport("glGetTexImage","1.0")]
+		public static void GetTexImage(TextureTarget target,int level,uint format,uint type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetTexLevelParameterfv","4.5")]
-		public static void GetTexLevelParameter(uint target,int level,uint pName,float[] parameters)
+		[MethodImport("glGetTexLevelParameterfv","1.0")]
+		public static void GetTexLevelParameter(TextureTarget target,int level,uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetTexLevelParameteriv","4.5")]
-		public static void GetTexLevelParameter(uint target,int level,uint pName,int[] parameters)
+		[MethodImport("glGetTexLevelParameteriv","1.0")]
+		public static void GetTexLevelParameter(TextureTarget target,int level,uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetTexParameterfv","4.5")]
-		public static void GetTexParameter(uint target,uint pName,float[] parameters)
+		[MethodImport("glGetTexParameterfv","1.0")]
+		public static void GetTexParameter(TextureTarget target,GetTextureParameter parameterName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glGetTexParameteriv","4.5")]
-		public static void GetTexParameter(uint target,uint pName,int[] parameters)
+		[MethodImport("glGetTexParameteriv","1.0")]
+		public static void GetTexParameter(TextureTarget target,GetTextureParameter parameterName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glHint","4.5")]
+		[MethodImport("glHint","1.0")]
 		public static void Hint(uint target,uint mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexMask","4.5")]
+		[MethodImport("glIndexMask","1.0")]
 		public static void IndexMask(uint mask)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexPointer","4.5")]
+		[MethodImport("glIndexPointer","1.0")]
 		public static void IndexPointer(uint type,int stride,IntPtr pointer)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexd","4.5")]
+		[MethodImport("glIndexd","1.0")]
 		public static void Index(double c)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexdv","4.5")]
+		[MethodImport("glIndexdv","1.0")]
 		public static void Index(double[] c)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexf","4.5")]
+		[MethodImport("glIndexf","1.0")]
 		public static void Index(float c)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexfv","4.5")]
+		[MethodImport("glIndexfv","1.0")]
 		public static void Index(float[] c)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexi","4.5")]
+		[MethodImport("glIndexi","1.0")]
 		public static void Index(int c)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexiv","4.5")]
+		[MethodImport("glIndexiv","1.0")]
 		public static void Index(int[] c)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexs","4.5")]
+		[MethodImport("glIndexs","1.0")]
 		public static void Index(short c)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexsv","4.5")]
+		[MethodImport("glIndexsv","1.0")]
 		public static void Index(short[] c)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexub","4.5")]
+		[MethodImport("glIndexub","1.0")]
 		public static void Index(byte c)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIndexubv","4.5")]
+		[MethodImport("glIndexubv","1.0")]
 		public static void Index([In] [MarshalAs(UnmanagedType.LPStr)] string c)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glInitNames","4.5")]
+		[MethodImport("glInitNames","1.0")]
 		public static void InitNames()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glInterleavedArrays","4.5")]
+		[MethodImport("glInterleavedArrays","1.0")]
 		public static void InterleavedArrays(uint format,int stride,IntPtr pointer)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIsEnabled","4.5")]
+		[MethodImport("glIsEnabled","1.0")]
 		public static byte IsEnabled(EnableCap cap)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIsList","4.5")]
+		[MethodImport("glIsList","1.0")]
 		public static byte IsList(uint list)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glIsTexture","4.5")]
+		[MethodImport("glIsTexture","1.0")]
 		public static byte IsTexture(uint texture)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLightModelf","4.5")]
+		[MethodImport("glLightModelf","1.0")]
 		public static void LightMode(uint pName,float param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLightModelfv","4.5")]
+		[MethodImport("glLightModelfv","1.0")]
 		public static void LightMode(uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLightModeli","4.5")]
+		[MethodImport("glLightModeli","1.0")]
 		public static void LightMode(uint pName,int param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLightModeliv","4.5")]
+		[MethodImport("glLightModeliv","1.0")]
 		public static void LightMode(uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLightf","4.5")]
+		[MethodImport("glLightf","1.0")]
 		public static void Light(uint light,uint pName,float param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLightfv","4.5")]
+		[MethodImport("glLightfv","1.0")]
 		public static void Light(uint light,uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLighti","4.5")]
+		[MethodImport("glLighti","1.0")]
 		public static void Light(uint light,uint pName,int param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLightiv","4.5")]
+		[MethodImport("glLightiv","1.0")]
 		public static void Light(uint light,uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLineStipple","4.5")]
+		[MethodImport("glLineStipple","1.0")]
 		public static void LineStipple(int factor,ushort pattern)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLineWidth","4.5")]
+		[MethodImport("glLineWidth","1.0")]
 		public static void LineWidth(float width)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glListBase","4.5")]
+		[MethodImport("glListBase","1.0")]
 		public static void ListBase(uint b)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLoadIdentity","4.5")]
+		[MethodImport("glLoadIdentity","1.0")]
 		public static void LoadIdentity()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLoadMatrixd","4.5")]
+		[MethodImport("glLoadMatrixd","1.0")]
 		public static void LoadMatrix(double[] m)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLoadMatrixf","4.5")]
+		[MethodImport("glLoadMatrixf","1.0")]
 		public static void LoadMatrix(float[] m)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLoadName","4.5")]
+		[MethodImport("glLoadName","1.0")]
 		public static void LoadName(uint name)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glLogicOp","4.5")]
+		[MethodImport("glLogicOp","1.0")]
 		public static void LogicOp(uint opcode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMap1d","4.5")]
+		[MethodImport("glMap1d","1.0")]
 		public static void Map1(uint target,double u1,double u2,int stride,int order,double[] points)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMap1f","4.5")]
+		[MethodImport("glMap1f","1.0")]
 		public static void Map1(uint target,float u1,float u2,int stride,int order,float[] points)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMap2d","4.5")]
+		[MethodImport("glMap2d","1.0")]
 		public static void Map2(uint target,double u1,double u2,int ustride,int uorder,double v1,double v2,int vstride,int vorder,double[] points)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMap2f","4.5")]
+		[MethodImport("glMap2f","1.0")]
 		public static void Map2(uint target,float u1,float u2,int ustride,int uorder,float v1,float v2,int vstride,int vorder,float[] points)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMapGrid1d","4.5")]
+		[MethodImport("glMapGrid1d","1.0")]
 		public static void MapGrid1(int un,double u1,double u2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMapGrid1f","4.5")]
+		[MethodImport("glMapGrid1f","1.0")]
 		public static void MapGrid1(int un,float u1,float u2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMapGrid2d","4.5")]
+		[MethodImport("glMapGrid2d","1.0")]
 		public static void MapGrid2(int un,double u1,double u2,int vn,double v1,double v2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMapGrid2f","4.5")]
+		[MethodImport("glMapGrid2f","1.0")]
 		public static void MapGrid2(int un,float u1,float u2,int vn,float v1,float v2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMaterialf","4.5")]
+		[MethodImport("glMaterialf","1.0")]
 		public static void Material(uint face,uint pName,float param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMaterialfv","4.5")]
+		[MethodImport("glMaterialfv","1.0")]
 		public static void Material(uint face,uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMateriali","4.5")]
+		[MethodImport("glMateriali","1.0")]
 		public static void Material(uint face,uint pName,int param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMaterialiv","4.5")]
+		[MethodImport("glMaterialiv","1.0")]
 		public static void Material(uint face,uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMatrixMode","4.5")]
+		[MethodImport("glMatrixMode","1.0")]
 		public static void MatrixMode(uint mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMultMatrixd","4.5")]
+		[MethodImport("glMultMatrixd","1.0")]
 		public static void MultMatrix(double[] m)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glMultMatrixf","4.5")]
+		[MethodImport("glMultMatrixf","1.0")]
 		public static void MultMatrix(float[] m)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNewList","4.5")]
+		[MethodImport("glNewList","1.0")]
 		public static void NewList(uint list,uint mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNormal3b","4.5")]
+		[MethodImport("glNormal3b","1.0")]
 		public static void Normal3(sbyte nx,sbyte ny,sbyte nz)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNormal3bv","4.5")]
+		[MethodImport("glNormal3bv","1.0")]
 		public static void Normal3([In] [MarshalAs(UnmanagedType.LPStr)] string v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNormal3d","4.5")]
+		[MethodImport("glNormal3d","1.0")]
 		public static void Normal3(double nx,double ny,double nz)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNormal3dv","4.5")]
+		[MethodImport("glNormal3dv","1.0")]
 		public static void Normal3(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNormal3f","4.5")]
+		[MethodImport("glNormal3f","1.0")]
 		public static void Normal3(float nx,float ny,float nz)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNormal3fv","4.5")]
+		[MethodImport("glNormal3fv","1.0")]
 		public static void Normal3(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNormal3i","4.5")]
+		[MethodImport("glNormal3i","1.0")]
 		public static void Normal3(int nx,int ny,int nz)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNormal3iv","4.5")]
+		[MethodImport("glNormal3iv","1.0")]
 		public static void Normal3(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNormal3s","4.5")]
+		[MethodImport("glNormal3s","1.0")]
 		public static void Normal3(short nx,short ny,short nz)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNormal3sv","4.5")]
+		[MethodImport("glNormal3sv","1.0")]
 		public static void Normal3(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glNormalPointer","4.5")]
+		[MethodImport("glNormalPointer","1.0")]
 		public static void NormalPointer(uint type,int stride,IntPtr pointer)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glOrtho","4.5")]
+		[MethodImport("glOrtho","1.0")]
 		public static void Ortho(double left,double right,double bottom,double top,double zNear,double zFar)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPassThrough","4.5")]
+		[MethodImport("glPassThrough","1.0")]
 		public static void PassThrough(float token)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPixelMapfv","4.5")]
+		[MethodImport("glPixelMapfv","1.0")]
 		public static void PixelMap(uint map,int mapSize,float[] values)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPixelMapuiv","4.5")]
+		[MethodImport("glPixelMapuiv","1.0")]
 		public static void PixelMap(uint map,int mapSize,uint[] values)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPixelMapusv","4.5")]
+		[MethodImport("glPixelMapusv","1.0")]
 		public static void PixelMap(uint map,int mapSize,ushort[] values)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPixelStoref","4.5")]
+		[MethodImport("glPixelStoref","1.0")]
 		public static void PixelStore(uint pName,float param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPixelStorei","4.5")]
+		[MethodImport("glPixelStorei","1.0")]
 		public static void PixelStore(uint pName,int param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPixelTransferf","4.5")]
+		[MethodImport("glPixelTransferf","1.0")]
 		public static void PixelTransfer(uint pName,float param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPixelTransferi","4.5")]
+		[MethodImport("glPixelTransferi","1.0")]
 		public static void PixelTransfer(uint pName,int param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPixelZoom","4.5")]
+		[MethodImport("glPixelZoom","1.0")]
 		public static void PixelZoom(float xFactor,float yFactor)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPointSize","4.5")]
+		[MethodImport("glPointSize","1.0")]
 		public static void PointSize(float size)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPolygonMode","4.5")]
+		[MethodImport("glPolygonMode","1.0")]
 		public static void PolygonMode(uint face,uint mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPolygonOffset","4.5")]
+		[MethodImport("glPolygonOffset","1.0")]
 		public static void PolygonOffset(float factor,float units)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPolygonStipple","4.5")]
+		[MethodImport("glPolygonStipple","1.0")]
 		public static void PolygonStipple([In] [MarshalAs(UnmanagedType.LPStr)] string mask)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPopAttrib","4.5")]
+		[MethodImport("glPopAttrib","1.0")]
 		public static void PopAttrib()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPopClientAttrib","4.5")]
+		[MethodImport("glPopClientAttrib","1.0")]
 		public static void PopClientAttrib()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPopMatrix","4.5")]
+		[MethodImport("glPopMatrix","1.0")]
 		public static void PopMatrix()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPopName","4.5")]
+		[MethodImport("glPopName","1.0")]
 		public static void PopName()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPrioritizeTextures","4.5")]
+		[MethodImport("glPrioritizeTextures","1.0")]
 		public static void PrioritizeTextures(int n,uint[] textures,float[] priorities)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPushAttrib","4.5")]
+		[MethodImport("glPushAttrib","1.0")]
 		public static void PushAttrib(uint mask)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPushClientAttrib","4.5")]
+		[MethodImport("glPushClientAttrib","1.0")]
 		public static void PushClientAttrib(uint mask)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPushMatrix","4.5")]
+		[MethodImport("glPushMatrix","1.0")]
 		public static void PushMatrix()
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glPushName","4.5")]
+		[MethodImport("glPushName","1.0")]
 		public static void PushName(uint name)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos2d","4.5")]
+		[MethodImport("glRasterPos2d","1.0")]
 		public static void RasterPos2(double x,double y)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos2dv","4.5")]
+		[MethodImport("glRasterPos2dv","1.0")]
 		public static void RasterPos2(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos2f","4.5")]
+		[MethodImport("glRasterPos2f","1.0")]
 		public static void RasterPos2(float x,float y)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos2fv","4.5")]
+		[MethodImport("glRasterPos2fv","1.0")]
 		public static void RasterPos2(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos2i","4.5")]
+		[MethodImport("glRasterPos2i","1.0")]
 		public static void RasterPos2(int x,int y)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos2iv","4.5")]
+		[MethodImport("glRasterPos2iv","1.0")]
 		public static void RasterPos2(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos2s","4.5")]
+		[MethodImport("glRasterPos2s","1.0")]
 		public static void RasterPos2(short x,short y)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos2sv","4.5")]
+		[MethodImport("glRasterPos2sv","1.0")]
 		public static void RasterPos2(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos3d","4.5")]
+		[MethodImport("glRasterPos3d","1.0")]
 		public static void RasterPos3(double x,double y,double z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos3dv","4.5")]
+		[MethodImport("glRasterPos3dv","1.0")]
 		public static void RasterPos3(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos3f","4.5")]
+		[MethodImport("glRasterPos3f","1.0")]
 		public static void RasterPos3(float x,float y,float z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos3fv","4.5")]
+		[MethodImport("glRasterPos3fv","1.0")]
 		public static void RasterPos3(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos3i","4.5")]
+		[MethodImport("glRasterPos3i","1.0")]
 		public static void RasterPos3(int x,int y,int z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos3iv","4.5")]
+		[MethodImport("glRasterPos3iv","1.0")]
 		public static void RasterPos3(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos3s","4.5")]
+		[MethodImport("glRasterPos3s","1.0")]
 		public static void RasterPos3(short x,short y,short z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos3sv","4.5")]
+		[MethodImport("glRasterPos3sv","1.0")]
 		public static void RasterPos3(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos4d","4.5")]
+		[MethodImport("glRasterPos4d","1.0")]
 		public static void RasterPos4(double x,double y,double z,double w)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos4dv","4.5")]
+		[MethodImport("glRasterPos4dv","1.0")]
 		public static void RasterPos4(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos4f","4.5")]
+		[MethodImport("glRasterPos4f","1.0")]
 		public static void RasterPos4(float x,float y,float z,float w)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos4fv","4.5")]
+		[MethodImport("glRasterPos4fv","1.0")]
 		public static void RasterPos4(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos4i","4.5")]
+		[MethodImport("glRasterPos4i","1.0")]
 		public static void RasterPos4(int x,int y,int z,int w)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos4iv","4.5")]
+		[MethodImport("glRasterPos4iv","1.0")]
 		public static void RasterPos4(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos4s","4.5")]
+		[MethodImport("glRasterPos4s","1.0")]
 		public static void RasterPos4(short x,short y,short z,short w)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRasterPos4sv","4.5")]
+		[MethodImport("glRasterPos4sv","1.0")]
 		public static void RasterPos4(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glReadBuffer","4.5")]
+		[MethodImport("glReadBuffer","1.0")]
 		public static void ReadBuffer(uint mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glReadPixels","4.5")]
+		[MethodImport("glReadPixels","1.0")]
 		public static void ReadPixels(int x,int y,int width,int height,uint format,uint type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRectd","4.5")]
+		[MethodImport("glRectd","1.0")]
 		public static void Rect(double x1,double y1,double x2,double y2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRectdv","4.5")]
+		[MethodImport("glRectdv","1.0")]
 		public static void Rect(double[] v1,double[] v2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRectf","4.5")]
+		[MethodImport("glRectf","1.0")]
 		public static void Rect(float x1,float y1,float x2,float y2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRectfv","4.5")]
+		[MethodImport("glRectfv","1.0")]
 		public static void Rect(float[] v1,float[] v2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRecti","4.5")]
+		[MethodImport("glRecti","1.0")]
 		public static void Rect(int x1,int y1,int x2,int y2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRectiv","4.5")]
+		[MethodImport("glRectiv","1.0")]
 		public static void Rect(int[] v1,int[] v2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRects","4.5")]
+		[MethodImport("glRects","1.0")]
 		public static void Rect(short x1,short y1,short x2,short y2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRectsv","4.5")]
+		[MethodImport("glRectsv","1.0")]
 		public static void Rect(short[] v1,short[] v2)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRenderMode","4.5")]
+		[MethodImport("glRenderMode","1.0")]
 		public static int RenderMode(uint mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRotated","4.5")]
+		[MethodImport("glRotated","1.0")]
 		public static void Rotate(double angle,double x,double y,double z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glRotatef","4.5")]
+		[MethodImport("glRotatef","1.0")]
 		public static void Rotate(float angle,float x,float y,float z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glScaled","4.5")]
+		[MethodImport("glScaled","1.0")]
 		public static void Scale(double x,double y,double z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glScalef","4.5")]
+		[MethodImport("glScalef","1.0")]
 		public static void Scale(float x,float y,float z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glScissor","4.5")]
+		[MethodImport("glScissor","1.0")]
 		public static void Scissor(int x,int y,int width,int height)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glSelectBuffer","4.5")]
+		[MethodImport("glSelectBuffer","1.0")]
 		public static void SelectBuffer(int size,uint[] buffer)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glShadeModel","4.5")]
+		[MethodImport("glShadeModel","1.0")]
 		public static void ShadeModel(uint mode)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glStencilFunc","4.5")]
+		[MethodImport("glStencilFunc","1.0")]
 		public static void StencilFunc(uint func,int refer,uint mask)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glStencilMask","4.5")]
+		[MethodImport("glStencilMask","1.0")]
 		public static void StencilMask(uint mask)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glStencilOp","4.5")]
+		[MethodImport("glStencilOp","1.0")]
 		public static void StencilOp(uint fail,uint zfail,uint zpass)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord1d","4.5")]
+		[MethodImport("glTexCoord1d","1.0")]
 		public static void TexCoord1(double s)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord1dv","4.5")]
+		[MethodImport("glTexCoord1dv","1.0")]
 		public static void TexCoord1(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord1f","4.5")]
+		[MethodImport("glTexCoord1f","1.0")]
 		public static void TexCoord1(float s)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord1fv","4.5")]
+		[MethodImport("glTexCoord1fv","1.0")]
 		public static void TexCoord1(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord1i","4.5")]
+		[MethodImport("glTexCoord1i","1.0")]
 		public static void TexCoord1(int s)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord1iv","4.5")]
+		[MethodImport("glTexCoord1iv","1.0")]
 		public static void TexCoord1(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord1s","4.5")]
+		[MethodImport("glTexCoord1s","1.0")]
 		public static void TexCoord1(short s)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord1sv","4.5")]
+		[MethodImport("glTexCoord1sv","1.0")]
 		public static void TexCoord1(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord2d","4.5")]
+		[MethodImport("glTexCoord2d","1.0")]
 		public static void TexCoord2(double s,double t)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord2dv","4.5")]
+		[MethodImport("glTexCoord2dv","1.0")]
 		public static void TexCoord2(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord2f","4.5")]
+		[MethodImport("glTexCoord2f","1.0")]
 		public static void TexCoord2(float s,float t)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord2fv","4.5")]
+		[MethodImport("glTexCoord2fv","1.0")]
 		public static void TexCoord2(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord2i","4.5")]
+		[MethodImport("glTexCoord2i","1.0")]
 		public static void TexCoord2(int s,int t)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord2iv","4.5")]
+		[MethodImport("glTexCoord2iv","1.0")]
 		public static void TexCoord2(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord2s","4.5")]
+		[MethodImport("glTexCoord2s","1.0")]
 		public static void TexCoord2(short s,short t)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord2sv","4.5")]
+		[MethodImport("glTexCoord2sv","1.0")]
 		public static void TexCoord2(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord3d","4.5")]
+		[MethodImport("glTexCoord3d","1.0")]
 		public static void TexCoord3(double s,double t,double r)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord3dv","4.5")]
+		[MethodImport("glTexCoord3dv","1.0")]
 		public static void TexCoord3(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord3f","4.5")]
+		[MethodImport("glTexCoord3f","1.0")]
 		public static void TexCoord3(float s,float t,float r)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord3fv","4.5")]
+		[MethodImport("glTexCoord3fv","1.0")]
 		public static void TexCoord3(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord3i","4.5")]
+		[MethodImport("glTexCoord3i","1.0")]
 		public static void TexCoord3(int s,int t,int r)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord3iv","4.5")]
+		[MethodImport("glTexCoord3iv","1.0")]
 		public static void TexCoord3(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord3s","4.5")]
+		[MethodImport("glTexCoord3s","1.0")]
 		public static void TexCoord3(short s,short t,short r)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord3sv","4.5")]
+		[MethodImport("glTexCoord3sv","1.0")]
 		public static void TexCoord3(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord4d","4.5")]
+		[MethodImport("glTexCoord4d","1.0")]
 		public static void TexCoord4(double s,double t,double r,double q)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord4dv","4.5")]
+		[MethodImport("glTexCoord4dv","1.0")]
 		public static void TexCoord4(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord4f","4.5")]
+		[MethodImport("glTexCoord4f","1.0")]
 		public static void TexCoord4(float s,float t,float r,float q)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord4fv","4.5")]
+		[MethodImport("glTexCoord4fv","1.0")]
 		public static void TexCoord4(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord4i","4.5")]
+		[MethodImport("glTexCoord4i","1.0")]
 		public static void TexCoord4(int s,int t,int r,int q)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord4iv","4.5")]
+		[MethodImport("glTexCoord4iv","1.0")]
 		public static void TexCoord4(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord4s","4.5")]
+		[MethodImport("glTexCoord4s","1.0")]
 		public static void TexCoord4(short s,short t,short r,short q)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoord4sv","4.5")]
+		[MethodImport("glTexCoord4sv","1.0")]
 		public static void TexCoord4(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexCoordPointer","4.5")]
+		[MethodImport("glTexCoordPointer","1.0")]
 		public static void TexCoordPointer(int size,uint type,int stride,IntPtr pointer)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexEnvf","4.5")]
-		public static void TexEnv(uint target,uint pName,float param)
+		[MethodImport("glTexEnvf","1.0")]
+		public static void TexEnv(TextureEnvTarget target,uint pName,float param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexEnvfv","4.5")]
-		public static void TexEnv(uint target,uint pName,float[] parameters)
+		[MethodImport("glTexEnvfv","1.0")]
+		public static void TexEnv(TextureEnvTarget target,uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexEnvi","4.5")]
-		public static void TexEnv(uint target,uint pName,int param)
+		[MethodImport("glTexEnvi","1.0")]
+		public static void TexEnv(TextureEnvTarget target,uint pName,int param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexEnviv","4.5")]
-		public static void TexEnv(uint target,uint pName,int[] parameters)
+		[MethodImport("glTexEnviv","1.0")]
+		public static void TexEnv(TextureEnvTarget target,uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexGend","4.5")]
+		[MethodImport("glTexGend","1.0")]
 		public static void TexGen(uint coord,uint pName,double param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexGendv","4.5")]
+		[MethodImport("glTexGendv","1.0")]
 		public static void TexGen(uint coord,uint pName,double[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexGenf","4.5")]
+		[MethodImport("glTexGenf","1.0")]
 		public static void TexGen(uint coord,uint pName,float param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexGenfv","4.5")]
+		[MethodImport("glTexGenfv","1.0")]
 		public static void TexGen(uint coord,uint pName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexGeni","4.5")]
+		[MethodImport("glTexGeni","1.0")]
 		public static void TexGen(uint coord,uint pName,int param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexGeniv","4.5")]
+		[MethodImport("glTexGeniv","1.0")]
 		public static void TexGen(uint coord,uint pName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexImage1D","4.5")]
-		public static void TexImage1D(uint target,int level,int internalFormat,int width,int border,uint format,uint type,IntPtr pixels)
+		[MethodImport("glTexImage1D","1.0")]
+		public static void TexImage1D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int border,uint format,uint type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexImage2D","4.5")]
-		public static void TexImage2D(uint target,int level,int internalFormat,int width,int height,int border,uint format,uint type,IntPtr pixels)
+		[MethodImport("glTexImage2D","1.0")]
+		public static void TexImage2D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int height,int border,uint format,uint type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexParameterf","4.5")]
-		public static void TexParameter(uint target,uint pName,float param)
+		[MethodImport("glTexParameterf","1.0")]
+		public static void TexParameter(TextureTarget target,TextureParameter parameterName,float param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexParameterfv","4.5")]
-		public static void TexParameter(uint target,uint pName,float[] parameters)
+		[MethodImport("glTexParameterfv","1.0")]
+		public static void TexParameter(TextureTarget target,TextureParameter parameterName,float[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexParameteri","4.5")]
-		public static void TexParameter(uint target,uint pName,int param)
+		[MethodImport("glTexParameteri","1.0")]
+		public static void TexParameter(TextureTarget target,TextureParameter parameterName,int param)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexParameteriv","4.5")]
-		public static void TexParameter(uint target,uint pName,int[] parameters)
+		[MethodImport("glTexParameteriv","1.0")]
+		public static void TexParameter(TextureTarget target,TextureParameter parameterName,int[] parameters)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexSubImage1D","4.5")]
-		public static void TexSubImage1D(uint target,int level,int xOffset,int width,uint format,uint type,IntPtr pixels)
+		[MethodImport("glTexSubImage1D","1.0")]
+		public static void TexSubImage1D(TextureTarget target,int level,int xOffset,int width,uint format,uint type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTexSubImage2D","4.5")]
-		public static void TexSubImage2D(uint target,int level,int xOffset,int yOffset,int width,int height,uint format,uint type,IntPtr pixels)
+		[MethodImport("glTexSubImage2D","1.0")]
+		public static void TexSubImage2D(TextureTarget target,int level,int xOffset,int yOffset,int width,int height,uint format,uint type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTranslated","4.5")]
+		[MethodImport("glTranslated","1.0")]
 		public static void Translate(double x,double y,double z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glTranslatef","4.5")]
+		[MethodImport("glTranslatef","1.0")]
 		public static void Translate(float x,float y,float z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex2d","4.5")]
+		[MethodImport("glVertex2d","1.0")]
 		public static void Vertex2(double x,double y)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex2dv","4.5")]
+		[MethodImport("glVertex2dv","1.0")]
 		public static void Vertex2(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex2f","4.5")]
+		[MethodImport("glVertex2f","1.0")]
 		public static void Vertex2(float x,float y)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex2fv","4.5")]
+		[MethodImport("glVertex2fv","1.0")]
 		public static void Vertex2(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex2i","4.5")]
+		[MethodImport("glVertex2i","1.0")]
 		public static void Vertex2(int x,int y)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex2iv","4.5")]
+		[MethodImport("glVertex2iv","1.0")]
 		public static void Vertex2(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex2s","4.5")]
+		[MethodImport("glVertex2s","1.0")]
 		public static void Vertex2(short x,short y)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex2sv","4.5")]
+		[MethodImport("glVertex2sv","1.0")]
 		public static void Vertex2(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex3d","4.5")]
+		[MethodImport("glVertex3d","1.0")]
 		public static void Vertex3(double x,double y,double z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex3dv","4.5")]
+		[MethodImport("glVertex3dv","1.0")]
 		public static void Vertex3(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex3f","4.5")]
+		[MethodImport("glVertex3f","1.0")]
 		public static void Vertex3(float x,float y,float z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex3fv","4.5")]
+		[MethodImport("glVertex3fv","1.0")]
 		public static void Vertex3(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex3i","4.5")]
+		[MethodImport("glVertex3i","1.0")]
 		public static void Vertex3(int x,int y,int z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex3iv","4.5")]
+		[MethodImport("glVertex3iv","1.0")]
 		public static void Vertex3(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex3s","4.5")]
+		[MethodImport("glVertex3s","1.0")]
 		public static void Vertex3(short x,short y,short z)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex3sv","4.5")]
+		[MethodImport("glVertex3sv","1.0")]
 		public static void Vertex3(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex4d","4.5")]
+		[MethodImport("glVertex4d","1.0")]
 		public static void Vertex4(double x,double y,double z,double w)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex4dv","4.5")]
+		[MethodImport("glVertex4dv","1.0")]
 		public static void Vertex4(double[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex4f","4.5")]
+		[MethodImport("glVertex4f","1.0")]
 		public static void Vertex4(float x,float y,float z,float w)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex4fv","4.5")]
+		[MethodImport("glVertex4fv","1.0")]
 		public static void Vertex4(float[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex4i","4.5")]
+		[MethodImport("glVertex4i","1.0")]
 		public static void Vertex4(int x,int y,int z,int w)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex4iv","4.5")]
+		[MethodImport("glVertex4iv","1.0")]
 		public static void Vertex4(int[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex4s","4.5")]
+		[MethodImport("glVertex4s","1.0")]
 		public static void Vertex4(short x,short y,short z,short w)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertex4sv","4.5")]
+		[MethodImport("glVertex4sv","1.0")]
 		public static void Vertex4(short[] v)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glVertexPointer","4.5")]
+		[MethodImport("glVertexPointer","1.0")]
 		public static void VertexPointer(int size,uint type,int stride,IntPtr pointer)
 			=> throw new NotImplementedException();
 		
-		[MethodImport("glViewport","4.5")]
+		[MethodImport("glViewport","1.0")]
 		public static void Viewport(int x,int y,int width,int height)
 			=> throw new NotImplementedException();
-		
-		[MethodImport("glGetString","4.5")]
-		private static IntPtr GetStringInternal(StringName name)
-			=> throw new NotImplementedException();
-
-		[MI(AI)] public static string GetString(StringName name) => Marshal.PtrToStringAnsi(GetStringInternal(name));
 
 		#endregion
 
@@ -1384,15 +1369,15 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexImage3D","1.2")]
-		public static void TexImage3D(uint target,int level,int internalFormat,int width,int height,int depth,int border,uint format,uint type,IntPtr pixels)
+		public static void TexImage3D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int height,int depth,int border,uint format,uint type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexSubImage3D","1.2")]
-		public static void TexSubImage3D(uint target,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr pixels)
+		public static void TexSubImage3D(TextureTarget target,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glCopyTexSubImage3D","1.2")]
-		public static void CopyTexSubImage3D(uint target,int level,int xOffset,int yOffset,int zOffset,int x,int y,int width,int height)
+		public static void CopyTexSubImage3D(TextureTarget target,int level,int xOffset,int yOffset,int zOffset,int x,int y,int width,int height)
 			=> throw new NotImplementedException();
 		
 		#endregion
@@ -1400,7 +1385,7 @@ namespace Dissonance.Framework.OpenGL
 		#region OpenGL 1.3
 
 		[MethodImport("glActiveTexture","1.3")]
-		public static void ActiveTexture(uint texture)
+		public static void ActiveTexture(TextureUnit texture)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glSampleCoverage","1.3")]
@@ -1408,31 +1393,31 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glCompressedTexImage3D","1.3")]
-		public static void CompressedTexImage3D(uint target,int level,uint internalFormat,int width,int height,int depth,int border,int imageSize,IntPtr data)
+		public static void CompressedTexImage3D(TextureTarget target,int level,uint internalFormat,int width,int height,int depth,int border,int imageSize,IntPtr data)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glCompressedTexImage2D","1.3")]
-		public static void CompressedTexImage2D(uint target,int level,uint internalFormat,int width,int height,int border,int imageSize,IntPtr data)
+		public static void CompressedTexImage2D(TextureTarget target,int level,uint internalFormat,int width,int height,int border,int imageSize,IntPtr data)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glCompressedTexImage1D","1.3")]
-		public static void CompressedTexImage1D(uint target,int level,uint internalFormat,int width,int border,int imageSize,IntPtr data)
+		public static void CompressedTexImage1D(TextureTarget target,int level,uint internalFormat,int width,int border,int imageSize,IntPtr data)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glCompressedTexSubImage3D","1.3")]
-		public static void CompressedTexSubImage3D(uint target,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,int imageSize,IntPtr data)
+		public static void CompressedTexSubImage3D(TextureTarget target,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,int imageSize,IntPtr data)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glCompressedTexSubImage2D","1.3")]
-		public static void CompressedTexSubImage2D(uint target,int level,int xOffset,int yOffset,int width,int height,uint format,int imageSize,IntPtr data)
+		public static void CompressedTexSubImage2D(TextureTarget target,int level,int xOffset,int yOffset,int width,int height,uint format,int imageSize,IntPtr data)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glCompressedTexSubImage1D","1.3")]
-		public static void CompressedTexSubImage1D(uint target,int level,int xOffset,int width,uint format,int imageSize,IntPtr data)
+		public static void CompressedTexSubImage1D(TextureTarget target,int level,int xOffset,int width,uint format,int imageSize,IntPtr data)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetCompressedTexImage","1.3")]
-		public static void GetCompressedTexImage(uint target,int level,IntPtr img)
+		public static void GetCompressedTexImage(TextureTarget target,int level,IntPtr img)
 			=> throw new NotImplementedException();
 		
 		#endregion
@@ -1596,7 +1581,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glCreateShader","2.0")]
-		public static uint CreateShader(uint type)
+		public static uint CreateShader(ShaderType type)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glDeleteProgram","2.0")]
@@ -1928,7 +1913,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glVertexAttribPointer","2.0")]
-		public static void VertexAttribPointer(uint index,int size,uint type,byte normalized,int stride,IntPtr pointer)
+		public static void VertexAttribPointer(uint index,int size,VertexAttribPointerType type,bool normalized,int stride,IntPtr pointer)
 			=> throw new NotImplementedException();
 		
 		#endregion
@@ -2160,19 +2145,19 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexParameterIiv","3.0")]
-		public static void TexParameterI(uint target,uint pName,ref int parameters)
+		public static void TexParameterI(TextureTarget target,uint pName,ref int parameters)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexParameterIuiv","3.0")]
-		public static void TexParameterI(uint target,uint pName,ref uint parameters)
+		public static void TexParameterI(TextureTarget target,uint pName,ref uint parameters)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetTexParameterIiv","3.0")]
-		public static void GetTexParameterI(uint target,uint pName,ref int parameters)
+		public static void GetTexParameterI(TextureTarget target,GetTextureParameter parameterName,ref int parameters)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetTexParameterIuiv","3.0")]
-		public static void GetTexParameterI(uint target,uint pName,ref uint parameters)
+		public static void GetTexParameterI(TextureTarget target,GetTextureParameter parameterName,ref uint parameters)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glClearBufferiv","3.0")]
@@ -2189,10 +2174,6 @@ namespace Dissonance.Framework.OpenGL
 		
 		[MethodImport("glClearBufferfi","3.0")]
 		public static void ClearBuffer(uint buffer,int drawbuffer,float depth,int stencil)
-			=> throw new NotImplementedException();
-		
-		[MethodImport("glGetStringi","3.0")]
-		public static IntPtr GetString(uint name,uint index)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glIsRenderbuffer","3.0")]
@@ -2312,7 +2293,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexBuffer","3.1")]
-		public static void TexBuffer(uint target,uint internalFormat,uint buffer)
+		public static void TexBuffer(TextureBufferTarget target,uint internalFormat,uint buffer)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glPrimitiveRestartIndex","3.1")]
@@ -2416,11 +2397,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexImage2DMultisample","3.2")]
-		public static void TexImage2DMultisample(uint target,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations)
+		public static void TexImage2DMultisample(TextureTarget target,int samples,PixelInternalFormat internalFormat,int width,int height,byte fixedsamplelocations)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexImage3DMultisample","3.2")]
-		public static void TexImage3DMultisample(uint target,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations)
+		public static void TexImage3DMultisample(TextureTarget target,int samples,PixelInternalFormat internalFormat,int width,int height,int depth,byte fixedsamplelocations)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetMultisamplefv","3.2")]
@@ -3124,15 +3105,15 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexStorage1D","4.2")]
-		public static void TexStorage1D(uint target,int levels,uint internalFormat,int width)
+		public static void TexStorage1D(TextureTarget1D target,int levels,uint internalFormat,int width)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexStorage2D","4.2")]
-		public static void TexStorage2D(uint target,int levels,uint internalFormat,int width,int height)
+		public static void TexStorage2D(TextureTarget2D target,int levels,uint internalFormat,int width,int height)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexStorage3D","4.2")]
-		public static void TexStorage3D(uint target,int levels,uint internalFormat,int width,int height,int depth)
+		public static void TexStorage3D(TextureTarget3D target,int levels,uint internalFormat,int width,int height,int depth)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glDrawTransformFeedbackInstanced","4.2")]
@@ -3148,11 +3129,11 @@ namespace Dissonance.Framework.OpenGL
 		#region OpenGL 4.3
 
 		[MethodImport("glClearBufferData","4.3")]
-		public static void ClearBufferData(BufferTarget target,uint internalFormat,uint format,uint type,IntPtr data)
+		public static void ClearBufferData(BufferTarget target,PixelInternalFormat internalFormat,uint format,uint type,IntPtr data)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glClearBufferSubData","4.3")]
-		public static void ClearBufferSubData(BufferTarget target,uint internalFormat,int offset,int size,uint format,uint type,IntPtr data)
+		public static void ClearBufferSubData(BufferTarget target,PixelInternalFormat internalFormat,int offset,int size,uint format,uint type,IntPtr data)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glDispatchCompute","4.3")]
@@ -3240,19 +3221,19 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexBufferRange","4.3")]
-		public static void TexBufferRange(uint target,uint internalFormat,uint buffer,int offset,int size)
+		public static void TexBufferRange(TextureBufferTarget target,uint internalFormat,uint buffer,int offset,int size)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexStorage2DMultisample","4.3")]
-		public static void TexStorage2DMultisample(uint target,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations)
+		public static void TexStorage2DMultisample(TextureTargetMultisample2D target,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexStorage3DMultisample","4.3")]
-		public static void TexStorage3DMultisample(uint target,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations)
+		public static void TexStorage3DMultisample(TextureTargetMultisample3D target,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTextureView","4.3")]
-		public static void TextureView(uint texture,uint target,uint origtexture,uint internalFormat,uint minlevel,uint numlevels,uint minlayer,uint numlayers)
+		public static void TextureView(uint texture,TextureTarget target,uint origtexture,PixelInternalFormat internalFormat,uint minlevel,uint numlevels,uint minlayer,uint numlayers)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glBindVertexBuffer","4.3")]
@@ -3412,11 +3393,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glClearNamedBufferData","4.5")]
-		public static void ClearNamedBufferData(uint buffer,uint internalFormat,uint format,uint type,IntPtr data)
+		public static void ClearNamedBufferData(uint buffer,PixelInternalFormat internalFormat,uint format,uint type,IntPtr data)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glClearNamedBufferSubData","4.5")]
-		public static void ClearNamedBufferSubData(uint buffer,uint internalFormat,int offset,int size,uint format,uint type,IntPtr data)
+		public static void ClearNamedBufferSubData(uint buffer,PixelInternalFormat internalFormat,int offset,int size,uint format,uint type,IntPtr data)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glMapNamedBuffer","4.5")]
@@ -3528,11 +3509,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glNamedRenderbufferStorage","4.5")]
-		public static void NamedRenderbufferStorage(uint renderbuffer,uint internalFormat,int width,int height)
+		public static void NamedRenderbufferStorage(uint renderbuffer,PixelInternalFormat internalFormat,int width,int height)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glNamedRenderbufferStorageMultisample","4.5")]
-		public static void NamedRenderbufferStorageMultisample(uint renderbuffer,int samples,uint internalFormat,int width,int height)
+		public static void NamedRenderbufferStorageMultisample(uint renderbuffer,int samples,PixelInternalFormat internalFormat,int width,int height)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetNamedRenderbufferParameteriv","4.5")]
@@ -3648,11 +3629,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetTextureLevelParameterfv","4.5")]
-		public static void GetTextureLevelParameter(uint texture,int level,uint pName,ref float parameters)
+		public static void GetTextureLevelParameter(TextureTarget texture,int level,uint pName,ref float parameters)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetTextureLevelParameteriv","4.5")]
-		public static void GetTextureLevelParameter(uint texture,int level,uint pName,ref int parameters)
+		public static void GetTextureLevelParameter(TextureTarget texture,int level,uint pName,ref int parameters)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetTextureParameterfv","4.5")]
@@ -3772,11 +3753,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetnCompressedTexImage","4.5")]
-		public static void GetnCompressedTexImage(uint target,int lod,int bufSize,IntPtr pixels)
+		public static void GetnCompressedTexImage(TextureTarget target,int lod,int bufSize,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetnTexImage","4.5")]
-		public static void GetnTexImage(uint target,int level,uint format,uint type,int bufSize,IntPtr pixels)
+		public static void GetnTexImage(TextureTarget target,int level,uint format,uint type,int bufSize,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetnUniformdv","4.5")]

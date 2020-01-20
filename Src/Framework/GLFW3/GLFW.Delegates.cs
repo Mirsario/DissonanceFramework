@@ -7,8 +7,9 @@ namespace Dissonance.Framework.GLFW3
 {
 	partial class GLFW
 	{
+		public delegate void ErrorFunc(int code,IntPtr description);
+
 		[UFP(CC.Cdecl)] public delegate void vk();
-		[UFP(CC.Cdecl)] public delegate void errorfun(int code,[In] [MarshalAs(UnmanagedType.LPStr)] string description);
 		[UFP(CC.Cdecl)] public delegate void windowposfun(IntPtr window,int x,int y);
 		[UFP(CC.Cdecl)] public delegate void windowsizefun(IntPtr window,int w,int h);
 		[UFP(CC.Cdecl)] public delegate void windowclosefun(IntPtr window);

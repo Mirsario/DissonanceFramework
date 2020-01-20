@@ -1,37 +1,70 @@
 ﻿using Dissonance.Utils;
 using System;
+using System.Collections.Generic;
 
 namespace Dissonance.Framework.GLFW3
 {
 	public static partial class GLFW
 	{
-		public const string DefaultPathWindows = "glfw3.dll";
-		public const string DefaultPathLinux = "./libglfw.so";
-		public const string DefaultPathOSX = "./libglfw3.dylib";
+		private static readonly string[] DefaultPathsWindows = {
+			"glfw3.dll"
+		};
+		private static readonly string[] DefaultPathsLinux = {
+			"libglfw.so.3.2",
+			"libglfw.so.3.1",
+			"libglfw.so.3",
+			"libglfw.so"
+		};
+		private static readonly string[] DefaultPathsOSX = {
+			"libglfw3.dylib",
+			"libglfw.dylib",
+			"libglfw.so.3.2",
+			"libglfw.so.3.1",
+			"libglfw.so.3",
+			"libglfw.so"
+		};
 
 		private static IntPtr glfwHandle;
 
 		public static bool IsReady { get; private set; }
 
-		public static void Load() => Load(DefaultPathWindows,DefaultPathLinux,DefaultPathOSX);
-		public static void Load(string windowsPath,string linuxPath,string osxPath) 
+		public static void Load() => Load(DefaultPathsWindows,DefaultPathsLinux,DefaultPathsOSX);
+		public static void Load(IEnumerable<string> windowsPaths,IEnumerable<string> linuxPaths,IEnumerable<string> osxPaths) 
 			=> Load(InternalUtils.GetOS() switch {
-				OS.Windows => windowsPath,
-				OS.Linux => linuxPath,
-				OS.OSX => osxPath,
+				OS.Windows => windowsPaths,
+				OS.Linux => linuxPaths,
+				OS.OSX => osxPaths,
 				_ => null
 			});
-		public static void Load(string osDependentPath)
+		public static void Load(IEnumerable<string> osDependentPaths)
 		{
 			if(IsReady) {
 				return;
 			}
 
-			glfwHandle = DllManager.DllLoad(osDependentPath);
+			foreach(string path in osDependentPaths) {
+				try {
+					glfwHandle = DllManager.DllLoad(path);
+					break;
+				}
+				catch {}
+			}
+
+			if(glfwHandle==IntPtr.Zero) {
+				throw new DllNotFoundException("Unable to locate GLFW libraries.");
+			}
 
 			DllManager.ImportTypeMethods(typeof(GLFW),functionName => DllManager.DllSymbol(glfwHandle,functionName));
 
 			IsReady = true;
 		}
+
+		/*internal static IEnumerable<string> GetLibraryPaths()
+			=> InternalUtils.GetOS() switch {
+				OS.Windows => DefaultPathsWindows,
+				OS.Linux => DefaultPathsLinux,
+				OS.OSX => DefaultPathsOSX,
+				_ => null
+			};*/
 	}
 }

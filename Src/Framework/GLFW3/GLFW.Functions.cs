@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using NotImplementedException = System.NotImplementedException;
 
 #pragma warning disable IDE0060 //Unused parameter.
@@ -20,7 +21,7 @@ namespace Dissonance.Framework.GLFW3
 			=> throw new NotImplementedException();
 
 		[MethodImport("glfwSetErrorCallback")]
-		public static errorfun SetErrorCallback(errorfun cbfun)
+		public static IntPtr SetErrorCallback(IntPtr cbfun)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glfwGetMonitors")]

@@ -19,6 +19,10 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
   <ItemGroup>
 	<Compile Remove="Build\**" />
 	<Compile Remove="References\**" />
@@ -37,10 +41,12 @@
     <Reference Include="MonoMod.RuntimeDetour">
       <HintPath>References\MonoMod.RuntimeDetour.dll</HintPath>
       <Private>false</Private>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
     </Reference>
     <Reference Include="MonoMod.Utils">
       <HintPath>References\MonoMod.Utils.dll</HintPath>
       <Private>false</Private>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
 
