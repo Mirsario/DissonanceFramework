@@ -6,10 +6,11 @@
 	<PublishSingleFile>true</PublishSingleFile>
     <Configurations>Windows;Linux;Mac</Configurations>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Platforms>x64</Platforms>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)'=='Windows'">
-    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <PublishReadyToRun>true</PublishReadyToRun>
   </PropertyGroup>
   

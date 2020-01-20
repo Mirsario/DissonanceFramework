@@ -165,16 +165,6 @@
 		public const int JOYSTICK_15 = 14;
 		public const int JOYSTICK_16 = 15;
 		public const int JOYSTICK_LAST = JOYSTICK_16;
-		public const int NOT_INITIALIZED = 65537;
-		public const int NO_CURRENT_CONTEXT = 65538;
-		public const int INVALID_ENUM = 65539;
-		public const int INVALID_VALUE = 65540;
-		public const int OUT_OF_MEMORY = 65541;
-		public const int API_UNAVAILABLE = 65542;
-		public const int VERSION_UNAVAILABLE = 65543;
-		public const int PLATFORM_ERROR = 65544;
-		public const int FORMAT_UNAVAILABLE = 65545;
-		public const int NO_WINDOW_CONTEXT = 65546;
 		public const int FOCUSED = 131073;
 		public const int ICONIFIED = 131074;
 		public const int RESIZABLE = 131075;

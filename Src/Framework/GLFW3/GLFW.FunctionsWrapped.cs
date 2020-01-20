@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using CC = System.Runtime.InteropServices.CallingConvention;
 
 #pragma warning disable IDE0060 //Unused parameter.
 
@@ -28,32 +29,25 @@ namespace Dissonance.Framework.GLFW3
 		public static int ExtensionSupported(string extension)
 			=> ExtensionSupportedInternal(Marshal.StringToHGlobalAnsi(extension));
 
-		[MethodImport("glfwGetProcAddress")]
-		private static IntPtr GetProcAddressInternal(IntPtr name)
-			=> throw new NotImplementedException();
+		[DllImport(Library,EntryPoint = "glfwGetProcAddress",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern IntPtr GetProcAddressInternal(IntPtr name);
 
-		[MethodImport("glfwGetVersionString")]
-		private static IntPtr GetVersionStringInternal()
-			=> throw new NotImplementedException();
+		[DllImport(Library,EntryPoint = "glfwGetVersionString",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern IntPtr GetVersionStringInternal();
 
-		[MethodImport("glfwGetClipboardString")]
-		private static IntPtr GetClipboardStringInternal(IntPtr window)
-			=> throw new NotImplementedException();
+		[DllImport(Library,EntryPoint = "glfwGetClipboardString",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern IntPtr GetClipboardStringInternal(IntPtr window);
 
-		[MethodImport("glfwSetClipboardString")]
-		private static void SetClipboardStringInternal(IntPtr window,IntPtr str)
-			=> throw new NotImplementedException();
+		[DllImport(Library,EntryPoint = "glfwSetClipboardString",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern void SetClipboardStringInternal(IntPtr window,IntPtr str);
 
-		[MethodImport("glfwSetWindowTitle")]
-		private static void SetWindowTitleInternal(IntPtr window,IntPtr title)
-			=> throw new NotImplementedException();
+		[DllImport(Library,EntryPoint = "glfwSetWindowTitle",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern void SetWindowTitleInternal(IntPtr window,IntPtr title);
 
-		[MethodImport("glfwCreateWindow")]
-		private static IntPtr CreateWindowInternal(int width,int height,IntPtr title,IntPtr monitor,IntPtr share)
-			=> throw new NotImplementedException();
+		[DllImport(Library,EntryPoint = "glfwCreateWindow",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern IntPtr CreateWindowInternal(int width,int height,IntPtr title,IntPtr monitor,IntPtr share);
 
-		[MethodImport("glfwExtensionSupported")]
-		private static int ExtensionSupportedInternal(IntPtr extension)
-			=> throw new NotImplementedException();
+		[DllImport(Library,EntryPoint = "glfwExtensionSupported",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern int ExtensionSupportedInternal(IntPtr extension);
 	}
 }

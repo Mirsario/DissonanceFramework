@@ -4,6 +4,7 @@ using Dissonance.Framework.GLFW3;
 using Dissonance.Framework.OpenGL;
 using Dissonance.Framework.OpenAL;
 using System.Runtime.InteropServices;
+using Dissonance.Framework;
 //using GL = Dissonance.Framework.OpenGL.GLNew;
 
 namespace Test
@@ -14,7 +15,10 @@ namespace Test
 
 		static void Main()
 		{
+			Console.WriteLine($"Working directory: '{Path.GetFullPath(".")}'.");
+
 			PrepareGLFW();
+			PrepareOpenGL();
 			PrepareOpenAL();
 
 			double timePrev = 0d;
@@ -79,45 +83,27 @@ namespace Test
 
 		private static void PrepareGLFW()
 		{
-			//GLFW.Load();
+			Console.WriteLine("GLFW Preparing...");
 
-			try {
-				Console.WriteLine("Trying to set error callbacks...");
-
-				unsafe {
-					GLFW.SetErrorCallback(Marshal.GetFunctionPointerForDelegate<GLFW.ErrorFunc>((int code,IntPtr description) => Console.WriteLine($"GLFW Error {code}")));
-				}
-
-				Console.WriteLine("Error callbacks set.");
-			}
-			catch(Exception e) {
-				Console.WriteLine($"Exception {e.GetType().Name} thrown: {e.Message}");
+			unsafe {
+				GLFW.SetErrorCallback(Marshal.GetFunctionPointerForDelegate<GLFW.ErrorCallback>((GLFWError code,string description) => {
+					Console.WriteLine(code switch {
+						GLFWError.VersionUnavailable => throw new GraphicsException(description),
+						_ => $"GLFW Error {code}: {description}"
+					});
+				}));
 			}
 
 			if(GLFW.Init()==0) {
-				throw new Exception("Unable to initialize GLFW");
+				throw new Exception("Unable to initialize GLFW!");
 			}
 
-
-			Console.WriteLine("1...");
-
-			GLFW.WindowHint(GLFW.CONTEXT_VERSION_MAJOR,3); //Targeted major version
-
-			Console.WriteLine("2...");
-
-			GLFW.WindowHint(GLFW.CONTEXT_VERSION_MINOR,0); //Targeted minor version
-
-			PrepareOpenGL();
-
-			Console.WriteLine("3...");
+			GLFW.WindowHint(GLFW.CONTEXT_VERSION_MAJOR,2); //Targeted major version
+			GLFW.WindowHint(GLFW.CONTEXT_VERSION_MINOR,1); //Targeted minor version
 
 			window = GLFW.CreateWindow(640,480,"Unnamed Window",IntPtr.Zero,IntPtr.Zero);
 
-			Console.WriteLine("4...");
-
 			GLFW.MakeContextCurrent(window);
-
-			Console.WriteLine("5...");
 		}
 		private static void PrepareOpenGL()
 		{

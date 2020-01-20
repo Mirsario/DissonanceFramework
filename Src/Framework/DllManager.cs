@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
+using Dissonance.Framework.GLFW3;
 using Dissonance.Framework.OpenAL;
 using Dissonance.Utils;
 using MonoMod.RuntimeDetour;
@@ -15,37 +17,13 @@ namespace Dissonance.Framework
 	{
 		private const int RTLD_NOW = 2;
 
+		private static readonly Dictionary<string,IntPtr> DllImportCache = new Dictionary<string,IntPtr>();
+
+		private static bool resolversReady;
 		private static Assembly monoModRuntimeDetourAssembly;
 		private static Assembly monoModUtilsAssembly;
 
-		static DllManager()
-		{
-			NativeLibrary.SetDllImportResolver(typeof(DllManager).Assembly,(name,assembly,path) => {
-				string lib = name switch {
-					AL.Library => InternalUtils.GetOS() switch {
-						OS.Windows => AL.LibraryWindows,
-						OS.Linux => AL.LibraryLinux,
-						OS.OSX => AL.LibraryMac,
-						_ => null,
-					},
-					_ => null
-				};
-
-				return lib!=null ? NativeLibrary.Load(lib,assembly,path) : IntPtr.Zero;
-			});
-
-			AppDomain.CurrentDomain.AssemblyResolve += (obj,args) => {
-				if(args.Name.StartsWith("MonoMod.RuntimeDetour")) {
-					return monoModRuntimeDetourAssembly ?? (monoModRuntimeDetourAssembly = Assembly.Load(Properties.Resources.MonoMod_RuntimeDetour));
-				}
-
-				if(args.Name.StartsWith("MonoMod.Utils")) {
-					return monoModUtilsAssembly ?? (monoModUtilsAssembly = Assembly.Load(Properties.Resources.MonoMod_Utils));
-				}
-
-				return null;
-			};
-		}
+		static DllManager() => PrepareResolvers();
 
 		public static void ImportTypeMethods(Type type,Func<string,IntPtr> functionToPointer)
 		{
@@ -111,6 +89,61 @@ namespace Dissonance.Framework
 			} else {
 				memcpy(dest,source,count);
 			}
+		}
+
+		internal static void PrepareResolvers()
+		{
+			if(resolversReady) {
+				return;
+			}
+
+			NativeLibrary.SetDllImportResolver(typeof(DllManager).Assembly,(name,assembly,path) => {
+				Console.WriteLine("DllImportResolver called");
+
+				if(DllImportCache.TryGetValue(name,out IntPtr pointer)) {
+					return pointer;
+				}
+
+				IEnumerable<string> paths = name switch {
+					GLFW.Library => GLFW.GetLibraryPaths(),
+					AL.Library => AL.GetLibraryPaths(),
+					_ => null
+				};
+
+				if(paths!=null) {
+					foreach(string currentPath in paths) {
+						Console.Write($"Trying to load '{currentPath}'...");
+
+						try {
+							DllImportCache[name] = pointer = NativeLibrary.Load(currentPath,assembly,path);
+						}
+						catch { }
+
+						if(pointer!=IntPtr.Zero) {
+							Console.Write(" Success!\r\n");
+							break;
+						}
+
+						Console.Write(" Failure.\r\n");
+					}
+				}
+
+				return pointer;
+			});
+
+			AppDomain.CurrentDomain.AssemblyResolve += (obj,args) => {
+				if(args.Name.StartsWith("MonoMod.RuntimeDetour")) {
+					return monoModRuntimeDetourAssembly ?? (monoModRuntimeDetourAssembly = Assembly.Load(Properties.Resources.MonoMod_RuntimeDetour));
+				}
+
+				if(args.Name.StartsWith("MonoMod.Utils")) {
+					return monoModUtilsAssembly ?? (monoModUtilsAssembly = Assembly.Load(Properties.Resources.MonoMod_Utils));
+				}
+
+				return null;
+			};
+
+			resolversReady = true;
 		}
 
 		[MethodImpl(MethodImplOptions.NoInlining|MethodImplOptions.NoOptimization)]
