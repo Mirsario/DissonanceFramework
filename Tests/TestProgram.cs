@@ -137,6 +137,7 @@ namespace Test
 			AL.GenSource(out uint sourceId);
 
 			AL.Source(sourceId,SourceInt.Buffer,(int)bufferId);
+			AL.Source(sourceId,SourceBool.Looping,true);
 
 			AL.SourcePlay(sourceId);
 		}
