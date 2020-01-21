@@ -11,7 +11,11 @@ namespace Test
 {
 	public static class TestProgram
 	{
+		public const bool Fullscreen = true;
+
 		public static IntPtr window;
+		public static IntPtr audioDevice;
+		public static IntPtr audioContext;
 
 		static void Main()
 		{
@@ -23,9 +27,10 @@ namespace Test
 
 			double timePrev = 0d;
 
+			int width = 0;
+			int height = 0;
+
 			while(GLFW.WindowShouldClose(window)==0) {
-				int width = 0;
-				int height = 0;
 
 				double time = GLFW.GetTime();
 				double deltaTime = time-timePrev;
@@ -59,7 +64,8 @@ namespace Test
 				GLFW.PollEvents();
 			}
 
-			GLFW.DestroyWindow(window);
+			UnloadOpenAL();
+			UnloadGLFW();
 		}
 
 		public static float Lerp(float a,float b,float time) => a+(b-a)*Clamp01(time);
@@ -98,12 +104,35 @@ namespace Test
 				throw new Exception("Unable to initialize GLFW!");
 			}
 
-			GLFW.WindowHint(GLFW.CONTEXT_VERSION_MAJOR,2); //Targeted major version
-			GLFW.WindowHint(GLFW.CONTEXT_VERSION_MINOR,1); //Targeted minor version
+			GLFW.WindowHint(WindowHint.ContextVersionMajor,2); //Targeted major version
+			GLFW.WindowHint(WindowHint.ContextVersionMinor,1); //Targeted minor version
 
-			window = GLFW.CreateWindow(640,480,"Unnamed Window",IntPtr.Zero,IntPtr.Zero);
+			IntPtr monitor = IntPtr.Zero;
+			int resolutionWidth = 800;
+			int resolutionHeight = 600;
+
+			if(Fullscreen) {
+				monitor = GLFW.GetPrimaryMonitor();
+
+				var videoMode = Marshal.PtrToStructure<GLFW.VideoMode>(GLFW.GetVideoMode(monitor));
+
+				GLFW.WindowHint(WindowHint.RedBits,videoMode.redBits);
+				GLFW.WindowHint(WindowHint.GreenBits,videoMode.greenBits);
+				GLFW.WindowHint(WindowHint.BlueBits,videoMode.blueBits);
+				GLFW.WindowHint(WindowHint.RefreshRate,videoMode.refreshRate);
+
+				resolutionWidth = videoMode.width;
+				resolutionHeight = videoMode.height;
+			}
+
+			window = GLFW.CreateWindow(resolutionWidth,resolutionHeight,"Unnamed Window",monitor,IntPtr.Zero);
 
 			GLFW.MakeContextCurrent(window);
+		}
+		private static void UnloadGLFW()
+		{
+			GLFW.DestroyWindow(window);
+			GLFW.Terminate();
 		}
 		private static void PrepareOpenGL()
 		{
@@ -115,8 +144,8 @@ namespace Test
 		}
 		private static void PrepareOpenAL()
 		{
-			var device = ALC.OpenDevice(null);
-			var audioContext = ALC.CreateContext(device,new int[] { });
+			audioDevice = ALC.OpenDevice(null);
+			audioContext = ALC.CreateContext(audioDevice,new int[] { });
 
 			if(!ALC.MakeContextCurrent(audioContext)) {
 				throw new InvalidOperationException("Unable to make context current");
@@ -140,6 +169,11 @@ namespace Test
 			AL.Source(sourceId,SourceBool.Looping,true);
 
 			AL.SourcePlay(sourceId);
+		}
+		private static void UnloadOpenAL()
+		{
+			ALC.DestroyContext(audioContext);
+			ALC.CloseDevice(audioDevice);
 		}
 		private static void CheckGLErrors()
 		{

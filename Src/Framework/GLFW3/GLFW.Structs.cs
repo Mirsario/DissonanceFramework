@@ -30,8 +30,7 @@ namespace Dissonance.Framework.GLFW3
 		{
 			public int width;
 			public int height;
-			[MarshalAs(UnmanagedType.LPStr)]
-			public string pixels;
+			[MarshalAs(UnmanagedType.LPStr)] public string pixels;
 		}
 	}
 }
