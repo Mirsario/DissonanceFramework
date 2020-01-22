@@ -1,5 +1,4 @@
 ﻿using Dissonance.Utils;
-using System;
 using System.Collections.Generic;
 
 namespace Dissonance.Framework.GLFW3

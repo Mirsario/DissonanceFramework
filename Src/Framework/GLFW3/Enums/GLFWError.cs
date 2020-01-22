@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Dissonance.Framework.GLFW3
+﻿namespace Dissonance.Framework.GLFW3
 {
 	/// <summary> GLFW error codes, used in <see cref="GLFW.ErrorCallback"/>. </summary>
 	public enum GLFWError

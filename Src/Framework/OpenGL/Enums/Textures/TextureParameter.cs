@@ -1,6 +1,6 @@
 ﻿namespace Dissonance.Framework.OpenGL
 {
-	public enum TextureParameter
+	public enum TextureParameterName
 	{
 		TextureWidth = 4096,
 		TextureHeight = 4097,

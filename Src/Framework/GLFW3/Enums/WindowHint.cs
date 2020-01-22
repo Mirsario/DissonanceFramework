@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Dissonance.Framework.GLFW3
+﻿namespace Dissonance.Framework.GLFW3
 {
 	public enum WindowHint
 	{

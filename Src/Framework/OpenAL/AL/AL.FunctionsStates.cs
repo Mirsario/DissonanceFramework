@@ -48,7 +48,7 @@ namespace Dissonance.Framework.OpenAL
 		public static extern void DopplerFactor(float value);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alDistanceModel")]
-		public static extern void DistanceModel(int distanceModel);
+		public static extern void DistanceModel(DistanceModel distanceModel);
 
 		#endregion
 

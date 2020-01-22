@@ -11,7 +11,7 @@ namespace Test
 {
 	public static class TestProgram
 	{
-		public const bool Fullscreen = true;
+		public static bool Fullscreen = false;
 
 		public static IntPtr window;
 		public static IntPtr audioDevice;
@@ -31,7 +31,6 @@ namespace Test
 			int height = 0;
 
 			while(GLFW.WindowShouldClose(window)==0) {
-
 				double time = GLFW.GetTime();
 				double deltaTime = time-timePrev;
 				timePrev = time;
@@ -54,9 +53,9 @@ namespace Test
 				//Draw
 				GL.Begin(PrimitiveType.Triangles);
 
-				GL.Vertex3(-1.0f,-1.0f,0.0f);
-				GL.Vertex3(1.0f,-1.0f,0.0f);
-				GL.Vertex3(0.0f,1.0f,0.0f);
+				GL.Vertex3(-1.0f,-1.0f, 0.0f);
+				GL.Vertex3( 1.0f,-1.0f, 0.0f);
+				GL.Vertex3( 0.0f, 1.0f, 0.0f);
 
 				GL.End();
 
@@ -140,7 +139,7 @@ namespace Test
 
 			CheckGLErrors();
 
-			Console.WriteLine($"Loaded {GL.GetString(StringName.Version)}");
+			Console.WriteLine($"Loaded OpenGL {GL.GetString(StringName.Version)}");
 		}
 		private static void PrepareOpenAL()
 		{

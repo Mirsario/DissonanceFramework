@@ -98,8 +98,6 @@ namespace Dissonance.Framework
 			}
 
 			NativeLibrary.SetDllImportResolver(typeof(DllManager).Assembly,(name,assembly,path) => {
-				Console.WriteLine("DllImportResolver called");
-
 				if(DllImportCache.TryGetValue(name,out IntPtr pointer)) {
 					return pointer;
 				}
