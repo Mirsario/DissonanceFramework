@@ -292,7 +292,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glFramebufferRenderbuffer","3.0")]
-		public static void FramebufferRenderbuffer(FramebufferTarget target,uint attachment,uint renderbuffertarget,uint renderbuffer)
+		public static void FramebufferRenderbuffer(FramebufferTarget target,FramebufferAttachment attachment,uint renderbuffertarget,uint renderbuffer)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetFramebufferAttachmentParameteriv","3.0")]

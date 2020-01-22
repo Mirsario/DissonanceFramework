@@ -1,6 +1,7 @@
 ﻿namespace Dissonance.Framework.OpenGL
 {
-	public static partial class GLDirect
+	//TODO: To be completely replaced with enums.. eventually.
+	public static class GLConstants
 	{
 		#region OpenGL 1.0 + OpenGL 1.1
 
