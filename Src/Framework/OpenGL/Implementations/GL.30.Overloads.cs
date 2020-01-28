@@ -36,5 +36,36 @@ namespace Dissonance.Framework.OpenGL
 				DeleteFramebuffers(numFramebuffers,ptr);
 			}
 		}
+
+		//GenRenderbuffer(s)
+
+		[MI(AI)]
+		public unsafe static uint GenRenderbuffer()
+		{
+			uint result;
+
+			GenRenderbuffers(1,&result);
+
+			return result;
+		}
+		[MI(AI)]
+		public unsafe static void GenRenderbuffers(int numRenderBuffers,uint[] renderbuffers)
+		{
+			fixed (uint* ptr = &(renderbuffers!=null && renderbuffers.Length!=0 ? ref renderbuffers[0] : ref *(uint*)null)) {
+				GenRenderbuffers(numRenderBuffers,ptr);
+			}
+		}
+
+		//DeleteRenderbuffer(s)
+
+		[MI(AI)]
+		public unsafe static void DeleteRenderbuffer(uint renderbuffer) => DeleteRenderbuffers(1,&renderbuffer);
+		[MI(AI)]
+		public unsafe static void DeleteRenderbuffers(int numRenderbuffers,uint[] renderbuffers)
+		{
+			fixed (uint* ptr = &(renderbuffers!=null && renderbuffers.Length!=0 ? ref renderbuffers[0] : ref *(uint*)null)) {
+				DeleteRenderbuffers(numRenderbuffers,ptr);
+			}
+		}
 	}
 }

@@ -63,7 +63,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glFramebufferTexture","3.2")]
-		public static void FramebufferTexture(FramebufferTarget target,uint attachment,uint texture,int level)
+		public static void FramebufferTexture(FramebufferTarget target,FramebufferAttachment attachment,uint texture,int level)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glTexImage2DMultisample","3.2")]

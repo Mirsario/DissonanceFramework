@@ -3,7 +3,7 @@
   <PropertyGroup>
 	<OutputType>Library</OutputType>
 	<TargetFramework>netcoreapp3.0</TargetFramework>
-	<Platforms>AnyCPU;x64</Platforms>
+	<Platforms>AnyCPU;x64;x86</Platforms>
 	<AssemblyName>DissonanceFramework</AssemblyName>
 	<RootNamespace>Dissonance</RootNamespace>
 	<ApplicationIcon />
@@ -19,7 +19,15 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
@@ -74,7 +82,7 @@
   <Import Project="$(SolutionDir)SolutionDefines.targets" Condition="exists('$(SolutionDir)SolutionDefines.targets')" />
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="set POSTBUILD=PostBuild.bat&#xD;&#xA;&#xD;&#xA;if exist &quot;$(SolutionDir)%25POSTBUILD%25&quot; (&#xD;&#xA;    echo Running solution's %25POSTBUILD%25...&#xD;&#xA;    call &quot;$(SolutionDir)%25POSTBUILD%25&quot; &quot;$(ProjectName)&quot; &quot;$(TargetPath)&quot; &quot;$(SolutionDir)&quot;&#xD;&#xA;) else (&#xD;&#xA;    echo Solution's %25POSTBUILD%25 is not present.&#xD;&#xA;)" />
+    <Exec Command="if exist &quot;$(SolutionDir)PostBuild.bat&quot; (&#xD;&#xA;    echo Running solution's PostBuild.bat...&#xD;&#xA;    call &quot;$(SolutionDir)PostBuild.bat&quot; &quot;$(ProjectName)&quot; &quot;$(TargetPath)&quot; &quot;$(SolutionDir)&quot;&#xD;&#xA;) else (&#xD;&#xA;    echo Solution's PostBuild.bat is not present.&#xD;&#xA;)" />
   </Target>
 
 </Project>

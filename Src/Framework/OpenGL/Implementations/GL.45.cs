@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 #pragma warning disable IDE0060 //Unused parameter.
 
@@ -35,7 +36,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glCreateBuffers","4.5")]
-		public static void CreateBuffers(int n,ref uint buffers)
+		public static void CreateBuffers(int n,[Out] uint[] buffers)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glNamedBufferStorage","4.5")]
@@ -43,7 +44,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glNamedBufferData","4.5")]
-		public static void NamedBufferData(uint buffer,int size,IntPtr data,uint usage)
+		public static void NamedBufferData(uint buffer,int size,IntPtr data,BufferUsageHint usage)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glNamedBufferSubData","4.5")]
@@ -55,11 +56,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glClearNamedBufferData","4.5")]
-		public static void ClearNamedBufferData(uint buffer,PixelInternalFormat internalFormat,uint format,uint type,IntPtr data)
+		public static void ClearNamedBufferData(uint buffer,PixelInternalFormat internalFormat,PixelFormat format,PixelType type,IntPtr data)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glClearNamedBufferSubData","4.5")]
-		public static void ClearNamedBufferSubData(uint buffer,PixelInternalFormat internalFormat,int offset,int size,uint format,uint type,IntPtr data)
+		public static void ClearNamedBufferSubData(uint buffer,PixelInternalFormat internalFormat,int offset,int size,PixelFormat format,PixelType type,IntPtr data)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glMapNamedBuffer","4.5")]
@@ -99,7 +100,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glNamedFramebufferRenderbuffer","4.5")]
-		public static void NamedFramebufferRenderbuffer(uint framebuffer,uint attachment,uint renderbuffertarget,uint renderbuffer)
+		public static void NamedFramebufferRenderbuffer(uint framebuffer,uint attachment,RenderbufferTarget renderbuffertarget,uint renderbuffer)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glNamedFramebufferParameteri","4.5")]
@@ -107,11 +108,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glNamedFramebufferTexture","4.5")]
-		public static void NamedFramebufferTexture(uint framebuffer,uint attachment,uint texture,int level)
+		public static void NamedFramebufferTexture(uint framebuffer,FramebufferAttachment attachment,uint texture,int level)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glNamedFramebufferTextureLayer","4.5")]
-		public static void NamedFramebufferTextureLayer(uint framebuffer,uint attachment,uint texture,int level,int layer)
+		public static void NamedFramebufferTextureLayer(uint framebuffer,FramebufferAttachment attachment,uint texture,int level,int layer)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glNamedFramebufferDrawBuffer","4.5")]
@@ -127,11 +128,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glInvalidateNamedFramebufferData","4.5")]
-		public static void InvalidateNamedFramebufferData(uint framebuffer,int numAttachments,ref uint attachments)
+		public static unsafe void InvalidateNamedFramebufferData(uint framebuffer,int numAttachments,FramebufferAttachment* attachments)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glInvalidateNamedFramebufferSubData","4.5")]
-		public static void InvalidateNamedFramebufferSubData(uint framebuffer,int numAttachments,ref uint attachments,int x,int y,int width,int height)
+		public static unsafe void InvalidateNamedFramebufferSubData(uint framebuffer,int numAttachments,FramebufferAttachment* attachments,int x,int y,int width,int height)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glClearNamedFramebufferiv","4.5")]
@@ -163,7 +164,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetNamedFramebufferAttachmentParameteriv","4.5")]
-		public static void GetNamedFramebufferAttachmentParameter(uint framebuffer,uint attachment,uint pName,ref int parameters)
+		public static void GetNamedFramebufferAttachmentParameter(uint framebuffer,FramebufferAttachment attachment,uint pName,ref int parameters)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glCreateRenderbuffers","4.5")]
@@ -183,7 +184,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glCreateTextures","4.5")]
-		public static void CreateTextures(uint target,int n,ref uint textures)
+		public static void CreateTextures(TextureTarget target,int n,ref uint textures)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glTextureBuffer","4.5")]
@@ -215,15 +216,15 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glTextureSubImage1D","4.5")]
-		public static void TextureSubImage1D(uint texture,int level,int xOffset,int width,uint format,uint type,IntPtr pixels)
+		public static void TextureSubImage1D(uint texture,int level,int xOffset,int width,PixelFormat format,PixelType type,IntPtr pixels)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glTextureSubImage2D","4.5")]
-		public static void TextureSubImage2D(uint texture,int level,int xOffset,int yOffset,int width,int height,uint format,uint type,IntPtr pixels)
+		public static void TextureSubImage2D(uint texture,int level,int xOffset,int yOffset,int width,int height,PixelFormat format,PixelType type,IntPtr pixels)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glTextureSubImage3D","4.5")]
-		public static void TextureSubImage3D(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr pixels)
+		public static void TextureSubImage3D(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,PixelFormat format,PixelType type,IntPtr pixels)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glCompressedTextureSubImage1D","4.5")]
@@ -283,7 +284,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetTextureImage","4.5")]
-		public static void GetTextureImage(uint texture,int level,uint format,uint type,int bufSize,IntPtr pixels)
+		public static void GetTextureImage(uint texture,int level,PixelFormat format,PixelType type,int bufSize,IntPtr pixels)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetCompressedTextureImage","4.5")]
@@ -403,7 +404,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetTextureSubImage","4.5")]
-		public static void GetTextureSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,int bufSize,IntPtr pixels)
+		public static void GetTextureSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,PixelFormat format,PixelType type,int bufSize,IntPtr pixels)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetCompressedTextureSubImage","4.5")]
@@ -419,7 +420,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetnTexImage","4.5")]
-		public static void GetnTexImage(TextureTarget target,int level,uint format,uint type,int bufSize,IntPtr pixels)
+		public static void GetnTexImage(TextureTarget target,int level,PixelFormat format,PixelType type,int bufSize,IntPtr pixels)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetnUniformdv","4.5")]
@@ -439,7 +440,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glReadnPixels","4.5")]
-		public static void ReadnPixels(int x,int y,int width,int height,uint format,uint type,int bufSize,IntPtr data)
+		public static void ReadnPixels(int x,int y,int width,int height,PixelFormat format,PixelType type,int bufSize,IntPtr data)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glTextureBarrier","4.5")]

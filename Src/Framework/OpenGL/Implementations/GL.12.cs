@@ -11,11 +11,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexImage3D","1.2")]
-		public static void TexImage3D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int height,int depth,int border,uint format,uint type,IntPtr pixels)
+		public static void TexImage3D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int height,int depth,int border,PixelFormat format,PixelType type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexSubImage3D","1.2")]
-		public static void TexSubImage3D(TextureTarget target,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr pixels)
+		public static void TexSubImage3D(TextureTarget target,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,PixelFormat format,PixelType type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glCopyTexSubImage3D","1.2")]

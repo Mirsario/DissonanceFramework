@@ -72,7 +72,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetActiveUniform","2.0")]
-		public static void GetActiveUniform(uint program,uint index,int bufSize,ref int length,ref int size,out ActiveUniformType type,IntPtr name)
+		public unsafe static void GetActiveUniform(uint program,uint index,int bufSize,int* length,int* size,ActiveUniformType* type,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetAttachedShaders","2.0")]
@@ -92,11 +92,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetShaderiv","2.0")]
-		public static void GetShader(uint shader,uint pName,ref int parameters)
+		public static void GetShader(uint shader,ShaderParameterName pName,out int result)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetShaderInfoLog","2.0")]
-		public static void GetShaderInfoLog(uint shader,int bufSize,ref int length,IntPtr infoLog)
+		public static void GetShaderInfoLog(uint shader,int bufSize,out int length,IntPtr infoLog)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetShaderSource","2.0")]
@@ -144,7 +144,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glShaderSource","2.0")]
-		public static void ShaderSource(uint shader,int count,ref IntPtr str,ref int length)
+		public unsafe static void ShaderSource(uint shader,int count,IntPtr str,int* length)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUseProgram","2.0")]
@@ -184,47 +184,47 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform1fv","2.0")]
-		public static void Uniform1(int location,int count,ref float value)
+		public unsafe static void Uniform1(int location,int count,float* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform2fv","2.0")]
-		public static void Uniform2(int location,int count,ref float value)
+		public unsafe static void Uniform2(int location,int count,float* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform3fv","2.0")]
-		public static void Uniform3(int location,int count,ref float value)
+		public unsafe static void Uniform3(int location,int count,float* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform4fv","2.0")]
-		public static void Uniform4(int location,int count,ref float value)
+		public unsafe static void Uniform4(int location,int count,float* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform1iv","2.0")]
-		public static void Uniform1(int location,int count,ref int value)
+		public unsafe static void Uniform1(int location,int count,int* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform2iv","2.0")]
-		public static void Uniform2(int location,int count,ref int value)
+		public unsafe static void Uniform2(int location,int count,int* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform3iv","2.0")]
-		public static void Uniform3(int location,int count,ref int value)
+		public unsafe static void Uniform3(int location,int count,int* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform4iv","2.0")]
-		public static void Uniform4(int location,int count,ref int value)
+		public unsafe static void Uniform4(int location,int count,int* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix2fv","2.0")]
-		public static void UniformMatrix2(int location,int count,byte transpose,ref float value)
+		public unsafe static void UniformMatrix2(int location,int count,bool transpose,float* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix3fv","2.0")]
-		public static void UniformMatrix3(int location,int count,byte transpose,ref float value)
+		public unsafe static void UniformMatrix3(int location,int count,bool transpose,float* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix4fv","2.0")]
-		public static void UniformMatrix4(int location,int count,byte transpose,ref float value)
+		public unsafe static void UniformMatrix4(int location,int count,bool transpose,float* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glValidateProgram","2.0")]
@@ -260,7 +260,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glVertexAttrib2dv","2.0")]
-		public static void VertexAttrib2(uint index,ref double v)
+		public static unsafe void VertexAttrib2(uint index,double* v)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glVertexAttrib2f","2.0")]
@@ -268,7 +268,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glVertexAttrib2fv","2.0")]
-		public static void VertexAttrib2(uint index,ref float v)
+		public static unsafe void VertexAttrib2(uint index,float* v)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glVertexAttrib2s","2.0")]

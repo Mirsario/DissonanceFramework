@@ -17,16 +17,16 @@ namespace Dissonance.Framework.OpenAL
 		public static extern void Source(uint sourceId,SourceFloat parameter,float value);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourceiv")]
-		public static extern void Source3(uint sourceId,SourceIntArray parameter,int[] values);
+		public unsafe static extern void Source(uint sourceId,SourceIntArray parameter,int* values);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourcefv")]
-		public static extern void Source3(uint sourceId,SourceFloatArray parameter,float[] values);
+		public unsafe static extern void Source(uint sourceId,SourceFloatArray parameter,float* values);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSource3i")]
-		public static extern void Source3(uint sourceId,SourceVector3Int parameter,int x,int y,int z);
+		public static extern void Source(uint sourceId,SourceVector3Int parameter,int x,int y,int z);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSource3f")]
-		public static extern void Source3(uint sourceId,SourceVector3Float parameter,float x,float y,float z);
+		public static extern void Source(uint sourceId,SourceVector3Float parameter,float x,float y,float z);
 
 		#endregion
 
@@ -35,13 +35,13 @@ namespace Dissonance.Framework.OpenAL
 		[MI(AI)]
 		public static bool GetSource(uint sourceId,SourceBool parameter)
 		{
-			GetSource(sourceId,(SourceInt)parameter,out int result);
+			GetSource(sourceId,(GetSourceInt)parameter,out int result);
 
 			return result==1;
 		}
 
 		[MI(AI)]
-		public static int GetSource(uint sourceId,SourceInt parameter)
+		public static int GetSource(uint sourceId,GetSourceInt parameter)
 		{
 			GetSource(sourceId,parameter,out int result);
 
@@ -57,16 +57,16 @@ namespace Dissonance.Framework.OpenAL
 		}
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetSourcei")]
-		public static extern void GetSource(uint sourceId,SourceInt parameter,out int value);
+		public static extern void GetSource(uint sourceId,GetSourceInt parameter,out int value);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetSourcef")]
 		public static extern void GetSource(uint sourceId,SourceFloat parameter,out float value);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetSourceiv")]
-		public static extern void GetSource3(uint sourceId,SourceIntArray parameter,int[] values);
+		public unsafe static extern void GetSource3(uint sourceId,SourceIntArray parameter,[Out] int* values);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetSourcefv")]
-		public static extern void GetSource3(uint sourceId,SourceFloatArray parameter,float[] values);
+		public unsafe static extern void GetSource3(uint sourceId,SourceFloatArray parameter,[Out] float* values);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetSource3i")]
 		public static extern void GetSource3(uint sourceId,SourceVector3Int parameter,out int x,out int y,out int z);
@@ -87,7 +87,7 @@ namespace Dissonance.Framework.OpenAL
 		}
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGenSources")]
-		public static extern void GenSources(int numSources,uint[] sourceIdOutputArray);
+		public unsafe static extern void GenSources(int numSources,[Out] uint* sourceIds);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGenSources")]
 		private static extern void GenSourceInternal(int numSources,out uint sourceId);
@@ -99,7 +99,7 @@ namespace Dissonance.Framework.OpenAL
 		public static void DeleteSource(uint sourceId) => DeleteSourceInternal(1,ref sourceId);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alDeleteSources")]
-		public static extern void DeleteSources(int numSources,uint[] sourceIds);
+		public unsafe static extern void DeleteSources(int numSources,[Out] uint* sourceIds);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alDeleteSources")]
 		private static extern void DeleteSourceInternal(int numSources,ref uint sourceId);
@@ -115,37 +115,31 @@ namespace Dissonance.Framework.OpenAL
 		public static extern void SourcePlay(uint sourceId);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourcePlayv")]
-		public static extern void SourcePlay(int numSources,uint[] sourceIds);
+		public unsafe static extern void SourcePlay(int numSources,[Out] uint* sourceIds);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourcePause")]
 		public static extern void SourcePause(uint sourceId);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourcePausev")]
-		public static extern void SourcePause(int numSources,uint[] sourceIds);
+		public unsafe static extern void SourcePause(int numSources,[Out] uint* sourceIds);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourceStop")]
 		public static extern void SourceStop(uint sourceId);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourceStopv")]
-		public static extern void SourceStop(int numSources,uint[] sourceIds);
+		public unsafe static extern void SourceStop(int numSources,[Out] uint* sourceIds);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourceRewind")]
 		public static extern void SourceRewind(uint sourceId);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourceRewindv")]
-		public static extern void SourceRewind(int numSources,uint[] sourceIds);
+		public unsafe static extern void SourceRewind(int numSources,[Out] uint* sourceIds);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourceQueueBuffers")]
-		public static extern void SourceQueueBuffers(uint sourceId,int numBuffers,uint[] bufferIds);
-
-		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourceQueueBuffers")]
-		public static extern void SourceQueueBuffers(uint sourceId,int numBuffers,ref uint bufferIds);
+		public unsafe static extern void SourceQueueBuffers(uint sourceId,int numBuffers,[Out] uint* bufferIds);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourceUnqueueBuffers")]
-		public static extern void SourceUnqueueBuffers(uint sourceId,int numBuffers,uint[] bufferIds);
-
-		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourceUnqueueBuffers")]
-		public static extern void SourceUnqueueBuffers(uint sourceId,int numBuffers,ref uint bufferIds);
+		public unsafe static extern void SourceUnqueueBuffers(uint sourceId,int numBuffers,[Out] uint* bufferIds);
 
 		#endregion
 	}

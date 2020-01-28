@@ -43,11 +43,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glDeleteBuffers","1.5")]
-		public static void DeleteBuffers(int n,ref uint buffers)
+		public unsafe static void DeleteBuffers(int numBuffers,uint* buffers)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGenBuffers","1.5")]
-		public static void GenBuffers(int n,ref uint buffers)
+		public unsafe static void GenBuffers(int numBuffers,uint* buffers)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glIsBuffer","1.5")]
@@ -55,7 +55,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glBufferData","1.5")]
-		public static void BufferData(BufferTarget target,int size,IntPtr data,uint usage)
+		public static void BufferData(BufferTarget target,IntPtr size,IntPtr data,BufferUsageHint usage)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glBufferSubData","1.5")]

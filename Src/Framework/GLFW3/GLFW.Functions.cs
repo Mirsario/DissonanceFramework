@@ -52,7 +52,7 @@ namespace Dissonance.Framework.GLFW3
 		public static extern IntPtr GetCurrentContext();
 
 		[DllImport(Library,EntryPoint = "glfwGetFramebufferSize",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern void GetFramebufferSize(IntPtr window,ref int width,ref int height);
+		public static extern void GetFramebufferSize(IntPtr window,[Out] out int width,[Out] out int height);
 
 		[DllImport(Library,EntryPoint = "glfwGetRequiredInstanceExtensions",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern IntPtr GetRequiredInstanceExtensions(ref uint count);
@@ -63,10 +63,10 @@ namespace Dissonance.Framework.GLFW3
 		//Set
 
 		[DllImport(Library,EntryPoint = "glfwSetErrorCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern IntPtr SetErrorCallback(IntPtr cbfun);
+		public static extern IntPtr SetErrorCallback(ErrorCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetFramebufferSizeCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern framebuffersizefun SetFramebufferSizeCallback(IntPtr window,framebuffersizefun cbfun);
+		public static extern FramebufferSizeCallback SetFramebufferSizeCallback(IntPtr window,FramebufferSizeCallback callback);
 
 		#endregion
 
@@ -75,10 +75,10 @@ namespace Dissonance.Framework.GLFW3
 		//Get
 
 		[DllImport(Library,EntryPoint = "glfwGetWindowPos",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern void GetWindowPos(IntPtr window,ref int xpos,ref int ypos);
+		public static extern void GetWindowPos(IntPtr window,out int xPos,out int yPos);
 
 		[DllImport(Library,EntryPoint = "glfwGetWindowSize",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern void GetWindowSize(IntPtr window,ref int width,ref int height);
+		public static extern void GetWindowSize(IntPtr window,out int width,out int height);
 
 		[DllImport(Library,EntryPoint = "glfwGetWindowFrameSize",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern void GetWindowFrameSize(IntPtr window,ref int left,ref int top,ref int right,ref int bottom);
@@ -101,7 +101,7 @@ namespace Dissonance.Framework.GLFW3
 		public static extern void SetWindowIcon(IntPtr window,int count,ref Image images);
 
 		[DllImport(Library,EntryPoint = "glfwSetWindowPos",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern void SetWindowPos(IntPtr window,int xpos,int ypos);
+		public static extern void SetWindowPos(IntPtr window,int xPos,int yPos);
 
 		[DllImport(Library,EntryPoint = "glfwSetWindowSizeLimits",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern void SetWindowSizeLimits(IntPtr window,int minwidth,int minheight,int maxwidth,int maxheight);
@@ -113,7 +113,7 @@ namespace Dissonance.Framework.GLFW3
 		public static extern void SetWindowSize(IntPtr window,int width,int height);
 
 		[DllImport(Library,EntryPoint = "glfwSetWindowMonitor",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern void SetWindowMonitor(IntPtr window,IntPtr monitor,int xpos,int ypos,int width,int height,int refreshRate);
+		public static extern void SetWindowMonitor(IntPtr window,IntPtr monitor,int xPos,int yPos,int width,int height,int refreshRate);
 
 		[DllImport(Library,EntryPoint = "glfwSetWindowUserPointer",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern void SetWindowUserPointer(IntPtr window,IntPtr pointer);
@@ -124,22 +124,22 @@ namespace Dissonance.Framework.GLFW3
 		//Callbacks
 
 		[DllImport(Library,EntryPoint = "glfwSetWindowPosCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern windowposfun SetWindowPosCallback(IntPtr window,windowposfun cbfun);
+		public static extern WindowPosCallback SetWindowPosCallback(IntPtr window,WindowPosCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetWindowSizeCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern windowsizefun SetWindowSizeCallback(IntPtr window,windowsizefun cbfun);
+		public static extern WindowSizeCallback SetWindowSizeCallback(IntPtr window,WindowSizeCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetWindowCloseCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern windowclosefun SetWindowCloseCallback(IntPtr window,windowclosefun cbfun);
+		public static extern WindowCloseCallback SetWindowCloseCallback(IntPtr window,WindowCloseCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetWindowRefreshCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern windowrefreshfun SetWindowRefreshCallback(IntPtr window,windowrefreshfun cbfun);
+		public static extern WindowRefreshCallback SetWindowRefreshCallback(IntPtr window,WindowRefreshCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetWindowFocusCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern windowfocusfun SetWindowFocusCallback(IntPtr window,windowfocusfun cbfun);
+		public static extern WindowFocusCallback SetWindowFocusCallback(IntPtr window,WindowFocusCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetWindowIconifyCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern windowiconifyfun SetWindowIconifyCallback(IntPtr window,windowiconifyfun cbfun);
+		public static extern WindowIconifyCallback SetWindowIconifyCallback(IntPtr window,WindowIconifyCallback callback);
 
 		//Etc
 
@@ -192,19 +192,21 @@ namespace Dissonance.Framework.GLFW3
 		public static extern IntPtr GetMonitorName(IntPtr monitor);
 
 		[DllImport(Library,EntryPoint = "glfwGetMonitorPos",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern void GetMonitorPos(IntPtr monitor,ref int xpos,ref int ypos);
+		public static extern void GetMonitorPos(IntPtr monitor,out int xPos,out int yPos);
 
 		[DllImport(Library,EntryPoint = "glfwGetMonitorPhysicalSize",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern void GetMonitorPhysicalSize(IntPtr monitor,ref int widthMM,ref int heightMM);
-
-		[DllImport(Library,EntryPoint = "glfwGetVideoMode",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern IntPtr GetVideoMode(IntPtr monitor);
 
 		[DllImport(Library,EntryPoint = "glfwGetVideoModes",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern IntPtr GetVideoModes(IntPtr monitor,ref int count);
 
 		[DllImport(Library,EntryPoint = "glfwGetGammaRamp",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern IntPtr GetGammaRamp(IntPtr monitor);
+
+		public static VideoMode GetVideoMode(IntPtr monitor) => Marshal.PtrToStructure<VideoMode>(GetVideoModeInternal(monitor));
+
+		[DllImport(Library,EntryPoint = "glfwGetVideoMode",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern IntPtr GetVideoModeInternal(IntPtr monitor);
 
 		//Set
 
@@ -217,7 +219,7 @@ namespace Dissonance.Framework.GLFW3
 		//Callbacks
 
 		[DllImport(Library,EntryPoint = "glfwSetMonitorCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern monitorfun SetMonitorCallback(monitorfun cbfun);
+		public static extern MonitorCallback SetMonitorCallback(MonitorCallback callback);
 
 		#endregion
 
@@ -235,7 +237,7 @@ namespace Dissonance.Framework.GLFW3
 		public static extern IntPtr GetKeyName(int key,int scancode);
 
 		[DllImport(Library,EntryPoint = "glfwGetCursorPos",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern void GetCursorPos(IntPtr window,ref double xpos,ref double ypos);
+		public static extern void GetCursorPos(IntPtr window,ref double xPos,ref double yPos);
 
 		[DllImport(Library,EntryPoint = "glfwGetMouseButton",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern int GetMouseButton(IntPtr window,int button);
@@ -255,7 +257,7 @@ namespace Dissonance.Framework.GLFW3
 		public static extern void SetInputMode(IntPtr window,int mode,int value);
 
 		[DllImport(Library,EntryPoint = "glfwSetCursorPos",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern void SetCursorPos(IntPtr window,double xpos,double ypos);
+		public static extern void SetCursorPos(IntPtr window,double xPos,double yPos);
 
 		[DllImport(Library,EntryPoint = "glfwJoystickPresent",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern int JoystickPresent(int joy);
@@ -263,31 +265,31 @@ namespace Dissonance.Framework.GLFW3
 		//Callbacks
 
 		[DllImport(Library,EntryPoint = "glfwSetKeyCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern keyfun SetKeyCallback(IntPtr window,keyfun cbfun);
+		public static extern KeyCallback SetKeyCallback(IntPtr window,KeyCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetCharCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern charfun SetCharCallback(IntPtr window,charfun cbfun);
+		public static extern CharCallback SetCharCallback(IntPtr window,CharCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetCharModsCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern charmodsfun SetCharModsCallback(IntPtr window,charmodsfun cbfun);
+		public static extern CharModsCallback SetCharModsCallback(IntPtr window,CharModsCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetMouseButtonCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern mousebuttonfun SetMouseButtonCallback(IntPtr window,mousebuttonfun cbfun);
+		public static extern MouseButtonCallback SetMouseButtonCallback(IntPtr window,MouseButtonCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetCursorPosCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern cursorposfun SetCursorPosCallback(IntPtr window,cursorposfun cbfun);
+		public static extern CursorPosCallback SetCursorPosCallback(IntPtr window,CursorPosCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetCursorEnterCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern cursorenterfun SetCursorEnterCallback(IntPtr window,cursorenterfun cbfun);
+		public static extern CursorEnterCallback SetCursorEnterCallback(IntPtr window,CursorEnterCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetScrollCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern scrollfun SetScrollCallback(IntPtr window,scrollfun cbfun);
+		public static extern ScrollCallback SetScrollCallback(IntPtr window,ScrollCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetDropCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern dropfun SetDropCallback(IntPtr window,dropfun cbfun);
+		public static extern DropCallback SetDropCallback(IntPtr window,DropCallback callback);
 
 		[DllImport(Library,EntryPoint = "glfwSetJoystickCallback",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern joystickfun SetJoystickCallback(joystickfun cbfun);
+		public static extern JoystickCallback SetJoystickCallback(JoystickCallback callback);
 
 		#endregion
 

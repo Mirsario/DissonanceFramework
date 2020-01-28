@@ -288,11 +288,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glDrawElements","1.0")]
-		public static void DrawElements(uint mode,int count,uint type,IntPtr indices)
+		public static void DrawElements(PrimitiveType mode,int count,DrawElementsType type,IntPtr indices)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glDrawPixels","1.0")]
-		public static void DrawPixels(int width,int height,uint format,uint type,IntPtr pixels)
+		public static void DrawPixels(int width,int height,PixelFormat format,PixelType type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glEdgeFlag","1.0")]
@@ -504,7 +504,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetTexImage","1.0")]
-		public static void GetTexImage(TextureTarget target,int level,uint format,uint type,IntPtr pixels)
+		public static void GetTexImage(TextureTarget target,int level,PixelFormat format,PixelType type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glGetTexLevelParameterfv","1.0")]
@@ -820,7 +820,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glPolygonMode","1.0")]
-		public static void PolygonMode(uint face,uint mode)
+		public static void PolygonMode(MaterialFace face,PolygonMode mode)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glPolygonOffset","1.0")]
@@ -968,7 +968,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glReadPixels","1.0")]
-		public static void ReadPixels(int x,int y,int width,int height,uint format,uint type,IntPtr pixels)
+		public static void ReadPixels(int x,int y,int width,int height,PixelFormat format,PixelType type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glRectd","1.0")]
@@ -1220,11 +1220,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexImage1D","1.0")]
-		public static void TexImage1D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int border,uint format,uint type,IntPtr pixels)
+		public static void TexImage1D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int border,PixelFormat format,PixelType type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexImage2D","1.0")]
-		public static void TexImage2D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int height,int border,uint format,uint type,IntPtr pixels)
+		public static void TexImage2D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int height,int border,PixelFormat format,PixelType type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexParameterf","1.0")]
@@ -1244,7 +1244,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexSubImage1D","1.0")]
-		public static void TexSubImage1D(TextureTarget target,int level,int xOffset,int width,uint format,uint type,IntPtr pixels)
+		public static void TexSubImage1D(TextureTarget target,int level,int xOffset,int width,PixelFormat format,PixelType type,IntPtr pixels)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glTexSubImage2D","1.0")]

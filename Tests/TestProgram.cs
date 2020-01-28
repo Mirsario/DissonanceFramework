@@ -23,19 +23,18 @@ namespace Test
 
 			PrepareGLFW();
 			PrepareOpenGL();
-			PrepareOpenAL();
+			//PrepareOpenAL();
 
-			double timePrev = 0d;
+			//double timePrev = 0d;
 
-			int width = 0;
-			int height = 0;
+			CheckGLErrors();
 
 			while(GLFW.WindowShouldClose(window)==0) {
 				double time = GLFW.GetTime();
-				double deltaTime = time-timePrev;
-				timePrev = time;
+				//double deltaTime = time-timePrev;
+				//timePrev = time;
 
-				GLFW.GetFramebufferSize(window,ref width,ref height);
+				GLFW.GetFramebufferSize(window,out int width,out int height);
 
 				GL.Viewport(0,0,width,height);
 
@@ -90,14 +89,10 @@ namespace Test
 		{
 			Console.WriteLine("GLFW Preparing...");
 
-			unsafe {
-				GLFW.SetErrorCallback(Marshal.GetFunctionPointerForDelegate<GLFW.ErrorCallback>((GLFWError code,string description) => {
-					Console.WriteLine(code switch {
-						GLFWError.VersionUnavailable => throw new GraphicsException(description),
-						_ => $"GLFW Error {code}: {description}"
-					});
-				}));
-			}
+			GLFW.SetErrorCallback((GLFWError code,string description) => Console.WriteLine(code switch {
+				GLFWError.VersionUnavailable => throw new GraphicsException(description),
+				_ => $"GLFW Error {code}: {description}"
+			}));
 
 			if(GLFW.Init()==0) {
 				throw new Exception("Unable to initialize GLFW!");
@@ -113,7 +108,7 @@ namespace Test
 			if(Fullscreen) {
 				monitor = GLFW.GetPrimaryMonitor();
 
-				var videoMode = Marshal.PtrToStructure<GLFW.VideoMode>(GLFW.GetVideoMode(monitor));
+				var videoMode = GLFW.GetVideoMode(monitor);
 
 				GLFW.WindowHint(WindowHint.RedBits,videoMode.redBits);
 				GLFW.WindowHint(WindowHint.GreenBits,videoMode.greenBits);

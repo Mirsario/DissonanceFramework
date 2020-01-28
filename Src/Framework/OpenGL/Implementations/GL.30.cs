@@ -244,11 +244,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glDeleteRenderbuffers","3.0")]
-		public static void DeleteRenderbuffers(int n,ref uint renderbuffers)
+		public unsafe static void DeleteRenderbuffers(int numRenderbuffers,uint* renderbuffers)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGenRenderbuffers","3.0")]
-		public static void GenRenderbuffers(int n,ref uint renderbuffers)
+		public unsafe static void GenRenderbuffers(int numRenderbuffers,uint* renderbuffers)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glRenderbufferStorage","3.0")]
@@ -280,23 +280,23 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glFramebufferTexture1D","3.0")]
-		public static void FramebufferTexture1D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level)
+		public static void FramebufferTexture1D(FramebufferTarget target,FramebufferAttachment attachment,TextureTarget texTarget,uint texture,int level)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glFramebufferTexture2D","3.0")]
-		public static void FramebufferTexture2D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level)
+		public static void FramebufferTexture2D(FramebufferTarget target,FramebufferAttachment attachment,TextureTarget texTarget,uint texture,int level)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glFramebufferTexture3D","3.0")]
-		public static void FramebufferTexture3D(FramebufferTarget target,uint attachment,uint texTarget,uint texture,int level,int zOffset)
+		public static void FramebufferTexture3D(FramebufferTarget target,FramebufferAttachment attachment,TextureTarget texTarget,uint texture,int level,int zOffset)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glFramebufferRenderbuffer","3.0")]
-		public static void FramebufferRenderbuffer(FramebufferTarget target,FramebufferAttachment attachment,uint renderbuffertarget,uint renderbuffer)
+		public static void FramebufferRenderbuffer(FramebufferTarget target,FramebufferAttachment attachment,RenderbufferTarget renderbuffertarget,uint renderbuffer)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetFramebufferAttachmentParameteriv","3.0")]
-		public static void GetFramebufferAttachmentParameter(FramebufferTarget target,uint attachment,uint pName,ref int parameters)
+		public static void GetFramebufferAttachmentParameter(FramebufferTarget target,FramebufferAttachment attachment,uint pName,ref int parameters)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGenerateMipmap","3.0")]
@@ -304,7 +304,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glBlitFramebuffer","3.0")]
-		public static void BlitFramebuffer(int srcX0,int srcY0,int srcX1,int srcY1,int dstX0,int dstY0,int dstX1,int dstY1,uint mask,uint filter)
+		public static void BlitFramebuffer(int srcX0,int srcY0,int srcX1,int srcY1,int dstX0,int dstY0,int dstX1,int dstY1,ClearBufferMask mask,BlitFramebufferFilter filter)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glRenderbufferStorageMultisample","3.0")]
@@ -312,7 +312,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glFramebufferTextureLayer","3.0")]
-		public static void FramebufferTextureLayer(FramebufferTarget target,uint attachment,uint texture,int level,int layer)
+		public static void FramebufferTextureLayer(FramebufferTarget target,FramebufferAttachment attachment,uint texture,int level,int layer)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glMapBufferRange","3.0")]

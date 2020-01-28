@@ -8,11 +8,11 @@ namespace Dissonance.Framework.OpenGL
 	partial class GL
 	{
 		[MethodImport("glClearBufferData","4.3")]
-		public static void ClearBufferData(BufferTarget target,PixelInternalFormat internalFormat,uint format,uint type,IntPtr data)
+		public static void ClearBufferData(BufferTarget target,PixelInternalFormat internalFormat,PixelFormat format,PixelType type,IntPtr data)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glClearBufferSubData","4.3")]
-		public static void ClearBufferSubData(BufferTarget target,PixelInternalFormat internalFormat,int offset,int size,uint format,uint type,IntPtr data)
+		public static void ClearBufferSubData(BufferTarget target,PixelInternalFormat internalFormat,int offset,int size,PixelFormat format,PixelType type,IntPtr data)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glDispatchCompute","4.3")]
@@ -56,11 +56,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glInvalidateFramebuffer","4.3")]
-		public static void InvalidateFramebuffer(FramebufferTarget target,int numAttachments,ref uint attachments)
+		public static unsafe void InvalidateFramebuffer(FramebufferTarget target,int numAttachments,FramebufferAttachment* attachments)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glInvalidateSubFramebuffer","4.3")]
-		public static void InvalidateSubFramebuffer(FramebufferTarget target,int numAttachments,ref uint attachments,int x,int y,int width,int height)
+		public static unsafe void InvalidateSubFramebuffer(FramebufferTarget target,int numAttachments,FramebufferAttachment* attachments,int x,int y,int width,int height)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glMultiDrawArraysIndirect","4.3")]

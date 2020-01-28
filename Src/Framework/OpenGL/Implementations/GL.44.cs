@@ -11,11 +11,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glClearTexImage","4.4")]
-		public static void ClearTexImage(uint texture,int level,uint format,uint type,IntPtr data)
+		public static void ClearTexImage(uint texture,int level,PixelFormat format,PixelType type,IntPtr data)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glClearTexSubImage","4.4")]
-		public static void ClearTexSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,uint type,IntPtr data)
+		public static void ClearTexSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,PixelFormat format,PixelType type,IntPtr data)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glBindBuffersBase","4.4")]

@@ -18,10 +18,14 @@ namespace Dissonance.Framework
 		private const int RTLD_NOW = 2;
 
 		private static readonly Dictionary<string,IntPtr> DllImportCache = new Dictionary<string,IntPtr>();
+		private static readonly string[] EmbeddedAssemblies = {
+			"MonoMod.RuntimeDetour",
+			"MonoMod.Utils",
+			"Mono.Cecil"
+		};
 
 		private static bool resolversReady;
-		private static Assembly monoModRuntimeDetourAssembly;
-		private static Assembly monoModUtilsAssembly;
+		private static Dictionary<string,Assembly> assemblyCache;
 
 		static DllManager() => PrepareResolvers();
 
@@ -97,6 +101,8 @@ namespace Dissonance.Framework
 				return;
 			}
 
+			assemblyCache = new Dictionary<string,Assembly>();
+
 			NativeLibrary.SetDllImportResolver(typeof(DllManager).Assembly,(name,assembly,path) => {
 				if(DllImportCache.TryGetValue(name,out IntPtr pointer)) {
 					return pointer;
@@ -130,12 +136,18 @@ namespace Dissonance.Framework
 			});
 
 			AppDomain.CurrentDomain.AssemblyResolve += (obj,args) => {
-				if(args.Name.StartsWith("MonoMod.RuntimeDetour")) {
-					return monoModRuntimeDetourAssembly ?? (monoModRuntimeDetourAssembly = Assembly.Load(Properties.Resources.MonoMod_RuntimeDetour));
+				string assemblyName = args.Name;
+
+				if(assemblyCache.TryGetValue(assemblyName,out var assembly)) {
+					return assembly;
 				}
 
-				if(args.Name.StartsWith("MonoMod.Utils")) {
-					return monoModUtilsAssembly ?? (monoModUtilsAssembly = Assembly.Load(Properties.Resources.MonoMod_Utils));
+				for(int i = 0;i<EmbeddedAssemblies.Length;i++) {
+					var embeddedAssembly = EmbeddedAssemblies[i];
+
+					if(args.Name.StartsWith(embeddedAssembly)) {
+						return assemblyCache[assemblyName] = Assembly.Load((byte[])Properties.Resources.ResourceManager.GetObject(embeddedAssembly));
+					}
 				}
 
 				return null;

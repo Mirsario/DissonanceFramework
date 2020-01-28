@@ -63,9 +63,19 @@ namespace Dissonance.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Mono_Cecil {
+            get {
+                object obj = ResourceManager.GetObject("Mono.Cecil", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] MonoMod_RuntimeDetour {
             get {
-                object obj = ResourceManager.GetObject("MonoMod_RuntimeDetour", resourceCulture);
+                object obj = ResourceManager.GetObject("MonoMod.RuntimeDetour", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -75,7 +85,7 @@ namespace Dissonance.Properties {
         /// </summary>
         internal static byte[] MonoMod_Utils {
             get {
-                object obj = ResourceManager.GetObject("MonoMod_Utils", resourceCulture);
+                object obj = ResourceManager.GetObject("MonoMod.Utils", resourceCulture);
                 return ((byte[])(obj));
             }
         }

@@ -52,59 +52,59 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform1dv","4.0")]
-		public static void Uniform1(int location,int count,ref double value)
+		public unsafe static void Uniform1(int location,int count,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform2dv","4.0")]
-		public static void Uniform2(int location,int count,ref double value)
+		public unsafe static void Uniform2(int location,int count,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform3dv","4.0")]
-		public static void Uniform3(int location,int count,ref double value)
+		public unsafe static void Uniform3(int location,int count,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform4dv","4.0")]
-		public static void Uniform4(int location,int count,ref double value)
+		public unsafe static void Uniform4(int location,int count,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix2dv","4.0")]
-		public static void UniformMatrix2(int location,int count,byte transpose,ref double value)
+		public unsafe static void UniformMatrix2(int location,int count,byte transpose,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix3dv","4.0")]
-		public static void UniformMatrix3(int location,int count,byte transpose,ref double value)
+		public unsafe static void UniformMatrix3(int location,int count,byte transpose,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix4dv","4.0")]
-		public static void UniformMatrix4(int location,int count,byte transpose,ref double value)
+		public unsafe static void UniformMatrix4(int location,int count,byte transpose,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix2x3dv","4.0")]
-		public static void UniformMatrix2x3(int location,int count,byte transpose,ref double value)
+		public unsafe static void UniformMatrix2x3(int location,int count,byte transpose,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix2x4dv","4.0")]
-		public static void UniformMatrix2x4(int location,int count,byte transpose,ref double value)
+		public unsafe static void UniformMatrix2x4(int location,int count,byte transpose,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix3x2dv","4.0")]
-		public static void UniformMatrix3x2(int location,int count,byte transpose,ref double value)
+		public unsafe static void UniformMatrix3x2(int location,int count,byte transpose,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix3x4dv","4.0")]
-		public static void UniformMatrix3x4(int location,int count,byte transpose,ref double value)
+		public unsafe static void UniformMatrix3x4(int location,int count,byte transpose,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix4x2dv","4.0")]
-		public static void UniformMatrix4x2(int location,int count,byte transpose,ref double value)
+		public unsafe static void UniformMatrix4x2(int location,int count,byte transpose,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformMatrix4x3dv","4.0")]
-		public static void UniformMatrix4x3(int location,int count,byte transpose,ref double value)
+		public unsafe static void UniformMatrix4x3(int location,int count,byte transpose,double* value)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetUniformdv","4.0")]
-		public static void GetUniform(uint program,int location,ref double parameters)
+		public unsafe static void GetUniform(uint program,int location,double* parameters)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetSubroutineUniformLocation","4.0")]
@@ -116,27 +116,27 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetActiveSubroutineUniformiv","4.0")]
-		public static void GetActiveSubroutineUniform(uint program,uint shadertype,uint index,uint pName,ref int values)
+		public unsafe static void GetActiveSubroutineUniform(uint program,uint shadertype,uint index,uint pName,int* values)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetActiveSubroutineUniformName","4.0")]
-		public static void GetActiveSubroutineUniformName(uint program,uint shadertype,uint index,int bufsize,ref int length,IntPtr name)
+		public unsafe static void GetActiveSubroutineUniformName(uint program,uint shadertype,uint index,int bufsize,int* length,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetActiveSubroutineName","4.0")]
-		public static void GetActiveSubroutineName(uint program,uint shadertype,uint index,int bufsize,ref int length,IntPtr name)
+		public unsafe static void GetActiveSubroutineName(uint program,uint shadertype,uint index,int bufsize,int* length,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniformSubroutinesuiv","4.0")]
-		public static void UniformSubroutines(uint shadertype,int count,ref uint indices)
+		public unsafe static void UniformSubroutines(uint shadertype,int count,uint* indices)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetUniformSubroutineuiv","4.0")]
-		public static void GetUniformSubroutine(uint shadertype,int location,ref uint parameters)
+		public unsafe static void GetUniformSubroutine(uint shadertype,int location,uint* parameters)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetProgramStageiv","4.0")]
-		public static void GetProgramStage(uint program,uint shadertype,uint pName,ref int values)
+		public unsafe static void GetProgramStage(uint program,uint shadertype,uint pName,int* values)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glPatchParameteri","4.0")]
@@ -144,7 +144,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glPatchParameterfv","4.0")]
-		public static void PatchParameter(uint pName,ref float values)
+		public unsafe static void PatchParameter(uint pName,float* values)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glBindTransformFeedback","4.0")]
@@ -152,11 +152,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glDeleteTransformFeedbacks","4.0")]
-		public static void DeleteTransformFeedbacks(int n,ref uint ids)
+		public unsafe static void DeleteTransformFeedbacks(int n,uint* ids)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGenTransformFeedbacks","4.0")]
-		public static void GenTransformFeedbacks(int n,ref uint ids)
+		public unsafe static void GenTransformFeedbacks(int n,uint* ids)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glIsTransformFeedback","4.0")]
@@ -188,7 +188,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetQueryIndexediv","4.0")]
-		public static void GetQueryIndexed(uint target,uint index,uint pName,ref int parameters)
+		public unsafe static void GetQueryIndexed(uint target,uint index,uint pName,int* parameters)
 			=> throw new NotImplementedException();
 	}
 }

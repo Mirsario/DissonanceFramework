@@ -118,10 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MonoMod_RuntimeDetour" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Mono.Cecil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\References\Mono.Cecil.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MonoMod.RuntimeDetour" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\References\MonoMod.RuntimeDetour.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MonoMod_Utils" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="MonoMod.Utils" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\References\MonoMod.Utils.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
