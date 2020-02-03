@@ -12,7 +12,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glDrawBuffers","2.0")]
-		public static void DrawBuffers(int numDrawBuffers,ref uint bufs)
+		public static unsafe void DrawBuffers(int numDrawBuffers,uint* drawBuffers)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glStencilOpSeparate","2.0")]
@@ -32,7 +32,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glBindAttribLocation","2.0")]
-		public static void BindAttribLocation(uint program,uint index,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static void BindAttribLocation(uint program,uint index,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glCompileShader","2.0")]
@@ -80,7 +80,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetAttribLocation","2.0")]
-		public static int GetAttribLocation(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static int GetAttribLocation(uint program,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetProgramiv","2.0")]
@@ -104,7 +104,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetUniformLocation","2.0")]
-		public static int GetUniformLocation(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static int GetUniformLocation(uint program,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetUniformfv","2.0")]

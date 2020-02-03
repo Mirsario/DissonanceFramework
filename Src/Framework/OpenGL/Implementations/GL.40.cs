@@ -108,11 +108,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetSubroutineUniformLocation","4.0")]
-		public static int GetSubroutineUniformLocation(uint program,uint shadertype,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static int GetSubroutineUniformLocation(uint program,uint shadertype,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetSubroutineIndex","4.0")]
-		public static uint GetSubroutineIndex(uint program,uint shadertype,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static uint GetSubroutineIndex(uint program,uint shadertype,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetActiveSubroutineUniformiv","4.0")]

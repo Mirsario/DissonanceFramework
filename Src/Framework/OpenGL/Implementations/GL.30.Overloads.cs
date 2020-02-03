@@ -67,5 +67,37 @@ namespace Dissonance.Framework.OpenGL
 				DeleteRenderbuffers(numRenderbuffers,ptr);
 			}
 		}
+
+
+		//GenVertexArray(s)
+
+		[MI(AI)]
+		public unsafe static uint GenVertexArray()
+		{
+			uint result;
+
+			GenVertexArrays(1,&result);
+
+			return result;
+		}
+		[MI(AI)]
+		public unsafe static void GenVertexArrays(int numArrays,uint[] vertexArrays)
+		{
+			fixed (uint* ptr = &(vertexArrays!=null && vertexArrays.Length!=0 ? ref vertexArrays[0] : ref *(uint*)null)) {
+				GenVertexArrays(numArrays,ptr);
+			}
+		}
+
+		//DeleteVertexArray(s)
+
+		[MI(AI)]
+		public unsafe static void DeleteVertexArray(uint vertexArray) => DeleteVertexArrays(1,&vertexArray);
+		[MI(AI)]
+		public unsafe static void DeleteVertexArrays(int numArrays,uint[] vertexArrays)
+		{
+			fixed (uint* ptr = &(vertexArrays!=null && vertexArrays.Length!=0 ? ref vertexArrays[0] : ref *(uint*)null)) {
+				DeleteVertexArrays(numArrays,ptr);
+			}
+		}
 	}
 }

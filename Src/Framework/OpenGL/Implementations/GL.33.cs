@@ -8,11 +8,11 @@ namespace Dissonance.Framework.OpenGL
 	partial class GL
 	{
 		[MethodImport("glBindFragDataLocationIndexed","3.3")]
-		public static void BindFragDataLocationIndexed(uint program,uint colorNumber,uint index,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static void BindFragDataLocationIndexed(uint program,uint colorNumber,uint index,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetFragDataIndex","3.3")]
-		public static int GetFragDataIndex(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static int GetFragDataIndex(uint program,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGenSamplers","3.3")]

@@ -164,11 +164,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glBindFragDataLocation","3.0")]
-		public static void BindFragDataLocation(uint program,uint color,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static void BindFragDataLocation(uint program,uint color,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetFragDataLocation","3.0")]
-		public static int GetFragDataLocation(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static int GetFragDataLocation(uint program,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glUniform1ui","3.0")]
@@ -328,11 +328,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glDeleteVertexArrays","3.0")]
-		public static void DeleteVertexArrays(int n,ref uint arrays)
+		public static unsafe void DeleteVertexArrays(int numArrays,uint* arrays)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGenVertexArrays","3.0")]
-		public static void GenVertexArrays(int n,ref uint arrays)
+		public static unsafe void GenVertexArrays(int numArrays,uint* arrays)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glIsVertexArray","3.0")]

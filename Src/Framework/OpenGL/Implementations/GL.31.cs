@@ -40,7 +40,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetUniformBlockIndex","3.1")]
-		public static uint GetUniformBlockIndex(uint program,[In] [MarshalAs(UnmanagedType.LPStr)] string uniformBlockName)
+		public static uint GetUniformBlockIndex(uint program,IntPtr uniformBlockName)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetActiveUniformBlockiv","3.1")]

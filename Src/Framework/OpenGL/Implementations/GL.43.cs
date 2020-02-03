@@ -76,7 +76,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetProgramResourceIndex","4.3")]
-		public static uint GetProgramResourceIndex(uint program,uint programInterface,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static uint GetProgramResourceIndex(uint program,uint programInterface,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetProgramResourceName","4.3")]
@@ -88,11 +88,11 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetProgramResourceLocation","4.3")]
-		public static int GetProgramResourceLocation(uint program,uint programInterface,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static int GetProgramResourceLocation(uint program,uint programInterface,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetProgramResourceLocationIndex","4.3")]
-		public static int GetProgramResourceLocationIndex(uint program,uint programInterface,[In] [MarshalAs(UnmanagedType.LPStr)] string name)
+		public static int GetProgramResourceLocationIndex(uint program,uint programInterface,IntPtr name)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glShaderStorageBlockBinding","4.3")]
@@ -144,7 +144,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glDebugMessageInsert","4.3")]
-		public static void DebugMessageInsert(uint source,uint type,uint id,uint severity,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string buf)
+		public static void DebugMessageInsert(uint source,uint type,uint id,uint severity,int length,IntPtr buf)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glDebugMessageCallback","4.3")]
@@ -156,7 +156,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glPushDebugGroup","4.3")]
-		public static void PushDebugGroup(uint source,uint id,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string message)
+		public static void PushDebugGroup(uint source,uint id,int length,IntPtr message)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glPopDebugGroup","4.3")]
@@ -164,7 +164,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glObjectLabel","4.3")]
-		public static void ObjectLabel(uint identifier,uint name,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string label)
+		public static void ObjectLabel(uint identifier,uint name,int length,IntPtr label)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetObjectLabel","4.3")]
@@ -172,7 +172,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 
 		[MethodImport("glObjectPtrLabel","4.3")]
-		public static void ObjectPtrLabel(IntPtr ptr,int length,[In] [MarshalAs(UnmanagedType.LPStr)] string label)
+		public static void ObjectPtrLabel(IntPtr ptr,int length,IntPtr label)
 			=> throw new NotImplementedException();
 
 		[MethodImport("glGetObjectPtrLabel","4.3")]

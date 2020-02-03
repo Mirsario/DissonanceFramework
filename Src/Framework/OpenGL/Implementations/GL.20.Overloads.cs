@@ -11,8 +11,19 @@ namespace Dissonance.Framework.OpenGL
 		public unsafe static void DrawBuffers(int numDrawBuffers,DrawBuffersEnum[] drawBuffers)
 		{
 			fixed(DrawBuffersEnum* ptr = &(drawBuffers!=null && drawBuffers.Length!=0 ? ref drawBuffers[0] : ref *(DrawBuffersEnum*)null)) {
-				DeleteFramebuffers(numDrawBuffers,(uint*)ptr);
+				DrawBuffers(numDrawBuffers,(uint*)ptr);
 			}
+		}
+
+		//GetShaderInfoLog
+		[MI(AI)]
+		public static void BindAttribLocation(uint program,uint index,string name)
+		{
+			IntPtr namePtr = Marshal.StringToHGlobalAnsi(name);
+
+			BindAttribLocation(program,index,namePtr);
+
+			Marshal.FreeHGlobal(namePtr);
 		}
 
 		//GetShaderInfoLog
@@ -36,7 +47,7 @@ namespace Dissonance.Framework.OpenGL
 			return result;
 		}
 
-		//GetShaderInfoLog
+		//ShaderSource
 		[MI(AI)]
 		public unsafe static void ShaderSource(uint shader,string source)
 		{
@@ -65,6 +76,32 @@ namespace Dissonance.Framework.OpenGL
 			}
 
 			Marshal.FreeHGlobal(arrayPointer);
+		}
+
+		//GetAttribLocation
+		[MI(AI)]
+		public static int GetAttribLocation(uint program,string name)
+		{
+			IntPtr namePtr = Marshal.StringToHGlobalAnsi(name);
+
+			int result = GetAttribLocation(program,namePtr);
+
+			Marshal.FreeHGlobal(namePtr);
+
+			return result;
+		}
+
+		//GetUniformLocation
+		[MI(AI)]
+		public static int GetUniformLocation(uint program,string name)
+		{
+			IntPtr namePtr = Marshal.StringToHGlobalAnsi(name);
+
+			int result = GetUniformLocation(program,namePtr);
+
+			Marshal.FreeHGlobal(namePtr);
+
+			return result;
 		}
 
 		//GetActiveUniform

@@ -32,7 +32,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glBitmap","1.0")]
-		public static void Bitmap(int width,int height,float xOrig,float yOrig,float xMove,float yMove,[In] [MarshalAs(UnmanagedType.LPStr)] string bitmap)
+		public static void Bitmap(int width,int height,float xOrig,float yOrig,float xMove,float yMove,IntPtr bitmap)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glBlendFunc","1.0")]
@@ -304,7 +304,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glEdgeFlagv","1.0")]
-		public static void EdgeFlag([In] [MarshalAs(UnmanagedType.LPStr)] string flag)
+		public static void EdgeFlag(IntPtr flag)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glEnable","1.0")]
@@ -580,7 +580,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glIndexubv","1.0")]
-		public static void Index([In] [MarshalAs(UnmanagedType.LPStr)] string c)
+		public static void Index(IntPtr c)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glInitNames","1.0")]
@@ -736,7 +736,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glNormal3bv","1.0")]
-		public static void Normal3([In] [MarshalAs(UnmanagedType.LPStr)] string v)
+		public static void Normal3(IntPtr v)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glNormal3d","1.0")]
@@ -828,7 +828,7 @@ namespace Dissonance.Framework.OpenGL
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glPolygonStipple","1.0")]
-		public static void PolygonStipple([In] [MarshalAs(UnmanagedType.LPStr)] string mask)
+		public static void PolygonStipple(IntPtr mask)
 			=> throw new NotImplementedException();
 		
 		[MethodImport("glPopAttrib","1.0")]

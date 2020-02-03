@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using Dissonance.Framework.GLFW3;
 using Dissonance.Framework.OpenAL;
+using Dissonance.Framework.DevIL;
 using Dissonance.Utils;
 using MonoMod.RuntimeDetour;
 
@@ -111,6 +112,7 @@ namespace Dissonance.Framework
 				IEnumerable<string> paths = name switch {
 					GLFW.Library => GLFW.GetLibraryPaths(),
 					AL.Library => AL.GetLibraryPaths(),
+					IL.Library => IL.GetLibraryPaths(),
 					_ => null
 				};
 
