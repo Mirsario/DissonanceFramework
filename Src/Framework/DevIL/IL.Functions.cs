@@ -84,7 +84,7 @@ namespace Dissonance.Framework.DevIL
 		public static extern int GetDXTCData(byte[] buffer,int bufferSize,int dXTCFormat);
 
 		[DllImport(Library,EntryPoint = "ilGetInteger",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern int GetInteger(int mode);
+		public static extern int GetInteger(ImageInt mode);
 
 		[DllImport(Library,EntryPoint = "ilGetIntegerv",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern void GetIntegerv(int mode,out int param);
@@ -140,7 +140,7 @@ namespace Dissonance.Framework.DevIL
 		public static extern bool CompressFunc(int mode);
 
 		[DllImport(Library,EntryPoint = "ilConvertImage",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern bool ConvertImage(int destFormat,int destType);
+		public static extern bool ConvertImage(ImageDataFormat destFormat,ImageDataType destType);
 
 		[DllImport(Library,EntryPoint = "ilConvertPal",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern bool ConvertPal(int destFormat);
@@ -275,10 +275,10 @@ namespace Dissonance.Framework.DevIL
 		public static extern void ShutDown();
 
 		[DllImport(Library,EntryPoint = "ilTexImage",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern bool TexImage(int width,int height,int depth,byte bpp,int format,int type,IntPtr data);
+		public static extern bool TexImage(int width,int height,int depth,byte bpp,ImageDataFormat format,ImageDataType type,IntPtr data);
 
 		[DllImport(Library,EntryPoint = "ilTexImage",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
-		public static extern bool TexImage(int width,int height,int depth,byte bpp,int format,int type,byte[] data);
+		public static extern bool TexImage(int width,int height,int depth,byte bpp,ImageDataFormat format,ImageDataType type,byte[] data);
 
 		[DllImport(Library,EntryPoint = "ilTypeFunc",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
 		public static extern bool TypeFunc(int mode);
