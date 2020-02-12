@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using CC = System.Runtime.InteropServices.CallingConvention;
 
 #pragma warning disable IDE0060 //Unused parameter.
 

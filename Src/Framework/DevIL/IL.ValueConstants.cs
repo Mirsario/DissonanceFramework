@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Dissonance.Framework.DevIL
+﻿namespace Dissonance.Framework.DevIL
 {
 	partial class IL
 	{
