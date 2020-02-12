@@ -1,7 +1,7 @@
 ﻿namespace Dissonance.Framework.OpenAL
 {
 	/// <summary> 3D 32-bit float vector AL.Source/AL.GetSource parameters. </summary>
-	public enum SourceVector3Float
+	public enum SourceFloat3
 	{
 		/// <summary> Source's current location in 3D space in right-handed coordinate system. </summary>
 		Position = 0x1004,

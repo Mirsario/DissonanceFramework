@@ -20,10 +20,10 @@ namespace Dissonance.Framework.OpenAL
 		public static extern void Listener(ListenerFloatArray parameter,float[] values);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alListener3i")]
-		public static extern void Listener3(ListenerVector3Int parameter,int x,int y,int z);
+		public static extern void Listener3(ListenerInt3 parameter,int x,int y,int z);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alListener3f")]
-		public static extern void Listener3(ListenerVector3Float parameter,float x,float y,float z);
+		public static extern void Listener3(ListenerFloat3 parameter,float x,float y,float z);
 
 		#endregion
 
@@ -42,10 +42,10 @@ namespace Dissonance.Framework.OpenAL
 		public static extern void GetListener(ListenerFloatArray parameter,float[] values);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetListener3i")]
-		public static extern void GetListener3(ListenerVector3Int parameter,out int x,out int y,out int z);
+		public static extern void GetListener3(ListenerInt3 parameter,out int x,out int y,out int z);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetListener3f")]
-		public static extern void GetListener3(ListenerVector3Float parameter,out float x,out float y,out float z);
+		public static extern void GetListener3(ListenerFloat3 parameter,out float x,out float y,out float z);
 
 		#endregion
 	}

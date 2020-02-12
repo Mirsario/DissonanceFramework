@@ -24,10 +24,10 @@ namespace Dissonance.Framework.OpenAL
 		public static extern void Buffer(uint buffer,BufferFloatArray parameter,float[] values);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alBuffer3i")]
-		public static extern void Buffer3(uint buffer,BufferVector3Int parameter,int x,int y,int z);
+		public static extern void Buffer3(uint buffer,BufferInt3 parameter,int x,int y,int z);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alBuffer3f")]
-		public static extern void Buffer3(uint buffer,BufferVector3Float parameter,float x,float y,float z);
+		public static extern void Buffer3(uint buffer,BufferFloat3 parameter,float x,float y,float z);
 
 		#endregion
 
@@ -46,10 +46,10 @@ namespace Dissonance.Framework.OpenAL
 		public static extern void GetBuffer(uint buffer,BufferFloatArray parameter,float[] values);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetBuffer3i")]
-		public static extern void GetBuffer3(uint buffer,BufferVector3Int parameter,out int x,out int y,out int z);
+		public static extern void GetBuffer3(uint buffer,BufferInt3 parameter,out int x,out int y,out int z);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetBuffer3f")]
-		public static extern void GetBuffer3(uint buffer,BufferVector3Float parameter,out float value1,out float value2,out float value3);
+		public static extern void GetBuffer3(uint buffer,BufferFloat3 parameter,out float value1,out float value2,out float value3);
 
 		#endregion
 

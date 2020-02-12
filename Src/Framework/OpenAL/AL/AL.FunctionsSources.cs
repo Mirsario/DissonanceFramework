@@ -23,10 +23,10 @@ namespace Dissonance.Framework.OpenAL
 		public unsafe static extern void Source(uint sourceId,SourceFloatArray parameter,float* values);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSource3i")]
-		public static extern void Source(uint sourceId,SourceVector3Int parameter,int x,int y,int z);
+		public static extern void Source(uint sourceId,SourceInt3 parameter,int x,int y,int z);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSource3f")]
-		public static extern void Source(uint sourceId,SourceVector3Float parameter,float x,float y,float z);
+		public static extern void Source(uint sourceId,SourceFloat3 parameter,float x,float y,float z);
 
 		#endregion
 
@@ -69,10 +69,10 @@ namespace Dissonance.Framework.OpenAL
 		public unsafe static extern void GetSource3(uint sourceId,SourceFloatArray parameter,[Out] float* values);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetSource3i")]
-		public static extern void GetSource3(uint sourceId,SourceVector3Int parameter,out int x,out int y,out int z);
+		public static extern void GetSource3(uint sourceId,SourceInt3 parameter,out int x,out int y,out int z);
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetSource3f")]
-		public static extern void GetSource3(uint sourceId,SourceVector3Float parameter,out float x,out float y,out float z);
+		public static extern void GetSource3(uint sourceId,SourceFloat3 parameter,out float x,out float y,out float z);
 
 		#endregion
 
