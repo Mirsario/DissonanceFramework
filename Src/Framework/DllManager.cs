@@ -26,30 +26,33 @@ namespace Dissonance.Framework
 		};
 
 		private static bool resolversReady;
+		private static object lockObj = new object();
 		private static Dictionary<string,Assembly> assemblyCache;
 
 		static DllManager() => PrepareResolvers();
 
 		public static void ImportTypeMethods(Type type,Func<string,IntPtr> functionToPointer)
 		{
-			foreach(MethodInfo method in type.GetMethods(BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Static)) {
-				var attribute = method.GetCustomAttribute<MethodImportAttribute>();
+			lock(lockObj) {
+				foreach(MethodInfo method in type.GetMethods(BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Static)) {
+					var attribute = method.GetCustomAttribute<MethodImportAttribute>();
 
-				if(attribute==null) {
-					continue;
-				}
+					if(attribute==null) {
+						continue;
+					}
 
-				var encodingSrc = Encoding.UTF8;
-				var encodingDst = Encoding.ASCII;
+					var encodingSrc = Encoding.UTF8;
+					var encodingDst = Encoding.ASCII;
 
-				string functionName = attribute.Function; //encodingDst.GetString(Encoding.Convert(encodingSrc,encodingDst,encodingSrc.GetBytes(attribute.Function)));
+					string functionName = attribute.Function; //encodingDst.GetString(Encoding.Convert(encodingSrc,encodingDst,encodingSrc.GetBytes(attribute.Function)));
 
-				IntPtr ptr = functionToPointer(functionName);
+					IntPtr ptr = functionToPointer(functionName);
 
-				if(ptr!=IntPtr.Zero) {
-					CreatePermanentDetour(method,ptr);
-				} else {
-					Console.WriteLine($"Unable to find function '{attribute.Function}'.");
+					if(ptr!=IntPtr.Zero) {
+						CreatePermanentDetour(method,ptr);
+					} else {
+						Console.WriteLine($"Unable to find function '{attribute.Function}'.");
+					}
 				}
 			}
 		}

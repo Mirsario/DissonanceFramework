@@ -6,29 +6,13 @@
 	<Platforms>AnyCPU;x64;x86</Platforms>
 	<AssemblyName>DissonanceFramework</AssemblyName>
 	<RootNamespace>Dissonance</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	<ApplicationIcon />
 	<StartupObject />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-	<DefineConstants>TRACE;UNSAFE</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
