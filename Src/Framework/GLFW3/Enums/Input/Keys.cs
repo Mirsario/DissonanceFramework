@@ -1,4 +1,4 @@
-﻿namespace Dissonance.Framework.GLFW3.Enums
+﻿namespace Dissonance.Framework.GLFW3
 {
 	public enum Keys
 	{
@@ -20,6 +20,7 @@
 		Number8 = 56,
 		Number9 = 57,
 		Semicolon = 59,
+		Plus = 61,
 		Equal = 61,
 		A = 65,
 		B = 66,
