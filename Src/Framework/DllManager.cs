@@ -16,8 +16,6 @@ namespace Dissonance.Framework
 {
 	internal static partial class DllManager
 	{
-		private const int RTLD_NOW = 2;
-
 		private static readonly Dictionary<string,IntPtr> DllImportCache = new Dictionary<string,IntPtr>();
 		private static readonly string[] EmbeddedAssemblies = {
 			"MonoMod.RuntimeDetour",
@@ -61,15 +59,13 @@ namespace Dissonance.Framework
 			IntPtr mHnd;
 
 			if(InternalUtils.IsOS(OS.Windows)) {
-				mHnd = LoadLibrary(fileName);
+				mHnd = LoadLibraryWindows(fileName);
 			} else {
-				mHnd = dlopen(fileName,RTLD_NOW);
+				mHnd = LoadLibraryUnix(fileName,2);
 			}
 
-			if(mHnd!=IntPtr.Zero) {
-				Console.WriteLine($"Linked '{fileName}'-> '0x{mHnd:X}'");
-			} else {
-				throw new DllNotFoundException($"Failed to link '{fileName}'");
+			if(mHnd==IntPtr.Zero) {
+				throw new DllNotFoundException($"Failed to load library '{fileName}'");
 			}
 
 			return mHnd;
@@ -79,9 +75,9 @@ namespace Dissonance.Framework
 			IntPtr symPtr;
 
 			if(InternalUtils.IsOS(OS.Windows)) {
-				symPtr = GetProcAddress(mHnd,symbol);
+				symPtr = GetProcAddressWindows(mHnd,symbol);
 			} else {
-				symPtr = dlsym(mHnd,symbol);
+				symPtr = GetProcAddressUnix(mHnd,symbol);
 			}
 
 			return symPtr;
@@ -93,9 +89,9 @@ namespace Dissonance.Framework
 		public static void MemoryCopy(IntPtr dest,IntPtr source,uint count)
 		{
 			if(InternalUtils.IsOS(OS.Windows)) {
-				CopyMemory(dest,source,count);
+				CopyMemoryWindows(dest,source,count);
 			} else {
-				memcpy(dest,source,count);
+				CopyMemoryUnix(dest,source,count);
 			}
 		}
 
@@ -121,19 +117,14 @@ namespace Dissonance.Framework
 
 				if(paths!=null) {
 					foreach(string currentPath in paths) {
-						Console.Write($"Trying to load '{currentPath}'...");
-
 						try {
 							DllImportCache[name] = pointer = NativeLibrary.Load(currentPath,assembly,path);
 						}
 						catch { }
 
 						if(pointer!=IntPtr.Zero) {
-							Console.Write(" Success!\r\n");
 							break;
 						}
-
-						Console.Write(" Failure.\r\n");
 					}
 				}
 
@@ -167,11 +158,22 @@ namespace Dissonance.Framework
 			new NativeDetour(from,to,new NativeDetourConfig() { SkipILCopy = true });
 		}
 
-		[DllImport("kernel32.dll")] private static extern IntPtr LoadLibrary(string filename);
-		[DllImport("kernel32.dll")] private static extern IntPtr GetProcAddress(IntPtr hModule,string name);
-		[DllImport("kernel32.dll")] private static extern void CopyMemory(IntPtr dest,IntPtr src,uint count);
-		[DllImport("libdl.so")] private static extern IntPtr dlopen(string filename,int flags);
-		[DllImport("libdl.so")] private static extern IntPtr dlsym(IntPtr handle,string symbol);
-		[DllImport("libc.so.6")] private static extern void memcpy(IntPtr dest,IntPtr src,uint n);
+		[DllImport("kernel32.dll",EntryPoint = "LoadLibrary",CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern IntPtr LoadLibraryWindows(string filename);
+
+		[DllImport("kernel32.dll",EntryPoint = "GetProcAddress",CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern IntPtr GetProcAddressWindows(IntPtr hModule,string name);
+
+		[DllImport("kernel32.dll",EntryPoint = "CopyMemory",CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern void CopyMemoryWindows(IntPtr dest,IntPtr src,uint count);
+
+		[DllImport("libdl.so",EntryPoint = "dlopen",CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern IntPtr LoadLibraryUnix(string filename,int flags);
+
+		[DllImport("libdl.so",EntryPoint = "dlsym",CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern IntPtr GetProcAddressUnix(IntPtr handle,string symbol);
+
+		[DllImport("libc.so.6",EntryPoint = "memcpy",CharSet = CharSet.Ansi,ExactSpelling = true)]
+		private static extern void CopyMemoryUnix(IntPtr dest,IntPtr src,uint n);
 	}
 }
