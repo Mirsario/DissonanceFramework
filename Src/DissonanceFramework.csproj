@@ -5,7 +5,7 @@
 	<TargetFramework>netcoreapp3.0</TargetFramework>
 	<Platforms>AnyCPU</Platforms>
 	<AssemblyName>DissonanceFramework</AssemblyName>
-	<RootNamespace>Dissonance</RootNamespace>
+	<RootNamespace>Dissonance.Framework</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	<ApplicationIcon />
 	<StartupObject />

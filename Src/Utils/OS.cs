@@ -1,6 +1,6 @@
-﻿namespace Dissonance.Utils
+﻿namespace Dissonance.Framework.Utils
 {
-	public enum OS
+	internal enum OS
 	{
 		Windows,
 		Linux,

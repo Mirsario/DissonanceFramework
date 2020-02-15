@@ -1,12 +1,13 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace Dissonance.Utils
+namespace Dissonance.Framework.Utils
 {
 	internal static class InternalUtils
 	{
 		public static bool IsOS(OS os)
 		{
-			return os switch {
+			return os switch
+			{
 				OS.Windows => RuntimeInformation.IsOSPlatform(OSPlatform.Windows),
 				OS.Linux => RuntimeInformation.IsOSPlatform(OSPlatform.Linux),
 				OS.OSX => RuntimeInformation.IsOSPlatform(OSPlatform.OSX),
