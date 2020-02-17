@@ -16,14 +16,14 @@ namespace Dissonance.Framework.Windowing
 		{
 			CallbackCache[nameof(SetErrorCallback)] = callback;
 
-			SetErrorCallback(Marshal.GetFunctionPointerForDelegate(callback));
+			SetErrorCallback(callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetFramebufferSizeCallback(IntPtr window,FramebufferSizeCallback callback)
 		{
 			CallbackCache[nameof(SetFramebufferSizeCallback)] = callback;
 
-			SetFramebufferSizeCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetFramebufferSizeCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		//Window
@@ -32,42 +32,42 @@ namespace Dissonance.Framework.Windowing
 		{
 			CallbackCache[nameof(SetWindowPosCallback)] = callback;
 
-			SetWindowPosCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetWindowPosCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetWindowSizeCallback(IntPtr window,WindowSizeCallback callback)
 		{
 			CallbackCache[nameof(SetWindowSizeCallback)] = callback;
 
-			SetWindowSizeCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetWindowSizeCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetWindowCloseCallback(IntPtr window,WindowCloseCallback callback)
 		{
 			CallbackCache[nameof(SetWindowCloseCallback)] = callback;
 
-			SetWindowCloseCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetWindowCloseCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetWindowRefreshCallback(IntPtr window,WindowRefreshCallback callback)
 		{
 			CallbackCache[nameof(SetWindowRefreshCallback)] = callback;
 
-			SetWindowRefreshCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetWindowRefreshCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetWindowFocusCallback(IntPtr window,WindowFocusCallback callback)
 		{
 			CallbackCache[nameof(SetWindowFocusCallback)] = callback;
 
-			SetWindowFocusCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetWindowFocusCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetWindowIconifyCallback(IntPtr window,WindowIconifyCallback callback)
 		{
 			CallbackCache[nameof(SetWindowIconifyCallback)] = callback;
 
-			SetWindowIconifyCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetWindowIconifyCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		//Monitors
@@ -76,7 +76,7 @@ namespace Dissonance.Framework.Windowing
 		{
 			CallbackCache[nameof(SetMonitorCallback)] = callback;
 
-			SetMonitorCallback(Marshal.GetFunctionPointerForDelegate(callback));
+			SetMonitorCallback(callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		//Input
@@ -85,63 +85,63 @@ namespace Dissonance.Framework.Windowing
 		{
 			CallbackCache[nameof(SetKeyCallback)] = callback;
 
-			SetKeyCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetKeyCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetCharCallback(IntPtr window,CharCallback callback)
 		{
 			CallbackCache[nameof(SetCharCallback)] = callback;
 
-			SetCharCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetCharCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetCharModsCallback(IntPtr window,CharModsCallback callback)
 		{
 			CallbackCache[nameof(SetCharModsCallback)] = callback;
 
-			SetCharModsCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetCharModsCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetMouseButtonCallback(IntPtr window,MouseButtonCallback callback)
 		{
 			CallbackCache[nameof(SetMouseButtonCallback)] = callback;
 
-			SetMouseButtonCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetMouseButtonCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetCursorPosCallback(IntPtr window,CursorPosCallback callback)
 		{
 			CallbackCache[nameof(SetCursorPosCallback)] = callback;
 
-			SetCursorPosCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetCursorPosCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetCursorEnterCallback(IntPtr window,CursorEnterCallback callback)
 		{
 			CallbackCache[nameof(SetCursorEnterCallback)] = callback;
 
-			SetCursorEnterCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetCursorEnterCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetScrollCallback(IntPtr window,ScrollCallback callback)
 		{
 			CallbackCache[nameof(SetScrollCallback)] = callback;
 
-			SetScrollCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetScrollCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetDropCallback(IntPtr window,DropCallback callback)
 		{
 			CallbackCache[nameof(SetDropCallback)] = callback;
 
-			SetDropCallback(window,Marshal.GetFunctionPointerForDelegate(callback));
+			SetDropCallback(window,callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 
 		public static void SetJoystickCallback(JoystickCallback callback)
 		{
 			CallbackCache[nameof(SetJoystickCallback)] = callback;
 
-			SetJoystickCallback(Marshal.GetFunctionPointerForDelegate(callback));
+			SetJoystickCallback(callback==null ? IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(callback));
 		}
 	}
 }
