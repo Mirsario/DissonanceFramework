@@ -43,12 +43,6 @@
 		public const int OPENGL_ANY_PROFILE = 0;
 		public const int OPENGL_CORE_PROFILE = 204801;
 		public const int OPENGL_COMPAT_PROFILE = 204802;
-		public const int CURSOR = 208897;
-		public const int STICKY_KEYS = 208898;
-		public const int STICKY_MOUSE_BUTTONS = 208899;
-		public const int CURSOR_NORMAL = 212993;
-		public const int CURSOR_HIDDEN = 212994;
-		public const int CURSOR_DISABLED = 212995;
 		public const int ANY_RELEASE_BEHAVIOR = 0;
 		public const int RELEASE_BEHAVIOR_FLUSH = 217089;
 		public const int RELEASE_BEHAVIOR_NONE = 217090;
