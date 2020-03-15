@@ -47,7 +47,7 @@ namespace Dissonance.Framework.Graphics
 		//GetTexImage
 		public unsafe static void GetTexImage<T>(TextureTarget target,int level,PixelFormat format,PixelType type,T[] pixels) where T : unmanaged
 		{
-			fixed (T* ptr = &(pixels!=null && pixels.Length!=0 ? ref pixels[0] : ref *(T*)null)) {
+			fixed(T* ptr = &(pixels!=null && pixels.Length!=0 ? ref pixels[0] : ref *(T*)null)) {
 				GetTexImage(target,level,format,type,(IntPtr)ptr);
 			}
 		}
