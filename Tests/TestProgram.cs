@@ -1,9 +1,8 @@
 ﻿using System;
 using System.IO;
-using Dissonance.Framework.GLFW3;
-using Dissonance.Framework.OpenGL;
-using Dissonance.Framework.OpenAL;
-using System.Runtime.InteropServices;
+using Dissonance.Framework.Windowing;
+using Dissonance.Framework.Graphics;
+using Dissonance.Framework.Audio;
 using Dissonance.Framework;
 //using GL = Dissonance.Framework.OpenGL.GLNew;
 
