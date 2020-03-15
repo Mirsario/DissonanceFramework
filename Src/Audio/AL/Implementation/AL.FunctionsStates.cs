@@ -6,7 +6,7 @@ namespace Dissonance.Framework.Audio
 {
 	partial class AL
 	{
-		#region Getters
+		//Getters
 
 		public static string GetString(StateString parameter) => Marshal.PtrToStringAnsi(GetStringInternal(parameter));
 
@@ -40,9 +40,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetString")]
 		internal static extern IntPtr GetStringInternal(StateString parameter);
 
-		#endregion
-
-		#region Setters
+		//Setters
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alDopplerFactor")]
 		public static extern void DopplerFactor(float value);
@@ -50,9 +48,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alDistanceModel")]
 		public static extern void DistanceModel(DistanceModel distanceModel);
 
-		#endregion
-
-		#region Capabilities
+		//Capabilities
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alEnable")]
 		public static extern void Enable(int capability);
@@ -62,7 +58,5 @@ namespace Dissonance.Framework.Audio
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alIsEnabled")]
 		public static extern bool IsEnabled(int capability);
-
-		#endregion
 	}
 }

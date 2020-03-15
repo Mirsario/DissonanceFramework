@@ -9,7 +9,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alIsBuffer")]
 		public static extern bool IsBuffer(uint buffer);
 
-		#region Buffer
+		//Buffer
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alBufferi")]
 		public static extern void Buffer(uint buffer,BufferInt parameter,int value);
@@ -29,9 +29,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alBuffer3f")]
 		public static extern void Buffer3(uint buffer,BufferFloat3 parameter,float x,float y,float z);
 
-		#endregion
-
-		#region GetBuffer
+		//GetBuffer
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetBufferi")]
 		public static extern void GetBuffer(uint buffer,GetBufferInt parameter,out int value);
@@ -51,9 +49,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetBuffer3f")]
 		public static extern void GetBuffer3(uint buffer,BufferFloat3 parameter,out float value1,out float value2,out float value3);
 
-		#endregion
-
-		#region BufferData
+		//BufferData
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alBufferData")]
 		public static extern void BufferData(uint buffer,BufferFormat format,IntPtr data,int size,int frequency);
@@ -67,9 +63,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alBufferData")]
 		public static extern void BufferData(uint buffer,BufferFormat format,float[] data,int size,int frequency);
 
-		#endregion
-
-		#region GenBuffer(s)
+		//GenBuffer(s)
 
 		public static void GenBuffer(out uint bufferId) => GenBufferInternal(1,out bufferId);
 		public static uint GenBuffer()
@@ -85,9 +79,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGenBuffers")]
 		private static extern void GenBufferInternal(int numBuffers,out uint bufferId);
 
-		#endregion
-
-		#region DeleteBuffer(s)
+		//DeleteBuffer(s)
 
 		public static void DeleteBuffer(uint bufferId) => DeleteBufferInternal(1,ref bufferId);
 
@@ -96,7 +88,5 @@ namespace Dissonance.Framework.Audio
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alDeleteBuffers")]
 		private static extern void DeleteBufferInternal(int numBuffers,ref uint bufferId);
-
-		#endregion
 	}
 }

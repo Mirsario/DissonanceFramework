@@ -1,5 +1,7 @@
 ﻿namespace Dissonance.Framework.Imaging
 {
+	//TODO: To be completely replaced with enums.
+
 	partial class IL
 	{
 		public const int FALSE = 0;

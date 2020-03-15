@@ -6,7 +6,7 @@ namespace Dissonance.Framework.Audio
 {
 	partial class AL
 	{
-		#region Source
+		//Source
 
 		[MI(AI)] public static void Source(uint sourceId,SourceBool parameter,bool value) => Source(sourceId,(SourceInt)parameter,value ? 1 : 0);
 
@@ -28,9 +28,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSource3f")]
 		public static extern void Source(uint sourceId,SourceFloat3 parameter,float x,float y,float z);
 
-		#endregion
-
-		#region GetSource
+		//GetSource
 
 		[MI(AI)]
 		public static bool GetSource(uint sourceId,SourceBool parameter)
@@ -74,9 +72,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetSource3f")]
 		public static extern void GetSource3(uint sourceId,SourceFloat3 parameter,out float x,out float y,out float z);
 
-		#endregion
-
-		#region GenSource(s)
+		//GenSource(s)
 
 		public static void GenSource(out uint sourceId) => GenSourceInternal(1,out sourceId);
 		public static uint GenSource()
@@ -92,9 +88,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGenSources")]
 		private static extern void GenSourceInternal(int numSources,out uint sourceId);
 
-		#endregion
-
-		#region DeleteSource(s)
+		//DeleteSource(s)
 
 		public static void DeleteSource(uint sourceId) => DeleteSourceInternal(1,ref sourceId);
 
@@ -104,9 +98,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alDeleteSources")]
 		private static extern void DeleteSourceInternal(int numSources,ref uint sourceId);
 
-		#endregion
-
-		#region SourceX
+		//SourceX
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alIsSource")]
 		public static extern bool IsSource(uint sourceId);
@@ -140,7 +132,5 @@ namespace Dissonance.Framework.Audio
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alSourceUnqueueBuffers")]
 		public unsafe static extern void SourceUnqueueBuffers(uint sourceId,int numBuffers,[Out] uint* bufferIds);
-
-		#endregion
 	}
 }

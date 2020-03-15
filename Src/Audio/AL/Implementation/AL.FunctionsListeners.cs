@@ -5,7 +5,7 @@ namespace Dissonance.Framework.Audio
 {
 	partial class AL
 	{
-		#region SetListener
+		//SetListener
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alListeneri")]
 		public static extern void Listener(ListenerInt parameter,int value);
@@ -25,9 +25,7 @@ namespace Dissonance.Framework.Audio
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alListener3f")]
 		public static extern void Listener3(ListenerFloat3 parameter,float x,float y,float z);
 
-		#endregion
-
-		#region GetListener
+		//GetListener
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetListeneri")]
 		public static extern void GetListener(ListenerInt parameter,out int value);
@@ -46,7 +44,5 @@ namespace Dissonance.Framework.Audio
 
 		[DllImport(Library,CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true,EntryPoint = "alGetListener3f")]
 		public static extern void GetListener3(ListenerFloat3 parameter,out float x,out float y,out float z);
-
-		#endregion
 	}
 }
