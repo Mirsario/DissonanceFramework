@@ -8,7 +8,7 @@ using Dissonance.Framework.Windowing;
 using Dissonance.Framework.Audio;
 using Dissonance.Framework.Imaging;
 using MonoMod.RuntimeDetour;
-using Dissonance.Framework.Utils;
+using static Dissonance.Framework.OSUtils;
 
 namespace Dissonance.Framework
 {
@@ -23,12 +23,15 @@ namespace Dissonance.Framework
 
 		private static bool resolversReady;
 		private static object lockObj = new object();
+		private static List<NativeDetour> detours;
 		private static Dictionary<string,Assembly> assemblyCache;
 
 		static DllManager() => PrepareResolvers();
 
 		public static void ImportTypeMethods(Type type,Func<string,IntPtr> functionToPointer)
 		{
+			detours = new List<NativeDetour>();
+
 			lock(lockObj) {
 				foreach(MethodInfo method in type.GetMethods(BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Static)) {
 					var attribute = method.GetCustomAttribute<MethodImportAttribute>();
@@ -37,15 +40,12 @@ namespace Dissonance.Framework
 						continue;
 					}
 
-					var encodingSrc = Encoding.UTF8;
-					var encodingDst = Encoding.ASCII;
-
-					string functionName = attribute.Function; //encodingDst.GetString(Encoding.Convert(encodingSrc,encodingDst,encodingSrc.GetBytes(attribute.Function)));
+					string functionName = attribute.Function;
 
 					IntPtr ptr = functionToPointer(functionName);
 
 					if(ptr!=IntPtr.Zero) {
-						CreatePermanentDetour(method,ptr);
+						detours.Add(new NativeDetour(method,ptr,new NativeDetourConfig() { SkipILCopy = true }));
 					} else {
 						Console.WriteLine($"Unable to find function '{attribute.Function}'.");
 					}
@@ -56,7 +56,7 @@ namespace Dissonance.Framework
 		{
 			IntPtr mHnd;
 
-			if(InternalUtils.IsOS(OS.Windows)) {
+			if(IsOS(OS.Windows)) {
 				mHnd = LoadLibraryWindows(fileName);
 			} else {
 				mHnd = LoadLibraryUnix(fileName,2);
@@ -72,7 +72,7 @@ namespace Dissonance.Framework
 		{
 			IntPtr symPtr;
 
-			if(InternalUtils.IsOS(OS.Windows)) {
+			if(IsOS(OS.Windows)) {
 				symPtr = GetProcAddressWindows(mHnd,symbol);
 			} else {
 				symPtr = GetProcAddressUnix(mHnd,symbol);
@@ -86,7 +86,7 @@ namespace Dissonance.Framework
 		}
 		public static void MemoryCopy(IntPtr dest,IntPtr source,uint count)
 		{
-			if(InternalUtils.IsOS(OS.Windows)) {
+			if(IsOS(OS.Windows)) {
 				CopyMemoryWindows(dest,source,count);
 			} else {
 				CopyMemoryUnix(dest,source,count);
@@ -148,12 +148,6 @@ namespace Dissonance.Framework
 			};
 
 			resolversReady = true;
-		}
-
-		[MethodImpl(MethodImplOptions.NoInlining|MethodImplOptions.NoOptimization)]
-		private static void CreatePermanentDetour(MethodInfo from,IntPtr to)
-		{
-			new NativeDetour(from,to,new NativeDetourConfig() { SkipILCopy = true });
 		}
 
 		[DllImport("kernel32.dll",EntryPoint = "LoadLibrary",CharSet = CharSet.Ansi,ExactSpelling = true)]

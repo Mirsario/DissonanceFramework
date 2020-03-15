@@ -1,5 +1,5 @@
-﻿using Dissonance.Framework.Utils;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using static Dissonance.Framework.OSUtils;
 
 namespace Dissonance.Framework.Imaging
 {
@@ -23,7 +23,7 @@ namespace Dissonance.Framework.Imaging
 
 		static IL() => DllManager.PrepareResolvers();
 
-		internal static IEnumerable<string> GetLibraryPaths() => InternalUtils.GetOS() switch {
+		internal static IEnumerable<string> GetLibraryPaths() => GetOS() switch {
 			OS.Windows => DefaultPathsWindows,
 			OS.Linux => DefaultPathsLinux,
 			OS.OSX => DefaultPathsOSX,

@@ -1,6 +1,6 @@
-﻿using Dissonance.Framework.Utils;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using static Dissonance.Framework.OSUtils;
 
 namespace Dissonance.Framework.Audio
 {
@@ -26,7 +26,7 @@ namespace Dissonance.Framework.Audio
 
 		static AL() => DllManager.PrepareResolvers();
 
-		internal static IEnumerable<string> GetLibraryPaths() => InternalUtils.GetOS() switch {
+		internal static IEnumerable<string> GetLibraryPaths() => GetOS() switch {
 			OS.Windows => DefaultPathsWindows,
 			OS.Linux => DefaultPathsLinux,
 			OS.OSX => DefaultPathsOSX,

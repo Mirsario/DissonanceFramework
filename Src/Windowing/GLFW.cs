@@ -1,5 +1,4 @@
-﻿using Dissonance.Framework.Utils;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Dissonance.Framework.Windowing
 {
@@ -23,10 +22,10 @@ namespace Dissonance.Framework.Windowing
 
 		static GLFW() => DllManager.PrepareResolvers();
 
-		internal static IEnumerable<string> GetLibraryPaths() => InternalUtils.GetOS() switch {
-			OS.Windows => DefaultPathsWindows,
-			OS.Linux => DefaultPathsLinux,
-			OS.OSX => DefaultPathsOSX,
+		internal static IEnumerable<string> GetLibraryPaths() => OSUtils.GetOS() switch {
+			OSUtils.OS.Windows => DefaultPathsWindows,
+			OSUtils.OS.Linux => DefaultPathsLinux,
+			OSUtils.OS.OSX => DefaultPathsOSX,
 			_ => null
 		};
 	}
