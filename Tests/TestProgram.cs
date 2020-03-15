@@ -22,7 +22,7 @@ namespace Test
 
 			PrepareGLFW();
 			PrepareOpenGL();
-			//PrepareOpenAL();
+			PrepareOpenAL();
 
 			//double timePrev = 0d;
 

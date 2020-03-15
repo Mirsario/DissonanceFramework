@@ -2,7 +2,8 @@
   "profiles": {
     "Test": {
       "commandName": "Project",
-      "workingDirectory": "Build\\Windows"
+      "workingDirectory": "Build\\Windows",
+      "nativeDebugging": true
     }
   }
 }
