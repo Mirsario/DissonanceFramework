@@ -4,7 +4,6 @@
 	{
 		ReadFramebuffer = 36008,
 		DrawFramebuffer = 36009,
-		Framebuffer = 36160,
-		FramebufferExt = 36160
+		Framebuffer = 36160
 	}
 }

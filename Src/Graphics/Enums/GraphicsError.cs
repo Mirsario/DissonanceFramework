@@ -14,11 +14,7 @@
 		/// <summary> OpenGL has run out of memory. </summary>
 		OutOfMemory = 1285,
 		InvalidFramebufferOperation = 1286,
-		InvalidFramebufferOperationExt = 1286,
-		InvalidFramebufferOperationOes = 1286,
 		ContextLost = 1287,
 		TableTooLarge = 32817,
-		TableTooLargeExt = 32817,
-		TextureTooLargeExt = 32869
 	}
 }

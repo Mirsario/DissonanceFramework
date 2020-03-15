@@ -2,7 +2,6 @@
 {
 	public enum RenderbufferTarget
 	{
-		Renderbuffer = 36161,
-		RenderbufferExt = 36161
+		Renderbuffer = 36161
 	}
 }

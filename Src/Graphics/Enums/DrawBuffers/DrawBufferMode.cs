@@ -3,7 +3,6 @@
 	public enum DrawBufferMode
 	{
 		None = 0,
-		NoneOes = 0,
 		FrontLeft = 1024,
 		FrontRight = 1025,
 		BackLeft = 1026,
