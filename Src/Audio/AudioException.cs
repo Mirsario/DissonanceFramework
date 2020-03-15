@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dissonance.Framework
+namespace Dissonance.Framework.Audio
 {
 	public class AudioException : Exception
 	{

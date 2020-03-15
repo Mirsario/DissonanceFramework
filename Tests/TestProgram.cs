@@ -1,10 +1,8 @@
 ﻿using System;
 using System.IO;
-using Dissonance.Framework.Windowing;
-using Dissonance.Framework.Graphics;
 using Dissonance.Framework.Audio;
-using Dissonance.Framework;
-//using GL = Dissonance.Framework.OpenGL.GLNew;
+using Dissonance.Framework.Graphics;
+using Dissonance.Framework.Windowing;
 
 namespace Test
 {
