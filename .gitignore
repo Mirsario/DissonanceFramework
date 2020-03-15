@@ -2,3 +2,4 @@
 */obj/
 */Build/
 *.vs/
+*.csproj.user
