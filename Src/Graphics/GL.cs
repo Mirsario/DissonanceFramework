@@ -6,6 +6,7 @@ namespace Dissonance.Framework.Graphics
 	public static partial class GL
 	{
 		private const int AI = (int)MethodImplOptions.AggressiveInlining;
+		private const short ImplOptions = (short)(MethodImplOptions.NoInlining|MethodImplOptions.NoOptimization);
 
 		static GL() => DllManager.PrepareResolvers();
 

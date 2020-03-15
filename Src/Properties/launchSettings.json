@@ -1,7 +1,8 @@
 {
   "profiles": {
     "DissonanceFramework": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "nativeDebugging": false
     }
   }
 }
