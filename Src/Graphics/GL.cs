@@ -1,5 +1,4 @@
-﻿using Dissonance.Engine.Graphics.Enums;
-using Dissonance.Framework.Windowing;
+﻿using Dissonance.Framework.Windowing;
 using System;
 using System.Runtime.CompilerServices;
 

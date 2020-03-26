@@ -1,4 +1,4 @@
-﻿namespace Dissonance.Engine.Graphics.Enums
+﻿namespace Dissonance.Framework.Graphics
 {
 	public enum GLVersion
 	{

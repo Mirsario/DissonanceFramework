@@ -8,7 +8,7 @@ namespace Test
 {
 	public static class TestProgram
 	{
-		public static readonly Version OpenGLVersion = new Version(2,1);
+		public static readonly GLVersion OpenGLVersion = GLVersion.GL21;
 
 		public static bool Fullscreen = false;
 		public static IntPtr window;
@@ -96,8 +96,8 @@ namespace Test
 				throw new Exception("Unable to initialize GLFW!");
 			}
 
-			GLFW.WindowHint(WindowHint.ContextVersionMajor,OpenGLVersion.Major); //Targeted major version
-			GLFW.WindowHint(WindowHint.ContextVersionMinor,OpenGLVersion.Minor); //Targeted minor version
+			GLFW.WindowHint(WindowHint.ContextVersionMajor,((int)OpenGLVersion)/10); //Targeted major version
+			GLFW.WindowHint(WindowHint.ContextVersionMinor,((int)OpenGLVersion)%10); //Targeted minor version
 
 			IntPtr monitor = IntPtr.Zero;
 			int resolutionWidth = 800;
@@ -130,9 +130,11 @@ namespace Test
 		{
 			GL.Load(OpenGLVersion);
 
+			Console.WriteLine("Calling GL.GetError()...");
+
 			CheckGLErrors();
 
-			Console.WriteLine($"Loaded OpenGL {GL.GetString(StringName.Version)}");
+			Console.WriteLine($"Loaded OpenGL {GL.GetString(StringName.Version)} (using {OpenGLVersion})");
 		}
 		private static void PrepareOpenAL()
 		{
