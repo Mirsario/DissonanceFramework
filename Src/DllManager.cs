@@ -9,6 +9,7 @@ using Dissonance.Framework.Audio;
 using Dissonance.Framework.Imaging;
 using MonoMod.RuntimeDetour;
 using static Dissonance.Framework.OSUtils;
+using System.Linq;
 
 namespace Dissonance.Framework
 {
@@ -28,26 +29,30 @@ namespace Dissonance.Framework
 
 		static DllManager() => PrepareResolvers();
 
-		public static void ImportTypeMethods(Type type,Func<string,IntPtr> functionToPointer)
+		public static void ImportTypeMethods(Type type,Version version,Func<string,IntPtr> functionToPointer)
 		{
 			detours = new List<NativeDetour>();
 
 			lock(lockObj) {
-				foreach(MethodInfo method in type.GetMethods(BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Static)) {
-					var attribute = method.GetCustomAttribute<MethodImportAttribute>();
+				var methods = type.GetMethods(BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Static)
+					.Select<MethodInfo,(MethodInfo method,MethodImportAttribute attribute)>(m => (m, m.GetCustomAttribute<MethodImportAttribute>()))
+					.Where(tuple => tuple.attribute!=null && tuple.attribute.Version<=version)
+					.OrderBy(tuple => tuple.attribute.Version)
+					.ToArray();
 
-					if(attribute==null) {
-						continue;
-					}
+				for(int i = 0;i<methods.Length;i++) {
+					var tuple = methods[i];
+					var method = tuple.method;
+					var attribute = tuple.attribute;
 
-					string functionName = attribute.Function;
-
-					IntPtr ptr = functionToPointer(functionName);
+					IntPtr ptr = functionToPointer(attribute.Function);
 
 					if(ptr!=IntPtr.Zero) {
-						Console.WriteLine($"Detouring method '{method.DeclaringType.Name}.{method.Name}'...");	
+						Console.WriteLine($"Detouring method [{i+1}/{methods.Length}] '{method.DeclaringType.Name}.{method.Name}' (from version '{attribute.Version}')...");
 
-						detours.Add(new NativeDetour(method,ptr,new NativeDetourConfig() { SkipILCopy = true }));
+						unsafe {
+							detours.Add(new NativeDetour(method,ptr,new NativeDetourConfig() { SkipILCopy = true }));
+						}
 					} else {
 						Console.WriteLine($"Unable to find function '{attribute.Function}'.");
 					}
@@ -103,6 +108,24 @@ namespace Dissonance.Framework
 
 			assemblyCache = new Dictionary<string,Assembly>();
 
+			AppDomain.CurrentDomain.AssemblyResolve += (obj,args) => {
+				string assemblyName = args.Name;
+
+				if(assemblyCache.TryGetValue(assemblyName,out var assembly)) {
+					return assembly;
+				}
+
+				for(int i = 0;i<EmbeddedAssemblies.Length;i++) {
+					var embeddedAssembly = EmbeddedAssemblies[i];
+
+					if(args.Name.StartsWith(embeddedAssembly)) {
+						return assemblyCache[assemblyName] = Assembly.Load((byte[])Properties.Resources.ResourceManager.GetObject(embeddedAssembly));
+					}
+				}
+
+				return null;
+			};
+
 			NativeLibrary.SetDllImportResolver(typeof(DllManager).Assembly,(name,assembly,path) => {
 				if(DllImportCache.TryGetValue(name,out IntPtr pointer)) {
 					return pointer;
@@ -130,24 +153,6 @@ namespace Dissonance.Framework
 
 				return pointer;
 			});
-
-			AppDomain.CurrentDomain.AssemblyResolve += (obj,args) => {
-				string assemblyName = args.Name;
-
-				if(assemblyCache.TryGetValue(assemblyName,out var assembly)) {
-					return assembly;
-				}
-
-				for(int i = 0;i<EmbeddedAssemblies.Length;i++) {
-					var embeddedAssembly = EmbeddedAssemblies[i];
-
-					if(args.Name.StartsWith(embeddedAssembly)) {
-						return assemblyCache[assemblyName] = Assembly.Load((byte[])Properties.Resources.ResourceManager.GetObject(embeddedAssembly));
-					}
-				}
-
-				return null;
-			};
 
 			resolversReady = true;
 		}

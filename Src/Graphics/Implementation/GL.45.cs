@@ -230,7 +230,7 @@ namespace Dissonance.Framework.Graphics
 
 		[MethodImpl(ImplOptions)]
 		[MethodImport("glCreateTextures","4.5")]
-		public static void CreateTextures(TextureTarget target,int n,ref uint textures)
+		public static void CreateTextures(TextureTarget target,uint n,IntPtr textures)
 			=> throw new NotImplementedException();
 
 		[MethodImpl(ImplOptions)]
@@ -240,7 +240,7 @@ namespace Dissonance.Framework.Graphics
 
 		[MethodImpl(ImplOptions)]
 		[MethodImport("glTextureBufferRange","4.5")]
-		public static void TextureBufferRange(uint texture,uint internalFormat,uint buffer,int offset,int size)
+		public static void TextureBufferRange(uint texture,uint internalFormat,uint buffer,IntPtr offset,IntPtr size)
 			=> throw new NotImplementedException();
 
 		[MethodImpl(ImplOptions)]

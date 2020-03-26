@@ -8,8 +8,9 @@ namespace Test
 {
 	public static class TestProgram
 	{
-		public static bool Fullscreen = false;
+		public static readonly Version OpenGLVersion = new Version(2,1);
 
+		public static bool Fullscreen = false;
 		public static IntPtr window;
 		public static IntPtr audioDevice;
 		public static IntPtr audioContext;
@@ -95,8 +96,8 @@ namespace Test
 				throw new Exception("Unable to initialize GLFW!");
 			}
 
-			GLFW.WindowHint(WindowHint.ContextVersionMajor,2); //Targeted major version
-			GLFW.WindowHint(WindowHint.ContextVersionMinor,1); //Targeted minor version
+			GLFW.WindowHint(WindowHint.ContextVersionMajor,OpenGLVersion.Major); //Targeted major version
+			GLFW.WindowHint(WindowHint.ContextVersionMinor,OpenGLVersion.Minor); //Targeted minor version
 
 			IntPtr monitor = IntPtr.Zero;
 			int resolutionWidth = 800;
@@ -127,7 +128,7 @@ namespace Test
 		}
 		private static void PrepareOpenGL()
 		{
-			GL.Load();
+			GL.Load(OpenGLVersion);
 
 			CheckGLErrors();
 
@@ -148,22 +149,27 @@ namespace Test
 
 			const string AudioFile = "Audio.raw";
 
-			if(File.Exists(AudioFile)) {
-				//Buffer
-				AL.GenBuffer(out uint bufferId);
-
-				byte[] data = File.ReadAllBytes(AudioFile);
-
-				AL.BufferData(bufferId,BufferFormat.Mono16,data,data.Length,44100);
-
-				//Source
-				AL.GenSource(out uint sourceId);
-
-				AL.Source(sourceId,SourceInt.Buffer,(int)bufferId);
-				AL.Source(sourceId,SourceBool.Looping,true);
-
-				AL.SourcePlay(sourceId);
+			if(!File.Exists(AudioFile)) {
+				Console.WriteLine($"No {AudioFile} found.");
+				return;
 			}
+
+			//Buffer
+			AL.GenBuffer(out uint bufferId);
+
+			byte[] data = File.ReadAllBytes(AudioFile);
+
+			AL.BufferData(bufferId,BufferFormat.Mono16,data,data.Length,44100);
+
+			//Source
+			AL.GenSource(out uint sourceId);
+
+			AL.Source(sourceId,SourceInt.Buffer,(int)bufferId);
+			AL.Source(sourceId,SourceBool.Looping,true);
+
+			AL.SourcePlay(sourceId);
+
+			Console.WriteLine($"Played {AudioFile}.");
 		}
 		private static void UnloadOpenAL()
 		{

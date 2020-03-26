@@ -1,4 +1,6 @@
-﻿using Dissonance.Framework.Windowing;
+﻿using Dissonance.Engine.Graphics.Enums;
+using Dissonance.Framework.Windowing;
+using System;
 using System.Runtime.CompilerServices;
 
 namespace Dissonance.Framework.Graphics
@@ -10,6 +12,15 @@ namespace Dissonance.Framework.Graphics
 
 		static GL() => DllManager.PrepareResolvers();
 
-		public static void Load() => DllManager.ImportTypeMethods(typeof(GL),functionName => GLFW.GetProcAddress(functionName));
+		public static void Load(GLVersion version)
+		{
+			int value = (int)version;
+
+			DllManager.ImportTypeMethods(
+				typeof(GL),
+				new Version(value/10,value%10),
+				function => GLFW.GetProcAddress(function)
+			);
+		}
 	}
 }
