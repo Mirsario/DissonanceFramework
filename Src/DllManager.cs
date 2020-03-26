@@ -45,6 +45,8 @@ namespace Dissonance.Framework
 					IntPtr ptr = functionToPointer(functionName);
 
 					if(ptr!=IntPtr.Zero) {
+						Console.WriteLine($"Detouring method '{method.DeclaringType.Name}.{method.Name}'...");	
+
 						detours.Add(new NativeDetour(method,ptr,new NativeDetourConfig() { SkipILCopy = true }));
 					} else {
 						Console.WriteLine($"Unable to find function '{attribute.Function}'.");

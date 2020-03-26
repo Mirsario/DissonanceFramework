@@ -2,11 +2,12 @@
 
   <PropertyGroup>
 	<OutputType>Library</OutputType>
-	<TargetFramework>netcoreapp3.0</TargetFramework>
+	<TargetFramework>netcoreapp3.1</TargetFramework>
 	<Platforms>AnyCPU</Platforms>
 	<AssemblyName>DissonanceFramework</AssemblyName>
 	<RootNamespace>Dissonance.Framework</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<TieredCompilation>false</TieredCompilation>
 	<ApplicationIcon />
 	<StartupObject />
   </PropertyGroup>
