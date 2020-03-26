@@ -33,29 +33,27 @@ namespace Dissonance.Framework
 		{
 			detours = new List<NativeDetour>();
 
-			lock(lockObj) {
-				var methods = type.GetMethods(BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Static)
-					.Select<MethodInfo,(MethodInfo method,MethodImportAttribute attribute)>(m => (m, m.GetCustomAttribute<MethodImportAttribute>()))
-					.Where(tuple => tuple.attribute!=null && tuple.attribute.Version<=version)
-					.OrderBy(tuple => tuple.attribute.Version)
-					.ToArray();
+			var methods = type.GetMethods(BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Static)
+				.Select<MethodInfo,(MethodInfo method,MethodImportAttribute attribute)>(m => (m, m.GetCustomAttribute<MethodImportAttribute>()))
+				.Where(tuple => tuple.attribute!=null && tuple.attribute.Version<=version)
+				.OrderByDescending(tuple => tuple.attribute.Version)
+				.ToArray();
 
-				for(int i = 0;i<methods.Length;i++) {
-					var tuple = methods[i];
-					var method = tuple.method;
-					var attribute = tuple.attribute;
+			for(int i = 0;i<methods.Length;i++) {
+				var tuple = methods[i];
+				var method = tuple.method;
+				var attribute = tuple.attribute;
 
-					IntPtr ptr = functionToPointer(attribute.Function);
+				IntPtr ptr = functionToPointer(attribute.Function);
 
-					if(ptr!=IntPtr.Zero) {
-						Console.WriteLine($"Detouring method [{i+1}/{methods.Length}] '{method.DeclaringType.Name}.{method.Name}' (from version '{attribute.Version}')...");
+				if(ptr!=IntPtr.Zero) {
+					Console.ForegroundColor = ConsoleColor.White;
+					Console.WriteLine($"Detouring v{attribute.Version} method [{i+1}/{methods.Length}] '{method.DeclaringType.Name}.{method.Name}' to 0x{ptr.ToInt64():x16}...");
+					Console.ForegroundColor = ConsoleColor.Gray;
 
-						unsafe {
-							detours.Add(new NativeDetour(method,ptr,new NativeDetourConfig() { SkipILCopy = true }));
-						}
-					} else {
-						Console.WriteLine($"Unable to find function '{attribute.Function}'.");
-					}
+					detours.Add(new NativeDetour(method,ptr,new NativeDetourConfig() { SkipILCopy = true }));
+				} else {
+					Console.WriteLine($"Unable to find function '{attribute.Function}'.");
 				}
 			}
 		}
