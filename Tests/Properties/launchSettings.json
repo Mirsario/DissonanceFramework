@@ -3,7 +3,7 @@
     "Test": {
       "commandName": "Project",
       "workingDirectory": "Build\\Windows",
-      "nativeDebugging": true
+      "nativeDebugging": false
     }
   }
 }

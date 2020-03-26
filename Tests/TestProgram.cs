@@ -146,20 +146,24 @@ namespace Test
 
 			CheckALErrors();
 
-			//Buffer
-			AL.GenBuffer(out uint bufferId);
+			const string AudioFile = "Audio.raw";
 
-			byte[] data = File.ReadAllBytes("Audio.raw");
+			if(File.Exists(AudioFile)) {
+				//Buffer
+				AL.GenBuffer(out uint bufferId);
 
-			AL.BufferData(bufferId,BufferFormat.Mono16,data,data.Length,44100);
+				byte[] data = File.ReadAllBytes(AudioFile);
 
-			//Source
-			AL.GenSource(out uint sourceId);
+				AL.BufferData(bufferId,BufferFormat.Mono16,data,data.Length,44100);
 
-			AL.Source(sourceId,SourceInt.Buffer,(int)bufferId);
-			AL.Source(sourceId,SourceBool.Looping,true);
+				//Source
+				AL.GenSource(out uint sourceId);
 
-			AL.SourcePlay(sourceId);
+				AL.Source(sourceId,SourceInt.Buffer,(int)bufferId);
+				AL.Source(sourceId,SourceBool.Looping,true);
+
+				AL.SourcePlay(sourceId);
+			}
 		}
 		private static void UnloadOpenAL()
 		{
