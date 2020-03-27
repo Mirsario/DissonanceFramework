@@ -89,6 +89,7 @@ namespace Test
 
 			GLFW.SetErrorCallback((GLFWError code,string description) => Console.WriteLine(code switch {
 				GLFWError.VersionUnavailable => throw new GraphicsException(description),
+				GLFWError.APIUnavailable => throw new GraphicsException(description),
 				_ => $"GLFW Error {code}: {description}"
 			}));
 
