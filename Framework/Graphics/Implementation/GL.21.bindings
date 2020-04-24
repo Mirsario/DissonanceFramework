@@ -1,0 +1,11 @@
+﻿function void UniformMatrix2x3(int location,int count,byte transpose,ref float value) : glUniformMatrix2x3fv;
+
+function void UniformMatrix3x2(int location,int count,byte transpose,ref float value) : glUniformMatrix3x2fv;
+
+function void UniformMatrix2x4(int location,int count,byte transpose,ref float value) : glUniformMatrix2x4fv;
+
+function void UniformMatrix4x2(int location,int count,byte transpose,ref float value) : glUniformMatrix4x2fv;
+
+function void UniformMatrix3x4(int location,int count,byte transpose,ref float value) : glUniformMatrix3x4fv;
+
+function void UniformMatrix4x3(int location,int count,byte transpose,ref float value) : glUniformMatrix4x3fv;

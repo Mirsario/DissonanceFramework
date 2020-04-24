@@ -1,0 +1,23 @@
+﻿function void DrawArraysInstancedBaseInstance(uint mode,int first,int count,int instanceCount,uint baseinstance) : glDrawArraysInstancedBaseInstance;
+
+function void DrawElementsInstancedBaseInstance(uint mode,int count,uint type,IntPtr indices,int instanceCount,uint baseinstance) : glDrawElementsInstancedBaseInstance;
+
+function void DrawElementsInstancedBaseVertexBaseInstance(uint mode,int count,uint type,IntPtr indices,int instanceCount,int basevertex,uint baseinstance) : glDrawElementsInstancedBaseVertexBaseInstance;
+
+function void GetInternalformat(uint target,uint internalFormat,uint pName,int bufSize,ref int parameters) : glGetInternalformativ;
+
+function void GetActiveAtomicCounterBuffer(uint program,uint bufferIndex,uint pName,ref int parameters) : glGetActiveAtomicCounterBufferiv;
+
+function void BindImageTexture(uint unit,uint texture,int level,byte layered,int layer,uint access,uint format) : glBindImageTexture;
+
+function void MemoryBarrier(uint barriers) : glMemoryBarrier;
+
+function void TexStorage1D(TextureTarget1D target,int levels,uint internalFormat,int width) : glTexStorage1D;
+
+function void TexStorage2D(TextureTarget2D target,int levels,uint internalFormat,int width,int height) : glTexStorage2D;
+
+function void TexStorage3D(TextureTarget3D target,int levels,uint internalFormat,int width,int height,int depth) : glTexStorage3D;
+
+function void DrawTransformFeedbackInstanced(uint mode,uint id,int instanceCount) : glDrawTransformFeedbackInstanced;
+
+function void DrawTransformFeedbackStreamInstanced(uint mode,uint id,uint stream,int instanceCount) : glDrawTransformFeedbackStreamInstanced;

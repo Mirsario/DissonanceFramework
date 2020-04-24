@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.89
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DissonanceFramework", "Src\DissonanceFramework.csproj", "{EE9CBFBE-2F2E-4557-B36C-A6119083A223}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DissonanceFramework", "Framework\DissonanceFramework.csproj", "{EE9CBFBE-2F2E-4557-B36C-A6119083A223}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{1F381DA8-3423-4887-9EA5-5697DC6B2328}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EE9CBFBE-2F2E-4557-B36C-A6119083A223} = {EE9CBFBE-2F2E-4557-B36C-A6119083A223}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeGenerator", "CodeGenerator\CodeGenerator.csproj", "{CCF47D7C-D336-4253-8276-070BBFB395A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,10 @@ Global
 		{1F381DA8-3423-4887-9EA5-5697DC6B2328}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F381DA8-3423-4887-9EA5-5697DC6B2328}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F381DA8-3423-4887-9EA5-5697DC6B2328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF47D7C-D336-4253-8276-070BBFB395A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF47D7C-D336-4253-8276-070BBFB395A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF47D7C-D336-4253-8276-070BBFB395A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF47D7C-D336-4253-8276-070BBFB395A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

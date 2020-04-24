@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<OutputType>Library</OutputType>
+	<TargetFramework>netcoreapp3.1</TargetFramework>
+	<Platforms>AnyCPU</Platforms>
+	<AssemblyName>DissonanceFramework</AssemblyName>
+	<RootNamespace>Dissonance.Framework</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<TieredCompilation>false</TieredCompilation>
+	<ApplicationIcon />
+	<StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<Compile Remove="Build\**" />
+	<Compile Remove="References\**" />
+	<EmbeddedResource Remove="Build\**" />
+	<EmbeddedResource Remove="References\**" />
+	<None Remove="Build\**" />
+	<None Remove="References\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="MonoMod.RuntimeDetour.dll" />
+    <None Remove="MonoMod.Utils.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Update="glfw3.dll">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+  </ItemGroup>
+
+  <Import Project="$(SolutionDir)SolutionDefines.targets" Condition="exists('$(SolutionDir)SolutionDefines.targets')" />
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if exist &quot;$(SolutionDir)PostBuild.bat&quot; (&#xD;&#xA;    echo Running solution's PostBuild.bat...&#xD;&#xA;    call &quot;$(SolutionDir)PostBuild.bat&quot; &quot;$(ProjectName)&quot; &quot;$(TargetPath)&quot; &quot;$(SolutionDir)&quot;&#xD;&#xA;) else (&#xD;&#xA;    echo Solution's PostBuild.bat is not present.&#xD;&#xA;)" />
+  </Target>
+
+</Project>

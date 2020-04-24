@@ -1,0 +1,37 @@
+﻿function void DrawElementsBaseVertex(uint mode,int count,uint type,IntPtr indices,int basevertex) : glDrawElementsBaseVertex;
+
+function void DrawRangeElementsBaseVertex(uint mode,uint start,uint end,int count,uint type,IntPtr indices,int basevertex) : glDrawRangeElementsBaseVertex;
+
+function void DrawElementsInstancedBaseVertex(uint mode,int count,uint type,IntPtr indices,int instanceCount,int basevertex) : glDrawElementsInstancedBaseVertex;
+
+function void MultiDrawElementsBaseVertex(uint mode,ref int count,uint type,IntPtr indices,int drawcount,ref int basevertex) : glMultiDrawElementsBaseVertex;
+
+function void ProvokingVertex(uint mode) : glProvokingVertex;
+
+function IntPtr FenceSync(uint condition,uint flags) : glFenceSync;
+
+function byte IsSync(IntPtr sync) : glIsSync;
+
+function void DeleteSync(IntPtr sync) : glDeleteSync;
+
+function uint ClientWaitSync(IntPtr sync,uint flags,uint timeout) : glClientWaitSync;
+
+function void WaitSync(IntPtr sync,uint flags,uint timeout) : glWaitSync;
+
+function void GetInteger(uint pName,ref int data) : glGetInteger64v;
+
+function void GetSync(IntPtr sync,uint pName,int bufSize,ref int length,ref int values) : glGetSynciv;
+
+function void GetInteger(uint target,uint index,ref long data) : glGetInteger64i_v;
+
+function void GetBufferParameter(BufferTarget target,uint pName,ref long parameters) : glGetBufferParameteri64v;
+
+function void FramebufferTexture(FramebufferTarget target,FramebufferAttachment attachment,uint texture,int level) : glFramebufferTexture;
+
+function void TexImage2DMultisample(TextureTarget target,int samples,PixelInternalFormat internalFormat,int width,int height,byte fixedsamplelocations) : glTexImage2DMultisample;
+
+function void TexImage3DMultisample(TextureTarget target,int samples,PixelInternalFormat internalFormat,int width,int height,int depth,byte fixedsamplelocations) : glTexImage3DMultisample;
+
+function void GetMultisample(uint pName,uint index,ref float val) : glGetMultisamplefv;
+
+function void SampleMask(uint maskNumber,uint mask) : glSampleMaski;

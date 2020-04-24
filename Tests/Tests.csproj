@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Src\DissonanceFramework.csproj" />
+    <ProjectReference Include="..\Framework\DissonanceFramework.csproj" />
   </ItemGroup>
 
 </Project>
