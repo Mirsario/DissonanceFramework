@@ -42,8 +42,4 @@
 
   <Import Project="$(SolutionDir)SolutionDefines.targets" Condition="exists('$(SolutionDir)SolutionDefines.targets')" />
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if exist &quot;$(SolutionDir)PostBuild.bat&quot; (&#xD;&#xA;    echo Running solution's PostBuild.bat...&#xD;&#xA;    call &quot;$(SolutionDir)PostBuild.bat&quot; &quot;$(ProjectName)&quot; &quot;$(TargetPath)&quot; &quot;$(SolutionDir)&quot;&#xD;&#xA;) else (&#xD;&#xA;    echo Solution's PostBuild.bat is not present.&#xD;&#xA;)" />
-  </Target>
-
 </Project>
