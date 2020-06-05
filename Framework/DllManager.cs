@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -13,6 +14,16 @@ namespace Dissonance.Framework
 	internal static partial class DllManager
 	{
 		private static readonly Dictionary<string,IntPtr> DllImportCache = new Dictionary<string,IntPtr>();
+
+		private static readonly string OSFolder = $"{GetOS()}{IntPtr.Size*8}";
+
+		public static string[] LibraryDirectories = {
+			Path.Combine("References","Native",OSFolder),
+			Path.Combine("References","Native"),
+			Path.Combine("References",OSFolder),
+			"References",
+			"",
+		};
 
 		private static bool resolversReady;
 
@@ -94,23 +105,31 @@ namespace Dissonance.Framework
 					return pointer;
 				}
 
-				IEnumerable<string> paths = name switch {
-					GLFW.Library => GLFW.GetLibraryPaths(),
-					AL.Library => AL.GetLibraryPaths(),
-					IL.Library => IL.GetLibraryPaths(),
+				var paths = new List<string>();
+
+				string[] libraryNames = name switch {
+					GLFW.Library => GLFW.GetLibraryNames(),
+					AL.Library => AL.GetLibraryNames(),
+					IL.Library => IL.GetLibraryNames(),
 					_ => null
 				};
 
-				if(paths!=null) {
-					foreach(string currentPath in paths) {
-						try {
-							DllImportCache[name] = pointer = NativeLibrary.Load(currentPath,assembly,path);
-						}
-						catch { }
+				for(int i = 0;i<LibraryDirectories.Length;i++) {
+					string libraryDirectory = LibraryDirectories[i];
 
-						if(pointer!=IntPtr.Zero) {
-							break;
-						}
+					for(int j = 0;j<libraryNames.Length;j++) {
+						paths.Add(Path.Combine(libraryDirectory,libraryNames[j]));
+					}
+				}
+
+				foreach(string currentPath in paths) {
+					try {
+						DllImportCache[name] = pointer = NativeLibrary.Load(currentPath,assembly,path);
+					}
+					catch { }
+
+					if(pointer!=IntPtr.Zero) {
+						break;
 					}
 				}
 

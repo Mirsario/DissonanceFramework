@@ -7,15 +7,14 @@ namespace Dissonance.Framework.Imaging
 	{
 		internal const string Library = "DevIL.dll";
 
-		private static readonly string[] DefaultPathsWindows = {
+		private static readonly string[] LibraryNamesWindows = {
 			Library
 		};
-		private static readonly string[] DefaultPathsLinux = {
+		private static readonly string[] LibraryNamesLinux = {
 			"libdevil.so.3",
 			"libdevil.so"
 		};
-		private static readonly string[] DefaultPathsOSX = {
-			"libdevil.dylib",
+		private static readonly string[] LibraryNamesOSX = {
 			"libdevil.dylib",
 			"libdevil.so.3",
 			"libdevil.so"
@@ -23,10 +22,10 @@ namespace Dissonance.Framework.Imaging
 
 		static IL() => DllManager.PrepareResolvers();
 
-		internal static IEnumerable<string> GetLibraryPaths() => GetOS() switch {
-			OS.Windows => DefaultPathsWindows,
-			OS.Linux => DefaultPathsLinux,
-			OS.OSX => DefaultPathsOSX,
+		internal static string[] GetLibraryNames() => GetOS() switch {
+			OS.Windows => LibraryNamesWindows,
+			OS.Linux => LibraryNamesLinux,
+			OS.OSX => LibraryNamesOSX,
 			_ => null
 		};
 	}

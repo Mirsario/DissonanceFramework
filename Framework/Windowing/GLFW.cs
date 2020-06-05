@@ -6,14 +6,14 @@ namespace Dissonance.Framework.Windowing
 	{
 		internal const string Library = "glfw3.dll";
 
-		private static readonly string[] DefaultPathsWindows = {
-			"glfw3.dll"
+		private static readonly string[] LibraryNamesWindows = {
+			Library
 		};
-		private static readonly string[] DefaultPathsLinux = {
+		private static readonly string[] LibraryNamesLinux = {
 			"libglfw.so.3",
 			"libglfw.so"
 		};
-		private static readonly string[] DefaultPathsOSX = {
+		private static readonly string[] LibraryNamesOSX = {
 			"libglfw3.dylib",
 			"libglfw.dylib",
 			"libglfw.so.3",
@@ -22,10 +22,10 @@ namespace Dissonance.Framework.Windowing
 
 		static GLFW() => DllManager.PrepareResolvers();
 
-		internal static IEnumerable<string> GetLibraryPaths() => OSUtils.GetOS() switch {
-			OSUtils.OS.Windows => DefaultPathsWindows,
-			OSUtils.OS.Linux => DefaultPathsLinux,
-			OSUtils.OS.OSX => DefaultPathsOSX,
+		internal static string[] GetLibraryNames() => OSUtils.GetOS() switch {
+			OSUtils.OS.Windows => LibraryNamesWindows,
+			OSUtils.OS.Linux => LibraryNamesLinux,
+			OSUtils.OS.OSX => LibraryNamesOSX,
 			_ => null
 		};
 	}

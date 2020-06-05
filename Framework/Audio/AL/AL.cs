@@ -10,15 +10,15 @@ namespace Dissonance.Framework.Audio
 
 		private const int AI = (int)MethodImplOptions.AggressiveInlining;
 
-		private static readonly string[] DefaultPathsWindows = {
-			"soft_oal.dll"
+		private static readonly string[] LibraryNamesWindows = {
+			Library
 		};
-		private static readonly string[] DefaultPathsLinux = {
+		private static readonly string[] LibraryNamesLinux = {
 			"libopenal.so.1",
 			"libopenal.so",
 			"soft_oal.so"
 		};
-		private static readonly string[] DefaultPathsOSX = {
+		private static readonly string[] LibraryNamesOSX = {
 			"libopenal.so.1",
 			"libopenal.so",
 			"soft_oal.so"
@@ -26,10 +26,10 @@ namespace Dissonance.Framework.Audio
 
 		static AL() => DllManager.PrepareResolvers();
 
-		internal static IEnumerable<string> GetLibraryPaths() => GetOS() switch {
-			OS.Windows => DefaultPathsWindows,
-			OS.Linux => DefaultPathsLinux,
-			OS.OSX => DefaultPathsOSX,
+		internal static string[] GetLibraryNames() => GetOS() switch {
+			OS.Windows => LibraryNamesWindows,
+			OS.Linux => LibraryNamesLinux,
+			OS.OSX => LibraryNamesOSX,
 			_ => null
 		};
 	}
