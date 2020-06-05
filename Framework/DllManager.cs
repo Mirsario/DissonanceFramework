@@ -45,7 +45,7 @@ namespace Dissonance.Framework
 				IntPtr ptr = functionToPointer(attribute.Function);
 
 				if(ptr!=IntPtr.Zero) {
-					Console.WriteLine($"[{i+1}/{fields.Length}] Loading function '{field.Name}'...");
+					//Console.WriteLine($"[{i+1}/{fields.Length}] Loading function '{field.Name}'...");
 
 					field.SetValue(null,Marshal.GetDelegateForFunctionPointer(ptr,field.FieldType));
 				} else {
