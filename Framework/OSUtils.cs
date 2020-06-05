@@ -1,11 +1,10 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
 namespace Dissonance.Framework
 {
-	internal static class OSUtils
+	public static class OSUtils
 	{
-		internal enum OS
+		public enum OS
 		{
 			Windows,
 			Linux,

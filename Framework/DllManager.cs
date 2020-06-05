@@ -11,11 +11,11 @@ using static Dissonance.Framework.OSUtils;
 
 namespace Dissonance.Framework
 {
-	internal static partial class DllManager
+	public static partial class DllManager
 	{
-		private static readonly Dictionary<string,IntPtr> DllImportCache = new Dictionary<string,IntPtr>();
+		public static readonly string OSFolder = $"{GetOS()}{IntPtr.Size*8}";
 
-		private static readonly string OSFolder = $"{GetOS()}{IntPtr.Size*8}";
+		private static readonly Dictionary<string,IntPtr> DllImportCache = new Dictionary<string,IntPtr>();
 
 		public static string[] LibraryDirectories = {
 			Path.Combine("References","Native",OSFolder),
@@ -113,6 +113,10 @@ namespace Dissonance.Framework
 					IL.Library => IL.GetLibraryNames(),
 					_ => null
 				};
+
+				if(libraryNames==null) {
+					return pointer;
+				}
 
 				for(int i = 0;i<LibraryDirectories.Length;i++) {
 					string libraryDirectory = LibraryDirectories[i];
