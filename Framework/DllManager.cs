@@ -29,7 +29,7 @@ namespace Dissonance.Framework
 
 		static DllManager() => PrepareResolvers();
 
-		public static void ImportTypeMethods(Type type,Version version,Func<string,IntPtr> functionToPointer)
+		internal static void ImportTypeMethods(Type type,Version version,Func<string,IntPtr> functionToPointer)
 		{
 			var fields = type.GetFields(BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Static)
 				.Select<FieldInfo,(FieldInfo field,MethodImportAttribute attribute)>(f => (f,f.GetCustomAttribute<MethodImportAttribute>()))
@@ -53,7 +53,7 @@ namespace Dissonance.Framework
 				}
 			}
 		}
-		public static IntPtr DllLoad(string fileName)
+		internal static IntPtr DllLoad(string fileName)
 		{
 			IntPtr mHnd;
 
@@ -69,7 +69,7 @@ namespace Dissonance.Framework
 
 			return mHnd;
 		}
-		public static IntPtr DllSymbol(IntPtr mHnd,string symbol)
+		internal static IntPtr DllSymbol(IntPtr mHnd,string symbol)
 		{
 			IntPtr symPtr;
 
@@ -81,11 +81,11 @@ namespace Dissonance.Framework
 
 			return symPtr;
 		}
-		public static Delegate DllDelegate(Type delegateType,IntPtr mHnd,string symbol)
+		internal static Delegate DllDelegate(Type delegateType,IntPtr mHnd,string symbol)
 		{
 			return Marshal.GetDelegateForFunctionPointer(DllSymbol(mHnd,symbol),delegateType);
 		}
-		public static void MemoryCopy(IntPtr dest,IntPtr source,uint count)
+		internal static void MemoryCopy(IntPtr dest,IntPtr source,uint count)
 		{
 			if(IsOS(OS.Windows)) {
 				CopyMemoryWindows(dest,source,count);
@@ -93,7 +93,6 @@ namespace Dissonance.Framework
 				CopyMemoryUnix(dest,source,count);
 			}
 		}
-
 		internal static void PrepareResolvers()
 		{
 			if(resolversReady) {
