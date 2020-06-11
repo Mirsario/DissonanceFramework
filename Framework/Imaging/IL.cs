@@ -15,9 +15,7 @@ namespace Dissonance.Framework.Imaging
 			"libdevil.so"
 		};
 		private static readonly string[] LibraryNamesOSX = {
-			"libdevil.dylib",
-			"libdevil.so.3",
-			"libdevil.so"
+			"libIL.dylib"
 		};
 
 		static IL() => DllManager.PrepareResolvers();

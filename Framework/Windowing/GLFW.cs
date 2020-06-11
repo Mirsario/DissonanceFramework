@@ -14,7 +14,7 @@ namespace Dissonance.Framework.Windowing
 			"libglfw.so"
 		};
 		private static readonly string[] LibraryNamesOSX = {
-			"libglfw3.dylib",
+			"libglfw.3.dylib",
 			"libglfw.dylib",
 			"libglfw.so.3",
 			"libglfw.so"

@@ -19,9 +19,9 @@ namespace Dissonance.Framework.Audio
 			"soft_oal.so"
 		};
 		private static readonly string[] LibraryNamesOSX = {
-			"libopenal.so.1",
-			"libopenal.so",
-			"soft_oal.so"
+			"libopenal.1.20.1.dylib",
+			"libopenal.1.dylib",
+			"libopenal.dylib"
 		};
 
 		static AL() => DllManager.PrepareResolvers();
