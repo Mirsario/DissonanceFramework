@@ -121,7 +121,7 @@ namespace Dissonance.Framework
 					string libraryDirectory = LibraryDirectories[i];
 
 					for(int j = 0;j<libraryNames.Length;j++) {
-						paths.Add(Path.Combine(libraryDirectory,libraryNames[j]));
+						paths.Add(Path.GetFullPath(Path.Combine(libraryDirectory,libraryNames[j])));
 					}
 				}
 
