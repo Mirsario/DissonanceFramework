@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using static Dissonance.Framework.OSUtils;
 
 namespace Dissonance.Framework.Imaging
@@ -11,8 +11,9 @@ namespace Dissonance.Framework.Imaging
 			Library
 		};
 		private static readonly string[] LibraryNamesLinux = {
-			"libdevil.so.3",
-			"libdevil.so"
+			"libIL.so.1.1.0",
+			"libIL.so.1",
+			"libIL.so"
 		};
 		private static readonly string[] LibraryNamesOSX = {
 			"libIL.dylib"
