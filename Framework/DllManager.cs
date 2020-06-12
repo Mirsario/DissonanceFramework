@@ -125,14 +125,34 @@ namespace Dissonance.Framework
 					}
 				}
 
+				bool debug = Environment.GetEnvironmentVariable("DISSONANCEFRAMEWORK_DEBUG")?.ToUpper()=="TRUE";
+
 				foreach(string currentPath in paths) {
+					if(!File.Exists(currentPath)) {
+						if(debug) {
+							Console.WriteLine($"Skipping library path '{currentPath}'... ");
+						}
+
+						continue;
+					}
+
 					try {
 						DllImportCache[name] = pointer = NativeLibrary.Load(currentPath,assembly,path);
 					}
-					catch { }
+					catch(Exception e) {
+						Console.WriteLine($"An {e.GetType().Name} has occured when trying to load library '{currentPath}':\r\n{e.Message}");
+					}
 
 					if(pointer!=IntPtr.Zero) {
+						if(debug) {
+							Console.WriteLine("Success.");
+						}
+
 						break;
+					}
+
+					if(debug) {
+						Console.WriteLine("Failure.");
 					}
 				}
 
