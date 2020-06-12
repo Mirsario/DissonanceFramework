@@ -104,6 +104,12 @@ namespace Dissonance.Framework
 					return pointer;
 				}
 
+				bool debug = Environment.GetEnvironmentVariable("DISSONANCEFRAMEWORK_DEBUG")?.ToUpper()=="TRUE";
+
+				if(debug) {
+					Console.WriteLine($"Attempting to resolve '{name}'...");
+				}
+
 				var paths = new List<string>();
 
 				string[] libraryNames = name switch {
@@ -125,8 +131,6 @@ namespace Dissonance.Framework
 					}
 				}
 
-				bool debug = Environment.GetEnvironmentVariable("DISSONANCEFRAMEWORK_DEBUG")?.ToUpper()=="TRUE";
-
 				foreach(string currentPath in paths) {
 					if(!File.Exists(currentPath)) {
 						if(debug) {
@@ -134,6 +138,10 @@ namespace Dissonance.Framework
 						}
 
 						continue;
+					}
+
+					if(debug) {
+						Console.WriteLine($"Attemting to load a native library at '{currentPath}'... ");
 					}
 
 					try {
