@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using Dissonance.Framework.Graphics;
 using Dissonance.Framework.Windowing;
@@ -25,6 +25,8 @@ namespace Test
 
 			GLFW.WindowHint(WindowHint.ContextVersionMajor,OpenGLVersion.Major); //Targeted major version
 			GLFW.WindowHint(WindowHint.ContextVersionMinor,OpenGLVersion.Minor); //Targeted minor version
+			GLFW.WindowHint(WindowHint.OpenGLProfile,GLFW.OPENGL_CORE_PROFILE);
+			GLFW.WindowHint(WindowHint.OpenGLForwardCompat,1);
 
 			IntPtr monitor = IntPtr.Zero;
 			int resolutionWidth = 800;
@@ -47,6 +49,8 @@ namespace Test
 			window = GLFW.CreateWindow(resolutionWidth,resolutionHeight,"Unnamed Window",monitor,IntPtr.Zero);
 
 			GLFW.MakeContextCurrent(window);
+
+			GLFW.SwapInterval(0);
 		}
 		private static void UnloadGLFW()
 		{

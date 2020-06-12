@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.IO;
+using System.Threading;
 using Dissonance.Framework.Graphics;
 using Dissonance.Framework.Windowing;
 
@@ -7,7 +8,7 @@ namespace Test
 {
 	public static partial class TestProgram
 	{
-		public static readonly Version OpenGLVersion = new Version(2,1);
+		public static readonly Version OpenGLVersion = new Version(3,2);
 
 		public static bool Fullscreen = false;
 
@@ -23,7 +24,49 @@ namespace Test
 
 			CheckGLErrors();
 
+			float[] points = {
+				 0.0f,	 0.5f,	0.0f,
+				 0.5f,	-0.5f,	0.0f,
+				-0.5f,	-0.5f,	0.0f
+			};
+
+			uint vbo = GL.GenBuffer();
+			GL.BindBuffer(BufferTarget.ArrayBuffer,vbo);
+			GL.BufferData(BufferTarget.ArrayBuffer,points.Length*sizeof(float),points,BufferUsageHint.StaticDraw);
+
+			uint vao = GL.GenVertexArray();
+			GL.BindVertexArray(vao);
+			GL.EnableVertexAttribArray(0);
+			GL.BindBuffer(BufferTarget.ArrayBuffer,vbo);
+			GL.VertexAttribPointer(0,3,VertexAttribPointerType.Float,false,0,IntPtr.Zero);
+
+			string vertexShader = @"#version 330 core
+in vec3 vertex;
+void main() {
+	gl_Position = vec4(vertex,1.0);
+}";
+			string fragmentShader = @"#version 330 core
+out vec4 color;
+void main() {
+	color = vec4(1.0,0.5,0.0,1.0);
+}";
+
+			uint vs = GL.CreateShader(ShaderType.VertexShader);
+			GL.ShaderSource(vs,vertexShader);
+			GL.CompileShader(vs);
+
+			uint fs = GL.CreateShader(ShaderType.FragmentShader);
+			GL.ShaderSource(fs,fragmentShader);
+			GL.CompileShader(fs);
+
+			uint program = GL.CreateProgram();
+			GL.AttachShader(program,vs);
+			GL.AttachShader(program,fs);
+			GL.LinkProgram(program);
+
 			while(GLFW.WindowShouldClose(window)==0) {
+				GLFW.PollEvents();
+
 				double time = GLFW.GetTime();
 				//double deltaTime = time-timePrev;
 				//timePrev = time;
@@ -34,26 +77,22 @@ namespace Test
 
 				var (colorR,colorG,colorB) = GetRainbowColor((float)time*0.75f);
 
-				colorR = Math.Max(colorR,0.5f);
-				colorG = Math.Max(colorG,0.5f);
-				colorB = Math.Max(colorB,0.5f);
+				colorR = Math.Max(colorR,0.9f);
+				colorG = Math.Max(colorG,0.9f);
+				colorB = Math.Max(colorB,0.9f);
 
-				GL.ClearColor(70/255f,130/255f,180/255f);
+				GL.ClearColor(colorR,colorG,colorB); //GL.ClearColor(70/255f,130/255f,180/255f);
 				GL.Clear(ClearBufferMask.ColorBufferBit);
 
-				GL.Color3(colorR,colorG,colorB);
-
-				//Draw
-				GL.Begin(PrimitiveType.Triangles);
-
-				GL.Vertex3(-1.0f,-1.0f, 0.0f);
-				GL.Vertex3( 1.0f,-1.0f, 0.0f);
-				GL.Vertex3( 0.0f, 1.0f, 0.0f);
-
-				GL.End();
+				GL.UseProgram(program);
+				GL.BindVertexArray(vao);
+				GL.DrawArrays(PrimitiveType.Triangles,0,points.Length/3);
 
 				GLFW.SwapBuffers(window);
-				GLFW.PollEvents();
+
+                CheckGLErrors();
+				
+				Thread.Sleep(1);
 			}
 
 			UnloadOpenAL();
