@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Dissonance.Framework
 	{
 		public static readonly string OSFolder = $"{GetOS()}{IntPtr.Size*8}";
 
-		private static readonly Dictionary<string,IntPtr> DllImportCache = new Dictionary<string,IntPtr>();
+		private static readonly ConcurrentDictionary<string,IntPtr> DllImportCache = new ConcurrentDictionary<string,IntPtr>();
 
 		public static string[] LibraryDirectories = {
 			Path.Combine("References","Native",OSFolder),
