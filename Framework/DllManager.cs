@@ -100,12 +100,16 @@ namespace Dissonance.Framework
 				return;
 			}
 
+			bool debug = Environment.GetEnvironmentVariable("DISSONANCEFRAMEWORK_DEBUG")?.ToUpper()=="TRUE";
+
+			if(debug) {
+				Console.WriteLine("Preparing resolvers...");
+			}
+
 			NativeLibrary.SetDllImportResolver(typeof(DllManager).Assembly,(name,assembly,path) => {
 				if(DllImportCache.TryGetValue(name,out IntPtr pointer)) {
 					return pointer;
 				}
-
-				bool debug = Environment.GetEnvironmentVariable("DISSONANCEFRAMEWORK_DEBUG")?.ToUpper()=="TRUE";
 
 				if(debug) {
 					Console.WriteLine($"Attempting to resolve '{name}'...");
