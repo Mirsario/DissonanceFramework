@@ -1,17 +1,17 @@
-﻿function void BufferStorage(BufferTarget target,int size,IntPtr data,uint flags) : glBufferStorage;
+﻿function void BufferStorage(BufferTarget target, int size, IntPtr data, uint flags) : glBufferStorage;
 
-function void ClearTexImage(uint texture,int level,PixelFormat format,PixelType type,IntPtr data) : glClearTexImage;
+function void ClearTexImage(uint texture, int level, PixelFormat format, PixelType type, IntPtr data) : glClearTexImage;
 
-function void ClearTexSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,PixelFormat format,PixelType type,IntPtr data) : glClearTexSubImage;
+function void ClearTexSubImage(uint texture, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, PixelFormat format, PixelType type, IntPtr data) : glClearTexSubImage;
 
-function void BindBuffersBase(BufferRangeTarget target,uint first,int count,ref uint buffers) : glBindBuffersBase;
+function void BindBuffersBase(BufferRangeTarget target, uint first, int count, ref uint buffers) : glBindBuffersBase;
 
-function void BindBuffersRange(BufferRangeTarget target,uint first,int count,ref uint buffers,ref int offsets,ref int sizes) : glBindBuffersRange;
+function void BindBuffersRange(BufferRangeTarget target, uint first, int count, ref uint buffers, ref int offsets, ref int sizes) : glBindBuffersRange;
 
-function void BindTextures(uint first,int count,ref uint textures) : glBindTextures;
+function void BindTextures(uint first, int count, ref uint textures) : glBindTextures;
 
-function void BindSamplers(uint first,int count,ref uint samplers) : glBindSamplers;
+function void BindSamplers(uint first, int count, ref uint samplers) : glBindSamplers;
 
-function void BindImageTextures(uint first,int count,ref uint textures) : glBindImageTextures;
+function void BindImageTextures(uint first, int count, ref uint textures) : glBindImageTextures;
 
-function void BindVertexBuffers(uint first,int count,ref uint buffers,ref int offsets,ref int strides) : glBindVertexBuffers;
+function void BindVertexBuffers(uint first, int count, ref uint buffers, ref int offsets, ref int strides) : glBindVertexBuffers;

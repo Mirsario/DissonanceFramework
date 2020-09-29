@@ -1,17 +1,17 @@
-﻿function void BlendFuncSeparate(uint sfactorRGB,uint dfactorRGB,uint sfactorAlpha,uint dfactorAlpha) : glBlendFuncSeparate;
+﻿function void BlendFuncSeparate(uint sfactorRGB, uint dfactorRGB, uint sfactorAlpha, uint dfactorAlpha) : glBlendFuncSeparate;
 
-function void MultiDrawArrays(uint mode,ref int first,ref int count,int drawcount) : glMultiDrawArrays;
+function void MultiDrawArrays(uint mode, ref int first, ref int count, int drawcount) : glMultiDrawArrays;
 
-function void MultiDrawElements(uint mode,ref int count,uint type,IntPtr indices,int drawcount) : glMultiDrawElements;
+function void MultiDrawElements(uint mode, ref int count, uint type, IntPtr indices, int drawcount) : glMultiDrawElements;
 
-function void PointParameter(uint pName,float param) : glPointParameterf;
+function void PointParameter(uint pName, float param) : glPointParameterf;
 
-function void PointParameter(uint pName,ref float parameters) : glPointParameterfv;
+function void PointParameter(uint pName, ref float parameters) : glPointParameterfv;
 
-function void PointParameter(uint pName,int param) : glPointParameteri;
+function void PointParameter(uint pName, int param) : glPointParameteri;
 
-function void PointParameter(uint pName,ref int parameters) : glPointParameteriv;
+function void PointParameter(uint pName, ref int parameters) : glPointParameteriv;
 
-function void BlendColor(float red,float green,float blue,float alpha) : glBlendColor;
+function void BlendColor(float red, float green, float blue, float alpha) : glBlendColor;
 
 function void BlendEquation(uint mode) : glBlendEquation;

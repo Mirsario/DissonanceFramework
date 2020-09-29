@@ -1,23 +1,23 @@
-﻿function void DrawArraysInstanced(uint mode,int first,int count,int instanceCount) : glDrawArraysInstanced;
+﻿function void DrawArraysInstanced(uint mode, int first, int count, int instanceCount) : glDrawArraysInstanced;
 
-function void DrawElementsInstanced(uint mode,int count,uint type,IntPtr indices,int instanceCount) : glDrawElementsInstanced;
+function void DrawElementsInstanced(uint mode, int count, uint type, IntPtr indices, int instanceCount) : glDrawElementsInstanced;
 
-function void TexBuffer(TextureBufferTarget target,uint internalFormat,uint buffer) : glTexBuffer;
+function void TexBuffer(TextureBufferTarget target, uint internalFormat, uint buffer) : glTexBuffer;
 
 function void PrimitiveRestartIndex(uint index) : glPrimitiveRestartIndex;
 
-function void CopyBufferSubData(uint readTarget,uint writeTarget,int readOffset,int writeOffset,int size) : glCopyBufferSubData;
+function void CopyBufferSubData(uint readTarget, uint writeTarget, int readOffset, int writeOffset, int size) : glCopyBufferSubData;
 
-function void GetUniformIndices(uint program,int uniformCount,IntPtr uniformNames,ref uint uniformIndices) : glGetUniformIndices;
+function void GetUniformIndices(uint program, int uniformCount, IntPtr uniformNames, ref uint uniformIndices) : glGetUniformIndices;
 
-function void GetActiveUniforms(uint program,int uniformCount,ref uint uniformIndices,uint pName,ref int parameters) : glGetActiveUniformsiv;
+function void GetActiveUniforms(uint program, int uniformCount, ref uint uniformIndices, uint pName, ref int parameters) : glGetActiveUniformsiv;
 
-function void GetActiveUniformName(uint program,uint uniformIndex,int bufSize,ref int length,IntPtr uniformName) : glGetActiveUniformName;
+function void GetActiveUniformName(uint program, uint uniformIndex, int bufSize, ref int length, IntPtr uniformName) : glGetActiveUniformName;
 
-function uint GetUniformBlockIndex(uint program,IntPtr uniformBlockName) : glGetUniformBlockIndex;
+function uint GetUniformBlockIndex(uint program, IntPtr uniformBlockName) : glGetUniformBlockIndex;
 
-function void GetActiveUniformBlock(uint program,uint uniformBlockIndex,uint pName,ref int parameters) : glGetActiveUniformBlockiv;
+function void GetActiveUniformBlock(uint program, uint uniformBlockIndex, uint pName, ref int parameters) : glGetActiveUniformBlockiv;
 
-function void GetActiveUniformBlockName(uint program,uint uniformBlockIndex,int bufSize,ref int length,IntPtr uniformBlockName) : glGetActiveUniformBlockName;
+function void GetActiveUniformBlockName(uint program, uint uniformBlockIndex, int bufSize, ref int length, IntPtr uniformBlockName) : glGetActiveUniformBlockName;
 
-function void UniformBlockBinding(uint program,uint uniformBlockIndex,uint uniformBlockBinding) : glUniformBlockBinding;
+function void UniformBlockBinding(uint program, uint uniformBlockIndex, uint uniformBlockBinding) : glUniformBlockBinding;

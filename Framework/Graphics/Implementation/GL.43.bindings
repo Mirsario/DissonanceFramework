@@ -1,85 +1,85 @@
-﻿function void ClearBufferData(BufferTarget target,PixelInternalFormat internalFormat,PixelFormat format,PixelType type,IntPtr data) : glClearBufferData;
+﻿function void ClearBufferData(BufferTarget target, PixelInternalFormat internalFormat, PixelFormat format, PixelType type, IntPtr data) : glClearBufferData;
 
-function void ClearBufferSubData(BufferTarget target,PixelInternalFormat internalFormat,int offset,int size,PixelFormat format,PixelType type,IntPtr data) : glClearBufferSubData;
+function void ClearBufferSubData(BufferTarget target, PixelInternalFormat internalFormat, int offset, int size, PixelFormat format, PixelType type, IntPtr data) : glClearBufferSubData;
 
-function void DispatchCompute(uint num_groups_x,uint num_groups_y,uint num_groups_z) : glDispatchCompute;
+function void DispatchCompute(uint num_groups_x, uint num_groups_y, uint num_groups_z) : glDispatchCompute;
 
 function void DispatchComputeIndirect(int indirect) : glDispatchComputeIndirect;
 
-function void CopyImageSubData(uint srcName,uint srcTarget,int srcLevel,int srcX,int srcY,int srcZ,uint dstName,uint dstTarget,int dstLevel,int dstX,int dstY,int dstZ,int srcWidth,int srcHeight,int srcDepth) : glCopyImageSubData;
+function void CopyImageSubData(uint srcName, uint srcTarget, int srcLevel, int srcX, int srcY, int srcZ, uint dstName, uint dstTarget, int dstLevel, int dstX, int dstY, int dstZ, int srcWidth, int srcHeight, int srcDepth) : glCopyImageSubData;
 
-function void FramebufferParameter(FramebufferTarget target,uint pName,int param) : glFramebufferParameteri;
+function void FramebufferParameter(FramebufferTarget target, uint pName, int param) : glFramebufferParameteri;
 
-function void GetFramebufferParameter(FramebufferTarget target,uint pName,ref int parameters) : glGetFramebufferParameteriv;
+function void GetFramebufferParameter(FramebufferTarget target, uint pName, ref int parameters) : glGetFramebufferParameteriv;
 
-function void GetInternalformat(uint target,uint internalFormat,uint pName,int bufSize,ref long parameters) : glGetInternalformati64v;
+function void GetInternalformat(uint target, uint internalFormat, uint pName, int bufSize, ref long parameters) : glGetInternalformati64v;
 
-function void InvalidateTexSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth) : glInvalidateTexSubImage;
+function void InvalidateTexSubImage(uint texture, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth) : glInvalidateTexSubImage;
 
-function void InvalidateTexImage(uint texture,int level) : glInvalidateTexImage;
+function void InvalidateTexImage(uint texture, int level) : glInvalidateTexImage;
 
-function void InvalidateBufferSubData(uint buffer,int offset,int length) : glInvalidateBufferSubData;
+function void InvalidateBufferSubData(uint buffer, int offset, int length) : glInvalidateBufferSubData;
 
 function void InvalidateBufferData(uint buffer) : glInvalidateBufferData;
 
-function unsafe void InvalidateFramebuffer(FramebufferTarget target,int numAttachments,FramebufferAttachment* attachments) : glInvalidateFramebuffer;
+function unsafe void InvalidateFramebuffer(FramebufferTarget target, int numAttachments, FramebufferAttachment* attachments) : glInvalidateFramebuffer;
 
-function unsafe void InvalidateSubFramebuffer(FramebufferTarget target,int numAttachments,FramebufferAttachment* attachments,int x,int y,int width,int height) : glInvalidateSubFramebuffer;
+function unsafe void InvalidateSubFramebuffer(FramebufferTarget target, int numAttachments, FramebufferAttachment* attachments, int x, int y, int width, int height) : glInvalidateSubFramebuffer;
 
-function void MultiDrawArraysIndirect(uint mode,IntPtr indirect,int drawcount,int stride) : glMultiDrawArraysIndirect;
+function void MultiDrawArraysIndirect(uint mode, IntPtr indirect, int drawcount, int stride) : glMultiDrawArraysIndirect;
 
-function void MultiDrawElementsIndirect(uint mode,uint type,IntPtr indirect,int drawcount,int stride) : glMultiDrawElementsIndirect;
+function void MultiDrawElementsIndirect(uint mode, uint type, IntPtr indirect, int drawcount, int stride) : glMultiDrawElementsIndirect;
 
-function void GetProgramInterface(uint program,uint programInterface,uint pName,ref int parameters) : glGetProgramInterfaceiv;
+function void GetProgramInterface(uint program, uint programInterface, uint pName, ref int parameters) : glGetProgramInterfaceiv;
 
-function uint GetProgramResourceIndex(uint program,uint programInterface,IntPtr name) : glGetProgramResourceIndex;
+function uint GetProgramResourceIndex(uint program, uint programInterface, IntPtr name) : glGetProgramResourceIndex;
 
-function void GetProgramResourceName(uint program,uint programInterface,uint index,int bufSize,ref int length,IntPtr name) : glGetProgramResourceName;
+function void GetProgramResourceName(uint program, uint programInterface, uint index, int bufSize, ref int length, IntPtr name) : glGetProgramResourceName;
 
-function void GetProgramResource(uint program,uint programInterface,uint index,int propCount,ref uint props,int bufSize,ref int length,ref int parameters) : glGetProgramResourceiv;
+function void GetProgramResource(uint program, uint programInterface, uint index, int propCount, ref uint props, int bufSize, ref int length, ref int parameters) : glGetProgramResourceiv;
 
-function int GetProgramResourceLocation(uint program,uint programInterface,IntPtr name) : glGetProgramResourceLocation;
+function int GetProgramResourceLocation(uint program, uint programInterface, IntPtr name) : glGetProgramResourceLocation;
 
-function int GetProgramResourceLocationIndex(uint program,uint programInterface,IntPtr name) : glGetProgramResourceLocationIndex;
+function int GetProgramResourceLocationIndex(uint program, uint programInterface, IntPtr name) : glGetProgramResourceLocationIndex;
 
-function void ShaderStorageBlockBinding(uint program,uint storageBlockIndex,uint storageBlockBinding) : glShaderStorageBlockBinding;
+function void ShaderStorageBlockBinding(uint program, uint storageBlockIndex, uint storageBlockBinding) : glShaderStorageBlockBinding;
 
-function void TexBufferRange(TextureBufferTarget target,uint internalFormat,uint buffer,int offset,int size) : glTexBufferRange;
+function void TexBufferRange(TextureBufferTarget target, uint internalFormat, uint buffer, int offset, int size) : glTexBufferRange;
 
-function void TexStorage2DMultisample(TextureTargetMultisample2D target,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations) : glTexStorage2DMultisample;
+function void TexStorage2DMultisample(TextureTargetMultisample2D target, int samples, uint internalFormat, int width, int height, byte fixedsamplelocations) : glTexStorage2DMultisample;
 
-function void TexStorage3DMultisample(TextureTargetMultisample3D target,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations) : glTexStorage3DMultisample;
+function void TexStorage3DMultisample(TextureTargetMultisample3D target, int samples, uint internalFormat, int width, int height, int depth, byte fixedsamplelocations) : glTexStorage3DMultisample;
 
-function void TextureView(uint texture,TextureTarget target,uint origtexture,PixelInternalFormat internalFormat,uint minlevel,uint numlevels,uint minlayer,uint numlayers) : glTextureView;
+function void TextureView(uint texture, TextureTarget target, uint origtexture, PixelInternalFormat internalFormat, uint minlevel, uint numlevels, uint minlayer, uint numlayers) : glTextureView;
 
-function void BindVertexBuffer(uint bindingindex,uint buffer,int offset,int stride) : glBindVertexBuffer;
+function void BindVertexBuffer(uint bindingindex, uint buffer, int offset, int stride) : glBindVertexBuffer;
 
-function void VertexAttribFormat(uint attribindex,int size,uint type,byte normalized,uint relativeoffset) : glVertexAttribFormat;
+function void VertexAttribFormat(uint attribindex, int size, uint type, byte normalized, uint relativeoffset) : glVertexAttribFormat;
 
-function void VertexAttribIFormat(uint attribindex,int size,uint type,uint relativeoffset) : glVertexAttribIFormat;
+function void VertexAttribIFormat(uint attribindex, int size, uint type, uint relativeoffset) : glVertexAttribIFormat;
 
-function void VertexAttribLFormat(uint attribindex,int size,uint type,uint relativeoffset) : glVertexAttribLFormat;
+function void VertexAttribLFormat(uint attribindex, int size, uint type, uint relativeoffset) : glVertexAttribLFormat;
 
-function void VertexAttribBinding(uint attribindex,uint bindingindex) : glVertexAttribBinding;
+function void VertexAttribBinding(uint attribindex, uint bindingindex) : glVertexAttribBinding;
 
-function void VertexBindingDivisor(uint bindingindex,uint divisor) : glVertexBindingDivisor;
+function void VertexBindingDivisor(uint bindingindex, uint divisor) : glVertexBindingDivisor;
 
-function void DebugMessageControl(uint source,uint type,uint severity,int count,ref uint ids,byte enabled) : glDebugMessageControl;
+function void DebugMessageControl(uint source, uint type, uint severity, int count, ref uint ids, byte enabled) : glDebugMessageControl;
 
-function void DebugMessageInsert(uint source,uint type,uint id,uint severity,int length,IntPtr buf) : glDebugMessageInsert;
+function void DebugMessageInsert(uint source, uint type, uint id, uint severity, int length, IntPtr buf) : glDebugMessageInsert;
 
-function void DebugMessageCallback(DebugCallback callback,IntPtr userParameter) : glDebugMessageCallback;
+function void DebugMessageCallback(DebugCallback callback, IntPtr userParameter) : glDebugMessageCallback;
 
-function uint GetDebugMessageLog(uint count,int bufSize,ref uint sources,ref uint types,ref uint ids,ref uint severities,ref int lengths,IntPtr messageLog) : glGetDebugMessageLog;
+function uint GetDebugMessageLog(uint count, int bufSize, ref uint sources, ref uint types, ref uint ids, ref uint severities, ref int lengths, IntPtr messageLog) : glGetDebugMessageLog;
 
-function void PushDebugGroup(uint source,uint id,int length,IntPtr message) : glPushDebugGroup;
+function void PushDebugGroup(uint source, uint id, int length, IntPtr message) : glPushDebugGroup;
 
 function void PopDebugGroup() : glPopDebugGroup;
 
-function void ObjectLabel(uint identifier,uint name,int length,IntPtr label) : glObjectLabel;
+function void ObjectLabel(uint identifier, uint name, int length, IntPtr label) : glObjectLabel;
 
-function void GetObjectLabel(uint identifier,uint name,int bufSize,ref int length,IntPtr label) : glGetObjectLabel;
+function void GetObjectLabel(uint identifier, uint name, int bufSize, ref int length, IntPtr label) : glGetObjectLabel;
 
-function void ObjectPtrLabel(IntPtr ptr,int length,IntPtr label) : glObjectPtrLabel;
+function void ObjectPtrLabel(IntPtr ptr, int length, IntPtr label) : glObjectPtrLabel;
 
-function void GetObjectPtrLabel(IntPtr ptr,int bufSize,ref int length,IntPtr label) : glGetObjectPtrLabel;
+function void GetObjectPtrLabel(IntPtr ptr, int bufSize, ref int length, IntPtr label) : glGetObjectPtrLabel;

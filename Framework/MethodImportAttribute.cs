@@ -7,10 +7,10 @@ namespace Dissonance.Framework
 		public readonly string Function;
 		public readonly Version Version;
 
-		public MethodImportAttribute(string function = null,string version = null)
+		public MethodImportAttribute(string function = null, string version = null)
 		{
 			Function = function;
-			Version = version!=null ? new Version(version) : null;
+			Version = version != null ? new Version(version) : null;
 		}
 	}
 }

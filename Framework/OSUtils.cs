@@ -14,7 +14,8 @@ namespace Dissonance.Framework
 
 		public static bool IsOS(OS os)
 		{
-			return os switch {
+			return os switch
+			{
 				OS.Windows => RuntimeInformation.IsOSPlatform(OSPlatform.Windows),
 				OS.Linux => RuntimeInformation.IsOSPlatform(OSPlatform.Linux),
 				OS.OSX => RuntimeInformation.IsOSPlatform(OSPlatform.OSX),

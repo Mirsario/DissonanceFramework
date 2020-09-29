@@ -14,7 +14,7 @@ namespace Test
 		private static void PrepareOpenAL()
 		{
 			audioDevice = ALC.OpenDevice(null);
-			audioContext = ALC.CreateContext(audioDevice,null);
+			audioContext = ALC.CreateContext(audioDevice, null);
 
 			if(!ALC.MakeContextCurrent(audioContext)) {
 				throw new InvalidOperationException("Unable to make context current");
@@ -36,13 +36,13 @@ namespace Test
 
 			byte[] data = File.ReadAllBytes(AudioFile);
 
-			AL.BufferData(bufferId,BufferFormat.Stereo16,data,data.Length,44100);
+			AL.BufferData(bufferId, BufferFormat.Stereo16, data, data.Length, 44100);
 
 			//Source
 			AL.GenSource(out uint sourceId);
 
-			AL.Source(sourceId,SourceInt.Buffer,(int)bufferId);
-			AL.Source(sourceId,SourceBool.Looping,true);
+			AL.Source(sourceId, SourceInt.Buffer, (int)bufferId);
+			AL.Source(sourceId, SourceBool.Looping, true);
 
 			AL.SourcePlay(sourceId);
 
@@ -57,7 +57,7 @@ namespace Test
 		{
 			var error = AL.GetError();
 
-			if(error!=AudioError.NoError) {
+			if(error != AudioError.NoError) {
 				throw new Exception($"OpenAL Error: {error}");
 			}
 		}

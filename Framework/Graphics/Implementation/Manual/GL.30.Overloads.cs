@@ -13,27 +13,27 @@ namespace Dissonance.Framework.Graphics
 		{
 			uint result;
 
-			GenFramebuffers(1,&result);
+			GenFramebuffers(1, &result);
 
 			return result;
 		}
 		[MI(ImplOptions)]
-		public unsafe static void GenFramebuffers(int numFramebuffers,uint[] framebuffers)
+		public unsafe static void GenFramebuffers(int numFramebuffers, uint[] framebuffers)
 		{
-			fixed (uint* ptr = &(framebuffers!=null && framebuffers.Length!=0 ? ref framebuffers[0] : ref *(uint*)null)) {
-				GenFramebuffers(numFramebuffers,ptr);
+			fixed(uint* ptr = &(framebuffers != null && framebuffers.Length != 0 ? ref framebuffers[0] : ref *(uint*)null)) {
+				GenFramebuffers(numFramebuffers, ptr);
 			}
 		}
 
 		//DeleteFramebuffer(s)
 
 		[MI(ImplOptions)]
-		public unsafe static void DeleteFramebuffer(uint framebuffer) => DeleteFramebuffers(1,&framebuffer);
+		public unsafe static void DeleteFramebuffer(uint framebuffer) => DeleteFramebuffers(1, &framebuffer);
 		[MI(ImplOptions)]
-		public unsafe static void DeleteFramebuffers(int numFramebuffers,uint[] framebuffers)
+		public unsafe static void DeleteFramebuffers(int numFramebuffers, uint[] framebuffers)
 		{
-			fixed(uint* ptr = &(framebuffers!=null && framebuffers.Length!=0 ? ref framebuffers[0] : ref *(uint*)null)) {
-				DeleteFramebuffers(numFramebuffers,ptr);
+			fixed(uint* ptr = &(framebuffers != null && framebuffers.Length != 0 ? ref framebuffers[0] : ref *(uint*)null)) {
+				DeleteFramebuffers(numFramebuffers, ptr);
 			}
 		}
 
@@ -44,27 +44,27 @@ namespace Dissonance.Framework.Graphics
 		{
 			uint result;
 
-			GenRenderbuffers(1,&result);
+			GenRenderbuffers(1, &result);
 
 			return result;
 		}
 		[MI(ImplOptions)]
-		public unsafe static void GenRenderbuffers(int numRenderBuffers,uint[] renderbuffers)
+		public unsafe static void GenRenderbuffers(int numRenderBuffers, uint[] renderbuffers)
 		{
-			fixed (uint* ptr = &(renderbuffers!=null && renderbuffers.Length!=0 ? ref renderbuffers[0] : ref *(uint*)null)) {
-				GenRenderbuffers(numRenderBuffers,ptr);
+			fixed(uint* ptr = &(renderbuffers != null && renderbuffers.Length != 0 ? ref renderbuffers[0] : ref *(uint*)null)) {
+				GenRenderbuffers(numRenderBuffers, ptr);
 			}
 		}
 
 		//DeleteRenderbuffer(s)
 
 		[MI(ImplOptions)]
-		public unsafe static void DeleteRenderbuffer(uint renderbuffer) => DeleteRenderbuffers(1,&renderbuffer);
+		public unsafe static void DeleteRenderbuffer(uint renderbuffer) => DeleteRenderbuffers(1, &renderbuffer);
 		[MI(ImplOptions)]
-		public unsafe static void DeleteRenderbuffers(int numRenderbuffers,uint[] renderbuffers)
+		public unsafe static void DeleteRenderbuffers(int numRenderbuffers, uint[] renderbuffers)
 		{
-			fixed (uint* ptr = &(renderbuffers!=null && renderbuffers.Length!=0 ? ref renderbuffers[0] : ref *(uint*)null)) {
-				DeleteRenderbuffers(numRenderbuffers,ptr);
+			fixed(uint* ptr = &(renderbuffers != null && renderbuffers.Length != 0 ? ref renderbuffers[0] : ref *(uint*)null)) {
+				DeleteRenderbuffers(numRenderbuffers, ptr);
 			}
 		}
 
@@ -76,27 +76,27 @@ namespace Dissonance.Framework.Graphics
 		{
 			uint result;
 
-			GenVertexArrays(1,&result);
+			GenVertexArrays(1, &result);
 
 			return result;
 		}
 		[MI(ImplOptions)]
-		public unsafe static void GenVertexArrays(int numArrays,uint[] vertexArrays)
+		public unsafe static void GenVertexArrays(int numArrays, uint[] vertexArrays)
 		{
-			fixed (uint* ptr = &(vertexArrays!=null && vertexArrays.Length!=0 ? ref vertexArrays[0] : ref *(uint*)null)) {
-				GenVertexArrays(numArrays,ptr);
+			fixed(uint* ptr = &(vertexArrays != null && vertexArrays.Length != 0 ? ref vertexArrays[0] : ref *(uint*)null)) {
+				GenVertexArrays(numArrays, ptr);
 			}
 		}
 
 		//DeleteVertexArray(s)
 
 		[MI(ImplOptions)]
-		public unsafe static void DeleteVertexArray(uint vertexArray) => DeleteVertexArrays(1,&vertexArray);
+		public unsafe static void DeleteVertexArray(uint vertexArray) => DeleteVertexArrays(1, &vertexArray);
 		[MI(ImplOptions)]
-		public unsafe static void DeleteVertexArrays(int numArrays,uint[] vertexArrays)
+		public unsafe static void DeleteVertexArrays(int numArrays, uint[] vertexArrays)
 		{
-			fixed (uint* ptr = &(vertexArrays!=null && vertexArrays.Length!=0 ? ref vertexArrays[0] : ref *(uint*)null)) {
-				DeleteVertexArrays(numArrays,ptr);
+			fixed(uint* ptr = &(vertexArrays != null && vertexArrays.Length != 0 ? ref vertexArrays[0] : ref *(uint*)null)) {
+				DeleteVertexArrays(numArrays, ptr);
 			}
 		}
 	}

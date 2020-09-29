@@ -20,20 +20,20 @@ namespace CodeGenerator
 			tabs = string.Empty;
 		}
 
-		public void Indent() => tabs = new string('\t',++numTabs);
+		public void Indent() => tabs = new string('\t', ++numTabs);
 		public void Unindent()
 		{
-			if(numTabs<=0) {
-				throw new InvalidOperationException("Already at <=0 tabs.");
+			if(numTabs <= 0) {
+				throw new InvalidOperationException("Already at <= 0 tabs.");
 			}
 
-			tabs = new string('\t',--numTabs);
+			tabs = new string('\t', --numTabs);
 		}
 		public void AppendLine() => StringBuilder.AppendLine(tabs);
 		public void AppendLine(string line) => StringBuilder.AppendLine($"{tabs}{line}");
 		public void Save()
 		{
-			File.WriteAllText(OutputPath,StringBuilder.ToString());
+			File.WriteAllText(OutputPath, StringBuilder.ToString());
 		}
 	}
 }

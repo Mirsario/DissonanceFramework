@@ -7,17 +7,17 @@ namespace CodeGenerator
 {
 	public static class Generator
 	{
-		private static readonly Regex FunctionRegex = new Regex(@"function\s+(?:(unsafe\s)\s*)?(\S+)\s+(\w+)\((.*?)\)\s+:\s+(\w+)\s*;",RegexOptions.Compiled);
-		private static readonly Regex ParameterRegex = new Regex(@"(?:\[.+?\]\s*)*((?:ref|in|out)\s+)?[\w\[\]*]+\s+(\w+)(?:\s*=\s*.+?)?(,|$)",RegexOptions.Compiled);
-		private static readonly Regex DelegateNameRegex = new Regex(@"[a-z]*(\w+)",RegexOptions.Compiled);
+		private static readonly Regex FunctionRegex = new Regex(@"function\s+(?:(unsafe\s)\s*)?(\S+)\s+(\w+)\((.*?)\)\s+:\s+(\w+)\s*;", RegexOptions.Compiled);
+		private static readonly Regex ParameterRegex = new Regex(@"(?:\[.+?\]\s*)*((?:ref|in|out)\s+)?[\w\[\]*]+\s+(\w+)(?:\s*=\s*.+?)?(,|$)", RegexOptions.Compiled);
+		private static readonly Regex DelegateNameRegex = new Regex(@"[a-z]*(\w+)", RegexOptions.Compiled);
 
 		internal static void Main(string[] args)
 		{
 			string mainDirectory = args[0] ?? Path.GetFullPath("");
 
-			var files = Directory.GetFiles(mainDirectory,"*.bindings",SearchOption.AllDirectories);
+			var files = Directory.GetFiles(mainDirectory, "*.bindings", SearchOption.AllDirectories);
 
-			for(int i = 0;i<files.Length;i++) {
+			for(int i = 0; i < files.Length; i++) {
 				var file = files[i];
 
 				ProcessFile(file);
@@ -33,14 +33,14 @@ namespace CodeGenerator
 			file = Path.GetFullPath(file);
 
 			string fileName = Path.GetFileNameWithoutExtension(file);
-			string outputDirectory = Path.Combine(Path.GetDirectoryName(file),"Generated");
+			string outputDirectory = Path.Combine(Path.GetDirectoryName(file), "Generated");
 
 			Console.Write($"Processing file '{fileName}'...");
 
 			Directory.CreateDirectory(outputDirectory);
 
 			var delegatesCode = CreateCode(
-				Path.Combine(outputDirectory,$"{fileName}.Delegates.cs"),
+				Path.Combine(outputDirectory, $"{fileName}.Delegates.cs"),
 				code => {
 					code.AppendLine("using System;");
 					code.AppendLine("using System.Runtime.InteropServices;");
@@ -51,7 +51,7 @@ namespace CodeGenerator
 			);
 
 			var fieldsCode = CreateCode(
-				Path.Combine(outputDirectory,$"{fileName}.Fields.cs"),
+				Path.Combine(outputDirectory, $"{fileName}.Fields.cs"),
 				code => {
 					code.AppendLine("#pragma warning disable CS0649");
 					code.AppendLine();
@@ -59,7 +59,7 @@ namespace CodeGenerator
 			);
 
 			var methodsCode = CreateCode(
-				Path.Combine(outputDirectory,$"{fileName}.Methods.cs"),
+				Path.Combine(outputDirectory, $"{fileName}.Methods.cs"),
 				code => {
 					code.AppendLine("using System;");
 					code.AppendLine("using System.Runtime.InteropServices;");
@@ -80,7 +80,7 @@ namespace CodeGenerator
 				string parameters = match.Groups[4].Value;
 				string functionName = match.Groups[5].Value;
 
-				string arguments = ParameterRegex.Replace(parameters,"$1$2$3");
+				string arguments = ParameterRegex.Replace(parameters, "$1$2$3");
 
 				if(firstMatch) {
 					firstMatch = false;
@@ -90,7 +90,7 @@ namespace CodeGenerator
 					methodsCode.AppendLine();
 				}
 
-				string delegateName = DelegateNameRegex.Replace($"{functionName}Delegate","$1");
+				string delegateName = DelegateNameRegex.Replace($"{functionName}Delegate", "$1");
 
 				//Delegates
 				delegatesCode.AppendLine("[UFP(CC.Cdecl)]");
@@ -113,7 +113,7 @@ namespace CodeGenerator
 			Console.WriteLine(" Done.");
 		}
 
-		private static CodeWriter CreateCode(string outputPath,Action<CodeWriter> preInit = null)
+		private static CodeWriter CreateCode(string outputPath, Action<CodeWriter> preInit = null)
 		{
 			var code = new CodeWriter(outputPath);
 

@@ -1,7 +1,7 @@
-function void DrawRangeElements(uint mode,uint start,uint end,int count,uint type,IntPtr indices) : glDrawRangeElements;
+function void DrawRangeElements(uint mode, uint start, uint end, int count, uint type, IntPtr indices) : glDrawRangeElements;
 
-function void TexImage3D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int height,int depth,int border,PixelFormat format,PixelType type,IntPtr pixels) : glTexImage3D;
+function void TexImage3D(TextureTarget target, int level, PixelInternalFormat internalFormat, int width, int height, int depth, int border, PixelFormat format, PixelType type, IntPtr pixels) : glTexImage3D;
 
-function void TexSubImage3D(TextureTarget target,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,PixelFormat format,PixelType type,IntPtr pixels) : glTexSubImage3D;
+function void TexSubImage3D(TextureTarget target, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, PixelFormat format, PixelType type, IntPtr pixels) : glTexSubImage3D;
 
-function void CopyTexSubImage3D(TextureTarget target,int level,int xOffset,int yOffset,int zOffset,int x,int y,int width,int height) : glCopyTexSubImage3D;
+function void CopyTexSubImage3D(TextureTarget target, int level, int xOffset, int yOffset, int zOffset, int x, int y, int width, int height) : glCopyTexSubImage3D;

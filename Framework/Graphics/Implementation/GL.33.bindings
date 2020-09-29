@@ -1,55 +1,55 @@
-﻿function void BindFragDataLocationIndexed(uint program,uint colorNumber,uint index,IntPtr name) : glBindFragDataLocationIndexed;
+﻿function void BindFragDataLocationIndexed(uint program, uint colorNumber, uint index, IntPtr name) : glBindFragDataLocationIndexed;
 
-function int GetFragDataIndex(uint program,IntPtr name) : glGetFragDataIndex;
+function int GetFragDataIndex(uint program, IntPtr name) : glGetFragDataIndex;
 
-function void GenSamplers(int count,ref uint samplers) : glGenSamplers;
+function void GenSamplers(int count, ref uint samplers) : glGenSamplers;
 
-function void DeleteSamplers(int count,ref uint samplers) : glDeleteSamplers;
+function void DeleteSamplers(int count, ref uint samplers) : glDeleteSamplers;
 
 function byte IsSampler(uint sampler) : glIsSampler;
 
-function void BindSampler(uint unit,uint sampler) : glBindSampler;
+function void BindSampler(uint unit, uint sampler) : glBindSampler;
 
-function void SamplerParameter(uint sampler,uint pName,int param) : glSamplerParameteri;
+function void SamplerParameter(uint sampler, uint pName, int param) : glSamplerParameteri;
 
-function void SamplerParameter(uint sampler,uint pName,ref int param) : glSamplerParameteriv;
+function void SamplerParameter(uint sampler, uint pName, ref int param) : glSamplerParameteriv;
 
-function void SamplerParameter(uint sampler,uint pName,float param) : glSamplerParameterf;
+function void SamplerParameter(uint sampler, uint pName, float param) : glSamplerParameterf;
 
-function void SamplerParameter(uint sampler,uint pName,ref float param) : glSamplerParameterfv;
+function void SamplerParameter(uint sampler, uint pName, ref float param) : glSamplerParameterfv;
 
-function void SamplerParameterI(uint sampler,uint pName,ref int param) : glSamplerParameterIiv;
+function void SamplerParameterI(uint sampler, uint pName, ref int param) : glSamplerParameterIiv;
 
-function void SamplerParameterI(uint sampler,uint pName,ref uint param) : glSamplerParameterIuiv;
+function void SamplerParameterI(uint sampler, uint pName, ref uint param) : glSamplerParameterIuiv;
 
-function void GetSamplerParameter(uint sampler,uint pName,ref int parameters) : glGetSamplerParameteriv;
+function void GetSamplerParameter(uint sampler, uint pName, ref int parameters) : glGetSamplerParameteriv;
 
-function void GetSamplerParameterI(uint sampler,uint pName,ref int parameters) : glGetSamplerParameterIiv;
+function void GetSamplerParameterI(uint sampler, uint pName, ref int parameters) : glGetSamplerParameterIiv;
 
-function void GetSamplerParameter(uint sampler,uint pName,ref float parameters) : glGetSamplerParameterfv;
+function void GetSamplerParameter(uint sampler, uint pName, ref float parameters) : glGetSamplerParameterfv;
 
-function void GetSamplerParameterI(uint sampler,uint pName,ref uint parameters) : glGetSamplerParameterIuiv;
+function void GetSamplerParameterI(uint sampler, uint pName, ref uint parameters) : glGetSamplerParameterIuiv;
 
-function void QueryCounter(uint id,uint target) : glQueryCounter;
+function void QueryCounter(uint id, uint target) : glQueryCounter;
 
-function void GetQueryObject(uint id,uint pName,ref long parameters) : glGetQueryObjecti64v;
+function void GetQueryObject(uint id, uint pName, ref long parameters) : glGetQueryObjecti64v;
 
-function void GetQueryObject(uint id,uint pName,ref ulong parameters) : glGetQueryObjectui64v;
+function void GetQueryObject(uint id, uint pName, ref ulong parameters) : glGetQueryObjectui64v;
 
-function void VertexAttribDivisor(uint index,uint divisor) : glVertexAttribDivisor;
+function void VertexAttribDivisor(uint index, uint divisor) : glVertexAttribDivisor;
 
-function void VertexAttribP1(uint index,uint type,byte normalized,uint value) : glVertexAttribP1ui;
+function void VertexAttribP1(uint index, uint type, byte normalized, uint value) : glVertexAttribP1ui;
 
-function void VertexAttribP1(uint index,uint type,byte normalized,ref uint value) : glVertexAttribP1uiv;
+function void VertexAttribP1(uint index, uint type, byte normalized, ref uint value) : glVertexAttribP1uiv;
 
-function void VertexAttribP2(uint index,uint type,byte normalized,uint value) : glVertexAttribP2ui;
+function void VertexAttribP2(uint index, uint type, byte normalized, uint value) : glVertexAttribP2ui;
 
-function void VertexAttribP2(uint index,uint type,byte normalized,ref uint value) : glVertexAttribP2uiv;
+function void VertexAttribP2(uint index, uint type, byte normalized, ref uint value) : glVertexAttribP2uiv;
 
-function void VertexAttribP3(uint index,uint type,byte normalized,uint value) : glVertexAttribP3ui;
+function void VertexAttribP3(uint index, uint type, byte normalized, uint value) : glVertexAttribP3ui;
 
-function void VertexAttribP3(uint index,uint type,byte normalized,ref uint value) : glVertexAttribP3uiv;
+function void VertexAttribP3(uint index, uint type, byte normalized, ref uint value) : glVertexAttribP3uiv;
 
-function void VertexAttribP4(uint index,uint type,byte normalized,uint value) : glVertexAttribP4ui;
+function void VertexAttribP4(uint index, uint type, byte normalized, uint value) : glVertexAttribP4ui;
 
-function void VertexAttribP4(uint index,uint type,byte normalized,ref uint value) : glVertexAttribP4uiv;
+function void VertexAttribP4(uint index, uint type, byte normalized, ref uint value) : glVertexAttribP4uiv;

@@ -26,7 +26,8 @@ namespace Dissonance.Framework.Audio
 
 		static AL() => DllManager.PrepareResolvers();
 
-		internal static string[] GetLibraryNames() => GetOS() switch {
+		internal static string[] GetLibraryNames() => GetOS() switch
+		{
 			OS.Windows => LibraryNamesWindows,
 			OS.Linux => LibraryNamesLinux,
 			OS.OSX => LibraryNamesOSX,

@@ -22,7 +22,8 @@ namespace Dissonance.Framework.Windowing
 
 		static GLFW() => DllManager.PrepareResolvers();
 
-		internal static string[] GetLibraryNames() => OSUtils.GetOS() switch {
+		internal static string[] GetLibraryNames() => OSUtils.GetOS() switch
+		{
 			OSUtils.OS.Windows => LibraryNamesWindows,
 			OSUtils.OS.Linux => LibraryNamesLinux,
 			OSUtils.OS.OSX => LibraryNamesOSX,

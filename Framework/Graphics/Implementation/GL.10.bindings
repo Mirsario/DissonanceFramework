@@ -1,28 +1,28 @@
-function void Accum(uint op,float value) : glAccum;
+function void Accum(uint op, float value) : glAccum;
 
-function void AlphaFunc(uint func,float alpha) : glAlphaFunc;
+function void AlphaFunc(uint func, float alpha) : glAlphaFunc;
 
-function byte AreTexturesResident(int n,uint[] textures,IntPtr residences) : glAreTexturesResident;
+function byte AreTexturesResident(int n, uint[] textures, IntPtr residences) : glAreTexturesResident;
 
 function void ArrayElement(int i) : glArrayElement;
 
 function void Begin(PrimitiveType mode) : glBegin;
 
-function void BindTexture(TextureTarget target,uint texture) : glBindTexture;
+function void BindTexture(TextureTarget target, uint texture) : glBindTexture;
 
-function void Bitmap(int width,int height,float xOrig,float yOrig,float xMove,float yMove,IntPtr bitmap) : glBitmap;
+function void Bitmap(int width, int height, float xOrig, float yOrig, float xMove, float yMove, IntPtr bitmap) : glBitmap;
 
-function void BlendFunc(BlendingFactor sfactor,BlendingFactor dfactor) : glBlendFunc;
+function void BlendFunc(BlendingFactor sfactor, BlendingFactor dfactor) : glBlendFunc;
 
 function void CallList(uint list) : glCallList;
 
-function void CallLists(int n,uint type,IntPtr lists) : glCallLists;
+function void CallLists(int n, uint type, IntPtr lists) : glCallLists;
 
 function void Clear(ClearBufferMask mask) : glClear;
 
-function void ClearAccum(float red,float green,float blue,float alpha = 1f) : glClearAccum;
+function void ClearAccum(float red, float green, float blue, float alpha = 1f) : glClearAccum;
 
-function void ClearColor(float red,float green,float blue,float alpha = 1f) : glClearColor;
+function void ClearColor(float red, float green, float blue, float alpha = 1f) : glClearColor;
 
 function void ClearDepth(double depth) : glClearDepth;
 
@@ -30,113 +30,113 @@ function void ClearIndex(float c) : glClearIndex;
 
 function void ClearStencil(int s) : glClearStencil;
 
-function void ClipPlane(uint plane,double[] equation) : glClipPlane;
+function void ClipPlane(uint plane, double[] equation) : glClipPlane;
 
-function void Color3(sbyte red,sbyte green,sbyte blue) : glColor3b;
+function void Color3(sbyte red, sbyte green, sbyte blue) : glColor3b;
 
 function void Color3(sbyte[] v) : glColor3bv;
 
-function void Color3(double red,double green,double blue) : glColor3d;
+function void Color3(double red, double green, double blue) : glColor3d;
 
 function void Color3(double[] v) : glColor3dv;
 
-function void Color3(float red,float green,float blue) : glColor3f;
+function void Color3(float red, float green, float blue) : glColor3f;
 
 function void Color3(float[] v) : glColor3fv;
 
-function void Color3(int red,int green,int blue) : glColor3i;
+function void Color3(int red, int green, int blue) : glColor3i;
 
 function void Color3(int[] v) : glColor3iv;
 
-function void Color3(short red,short green,short blue) : glColor3s;
+function void Color3(short red, short green, short blue) : glColor3s;
 
 function void Color3(short[] v) : glColor3sv;
 
-function void Color3(byte red,byte green,byte blue) : glColor3ub;
+function void Color3(byte red, byte green, byte blue) : glColor3ub;
 
 function void Color3(byte[] v) : glColor3ubv;
 
-function void Color3(uint red,uint green,uint blue) : glColor3ui;
+function void Color3(uint red, uint green, uint blue) : glColor3ui;
 
 function void Color3(uint[] v) : glColor3uiv;
 
-function void Color3(ushort red,ushort green,ushort blue) : glColor3us;
+function void Color3(ushort red, ushort green, ushort blue) : glColor3us;
 
 function void Color3(ushort[] v) : glColor3usv;
 
-function void Color4(sbyte red,sbyte green,sbyte blue,sbyte alpha) : glColor4b;
+function void Color4(sbyte red, sbyte green, sbyte blue, sbyte alpha) : glColor4b;
 
 function void Color4(sbyte[] v) : glColor4bv;
 
-function void Color4(double red,double green,double blue,double alpha) : glColor4d;
+function void Color4(double red, double green, double blue, double alpha) : glColor4d;
 
 function void Color4(double[] v) : glColor4dv;
 
-function void Color4(float red,float green,float blue,float alpha) : glColor4f;
+function void Color4(float red, float green, float blue, float alpha) : glColor4f;
 
 function void Color4(float[] v) : glColor4fv;
 
-function void Color4(int red,int green,int blue,int alpha) : glColor4i;
+function void Color4(int red, int green, int blue, int alpha) : glColor4i;
 
 function void Color4(int[] v) : glColor4iv;
 
-function void Color4(short red,short green,short blue,short alpha) : glColor4s;
+function void Color4(short red, short green, short blue, short alpha) : glColor4s;
 
 function void Color4(short[] v) : glColor4sv;
 
-function void Color4(byte red,byte green,byte blue,byte alpha) : glColor4ub;
+function void Color4(byte red, byte green, byte blue, byte alpha) : glColor4ub;
 
 function void Color4(byte[] v) : glColor4ubv;
 
-function void Color4(uint red,uint green,uint blue,uint alpha) : glColor4ui;
+function void Color4(uint red, uint green, uint blue, uint alpha) : glColor4ui;
 
 function void Color4(uint[] v) : glColor4uiv;
 
-function void Color4(ushort red,ushort green,ushort blue,ushort alpha) : glColor4us;
+function void Color4(ushort red, ushort green, ushort blue, ushort alpha) : glColor4us;
 
 function void Color4(ushort[] v) : glColor4usv;
 
-function void ColorMask(byte red,byte green,byte blue,byte alpha) : glColorMask;
+function void ColorMask(byte red, byte green, byte blue, byte alpha) : glColorMask;
 
-function void ColorMaterial(uint face,uint mode) : glColorMaterial;
+function void ColorMaterial(uint face, uint mode) : glColorMaterial;
 
-function void ColorPointer(int size,uint type,int stride,IntPtr pointer) : glColorPointer;
+function void ColorPointer(int size, uint type, int stride, IntPtr pointer) : glColorPointer;
 
-function void CopyPixels(int x,int y,int width,int height,uint type) : glCopyPixels;
+function void CopyPixels(int x, int y, int width, int height, uint type) : glCopyPixels;
 
-function void CopyTexImage1D(TextureTarget target,int level,uint internalFormat,int x,int y,int width,int border) : glCopyTexImage1D;
+function void CopyTexImage1D(TextureTarget target, int level, uint internalFormat, int x, int y, int width, int border) : glCopyTexImage1D;
 
-function void CopyTexImage2D(TextureTarget target,int level,uint internalFormat,int x,int y,int width,int height,int border) : glCopyTexImage2D;
+function void CopyTexImage2D(TextureTarget target, int level, uint internalFormat, int x, int y, int width, int height, int border) : glCopyTexImage2D;
 
-function void CopyTexSubImage1D(TextureTarget target,int level,int xOffset,int x,int y,int width) : glCopyTexSubImage1D;
+function void CopyTexSubImage1D(TextureTarget target, int level, int xOffset, int x, int y, int width) : glCopyTexSubImage1D;
 
-function void CopyTexSubImage2D(TextureTarget target,int level,int xOffset,int yOffset,int x,int y,int width,int height) : glCopyTexSubImage2D;
+function void CopyTexSubImage2D(TextureTarget target, int level, int xOffset, int yOffset, int x, int y, int width, int height) : glCopyTexSubImage2D;
 
 function void CullFace(CullFaceMode mode) : glCullFace;
 
-function void DeleteLists(uint list,int range) : glDeleteLists;
+function void DeleteLists(uint list, int range) : glDeleteLists;
 
 function void DepthFunc(DepthFunction func) : glDepthFunc;
 
 function void DepthMask(bool flag) : glDepthMask;
 
-function void DepthRange(double zNear,double zFar) : glDepthRange;
+function void DepthRange(double zNear, double zFar) : glDepthRange;
 
 function void Disable(EnableCap cap) : glDisable;
 
 function void DisableClientState(uint capability) : glDisableClientState;
 
-function void DrawArrays(PrimitiveType mode,int first,int count) : glDrawArrays;
+function void DrawArrays(PrimitiveType mode, int first, int count) : glDrawArrays;
 
 function void DrawBuffer(DrawBufferMode mode) : glDrawBuffer;
 
-function void DrawElements(PrimitiveType mode,int count,DrawElementsType type,IntPtr indices) : glDrawElements;
+function void DrawElements(PrimitiveType mode, int count, DrawElementsType type, IntPtr indices) : glDrawElements;
 
-function void DrawPixels(int width,int height,PixelFormat format,PixelType type,IntPtr pixels) : glDrawPixels;
+function void DrawPixels(int width, int height, PixelFormat format, PixelType type, IntPtr pixels) : glDrawPixels;
 
 function void EdgeFlag(byte flag) : glEdgeFlag;
 
-function void EdgeFlagPointer(int stride,IntPtr pointer) : glEdgeFlagPointer;
+function void EdgeFlagPointer(int stride, IntPtr pointer) : glEdgeFlagPointer;
 
 function void EdgeFlag(IntPtr flag) : glEdgeFlagv;
 
@@ -156,109 +156,109 @@ function void EvalCoord1(float u) : glEvalCoord1f;
 
 function void EvalCoord1(float[] u) : glEvalCoord1fv;
 
-function void EvalCoord2(double u,double v) : glEvalCoord2d;
+function void EvalCoord2(double u, double v) : glEvalCoord2d;
 
 function void EvalCoord2(double[] u) : glEvalCoord2dv;
 
-function void EvalCoord2(float u,float v) : glEvalCoord2f;
+function void EvalCoord2(float u, float v) : glEvalCoord2f;
 
 function void EvalCoord2(float[] u) : glEvalCoord2fv;
 
-function void EvalMesh1(uint mode,int i1,int i2) : glEvalMesh1;
+function void EvalMesh1(uint mode, int i1, int i2) : glEvalMesh1;
 
-function void EvalMesh2(uint mode,int i1,int i2,int j1,int j2) : glEvalMesh2;
+function void EvalMesh2(uint mode, int i1, int i2, int j1, int j2) : glEvalMesh2;
 
 function void EvalPoint1(int i) : glEvalPoint1;
 
-function void EvalPoint2(int i,int j) : glEvalPoint2;
+function void EvalPoint2(int i, int j) : glEvalPoint2;
 
-function void FeedbackBuffer(int size,uint type,float[] buffer) : glFeedbackBuffer;
+function void FeedbackBuffer(int size, uint type, float[] buffer) : glFeedbackBuffer;
 
 function void Finish() : glFinish;
 
 function void Flush() : glFlush;
 
-function void Fog(uint pName,float param) : glFogf;
+function void Fog(uint pName, float param) : glFogf;
 
-function void Fog(uint pName,float[] parameters) : glFogfv;
+function void Fog(uint pName, float[] parameters) : glFogfv;
 
-function void Fog(uint pName,int param) : glFogi;
+function void Fog(uint pName, int param) : glFogi;
 
-function void Fog(uint pName,int[] parameters) : glFogiv;
+function void Fog(uint pName, int[] parameters) : glFogiv;
 
 function void FrontFace(uint mode) : glFrontFace;
 
-function void Frustum(double left,double right,double bottom,double top,double zNear,double zFar) : glFrustum;
+function void Frustum(double left, double right, double bottom, double top, double zNear, double zFar) : glFrustum;
 
 function uint GenLists(int range) : glGenLists;
 
-function void GetBoolean(uint pName,IntPtr parameters) : glGetBooleanv;
+function void GetBoolean(uint pName, IntPtr parameters) : glGetBooleanv;
 
-function void GetClipPlane(uint plane,double[] equation) : glGetClipPlane;
+function void GetClipPlane(uint plane, double[] equation) : glGetClipPlane;
 
-function void GetDouble(uint pName,double[] parameters) : glGetDoublev;
+function void GetDouble(uint pName, double[] parameters) : glGetDoublev;
 
 function GraphicsError GetError() : glGetError;
 
-function void GetFloat(uint pName,float[] parameters) : glGetFloatv;
+function void GetFloat(uint pName, float[] parameters) : glGetFloatv;
 
-function void GetInteger(uint pName,int[] parameters) : glGetIntegerv;
+function void GetInteger(uint pName, int[] parameters) : glGetIntegerv;
 
-function void GetLight(uint light,uint pName,float[] parameters) : glGetLightfv;
+function void GetLight(uint light, uint pName, float[] parameters) : glGetLightfv;
 
-function void GetLight(uint light,uint pName,int[] parameters) : glGetLightiv;
+function void GetLight(uint light, uint pName, int[] parameters) : glGetLightiv;
 
-function void GetMap(uint target,uint query,double[] v) : glGetMapdv;
+function void GetMap(uint target, uint query, double[] v) : glGetMapdv;
 
-function void GetMap(uint target,uint query,float[] v) : glGetMapfv;
+function void GetMap(uint target, uint query, float[] v) : glGetMapfv;
 
-function void GetMap(uint target,uint query,int[] v) : glGetMapiv;
+function void GetMap(uint target, uint query, int[] v) : glGetMapiv;
 
-function void GetMaterial(uint face,uint pName,float[] parameters) : glGetMaterialfv;
+function void GetMaterial(uint face, uint pName, float[] parameters) : glGetMaterialfv;
 
-function void GetMaterial(uint face,uint pName,int[] parameters) : glGetMaterialiv;
+function void GetMaterial(uint face, uint pName, int[] parameters) : glGetMaterialiv;
 
-function void GetPixelMap(uint map,float[] values) : glGetPixelMapfv;
+function void GetPixelMap(uint map, float[] values) : glGetPixelMapfv;
 
-function void GetPixelMap(uint map,uint[] values) : glGetPixelMapuiv;
+function void GetPixelMap(uint map, uint[] values) : glGetPixelMapuiv;
 
-function void GetPixelMap(uint map,ushort[] values) : glGetPixelMapusv;
+function void GetPixelMap(uint map, ushort[] values) : glGetPixelMapusv;
 
-function void GetPointer(uint pName,ref IntPtr parameters) : glGetPointerv;
+function void GetPointer(uint pName, ref IntPtr parameters) : glGetPointerv;
 
 function void GetPolygonStipple(IntPtr mask) : glGetPolygonStipple;
 
 function IntPtr GetStringPtr(StringName name) : glGetString;
 
-function void GetTexEnv(TextureEnvTarget target,uint pName,float[] parameters) : glGetTexEnvfv;
+function void GetTexEnv(TextureEnvTarget target, uint pName, float[] parameters) : glGetTexEnvfv;
 
-function void GetTexEnv(TextureEnvTarget target,uint pName,int[] parameters) : glGetTexEnviv;
+function void GetTexEnv(TextureEnvTarget target, uint pName, int[] parameters) : glGetTexEnviv;
 
-function void GetTexGen(uint coord,uint pName,double[] parameters) : glGetTexGendv;
+function void GetTexGen(uint coord, uint pName, double[] parameters) : glGetTexGendv;
 
-function void GetTexGen(uint coord,uint pName,float[] parameters) : glGetTexGenfv;
+function void GetTexGen(uint coord, uint pName, float[] parameters) : glGetTexGenfv;
 
-function void GetTexGen(uint coord,uint pName,int[] parameters) : glGetTexGeniv;
+function void GetTexGen(uint coord, uint pName, int[] parameters) : glGetTexGeniv;
 
-function void GetTexImage(TextureTarget target,int level,PixelFormat format,PixelType type,IntPtr pixels) : glGetTexImage;
+function void GetTexImage(TextureTarget target, int level, PixelFormat format, PixelType type, IntPtr pixels) : glGetTexImage;
 
-function void GetTexLevelParameter(TextureTarget target,int level,uint pName,float[] parameters) : glGetTexLevelParameterfv;
+function void GetTexLevelParameter(TextureTarget target, int level, uint pName, float[] parameters) : glGetTexLevelParameterfv;
 
-function void GetTexLevelParameter(TextureTarget target,int level,uint pName,int[] parameters) : glGetTexLevelParameteriv;
+function void GetTexLevelParameter(TextureTarget target, int level, uint pName, int[] parameters) : glGetTexLevelParameteriv;
 
-function void GetTexParameter(TextureTarget target,GetTextureParameter parameterName,float[] parameters) : glGetTexParameterfv;
+function void GetTexParameter(TextureTarget target, GetTextureParameter parameterName, float[] parameters) : glGetTexParameterfv;
 
-function void GetTexParameter(TextureTarget target,GetTextureParameter parameterName,int[] parameters) : glGetTexParameteriv;
+function void GetTexParameter(TextureTarget target, GetTextureParameter parameterName, int[] parameters) : glGetTexParameteriv;
 
-function void GenTextures(int numTextures,[Out] uint* textures) : glGenTextures;
+function void GenTextures(int numTextures, [Out] uint* textures) : glGenTextures;
 
-function void DeleteTextures(int numTextures,[Out] uint* textures) : glDeleteTextures;
+function void DeleteTextures(int numTextures, [Out] uint* textures) : glDeleteTextures;
 
-function void Hint(uint target,uint mode) : glHint;
+function void Hint(uint target, uint mode) : glHint;
 
 function void IndexMask(uint mask) : glIndexMask;
 
-function void IndexPointer(uint type,int stride,IntPtr pointer) : glIndexPointer;
+function void IndexPointer(uint type, int stride, IntPtr pointer) : glIndexPointer;
 
 function void Index(double c) : glIndexd;
 
@@ -282,7 +282,7 @@ function void Index(IntPtr c) : glIndexubv;
 
 function void InitNames() : glInitNames;
 
-function void InterleavedArrays(uint format,int stride,IntPtr pointer) : glInterleavedArrays;
+function void InterleavedArrays(uint format, int stride, IntPtr pointer) : glInterleavedArrays;
 
 function byte IsEnabled(EnableCap cap) : glIsEnabled;
 
@@ -290,23 +290,23 @@ function byte IsList(uint list) : glIsList;
 
 function byte IsTexture(uint texture) : glIsTexture;
 
-function void LightMode(uint pName,float param) : glLightModelf;
+function void LightMode(uint pName, float param) : glLightModelf;
 
-function void LightMode(uint pName,float[] parameters) : glLightModelfv;
+function void LightMode(uint pName, float[] parameters) : glLightModelfv;
 
-function void LightMode(uint pName,int param) : glLightModeli;
+function void LightMode(uint pName, int param) : glLightModeli;
 
-function void LightMode(uint pName,int[] parameters) : glLightModeliv;
+function void LightMode(uint pName, int[] parameters) : glLightModeliv;
 
-function void Light(uint light,uint pName,float param) : glLightf;
+function void Light(uint light, uint pName, float param) : glLightf;
 
-function void Light(uint light,uint pName,float[] parameters) : glLightfv;
+function void Light(uint light, uint pName, float[] parameters) : glLightfv;
 
-function void Light(uint light,uint pName,int param) : glLighti;
+function void Light(uint light, uint pName, int param) : glLighti;
 
-function void Light(uint light,uint pName,int[] parameters) : glLightiv;
+function void Light(uint light, uint pName, int[] parameters) : glLightiv;
 
-function void LineStipple(int factor,ushort pattern) : glLineStipple;
+function void LineStipple(int factor, ushort pattern) : glLineStipple;
 
 function void LineWidth(float width) : glLineWidth;
 
@@ -322,29 +322,29 @@ function void LoadName(uint name) : glLoadName;
 
 function void LogicOp(uint opcode) : glLogicOp;
 
-function void Map1(uint target,double u1,double u2,int stride,int order,double[] points) : glMap1d;
+function void Map1(uint target, double u1, double u2, int stride, int order, double[] points) : glMap1d;
 
-function void Map1(uint target,float u1,float u2,int stride,int order,float[] points) : glMap1f;
+function void Map1(uint target, float u1, float u2, int stride, int order, float[] points) : glMap1f;
 
-function void Map2(uint target,double u1,double u2,int ustride,int uorder,double v1,double v2,int vstride,int vorder,double[] points) : glMap2d;
+function void Map2(uint target, double u1, double u2, int ustride, int uorder, double v1, double v2, int vstride, int vorder, double[] points) : glMap2d;
 
-function void Map2(uint target,float u1,float u2,int ustride,int uorder,float v1,float v2,int vstride,int vorder,float[] points) : glMap2f;
+function void Map2(uint target, float u1, float u2, int ustride, int uorder, float v1, float v2, int vstride, int vorder, float[] points) : glMap2f;
 
-function void MapGrid1(int un,double u1,double u2) : glMapGrid1d;
+function void MapGrid1(int un, double u1, double u2) : glMapGrid1d;
 
-function void MapGrid1(int un,float u1,float u2) : glMapGrid1f;
+function void MapGrid1(int un, float u1, float u2) : glMapGrid1f;
 
-function void MapGrid2(int un,double u1,double u2,int vn,double v1,double v2) : glMapGrid2d;
+function void MapGrid2(int un, double u1, double u2, int vn, double v1, double v2) : glMapGrid2d;
 
-function void MapGrid2(int un,float u1,float u2,int vn,float v1,float v2) : glMapGrid2f;
+function void MapGrid2(int un, float u1, float u2, int vn, float v1, float v2) : glMapGrid2f;
 
-function void Material(uint face,uint pName,float param) : glMaterialf;
+function void Material(uint face, uint pName, float param) : glMaterialf;
 
-function void Material(uint face,uint pName,float[] parameters) : glMaterialfv;
+function void Material(uint face, uint pName, float[] parameters) : glMaterialfv;
 
-function void Material(uint face,uint pName,int param) : glMateriali;
+function void Material(uint face, uint pName, int param) : glMateriali;
 
-function void Material(uint face,uint pName,int[] parameters) : glMaterialiv;
+function void Material(uint face, uint pName, int[] parameters) : glMaterialiv;
 
 function void MatrixMode(uint mode) : glMatrixMode;
 
@@ -352,55 +352,55 @@ function void MultMatrix(double[] m) : glMultMatrixd;
 
 function void MultMatrix(float[] m) : glMultMatrixf;
 
-function void NewList(uint list,uint mode) : glNewList;
+function void NewList(uint list, uint mode) : glNewList;
 
-function void Normal3(sbyte nx,sbyte ny,sbyte nz) : glNormal3b;
+function void Normal3(sbyte nx, sbyte ny, sbyte nz) : glNormal3b;
 
 function void Normal3(IntPtr v) : glNormal3bv;
 
-function void Normal3(double nx,double ny,double nz) : glNormal3d;
+function void Normal3(double nx, double ny, double nz) : glNormal3d;
 
 function void Normal3(double[] v) : glNormal3dv;
 
-function void Normal3(float nx,float ny,float nz) : glNormal3f;
+function void Normal3(float nx, float ny, float nz) : glNormal3f;
 
 function void Normal3(float[] v) : glNormal3fv;
 
-function void Normal3(int nx,int ny,int nz) : glNormal3i;
+function void Normal3(int nx, int ny, int nz) : glNormal3i;
 
 function void Normal3(int[] v) : glNormal3iv;
 
-function void Normal3(short nx,short ny,short nz) : glNormal3s;
+function void Normal3(short nx, short ny, short nz) : glNormal3s;
 
 function void Normal3(short[] v) : glNormal3sv;
 
-function void NormalPointer(uint type,int stride,IntPtr pointer) : glNormalPointer;
+function void NormalPointer(uint type, int stride, IntPtr pointer) : glNormalPointer;
 
-function void Ortho(double left,double right,double bottom,double top,double zNear,double zFar) : glOrtho;
+function void Ortho(double left, double right, double bottom, double top, double zNear, double zFar) : glOrtho;
 
 function void PassThrough(float token) : glPassThrough;
 
-function void PixelMap(uint map,int mapSize,float[] values) : glPixelMapfv;
+function void PixelMap(uint map, int mapSize, float[] values) : glPixelMapfv;
 
-function void PixelMap(uint map,int mapSize,uint[] values) : glPixelMapuiv;
+function void PixelMap(uint map, int mapSize, uint[] values) : glPixelMapuiv;
 
-function void PixelMap(uint map,int mapSize,ushort[] values) : glPixelMapusv;
+function void PixelMap(uint map, int mapSize, ushort[] values) : glPixelMapusv;
 
-function void PixelStore(uint pName,float param) : glPixelStoref;
+function void PixelStore(uint pName, float param) : glPixelStoref;
 
-function void PixelStore(uint pName,int param) : glPixelStorei;
+function void PixelStore(uint pName, int param) : glPixelStorei;
 
-function void PixelTransfer(uint pName,float param) : glPixelTransferf;
+function void PixelTransfer(uint pName, float param) : glPixelTransferf;
 
-function void PixelTransfer(uint pName,int param) : glPixelTransferi;
+function void PixelTransfer(uint pName, int param) : glPixelTransferi;
 
-function void PixelZoom(float xFactor,float yFactor) : glPixelZoom;
+function void PixelZoom(float xFactor, float yFactor) : glPixelZoom;
 
 function void PointSize(float size) : glPointSize;
 
-function void PolygonMode(MaterialFace face,PolygonMode mode) : glPolygonMode;
+function void PolygonMode(MaterialFace face, PolygonMode mode) : glPolygonMode;
 
-function void PolygonOffset(float factor,float units) : glPolygonOffset;
+function void PolygonOffset(float factor, float units) : glPolygonOffset;
 
 function void PolygonStipple(IntPtr mask) : glPolygonStipple;
 
@@ -412,7 +412,7 @@ function void PopMatrix() : glPopMatrix;
 
 function void PopName() : glPopName;
 
-function void PrioritizeTextures(int n,uint[] textures,float[] priorities) : glPrioritizeTextures;
+function void PrioritizeTextures(int n, uint[] textures, float[] priorities) : glPrioritizeTextures;
 
 function void PushAttrib(uint mask) : glPushAttrib;
 
@@ -422,95 +422,95 @@ function void PushMatrix() : glPushMatrix;
 
 function void PushName(uint name) : glPushName;
 
-function void RasterPos2(double x,double y) : glRasterPos2d;
+function void RasterPos2(double x, double y) : glRasterPos2d;
 
 function void RasterPos2(double[] v) : glRasterPos2dv;
 
-function void RasterPos2(float x,float y) : glRasterPos2f;
+function void RasterPos2(float x, float y) : glRasterPos2f;
 
 function void RasterPos2(float[] v) : glRasterPos2fv;
 
-function void RasterPos2(int x,int y) : glRasterPos2i;
+function void RasterPos2(int x, int y) : glRasterPos2i;
 
 function void RasterPos2(int[] v) : glRasterPos2iv;
 
-function void RasterPos2(short x,short y) : glRasterPos2s;
+function void RasterPos2(short x, short y) : glRasterPos2s;
 
 function void RasterPos2(short[] v) : glRasterPos2sv;
 
-function void RasterPos3(double x,double y,double z) : glRasterPos3d;
+function void RasterPos3(double x, double y, double z) : glRasterPos3d;
 
 function void RasterPos3(double[] v) : glRasterPos3dv;
 
-function void RasterPos3(float x,float y,float z) : glRasterPos3f;
+function void RasterPos3(float x, float y, float z) : glRasterPos3f;
 
 function void RasterPos3(float[] v) : glRasterPos3fv;
 
-function void RasterPos3(int x,int y,int z) : glRasterPos3i;
+function void RasterPos3(int x, int y, int z) : glRasterPos3i;
 
 function void RasterPos3(int[] v) : glRasterPos3iv;
 
-function void RasterPos3(short x,short y,short z) : glRasterPos3s;
+function void RasterPos3(short x, short y, short z) : glRasterPos3s;
 
 function void RasterPos3(short[] v) : glRasterPos3sv;
 
-function void RasterPos4(double x,double y,double z,double w) : glRasterPos4d;
+function void RasterPos4(double x, double y, double z, double w) : glRasterPos4d;
 
 function void RasterPos4(double[] v) : glRasterPos4dv;
 
-function void RasterPos4(float x,float y,float z,float w) : glRasterPos4f;
+function void RasterPos4(float x, float y, float z, float w) : glRasterPos4f;
 
 function void RasterPos4(float[] v) : glRasterPos4fv;
 
-function void RasterPos4(int x,int y,int z,int w) : glRasterPos4i;
+function void RasterPos4(int x, int y, int z, int w) : glRasterPos4i;
 
 function void RasterPos4(int[] v) : glRasterPos4iv;
 
-function void RasterPos4(short x,short y,short z,short w) : glRasterPos4s;
+function void RasterPos4(short x, short y, short z, short w) : glRasterPos4s;
 
 function void RasterPos4(short[] v) : glRasterPos4sv;
 
 function void ReadBuffer(ReadBufferMode mode) : glReadBuffer;
 
-function void ReadPixels(int x,int y,int width,int height,PixelFormat format,PixelType type,IntPtr pixels) : glReadPixels;
+function void ReadPixels(int x, int y, int width, int height, PixelFormat format, PixelType type, IntPtr pixels) : glReadPixels;
 
-function void Rect(double x1,double y1,double x2,double y2) : glRectd;
+function void Rect(double x1, double y1, double x2, double y2) : glRectd;
 
-function void Rect(double[] v1,double[] v2) : glRectdv;
+function void Rect(double[] v1, double[] v2) : glRectdv;
 
-function void Rect(float x1,float y1,float x2,float y2) : glRectf;
+function void Rect(float x1, float y1, float x2, float y2) : glRectf;
 
-function void Rect(float[] v1,float[] v2) : glRectfv;
+function void Rect(float[] v1, float[] v2) : glRectfv;
 
-function void Rect(int x1,int y1,int x2,int y2) : glRecti;
+function void Rect(int x1, int y1, int x2, int y2) : glRecti;
 
-function void Rect(int[] v1,int[] v2) : glRectiv;
+function void Rect(int[] v1, int[] v2) : glRectiv;
 
-function void Rect(short x1,short y1,short x2,short y2) : glRects;
+function void Rect(short x1, short y1, short x2, short y2) : glRects;
 
-function void Rect(short[] v1,short[] v2) : glRectsv;
+function void Rect(short[] v1, short[] v2) : glRectsv;
 
 function int RenderMode(uint mode) : glRenderMode;
 
-function void Rotate(double angle,double x,double y,double z) : glRotated;
+function void Rotate(double angle, double x, double y, double z) : glRotated;
 
-function void Rotate(float angle,float x,float y,float z) : glRotatef;
+function void Rotate(float angle, float x, float y, float z) : glRotatef;
 
-function void Scale(double x,double y,double z) : glScaled;
+function void Scale(double x, double y, double z) : glScaled;
 
-function void Scale(float x,float y,float z) : glScalef;
+function void Scale(float x, float y, float z) : glScalef;
 
-function void Scissor(int x,int y,int width,int height) : glScissor;
+function void Scissor(int x, int y, int width, int height) : glScissor;
 
-function void SelectBuffer(int size,uint[] buffer) : glSelectBuffer;
+function void SelectBuffer(int size, uint[] buffer) : glSelectBuffer;
 
 function void ShadeModel(uint mode) : glShadeModel;
 
-function void StencilFunc(uint func,int refer,uint mask) : glStencilFunc;
+function void StencilFunc(uint func, int refer, uint mask) : glStencilFunc;
 
 function void StencilMask(uint mask) : glStencilMask;
 
-function void StencilOp(uint fail,uint zfail,uint zpass) : glStencilOp;
+function void StencilOp(uint fail, uint zfail, uint zpass) : glStencilOp;
 
 function void TexCoord1(double s) : glTexCoord1d;
 
@@ -528,144 +528,144 @@ function void TexCoord1(short s) : glTexCoord1s;
 
 function void TexCoord1(short[] v) : glTexCoord1sv;
 
-function void TexCoord2(double s,double t) : glTexCoord2d;
+function void TexCoord2(double s, double t) : glTexCoord2d;
 
 function void TexCoord2(double[] v) : glTexCoord2dv;
 
-function void TexCoord2(float s,float t) : glTexCoord2f;
+function void TexCoord2(float s, float t) : glTexCoord2f;
 
 function void TexCoord2(float[] v) : glTexCoord2fv;
 
-function void TexCoord2(int s,int t) : glTexCoord2i;
+function void TexCoord2(int s, int t) : glTexCoord2i;
 
 function void TexCoord2(int[] v) : glTexCoord2iv;
 
-function void TexCoord2(short s,short t) : glTexCoord2s;
+function void TexCoord2(short s, short t) : glTexCoord2s;
 
 function void TexCoord2(short[] v) : glTexCoord2sv;
 
-function void TexCoord3(double s,double t,double r) : glTexCoord3d;
+function void TexCoord3(double s, double t, double r) : glTexCoord3d;
 
 function void TexCoord3(double[] v) : glTexCoord3dv;
 
-function void TexCoord3(float s,float t,float r) : glTexCoord3f;
+function void TexCoord3(float s, float t, float r) : glTexCoord3f;
 
 function void TexCoord3(float[] v) : glTexCoord3fv;
 
-function void TexCoord3(int s,int t,int r) : glTexCoord3i;
+function void TexCoord3(int s, int t, int r) : glTexCoord3i;
 
 function void TexCoord3(int[] v) : glTexCoord3iv;
 
-function void TexCoord3(short s,short t,short r) : glTexCoord3s;
+function void TexCoord3(short s, short t, short r) : glTexCoord3s;
 
 function void TexCoord3(short[] v) : glTexCoord3sv;
 
-function void TexCoord4(double s,double t,double r,double q) : glTexCoord4d;
+function void TexCoord4(double s, double t, double r, double q) : glTexCoord4d;
 
 function void TexCoord4(double[] v) : glTexCoord4dv;
 
-function void TexCoord4(float s,float t,float r,float q) : glTexCoord4f;
+function void TexCoord4(float s, float t, float r, float q) : glTexCoord4f;
 
 function void TexCoord4(float[] v) : glTexCoord4fv;
 
-function void TexCoord4(int s,int t,int r,int q) : glTexCoord4i;
+function void TexCoord4(int s, int t, int r, int q) : glTexCoord4i;
 
 function void TexCoord4(int[] v) : glTexCoord4iv;
 
-function void TexCoord4(short s,short t,short r,short q) : glTexCoord4s;
+function void TexCoord4(short s, short t, short r, short q) : glTexCoord4s;
 
 function void TexCoord4(short[] v) : glTexCoord4sv;
 
-function void TexCoordPointer(int size,uint type,int stride,IntPtr pointer) : glTexCoordPointer;
+function void TexCoordPointer(int size, uint type, int stride, IntPtr pointer) : glTexCoordPointer;
 
-function void TexEnv(TextureEnvTarget target,uint pName,float param) : glTexEnvf;
+function void TexEnv(TextureEnvTarget target, uint pName, float param) : glTexEnvf;
 
-function void TexEnv(TextureEnvTarget target,uint pName,float[] parameters) : glTexEnvfv;
+function void TexEnv(TextureEnvTarget target, uint pName, float[] parameters) : glTexEnvfv;
 
-function void TexEnv(TextureEnvTarget target,uint pName,int param) : glTexEnvi;
+function void TexEnv(TextureEnvTarget target, uint pName, int param) : glTexEnvi;
 
-function void TexEnv(TextureEnvTarget target,uint pName,int[] parameters) : glTexEnviv;
+function void TexEnv(TextureEnvTarget target, uint pName, int[] parameters) : glTexEnviv;
 
-function void TexGen(uint coord,uint pName,double param) : glTexGend;
+function void TexGen(uint coord, uint pName, double param) : glTexGend;
 
-function void TexGen(uint coord,uint pName,double[] parameters) : glTexGendv;
+function void TexGen(uint coord, uint pName, double[] parameters) : glTexGendv;
 
-function void TexGen(uint coord,uint pName,float param) : glTexGenf;
+function void TexGen(uint coord, uint pName, float param) : glTexGenf;
 
-function void TexGen(uint coord,uint pName,float[] parameters) : glTexGenfv;
+function void TexGen(uint coord, uint pName, float[] parameters) : glTexGenfv;
 
-function void TexGen(uint coord,uint pName,int param) : glTexGeni;
+function void TexGen(uint coord, uint pName, int param) : glTexGeni;
 
-function void TexGen(uint coord,uint pName,int[] parameters) : glTexGeniv;
+function void TexGen(uint coord, uint pName, int[] parameters) : glTexGeniv;
 
-function void TexImage1D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int border,PixelFormat format,PixelType type,IntPtr pixels) : glTexImage1D;
+function void TexImage1D(TextureTarget target, int level, PixelInternalFormat internalFormat, int width, int border, PixelFormat format, PixelType type, IntPtr pixels) : glTexImage1D;
 
-function void TexImage2D(TextureTarget target,int level,PixelInternalFormat internalFormat,int width,int height,int border,PixelFormat format,PixelType type,IntPtr pixels) : glTexImage2D;
+function void TexImage2D(TextureTarget target, int level, PixelInternalFormat internalFormat, int width, int height, int border, PixelFormat format, PixelType type, IntPtr pixels) : glTexImage2D;
 
-function void TexParameter(TextureTarget target,TextureParameterName parameterName,float param) : glTexParameterf;
+function void TexParameter(TextureTarget target, TextureParameterName parameterName, float param) : glTexParameterf;
 
-function void TexParameter(TextureTarget target,TextureParameterName parameterName,float[] parameters) : glTexParameterfv;
+function void TexParameter(TextureTarget target, TextureParameterName parameterName, float[] parameters) : glTexParameterfv;
 
-function void TexParameter(TextureTarget target,TextureParameterName parameterName,int param) : glTexParameteri;
+function void TexParameter(TextureTarget target, TextureParameterName parameterName, int param) : glTexParameteri;
 
-function void TexParameter(TextureTarget target,TextureParameterName parameterName,int[] parameters) : glTexParameteriv;
+function void TexParameter(TextureTarget target, TextureParameterName parameterName, int[] parameters) : glTexParameteriv;
 
-function void TexSubImage1D(TextureTarget target,int level,int xOffset,int width,PixelFormat format,PixelType type,IntPtr pixels) : glTexSubImage1D;
+function void TexSubImage1D(TextureTarget target, int level, int xOffset, int width, PixelFormat format, PixelType type, IntPtr pixels) : glTexSubImage1D;
 
-function void TexSubImage2D(TextureTarget target,int level,int xOffset,int yOffset,int width,int height,PixelFormat format,PixelType type,IntPtr pixels) : glTexSubImage2D;
+function void TexSubImage2D(TextureTarget target, int level, int xOffset, int yOffset, int width, int height, PixelFormat format, PixelType type, IntPtr pixels) : glTexSubImage2D;
 
-function void Translate(double x,double y,double z) : glTranslated;
+function void Translate(double x, double y, double z) : glTranslated;
 
-function void Translate(float x,float y,float z) : glTranslatef;
+function void Translate(float x, float y, float z) : glTranslatef;
 
-function void Vertex2(double x,double y) : glVertex2d;
+function void Vertex2(double x, double y) : glVertex2d;
 
 function void Vertex2(double[] v) : glVertex2dv;
 
-function void Vertex2(float x,float y) : glVertex2f;
+function void Vertex2(float x, float y) : glVertex2f;
 
 function void Vertex2(float[] v) : glVertex2fv;
 
-function void Vertex2(int x,int y) : glVertex2i;
+function void Vertex2(int x, int y) : glVertex2i;
 
 function void Vertex2(int[] v) : glVertex2iv;
 
-function void Vertex2(short x,short y) : glVertex2s;
+function void Vertex2(short x, short y) : glVertex2s;
 
 function void Vertex2(short[] v) : glVertex2sv;
 
-function void Vertex3(double x,double y,double z) : glVertex3d;
+function void Vertex3(double x, double y, double z) : glVertex3d;
 
 function void Vertex3(double[] v) : glVertex3dv;
 
-function void Vertex3(float x,float y,float z) : glVertex3f;
+function void Vertex3(float x, float y, float z) : glVertex3f;
 
 function void Vertex3(float[] v) : glVertex3fv;
 
-function void Vertex3(int x,int y,int z) : glVertex3i;
+function void Vertex3(int x, int y, int z) : glVertex3i;
 
 function void Vertex3(int[] v) : glVertex3iv;
 
-function void Vertex3(short x,short y,short z) : glVertex3s;
+function void Vertex3(short x, short y, short z) : glVertex3s;
 
 function void Vertex3(short[] v) : glVertex3sv;
 
-function void Vertex4(double x,double y,double z,double w) : glVertex4d;
+function void Vertex4(double x, double y, double z, double w) : glVertex4d;
 
 function void Vertex4(double[] v) : glVertex4dv;
 
-function void Vertex4(float x,float y,float z,float w) : glVertex4f;
+function void Vertex4(float x, float y, float z, float w) : glVertex4f;
 
 function void Vertex4(float[] v) : glVertex4fv;
 
-function void Vertex4(int x,int y,int z,int w) : glVertex4i;
+function void Vertex4(int x, int y, int z, int w) : glVertex4i;
 
 function void Vertex4(int[] v) : glVertex4iv;
 
-function void Vertex4(short x,short y,short z,short w) : glVertex4s;
+function void Vertex4(short x, short y, short z, short w) : glVertex4s;
 
 function void Vertex4(short[] v) : glVertex4sv;
 
-function void VertexPointer(int size,uint type,int stride,IntPtr pointer) : glVertexPointer;
+function void VertexPointer(int size, uint type, int stride, IntPtr pointer) : glVertexPointer;
 
-function void Viewport(int x,int y,int width,int height) : glViewport;
+function void Viewport(int x, int y, int width, int height) : glViewport;

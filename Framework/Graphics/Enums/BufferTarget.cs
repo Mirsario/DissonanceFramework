@@ -4,16 +4,16 @@
 	{
 		/// <summary> Vertex attributes. </summary>
 		ArrayBuffer = 34962,
-		
+
 		/// <summary> Vertex array indices. </summary>
 		ElementArrayBuffer = 34963,
-		
+
 		/// <summary> Pixel read target. </summary>
 		PixelPackBuffer = 35051,
-		
+
 		/// <summary> Texture data source. </summary>
 		PixelUnpackBuffer = 35052,
-		
+
 		/// <summary> Uniform block storage. </summary>
 		UniformBuffer = 35345,
 

@@ -7,7 +7,7 @@ namespace Dissonance.Framework.Graphics
 {
 	public static partial class GL
 	{
-		private const short ImplOptions = (short)(MethodImplOptions.AggressiveInlining|MethodImplOptions.AggressiveOptimization);
+		private const short ImplOptions = (short)(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization);
 
 		public static readonly Version[] SupportedVersions = new Version[] {
 			//1.0+
@@ -40,10 +40,10 @@ namespace Dissonance.Framework.Graphics
 		public static void Load(Version version)
 		{
 			if(!SupportedVersions.Contains(version)) {
-				throw new InvalidOperationException($"OpenGL version '{version}' is unknown or not supported. The following versions are supported:\r\n{string.Join("\r\n",GL.SupportedVersions.Select(v => $"{v};"))}.");
+				throw new InvalidOperationException($"OpenGL version '{version}' is unknown or not supported. The following versions are supported:\r\n{string.Join("\r\n", GL.SupportedVersions.Select(v => $"{v};"))}.");
 			}
 
-			DllManager.ImportTypeMethods(typeof(GL),version,function => GLFW.GetProcAddress(function));
+			DllManager.ImportTypeMethods(typeof(GL), version, function => GLFW.GetProcAddress(function));
 		}
 	}
 }

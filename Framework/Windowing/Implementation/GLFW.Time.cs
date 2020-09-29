@@ -9,18 +9,18 @@ namespace Dissonance.Framework.Windowing
 	{
 		//Get
 
-		[DllImport(Library,EntryPoint = "glfwGetTime",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		[DllImport(Library, EntryPoint = "glfwGetTime", CallingConvention = CC.Cdecl, CharSet = CharSet.Ansi, ExactSpelling = true)]
 		public static extern double GetTime();
 
-		[DllImport(Library,EntryPoint = "glfwGetTimerValue",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		[DllImport(Library, EntryPoint = "glfwGetTimerValue", CallingConvention = CC.Cdecl, CharSet = CharSet.Ansi, ExactSpelling = true)]
 		public static extern uint GetTimerValue();
 
-		[DllImport(Library,EntryPoint = "glfwGetTimerFrequency",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		[DllImport(Library, EntryPoint = "glfwGetTimerFrequency", CallingConvention = CC.Cdecl, CharSet = CharSet.Ansi, ExactSpelling = true)]
 		public static extern uint GetTimerFrequency();
 
 		//Set
 
-		[DllImport(Library,EntryPoint = "glfwSetTime",CallingConvention = CC.Cdecl,CharSet = CharSet.Ansi,ExactSpelling = true)]
+		[DllImport(Library, EntryPoint = "glfwSetTime", CallingConvention = CC.Cdecl, CharSet = CharSet.Ansi, ExactSpelling = true)]
 		public static extern void SetTime(double time);
 	}
 }

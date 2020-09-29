@@ -1,175 +1,175 @@
 ﻿function void ReleaseShaderCompiler() : glReleaseShaderCompiler;
 
-function void ShaderBinary(int count,ref uint shaders,uint binaryformat,IntPtr binary,int length) : glShaderBinary;
+function void ShaderBinary(int count, ref uint shaders, uint binaryformat, IntPtr binary, int length) : glShaderBinary;
 
-function void GetShaderPrecisionFormat(uint shadertype,uint precisiontype,ref int range,ref int precision) : glGetShaderPrecisionFormat;
+function void GetShaderPrecisionFormat(uint shadertype, uint precisiontype, ref int range, ref int precision) : glGetShaderPrecisionFormat;
 
-function void DepthRange(float n,float f) : glDepthRangef;
+function void DepthRange(float n, float f) : glDepthRangef;
 
 function void ClearDepth(float d) : glClearDepthf;
 
-function void GetProgramBinary(uint program,int bufSize,ref int length,ref uint binaryFormat,IntPtr binary) : glGetProgramBinary;
+function void GetProgramBinary(uint program, int bufSize, ref int length, ref uint binaryFormat, IntPtr binary) : glGetProgramBinary;
 
-function void ProgramBinary(uint program,uint binaryFormat,IntPtr binary,int length) : glProgramBinary;
+function void ProgramBinary(uint program, uint binaryFormat, IntPtr binary, int length) : glProgramBinary;
 
-function void ProgramParameter(uint program,uint pName,int value) : glProgramParameteri;
+function void ProgramParameter(uint program, uint pName, int value) : glProgramParameteri;
 
-function void UseProgramStages(uint pipeline,uint stages,uint program) : glUseProgramStages;
+function void UseProgramStages(uint pipeline, uint stages, uint program) : glUseProgramStages;
 
-function void ActiveShaderProgram(uint pipeline,uint program) : glActiveShaderProgram;
+function void ActiveShaderProgram(uint pipeline, uint program) : glActiveShaderProgram;
 
-function uint CreateShaderProgram(uint type,int count,IntPtr strings) : glCreateShaderProgramv;
+function uint CreateShaderProgram(uint type, int count, IntPtr strings) : glCreateShaderProgramv;
 
 function void BindProgramPipeline(uint pipeline) : glBindProgramPipeline;
 
-function void DeleteProgramPipelines(int n,ref uint pipelines) : glDeleteProgramPipelines;
+function void DeleteProgramPipelines(int n, ref uint pipelines) : glDeleteProgramPipelines;
 
-function void GenProgramPipelines(int n,ref uint pipelines) : glGenProgramPipelines;
+function void GenProgramPipelines(int n, ref uint pipelines) : glGenProgramPipelines;
 
 function byte IsProgramPipeline(uint pipeline) : glIsProgramPipeline;
 
-function void GetProgramPipeline(uint pipeline,uint pName,ref int parameters) : glGetProgramPipelineiv;
+function void GetProgramPipeline(uint pipeline, uint pName, ref int parameters) : glGetProgramPipelineiv;
 
-function void ProgramUniform1(uint program,int location,int v0) : glProgramUniform1i;
+function void ProgramUniform1(uint program, int location, int v0) : glProgramUniform1i;
 
-function void ProgramUniform1(uint program,int location,int count,ref int value) : glProgramUniform1iv;
+function void ProgramUniform1(uint program, int location, int count, ref int value) : glProgramUniform1iv;
 
-function void ProgramUniform1(uint program,int location,float v0) : glProgramUniform1f;
+function void ProgramUniform1(uint program, int location, float v0) : glProgramUniform1f;
 
-function void ProgramUniform1(uint program,int location,int count,ref float value) : glProgramUniform1fv;
+function void ProgramUniform1(uint program, int location, int count, ref float value) : glProgramUniform1fv;
 
-function void ProgramUniform1(uint program,int location,double v0) : glProgramUniform1d;
+function void ProgramUniform1(uint program, int location, double v0) : glProgramUniform1d;
 
-function void ProgramUniform1(uint program,int location,int count,ref double value) : glProgramUniform1dv;
+function void ProgramUniform1(uint program, int location, int count, ref double value) : glProgramUniform1dv;
 
-function void ProgramUniform1(uint program,int location,uint v0) : glProgramUniform1ui;
+function void ProgramUniform1(uint program, int location, uint v0) : glProgramUniform1ui;
 
-function void ProgramUniform1(uint program,int location,int count,ref uint value) : glProgramUniform1uiv;
+function void ProgramUniform1(uint program, int location, int count, ref uint value) : glProgramUniform1uiv;
 
-function void ProgramUniform2(uint program,int location,int v0,int v1) : glProgramUniform2i;
+function void ProgramUniform2(uint program, int location, int v0, int v1) : glProgramUniform2i;
 
-function void ProgramUniform2(uint program,int location,int count,ref int value) : glProgramUniform2iv;
+function void ProgramUniform2(uint program, int location, int count, ref int value) : glProgramUniform2iv;
 
-function void ProgramUniform2(uint program,int location,float v0,float v1) : glProgramUniform2f;
+function void ProgramUniform2(uint program, int location, float v0, float v1) : glProgramUniform2f;
 
-function void ProgramUniform2(uint program,int location,int count,ref float value) : glProgramUniform2fv;
+function void ProgramUniform2(uint program, int location, int count, ref float value) : glProgramUniform2fv;
 
-function void ProgramUniform2(uint program,int location,double v0,double v1) : glProgramUniform2d;
+function void ProgramUniform2(uint program, int location, double v0, double v1) : glProgramUniform2d;
 
-function void ProgramUniform2(uint program,int location,int count,ref double value) : glProgramUniform2dv;
+function void ProgramUniform2(uint program, int location, int count, ref double value) : glProgramUniform2dv;
 
-function void ProgramUniform2(uint program,int location,uint v0,uint v1) : glProgramUniform2ui;
+function void ProgramUniform2(uint program, int location, uint v0, uint v1) : glProgramUniform2ui;
 
-function void ProgramUniform2(uint program,int location,int count,ref uint value) : glProgramUniform2uiv;
+function void ProgramUniform2(uint program, int location, int count, ref uint value) : glProgramUniform2uiv;
 
-function void ProgramUniform3(uint program,int location,int v0,int v1,int v2) : glProgramUniform3i;
+function void ProgramUniform3(uint program, int location, int v0, int v1, int v2) : glProgramUniform3i;
 
-function void ProgramUniform3(uint program,int location,int count,ref int value) : glProgramUniform3iv;
+function void ProgramUniform3(uint program, int location, int count, ref int value) : glProgramUniform3iv;
 
-function void ProgramUniform3(uint program,int location,float v0,float v1,float v2) : glProgramUniform3f;
+function void ProgramUniform3(uint program, int location, float v0, float v1, float v2) : glProgramUniform3f;
 
-function void ProgramUniform3(uint program,int location,int count,ref float value) : glProgramUniform3fv;
+function void ProgramUniform3(uint program, int location, int count, ref float value) : glProgramUniform3fv;
 
-function void ProgramUniform3(uint program,int location,double v0,double v1,double v2) : glProgramUniform3d;
+function void ProgramUniform3(uint program, int location, double v0, double v1, double v2) : glProgramUniform3d;
 
-function void ProgramUniform3(uint program,int location,int count,ref double value) : glProgramUniform3dv;
+function void ProgramUniform3(uint program, int location, int count, ref double value) : glProgramUniform3dv;
 
-function void ProgramUniform3(uint program,int location,uint v0,uint v1,uint v2) : glProgramUniform3ui;
+function void ProgramUniform3(uint program, int location, uint v0, uint v1, uint v2) : glProgramUniform3ui;
 
-function void ProgramUniform3(uint program,int location,int count,ref uint value) : glProgramUniform3uiv;
+function void ProgramUniform3(uint program, int location, int count, ref uint value) : glProgramUniform3uiv;
 
-function void ProgramUniform4(uint program,int location,int v0,int v1,int v2,int v3) : glProgramUniform4i;
+function void ProgramUniform4(uint program, int location, int v0, int v1, int v2, int v3) : glProgramUniform4i;
 
-function void ProgramUniform4(uint program,int location,int count,ref int value) : glProgramUniform4iv;
+function void ProgramUniform4(uint program, int location, int count, ref int value) : glProgramUniform4iv;
 
-function void ProgramUniform4(uint program,int location,float v0,float v1,float v2,float v3) : glProgramUniform4f;
+function void ProgramUniform4(uint program, int location, float v0, float v1, float v2, float v3) : glProgramUniform4f;
 
-function void ProgramUniform4(uint program,int location,int count,ref float value) : glProgramUniform4fv;
+function void ProgramUniform4(uint program, int location, int count, ref float value) : glProgramUniform4fv;
 
-function void ProgramUniform4(uint program,int location,double v0,double v1,double v2,double v3) : glProgramUniform4d;
+function void ProgramUniform4(uint program, int location, double v0, double v1, double v2, double v3) : glProgramUniform4d;
 
-function void ProgramUniform4(uint program,int location,int count,ref double value) : glProgramUniform4dv;
+function void ProgramUniform4(uint program, int location, int count, ref double value) : glProgramUniform4dv;
 
-function void ProgramUniform4(uint program,int location,uint v0,uint v1,uint v2,uint v3) : glProgramUniform4ui;
+function void ProgramUniform4(uint program, int location, uint v0, uint v1, uint v2, uint v3) : glProgramUniform4ui;
 
-function void ProgramUniform4(uint program,int location,int count,ref uint value) : glProgramUniform4uiv;
+function void ProgramUniform4(uint program, int location, int count, ref uint value) : glProgramUniform4uiv;
 
-function void ProgramUniformMatrix2(uint program,int location,int count,byte transpose,ref float value) : glProgramUniformMatrix2fv;
+function void ProgramUniformMatrix2(uint program, int location, int count, byte transpose, ref float value) : glProgramUniformMatrix2fv;
 
-function void ProgramUniformMatrix3(uint program,int location,int count,byte transpose,ref float value) : glProgramUniformMatrix3fv;
+function void ProgramUniformMatrix3(uint program, int location, int count, byte transpose, ref float value) : glProgramUniformMatrix3fv;
 
-function void ProgramUniformMatrix4(uint program,int location,int count,byte transpose,ref float value) : glProgramUniformMatrix4fv;
+function void ProgramUniformMatrix4(uint program, int location, int count, byte transpose, ref float value) : glProgramUniformMatrix4fv;
 
-function void ProgramUniformMatrix2(uint program,int location,int count,byte transpose,ref double value) : glProgramUniformMatrix2dv;
+function void ProgramUniformMatrix2(uint program, int location, int count, byte transpose, ref double value) : glProgramUniformMatrix2dv;
 
-function void ProgramUniformMatrix3(uint program,int location,int count,byte transpose,ref double value) : glProgramUniformMatrix3dv;
+function void ProgramUniformMatrix3(uint program, int location, int count, byte transpose, ref double value) : glProgramUniformMatrix3dv;
 
-function void ProgramUniformMatrix4(uint program,int location,int count,byte transpose,ref double value) : glProgramUniformMatrix4dv;
+function void ProgramUniformMatrix4(uint program, int location, int count, byte transpose, ref double value) : glProgramUniformMatrix4dv;
 
-function void ProgramUniformMatrix2x3(uint program,int location,int count,byte transpose,ref float value) : glProgramUniformMatrix2x3fv;
+function void ProgramUniformMatrix2x3(uint program, int location, int count, byte transpose, ref float value) : glProgramUniformMatrix2x3fv;
 
-function void ProgramUniformMatrix3x2(uint program,int location,int count,byte transpose,ref float value) : glProgramUniformMatrix3x2fv;
+function void ProgramUniformMatrix3x2(uint program, int location, int count, byte transpose, ref float value) : glProgramUniformMatrix3x2fv;
 
-function void ProgramUniformMatrix2x4(uint program,int location,int count,byte transpose,ref float value) : glProgramUniformMatrix2x4fv;
+function void ProgramUniformMatrix2x4(uint program, int location, int count, byte transpose, ref float value) : glProgramUniformMatrix2x4fv;
 
-function void ProgramUniformMatrix4x2(uint program,int location,int count,byte transpose,ref float value) : glProgramUniformMatrix4x2fv;
+function void ProgramUniformMatrix4x2(uint program, int location, int count, byte transpose, ref float value) : glProgramUniformMatrix4x2fv;
 
-function void ProgramUniformMatrix3x4(uint program,int location,int count,byte transpose,ref float value) : glProgramUniformMatrix3x4fv;
+function void ProgramUniformMatrix3x4(uint program, int location, int count, byte transpose, ref float value) : glProgramUniformMatrix3x4fv;
 
-function void ProgramUniformMatrix4x3(uint program,int location,int count,byte transpose,ref float value) : glProgramUniformMatrix4x3fv;
+function void ProgramUniformMatrix4x3(uint program, int location, int count, byte transpose, ref float value) : glProgramUniformMatrix4x3fv;
 
-function void ProgramUniformMatrix2x3(uint program,int location,int count,byte transpose,ref double value) : glProgramUniformMatrix2x3dv;
+function void ProgramUniformMatrix2x3(uint program, int location, int count, byte transpose, ref double value) : glProgramUniformMatrix2x3dv;
 
-function void ProgramUniformMatrix3x2(uint program,int location,int count,byte transpose,ref double value) : glProgramUniformMatrix3x2dv;
+function void ProgramUniformMatrix3x2(uint program, int location, int count, byte transpose, ref double value) : glProgramUniformMatrix3x2dv;
 
-function void ProgramUniformMatrix2x4(uint program,int location,int count,byte transpose,ref double value) : glProgramUniformMatrix2x4dv;
+function void ProgramUniformMatrix2x4(uint program, int location, int count, byte transpose, ref double value) : glProgramUniformMatrix2x4dv;
 
-function void ProgramUniformMatrix4x2(uint program,int location,int count,byte transpose,ref double value) : glProgramUniformMatrix4x2dv;
+function void ProgramUniformMatrix4x2(uint program, int location, int count, byte transpose, ref double value) : glProgramUniformMatrix4x2dv;
 
-function void ProgramUniformMatrix3x4(uint program,int location,int count,byte transpose,ref double value) : glProgramUniformMatrix3x4dv;
+function void ProgramUniformMatrix3x4(uint program, int location, int count, byte transpose, ref double value) : glProgramUniformMatrix3x4dv;
 
-function void ProgramUniformMatrix4x3(uint program,int location,int count,byte transpose,ref double value) : glProgramUniformMatrix4x3dv;
+function void ProgramUniformMatrix4x3(uint program, int location, int count, byte transpose, ref double value) : glProgramUniformMatrix4x3dv;
 
 function void ValidateProgramPipeline(uint pipeline) : glValidateProgramPipeline;
 
-function void GetProgramPipelineInfoLog(uint pipeline,int bufSize,ref int length,IntPtr infoLog) : glGetProgramPipelineInfoLog;
+function void GetProgramPipelineInfoLog(uint pipeline, int bufSize, ref int length, IntPtr infoLog) : glGetProgramPipelineInfoLog;
 
-function void VertexAttribL1(uint index,double x) : glVertexAttribL1d;
+function void VertexAttribL1(uint index, double x) : glVertexAttribL1d;
 
-function void VertexAttribL2(uint index,double x,double y) : glVertexAttribL2d;
+function void VertexAttribL2(uint index, double x, double y) : glVertexAttribL2d;
 
-function void VertexAttribL3(uint index,double x,double y,double z) : glVertexAttribL3d;
+function void VertexAttribL3(uint index, double x, double y, double z) : glVertexAttribL3d;
 
-function void VertexAttribL4(uint index,double x,double y,double z,double w) : glVertexAttribL4d;
+function void VertexAttribL4(uint index, double x, double y, double z, double w) : glVertexAttribL4d;
 
-function void VertexAttribL1(uint index,ref double v) : glVertexAttribL1dv;
+function void VertexAttribL1(uint index, ref double v) : glVertexAttribL1dv;
 
-function void VertexAttribL2(uint index,ref double v) : glVertexAttribL2dv;
+function void VertexAttribL2(uint index, ref double v) : glVertexAttribL2dv;
 
-function void VertexAttribL3(uint index,ref double v) : glVertexAttribL3dv;
+function void VertexAttribL3(uint index, ref double v) : glVertexAttribL3dv;
 
-function void VertexAttribL4(uint index,ref double v) : glVertexAttribL4dv;
+function void VertexAttribL4(uint index, ref double v) : glVertexAttribL4dv;
 
-function void VertexAttribLPointer(uint index,int size,uint type,int stride,IntPtr pointer) : glVertexAttribLPointer;
+function void VertexAttribLPointer(uint index, int size, uint type, int stride, IntPtr pointer) : glVertexAttribLPointer;
 
-function void GetVertexAttribL(uint index,uint pName,ref double parameters) : glGetVertexAttribLdv;
+function void GetVertexAttribL(uint index, uint pName, ref double parameters) : glGetVertexAttribLdv;
 
-function void ViewportArray(uint first,int count,ref float v) : glViewportArrayv;
+function void ViewportArray(uint first, int count, ref float v) : glViewportArrayv;
 
-function void ViewportIndexed(uint index,float x,float y,float w,float h) : glViewportIndexedf;
+function void ViewportIndexed(uint index, float x, float y, float w, float h) : glViewportIndexedf;
 
-function void ViewportIndexed(uint index,ref float v) : glViewportIndexedfv;
+function void ViewportIndexed(uint index, ref float v) : glViewportIndexedfv;
 
-function void ScissorArray(uint first,int count,ref int v) : glScissorArrayv;
+function void ScissorArray(uint first, int count, ref int v) : glScissorArrayv;
 
-function void ScissorIndexed(uint index,int left,int bottom,int width,int height) : glScissorIndexed;
+function void ScissorIndexed(uint index, int left, int bottom, int width, int height) : glScissorIndexed;
 
-function void ScissorIndexed(uint index,ref int v) : glScissorIndexedv;
+function void ScissorIndexed(uint index, ref int v) : glScissorIndexedv;
 
-function void DepthRangeArray(uint first,int count,ref double v) : glDepthRangeArrayv;
+function void DepthRangeArray(uint first, int count, ref double v) : glDepthRangeArrayv;
 
-function void DepthRangeIndexed(uint index,double n,double f) : glDepthRangeIndexed;
+function void DepthRangeIndexed(uint index, double n, double f) : glDepthRangeIndexed;
 
-function void GetFloat(uint target,uint index,ref float data) : glGetFloati_v;
+function void GetFloat(uint target, uint index, ref float data) : glGetFloati_v;
 
-function void GetDouble(uint target,uint index,ref double data) : glGetDoublei_v;
+function void GetDouble(uint target, uint index, ref double data) : glGetDoublei_v;

@@ -13,20 +13,21 @@ namespace Test
 		{
 			Console.WriteLine("GLFW Preparing...");
 
-			GLFW.SetErrorCallback((GLFWError code,string description) => Console.WriteLine(code switch {
+			GLFW.SetErrorCallback((GLFWError code, string description) => Console.WriteLine(code switch
+			{
 				GLFWError.VersionUnavailable => throw new GraphicsException(description),
 				GLFWError.APIUnavailable => throw new GraphicsException(description),
 				_ => $"GLFW Error {code}: {description}"
 			}));
 
-			if(GLFW.Init()==0) {
+			if(GLFW.Init() == 0) {
 				throw new Exception("Unable to initialize GLFW!");
 			}
 
-			GLFW.WindowHint(WindowHint.ContextVersionMajor,OpenGLVersion.Major); //Targeted major version
-			GLFW.WindowHint(WindowHint.ContextVersionMinor,OpenGLVersion.Minor); //Targeted minor version
-			GLFW.WindowHint(WindowHint.OpenGLProfile,GLFW.OPENGL_CORE_PROFILE);
-			GLFW.WindowHint(WindowHint.OpenGLForwardCompat,1);
+			GLFW.WindowHint(WindowHint.ContextVersionMajor, OpenGLVersion.Major); //Targeted major version
+			GLFW.WindowHint(WindowHint.ContextVersionMinor, OpenGLVersion.Minor); //Targeted minor version
+			GLFW.WindowHint(WindowHint.OpenGLProfile, GLFW.OPENGL_CORE_PROFILE);
+			GLFW.WindowHint(WindowHint.OpenGLForwardCompat, 1);
 
 			IntPtr monitor = IntPtr.Zero;
 			int resolutionWidth = 800;
@@ -37,16 +38,16 @@ namespace Test
 
 				var videoMode = GLFW.GetVideoMode(monitor);
 
-				GLFW.WindowHint(WindowHint.RedBits,videoMode.redBits);
-				GLFW.WindowHint(WindowHint.GreenBits,videoMode.greenBits);
-				GLFW.WindowHint(WindowHint.BlueBits,videoMode.blueBits);
-				GLFW.WindowHint(WindowHint.RefreshRate,videoMode.refreshRate);
+				GLFW.WindowHint(WindowHint.RedBits, videoMode.redBits);
+				GLFW.WindowHint(WindowHint.GreenBits, videoMode.greenBits);
+				GLFW.WindowHint(WindowHint.BlueBits, videoMode.blueBits);
+				GLFW.WindowHint(WindowHint.RefreshRate, videoMode.refreshRate);
 
 				resolutionWidth = videoMode.width;
 				resolutionHeight = videoMode.height;
 			}
 
-			window = GLFW.CreateWindow(resolutionWidth,resolutionHeight,"Unnamed Window",monitor,IntPtr.Zero);
+			window = GLFW.CreateWindow(resolutionWidth, resolutionHeight, "Unnamed Window", monitor, IntPtr.Zero);
 
 			GLFW.MakeContextCurrent(window);
 

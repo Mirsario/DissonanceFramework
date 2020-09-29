@@ -1,78 +1,78 @@
 ﻿function void MinSampleShading(float value) : glMinSampleShading;
 
-function void BlendEquation(uint buf,uint mode) : glBlendEquationi;
+function void BlendEquation(uint buf, uint mode) : glBlendEquationi;
 
-function void BlendEquationSeparate(uint buf,uint modeRGB,uint modeAlpha) : glBlendEquationSeparatei;
+function void BlendEquationSeparate(uint buf, uint modeRGB, uint modeAlpha) : glBlendEquationSeparatei;
 
-function void BlendFunc(uint buf,BlendingFactor src,BlendingFactor dst) : glBlendFunci;
+function void BlendFunc(uint buf, BlendingFactor src, BlendingFactor dst) : glBlendFunci;
 
-function void BlendFuncSeparate(uint buf,uint srcRGB,uint dstRGB,uint srcAlpha,uint dstAlpha) : glBlendFuncSeparatei;
+function void BlendFuncSeparate(uint buf, uint srcRGB, uint dstRGB, uint srcAlpha, uint dstAlpha) : glBlendFuncSeparatei;
 
-function void DrawArraysIndirect(uint mode,IntPtr indirect) : glDrawArraysIndirect;
+function void DrawArraysIndirect(uint mode, IntPtr indirect) : glDrawArraysIndirect;
 
-function void DrawElementsIndirect(uint mode,uint type,IntPtr indirect) : glDrawElementsIndirect;
+function void DrawElementsIndirect(uint mode, uint type, IntPtr indirect) : glDrawElementsIndirect;
 
-function void Uniform1(int location,double x) : glUniform1d;
+function void Uniform1(int location, double x) : glUniform1d;
 
-function void Uniform2(int location,double x,double y) : glUniform2d;
+function void Uniform2(int location, double x, double y) : glUniform2d;
 
-function void Uniform3(int location,double x,double y,double z) : glUniform3d;
+function void Uniform3(int location, double x, double y, double z) : glUniform3d;
 
-function void Uniform4(int location,double x,double y,double z,double w) : glUniform4d;
+function void Uniform4(int location, double x, double y, double z, double w) : glUniform4d;
 
-function void Uniform1(int location,int count,double* value) : glUniform1dv;
+function void Uniform1(int location, int count, double* value) : glUniform1dv;
 
-function void Uniform2(int location,int count,double* value) : glUniform2dv;
+function void Uniform2(int location, int count, double* value) : glUniform2dv;
 
-function void Uniform3(int location,int count,double* value) : glUniform3dv;
+function void Uniform3(int location, int count, double* value) : glUniform3dv;
 
-function void Uniform4(int location,int count,double* value) : glUniform4dv;
+function void Uniform4(int location, int count, double* value) : glUniform4dv;
 
-function void UniformMatrix2(int location,int count,byte transpose,double* value) : glUniformMatrix2dv;
+function void UniformMatrix2(int location, int count, byte transpose, double* value) : glUniformMatrix2dv;
 
-function void UniformMatrix3(int location,int count,byte transpose,double* value) : glUniformMatrix3dv;
+function void UniformMatrix3(int location, int count, byte transpose, double* value) : glUniformMatrix3dv;
 
-function void UniformMatrix4(int location,int count,byte transpose,double* value) : glUniformMatrix4dv;
+function void UniformMatrix4(int location, int count, byte transpose, double* value) : glUniformMatrix4dv;
 
-function void UniformMatrix2x3(int location,int count,byte transpose,double* value) : glUniformMatrix2x3dv;
+function void UniformMatrix2x3(int location, int count, byte transpose, double* value) : glUniformMatrix2x3dv;
 
-function void UniformMatrix2x4(int location,int count,byte transpose,double* value) : glUniformMatrix2x4dv;
+function void UniformMatrix2x4(int location, int count, byte transpose, double* value) : glUniformMatrix2x4dv;
 
-function void UniformMatrix3x2(int location,int count,byte transpose,double* value) : glUniformMatrix3x2dv;
+function void UniformMatrix3x2(int location, int count, byte transpose, double* value) : glUniformMatrix3x2dv;
 
-function void UniformMatrix3x4(int location,int count,byte transpose,double* value) : glUniformMatrix3x4dv;
+function void UniformMatrix3x4(int location, int count, byte transpose, double* value) : glUniformMatrix3x4dv;
 
-function void UniformMatrix4x2(int location,int count,byte transpose,double* value) : glUniformMatrix4x2dv;
+function void UniformMatrix4x2(int location, int count, byte transpose, double* value) : glUniformMatrix4x2dv;
 
-function void UniformMatrix4x3(int location,int count,byte transpose,double* value) : glUniformMatrix4x3dv;
+function void UniformMatrix4x3(int location, int count, byte transpose, double* value) : glUniformMatrix4x3dv;
 
-function void GetUniform(uint program,int location,double* parameters) : glGetUniformdv;
+function void GetUniform(uint program, int location, double* parameters) : glGetUniformdv;
 
-function int GetSubroutineUniformLocation(uint program,uint shadertype,IntPtr name) : glGetSubroutineUniformLocation;
+function int GetSubroutineUniformLocation(uint program, uint shadertype, IntPtr name) : glGetSubroutineUniformLocation;
 
-function uint GetSubroutineIndex(uint program,uint shadertype,IntPtr name) : glGetSubroutineIndex;
+function uint GetSubroutineIndex(uint program, uint shadertype, IntPtr name) : glGetSubroutineIndex;
 
-function void GetActiveSubroutineUniform(uint program,uint shadertype,uint index,uint pName,int* values) : glGetActiveSubroutineUniformiv;
+function void GetActiveSubroutineUniform(uint program, uint shadertype, uint index, uint pName, int* values) : glGetActiveSubroutineUniformiv;
 
-function void GetActiveSubroutineUniformName(uint program,uint shadertype,uint index,int bufsize,int* length,IntPtr name) : glGetActiveSubroutineUniformName;
+function void GetActiveSubroutineUniformName(uint program, uint shadertype, uint index, int bufsize, int* length, IntPtr name) : glGetActiveSubroutineUniformName;
 
-function void GetActiveSubroutineName(uint program,uint shadertype,uint index,int bufsize,int* length,IntPtr name) : glGetActiveSubroutineName;
+function void GetActiveSubroutineName(uint program, uint shadertype, uint index, int bufsize, int* length, IntPtr name) : glGetActiveSubroutineName;
 
-function void UniformSubroutines(uint shadertype,int count,uint* indices) : glUniformSubroutinesuiv;
+function void UniformSubroutines(uint shadertype, int count, uint* indices) : glUniformSubroutinesuiv;
 
-function void GetUniformSubroutine(uint shadertype,int location,uint* parameters) : glGetUniformSubroutineuiv;
+function void GetUniformSubroutine(uint shadertype, int location, uint* parameters) : glGetUniformSubroutineuiv;
 
-function void GetProgramStage(uint program,uint shadertype,uint pName,int* values) : glGetProgramStageiv;
+function void GetProgramStage(uint program, uint shadertype, uint pName, int* values) : glGetProgramStageiv;
 
-function void PatchParameter(uint pName,int value) : glPatchParameteri;
+function void PatchParameter(uint pName, int value) : glPatchParameteri;
 
-function void PatchParameter(uint pName,float* values) : glPatchParameterfv;
+function void PatchParameter(uint pName, float* values) : glPatchParameterfv;
 
-function void BindTransformFeedback(uint target,uint id) : glBindTransformFeedback;
+function void BindTransformFeedback(uint target, uint id) : glBindTransformFeedback;
 
-function void DeleteTransformFeedbacks(int n,uint* ids) : glDeleteTransformFeedbacks;
+function void DeleteTransformFeedbacks(int n, uint* ids) : glDeleteTransformFeedbacks;
 
-function void GenTransformFeedbacks(int n,uint* ids) : glGenTransformFeedbacks;
+function void GenTransformFeedbacks(int n, uint* ids) : glGenTransformFeedbacks;
 
 function byte IsTransformFeedback(uint id) : glIsTransformFeedback;
 
@@ -80,12 +80,12 @@ function void PauseTransformFeedback() : glPauseTransformFeedback;
 
 function void ResumeTransformFeedback() : glResumeTransformFeedback;
 
-function void DrawTransformFeedback(uint mode,uint id) : glDrawTransformFeedback;
+function void DrawTransformFeedback(uint mode, uint id) : glDrawTransformFeedback;
 
-function void DrawTransformFeedbackStream(uint mode,uint id,uint stream) : glDrawTransformFeedbackStream;
+function void DrawTransformFeedbackStream(uint mode, uint id, uint stream) : glDrawTransformFeedbackStream;
 
-function void BeginQueryIndexed(uint target,uint index,uint id) : glBeginQueryIndexed;
+function void BeginQueryIndexed(uint target, uint index, uint id) : glBeginQueryIndexed;
 
-function void EndQueryIndexed(uint target,uint index) : glEndQueryIndexed;
+function void EndQueryIndexed(uint target, uint index) : glEndQueryIndexed;
 
-function void GetQueryIndexed(uint target,uint index,uint pName,int* parameters) : glGetQueryIndexediv;
+function void GetQueryIndexed(uint target, uint index, uint pName, int* parameters) : glGetQueryIndexediv;

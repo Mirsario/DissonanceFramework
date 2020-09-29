@@ -1,219 +1,219 @@
-﻿function void ClipControl(uint origin,uint depth) : glClipControl;
+﻿function void ClipControl(uint origin, uint depth) : glClipControl;
 
-function void CreateTransformFeedbacks(int n,ref uint ids) : glCreateTransformFeedbacks;
+function void CreateTransformFeedbacks(int n, ref uint ids) : glCreateTransformFeedbacks;
 
-function void TransformFeedbackBufferBase(uint xfb,uint index,uint buffer) : glTransformFeedbackBufferBase;
+function void TransformFeedbackBufferBase(uint xfb, uint index, uint buffer) : glTransformFeedbackBufferBase;
 
-function void TransformFeedbackBufferRange(uint xfb,uint index,uint buffer,int offset,int size) : glTransformFeedbackBufferRange;
+function void TransformFeedbackBufferRange(uint xfb, uint index, uint buffer, int offset, int size) : glTransformFeedbackBufferRange;
 
-function void GetTransformFeedback(uint xfb,uint pName,ref int param) : glGetTransformFeedbackiv;
+function void GetTransformFeedback(uint xfb, uint pName, ref int param) : glGetTransformFeedbackiv;
 
-function void GetTransformFeedback(uint xfb,uint pName,uint index,ref int param) : glGetTransformFeedbacki_v;
+function void GetTransformFeedback(uint xfb, uint pName, uint index, ref int param) : glGetTransformFeedbacki_v;
 
-function void GetTransformFeedback(uint xfb,uint pName,uint index,ref long param) : glGetTransformFeedbacki64_v;
+function void GetTransformFeedback(uint xfb, uint pName, uint index, ref long param) : glGetTransformFeedbacki64_v;
 
-function void CreateBuffers(int n,[Out] uint[] buffers) : glCreateBuffers;
+function void CreateBuffers(int n, [Out] uint[] buffers) : glCreateBuffers;
 
-function void NamedBufferStorage(uint buffer,int size,IntPtr data,uint flags) : glNamedBufferStorage;
+function void NamedBufferStorage(uint buffer, int size, IntPtr data, uint flags) : glNamedBufferStorage;
 
-function void NamedBufferData(uint buffer,int size,IntPtr data,BufferUsageHint usage) : glNamedBufferData;
+function void NamedBufferData(uint buffer, int size, IntPtr data, BufferUsageHint usage) : glNamedBufferData;
 
-function void NamedBufferSubData(uint buffer,int offset,int size,IntPtr data) : glNamedBufferSubData;
+function void NamedBufferSubData(uint buffer, int offset, int size, IntPtr data) : glNamedBufferSubData;
 
-function void CopyNamedBufferSubData(uint readBuffer,uint writeBuffer,int readOffset,int writeOffset,int size) : glCopyNamedBufferSubData;
+function void CopyNamedBufferSubData(uint readBuffer, uint writeBuffer, int readOffset, int writeOffset, int size) : glCopyNamedBufferSubData;
 
-function void ClearNamedBufferData(uint buffer,PixelInternalFormat internalFormat,PixelFormat format,PixelType type,IntPtr data) : glClearNamedBufferData;
+function void ClearNamedBufferData(uint buffer, PixelInternalFormat internalFormat, PixelFormat format, PixelType type, IntPtr data) : glClearNamedBufferData;
 
-function void ClearNamedBufferSubData(uint buffer,PixelInternalFormat internalFormat,int offset,int size,PixelFormat format,PixelType type,IntPtr data) : glClearNamedBufferSubData;
+function void ClearNamedBufferSubData(uint buffer, PixelInternalFormat internalFormat, int offset, int size, PixelFormat format, PixelType type, IntPtr data) : glClearNamedBufferSubData;
 
-function IntPtr MapNamedBuffer(uint buffer,uint access) : glMapNamedBuffer;
+function IntPtr MapNamedBuffer(uint buffer, uint access) : glMapNamedBuffer;
 
-function IntPtr MapNamedBufferRange(uint buffer,int offset,int length,uint access) : glMapNamedBufferRange;
+function IntPtr MapNamedBufferRange(uint buffer, int offset, int length, uint access) : glMapNamedBufferRange;
 
 function byte UnmapNamedBuffer(uint buffer) : glUnmapNamedBuffer;
 
-function void FlushMappedNamedBufferRange(uint buffer,int offset,int length) : glFlushMappedNamedBufferRange;
+function void FlushMappedNamedBufferRange(uint buffer, int offset, int length) : glFlushMappedNamedBufferRange;
 
-function void GetNamedBufferParameter(uint buffer,uint pName,ref int parameters) : glGetNamedBufferParameteriv;
+function void GetNamedBufferParameter(uint buffer, uint pName, ref int parameters) : glGetNamedBufferParameteriv;
 
-function void GetNamedBufferParameter(uint buffer,uint pName,ref long parameters) : glGetNamedBufferParameteri64v;
+function void GetNamedBufferParameter(uint buffer, uint pName, ref long parameters) : glGetNamedBufferParameteri64v;
 
-function void GetNamedBufferPointer(uint buffer,uint pName,ref IntPtr parameters) : glGetNamedBufferPointerv;
+function void GetNamedBufferPointer(uint buffer, uint pName, ref IntPtr parameters) : glGetNamedBufferPointerv;
 
-function void GetNamedBufferSubData(uint buffer,int offset,int size,IntPtr data) : glGetNamedBufferSubData;
+function void GetNamedBufferSubData(uint buffer, int offset, int size, IntPtr data) : glGetNamedBufferSubData;
 
-function void CreateFramebuffers(int n,ref uint framebuffers) : glCreateFramebuffers;
+function void CreateFramebuffers(int n, ref uint framebuffers) : glCreateFramebuffers;
 
-function void NamedFramebufferRenderbuffer(uint framebuffer,uint attachment,RenderbufferTarget renderbuffertarget,uint renderbuffer) : glNamedFramebufferRenderbuffer;
+function void NamedFramebufferRenderbuffer(uint framebuffer, uint attachment, RenderbufferTarget renderbuffertarget, uint renderbuffer) : glNamedFramebufferRenderbuffer;
 
-function void NamedFramebufferParameter(uint framebuffer,uint pName,int param) : glNamedFramebufferParameteri;
+function void NamedFramebufferParameter(uint framebuffer, uint pName, int param) : glNamedFramebufferParameteri;
 
-function void NamedFramebufferTexture(uint framebuffer,FramebufferAttachment attachment,uint texture,int level) : glNamedFramebufferTexture;
+function void NamedFramebufferTexture(uint framebuffer, FramebufferAttachment attachment, uint texture, int level) : glNamedFramebufferTexture;
 
-function void NamedFramebufferTextureLayer(uint framebuffer,FramebufferAttachment attachment,uint texture,int level,int layer) : glNamedFramebufferTextureLayer;
+function void NamedFramebufferTextureLayer(uint framebuffer, FramebufferAttachment attachment, uint texture, int level, int layer) : glNamedFramebufferTextureLayer;
 
-function void NamedFramebufferDrawBuffer(uint framebuffer,DrawBufferMode buf) : glNamedFramebufferDrawBuffer;
+function void NamedFramebufferDrawBuffer(uint framebuffer, DrawBufferMode buf) : glNamedFramebufferDrawBuffer;
 
-function void NamedFramebufferDrawBuffers(uint framebuffer,int n,DrawBufferMode[] bufs) : glNamedFramebufferDrawBuffers;
+function void NamedFramebufferDrawBuffers(uint framebuffer, int n, DrawBufferMode[] bufs) : glNamedFramebufferDrawBuffers;
 
-function void NamedFramebufferReadBuffer(uint framebuffer,uint src) : glNamedFramebufferReadBuffer;
+function void NamedFramebufferReadBuffer(uint framebuffer, uint src) : glNamedFramebufferReadBuffer;
 
-function unsafe void InvalidateNamedFramebufferData(uint framebuffer,int numAttachments,FramebufferAttachment* attachments) : glInvalidateNamedFramebufferData;
+function unsafe void InvalidateNamedFramebufferData(uint framebuffer, int numAttachments, FramebufferAttachment* attachments) : glInvalidateNamedFramebufferData;
 
-function unsafe void InvalidateNamedFramebufferSubData(uint framebuffer,int numAttachments,FramebufferAttachment* attachments,int x,int y,int width,int height) : glInvalidateNamedFramebufferSubData;
+function unsafe void InvalidateNamedFramebufferSubData(uint framebuffer, int numAttachments, FramebufferAttachment* attachments, int x, int y, int width, int height) : glInvalidateNamedFramebufferSubData;
 
-function void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,ref int value) : glClearNamedFramebufferiv;
+function void ClearNamedFramebuffer(uint framebuffer, uint buffer, int drawbuffer, ref int value) : glClearNamedFramebufferiv;
 
-function void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,ref uint value) : glClearNamedFramebufferuiv;
+function void ClearNamedFramebuffer(uint framebuffer, uint buffer, int drawbuffer, ref uint value) : glClearNamedFramebufferuiv;
 
-function void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,ref float value) : glClearNamedFramebufferfv;
+function void ClearNamedFramebuffer(uint framebuffer, uint buffer, int drawbuffer, ref float value) : glClearNamedFramebufferfv;
 
-function void ClearNamedFramebuffer(uint framebuffer,uint buffer,int drawbuffer,float depth,int stencil) : glClearNamedFramebufferfi;
+function void ClearNamedFramebuffer(uint framebuffer, uint buffer, int drawbuffer, float depth, int stencil) : glClearNamedFramebufferfi;
 
-function void BlitNamedFramebuffer(uint readFramebuffer,uint drawFramebuffer,int srcX0,int srcY0,int srcX1,int srcY1,int dstX0,int dstY0,int dstX1,int dstY1,uint mask,uint filter) : glBlitNamedFramebuffer;
+function void BlitNamedFramebuffer(uint readFramebuffer, uint drawFramebuffer, int srcX0, int srcY0, int srcX1, int srcY1, int dstX0, int dstY0, int dstX1, int dstY1, uint mask, uint filter) : glBlitNamedFramebuffer;
 
-function uint CheckNamedFramebufferStatus(uint framebuffer,FramebufferTarget target) : glCheckNamedFramebufferStatus;
+function uint CheckNamedFramebufferStatus(uint framebuffer, FramebufferTarget target) : glCheckNamedFramebufferStatus;
 
-function void GetNamedFramebufferParameter(uint framebuffer,uint pName,ref int param) : glGetNamedFramebufferParameteriv;
+function void GetNamedFramebufferParameter(uint framebuffer, uint pName, ref int param) : glGetNamedFramebufferParameteriv;
 
-function void GetNamedFramebufferAttachmentParameter(uint framebuffer,FramebufferAttachment attachment,uint pName,ref int parameters) : glGetNamedFramebufferAttachmentParameteriv;
+function void GetNamedFramebufferAttachmentParameter(uint framebuffer, FramebufferAttachment attachment, uint pName, ref int parameters) : glGetNamedFramebufferAttachmentParameteriv;
 
-function void CreateRenderbuffers(int n,ref uint renderbuffers) : glCreateRenderbuffers;
+function void CreateRenderbuffers(int n, ref uint renderbuffers) : glCreateRenderbuffers;
 
-function void NamedRenderbufferStorage(uint renderbuffer,PixelInternalFormat internalFormat,int width,int height) : glNamedRenderbufferStorage;
+function void NamedRenderbufferStorage(uint renderbuffer, PixelInternalFormat internalFormat, int width, int height) : glNamedRenderbufferStorage;
 
-function void NamedRenderbufferStorageMultisample(uint renderbuffer,int samples,PixelInternalFormat internalFormat,int width,int height) : glNamedRenderbufferStorageMultisample;
+function void NamedRenderbufferStorageMultisample(uint renderbuffer, int samples, PixelInternalFormat internalFormat, int width, int height) : glNamedRenderbufferStorageMultisample;
 
-function void GetNamedRenderbufferParameter(uint renderbuffer,uint pName,ref int parameters) : glGetNamedRenderbufferParameteriv;
+function void GetNamedRenderbufferParameter(uint renderbuffer, uint pName, ref int parameters) : glGetNamedRenderbufferParameteriv;
 
-function void CreateTextures(TextureTarget target,uint n,IntPtr textures) : glCreateTextures;
+function void CreateTextures(TextureTarget target, uint n, IntPtr textures) : glCreateTextures;
 
-function void TextureBuffer(uint texture,uint internalFormat,uint buffer) : glTextureBuffer;
+function void TextureBuffer(uint texture, uint internalFormat, uint buffer) : glTextureBuffer;
 
-function void TextureBufferRange(uint texture,uint internalFormat,uint buffer,IntPtr offset,IntPtr size) : glTextureBufferRange;
+function void TextureBufferRange(uint texture, uint internalFormat, uint buffer, IntPtr offset, IntPtr size) : glTextureBufferRange;
 
-function void TextureStorage1D(uint texture,int levels,uint internalFormat,int width) : glTextureStorage1D;
+function void TextureStorage1D(uint texture, int levels, uint internalFormat, int width) : glTextureStorage1D;
 
-function void TextureStorage2D(uint texture,int levels,uint internalFormat,int width,int height) : glTextureStorage2D;
+function void TextureStorage2D(uint texture, int levels, uint internalFormat, int width, int height) : glTextureStorage2D;
 
-function void TextureStorage3D(uint texture,int levels,uint internalFormat,int width,int height,int depth) : glTextureStorage3D;
+function void TextureStorage3D(uint texture, int levels, uint internalFormat, int width, int height, int depth) : glTextureStorage3D;
 
-function void TextureStorage2DMultisample(uint texture,int samples,uint internalFormat,int width,int height,byte fixedsamplelocations) : glTextureStorage2DMultisample;
+function void TextureStorage2DMultisample(uint texture, int samples, uint internalFormat, int width, int height, byte fixedsamplelocations) : glTextureStorage2DMultisample;
 
-function void TextureStorage3DMultisample(uint texture,int samples,uint internalFormat,int width,int height,int depth,byte fixedsamplelocations) : glTextureStorage3DMultisample;
+function void TextureStorage3DMultisample(uint texture, int samples, uint internalFormat, int width, int height, int depth, byte fixedsamplelocations) : glTextureStorage3DMultisample;
 
-function void TextureSubImage1D(uint texture,int level,int xOffset,int width,PixelFormat format,PixelType type,IntPtr pixels) : glTextureSubImage1D;
+function void TextureSubImage1D(uint texture, int level, int xOffset, int width, PixelFormat format, PixelType type, IntPtr pixels) : glTextureSubImage1D;
 
-function void TextureSubImage2D(uint texture,int level,int xOffset,int yOffset,int width,int height,PixelFormat format,PixelType type,IntPtr pixels) : glTextureSubImage2D;
+function void TextureSubImage2D(uint texture, int level, int xOffset, int yOffset, int width, int height, PixelFormat format, PixelType type, IntPtr pixels) : glTextureSubImage2D;
 
-function void TextureSubImage3D(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,PixelFormat format,PixelType type,IntPtr pixels) : glTextureSubImage3D;
+function void TextureSubImage3D(uint texture, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, PixelFormat format, PixelType type, IntPtr pixels) : glTextureSubImage3D;
 
-function void CompressedTextureSubImage1D(uint texture,int level,int xOffset,int width,uint format,int imageSize,IntPtr data) : glCompressedTextureSubImage1D;
+function void CompressedTextureSubImage1D(uint texture, int level, int xOffset, int width, uint format, int imageSize, IntPtr data) : glCompressedTextureSubImage1D;
 
-function void CompressedTextureSubImage2D(uint texture,int level,int xOffset,int yOffset,int width,int height,uint format,int imageSize,IntPtr data) : glCompressedTextureSubImage2D;
+function void CompressedTextureSubImage2D(uint texture, int level, int xOffset, int yOffset, int width, int height, uint format, int imageSize, IntPtr data) : glCompressedTextureSubImage2D;
 
-function void CompressedTextureSubImage3D(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,uint format,int imageSize,IntPtr data) : glCompressedTextureSubImage3D;
+function void CompressedTextureSubImage3D(uint texture, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, uint format, int imageSize, IntPtr data) : glCompressedTextureSubImage3D;
 
-function void CopyTextureSubImage1D(uint texture,int level,int xOffset,int x,int y,int width) : glCopyTextureSubImage1D;
+function void CopyTextureSubImage1D(uint texture, int level, int xOffset, int x, int y, int width) : glCopyTextureSubImage1D;
 
-function void CopyTextureSubImage2D(uint texture,int level,int xOffset,int yOffset,int x,int y,int width,int height) : glCopyTextureSubImage2D;
+function void CopyTextureSubImage2D(uint texture, int level, int xOffset, int yOffset, int x, int y, int width, int height) : glCopyTextureSubImage2D;
 
-function void CopyTextureSubImage3D(uint texture,int level,int xOffset,int yOffset,int zOffset,int x,int y,int width,int height) : glCopyTextureSubImage3D;
+function void CopyTextureSubImage3D(uint texture, int level, int xOffset, int yOffset, int zOffset, int x, int y, int width, int height) : glCopyTextureSubImage3D;
 
-function void TextureParameter(uint texture,uint pName,float param) : glTextureParameterf;
+function void TextureParameter(uint texture, uint pName, float param) : glTextureParameterf;
 
-function void TextureParameter(uint texture,uint pName,ref float param) : glTextureParameterfv;
+function void TextureParameter(uint texture, uint pName, ref float param) : glTextureParameterfv;
 
-function void TextureParameter(uint texture,uint pName,int param) : glTextureParameteri;
+function void TextureParameter(uint texture, uint pName, int param) : glTextureParameteri;
 
-function void TextureParameterI(uint texture,uint pName,ref int parameters) : glTextureParameterIiv;
+function void TextureParameterI(uint texture, uint pName, ref int parameters) : glTextureParameterIiv;
 
-function void TextureParameterI(uint texture,uint pName,ref uint parameters) : glTextureParameterIuiv;
+function void TextureParameterI(uint texture, uint pName, ref uint parameters) : glTextureParameterIuiv;
 
-function void TextureParameter(uint texture,uint pName,ref int param) : glTextureParameteriv;
+function void TextureParameter(uint texture, uint pName, ref int param) : glTextureParameteriv;
 
 function void GenerateTextureMipmap(uint texture) : glGenerateTextureMipmap;
 
-function void BindTextureUnit(uint unit,uint texture) : glBindTextureUnit;
+function void BindTextureUnit(uint unit, uint texture) : glBindTextureUnit;
 
-function void GetTextureImage(uint texture,int level,PixelFormat format,PixelType type,int bufSize,IntPtr pixels) : glGetTextureImage;
+function void GetTextureImage(uint texture, int level, PixelFormat format, PixelType type, int bufSize, IntPtr pixels) : glGetTextureImage;
 
-function void GetCompressedTextureImage(uint texture,int level,int bufSize,IntPtr pixels) : glGetCompressedTextureImage;
+function void GetCompressedTextureImage(uint texture, int level, int bufSize, IntPtr pixels) : glGetCompressedTextureImage;
 
-function void GetTextureLevelParameter(TextureTarget texture,int level,uint pName,ref float parameters) : glGetTextureLevelParameterfv;
+function void GetTextureLevelParameter(TextureTarget texture, int level, uint pName, ref float parameters) : glGetTextureLevelParameterfv;
 
-function void GetTextureLevelParameter(TextureTarget texture,int level,uint pName,ref int parameters) : glGetTextureLevelParameteriv;
+function void GetTextureLevelParameter(TextureTarget texture, int level, uint pName, ref int parameters) : glGetTextureLevelParameteriv;
 
-function void GetTextureParameter(uint texture,uint pName,ref float parameters) : glGetTextureParameterfv;
+function void GetTextureParameter(uint texture, uint pName, ref float parameters) : glGetTextureParameterfv;
 
-function void GetTextureParameterI(uint texture,uint pName,ref int parameters) : glGetTextureParameterIiv;
+function void GetTextureParameterI(uint texture, uint pName, ref int parameters) : glGetTextureParameterIiv;
 
-function void GetTextureParameterI(uint texture,uint pName,ref uint parameters) : glGetTextureParameterIuiv;
+function void GetTextureParameterI(uint texture, uint pName, ref uint parameters) : glGetTextureParameterIuiv;
 
-function void GetTextureParameter(uint texture,uint pName,ref int parameters) : glGetTextureParameteriv;
+function void GetTextureParameter(uint texture, uint pName, ref int parameters) : glGetTextureParameteriv;
 
-function void CreateVertexArrays(int n,ref uint arrays) : glCreateVertexArrays;
+function void CreateVertexArrays(int n, ref uint arrays) : glCreateVertexArrays;
 
-function void DisableVertexArrayAttrib(uint vaobj,uint index) : glDisableVertexArrayAttrib;
+function void DisableVertexArrayAttrib(uint vaobj, uint index) : glDisableVertexArrayAttrib;
 
-function void EnableVertexArrayAttrib(uint vaobj,uint index) : glEnableVertexArrayAttrib;
+function void EnableVertexArrayAttrib(uint vaobj, uint index) : glEnableVertexArrayAttrib;
 
-function void VertexArrayElementBuffer(uint vaobj,uint buffer) : glVertexArrayElementBuffer;
+function void VertexArrayElementBuffer(uint vaobj, uint buffer) : glVertexArrayElementBuffer;
 
-function void VertexArrayVertexBuffer(uint vaobj,uint bindingindex,uint buffer,int offset,int stride) : glVertexArrayVertexBuffer;
+function void VertexArrayVertexBuffer(uint vaobj, uint bindingindex, uint buffer, int offset, int stride) : glVertexArrayVertexBuffer;
 
-function void VertexArrayVertexBuffers(uint vaobj,uint first,int count,ref uint buffers,ref int offsets,ref int strides) : glVertexArrayVertexBuffers;
+function void VertexArrayVertexBuffers(uint vaobj, uint first, int count, ref uint buffers, ref int offsets, ref int strides) : glVertexArrayVertexBuffers;
 
-function void VertexArrayAttribBinding(uint vaobj,uint attribindex,uint bindingindex) : glVertexArrayAttribBinding;
+function void VertexArrayAttribBinding(uint vaobj, uint attribindex, uint bindingindex) : glVertexArrayAttribBinding;
 
-function void VertexArrayAttribFormat(uint vaobj,uint attribindex,int size,uint type,byte normalized,uint relativeoffset) : glVertexArrayAttribFormat;
+function void VertexArrayAttribFormat(uint vaobj, uint attribindex, int size, uint type, byte normalized, uint relativeoffset) : glVertexArrayAttribFormat;
 
-function void VertexArrayAttribIFormat(uint vaobj,uint attribindex,int size,uint type,uint relativeoffset) : glVertexArrayAttribIFormat;
+function void VertexArrayAttribIFormat(uint vaobj, uint attribindex, int size, uint type, uint relativeoffset) : glVertexArrayAttribIFormat;
 
-function void VertexArrayAttribLFormat(uint vaobj,uint attribindex,int size,uint type,uint relativeoffset) : glVertexArrayAttribLFormat;
+function void VertexArrayAttribLFormat(uint vaobj, uint attribindex, int size, uint type, uint relativeoffset) : glVertexArrayAttribLFormat;
 
-function void VertexArrayBindingDivisor(uint vaobj,uint bindingindex,uint divisor) : glVertexArrayBindingDivisor;
+function void VertexArrayBindingDivisor(uint vaobj, uint bindingindex, uint divisor) : glVertexArrayBindingDivisor;
 
-function void GetVertexArray(uint vaobj,uint pName,ref int param) : glGetVertexArrayiv;
+function void GetVertexArray(uint vaobj, uint pName, ref int param) : glGetVertexArrayiv;
 
-function void GetVertexArrayIndexed(uint vaobj,uint index,uint pName,ref int param) : glGetVertexArrayIndexediv;
+function void GetVertexArrayIndexed(uint vaobj, uint index, uint pName, ref int param) : glGetVertexArrayIndexediv;
 
-function void GetVertexArrayIndexed(uint vaobj,uint index,uint pName,ref long param) : glGetVertexArrayIndexed64iv;
+function void GetVertexArrayIndexed(uint vaobj, uint index, uint pName, ref long param) : glGetVertexArrayIndexed64iv;
 
-function void CreateSamplers(int n,ref uint samplers) : glCreateSamplers;
+function void CreateSamplers(int n, ref uint samplers) : glCreateSamplers;
 
-function void CreateProgramPipelines(int n,ref uint pipelines) : glCreateProgramPipelines;
+function void CreateProgramPipelines(int n, ref uint pipelines) : glCreateProgramPipelines;
 
-function void CreateQueries(uint target,int n,ref uint ids) : glCreateQueries;
+function void CreateQueries(uint target, int n, ref uint ids) : glCreateQueries;
 
-function void GetQueryBufferObjectLong(uint id,uint buffer,uint pName,int offset) : glGetQueryBufferObjecti64v;
+function void GetQueryBufferObjectLong(uint id, uint buffer, uint pName, int offset) : glGetQueryBufferObjecti64v;
 
-function void GetQueryBufferObjectInt(uint id,uint buffer,uint pName,int offset) : glGetQueryBufferObjectiv;
+function void GetQueryBufferObjectInt(uint id, uint buffer, uint pName, int offset) : glGetQueryBufferObjectiv;
 
-function void GetQueryBufferObjectULong(uint id,uint buffer,uint pName,int offset) : glGetQueryBufferObjectui64v;
+function void GetQueryBufferObjectULong(uint id, uint buffer, uint pName, int offset) : glGetQueryBufferObjectui64v;
 
-function void GetQueryBufferObjectUInt(uint id,uint buffer,uint pName,int offset) : glGetQueryBufferObjectuiv;
+function void GetQueryBufferObjectUInt(uint id, uint buffer, uint pName, int offset) : glGetQueryBufferObjectuiv;
 
 function void MemoryBarrierByRegion(uint barriers) : glMemoryBarrierByRegion;
 
-function void GetTextureSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,PixelFormat format,PixelType type,int bufSize,IntPtr pixels) : glGetTextureSubImage;
+function void GetTextureSubImage(uint texture, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, PixelFormat format, PixelType type, int bufSize, IntPtr pixels) : glGetTextureSubImage;
 
-function void GetCompressedTextureSubImage(uint texture,int level,int xOffset,int yOffset,int zOffset,int width,int height,int depth,int bufSize,IntPtr pixels) : glGetCompressedTextureSubImage;
+function void GetCompressedTextureSubImage(uint texture, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int bufSize, IntPtr pixels) : glGetCompressedTextureSubImage;
 
 function uint GetGraphicsResetStatus() : glGetGraphicsResetStatus;
 
-function void GetnCompressedTexImage(TextureTarget target,int lod,int bufSize,IntPtr pixels) : glGetnCompressedTexImage;
+function void GetnCompressedTexImage(TextureTarget target, int lod, int bufSize, IntPtr pixels) : glGetnCompressedTexImage;
 
-function void GetnTexImage(TextureTarget target,int level,PixelFormat format,PixelType type,int bufSize,IntPtr pixels) : glGetnTexImage;
+function void GetnTexImage(TextureTarget target, int level, PixelFormat format, PixelType type, int bufSize, IntPtr pixels) : glGetnTexImage;
 
-function void GetnUniform(uint program,int location,int bufSize,ref double parameters) : glGetnUniformdv;
+function void GetnUniform(uint program, int location, int bufSize, ref double parameters) : glGetnUniformdv;
 
-function void GetnUniform(uint program,int location,int bufSize,ref float parameters) : glGetnUniformfv;
+function void GetnUniform(uint program, int location, int bufSize, ref float parameters) : glGetnUniformfv;
 
-function void GetnUniform(uint program,int location,int bufSize,ref int parameters) : glGetnUniformiv;
+function void GetnUniform(uint program, int location, int bufSize, ref int parameters) : glGetnUniformiv;
 
-function void GetnUniform(uint program,int location,int bufSize,ref uint parameters) : glGetnUniformuiv;
+function void GetnUniform(uint program, int location, int bufSize, ref uint parameters) : glGetnUniformuiv;
 
-function void ReadnPixels(int x,int y,int width,int height,PixelFormat format,PixelType type,int bufSize,IntPtr data) : glReadnPixels;
+function void ReadnPixels(int x, int y, int width, int height, PixelFormat format, PixelType type, int bufSize, IntPtr data) : glReadnPixels;
 
 function void TextureBarrier() : glTextureBarrier;

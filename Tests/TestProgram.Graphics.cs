@@ -21,15 +21,15 @@ namespace Test
 		{
 			var error = GL.GetError();
 
-			if(error!=GraphicsError.NoError) {
+			if(error != GraphicsError.NoError) {
 				throw new Exception($"OpenGL Error: {error}");
 			}
 		}
 		private static (float r, float g, float b) GetRainbowColor(float progress)
 		{
-			float div = Math.Abs(progress%1)*6f;
-			float ascending = div%1;
-			float descending = 1f-ascending;
+			float div = Math.Abs(progress % 1) * 6f;
+			float ascending = div % 1;
+			float descending = 1f - ascending;
 
 			return (int)div switch
 			{

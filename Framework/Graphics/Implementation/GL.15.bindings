@@ -1,37 +1,37 @@
-﻿function void GenQueries(int n,ref uint ids) : glGenQueries;
+﻿function void GenQueries(int n, ref uint ids) : glGenQueries;
 
-function void DeleteQueries(int n,ref uint ids) : glDeleteQueries;
+function void DeleteQueries(int n, ref uint ids) : glDeleteQueries;
 
 function byte IsQuery(uint id) : glIsQuery;
 
-function void BeginQuery(uint target,uint id) : glBeginQuery;
+function void BeginQuery(uint target, uint id) : glBeginQuery;
 
 function void EndQuery(uint target) : glEndQuery;
 
-function void GetQuery(uint target,uint pName,ref int parameters) : glGetQueryiv;
+function void GetQuery(uint target, uint pName, ref int parameters) : glGetQueryiv;
 
-function void GetQueryObject(uint id,uint pName,ref int parameters) : glGetQueryObjectiv;
+function void GetQueryObject(uint id, uint pName, ref int parameters) : glGetQueryObjectiv;
 
-function void GetQueryObject(uint id,uint pName,ref uint parameters) : glGetQueryObjectuiv;
+function void GetQueryObject(uint id, uint pName, ref uint parameters) : glGetQueryObjectuiv;
 
-function void BindBuffer(BufferTarget target,uint buffer) : glBindBuffer;
+function void BindBuffer(BufferTarget target, uint buffer) : glBindBuffer;
 
-function void DeleteBuffers(int numBuffers,uint* buffers) : glDeleteBuffers;
+function void DeleteBuffers(int numBuffers, uint* buffers) : glDeleteBuffers;
 
-function void GenBuffers(int numBuffers,uint* buffers) : glGenBuffers;
+function void GenBuffers(int numBuffers, uint* buffers) : glGenBuffers;
 
 function byte IsBuffer(uint buffer) : glIsBuffer;
 
-function void BufferData(BufferTarget target,IntPtr size,IntPtr data,BufferUsageHint usage) : glBufferData;
+function void BufferData(BufferTarget target, IntPtr size, IntPtr data, BufferUsageHint usage) : glBufferData;
 
-function void BufferSubData(BufferTarget target,int offset,int size,IntPtr data) : glBufferSubData;
+function void BufferSubData(BufferTarget target, int offset, int size, IntPtr data) : glBufferSubData;
 
-function void GetBufferSubData(BufferTarget target,int offset,int size,IntPtr data) : glGetBufferSubData;
+function void GetBufferSubData(BufferTarget target, int offset, int size, IntPtr data) : glGetBufferSubData;
 
-function IntPtr MapBuffer(BufferTarget target,uint access) : glMapBuffer;
+function IntPtr MapBuffer(BufferTarget target, uint access) : glMapBuffer;
 
 function byte UnmapBuffer(BufferTarget target) : glUnmapBuffer;
 
-function void GetBufferParameter(BufferTarget target,uint pName,ref int parameters) : glGetBufferParameteriv;
+function void GetBufferParameter(BufferTarget target, uint pName, ref int parameters) : glGetBufferParameteriv;
 
-function void GetBufferPointer(BufferTarget target,uint pName,ref IntPtr parameters) : glGetBufferPointerv;
+function void GetBufferPointer(BufferTarget target, uint pName, ref IntPtr parameters) : glGetBufferPointerv;
