@@ -1,197 +1,70 @@
 ﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using Dissonance.Framework.Audio;
-using Dissonance.Framework.Imaging;
-using Dissonance.Framework.Windowing;
-using static Dissonance.Framework.OSUtils;
+using System.Xml.Linq;
 
 namespace Dissonance.Framework
 {
-	public static partial class DllManager
+	internal static partial class DllManager
 	{
-		public static readonly string OSFolder = $"{GetOS()}{IntPtr.Size * 8}";
+		private static bool resolverReady;
 
-		private static readonly ConcurrentDictionary<string, IntPtr> DllImportCache = new ConcurrentDictionary<string, IntPtr>();
+		static DllManager() => PrepareResolver();
 
-		public static string[] LibraryDirectories = {
-			Path.Combine("References","Native",OSFolder),
-			Path.Combine("References","Native"),
-			Path.Combine("References",OSFolder),
-			"References",
-			"",
-		};
-
-		private static bool resolversReady;
-
-		static DllManager() => PrepareResolvers();
-
-		internal static void ImportTypeMethods(Type type, Version version, Func<string, IntPtr> functionToPointer)
+		//This method implements a dllmap resolver for the framework's native libraries. It expects 'DissonanceFramework.dll.config' to be present next to the framework's dll.
+		internal static void PrepareResolver()
 		{
-			var fields = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static)
-				.Select<FieldInfo, (FieldInfo field, MethodImportAttribute attribute)>(f => (f, f.GetCustomAttribute<MethodImportAttribute>()))
-				.Where(tuple => tuple.attribute != null && tuple.attribute.Version <= version)
-				.OrderBy(tuple => tuple.attribute.Version)
-				.ToArray();
-
-			for(int i = 0; i < fields.Length; i++) {
-				var tuple = fields[i];
-				var field = tuple.field;
-				var attribute = tuple.attribute;
-
-				IntPtr ptr = functionToPointer(attribute.Function);
-
-				if(ptr != IntPtr.Zero) {
-					//Console.WriteLine($"[{i+1}/{fields.Length}] Loading function '{field.Name}'...");
-
-					field.SetValue(null, Marshal.GetDelegateForFunctionPointer(ptr, field.FieldType));
-				} else {
-					Console.WriteLine($"Unable to find function '{attribute.Function}'.");
-				}
-			}
-		}
-		internal static IntPtr DllLoad(string fileName)
-		{
-			IntPtr mHnd;
-
-			if(IsOS(OS.Windows)) {
-				mHnd = LoadLibraryWindows(fileName);
-			} else {
-				mHnd = LoadLibraryUnix(fileName, 2);
-			}
-
-			if(mHnd == IntPtr.Zero) {
-				throw new DllNotFoundException($"Failed to load library '{fileName}'");
-			}
-
-			return mHnd;
-		}
-		internal static IntPtr DllSymbol(IntPtr mHnd, string symbol)
-		{
-			IntPtr symPtr;
-
-			if(IsOS(OS.Windows)) {
-				symPtr = GetProcAddressWindows(mHnd, symbol);
-			} else {
-				symPtr = GetProcAddressUnix(mHnd, symbol);
-			}
-
-			return symPtr;
-		}
-		internal static Delegate DllDelegate(Type delegateType, IntPtr mHnd, string symbol)
-		{
-			return Marshal.GetDelegateForFunctionPointer(DllSymbol(mHnd, symbol), delegateType);
-		}
-		internal static void MemoryCopy(IntPtr dest, IntPtr source, uint count)
-		{
-			if(IsOS(OS.Windows)) {
-				CopyMemoryWindows(dest, source, count);
-			} else {
-				CopyMemoryUnix(dest, source, count);
-			}
-		}
-		internal static void PrepareResolvers()
-		{
-			if(resolversReady) {
+			if(resolverReady) {
 				return;
 			}
 
-			bool debug = Environment.GetEnvironmentVariable("DISSONANCEFRAMEWORK_DEBUG")?.ToUpper() == "TRUE";
+			string osString = OSUtils.GetOS().ToString().ToLower();
+			string cpuString = RuntimeInformation.OSArchitecture switch {
+				Architecture.Arm => "arm",
+				Architecture.Arm64 => "armv8",
+				Architecture.X86 => "x86",
+				_ => "x86-64",
+			};
+			string wordSizeString = RuntimeInformation.OSArchitecture switch {
+				Architecture.X86 => "32",
+				Architecture.Arm => "32",
+				_ => "64",
+			};
+			var stringComparer = StringComparer.InvariantCultureIgnoreCase;
 
-			if(debug) {
-				Console.WriteLine("Preparing resolvers...");
-			}
+			bool StringNullOrEqual(string a, string b)
+				=> a == null || stringComparer.Equals(a, b);
 
-			NativeLibrary.SetDllImportResolver(typeof(DllManager).Assembly, (name, assembly, path) => {
-				if(DllImportCache.TryGetValue(name, out IntPtr pointer)) {
-					return pointer;
+			Assembly wrapperAssembly = Assembly.GetExecutingAssembly();
+
+			NativeLibrary.SetDllImportResolver(wrapperAssembly, (name, assembly, path) => {
+				string configPath = wrapperAssembly.Location + ".config";
+
+				if(!File.Exists(configPath)) {
+					return IntPtr.Zero;
 				}
 
-				if(debug) {
-					Console.WriteLine($"Attempting to resolve '{name}'...");
+				XElement root = XElement.Load(configPath);
+
+				var maps = root
+					.Elements("dllmap")
+					.Where(element => stringComparer.Equals(element.Attribute("dll")?.Value, name))
+					.Where(element => StringNullOrEqual(element.Attribute("os")?.Value, osString))
+					.Where(element => StringNullOrEqual(element.Attribute("cpu")?.Value, cpuString))
+					.Where(element => StringNullOrEqual(element.Attribute("wordsize")?.Value, wordSizeString));
+
+				var map = maps.SingleOrDefault();
+
+				if(map == null) {
+					throw new ArgumentException($"'{Path.GetFileName(configPath)}' - Found {maps.Count()} possible mapping candidates for dll '{name}'.");
 				}
 
-				var paths = new List<string>();
-
-				string[] libraryNames = name switch
-				{
-					GLFW.Library => GLFW.GetLibraryNames(),
-					AL.Library => AL.GetLibraryNames(),
-					IL.Library => IL.GetLibraryNames(),
-					_ => null
-				};
-
-				if(libraryNames == null) {
-					return pointer;
-				}
-
-				for(int i = 0; i < LibraryDirectories.Length; i++) {
-					string libraryDirectory = LibraryDirectories[i];
-
-					for(int j = 0; j < libraryNames.Length; j++) {
-						paths.Add(Path.GetFullPath(Path.Combine(libraryDirectory, libraryNames[j])));
-					}
-				}
-
-				foreach(string currentPath in paths) {
-					if(!File.Exists(currentPath)) {
-						if(debug) {
-							Console.WriteLine($"Skipping library path '{currentPath}'... ");
-						}
-
-						continue;
-					}
-
-					if(debug) {
-						Console.WriteLine($"Attemting to load a native library at '{currentPath}'... ");
-					}
-
-					try {
-						DllImportCache[name] = pointer = NativeLibrary.Load(currentPath, assembly, path);
-					}
-					catch(Exception e) {
-						Console.WriteLine($"An {e.GetType().Name} has occured when trying to load library '{currentPath}':\r\n{e.Message}");
-					}
-
-					if(pointer != IntPtr.Zero) {
-						if(debug) {
-							Console.WriteLine("Success.");
-						}
-
-						break;
-					}
-
-					if(debug) {
-						Console.WriteLine("Failure.");
-					}
-				}
-
-				return pointer;
+				return NativeLibrary.Load(map.Attribute("target").Value);
 			});
 
-			resolversReady = true;
+			resolverReady = true;
 		}
-
-		[DllImport("kernel32.dll", EntryPoint = "LoadLibrary", CharSet = CharSet.Ansi, ExactSpelling = true)]
-		private static extern IntPtr LoadLibraryWindows(string filename);
-
-		[DllImport("kernel32.dll", EntryPoint = "GetProcAddress", CharSet = CharSet.Ansi, ExactSpelling = true)]
-		private static extern IntPtr GetProcAddressWindows(IntPtr hModule, string name);
-
-		[DllImport("kernel32.dll", EntryPoint = "CopyMemory", CharSet = CharSet.Ansi, ExactSpelling = true)]
-		private static extern void CopyMemoryWindows(IntPtr dest, IntPtr src, uint count);
-
-		[DllImport("libdl.so", EntryPoint = "dlopen", CharSet = CharSet.Ansi, ExactSpelling = true)]
-		private static extern IntPtr LoadLibraryUnix(string filename, int flags);
-
-		[DllImport("libdl.so", EntryPoint = "dlsym", CharSet = CharSet.Ansi, ExactSpelling = true)]
-		private static extern IntPtr GetProcAddressUnix(IntPtr handle, string symbol);
-
-		[DllImport("libc.so.6", EntryPoint = "memcpy", CharSet = CharSet.Ansi, ExactSpelling = true)]
-		private static extern void CopyMemoryUnix(IntPtr dest, IntPtr src, uint n);
 	}
 }

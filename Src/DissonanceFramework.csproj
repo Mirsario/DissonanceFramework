@@ -21,23 +21,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<EmbeddedResource Include="DissonanceFramework.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
 	<Compile Remove="Build\**" />
 	<Compile Remove="References\**" />
 	<EmbeddedResource Remove="Build\**" />
 	<EmbeddedResource Remove="References\**" />
 	<None Remove="Build\**" />
 	<None Remove="References\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="MonoMod.RuntimeDetour.dll" />
-    <None Remove="MonoMod.Utils.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-	<None Update="glfw3.dll">
-	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	</None>
   </ItemGroup>
 
   <Import Project="$(SolutionDir)SolutionDefines.targets" Condition="exists('$(SolutionDir)SolutionDefines.targets')" />

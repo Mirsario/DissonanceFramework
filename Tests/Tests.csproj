@@ -22,4 +22,10 @@
     <ProjectReference Include="..\Src\DissonanceFramework.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="DissonanceFramework.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

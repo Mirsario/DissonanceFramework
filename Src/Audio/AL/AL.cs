@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using static Dissonance.Framework.OSUtils;
+﻿using System.Runtime.CompilerServices;
 
 namespace Dissonance.Framework.Audio
 {
@@ -10,28 +8,6 @@ namespace Dissonance.Framework.Audio
 
 		private const int AI = (int)MethodImplOptions.AggressiveInlining;
 
-		private static readonly string[] LibraryNamesWindows = {
-			Library
-		};
-		private static readonly string[] LibraryNamesLinux = {
-			"libopenal.so.1",
-			"libopenal.so",
-			"soft_oal.so"
-		};
-		private static readonly string[] LibraryNamesOSX = {
-			"libopenal.1.20.1.dylib",
-			"libopenal.1.dylib",
-			"libopenal.dylib"
-		};
-
-		static AL() => DllManager.PrepareResolvers();
-
-		internal static string[] GetLibraryNames() => GetOS() switch
-		{
-			OS.Windows => LibraryNamesWindows,
-			OS.Linux => LibraryNamesLinux,
-			OS.OSX => LibraryNamesOSX,
-			_ => null
-		};
+		static AL() => DllManager.PrepareResolver();
 	}
 }
