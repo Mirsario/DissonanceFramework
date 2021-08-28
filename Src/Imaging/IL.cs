@@ -4,6 +4,6 @@ namespace Dissonance.Framework.Imaging
 	{
 		internal const string Library = "DevIL.dll";
 
-		static IL() => DllManager.PrepareResolver();
+		static IL() => DllMapResolver.PrepareOwnResolver();
 	}
 }

@@ -8,6 +8,6 @@ namespace Dissonance.Framework.Audio
 
 		private const int AI = (int)MethodImplOptions.AggressiveInlining;
 
-		static AL() => DllManager.PrepareResolver();
+		static AL() => DllMapResolver.PrepareOwnResolver();
 	}
 }

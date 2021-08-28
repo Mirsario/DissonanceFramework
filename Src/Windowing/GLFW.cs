@@ -4,6 +4,6 @@
 	{
 		internal const string Library = "glfw3.dll";
 
-		static GLFW() => DllManager.PrepareResolver();
+		static GLFW() => DllMapResolver.PrepareOwnResolver();
 	}
 }

@@ -37,7 +37,7 @@ namespace Dissonance.Framework.Graphics
 			//new Version(4,6)
 		};
 
-		static GL() => DllManager.PrepareResolver();
+		static GL() => DllMapResolver.PrepareOwnResolver();
 
 		public static void Load(Version version)
 		{
