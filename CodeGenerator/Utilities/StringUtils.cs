@@ -27,7 +27,7 @@
 			string[] splits = name.Split('_');
 
 			if(splits.Length > 0) {
-				//Capitalize each part
+				// Capitalize each part
 				for(int i = 0; i < splits.Length; i++) {
 					string split = splits[i];
 					char[] chars = split.ToCharArray();

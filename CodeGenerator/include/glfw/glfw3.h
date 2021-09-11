@@ -708,7 +708,7 @@ extern "C" {
  *  A memory allocation failed.
  *
  *  @analysis A bug in GLFW or the underlying operating system.  Report the bug
- *  to our [issue tracker](https://github.com/glfw/glfw/issues).
+ *  to our [issue tracker](https:// github.com/glfw/glfw/issues).
  */
 #define GLFW_OUT_OF_MEMORY          0x00010005
 /*! @brief GLFW could not find support for the requested API on the system.
@@ -752,7 +752,7 @@ extern "C" {
  *
  *  @analysis A bug or configuration error in GLFW, the underlying operating
  *  system or its drivers, or a lack of required resources.  Report the issue to
- *  our [issue tracker](https://github.com/glfw/glfw/issues).
+ *  our [issue tracker](https:// github.com/glfw/glfw/issues).
  */
 #define GLFW_PLATFORM_ERROR         0x00010008
 /*! @brief The requested format is not supported or available.
@@ -2248,7 +2248,7 @@ GLFWAPI void glfwGetMonitorWorkarea(GLFWmonitor* monitor, int* xpos, int* ypos, 
  *
  *  Some systems do not provide accurate monitor size information, either
  *  because the monitor
- *  [EDID](https://en.wikipedia.org/wiki/Extended_display_identification_data)
+ *  [EDID](https:// en.wikipedia.org/wiki/Extended_display_identification_data)
  *  data is incorrect or because the driver does not report it accurately.
  *
  *  Any or all of the size arguments may be `NULL`.  If an error occurs, all
@@ -2758,7 +2758,7 @@ GLFWAPI void glfwWindowHintString(int hint, const char* value);
  *  @remark @macos The GLFW window has no icon, as it is not a document
  *  window, but the dock icon will be the same as the application bundle's icon.
  *  For more information on bundles, see the
- *  [Bundle Programming Guide](https://developer.apple.com/library/mac/documentation/CoreFoundation/Conceptual/CFBundles/)
+ *  [Bundle Programming Guide](https:// developer.apple.com/library/mac/documentation/CoreFoundation/Conceptual/CFBundles/)
  *  in the Mac Developer Library.
  *
  *  @remark @macos On OS X 10.10 and later the window frame will not be rendered
@@ -2766,7 +2766,7 @@ GLFWAPI void glfwWindowHintString(int hint, const char* value);
  *  [GLFW_COCOA_RETINA_FRAMEBUFFER](@ref GLFW_COCOA_RETINA_FRAMEBUFFER_hint)
  *  hint is `GLFW_TRUE` and the `NSHighResolutionCapable` key is enabled in the
  *  application bundle's `Info.plist`.  For more information, see
- *  [High Resolution Guidelines for OS X](https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Explained/Explained.html)
+ *  [High Resolution Guidelines for OS X](https:// developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Explained/Explained.html)
  *  in the Mac Developer Library.  The GLFW test and example programs use
  *  a custom `Info.plist` template for this, which can be found as
  *  `CMake/Info.plist.in` in the source tree.
@@ -2942,7 +2942,7 @@ GLFWAPI void glfwSetWindowTitle(GLFWwindow* window, const char* title);
  *  @remark @macos Regular windows do not have icons on macOS.  This function
  *  will emit @ref GLFW_FEATURE_UNAVAILABLE.  The dock icon will be the same as
  *  the application bundle's icon.  For more information on bundles, see the
- *  [Bundle Programming Guide](https://developer.apple.com/library/mac/documentation/CoreFoundation/Conceptual/CFBundles/)
+ *  [Bundle Programming Guide](https:// developer.apple.com/library/mac/documentation/CoreFoundation/Conceptual/CFBundles/)
  *  in the Mac Developer Library.
  *
  *  @remark @wayland There is no existing protocol to change an icon, the

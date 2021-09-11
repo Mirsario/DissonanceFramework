@@ -23,7 +23,7 @@ namespace CodeGenerator
 				TypedefCodeGenKind = CppTypedefCodeGenKind.NoWrap,
 
 				MappingRules = {
-					//Fix weird 'ref void' parameters.
+					// Fix weird 'ref void' parameters.
 					e => e.MapAll<CppParameter>().CSharpAction((converter, element) => {
 						var parameter = (CSharpParameter)element;
 						var parameterType = parameter.ParameterType;
@@ -32,7 +32,7 @@ namespace CodeGenerator
 							parameter.ParameterType = CSharpPrimitiveType.IntPtr();
 						}
 					}),
-					//..And returns.
+					// ..And returns.
 					e => e.MapAll<CppFunction>().CSharpAction((converter, element) => {
 						var method = (CSharpMethod)element;
 						var returnType = method.ReturnType;
@@ -42,7 +42,7 @@ namespace CodeGenerator
 						}
 					}),
 
-					//Add an EntryPoint parameter to the DllImportAttribute, so that renames don't break anything.
+					// Add an EntryPoint parameter to the DllImportAttribute, so that renames don't break anything.
 					e => e.MapAll<CppFunction>().CSharpAction((converter, element) => {
 						var method = (CSharpMethod)element;
 						var function = (CppFunction)element.CppElement;

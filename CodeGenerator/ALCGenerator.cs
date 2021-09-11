@@ -17,10 +17,10 @@ namespace CodeGenerator
 			});*/
 
 			Options.MappingRules.AddRange(new Func<CppMappingRules, CppElementMappingRule>[] {
-				//Remove prefixes from elements' names.
+				// Remove prefixes from elements' names.
 				e => RemovePrefixes(e, "ALC", $"ALC_", "alc"),
 				
-				//Fix strings and booleans.
+				// Fix strings and booleans.
 				e => FixBooleansAndStrings(e, "ALCboolean", "ALCchar"),
 			});
 		}

@@ -28,7 +28,7 @@ namespace CodeGenerator
 			FunctionTypeSuffixRegex = new Regex($@"\b{defaultClass.ToLower()}((?:Get)?(\w+?))(3i|3f|iv?|fv?|v)\b");
 
 			Options.MappingRules.AddRange(new Func<CppMappingRules, CppElementMappingRule>[] {
-				//Ignore all 'Pointer-to-function' delegates.
+				// Ignore all 'Pointer-to-function' delegates.
 				e => e.MapAll<CppTypedef>().CppAction((converter, element) => {
 					var typedef = (CppTypedef)element;
 
@@ -37,7 +37,7 @@ namespace CodeGenerator
 					}
 				}),
 
-				//Share summaries for groups of functions, where only the first one has it.
+				// Share summaries for groups of functions, where only the first one has it.
 				e => e.MapAll<CppFunction>().CppAction((converter, element) => {
 					var function = (CppFunction)element;
 
@@ -48,7 +48,7 @@ namespace CodeGenerator
 					}
 				}),
 				
-				//Change all 'alGet*' 'value*' parameters from 'ref' to 'out'.
+				// Change all 'alGet*' 'value*' parameters from 'ref' to 'out'.
 				e => e.MapAll<CppParameter>().CSharpAction((converter, element) => {
 					var parameter = (CSharpParameter)element;
 
@@ -57,7 +57,7 @@ namespace CodeGenerator
 					}
 				}),
 
-				//Process functions that end with type suffixes. Like 'alSource3f'.
+				// Process functions that end with type suffixes. Like 'alSource3f'.
 				e => e.MapAll<CppFunction>().CSharpAction((converter, element) => {
 					var method = (CSharpMethod)element;
 					var function = (CppFunction)method.CppElement;
@@ -71,7 +71,7 @@ namespace CodeGenerator
 					string alternateName = match.Groups[2].Value;
 					string originalSuffix = match.Groups[3].Value;
 
-					//Change type of 'param' parameters to enums if a fitting one exists.
+					// Change type of 'param' parameters to enums if a fitting one exists.
 
 					if(method.Parameters.FirstOrDefault(p => p.Name == "param") is CSharpParameter parameter) {
 						string suffix = originalSuffix switch {
@@ -89,7 +89,7 @@ namespace CodeGenerator
 						}
 					}
 
-					//Change last parameter's type from ref/out to array, for functions that end with 'v'.
+					// Change last parameter's type from ref/out to array, for functions that end with 'v'.
 
 					Func<CSharpType, CSharpType> getForcedValueType = originalSuffix switch {
 						"iv" => _ => new CSharpArrayType(CSharpPrimitiveType.Int()),
@@ -102,19 +102,19 @@ namespace CodeGenerator
 						valuesParameter.ParameterType = getForcedValueType(valuesParameter.ParameterType);
 					}
 
-					//Remove the suffix from the method's name.
+					// Remove the suffix from the method's name.
 
 					method.Name = primaryName;
 				}),
 
-				//Manual fixes
+				// Manual fixes
 
-				//Use enums for state getters, since they don't follow other naming schemes
+				// Use enums for state getters, since they don't follow other naming schemes
 				e => e.Map<CppParameter>("alGetInteger::param").ParameterType($"{Namespace}.StateInt"),
 				e => e.Map<CppParameter>("alGetFloat::param").ParameterType($"{Namespace}.StateFloat"),
 				e => e.Map<CppParameter>("alGetDouble::param").ParameterType($"{Namespace}.StateDouble"),
 				e => e.Map<CppParameter>("alGetString::param").ParameterType($"{Namespace}.StateString"),
-				//Use other enums
+				// Use other enums
 				e => e.Map<CppParameter>("alBufferData::format").ParameterType($"{Namespace}.BufferFormat"),
 				e => e.Map<CppFunction>("alGetError").ReturnType($"{Namespace}.AudioError"),
 			});

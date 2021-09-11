@@ -19,7 +19,7 @@ namespace CodeGenerator
 
 		private void ConvertBegin(CSharpConverter converter)
 		{
-			//converter.CurrentCSharpCompilation.Members.Add(new CSharpEnum("Test"));
+			// converter.CurrentCSharpCompilation.Members.Add(new CSharpEnum("Test"));
 
 			var cpp = converter.CurrentCppCompilation;
 
