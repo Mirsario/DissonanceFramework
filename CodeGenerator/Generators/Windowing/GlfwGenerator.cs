@@ -1,9 +1,10 @@
 ﻿using System;
+using CodeGenerator.Generators;
 using CodeGenerator.Utilities;
 using CppAst;
 using CppAst.CodeGen.CSharp;
 
-namespace CodeGenerator
+namespace CodeGenerator.Generators.Windowing
 {
 	public class GlfwGenerator : CppGenerator
 	{

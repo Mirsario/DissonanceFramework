@@ -8,7 +8,7 @@ using CppAst.CodeGen.Common;
 using CppAst.CodeGen.CSharp;
 using Zio.FileSystems;
 
-namespace CodeGenerator
+namespace CodeGenerator.Generators
 {
 	public abstract class CppGenerator : Generator
 	{

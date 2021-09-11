@@ -1,10 +1,8 @@
 ﻿using System;
-using CodeGenerator.Converters;
 using CodeGenerator.Utilities;
-using CppAst;
 using CppAst.CodeGen.CSharp;
 
-namespace CodeGenerator
+namespace CodeGenerator.Generators.Audio
 {
 	public class ALCGenerator : AudioGenerator
 	{

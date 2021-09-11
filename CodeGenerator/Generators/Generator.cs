@@ -1,4 +1,4 @@
-﻿namespace CodeGenerator
+﻿namespace CodeGenerator.Generators
 {
 	public abstract class Generator
 	{

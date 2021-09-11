@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading;
+using CodeGenerator.Generators.Audio;
+using CodeGenerator.Generators.Windowing;
 
 namespace CodeGenerator
 {
@@ -13,13 +15,13 @@ namespace CodeGenerator
 				}
 
 				new GlfwGenerator()
-					.Generate("include/glfw/glfw3.h", "../Src/Windowing/Generated");
+					.Generate("Generators/Windowing/Include/glfw3.h", "../Src/Windowing/Generated");
 
 				new ALGenerator("Dissonance.Framework.Audio", "AL", "AL.Generated.cs")
-					.Generate("include/openal-soft/al.h", "../Src/Audio/AL/Generated");
+					.Generate("Generators/Audio/Include/al.h", "../Src/Audio/AL/Generated");
 
 				new ALCGenerator("Dissonance.Framework.Audio", "ALC", "ALC.Generated.cs")
-					.Generate("include/openal-soft/alc.h", "../Src/Audio/ALC/Generated");
+					.Generate("Generators/Audio/Include/alc.h", "../Src/Audio/ALC/Generated");
 
 				Console.WriteLine("Success.");
 				Thread.Sleep(500);

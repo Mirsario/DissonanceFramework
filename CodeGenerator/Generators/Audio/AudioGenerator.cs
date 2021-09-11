@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
-using CodeGenerator.Converters;
 using CodeGenerator.Utilities;
 using CppAst;
 using CppAst.CodeGen.CSharp;
 
-namespace CodeGenerator
+namespace CodeGenerator.Generators.Audio
 {
 	public abstract class AudioGenerator : CppGenerator
 	{
@@ -84,7 +82,7 @@ namespace CodeGenerator
 							_ => null
 						};
 
-						if(element.TryFindType($"{Namespace}.{primaryName}{suffix}", out var type) || (alternateName != primaryName && element.TryFindType($"{Namespace}.{alternateName}{suffix}", out type))) {
+						if(element.TryFindType($"{Namespace}.{primaryName}{suffix}", out var type) || alternateName != primaryName && element.TryFindType($"{Namespace}.{alternateName}{suffix}", out type)) {
 							parameter.ParameterType = type;
 						}
 					}
