@@ -1,9 +1,11 @@
-﻿namespace Dissonance.Framework.Windowing
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Dissonance.Framework.Windowing
 {
 	public static partial class GLFW
 	{
-		internal const string Library = "glfw3.dll";
-
-		static GLFW() => DllMapResolver.PrepareOwnResolver();
+		public const string Library = "glfw3.dll";
 	}
 }

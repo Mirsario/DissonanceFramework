@@ -22,7 +22,7 @@
 
   <ItemGroup>
 	<EmbeddedResource Include="DissonanceFramework.dll.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 
