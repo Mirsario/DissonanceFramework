@@ -15,7 +15,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetErrorCallback(ErrorCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetErrorCallback)] = callback;
 			}
 
@@ -24,7 +24,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetFramebufferSizeCallback(IntPtr window, FramebufferSizeCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetFramebufferSizeCallback)] = callback;
 			}
 
@@ -35,7 +35,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetWindowPosCallback(IntPtr window, WindowPosCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetWindowPosCallback)] = callback;
 			}
 
@@ -44,7 +44,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetWindowSizeCallback(IntPtr window, WindowSizeCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetWindowSizeCallback)] = callback;
 			}
 
@@ -53,7 +53,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetWindowCloseCallback(IntPtr window, WindowCloseCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetWindowCloseCallback)] = callback;
 			}
 
@@ -62,7 +62,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetWindowRefreshCallback(IntPtr window, WindowRefreshCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetWindowRefreshCallback)] = callback;
 			}
 
@@ -71,7 +71,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetWindowFocusCallback(IntPtr window, WindowFocusCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetWindowFocusCallback)] = callback;
 			}
 
@@ -80,7 +80,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetWindowIconifyCallback(IntPtr window, WindowIconifyCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetWindowIconifyCallback)] = callback;
 			}
 
@@ -91,7 +91,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetMonitorCallback(MonitorCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetMonitorCallback)] = callback;
 			}
 
@@ -102,7 +102,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetKeyCallback(IntPtr window, KeyCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetKeyCallback)] = callback;
 			}
 
@@ -111,7 +111,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetCharCallback(IntPtr window, CharCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetCharCallback)] = callback;
 			}
 
@@ -120,7 +120,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetCharModsCallback(IntPtr window, CharModsCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetCharModsCallback)] = callback;
 			}
 
@@ -129,7 +129,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetMouseButtonCallback(IntPtr window, MouseButtonCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetMouseButtonCallback)] = callback;
 			}
 
@@ -138,7 +138,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetCursorPosCallback(IntPtr window, CursorPosCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetCursorPosCallback)] = callback;
 			}
 
@@ -147,7 +147,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetCursorEnterCallback(IntPtr window, CursorEnterCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetCursorEnterCallback)] = callback;
 			}
 
@@ -156,7 +156,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetScrollCallback(IntPtr window, ScrollCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetScrollCallback)] = callback;
 			}
 
@@ -165,7 +165,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetDropCallback(IntPtr window, DropCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetDropCallback)] = callback;
 			}
 
@@ -174,7 +174,7 @@ namespace Dissonance.Framework.Windowing
 
 		public static void SetJoystickCallback(JoystickCallback callback)
 		{
-			lock(Lock) {
+			lock (Lock) {
 				CallbackCache[nameof(SetJoystickCallback)] = callback;
 			}
 

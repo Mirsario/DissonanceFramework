@@ -36,15 +36,15 @@ namespace Dissonance.Framework
 			NativeLibrary.SetDllImportResolver(assembly, (name, assembly, path) => {
 				string usedConfigPath = configPath;
 
-				if(configPath == null) {
-					if(string.IsNullOrWhiteSpace(assembly.Location)) {
+				if (configPath == null) {
+					if (string.IsNullOrWhiteSpace(assembly.Location)) {
 						usedConfigPath = $"{assembly.ManifestModule.ScopeName}.config";
 					} else {
 						usedConfigPath = $"{assembly.Location}.config";
 					}
 				}
 
-				if(!File.Exists(usedConfigPath)) {
+				if (!File.Exists(usedConfigPath)) {
 					return IntPtr.Zero;
 				}
 
@@ -59,7 +59,7 @@ namespace Dissonance.Framework
 
 				var map = maps.SingleOrDefault();
 
-				if(map == null) {
+				if (map == null) {
 					throw new ArgumentException($"'{Path.GetFileName(usedConfigPath)}' - Found {maps.Count()} possible mapping candidates for dll '{name}'.");
 				}
 
@@ -69,7 +69,7 @@ namespace Dissonance.Framework
 
 		internal static void PrepareOwnResolver()
 		{
-			if(!resolverReady) {
+			if (!resolverReady) {
 				SetForAssembly(Assembly.GetExecutingAssembly());
 
 				resolverReady = true;

@@ -41,7 +41,7 @@ namespace Dissonance.Framework.Graphics
 
 		public static void Load(Version version)
 		{
-			if(!SupportedVersions.Contains(version)) {
+			if (!SupportedVersions.Contains(version)) {
 				throw new InvalidOperationException($"OpenGL version '{version}' is unknown or not supported. The following versions are supported:\r\n{string.Join("\r\n", GL.SupportedVersions.Select(v => $"{v};"))}.");
 			}
 
@@ -56,14 +56,14 @@ namespace Dissonance.Framework.Graphics
 				.OrderBy(tuple => tuple.attribute.Version)
 				.ToArray();
 
-			for(int i = 0; i < fields.Length; i++) {
+			for (int i = 0; i < fields.Length; i++) {
 				var tuple = fields[i];
 				var field = tuple.field;
 				var attribute = tuple.attribute;
 
 				IntPtr ptr = functionToPointer(attribute.Function);
 
-				if(ptr != IntPtr.Zero) {
+				if (ptr != IntPtr.Zero) {
 					//Console.WriteLine($"[{i+1}/{fields.Length}] Loading function '{field.Name}'...");
 
 					field.SetValue(null, Marshal.GetDelegateForFunctionPointer(ptr, field.FieldType));

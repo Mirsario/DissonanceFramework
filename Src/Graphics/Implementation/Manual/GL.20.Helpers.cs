@@ -13,7 +13,7 @@ namespace Dissonance.Framework.Graphics
 		{
 			int tempResult = GetAttribLocation(program, name);
 
-			if(tempResult >= 0) {
+			if (tempResult >= 0) {
 				result = (uint)tempResult;
 				return true;
 			}

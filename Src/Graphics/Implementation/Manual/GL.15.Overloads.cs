@@ -22,7 +22,7 @@ namespace Dissonance.Framework.Graphics
 		[MI(ImplOptions)]
 		public unsafe static void GenBuffers(int numBuffers, uint[] buffers)
 		{
-			fixed(uint* ptr = &(buffers != null && buffers.Length != 0 ? ref buffers[0] : ref *(uint*)null)) {
+			fixed (uint* ptr = &(buffers != null && buffers.Length != 0 ? ref buffers[0] : ref *(uint*)null)) {
 				GenBuffers(numBuffers, ptr);
 			}
 		}
@@ -35,7 +35,7 @@ namespace Dissonance.Framework.Graphics
 		[MI(ImplOptions)]
 		public unsafe static void DeleteBuffers(int numBuffers, uint[] buffers)
 		{
-			fixed(uint* ptr = &(buffers != null && buffers.Length != 0 ? ref buffers[0] : ref *(uint*)null)) {
+			fixed (uint* ptr = &(buffers != null && buffers.Length != 0 ? ref buffers[0] : ref *(uint*)null)) {
 				DeleteBuffers(numBuffers, ptr);
 			}
 		}
@@ -43,7 +43,7 @@ namespace Dissonance.Framework.Graphics
 		//BufferData
 		public static unsafe void BufferData<T>(BufferTarget target, int size, T[] data, BufferUsageHint usage) where T : unmanaged
 		{
-			fixed(T* ptr = &(data != null && data.Length != 0 ? ref data[0] : ref *(T*)null)) {
+			fixed (T* ptr = &(data != null && data.Length != 0 ? ref data[0] : ref *(T*)null)) {
 				BufferData(target, (IntPtr)size, (IntPtr)ptr, usage);
 			}
 		}

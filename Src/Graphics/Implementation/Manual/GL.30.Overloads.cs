@@ -20,7 +20,7 @@ namespace Dissonance.Framework.Graphics
 		[MI(ImplOptions)]
 		public unsafe static void GenFramebuffers(int numFramebuffers, uint[] framebuffers)
 		{
-			fixed(uint* ptr = &(framebuffers != null && framebuffers.Length != 0 ? ref framebuffers[0] : ref *(uint*)null)) {
+			fixed (uint* ptr = &(framebuffers != null && framebuffers.Length != 0 ? ref framebuffers[0] : ref *(uint*)null)) {
 				GenFramebuffers(numFramebuffers, ptr);
 			}
 		}
@@ -32,7 +32,7 @@ namespace Dissonance.Framework.Graphics
 		[MI(ImplOptions)]
 		public unsafe static void DeleteFramebuffers(int numFramebuffers, uint[] framebuffers)
 		{
-			fixed(uint* ptr = &(framebuffers != null && framebuffers.Length != 0 ? ref framebuffers[0] : ref *(uint*)null)) {
+			fixed (uint* ptr = &(framebuffers != null && framebuffers.Length != 0 ? ref framebuffers[0] : ref *(uint*)null)) {
 				DeleteFramebuffers(numFramebuffers, ptr);
 			}
 		}
@@ -51,7 +51,7 @@ namespace Dissonance.Framework.Graphics
 		[MI(ImplOptions)]
 		public unsafe static void GenRenderbuffers(int numRenderBuffers, uint[] renderbuffers)
 		{
-			fixed(uint* ptr = &(renderbuffers != null && renderbuffers.Length != 0 ? ref renderbuffers[0] : ref *(uint*)null)) {
+			fixed (uint* ptr = &(renderbuffers != null && renderbuffers.Length != 0 ? ref renderbuffers[0] : ref *(uint*)null)) {
 				GenRenderbuffers(numRenderBuffers, ptr);
 			}
 		}
@@ -63,7 +63,7 @@ namespace Dissonance.Framework.Graphics
 		[MI(ImplOptions)]
 		public unsafe static void DeleteRenderbuffers(int numRenderbuffers, uint[] renderbuffers)
 		{
-			fixed(uint* ptr = &(renderbuffers != null && renderbuffers.Length != 0 ? ref renderbuffers[0] : ref *(uint*)null)) {
+			fixed (uint* ptr = &(renderbuffers != null && renderbuffers.Length != 0 ? ref renderbuffers[0] : ref *(uint*)null)) {
 				DeleteRenderbuffers(numRenderbuffers, ptr);
 			}
 		}
@@ -83,7 +83,7 @@ namespace Dissonance.Framework.Graphics
 		[MI(ImplOptions)]
 		public unsafe static void GenVertexArrays(int numArrays, uint[] vertexArrays)
 		{
-			fixed(uint* ptr = &(vertexArrays != null && vertexArrays.Length != 0 ? ref vertexArrays[0] : ref *(uint*)null)) {
+			fixed (uint* ptr = &(vertexArrays != null && vertexArrays.Length != 0 ? ref vertexArrays[0] : ref *(uint*)null)) {
 				GenVertexArrays(numArrays, ptr);
 			}
 		}
@@ -95,7 +95,7 @@ namespace Dissonance.Framework.Graphics
 		[MI(ImplOptions)]
 		public unsafe static void DeleteVertexArrays(int numArrays, uint[] vertexArrays)
 		{
-			fixed(uint* ptr = &(vertexArrays != null && vertexArrays.Length != 0 ? ref vertexArrays[0] : ref *(uint*)null)) {
+			fixed (uint* ptr = &(vertexArrays != null && vertexArrays.Length != 0 ? ref vertexArrays[0] : ref *(uint*)null)) {
 				DeleteVertexArrays(numArrays, ptr);
 			}
 		}
