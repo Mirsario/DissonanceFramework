@@ -90,16 +90,19 @@ namespace CodeGenerator.Generators
 			compilation.DumpTo(codeWriter);
 		}
 
-		protected static CppElementMappingRule RemovePrefixes(CppMappingRules rules, string typePrefix, string enumPrefix, string functionPrefix)
+		protected static CppElementMappingRule RemovePrefixes(CppMappingRules rules, string typePrefix = null, string enumPrefix = null, string functionPrefix = null, string typedefPrefix = null)
 		{
 			static string FixName(string name, string prefix)
-				=> StringUtils.Capitalize(StringUtils.RemovePrefix(name, prefix));
+				=> StringUtils.Capitalize(prefix != null ? StringUtils.RemovePrefix(name, prefix) : name);
 
 			return rules.MapAll<CppElement>()
 				.CppAction((converter, element) => {
 					switch(element) {
 						case CppClass cppClass:
 							cppClass.Name = FixName(cppClass.Name, typePrefix);
+							break;
+						case CppTypedef cppTypedef:
+							cppTypedef.Name = FixName(cppTypedef.Name, typedefPrefix);
 							break;
 					}
 				})

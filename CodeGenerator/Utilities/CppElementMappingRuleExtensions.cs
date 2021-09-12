@@ -1,4 +1,6 @@
-﻿using CppAst.CodeGen.CSharp;
+﻿using System;
+using System.Collections.Generic;
+using CppAst.CodeGen.CSharp;
 
 namespace CodeGenerator.Utilities
 {
@@ -22,6 +24,50 @@ namespace CodeGenerator.Utilities
 				}
 
 				csharpMethod.Modifiers |= CSharpModifiers.Unsafe;
+			});
+		}
+
+		public static CppElementMappingRule ParameterType(this CppElementMappingRule rule, string csParameterName, string fullTypeName)
+		{
+			return rule.CSharpAction((converter, element) => {
+				List<CSharpParameter> parameters;
+
+				if (element is CSharpMethod csMethod) {
+					parameters = csMethod.Parameters;
+				} else if (element is CSharpDelegate csDelegate) {
+					parameters = csDelegate.Parameters;
+				} else {
+					throw new Exception("Unknown C# element type.");
+				}
+
+				var type = element.FindType(fullTypeName);
+
+				foreach (var parameter in parameters) {
+					if (parameter.Name == csParameterName) {
+						parameter.ParameterType = type;
+					}
+				}
+			});
+		}
+
+		public static CppElementMappingRule ParameterType(this CppElementMappingRule rule, string csParameterName, CSharpType type)
+		{
+			return rule.CSharpAction((converter, element) => {
+				List<CSharpParameter> parameters;
+
+				if (element is CSharpMethod csMethod) {
+					parameters = csMethod.Parameters;
+				} else if (element is CSharpDelegate csDelegate) {
+					parameters = csDelegate.Parameters;
+				} else {
+					throw new Exception("Unknown C# element type.");
+				}
+
+				foreach (var parameter in parameters) {
+					if (parameter.Name == csParameterName) {
+						parameter.ParameterType = type;
+					}
+				}
 			});
 		}
 

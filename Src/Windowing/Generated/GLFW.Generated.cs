@@ -136,70 +136,70 @@ namespace Dissonance.Framework.Windowing
         }
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWglproc();
+        public delegate void Glproc();
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWvkproc();
+        public delegate void Vkproc();
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWerrorfun(int arg0, [MarshalAs(UnmanagedType.LPStr)] string arg1);
+        public delegate void Errorfun(GlfwError arg0, [MarshalAs(UnmanagedType.LPStr)] string arg1);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWwindowposfun(IntPtr arg0, int arg1, int arg2);
+        public delegate void Windowposfun(IntPtr arg0, int arg1, int arg2);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWwindowsizefun(IntPtr arg0, int arg1, int arg2);
+        public delegate void Windowsizefun(IntPtr arg0, int arg1, int arg2);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWwindowclosefun(IntPtr arg0);
+        public delegate void Windowclosefun(IntPtr arg0);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWwindowrefreshfun(IntPtr arg0);
+        public delegate void Windowrefreshfun(IntPtr arg0);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWwindowfocusfun(IntPtr arg0, int arg1);
+        public delegate void Windowfocusfun(IntPtr arg0, int arg1);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWwindowiconifyfun(IntPtr arg0, int arg1);
+        public delegate void Windowiconifyfun(IntPtr arg0, int arg1);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWwindowmaximizefun(IntPtr arg0, int arg1);
+        public delegate void Windowmaximizefun(IntPtr arg0, int arg1);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWframebuffersizefun(IntPtr arg0, int arg1, int arg2);
+        public delegate void Framebuffersizefun(IntPtr arg0, int arg1, int arg2);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWwindowcontentscalefun(IntPtr arg0, float arg1, float arg2);
+        public delegate void Windowcontentscalefun(IntPtr arg0, float arg1, float arg2);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWmousebuttonfun(IntPtr arg0, int arg1, int arg2, int arg3);
+        public delegate void Mousebuttonfun(IntPtr arg0, int arg1, int arg2, int arg3);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWcursorposfun(IntPtr arg0, double arg1, double arg2);
+        public delegate void Cursorposfun(IntPtr arg0, double arg1, double arg2);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWcursorenterfun(IntPtr arg0, int arg1);
+        public delegate void Cursorenterfun(IntPtr arg0, int arg1);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWscrollfun(IntPtr arg0, double arg1, double arg2);
+        public delegate void Scrollfun(IntPtr arg0, double arg1, double arg2);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWkeyfun(IntPtr arg0, int arg1, int arg2, int arg3, int arg4);
+        public delegate void Keyfun(IntPtr arg0, int arg1, int arg2, int arg3, int arg4);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWcharfun(IntPtr arg0, uint arg1);
+        public delegate void Charfun(IntPtr arg0, uint arg1);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWcharmodsfun(IntPtr arg0, uint arg1, int arg2);
+        public delegate void Charmodsfun(IntPtr arg0, uint arg1, int arg2);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWdropfun(IntPtr arg0, int arg1, [MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.LPStr)] string[] arg2);
+        public delegate void Dropfun(IntPtr arg0, int arg1, [MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.LPStr)] string[] arg2);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWmonitorfun(IntPtr arg0, int arg1);
+        public delegate void Monitorfun(IntPtr arg0, int arg1);
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void GLFWjoystickfun(int arg0, int arg1);
+        public delegate void Joystickfun(int arg0, int arg1);
         
         /// <summary>
         /// 
@@ -327,7 +327,7 @@ namespace Dissonance.Framework.Windowing
         /// [callback pointer type](@ref GLFWerrorfun).@errors None.@remark This function may be called before @ref glfwInit.@thread _safety This function must only be called from the main thread.@sa @ref error_handling@sa @ref glfwGetError@since Added in version 3.0. init
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetErrorCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWerrorfun SetErrorCallback(GLFW.GLFWerrorfun callback);
+        public static extern GLFW.Errorfun SetErrorCallback(GLFW.Errorfun callback);
         
         /// <summary>
         /// 
@@ -492,7 +492,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWmonitorfun).@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref monitor_event@since Added in version 3.0. monitor
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetMonitorCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWmonitorfun SetMonitorCallback(GLFW.GLFWmonitorfun callback);
+        public static extern GLFW.Monitorfun SetMonitorCallback(GLFW.Monitorfun callback);
         
         /// <summary>
         /// 
@@ -610,7 +610,7 @@ namespace Dissonance.Framework.Windowing
         /// Setting these hints requires no platform specific headers or functions.@errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref GLFW_INVALID_ENUM.@thread _safety This function must only be called from the main thread.@sa @ref window_hints@sa @ref glfwWindowHintString@sa @ref glfwDefaultWindowHints@since Added in version 3.0.  Replaces `glfwOpenWindowHint`. window
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwWindowHint", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void WindowHint(int hint, int value);
+        public static extern void WindowHint(WindowHint hint, int value);
         
         /// <summary>
         /// 
@@ -1236,7 +1236,7 @@ namespace Dissonance.Framework.Windowing
         /// an application to know its global position.@thread _safety This function must only be called from the main thread.@sa @ref window_pos@since Added in version 3.0. window
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetWindowPosCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWwindowposfun SetWindowPosCallback(IntPtr window, GLFW.GLFWwindowposfun callback);
+        public static extern GLFW.Windowposfun SetWindowPosCallback(IntPtr window, GLFW.Windowposfun callback);
         
         /// <summary>
         /// 
@@ -1255,7 +1255,7 @@ namespace Dissonance.Framework.Windowing
         /// @glfw3 Added window handle parameter and return value. window
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetWindowSizeCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWwindowsizefun SetWindowSizeCallback(IntPtr window, GLFW.GLFWwindowsizefun callback);
+        public static extern GLFW.Windowsizefun SetWindowSizeCallback(IntPtr window, GLFW.Windowsizefun callback);
         
         /// <summary>
         /// 
@@ -1276,7 +1276,7 @@ namespace Dissonance.Framework.Windowing
         /// @glfw3 Added window handle parameter and return value. window
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetWindowCloseCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWwindowclosefun SetWindowCloseCallback(IntPtr window, GLFW.GLFWwindowclosefun callback);
+        public static extern GLFW.Windowclosefun SetWindowCloseCallback(IntPtr window, GLFW.Windowclosefun callback);
         
         /// <summary>
         /// 
@@ -1297,7 +1297,7 @@ namespace Dissonance.Framework.Windowing
         /// @glfw3 Added window handle parameter and return value. window
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetWindowRefreshCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWwindowrefreshfun SetWindowRefreshCallback(IntPtr window, GLFW.GLFWwindowrefreshfun callback);
+        public static extern GLFW.Windowrefreshfun SetWindowRefreshCallback(IntPtr window, GLFW.Windowrefreshfun callback);
         
         /// <summary>
         /// 
@@ -1316,7 +1316,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWwindowfocusfun).@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref window_focus@since Added in version 3.0. window
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetWindowFocusCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWwindowfocusfun SetWindowFocusCallback(IntPtr window, GLFW.GLFWwindowfocusfun callback);
+        public static extern GLFW.Windowfocusfun SetWindowFocusCallback(IntPtr window, GLFW.Windowfocusfun callback);
         
         /// <summary>
         /// 
@@ -1333,7 +1333,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWwindowiconifyfun).@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref window_iconify@since Added in version 3.0. window
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetWindowIconifyCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWwindowiconifyfun SetWindowIconifyCallback(IntPtr window, GLFW.GLFWwindowiconifyfun callback);
+        public static extern GLFW.Windowiconifyfun SetWindowIconifyCallback(IntPtr window, GLFW.Windowiconifyfun callback);
         
         /// <summary>
         /// 
@@ -1350,7 +1350,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWwindowmaximizefun).@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref window_maximize@since Added in version 3.3. window
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetWindowMaximizeCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWwindowmaximizefun SetWindowMaximizeCallback(IntPtr window, GLFW.GLFWwindowmaximizefun callback);
+        public static extern GLFW.Windowmaximizefun SetWindowMaximizeCallback(IntPtr window, GLFW.Windowmaximizefun callback);
         
         /// <summary>
         /// 
@@ -1367,7 +1367,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWframebuffersizefun).@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref window_fbsize@since Added in version 3.0. window
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetFramebufferSizeCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWframebuffersizefun SetFramebufferSizeCallback(IntPtr window, GLFW.GLFWframebuffersizefun callback);
+        public static extern GLFW.Framebuffersizefun SetFramebufferSizeCallback(IntPtr window, GLFW.Framebuffersizefun callback);
         
         /// <summary>
         /// 
@@ -1384,7 +1384,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWwindowcontentscalefun).@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref window_scale@sa @ref glfwGetWindowContentScale@since Added in version 3.3. window
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetWindowContentScaleCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWwindowcontentscalefun SetWindowContentScaleCallback(IntPtr window, GLFW.GLFWwindowcontentscalefun callback);
+        public static extern GLFW.Windowcontentscalefun SetWindowContentScaleCallback(IntPtr window, GLFW.Windowcontentscalefun callback);
         
         /// <summary>
         /// 
@@ -1782,7 +1782,7 @@ namespace Dissonance.Framework.Windowing
         /// @glfw3 Added window handle parameter and return value. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetKeyCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWkeyfun SetKeyCallback(IntPtr window, GLFW.GLFWkeyfun callback);
+        public static extern GLFW.Keyfun SetKeyCallback(IntPtr window, GLFW.Keyfun callback);
         
         /// <summary>
         /// 
@@ -1808,7 +1808,7 @@ namespace Dissonance.Framework.Windowing
         /// @glfw3 Added window handle parameter and return value. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetCharCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWcharfun SetCharCallback(IntPtr window, GLFW.GLFWcharfun callback);
+        public static extern GLFW.Charfun SetCharCallback(IntPtr window, GLFW.Charfun callback);
         
         /// <summary>
         /// 
@@ -1833,7 +1833,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWcharmodsfun).@deprecated Scheduled for removal in version 4.0.@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref input_char@since Added in version 3.1. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetCharModsCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWcharmodsfun SetCharModsCallback(IntPtr window, GLFW.GLFWcharmodsfun callback);
+        public static extern GLFW.Charmodsfun SetCharModsCallback(IntPtr window, GLFW.Charmodsfun callback);
         
         /// <summary>
         /// 
@@ -1855,7 +1855,7 @@ namespace Dissonance.Framework.Windowing
         /// @glfw3 Added window handle parameter and return value. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetMouseButtonCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWmousebuttonfun SetMouseButtonCallback(IntPtr window, GLFW.GLFWmousebuttonfun callback);
+        public static extern GLFW.Mousebuttonfun SetMouseButtonCallback(IntPtr window, GLFW.Mousebuttonfun callback);
         
         /// <summary>
         /// 
@@ -1874,7 +1874,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWcursorposfun).@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref cursor_pos@since Added in version 3.0.  Replaces `glfwSetMousePosCallback`. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetCursorPosCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWcursorposfun SetCursorPosCallback(IntPtr window, GLFW.GLFWcursorposfun callback);
+        public static extern GLFW.Cursorposfun SetCursorPosCallback(IntPtr window, GLFW.Cursorposfun callback);
         
         /// <summary>
         /// 
@@ -1892,7 +1892,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWcursorenterfun).@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref cursor_enter@since Added in version 3.0. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetCursorEnterCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWcursorenterfun SetCursorEnterCallback(IntPtr window, GLFW.GLFWcursorenterfun callback);
+        public static extern GLFW.Cursorenterfun SetCursorEnterCallback(IntPtr window, GLFW.Cursorenterfun callback);
         
         /// <summary>
         /// 
@@ -1911,7 +1911,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWscrollfun).@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref scrolling@since Added in version 3.0.  Replaces `glfwSetMouseWheelCallback`. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetScrollCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWscrollfun SetScrollCallback(IntPtr window, GLFW.GLFWscrollfun callback);
+        public static extern GLFW.Scrollfun SetScrollCallback(IntPtr window, GLFW.Scrollfun callback);
         
         /// <summary>
         /// 
@@ -1931,7 +1931,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWdropfun).@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@remark @wayland File drop is currently unimplemented.@thread _safety This function must only be called from the main thread.@sa @ref path_drop@since Added in version 3.1. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetDropCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWdropfun SetDropCallback(IntPtr window, GLFW.GLFWdropfun callback);
+        public static extern GLFW.Dropfun SetDropCallback(IntPtr window, GLFW.Dropfun callback);
         
         /// <summary>
         /// 
@@ -2143,7 +2143,7 @@ namespace Dissonance.Framework.Windowing
         /// [function pointer type](@ref GLFWjoystickfun).@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref joystick_event@since Added in version 3.2. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetJoystickCallback", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWjoystickfun SetJoystickCallback(GLFW.GLFWjoystickfun callback);
+        public static extern GLFW.Joystickfun SetJoystickCallback(GLFW.Joystickfun callback);
         
         /// <summary>
         /// 
@@ -2407,7 +2407,7 @@ namespace Dissonance.Framework.Windowing
         /// is destroyed or the library is terminated.@thread _safety This function may be called from any thread.@sa @ref context_glext@sa @ref glfwExtensionSupported@since Added in version 1.0. context
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwGetProcAddress", CallingConvention = CallingConvention.Cdecl)]
-        public static extern GLFW.GLFWglproc GetProcAddress([MarshalAs(UnmanagedType.LPStr)] string procname);
+        public static extern GLFW.Glproc GetProcAddress([MarshalAs(UnmanagedType.LPStr)] string procname);
         
         /// <summary>
         /// 

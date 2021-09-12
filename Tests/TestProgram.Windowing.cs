@@ -1,4 +1,3 @@
-/*
 using System;
 using Dissonance.Framework.Windowing;
 
@@ -12,9 +11,9 @@ namespace Test
 		{
 			Console.WriteLine("GLFW Preparing...");
 
-			GLFW.SetErrorCallback((GLFWError code, string description) => Console.WriteLine(code switch {
-				GLFWError.VersionUnavailable => throw new Exception(description),
-				GLFWError.APIUnavailable => throw new Exception(description),
+			GLFW.SetErrorCallback((GlfwError code, string description) => Console.WriteLine(code switch {
+				GlfwError.VersionUnavailable => throw new Exception(description),
+				GlfwError.ApiUnavailable => throw new Exception(description),
 				_ => $"GLFW Error {code}: {description}"
 			}));
 
@@ -59,4 +58,3 @@ namespace Test
 		}
 	}
 }
-*/
