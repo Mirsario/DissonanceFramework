@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CppAst.CodeGen.CSharp;
+﻿using CppAst.CodeGen.CSharp;
 
 namespace CodeGenerator.Utilities
 {
@@ -17,24 +13,39 @@ namespace CodeGenerator.Utilities
 				type.Kind = refKind;
 			});
 		}
+
+		public static CppElementMappingRule Unsafe(this CppElementMappingRule rule)
+		{
+			return rule.CSharpAction((converter, element) => {
+				if (element is not CSharpMethod csharpMethod) {
+					csharpMethod = (CSharpMethod)((CSharpParameter)element).Parent;
+				}
+
+				csharpMethod.Modifiers |= CSharpModifiers.Unsafe;
+			});
+		}
+
 		public static CppElementMappingRule ParameterType(this CppElementMappingRule rule, string fullTypeName)
 		{
 			return rule.CSharpAction((converter, element) => {
 				((CSharpParameter)element).ParameterType = element.FindType(fullTypeName);
 			});
 		}
+
 		public static CppElementMappingRule ParameterType(this CppElementMappingRule rule, CSharpType type)
 		{
 			return rule.CSharpAction((converter, element) => {
 				((CSharpParameter)element).ParameterType = type;
 			});
 		}
+
 		public static CppElementMappingRule ReturnType(this CppElementMappingRule rule, string fullTypeName)
 		{
 			return rule.CSharpAction((converter, element) => {
 				((CSharpMethod)element).ReturnType = element.FindType(fullTypeName);
 			});
 		}
+
 		public static CppElementMappingRule ReturnType(this CppElementMappingRule rule, CSharpType type)
 		{
 			return rule.CSharpAction((converter, element) => {

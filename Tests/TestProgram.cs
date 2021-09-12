@@ -1,8 +1,5 @@
 using System;
 using System.IO;
-using System.Threading;
-using Dissonance.Framework.Graphics;
-using Dissonance.Framework.Windowing;
 
 namespace Test
 {

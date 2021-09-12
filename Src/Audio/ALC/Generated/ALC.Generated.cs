@@ -19,7 +19,7 @@ namespace Dissonance.Framework.Audio
         /// Create and attach a context to the given device.
         /// </summary>
         [DllImport(Library, EntryPoint = "alcCreateContext", CallingConvention = CallingConvention.Cdecl)]
-        public static extern IntPtr CreateContext(IntPtr device, ref int attrlist);
+        internal static unsafe extern IntPtr CreateContext(IntPtr device, int* attrlist);
         
         /// <summary>
         /// Makes the given context the active process-wide context. Passing NULL clears

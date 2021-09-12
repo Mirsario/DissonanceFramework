@@ -218,7 +218,7 @@ namespace Dissonance.Framework.Audio
         /// Get Listener parameters
         /// </summary>
         [DllImport(Library, EntryPoint = "alGetListener3f", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void GetListener(ListenerFloat3 param, ref float value1, ref float value2, ref float value3);
+        public static extern void GetListener(ListenerFloat3 param, out float value1, out float value2, out float value3);
         
         /// <summary>
         /// Get Listener parameters
@@ -236,7 +236,7 @@ namespace Dissonance.Framework.Audio
         /// Get Listener parameters
         /// </summary>
         [DllImport(Library, EntryPoint = "alGetListener3i", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void GetListener(int param, ref int value1, ref int value2, ref int value3);
+        public static extern void GetListener(int param, out int value1, out int value2, out int value3);
         
         /// <summary>
         /// Get Listener parameters
@@ -248,7 +248,7 @@ namespace Dissonance.Framework.Audio
         /// Create Source objects.
         /// </summary>
         [DllImport(Library, EntryPoint = "alGenSources", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void GenSources(int n, ref uint sources);
+        public static extern void GenSources(int n, out uint sources);
         
         /// <summary>
         /// Delete Source objects.
@@ -309,7 +309,7 @@ namespace Dissonance.Framework.Audio
         /// Get Source parameters.
         /// </summary>
         [DllImport(Library, EntryPoint = "alGetSource3f", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void GetSource(uint source, int param, ref float value1, ref float value2, ref float value3);
+        public static extern void GetSource(uint source, int param, out float value1, out float value2, out float value3);
         
         /// <summary>
         /// Get Source parameters.
@@ -327,7 +327,7 @@ namespace Dissonance.Framework.Audio
         /// Get Source parameters.
         /// </summary>
         [DllImport(Library, EntryPoint = "alGetSource3i", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void GetSource(uint source, int param, ref int value1, ref int value2, ref int value3);
+        public static extern void GetSource(uint source, int param, out int value1, out int value2, out int value3);
         
         /// <summary>
         /// Get Source parameters.
@@ -399,7 +399,7 @@ namespace Dissonance.Framework.Audio
         /// Create Buffer objects
         /// </summary>
         [DllImport(Library, EntryPoint = "alGenBuffers", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void GenBuffers(int n, ref uint buffers);
+        public static extern void GenBuffers(int n, out uint buffers);
         
         /// <summary>
         /// Delete Buffer objects
@@ -466,7 +466,7 @@ namespace Dissonance.Framework.Audio
         /// Get Buffer parameters.
         /// </summary>
         [DllImport(Library, EntryPoint = "alGetBuffer3f", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void GetBuffer(uint buffer, int param, ref float value1, ref float value2, ref float value3);
+        public static extern void GetBuffer(uint buffer, int param, out float value1, out float value2, out float value3);
         
         /// <summary>
         /// Get Buffer parameters.
@@ -484,7 +484,7 @@ namespace Dissonance.Framework.Audio
         /// Get Buffer parameters.
         /// </summary>
         [DllImport(Library, EntryPoint = "alGetBuffer3i", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void GetBuffer(uint buffer, int param, ref int value1, ref int value2, ref int value3);
+        public static extern void GetBuffer(uint buffer, int param, out int value1, out int value2, out int value3);
         
         /// <summary>
         /// Get Buffer parameters.

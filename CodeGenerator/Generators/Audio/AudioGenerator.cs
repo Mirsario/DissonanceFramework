@@ -45,15 +45,6 @@ namespace CodeGenerator.Generators.Audio
 						function.Comment = previousFunctionComment;
 					}
 				}),
-				
-				// Change all 'alGet*' 'value*' parameters from 'ref' to 'out'.
-				e => e.MapAll<CppParameter>().CSharpAction((converter, element) => {
-					var parameter = (CSharpParameter)element;
-
-					if(parameter.ParameterType is CSharpRefType refType && ((CppFunction)parameter.Parent.CppElement).Name.StartsWith("alGet") && parameter.Name == "value") {
-						refType.Kind = CSharpRefKind.Out;
-					}
-				}),
 
 				// Process functions that end with type suffixes. Like 'alSource3f'.
 				e => e.MapAll<CppFunction>().CSharpAction((converter, element) => {
@@ -104,17 +95,6 @@ namespace CodeGenerator.Generators.Audio
 
 					method.Name = primaryName;
 				}),
-
-				// Manual fixes
-
-				// Use enums for state getters, since they don't follow other naming schemes
-				e => e.Map<CppParameter>("alGetInteger::param").ParameterType($"{Namespace}.StateInt"),
-				e => e.Map<CppParameter>("alGetFloat::param").ParameterType($"{Namespace}.StateFloat"),
-				e => e.Map<CppParameter>("alGetDouble::param").ParameterType($"{Namespace}.StateDouble"),
-				e => e.Map<CppParameter>("alGetString::param").ParameterType($"{Namespace}.StateString"),
-				// Use other enums
-				e => e.Map<CppParameter>("alBufferData::format").ParameterType($"{Namespace}.BufferFormat"),
-				e => e.Map<CppFunction>("alGetError").ReturnType($"{Namespace}.AudioError"),
 			});
 		}
 

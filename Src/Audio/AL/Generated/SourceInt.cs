@@ -16,9 +16,5 @@ namespace Dissonance.Framework.Audio
         Buffer = 0x1009,
         
         SourceState = 0x1010,
-        
-        Buffer = 0x1015,
-        
-        Buffer = 0x1016,
     }
 }

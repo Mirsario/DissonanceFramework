@@ -1,5 +1,6 @@
 ﻿using System;
 using CodeGenerator.Utilities;
+using CppAst;
 using CppAst.CodeGen.CSharp;
 
 namespace CodeGenerator.Generators.Audio
@@ -20,6 +21,13 @@ namespace CodeGenerator.Generators.Audio
 				
 				// Fix strings and booleans.
 				e => FixBooleansAndStrings(e, "ALCboolean", "ALCchar"),
+
+				// Manual fixes
+
+				// Turn things internal or unsafe
+				e => e.Map<CppFunction>("alcCreateContext").Internal(),
+				// Fix pointer parameters
+				e => e.Map<CppParameter>("alcCreateContext::attrlist").ParameterType(new CSharpPointerType(CSharpPrimitiveType.Int())).Unsafe(),
 			});
 		}
 	}

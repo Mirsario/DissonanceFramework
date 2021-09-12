@@ -9,7 +9,7 @@ namespace Test
 		public static IntPtr audioDevice;
 		public static IntPtr audioContext;
 
-		private static void PrepareOpenAL()
+		private static unsafe void PrepareOpenAL()
 		{
 			audioDevice = ALC.OpenDevice(null);
 			audioContext = ALC.CreateContext(audioDevice, null);
@@ -30,14 +30,15 @@ namespace Test
 			}
 
 			//Buffer
-			AL.GenBuffer(out uint bufferId);
-
+			uint bufferId = AL.GenBuffer();
 			byte[] data = File.ReadAllBytes(AudioFile);
 
-			AL.BufferData(bufferId, BufferFormat.Stereo16, data, data.Length, 44100);
+			fixed (byte* ptr = data) {
+				AL.BufferData(bufferId, BufferFormat.Stereo16, (IntPtr)ptr, data.Length, 44100);
+			}
 
 			//Source
-			AL.GenSources(out uint sourceId);
+			uint sourceId = AL.GenSource();
 
 			AL.Source(sourceId, SourceInt.Buffer, (int)bufferId);
 			AL.Source(sourceId, SourceBool.Looping, true);

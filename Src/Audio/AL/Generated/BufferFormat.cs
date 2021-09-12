@@ -13,12 +13,12 @@ namespace Dissonance.Framework.Audio
 {
     public enum BufferFormat
     {
-        FormatMono8 = 0x1100,
+        Mono8 = 0x1100,
         
-        FormatMono16 = 0x1101,
+        Mono16 = 0x1101,
         
-        FormatStereo8 = 0x1102,
+        Stereo8 = 0x1102,
         
-        FormatStereo16 = 0x1103,
+        Stereo16 = 0x1103,
     }
 }
