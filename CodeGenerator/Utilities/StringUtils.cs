@@ -4,7 +4,7 @@
 	{
 		public static string Capitalize(string text)
 		{
-			if(text.Length > 0 && char.IsLower(text[0])) {
+			if (text.Length > 0 && char.IsLower(text[0])) {
 				var chars = text.ToCharArray();
 
 				chars[0] = char.ToUpper(chars[0]);
@@ -16,7 +16,7 @@
 		}
 		public static string RemovePrefix(string text, string prefix)
 		{
-			if(text.StartsWith(prefix)) {
+			if (text.StartsWith(prefix)) {
 				text = text.Substring(prefix.Length);
 			}
 
@@ -26,13 +26,13 @@
 		{
 			string[] splits = name.Split('_');
 
-			if(splits.Length > 0) {
+			if (splits.Length > 0) {
 				// Capitalize each part
-				for(int i = 0; i < splits.Length; i++) {
+				for (int i = 0; i < splits.Length; i++) {
 					string split = splits[i];
 					char[] chars = split.ToCharArray();
 
-					for(int j = 0; j < chars.Length; j++) {
+					for (int j = 0; j < chars.Length; j++) {
 						chars[j] = j == 0 ? char.ToUpper(chars[j]) : char.ToLower(chars[j]);
 					}
 

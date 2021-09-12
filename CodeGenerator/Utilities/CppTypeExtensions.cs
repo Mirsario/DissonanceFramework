@@ -6,7 +6,7 @@ namespace CodeGenerator.Utilities
 	{
 		public static CppType GetLastElementType(this CppType type)
 		{
-			while(type is CppTypeWithElementType typeWithElement) {
+			while (type is CppTypeWithElementType typeWithElement) {
 				type = typeWithElement.ElementType;
 			}
 

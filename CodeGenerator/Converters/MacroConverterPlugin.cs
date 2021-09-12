@@ -23,15 +23,15 @@ namespace CodeGenerator
 
 			var cpp = converter.CurrentCppCompilation;
 
-			foreach(var macro in cpp.Macros) {
-				if(string.IsNullOrWhiteSpace(macro.Value)) {
+			foreach (var macro in cpp.Macros) {
+				if (string.IsNullOrWhiteSpace(macro.Value)) {
 					continue;
 				}
 
-				foreach(var rule in Rules) {
+				foreach (var rule in Rules) {
 					var match = Regex.Match(macro.Name, rule.MacroNameRegex);
 
-					if(match.Success) {
+					if (match.Success) {
 						rule.Process(converter, macro, match);
 					}
 				}

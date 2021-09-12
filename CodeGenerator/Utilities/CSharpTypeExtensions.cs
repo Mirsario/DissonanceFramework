@@ -13,30 +13,30 @@ namespace CodeGenerator.Utilities
 		{
 			var topParent = element;
 
-			while(topParent.Parent != null) {
+			while (topParent.Parent != null) {
 				topParent = topParent.Parent;
 			}
 
-			if(!(topParent is CSharpCompilation csCompilation)) {
+			if (!(topParent is CSharpCompilation csCompilation)) {
 				throw new ArgumentException("Element does not have a compilation in its parents.");
 			}
 
 			bool RecursiveSearch(string path, IEnumerable<CSharpElement> elements, out CSharpType result)
 			{
-				foreach(CSharpElement csElement in elements) {
-					if(!(csElement is CSharpNamedType subType)) {
+				foreach (CSharpElement csElement in elements) {
+					if (!(csElement is CSharpNamedType subType)) {
 						continue;
 					}
 
 					string subPath = $"{path}.{subType.Name}";
 
-					if(subPath == fullPath) {
+					if (subPath == fullPath) {
 						result = subType;
 
 						return true;
 					}
 
-					if(subType is CSharpTypeWithMembers subTypeWithMembers && RecursiveSearch(subPath, subTypeWithMembers.Members, out result)) {
+					if (subType is CSharpTypeWithMembers subTypeWithMembers && RecursiveSearch(subPath, subTypeWithMembers.Members, out result)) {
 						return true;
 					}
 				}
@@ -47,9 +47,9 @@ namespace CodeGenerator.Utilities
 			}
 
 
-			foreach(CSharpGeneratedFile csFile in csCompilation.Members) {
-				foreach(CSharpNamespace csNamespace in csFile.Members) {
-					if(RecursiveSearch(csNamespace.Name, csNamespace.Members, out result)) {
+			foreach (CSharpGeneratedFile csFile in csCompilation.Members) {
+				foreach (CSharpNamespace csNamespace in csFile.Members) {
+					if (RecursiveSearch(csNamespace.Name, csNamespace.Members, out result)) {
 						return true;
 					}
 				}

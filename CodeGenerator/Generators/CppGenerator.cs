@@ -28,7 +28,7 @@ namespace CodeGenerator.Generators
 						var parameter = (CSharpParameter)element;
 						var parameterType = parameter.ParameterType;
 
-						if(parameterType is CSharpRefType refType && refType.ElementType is CSharpPrimitiveType primitiveType && primitiveType.Kind == CSharpPrimitiveKind.Void) {
+						if (parameterType is CSharpRefType refType && refType.ElementType is CSharpPrimitiveType primitiveType && primitiveType.Kind == CSharpPrimitiveKind.Void) {
 							parameter.ParameterType = CSharpPrimitiveType.IntPtr();
 						}
 					}),
@@ -37,7 +37,7 @@ namespace CodeGenerator.Generators
 						var method = (CSharpMethod)element;
 						var returnType = method.ReturnType;
 
-						if(returnType is CSharpRefType refType && refType.ElementType is CSharpPrimitiveType primitiveType && primitiveType.Kind == CSharpPrimitiveKind.Void) {
+						if (returnType is CSharpRefType refType && refType.ElementType is CSharpPrimitiveType primitiveType && primitiveType.Kind == CSharpPrimitiveKind.Void) {
 							method.ReturnType = CSharpPrimitiveType.IntPtr();
 						}
 					}),
@@ -47,7 +47,7 @@ namespace CodeGenerator.Generators
 						var method = (CSharpMethod)element;
 						var function = (CppFunction)element.CppElement;
 
-						if(method.Attributes.FirstOrDefault(attrib => attrib is CSharpDllImportAttribute) is CSharpDllImportAttribute dllImportAttribute) {
+						if (method.Attributes.FirstOrDefault(attrib => attrib is CSharpDllImportAttribute) is CSharpDllImportAttribute dllImportAttribute) {
 							dllImportAttribute.EntryPoint = $@"""{function.Name}""";
 						}
 					}),
@@ -74,9 +74,9 @@ namespace CodeGenerator.Generators
 
 			var compilation = CSharpConverter.Convert(new List<string> { inputFile }, Options);
 
-			if(compilation.HasErrors) {
-				foreach(var message in compilation.Diagnostics.Messages) {
-					if(message.Type == CppLogMessageType.Error) {
+			if (compilation.HasErrors) {
+				foreach (var message in compilation.Diagnostics.Messages) {
+					if (message.Type == CppLogMessageType.Error) {
 						Console.WriteLine(message);
 					}
 				}
@@ -104,7 +104,7 @@ namespace CodeGenerator.Generators
 
 			return rules.MapAll<CppElement>()
 				.CppAction((converter, element) => {
-					switch(element) {
+					switch (element) {
 						case CppClass cppClass:
 							cppClass.Name = FixName(cppClass.Name, typePrefix);
 							break;
@@ -114,7 +114,7 @@ namespace CodeGenerator.Generators
 					}
 				})
 				.CSharpAction((converter, element) => {
-					switch(element) {
+					switch (element) {
 						case CSharpEnumItem enumItem:
 							enumItem.Name = FixName(enumItem.Name, enumPrefix);
 							break;
@@ -128,7 +128,7 @@ namespace CodeGenerator.Generators
 		protected static CppElementMappingRule FixBooleansAndStrings(CppMappingRules rules, string boolTypedef, string charTypedef)
 		{
 			return rules.MapAll<CppDeclaration>().CSharpAction((converter, element) => {
-				if(!(element is CSharpMethod || element is CSharpParameter)) {
+				if (!(element is CSharpMethod || element is CSharpParameter)) {
 					return;
 				}
 
@@ -138,7 +138,7 @@ namespace CodeGenerator.Generators
 					_ => throw new Exception()
 				};
 
-				if(!(lastElementType is CppTypedef typedef)) {
+				if (!(lastElementType is CppTypedef typedef)) {
 					return;
 				}
 
@@ -146,11 +146,11 @@ namespace CodeGenerator.Generators
 				CSharpUnmanagedKind? marshalAs;
 				bool keepRef;
 
-				if(typedef.Name == boolTypedef) {
+				if (typedef.Name == boolTypedef) {
 					newType = CSharpPrimitiveType.Bool();
 					marshalAs = CSharpUnmanagedKind.I1;
 					keepRef = true;
-				} else if(typedef.Name == charTypedef) {
+				} else if (typedef.Name == charTypedef) {
 					newType = CSharpPrimitiveType.String();
 					marshalAs = CSharpUnmanagedKind.LPStr;
 					keepRef = false;
@@ -160,8 +160,8 @@ namespace CodeGenerator.Generators
 
 				CSharpType GetCSType(CSharpType originalType)
 				{
-					if(keepRef) {
-						if(originalType is CSharpRefType refType) {
+					if (keepRef) {
+						if (originalType is CSharpRefType refType) {
 							refType.ElementType = newType;
 
 							return refType;
@@ -171,7 +171,7 @@ namespace CodeGenerator.Generators
 					return newType;
 				}
 
-				switch(element) {
+				switch (element) {
 					case CSharpParameter parameter:
 						parameter.ParameterType = GetCSType(parameter.ParameterType);
 						parameter.Attributes.Add(new CSharpMarshalAttribute(marshalAs.Value));
@@ -190,7 +190,7 @@ namespace CodeGenerator.Generators
 				.CppAction((converter, element) => {
 					/*var cppStruct = (CppClass)element;
 
-					if(cppStruct.ClassKind != CppClassKind.Struct || cppStruct.Fields.Count > 0) {
+					if (cppStruct.ClassKind != CppClassKind.Struct || cppStruct.Fields.Count > 0) {
 						return;
 					}
 

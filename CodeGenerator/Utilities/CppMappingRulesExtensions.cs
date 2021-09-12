@@ -15,14 +15,14 @@ namespace CodeGenerator.Utilities
 
 		public static void AddRange(this CppMappingRules rules, IEnumerable<Func<CppMappingRules, CppElementMappingRule>> values)
 		{
-			foreach(var value in values) {
+			foreach (var value in values) {
 				rules.Add(value);
 			}
 		}
 
 		public static void AddRange(this CppMappingRules rules, IEnumerable<Func<CppMappingRules, CppMacroMappingRule>> values)
 		{
-			foreach(var value in values) {
+			foreach (var value in values) {
 				rules.Add(value);
 			}
 		}

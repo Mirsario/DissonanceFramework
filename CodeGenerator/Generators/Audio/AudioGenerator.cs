@@ -30,7 +30,7 @@ namespace CodeGenerator.Generators.Audio
 				e => e.MapAll<CppTypedef>().CppAction((converter, element) => {
 					var typedef = (CppTypedef)element;
 
-					if(typedef.ElementType.TypeKind == CppTypeKind.Pointer && typedef.Name.StartsWith($"LP")) {
+					if (typedef.ElementType.TypeKind == CppTypeKind.Pointer && typedef.Name.StartsWith($"LP")) {
 						converter.Discard(element);
 					}
 				}),
@@ -39,7 +39,7 @@ namespace CodeGenerator.Generators.Audio
 				e => e.MapAll<CppFunction>().CppAction((converter, element) => {
 					var function = (CppFunction)element;
 
-					if(function.Comment != null) {
+					if (function.Comment != null) {
 						previousFunctionComment = function.Comment;
 					} else {
 						function.Comment = previousFunctionComment;
@@ -52,7 +52,7 @@ namespace CodeGenerator.Generators.Audio
 					var function = (CppFunction)method.CppElement;
 					var match = FunctionTypeSuffixRegex.Match(function.Name);
 
-					if(!match.Success) {
+					if (!match.Success) {
 						return;
 					}
 
@@ -62,7 +62,7 @@ namespace CodeGenerator.Generators.Audio
 
 					// Change type of 'param' parameters to enums if a fitting one exists.
 
-					if(method.Parameters.FirstOrDefault(p => p.Name == "param") is CSharpParameter parameter) {
+					if (method.Parameters.FirstOrDefault(p => p.Name == "param") is CSharpParameter parameter) {
 						string suffix = originalSuffix switch {
 							"i" => "Int",
 							"f" => "Float",
@@ -73,7 +73,7 @@ namespace CodeGenerator.Generators.Audio
 							_ => null
 						};
 
-						if(element.TryFindType($"{Namespace}.{primaryName}{suffix}", out var type) || alternateName != primaryName && element.TryFindType($"{Namespace}.{alternateName}{suffix}", out type)) {
+						if (element.TryFindType($"{Namespace}.{primaryName}{suffix}", out var type) || alternateName != primaryName && element.TryFindType($"{Namespace}.{alternateName}{suffix}", out type)) {
 							parameter.ParameterType = type;
 						}
 					}
@@ -87,7 +87,7 @@ namespace CodeGenerator.Generators.Audio
 						_ => null
 					};
 
-					if(getForcedValueType != null && method.Parameters.LastOrDefault() is CSharpParameter valuesParameter) {
+					if (getForcedValueType != null && method.Parameters.LastOrDefault() is CSharpParameter valuesParameter) {
 						valuesParameter.ParameterType = getForcedValueType(valuesParameter.ParameterType);
 					}
 
