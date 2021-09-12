@@ -19,14 +19,16 @@ namespace CodeGenerator.Generators.Windowing
 				=> e.ParameterType(CSharpPrimitiveType.Bool()).MarshalAs(CSharpUnmanagedKind.I4);
 
 			static CppElementMappingRule ReturnToBool(CppElementMappingRule e)
-				=> e.ReturnType(CSharpPrimitiveType.Bool()).MarshalAs(CSharpUnmanagedKind.I4);
+				=> e.ReturnType(CSharpPrimitiveType.Bool()).MarshalAs(CSharpUnmanagedKind.U1);
 
 			static string EnumItemNaming(string name)
 				=> StringUtils.SnakeCaseToUpperCamelCase(name).Replace("Opengl", "OpenGL");
 
 			const string WindowHintEnum = "WindowHint";
 
-			MacroPlugin.Rules.AddRange(new[] {
+			MacroPlugin.Rules.AddRange(new MacroRule[] {
+				// Macros to enums
+
 				new MacroToEnumRule(@"GLFW_(NOT_INITIALIZED|NO_CURRENT_CONTEXT|INVALID_ENUM|INVALID_VALUE|OUT_OF_MEMORY|API_UNAVAILABLE|VERSION_UNAVAILABLE|PLATFORM_ERROR|FORMAT_UNAVAILABLE)$", "GlfwError", "$1", EnumItemNaming),
 				// Window related hints
 				new MacroToEnumRule(@"GLFW_(RESIZABLE|VISIBLE|DECORATED|FOCUSED|AUTO_ICONIFY|FLOATING|MAXIMIZED|CENTER_CURSOR|TRANSPARENT_FRAMEBUFFER|FOCUS_ON_SHOW|SCALE_TO_MONITOR)$", WindowHintEnum, "$1", EnumItemNaming),
@@ -42,6 +44,11 @@ namespace CodeGenerator.Generators.Windowing
 				new MacroToEnumRule(@"GLFW_(COCOA_(?:RETINA_FRAMEBUFFER|FRAME_NAME|GRAPHICS_SWITCHING))$", WindowHintEnum, "$1", EnumItemNaming),
 				// X11 specific window hints
 				new MacroToEnumRule(@"GLFW_(X11_(?:CLASS_NAME|INSTANCE_NAME))$", WindowHintEnum, "$1", EnumItemNaming),
+
+				// Macros to constants
+
+				//TODO: This is temporary. Make any macro that has not been consumed by the above enum conversion be turned into a constant.
+				new MacroToConstantRule(@"GLFW_(OPENGL_\w+_PROFILE)$", Options.DefaultClassLib, "$1", CSharpPrimitiveType.Int(), EnumItemNaming),
 			});
 
 			Options.MappingRules.AddRange(new Func<CppMappingRules, CppElementMappingRule>[] {

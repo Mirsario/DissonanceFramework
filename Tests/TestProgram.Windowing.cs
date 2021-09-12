@@ -7,7 +7,7 @@ namespace Test
 	{
 		public static IntPtr window;
 
-		private static void PrepareGLFW()
+		private static void PrepareGlfw()
 		{
 			Console.WriteLine("GLFW Preparing...");
 
@@ -23,7 +23,7 @@ namespace Test
 
 			GLFW.WindowHint(WindowHint.ContextVersionMajor, OpenGLVersion.Major); // Targeted major version
 			GLFW.WindowHint(WindowHint.ContextVersionMinor, OpenGLVersion.Minor); // Targeted minor version
-			GLFW.WindowHint(WindowHint.OpenGLProfile, GLFW.OPENGL_CORE_PROFILE);
+			GLFW.WindowHint(WindowHint.OpenGLProfile, GLFW.OpenGLCoreProfile);
 			GLFW.WindowHint(WindowHint.OpenGLForwardCompat, true);
 
 			IntPtr monitor = IntPtr.Zero;
@@ -51,7 +51,7 @@ namespace Test
 			GLFW.SwapInterval(0);
 		}
 
-		private static void UnloadGLFW()
+		private static void UnloadGlfw()
 		{
 			GLFW.DestroyWindow(window);
 			GLFW.Terminate();

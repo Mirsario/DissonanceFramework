@@ -13,7 +13,7 @@ namespace Test
 		{
 			Console.WriteLine($"Working directory: '{Path.GetFullPath(".")}'.");
 
-			//PrepareGLFW();
+			PrepareGlfw();
 			//PrepareOpenGL();
 			PrepareOpenAL();
 
@@ -97,7 +97,7 @@ void main() {
 			Console.ReadLine();
 
 			UnloadOpenAL();
-			//UnloadGLFW();
+			UnloadGlfw();
 		}
 
 		public static float Lerp(float a, float b, float time) => a + (b - a) * Clamp01(time);

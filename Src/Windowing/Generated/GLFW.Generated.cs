@@ -225,7 +225,7 @@ namespace Dissonance.Framework.Windowing
         /// still "C".  This is because the "C" locale breaks Unicode text input.@thread _safety This function must only be called from the main thread.@sa @ref intro_init@sa @ref glfwTerminate@since Added in version 1.0. init
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwInit", CallingConvention = CallingConvention.Cdecl)]
-        [return:MarshalAs(UnmanagedType.I4)]
+        [return:MarshalAs(UnmanagedType.U1)]
         public static extern bool Init();
         
         /// <summary>
@@ -1537,7 +1537,7 @@ namespace Dissonance.Framework.Windowing
         /// of this, raw mouse motion is only provided when the cursor is disabled.@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function must only be called from the main thread.@sa @ref raw_mouse_motion@sa @ref glfwSetInputMode@since Added in version 3.3. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwRawMouseMotionSupported", CallingConvention = CallingConvention.Cdecl)]
-        [return:MarshalAs(UnmanagedType.I4)]
+        [return:MarshalAs(UnmanagedType.U1)]
         public static extern bool RawMouseMotionSupported();
         
         /// <summary>
@@ -1944,7 +1944,7 @@ namespace Dissonance.Framework.Windowing
         /// work.@errors Possible errors include @ref GLFW_NOT_INITIALIZED, @ref GLFW_INVALID_ENUM and @ref GLFW_PLATFORM_ERROR.@thread _safety This function must only be called from the main thread.@sa @ref joystick@since Added in version 3.0.  Replaces `glfwGetJoystickParam`. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwJoystickPresent", CallingConvention = CallingConvention.Cdecl)]
-        [return:MarshalAs(UnmanagedType.I4)]
+        [return:MarshalAs(UnmanagedType.U1)]
         public static extern bool JoystickPresent(int jid);
         
         /// <summary>
@@ -2122,7 +2122,7 @@ namespace Dissonance.Framework.Windowing
         /// whether it has a mapping.@errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref GLFW_INVALID_ENUM.@thread _safety This function must only be called from the main thread.@sa @ref gamepad@sa @ref glfwGetGamepadState@since Added in version 3.3. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwJoystickIsGamepad", CallingConvention = CallingConvention.Cdecl)]
-        [return:MarshalAs(UnmanagedType.I4)]
+        [return:MarshalAs(UnmanagedType.U1)]
         public static extern bool JoystickIsGamepad(int jid);
         
         /// <summary>
@@ -2162,7 +2162,7 @@ namespace Dissonance.Framework.Windowing
         /// default.@errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref GLFW_INVALID_VALUE.@thread _safety This function must only be called from the main thread.@sa @ref gamepad@sa @ref glfwJoystickIsGamepad@sa @ref glfwGetGamepadName@since Added in version 3.3. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwUpdateGamepadMappings", CallingConvention = CallingConvention.Cdecl)]
-        [return:MarshalAs(UnmanagedType.I4)]
+        [return:MarshalAs(UnmanagedType.U1)]
         public static extern bool UpdateGamepadMappings([MarshalAs(UnmanagedType.LPStr)] string @string);
         
         /// <summary>
@@ -2202,7 +2202,7 @@ namespace Dissonance.Framework.Windowing
         /// `GLFW_RELEASE` and 0.0 respectively.@errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref GLFW_INVALID_ENUM.@thread _safety This function must only be called from the main thread.@sa @ref gamepad@sa @ref glfwUpdateGamepadMappings@sa @ref glfwJoystickIsGamepad@since Added in version 3.3. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwGetGamepadState", CallingConvention = CallingConvention.Cdecl)]
-        [return:MarshalAs(UnmanagedType.I4)]
+        [return:MarshalAs(UnmanagedType.U1)]
         public static extern bool GetGamepadState(int jid, ref GLFW.GamepadState state);
         
         /// <summary>
@@ -2384,7 +2384,7 @@ namespace Dissonance.Framework.Windowing
         /// and `vkEnumerateDeviceExtensionProperties` instead.@errors Possible errors include @ref GLFW_NOT_INITIALIZED, @ref GLFW_NO_CURRENT_CONTEXT, @ref GLFW_INVALID_VALUE and @ref GLFW_PLATFORM_ERROR.@thread _safety This function may be called from any thread.@sa @ref context_glext@sa @ref glfwGetProcAddress@since Added in version 1.0. context
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwExtensionSupported", CallingConvention = CallingConvention.Cdecl)]
-        [return:MarshalAs(UnmanagedType.I4)]
+        [return:MarshalAs(UnmanagedType.U1)]
         public static extern bool ExtensionSupported([MarshalAs(UnmanagedType.LPStr)] string extension);
         
         /// <summary>
@@ -2425,7 +2425,7 @@ namespace Dissonance.Framework.Windowing
         /// family of a physical device supports image presentation.@errors Possible errors include @ref GLFW_NOT_INITIALIZED.@thread _safety This function may be called from any thread.@sa @ref vulkan_support@since Added in version 3.2. vulkan
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwVulkanSupported", CallingConvention = CallingConvention.Cdecl)]
-        [return:MarshalAs(UnmanagedType.I4)]
+        [return:MarshalAs(UnmanagedType.U1)]
         public static extern bool VulkanSupported();
         
         /// <summary>
