@@ -11,7 +11,7 @@ using System;
 
 namespace Dissonance.Framework.Windowing
 {
-    public enum KeyModifiers
+    public enum KeyModifier
     {
         Shift = 0x0001,
         

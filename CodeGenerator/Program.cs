@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using CodeGenerator.Generators.Audio;
@@ -18,13 +19,11 @@ namespace CodeGenerator
 				const string WindowingOutput = "../Src/Windowing/Generated";
 				const string AudioOutput = "../Src/Audio/Generated";
 
-				if (Directory.Exists(WindowingOutput)) {
-					Directory.Delete(WindowingOutput, true);
-				}
+				var filesToPotentiallyDelete = new List<FileInfo>();
+				var startDate = DateTime.Now;
 
-				if (Directory.Exists(AudioOutput)) {
-					Directory.Delete(AudioOutput, true);
-				}
+				filesToPotentiallyDelete.AddRange(new DirectoryInfo(WindowingOutput).EnumerateFiles("*.cs", SearchOption.AllDirectories));
+				filesToPotentiallyDelete.AddRange(new DirectoryInfo(AudioOutput).EnumerateFiles("*.cs", SearchOption.AllDirectories));
 
 				new GlfwGenerator()
 					.Generate("Generators/Windowing/Include/glfw3.h", WindowingOutput);
@@ -34,6 +33,14 @@ namespace CodeGenerator
 
 				new ALCGenerator("Dissonance.Framework.Audio", "ALC", "ALC.Generated.cs")
 					.Generate("Generators/Audio/Include/alc.h", Path.Combine(AudioOutput, "ALC"));
+
+				foreach (var file in filesToPotentiallyDelete) {
+					file.Refresh();
+
+					if (file.LastWriteTime < startDate) {
+						file.Delete();
+					}
+				}
 
 				Console.WriteLine("Success.");
 				Thread.Sleep(500);
