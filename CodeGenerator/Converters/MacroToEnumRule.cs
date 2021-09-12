@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
+using CodeGenerator.Utilities;
 using CppAst;
 using CppAst.CodeGen.CSharp;
 using Zio;
@@ -48,12 +49,7 @@ namespace CodeGenerator.Converters
 
 			// Try to detect references to other macros
 			if (!int.TryParse(value, out _)) {
-				var cppCompilation = converter.CurrentCppCompilation;
-				var matchingMacro = cppCompilation.Macros.FirstOrDefault(m => m.Name == value);
-
-				if (matchingMacro != null) {
-					value = Renamer(value);
-				}
+				value = MacroUtils.RenameMacrosInExpression(value, converter.CurrentCppCompilation.Macros, Renamer);
 			}
 
 			csharpEnum.Members.Add(new CSharpEnumItem(itemName, value));

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
+using CodeGenerator.Utilities;
 using CppAst;
 using CppAst.CodeGen.CSharp;
 using Zio;
@@ -11,15 +12,13 @@ namespace CodeGenerator.Converters
 	{
 		public string FileName { get; set; }
 		public string ClassName { get; set; }
-		public string RegexNameReplacement { get; set; }
 		public CSharpPrimitiveType ConstantType { get; set; }
 		public Func<string, string> Renamer { get; set; }
 
-		public MacroToConstantRule(string regexNameMatch,string regexNameReplacement, CSharpPrimitiveType constantType, string fileName, string className, Func<string, string> renamer = null) : base(regexNameMatch)
+		public MacroToConstantRule(string regexNameMatch, CSharpPrimitiveType constantType, string fileName, string className, Func<string, string> renamer = null) : base(regexNameMatch)
 		{
 			FileName = fileName;
 			ClassName = className;
-			RegexNameReplacement = regexNameReplacement;
 			ConstantType = constantType;
 			Renamer = renamer;
 		}
@@ -43,15 +42,22 @@ namespace CodeGenerator.Converters
 				csNamespace.Members.Insert(0, csClass);
 			}
 
-			string itemName = match.Result(RegexNameReplacement);
+			string itemName = match.Value;
 
 			if (Renamer != null) {
 				itemName = Renamer(itemName);
 			}
 
+			string value = macro.Value;
+
+			// Try to detect references to other macros
+			if (!int.TryParse(value, out _)) {
+				value = MacroUtils.RenameMacrosInExpression(value, converter.CurrentCppCompilation.Macros, Renamer);
+			}
+
 			csClass.Members.Add(new CSharpField(itemName) {
 				Modifiers = CSharpModifiers.Const,
-				InitValue = macro.Value,
+				InitValue = value,
 				FieldType = ConstantType
 			});
 		}

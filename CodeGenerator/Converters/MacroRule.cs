@@ -7,6 +7,7 @@ namespace CodeGenerator.Converters
 	public abstract class MacroRule
 	{
 		public string MacroNameRegex { get; set; }
+		public bool OnlyNonProcessedMacros { get; set; }
 
 		protected MacroRule(string cppRegexName)
 		{

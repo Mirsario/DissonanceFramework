@@ -25,11 +25,15 @@ namespace CodeGenerator
 					continue;
 				}
 
+				bool processed = false;
+
 				foreach (var rule in Rules) {
 					var match = Regex.Match(macro.Name, rule.MacroNameRegex);
 
-					if (match.Success) {
+					if (match.Success && (!processed || !rule.OnlyNonProcessedMacros)) {
 						rule.Process(converter, macro, match);
+
+						processed = true;
 					}
 				}
 			}

@@ -11,12 +11,286 @@ using System;
 
 namespace Dissonance.Framework.Windowing
 {
-	public partial class Glfw
-	{
-		public const int OpenGLAnyProfile = 0;
-
-		public const int OpenGLCoreProfile = 0x00032001;
-
-		public const int OpenGLCompatProfile = 0x00032002;
-	}
+    public partial class Glfw
+    {
+        public const int VersionMajor = 3;
+        
+        public const int VersionMinor = 4;
+        
+        public const int VersionRevision = 0;
+        
+        public const int True = 1;
+        
+        public const int False = 0;
+        
+        public const int Release = 0;
+        
+        public const int Press = 1;
+        
+        public const int Repeat = 2;
+        
+        public const int HatCentered = 0;
+        
+        public const int HatUp = 1;
+        
+        public const int HatRight = 2;
+        
+        public const int HatDown = 4;
+        
+        public const int HatLeft = 8;
+        
+        public const int HatRightUp = (HatRight|HatUp);
+        
+        public const int HatRightDown = (HatRight|HatDown);
+        
+        public const int HatLeftUp = (HatLeft|HatUp);
+        
+        public const int HatLeftDown = (HatLeft|HatDown);
+        
+        public const int ModShift = 0x0001;
+        
+        public const int ModControl = 0x0002;
+        
+        public const int ModAlt = 0x0004;
+        
+        public const int ModSuper = 0x0008;
+        
+        public const int ModCapsLock = 0x0010;
+        
+        public const int ModNumLock = 0x0020;
+        
+        public const int MouseButton1 = 0;
+        
+        public const int MouseButton2 = 1;
+        
+        public const int MouseButton3 = 2;
+        
+        public const int MouseButton4 = 3;
+        
+        public const int MouseButton5 = 4;
+        
+        public const int MouseButton6 = 5;
+        
+        public const int MouseButton7 = 6;
+        
+        public const int MouseButton8 = 7;
+        
+        public const int MouseButtonLast = MouseButton8;
+        
+        public const int MouseButtonLeft = MouseButton1;
+        
+        public const int MouseButtonRight = MouseButton2;
+        
+        public const int MouseButtonMiddle = MouseButton3;
+        
+        public const int Joystick1 = 0;
+        
+        public const int Joystick2 = 1;
+        
+        public const int Joystick3 = 2;
+        
+        public const int Joystick4 = 3;
+        
+        public const int Joystick5 = 4;
+        
+        public const int Joystick6 = 5;
+        
+        public const int Joystick7 = 6;
+        
+        public const int Joystick8 = 7;
+        
+        public const int Joystick9 = 8;
+        
+        public const int Joystick10 = 9;
+        
+        public const int Joystick11 = 10;
+        
+        public const int Joystick12 = 11;
+        
+        public const int Joystick13 = 12;
+        
+        public const int Joystick14 = 13;
+        
+        public const int Joystick15 = 14;
+        
+        public const int Joystick16 = 15;
+        
+        public const int JoystickLast = Joystick16;
+        
+        public const int GamepadButtonA = 0;
+        
+        public const int GamepadButtonB = 1;
+        
+        public const int GamepadButtonX = 2;
+        
+        public const int GamepadButtonY = 3;
+        
+        public const int GamepadButtonLeftBumper = 4;
+        
+        public const int GamepadButtonRightBumper = 5;
+        
+        public const int GamepadButtonBack = 6;
+        
+        public const int GamepadButtonStart = 7;
+        
+        public const int GamepadButtonGuide = 8;
+        
+        public const int GamepadButtonLeftThumb = 9;
+        
+        public const int GamepadButtonRightThumb = 10;
+        
+        public const int GamepadButtonDpadUp = 11;
+        
+        public const int GamepadButtonDpadRight = 12;
+        
+        public const int GamepadButtonDpadDown = 13;
+        
+        public const int GamepadButtonDpadLeft = 14;
+        
+        public const int GamepadButtonLast = GamepadButtonDpadLeft;
+        
+        public const int GamepadButtonCross = GamepadButtonA;
+        
+        public const int GamepadButtonCircle = GamepadButtonB;
+        
+        public const int GamepadButtonSquare = GamepadButtonX;
+        
+        public const int GamepadButtonTriangle = GamepadButtonY;
+        
+        public const int GamepadAxisLeftX = 0;
+        
+        public const int GamepadAxisLeftY = 1;
+        
+        public const int GamepadAxisRightX = 2;
+        
+        public const int GamepadAxisRightY = 3;
+        
+        public const int GamepadAxisLeftTrigger = 4;
+        
+        public const int GamepadAxisRightTrigger = 5;
+        
+        public const int GamepadAxisLast = GamepadAxisRightTrigger;
+        
+        public const int NoWindowContext = 0x0001000A;
+        
+        public const int CursorUnavailable = 0x0001000B;
+        
+        public const int FeatureUnavailable = 0x0001000C;
+        
+        public const int FeatureUnimplemented = 0x0001000D;
+        
+        public const int Iconified = 0x00020002;
+        
+        public const int Hovered = 0x0002000B;
+        
+        public const int MousePassthrough = 0x0002000D;
+        
+        public const int ContextRevision = 0x00022004;
+        
+        public const int ContextReleaseBehavior = 0x00022009;
+        
+        public const int ContextNoError = 0x0002200A;
+        
+        public const int Win32KeyboardMenu = 0x00025001;
+        
+        public const int NoApi = 0;
+        
+        public const int OpenGLApi = 0x00030001;
+        
+        public const int OpenGLEsApi = 0x00030002;
+        
+        public const int NoRobustness = 0;
+        
+        public const int NoResetNotification = 0x00031001;
+        
+        public const int LoseContextOnReset = 0x00031002;
+        
+        public const int OpenGLAnyProfile = 0;
+        
+        public const int OpenGLCoreProfile = 0x00032001;
+        
+        public const int OpenGLCompatProfile = 0x00032002;
+        
+        public const int Cursor = 0x00033001;
+        
+        public const int StickyKeys = 0x00033002;
+        
+        public const int StickyMouseButtons = 0x00033003;
+        
+        public const int LockKeyMods = 0x00033004;
+        
+        public const int RawMouseMotion = 0x00033005;
+        
+        public const int CursorNormal = 0x00034001;
+        
+        public const int CursorHidden = 0x00034002;
+        
+        public const int CursorDisabled = 0x00034003;
+        
+        public const int AnyReleaseBehavior = 0;
+        
+        public const int ReleaseBehaviorFlush = 0x00035001;
+        
+        public const int ReleaseBehaviorNone = 0x00035002;
+        
+        public const int NativeContextApi = 0x00036001;
+        
+        public const int EglContextApi = 0x00036002;
+        
+        public const int OsmesaContextApi = 0x00036003;
+        
+        public const int AnglePlatformTypeNone = 0x00037001;
+        
+        public const int AnglePlatformTypeOpenGL = 0x00037002;
+        
+        public const int AnglePlatformTypeOpenGLes = 0x00037003;
+        
+        public const int AnglePlatformTypeD3d9 = 0x00037004;
+        
+        public const int AnglePlatformTypeD3d11 = 0x00037005;
+        
+        public const int AnglePlatformTypeVulkan = 0x00037007;
+        
+        public const int AnglePlatformTypeMetal = 0x00037008;
+        
+        public const int ArrowCursor = 0x00036001;
+        
+        public const int IbeamCursor = 0x00036002;
+        
+        public const int CrosshairCursor = 0x00036003;
+        
+        public const int PointingHandCursor = 0x00036004;
+        
+        public const int ResizeEwCursor = 0x00036005;
+        
+        public const int ResizeNsCursor = 0x00036006;
+        
+        public const int ResizeNwseCursor = 0x00036007;
+        
+        public const int ResizeNeswCursor = 0x00036008;
+        
+        public const int ResizeAllCursor = 0x00036009;
+        
+        public const int NotAllowedCursor = 0x0003600A;
+        
+        public const int HresizeCursor = ResizeEwCursor;
+        
+        public const int VresizeCursor = ResizeNsCursor;
+        
+        public const int HandCursor = PointingHandCursor;
+        
+        public const int Connected = 0x00040001;
+        
+        public const int Disconnected = 0x00040002;
+        
+        public const int JoystickHatButtons = 0x00050001;
+        
+        public const int AnglePlatformType = 0x00050002;
+        
+        public const int CocoaChdirResources = 0x00051001;
+        
+        public const int CocoaMenubar = 0x00051002;
+        
+        public const int DontCare = -1;
+    }
 }
