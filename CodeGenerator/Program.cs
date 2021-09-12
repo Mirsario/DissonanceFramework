@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading;
 using CodeGenerator.Generators.Audio;
 using CodeGenerator.Generators.Windowing;
@@ -14,14 +15,25 @@ namespace CodeGenerator
 					throw new ArgumentException("An output path must be provided in command line arguments.");
 				}
 
+				const string WindowingOutput = "../Src/Windowing/Generated";
+				const string AudioOutput = "../Src/Audio/Generated";
+
+				if (Directory.Exists(WindowingOutput)) {
+					Directory.Delete(WindowingOutput, true);
+				}
+
+				if (Directory.Exists(AudioOutput)) {
+					Directory.Delete(AudioOutput, true);
+				}
+
 				new GlfwGenerator()
-					.Generate("Generators/Windowing/Include/glfw3.h", "../Src/Windowing/Generated");
+					.Generate("Generators/Windowing/Include/glfw3.h", WindowingOutput);
 
 				new ALGenerator("Dissonance.Framework.Audio", "AL", "AL.Generated.cs")
-					.Generate("Generators/Audio/Include/al.h", "../Src/Audio/Generated/AL");
+					.Generate("Generators/Audio/Include/al.h", Path.Combine(AudioOutput, "AL"));
 
 				new ALCGenerator("Dissonance.Framework.Audio", "ALC", "ALC.Generated.cs")
-					.Generate("Generators/Audio/Include/alc.h", "../Src/Audio/Generated/ALC");
+					.Generate("Generators/Audio/Include/alc.h", Path.Combine(AudioOutput, "ALC"));
 
 				Console.WriteLine("Success.");
 				Thread.Sleep(500);
