@@ -7,7 +7,7 @@ namespace CodeGenerator.Generators.Audio
 {
 	public class ALCGenerator : AudioGenerator
 	{
-		public ALCGenerator(string defaultNamespace, string defaultClass, string outputFile) : base(defaultNamespace, defaultClass, outputFile)
+		public ALCGenerator(string inputFile, string defaultNamespace, string defaultClass, string outputFile) : base(inputFile, defaultNamespace, defaultClass, outputFile)
 		{
 			Options.MappingRules.AddRange(new Func<CppMappingRules, CppElementMappingRule>[] {
 				// Remove prefixes from elements' names.

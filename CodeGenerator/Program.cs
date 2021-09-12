@@ -25,14 +25,14 @@ namespace CodeGenerator
 				filesToPotentiallyDelete.AddRange(new DirectoryInfo(WindowingOutput).EnumerateFiles("*.cs", SearchOption.AllDirectories));
 				filesToPotentiallyDelete.AddRange(new DirectoryInfo(AudioOutput).EnumerateFiles("*.cs", SearchOption.AllDirectories));
 
-				new GlfwGenerator()
-					.Generate("Generators/Windowing/Include/glfw3.h", WindowingOutput);
+				new GlfwGenerator("Generators/Windowing/Include/glfw3.h")
+					.Generate(WindowingOutput);
 
-				new ALGenerator("Dissonance.Framework.Audio", "AL", "AL.Generated.cs")
-					.Generate("Generators/Audio/Include/al.h", Path.Combine(AudioOutput, "AL"));
+				new ALGenerator("Generators/Audio/Include/al.h", "Dissonance.Framework.Audio", "AL", "AL.Generated.cs")
+					.Generate(Path.Combine(AudioOutput, "AL"));
 
-				new ALCGenerator("Dissonance.Framework.Audio", "ALC", "ALC.Generated.cs")
-					.Generate("Generators/Audio/Include/alc.h", Path.Combine(AudioOutput, "ALC"));
+				new ALCGenerator("Generators/Audio/Include/alc.h", "Dissonance.Framework.Audio", "ALC", "ALC.Generated.cs")
+					.Generate(Path.Combine(AudioOutput, "ALC"));
 
 				foreach (var file in filesToPotentiallyDelete) {
 					file.Refresh();

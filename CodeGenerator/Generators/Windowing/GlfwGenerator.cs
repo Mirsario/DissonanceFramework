@@ -8,7 +8,7 @@ namespace CodeGenerator.Generators.Windowing
 {
 	public class GlfwGenerator : CppGenerator
 	{
-		public GlfwGenerator() : base()
+		public GlfwGenerator(string inputFile) : base(inputFile)
 		{
 			Options.DefaultNamespace = "Dissonance.Framework.Windowing";
 			Options.DefaultClassLib = "Glfw";

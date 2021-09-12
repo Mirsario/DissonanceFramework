@@ -8,7 +8,7 @@ namespace CodeGenerator.Generators.Audio
 {
 	public class ALGenerator : AudioGenerator
 	{
-		public ALGenerator(string defaultNamespace, string defaultClass, string outputFile) : base(defaultNamespace, defaultClass, outputFile)
+		public ALGenerator(string inputFile, string defaultNamespace, string defaultClass, string outputFile) : base(inputFile, defaultNamespace, defaultClass, outputFile)
 		{
 			static string EnumItemRenamer(string name) => StringUtils.SnakeCaseToUpperCamelCase(name.Replace("AL_", null));
 

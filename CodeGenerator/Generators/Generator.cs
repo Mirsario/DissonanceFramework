@@ -2,6 +2,6 @@
 {
 	public abstract class Generator
 	{
-		public abstract void Generate(string inputFile, string outputPath);
+		public abstract void Generate(string outputPath);
 	}
 }

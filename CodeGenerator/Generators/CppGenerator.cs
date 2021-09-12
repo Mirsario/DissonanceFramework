@@ -12,11 +12,15 @@ namespace CodeGenerator.Generators
 {
 	public abstract class CppGenerator : Generator
 	{
+		public readonly string InputFile;
+
 		public CSharpConverterOptions Options { get; protected set; }
 		public MacroConverterPlugin MacroPlugin { get; protected set; }
 
-		public CppGenerator()
+		public CppGenerator(string inputFile)
 		{
+			InputFile = inputFile;
+
 			Options = new CSharpConverterOptions {
 				DispatchOutputPerInclude = false,
 				GenerateEnumItemAsFields = false,
@@ -65,14 +69,14 @@ namespace CodeGenerator.Generators
 			Options.Plugins.Add(MacroPlugin = new MacroConverterPlugin());
 		}
 
-		public override void Generate(string inputFile, string outputPath)
+		public override void Generate(string outputPath)
 		{
-			Console.WriteLine($"{GetType().Name}: Processing {Path.GetFileName(inputFile)}...");
+			Console.WriteLine($"{GetType().Name}: Processing {Path.GetFileName(InputFile)}...");
 
 			Options.IncludeFolders.Clear();
-			Options.IncludeFolders.Add(Path.GetDirectoryName(inputFile));
+			Options.IncludeFolders.Add(Path.GetDirectoryName(InputFile));
 
-			var compilation = CSharpConverter.Convert(new List<string> { inputFile }, Options);
+			var compilation = CSharpConverter.Convert(new List<string> { InputFile }, Options);
 
 			if (compilation.HasErrors) {
 				foreach (var message in compilation.Diagnostics.Messages) {

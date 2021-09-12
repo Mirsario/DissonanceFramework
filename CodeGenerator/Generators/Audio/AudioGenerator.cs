@@ -16,7 +16,7 @@ namespace CodeGenerator.Generators.Audio
 		public string Namespace { get; private set; }
 		public string Class { get; private set; }
 
-		public AudioGenerator(string defaultNamespace, string defaultClass, string outputFile) : base()
+		public AudioGenerator(string inputFile, string defaultNamespace, string defaultClass, string outputFile) : base(inputFile)
 		{
 			Options.DefaultNamespace = Namespace = defaultNamespace;
 			Options.DefaultClassLib = Class = defaultClass;
