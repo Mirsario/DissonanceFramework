@@ -62,14 +62,14 @@ void main() {
 			GL.AttachShader(program, fs);
 			GL.LinkProgram(program);
 
-			while(GLFW.WindowShouldClose(window) == 0) {
-				GLFW.PollEvents();
+			while(Glfw.WindowShouldClose(window) == 0) {
+				Glfw.PollEvents();
 
-				double time = GLFW.GetTime();
+				double time = Glfw.GetTime();
 				//double deltaTime = time-timePrev;
 				//timePrev = time;
 
-				GLFW.GetFramebufferSize(window, out int width, out int height);
+				Glfw.GetFramebufferSize(window, out int width, out int height);
 
 				GL.Viewport(0, 0, width, height);
 
@@ -86,7 +86,7 @@ void main() {
 				GL.BindVertexArray(vao);
 				GL.DrawArrays(PrimitiveType.Triangles, 0, points.Length / 3);
 
-				GLFW.SwapBuffers(window);
+				Glfw.SwapBuffers(window);
 
 				CheckGLErrors();
 

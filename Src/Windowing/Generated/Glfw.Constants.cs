@@ -11,12 +11,12 @@ using System;
 
 namespace Dissonance.Framework.Windowing
 {
-    public partial class GLFW
-    {
-        public const int OpenGLAnyProfile = 0;
-        
-        public const int OpenGLCoreProfile = 0x00032001;
-        
-        public const int OpenGLCompatProfile = 0x00032002;
-    }
+	public partial class Glfw
+	{
+		public const int OpenGLAnyProfile = 0;
+
+		public const int OpenGLCoreProfile = 0x00032001;
+
+		public const int OpenGLCompatProfile = 0x00032002;
+	}
 }

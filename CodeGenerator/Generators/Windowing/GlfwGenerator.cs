@@ -11,8 +11,8 @@ namespace CodeGenerator.Generators.Windowing
 		public GlfwGenerator() : base()
 		{
 			Options.DefaultNamespace = "Dissonance.Framework.Windowing";
-			Options.DefaultClassLib = "GLFW";
-			Options.DefaultOutputFilePath = "GLFW.Generated.cs";
+			Options.DefaultClassLib = "Glfw";
+			Options.DefaultOutputFilePath = "Glfw.Generated.cs";
 			Options.DefaultDllImportNameAndArguments = "Library";
 
 			static CppElementMappingRule ParameterToBool(CppElementMappingRule e)
