@@ -1519,7 +1519,7 @@ namespace Dissonance.Framework.Windowing
         /// attempting to set this will emit @ref GLFW_FEATURE_UNAVAILABLE. Call @ref glfwRawMouseMotionSupported to check for support.@errors Possible errors include @ref GLFW_NOT_INITIALIZED, @ref GLFW_INVALID_ENUM, @ref GLFW_PLATFORM_ERROR and @ref GLFW_FEATURE_UNAVAILABLE (see above).@thread _safety This function must only be called from the main thread.@sa @ref glfwGetInputMode@since Added in version 3.0.  Replaces `glfwEnable` and `glfwDisable`. input
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwSetInputMode", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void SetInputMode(IntPtr window, int mode, [MarshalAs(UnmanagedType.I4)] bool value);
+        public static extern void SetInputMode(IntPtr window, InputMode mode, [MarshalAs(UnmanagedType.I4)] bool value);
         
         /// <summary>
         /// 

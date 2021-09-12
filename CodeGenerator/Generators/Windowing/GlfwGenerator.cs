@@ -58,14 +58,21 @@ namespace CodeGenerator.Generators.Windowing
 				
 				// Input
 				new MacroToEnumRule(@"GLFW_GAMEPAD_BUTTON_(.+)$", "GamepadButton", s => EnumItemRenamer(s.Replace("GLFW_GAMEPAD_BUTTON_", null))),
+				new MacroToEnumRule(@"GLFW_GAMEPAD_AXIS_(.+)$", "GamepadAxis", s => EnumItemRenamer(s.Replace("GLFW_GAMEPAD_AXIS_", null))),
 				new MacroToEnumRule(@"GLFW_JOYSTICK_([\dA-Z]+)$", "Joystick", s => EnumItemRenamer(PrefixNumbers(s.Replace("GLFW_JOYSTICK_", null), "Joystick"))),
+				new MacroToEnumRule(@"GLFW_HAT_(.+)$", "JoystickHatState", s => EnumItemRenamer(s.Replace("GLFW_HAT_", null))),
 				new MacroToEnumRule(@"GLFW_MOD_(.+)$", "KeyModifier", s => EnumItemRenamer(s.Replace("GLFW_MOD_", null))),
 				new MacroToEnumRule(@"GLFW_KEY_(.+)$", "Keys", s => EnumItemRenamer(PrefixNumbers(s.Replace("GLFW_KEY_", null), "Number"))),
 				new MacroToEnumRule(@"GLFW_MOUSE_BUTTON_(.+)$", "MouseButton", s => EnumItemRenamer(PrefixNumbers(s.Replace("GLFW_MOUSE_BUTTON_", null), "Button"))),
+				new MacroToEnumRule(@"GLFW_(?:PRESS|RELEASE)$", "ButtonState", s => EnumItemRenamer(s.Replace("GLFW_", null))),
+				new MacroToEnumRule(@"GLFW_(?:PRESS|RELEASE|REPEAT)$", "KeyState", s => EnumItemRenamer(s.Replace("GLFW_", null))),
+
+				// Other
+				new MacroToEnumRule(@"GLFW_(?:CURSOR|STICKY_KEYS|STICKY_MOUSE_BUTTONS|LOCK_KEY_MODS|RAW_MOUSE_MOTION)$", "InputMode", s => EnumItemRenamer(s.Replace("GLFW_", null))),
 
 				// Macros to constants
 
-				new MacroToConstantRule(@"GLFW_(?!OPENGL_DEBUG_CONTEXT)(.+)$", CSharpPrimitiveType.Int(), $"{Options.DefaultClassLib}.Constants.cs", Options.DefaultClassLib, EnumItemRenamer) {
+				new MacroToConstantRule(@"GLFW_(?!OPENGL_DEBUG_CONTEXT)(?!TRUE)(?!FALSE)(.+)$", CSharpPrimitiveType.Int(), $"{Options.DefaultClassLib}.Constants.cs", Options.DefaultClassLib, EnumItemRenamer) {
 					OnlyNonProcessedMacros = true
 				},
 			});
@@ -85,6 +92,7 @@ namespace CodeGenerator.Generators.Windowing
 				e => e.Map<CppClass>("Gamepadstate").Name("GamepadState"),
 
 				// Method parameter type fixes
+				e => e.Map<CppParameter>("glfwSetInputMode::mode").ParameterType($"{Options.DefaultNamespace}.InputMode"),
 				e => e.Map<CppParameter>("glfwWindowHint::hint").ParameterType($"{Options.DefaultNamespace}.{WindowHintEnum}"),
 				e => ParameterToBool(e.Map<CppParameter>("glfwSetWindowAttrib::value")),
 				e => ParameterToBool(e.Map<CppParameter>("glfwSetInputMode::value")),

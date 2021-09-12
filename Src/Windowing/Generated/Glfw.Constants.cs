@@ -19,48 +19,6 @@ namespace Dissonance.Framework.Windowing
         
         public const int VersionRevision = 0;
         
-        public const int True = 1;
-        
-        public const int False = 0;
-        
-        public const int Release = 0;
-        
-        public const int Press = 1;
-        
-        public const int Repeat = 2;
-        
-        public const int HatCentered = 0;
-        
-        public const int HatUp = 1;
-        
-        public const int HatRight = 2;
-        
-        public const int HatDown = 4;
-        
-        public const int HatLeft = 8;
-        
-        public const int HatRightUp = (HatRight|HatUp);
-        
-        public const int HatRightDown = (HatRight|HatDown);
-        
-        public const int HatLeftUp = (HatLeft|HatUp);
-        
-        public const int HatLeftDown = (HatLeft|HatDown);
-        
-        public const int GamepadAxisLeftX = 0;
-        
-        public const int GamepadAxisLeftY = 1;
-        
-        public const int GamepadAxisRightX = 2;
-        
-        public const int GamepadAxisRightY = 3;
-        
-        public const int GamepadAxisLeftTrigger = 4;
-        
-        public const int GamepadAxisRightTrigger = 5;
-        
-        public const int GamepadAxisLast = GamepadAxisRightTrigger;
-        
         public const int NoWindowContext = 0x0001000A;
         
         public const int CursorUnavailable = 0x0001000B;
@@ -100,16 +58,6 @@ namespace Dissonance.Framework.Windowing
         public const int OpenGLCoreProfile = 0x00032001;
         
         public const int OpenGLCompatProfile = 0x00032002;
-        
-        public const int Cursor = 0x00033001;
-        
-        public const int StickyKeys = 0x00033002;
-        
-        public const int StickyMouseButtons = 0x00033003;
-        
-        public const int LockKeyMods = 0x00033004;
-        
-        public const int RawMouseMotion = 0x00033005;
         
         public const int CursorNormal = 0x00034001;
         
