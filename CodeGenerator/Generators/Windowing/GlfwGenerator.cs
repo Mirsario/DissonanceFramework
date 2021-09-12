@@ -1,6 +1,5 @@
 ﻿using System;
 using CodeGenerator.Converters;
-using CodeGenerator.Generators;
 using CodeGenerator.Utilities;
 using CppAst;
 using CppAst.CodeGen.CSharp;

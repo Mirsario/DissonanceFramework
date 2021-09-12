@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using CodeGenerator.Converters;
-using CppAst;
 using CppAst.CodeGen.CSharp;
 
 namespace CodeGenerator

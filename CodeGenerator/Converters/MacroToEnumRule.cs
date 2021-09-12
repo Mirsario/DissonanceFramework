@@ -25,8 +25,8 @@ namespace CodeGenerator.Converters
 			var csCompilation = converter.CurrentCSharpCompilation;
 			string filePath = $"{EnumTypeName}.cs";
 
-			if (!(csCompilation.Members.FirstOrDefault(m => m is CSharpGeneratedFile f && f.FilePath == filePath) is CSharpGeneratedFile file)
-			|| !(file.Members.FirstOrDefault(m => m is CSharpNamespace ns && ns.Name == converter.Options.DefaultNamespace) is CSharpNamespace csNamespace)) {
+			if (csCompilation.Members.FirstOrDefault(m => m is CSharpGeneratedFile f && f.FilePath == filePath) is not CSharpGeneratedFile file
+			|| file.Members.FirstOrDefault(m => m is CSharpNamespace ns && ns.Name == converter.Options.DefaultNamespace) is not CSharpNamespace csNamespace) {
 				file = new CSharpGeneratedFile(new UPath(filePath));
 				csNamespace = new CSharpNamespace(converter.Options.DefaultNamespace);
 
@@ -34,7 +34,7 @@ namespace CodeGenerator.Converters
 				file.Members.Add(csNamespace);
 			}
 
-			if (!(csNamespace.Members.FirstOrDefault(e => e is CSharpEnum csEnum && csEnum.Name == EnumTypeName) is CSharpEnum csharpEnum)) {
+			if (csNamespace.Members.FirstOrDefault(e => e is CSharpEnum csEnum && csEnum.Name == EnumTypeName) is not CSharpEnum csharpEnum) {
 				csharpEnum = new CSharpEnum(EnumTypeName);
 
 				csNamespace.Members.Insert(0, csharpEnum);

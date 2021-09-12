@@ -138,7 +138,7 @@ namespace CodeGenerator.Generators
 					_ => throw new Exception()
 				};
 
-				if (!(lastElementType is CppTypedef typedef)) {
+				if (lastElementType is not CppTypedef typedef) {
 					return;
 				}
 

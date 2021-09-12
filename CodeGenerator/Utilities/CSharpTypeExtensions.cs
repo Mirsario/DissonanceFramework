@@ -17,14 +17,14 @@ namespace CodeGenerator.Utilities
 				topParent = topParent.Parent;
 			}
 
-			if (!(topParent is CSharpCompilation csCompilation)) {
+			if (topParent is not CSharpCompilation csCompilation) {
 				throw new ArgumentException("Element does not have a compilation in its parents.");
 			}
 
 			bool RecursiveSearch(string path, IEnumerable<CSharpElement> elements, out CSharpType result)
 			{
 				foreach (CSharpElement csElement in elements) {
-					if (!(csElement is CSharpNamedType subType)) {
+					if (csElement is not CSharpNamedType subType) {
 						continue;
 					}
 
