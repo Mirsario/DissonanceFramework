@@ -16,12 +16,13 @@ namespace Test
 		{
 			Console.WriteLine($"Working directory: '{Path.GetFullPath(".")}'.");
 
-			PrepareGLFW();
-			PrepareOpenGL();
+			//PrepareGLFW();
+			//PrepareOpenGL();
 			PrepareOpenAL();
 
 			//double timePrev = 0d;
 
+			/*
 			CheckGLErrors();
 
 			float[] points = {
@@ -94,9 +95,12 @@ void main() {
 
 				Thread.Sleep(1);
 			}
+			*/
+
+			Console.ReadLine();
 
 			UnloadOpenAL();
-			UnloadGLFW();
+			//UnloadGLFW();
 		}
 
 		public static float Lerp(float a, float b, float time) => a + (b - a) * Clamp01(time);

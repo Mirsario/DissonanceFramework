@@ -1,6 +1,5 @@
+/*
 using System;
-using System.IO;
-using Dissonance.Framework.Graphics;
 using Dissonance.Framework.Windowing;
 
 namespace Test
@@ -13,19 +12,18 @@ namespace Test
 		{
 			Console.WriteLine("GLFW Preparing...");
 
-			GLFW.SetErrorCallback((GLFWError code, string description) => Console.WriteLine(code switch
-			{
-				GLFWError.VersionUnavailable => throw new GraphicsException(description),
-				GLFWError.APIUnavailable => throw new GraphicsException(description),
+			GLFW.SetErrorCallback((GLFWError code, string description) => Console.WriteLine(code switch {
+				GLFWError.VersionUnavailable => throw new Exception(description),
+				GLFWError.APIUnavailable => throw new Exception(description),
 				_ => $"GLFW Error {code}: {description}"
 			}));
 
-			if(GLFW.Init() == 0) {
+			if (!GLFW.Init()) {
 				throw new Exception("Unable to initialize GLFW!");
 			}
 
-			GLFW.WindowHint(WindowHint.ContextVersionMajor, OpenGLVersion.Major); //Targeted major version
-			GLFW.WindowHint(WindowHint.ContextVersionMinor, OpenGLVersion.Minor); //Targeted minor version
+			GLFW.WindowHint(WindowHint.ContextVersionMajor, OpenGLVersion.Major); // Targeted major version
+			GLFW.WindowHint(WindowHint.ContextVersionMinor, OpenGLVersion.Minor); // Targeted minor version
 			GLFW.WindowHint(WindowHint.OpenGLProfile, GLFW.OPENGL_CORE_PROFILE);
 			GLFW.WindowHint(WindowHint.OpenGLForwardCompat, 1);
 
@@ -33,7 +31,7 @@ namespace Test
 			int resolutionWidth = 800;
 			int resolutionHeight = 600;
 
-			if(Fullscreen) {
+			if (Fullscreen) {
 				monitor = GLFW.GetPrimaryMonitor();
 
 				var videoMode = GLFW.GetVideoMode(monitor);
@@ -53,6 +51,7 @@ namespace Test
 
 			GLFW.SwapInterval(0);
 		}
+
 		private static void UnloadGLFW()
 		{
 			GLFW.DestroyWindow(window);
@@ -60,3 +59,4 @@ namespace Test
 		}
 	}
 }
+*/
