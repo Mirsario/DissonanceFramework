@@ -18,10 +18,10 @@ namespace CodeGenerator
 					.Generate("Generators/Windowing/Include/glfw3.h", "../Src/Windowing/Generated");
 
 				new ALGenerator("Dissonance.Framework.Audio", "AL", "AL.Generated.cs")
-					.Generate("Generators/Audio/Include/al.h", "../Src/Audio/AL/Generated");
+					.Generate("Generators/Audio/Include/al.h", "../Src/Audio/Generated/AL");
 
 				new ALCGenerator("Dissonance.Framework.Audio", "ALC", "ALC.Generated.cs")
-					.Generate("Generators/Audio/Include/alc.h", "../Src/Audio/ALC/Generated");
+					.Generate("Generators/Audio/Include/alc.h", "../Src/Audio/Generated/ALC");
 
 				Console.WriteLine("Success.");
 				Thread.Sleep(500);
