@@ -48,7 +48,7 @@ namespace CodeGenerator.Generators.Windowing
 				// Macros to constants
 
 				//TODO: This is temporary. Make any macro that has not been consumed by the above enum conversion be turned into a constant.
-				new MacroToConstantRule(@"GLFW_(OPENGL_\w+_PROFILE)$", Options.DefaultClassLib, "$1", CSharpPrimitiveType.Int(), EnumItemNaming),
+				new MacroToConstantRule(@"GLFW_(OPENGL_\w+_PROFILE)$", "$1", CSharpPrimitiveType.Int(), $"{Options.DefaultClassLib}.Constants.cs", Options.DefaultClassLib, EnumItemNaming),
 			});
 
 			Options.MappingRules.AddRange(new Func<CppMappingRules, CppElementMappingRule>[] {
