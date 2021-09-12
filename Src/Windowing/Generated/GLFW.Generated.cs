@@ -28,32 +28,32 @@ namespace Dissonance.Framework.Windowing
             /// <summary>
             /// The width, in screen coordinates, of the video mode.
             /// </summary>
-            public int width;
+            public int Width;
             
             /// <summary>
             /// The height, in screen coordinates, of the video mode.
             /// </summary>
-            public int height;
+            public int Height;
             
             /// <summary>
             /// The bit depth of the red channel of the video mode.
             /// </summary>
-            public int redBits;
+            public int RedBits;
             
             /// <summary>
             /// The bit depth of the green channel of the video mode.
             /// </summary>
-            public int greenBits;
+            public int GreenBits;
             
             /// <summary>
             /// The bit depth of the blue channel of the video mode.
             /// </summary>
-            public int blueBits;
+            public int BlueBits;
             
             /// <summary>
             /// The refresh rate, in Hz, of the video mode.
             /// </summary>
-            public int refreshRate;
+            public int RefreshRate;
         }
         
         /// <summary>
@@ -68,22 +68,22 @@ namespace Dissonance.Framework.Windowing
             /// <summary>
             /// An array of value describing the response of the red channel.
             /// </summary>
-            public IntPtr red;
+            public IntPtr Red;
             
             /// <summary>
             /// An array of value describing the response of the green channel.
             /// </summary>
-            public IntPtr green;
+            public IntPtr Green;
             
             /// <summary>
             /// An array of value describing the response of the blue channel.
             /// </summary>
-            public IntPtr blue;
+            public IntPtr Blue;
             
             /// <summary>
             /// The number of elements in each array.
             /// </summary>
-            public uint size;
+            public uint Size;
         }
         
         /// <summary>
@@ -100,17 +100,17 @@ namespace Dissonance.Framework.Windowing
             /// <summary>
             /// The width, in pixels, of this image.
             /// </summary>
-            public int width;
+            public int Width;
             
             /// <summary>
             /// The height, in pixels, of this image.
             /// </summary>
-            public int height;
+            public int Height;
             
             /// <summary>
             /// The pixel data of this image, arranged left-to-right, top-to-bottom.
             /// </summary>
-            public IntPtr pixels;
+            public IntPtr Pixels;
         }
         
         /// <summary>
@@ -126,13 +126,13 @@ namespace Dissonance.Framework.Windowing
             /// The states of each [gamepad button](@ref gamepad_buttons), `GLFW_PRESS`
             /// or `GLFW_RELEASE`.
             /// </summary>
-            public fixed byte buttons[15];
+            public fixed byte Buttons[15];
             
             /// <summary>
             /// The states of each [gamepad axis](@ref gamepad_axes), in the range -1.0
             /// to 1.0 inclusive.
             /// </summary>
-            public fixed float axes[6];
+            public fixed float Axes[6];
         }
         
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]

@@ -51,6 +51,13 @@ namespace CodeGenerator.Generators
 							dllImportAttribute.EntryPoint = $@"""{function.Name}""";
 						}
 					}),
+
+					// Rename fields to UpperCamelCase, as they're going to be public members
+					e => e.MapAll<CppField>().CSharpAction((converter, element) => {
+						var field = (CSharpField)element;
+
+						field.Name = StringUtils.Capitalize(field.Name);
+					}),
 				}
 			};
 
