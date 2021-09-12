@@ -67,8 +67,6 @@ namespace CodeGenerator.Generators.Audio
 				// Use other enums
 				e => e.Map<CppParameter>("alBufferData::format").ParameterType($"{Namespace}.BufferFormat"),
 				e => e.Map<CppFunction>("alGetError").ReturnType($"{Namespace}.AudioError"),
-				// Fix pointer parameters
-				//e => e.Map<CppParameter>("alcCreateContext::attrlist").ParameterType(new CSharpArrayType(CSharpPrimitiveType.Int())),
 			});
 		}
 	}
