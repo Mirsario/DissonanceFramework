@@ -7,19 +7,16 @@ using System.Xml.Linq;
 
 namespace Dissonance.Framework
 {
-	internal static partial class DllManager
+	public static partial class DllMapResolver
 	{
 		private static bool resolverReady;
 
-		static DllManager() => PrepareResolver();
+		static DllMapResolver() => PrepareOwnResolver();
 
-		//This method implements a dllmap resolver for the framework's native libraries. It expects 'DissonanceFramework.dll.config' to be present next to the framework's dll.
-		internal static void PrepareResolver()
+		// This method implements a *barebones* dllmap resolver for the framework's native libraries. It expects 'DissonanceFramework.dll.config' to be present next to the framework's dll.
+		public static void SetForAssembly(Assembly assembly, string configPath = null)
 		{
-			if(resolverReady) {
-				return;
-			}
-
+			var stringComparer = StringComparer.InvariantCultureIgnoreCase;
 			string osString = OSUtils.GetOS().ToString().ToLower();
 			string cpuString = RuntimeInformation.OSArchitecture switch {
 				Architecture.Arm => "arm",
@@ -32,21 +29,26 @@ namespace Dissonance.Framework
 				Architecture.Arm => "32",
 				_ => "64",
 			};
-			var stringComparer = StringComparer.InvariantCultureIgnoreCase;
 
 			bool StringNullOrEqual(string a, string b)
 				=> a == null || stringComparer.Equals(a, b);
 
-			Assembly wrapperAssembly = Assembly.GetExecutingAssembly();
+			NativeLibrary.SetDllImportResolver(assembly, (name, assembly, path) => {
+				string usedConfigPath = configPath;
 
-			NativeLibrary.SetDllImportResolver(wrapperAssembly, (name, assembly, path) => {
-				string configPath = wrapperAssembly.Location + ".config";
+				if (configPath == null) {
+					if (string.IsNullOrWhiteSpace(assembly.Location)) {
+						usedConfigPath = $"{assembly.ManifestModule.ScopeName}.config";
+					} else {
+						usedConfigPath = $"{assembly.Location}.config";
+					}
+				}
 
-				if(!File.Exists(configPath)) {
+				if (!File.Exists(usedConfigPath)) {
 					return IntPtr.Zero;
 				}
 
-				XElement root = XElement.Load(configPath);
+				XElement root = XElement.Load(usedConfigPath);
 
 				var maps = root
 					.Elements("dllmap")
@@ -57,14 +59,21 @@ namespace Dissonance.Framework
 
 				var map = maps.SingleOrDefault();
 
-				if(map == null) {
-					throw new ArgumentException($"'{Path.GetFileName(configPath)}' - Found {maps.Count()} possible mapping candidates for dll '{name}'.");
+				if (map == null) {
+					throw new ArgumentException($"'{Path.GetFileName(usedConfigPath)}' - Found {maps.Count()} possible mapping candidates for dll '{name}'.");
 				}
 
 				return NativeLibrary.Load(map.Attribute("target").Value);
 			});
+		}
 
-			resolverReady = true;
+		internal static void PrepareOwnResolver()
+		{
+			if (!resolverReady) {
+				SetForAssembly(Assembly.GetExecutingAssembly());
+
+				resolverReady = true;
+			}
 		}
 	}
 }
