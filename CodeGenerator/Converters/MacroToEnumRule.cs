@@ -10,13 +10,11 @@ namespace CodeGenerator.Converters
 	public class MacroToEnumRule : MacroRule
 	{
 		public string EnumTypeName { get; set; }
-		public string EnumItemNameReplacement { get; set; }
 		public Func<string, string> Renamer { get; set; }
 
-		public MacroToEnumRule(string cppRegexName, string cppEnumTypeName, string cppEnumItemName, Func<string, string> renamer = null) : base(cppRegexName)
+		public MacroToEnumRule(string cppRegexName, string cppEnumTypeName, Func<string, string> renamer = null) : base(cppRegexName)
 		{
 			EnumTypeName = cppEnumTypeName;
-			EnumItemNameReplacement = cppEnumItemName;
 			Renamer = renamer;
 		}
 
@@ -40,13 +38,25 @@ namespace CodeGenerator.Converters
 				csNamespace.Members.Insert(0, csharpEnum);
 			}
 
-			string itemName = match.Result(EnumItemNameReplacement);
+			string itemName = match.Value;
 
 			if (Renamer != null) {
 				itemName = Renamer(itemName);
 			}
 
-			csharpEnum.Members.Add(new CSharpEnumItem(itemName, macro.Value));
+			string value = macro.Value;
+
+			// Try to detect references to other macros
+			if (!int.TryParse(value, out _)) {
+				var cppCompilation = converter.CurrentCppCompilation;
+				var matchingMacro = cppCompilation.Macros.FirstOrDefault(m => m.Name == value);
+
+				if (matchingMacro != null) {
+					value = Renamer(value);
+				}
+			}
+
+			csharpEnum.Members.Add(new CSharpEnumItem(itemName, value));
 		}
 	}
 }

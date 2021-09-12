@@ -10,29 +10,29 @@ namespace CodeGenerator.Generators.Audio
 	{
 		public ALGenerator(string defaultNamespace, string defaultClass, string outputFile) : base(defaultNamespace, defaultClass, outputFile)
 		{
-			static string EnumItemCasing(string name) => StringUtils.SnakeCaseToUpperCamelCase(name);
+			static string EnumItemRenamer(string name) => StringUtils.SnakeCaseToUpperCamelCase(name.Replace("AL_", null));
 
 			MacroPlugin.Rules.AddRange(new[] {
 				// State
-				new MacroToEnumRule(@"AL_(DISTANCE_MODEL)$", "StateInt", "$1", EnumItemCasing),
-				new MacroToEnumRule(@"AL_(DOPPLER_FACTOR|SPEED_OF_SOUND)$", "StateFloat", "$1", EnumItemCasing),
-				new MacroToEnumRule(@"AL_(DOPPLER_FACTOR|SPEED_OF_SOUND)$", "StateDouble", "$1", EnumItemCasing),
-				new MacroToEnumRule(@"AL_(VENDOR|VERSION|RENDERER|EXTENSIONS)$", "StateString", "$1", EnumItemCasing),
+				new MacroToEnumRule(@"AL_(DISTANCE_MODEL)$", "StateInt", EnumItemRenamer),
+				new MacroToEnumRule(@"AL_(DOPPLER_FACTOR|SPEED_OF_SOUND)$", "StateFloat", EnumItemRenamer),
+				new MacroToEnumRule(@"AL_(DOPPLER_FACTOR|SPEED_OF_SOUND)$", "StateDouble", EnumItemRenamer),
+				new MacroToEnumRule(@"AL_(VENDOR|VERSION|RENDERER|EXTENSIONS)$", "StateString", EnumItemRenamer),
 				// Listener
-				new MacroToEnumRule(@"AL_(GAIN)$", "ListenerFloat", "$1", EnumItemCasing),
-				new MacroToEnumRule(@"AL_(POSITION|VELOCITY)$", "ListenerFloat3", "$1", EnumItemCasing),
-				new MacroToEnumRule(@"AL_(POSITION|VELOCITY|ORIENTATION)$", "ListenerFloatArray", "$1", EnumItemCasing),
+				new MacroToEnumRule(@"AL_(GAIN)$", "ListenerFloat", EnumItemRenamer),
+				new MacroToEnumRule(@"AL_(POSITION|VELOCITY)$", "ListenerFloat3", EnumItemRenamer),
+				new MacroToEnumRule(@"AL_(POSITION|VELOCITY|ORIENTATION)$", "ListenerFloatArray", EnumItemRenamer),
 				// Source
-				new MacroToEnumRule(@"AL_(SOURCE_RELATIVE)$", "GetSourceBool", "$1", EnumItemCasing),
-				new MacroToEnumRule(@"AL_(BUFFER|SOURCE_STATE|BUFFERS_QUEUED|BUFFERS_PROCESSED)$", "GetSourceInt", "$1", EnumItemCasing),
-				new MacroToEnumRule(@"AL_(SOURCE_RELATIVE|LOOPING)$", "SourceBool", "$1", EnumItemCasing),
-				new MacroToEnumRule(@"AL_(BUFFER|SOURCE_STATE)$", "SourceInt", "$1", EnumItemCasing),
-				new MacroToEnumRule(@"AL_(PITCH|GAIN|MIN_GAIN|MAX_GAIN|MAX_DISTANCE|ROLLOFF_FACTOR|CONE_OUTER_GAIN|CONE_INNER_ANGLE|CONE_OUTER_ANGLE|REFERENCE_DISTANCE)$", "SourceFloat", "$1", EnumItemCasing),
+				new MacroToEnumRule(@"AL_(SOURCE_RELATIVE)$", "GetSourceBool", EnumItemRenamer),
+				new MacroToEnumRule(@"AL_(BUFFER|SOURCE_STATE|BUFFERS_QUEUED|BUFFERS_PROCESSED)$", "GetSourceInt", EnumItemRenamer),
+				new MacroToEnumRule(@"AL_(SOURCE_RELATIVE|LOOPING)$", "SourceBool", EnumItemRenamer),
+				new MacroToEnumRule(@"AL_(BUFFER|SOURCE_STATE)$", "SourceInt", EnumItemRenamer),
+				new MacroToEnumRule(@"AL_(PITCH|GAIN|MIN_GAIN|MAX_GAIN|MAX_DISTANCE|ROLLOFF_FACTOR|CONE_OUTER_GAIN|CONE_INNER_ANGLE|CONE_OUTER_ANGLE|REFERENCE_DISTANCE)$", "SourceFloat", EnumItemRenamer),
 				// Buffer
-				new MacroToEnumRule(@"AL_(FREQUENCY|BITS|CHANNELS|SIZE|DATA)$", "GetBufferInt", "$1", EnumItemCasing),
+				new MacroToEnumRule(@"AL_(FREQUENCY|BITS|CHANNELS|SIZE|DATA)$", "GetBufferInt", EnumItemRenamer),
 				// Other
-				new MacroToEnumRule(@"AL_(FORMAT_MONO8|FORMAT_MONO16|FORMAT_STEREO8|FORMAT_STEREO16)$", "BufferFormat", "$1", s => EnumItemCasing(s.Replace("FORMAT_", null))),
-				new MacroToEnumRule(@"AL_(NO_ERROR|INVALID_NAME|INVALID_ENUM|INVALID_VALUE|INVALID_OPERATION|OUT_OF_MEMORY)$", "AudioError", "$1", EnumItemCasing),
+				new MacroToEnumRule(@"AL_(FORMAT_MONO8|FORMAT_MONO16|FORMAT_STEREO8|FORMAT_STEREO16)$", "BufferFormat", s => EnumItemRenamer(s.Replace("FORMAT_", null))),
+				new MacroToEnumRule(@"AL_(NO_ERROR|INVALID_NAME|INVALID_ENUM|INVALID_VALUE|INVALID_OPERATION|OUT_OF_MEMORY)$", "AudioError", EnumItemRenamer),
 			});
 
 			Options.MappingRules.AddRange(new Func<CppMappingRules, CppElementMappingRule>[] {
