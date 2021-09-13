@@ -7,6 +7,7 @@ using CppAst;
 using CppAst.CodeGen.Common;
 using CppAst.CodeGen.CSharp;
 using Zio.FileSystems;
+using CodeWriter = CppAst.CodeGen.Common.CodeWriter;
 
 namespace CodeGenerator.Generators
 {

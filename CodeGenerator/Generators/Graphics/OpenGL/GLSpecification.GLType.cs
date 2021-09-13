@@ -7,22 +7,24 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 		public readonly struct GLType
 		{
 			public readonly string Type;
-			public readonly string Group;
 			public readonly bool Constant;
 
-			public GLType(string type, string typeGroup = null, bool constant = false)
+			public GLType(string type, bool constant = false)
 			{
 				Type = type;
-				Group = typeGroup;
 				Constant = constant;
 			}
 
 			public override string ToString()
-				=> $"{{ {nameof(Type)}: {Type}, {nameof(Group)}: {Group} }}";
+				=> $"{(Constant ? "const " : null)}{Type}";
 
-			public static GLType Parse(string str)
+			public static GLType Parse(string input)
 			{
-				string type = str;
+				if (string.IsNullOrWhiteSpace(input)) {
+					throw new ArgumentNullException(nameof(input));
+				}
+
+				string type = input;
 				bool constant = false;
 
 				if (type.StartsWith("const ")) {
@@ -30,9 +32,9 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 					constant = true;
 				}
 
-				Console.WriteLine($"Parsed type: '{type}'");
+				type = type.Replace(" *", "*");
 
-				return new GLType(type, constant: constant);
+				return new GLType(type, constant);
 			}
 		}
 	}

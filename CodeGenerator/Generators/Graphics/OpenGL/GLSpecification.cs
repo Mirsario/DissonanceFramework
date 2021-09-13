@@ -24,20 +24,15 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 				var xmlParameters = functionElement.Elements("param").ToArray();
 
 				string name = xmlProto.Element("name").Value;
-				GLType? returnType = xmlPType != null ? new GLType(xmlPType.Value, xmlProto.Attribute("group")?.Value) : null;
-				Parameter[] parameters = xmlParameters.Length > 0 ? new Parameter[xmlParameters.Length] : null;
+				string returnGroup = xmlProto.Attribute("group")?.Value;
+				var returnType = new GLType(xmlPType?.Value ?? "void");
+				Parameter[] parameters = xmlParameters.Length > 0 ? new Parameter[xmlParameters.Length] : Array.Empty<Parameter>();
 
 				for (int i = 0; i < xmlParameters.Length; i++) {
-					var xmlParameter = xmlParameters[i];
-					//var xmlParameterType = xmlParameter.Element("ptype");
-
-					string parameterName = xmlParameter.Element("name").Value;
-					var parameterType = GLType.Parse(xmlParameter.Value.Substring(0, xmlParameter.Value.IndexOf(parameterName, StringComparison.Ordinal)));
-
-					parameters[i] = new Parameter(parameterName, parameterType);
+					parameters[i] = Parameter.Parse(xmlParameters[i]);
 				}
 
-				var function = new Function(name, returnType, parameters);
+				var function = new Function(name, returnType, parameters, returnGroup);
 
 				Functions.Add(function);
 			}
@@ -76,8 +71,6 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 
 				Versions.Add(glVersion);
 			}
-
-			Console.ReadKey();
 		}
 	}
 }

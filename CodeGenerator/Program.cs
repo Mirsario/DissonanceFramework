@@ -36,7 +36,7 @@ namespace CodeGenerator
 				new ALCGenerator("Generators/Audio/Include/alc.h", "Dissonance.Framework.Audio", "ALC", "ALC.Generated.cs")
 					.Generate(Path.Combine(AudioOutput, "ALC"));
 
-				new GLGenerator("Generators/Graphics/OpenGL/Include/gl.xml")
+				new GLGenerator("Generators/Graphics/OpenGL/Include/gl.xml", "Dissonance.Framework.Graphics.OpenGL", "GL")
 					.Generate(OpenGLOutput);
 
 				foreach (var file in filesToPotentiallyDelete) {
