@@ -98,11 +98,11 @@ namespace CodeGenerator.Generators.Audio
 			});
 		}
 
-		public override void Generate(string inputFile, string outputPath)
+		public override void Generate(string outputPath)
 		{
 			previousFunctionComment = null;
 
-			base.Generate(inputFile, outputPath);
+			base.Generate(outputPath);
 		}
 	}
 }
