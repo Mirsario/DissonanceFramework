@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using CodeGenerator.Generators.Audio;
+using CodeGenerator.Generators.Graphics.OpenGL;
 using CodeGenerator.Generators.Windowing;
 
 namespace CodeGenerator
@@ -18,6 +19,7 @@ namespace CodeGenerator
 
 				const string WindowingOutput = "../Src/Windowing/Generated";
 				const string AudioOutput = "../Src/Audio/Generated";
+				const string OpenGLOutput = "../Src/Graphics/OpenGL/Generated";
 
 				var filesToPotentiallyDelete = new List<FileInfo>();
 				var startDate = DateTime.Now;
@@ -33,6 +35,9 @@ namespace CodeGenerator
 
 				new ALCGenerator("Generators/Audio/Include/alc.h", "Dissonance.Framework.Audio", "ALC", "ALC.Generated.cs")
 					.Generate(Path.Combine(AudioOutput, "ALC"));
+
+				new GLGenerator("Generators/Graphics/OpenGL/Include/gl.xml")
+					.Generate(OpenGLOutput);
 
 				foreach (var file in filesToPotentiallyDelete) {
 					file.Refresh();
