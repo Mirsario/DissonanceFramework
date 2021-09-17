@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CodeGenerator.Generators.Graphics.OpenGL
@@ -12,22 +13,20 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 			public readonly string VectorEquivalent;
 			public readonly string ReturnGroup;
 
-			private readonly Parameter[] parameters;
-
-			public ReadOnlySpan<Parameter> Parameters => parameters;
+			public readonly IReadOnlyList<Parameter> Parameters;
 
 			public Function(string name, GLType returnType, Parameter[] parameters, string returnGroup = null, string vectorEquivalent = null)
 			{
 				Name = name;
 				ReturnType = returnType;
-				this.parameters = parameters;
+				Parameters = parameters.ToList().AsReadOnly();
 				ReturnGroup = returnGroup;
 				VectorEquivalent = vectorEquivalent;
 			}
 
 			public override string ToString()
 			{
-				return $"{ReturnType} {Name}({string.Join(", ", parameters.Select(p => $"{p.Type} {p.Name}"))})";
+				return $"{ReturnType} {Name}({string.Join(", ", Parameters.Select(p => $"{p.Type} {p.Name}"))})";
 			}
 		}
 	}

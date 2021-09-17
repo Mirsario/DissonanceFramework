@@ -10,7 +10,7 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 	public partial class GLSpecification
 	{
 		public readonly List<GLVersion> Versions = new();
-		public readonly List<Function> Functions = new();
+		public readonly Dictionary<string, Function> Functions = new();
 
 		public GLSpecification(string xmlPath)
 		{
@@ -32,9 +32,7 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 					parameters[i] = Parameter.Parse(xmlParameters[i]);
 				}
 
-				var function = new Function(name, returnType, parameters, returnGroup);
-
-				Functions.Add(function);
+				Functions.Add(name, new Function(name, returnType, parameters, returnGroup));
 			}
 
 			// Parse versions (features)

@@ -35,15 +35,15 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 				code.WriteLine($"namespace {Namespace}");
 				code.WriteLine("{");
 				code.Indent();
-				code.WriteLine($"partial class {Class}");
+				code.WriteLine($"unsafe partial class {Class}");
 				code.WriteLine("{");
 				code.Indent();
 
 				foreach (var featureSet in version.FeatureSets.Where(f => f.Type == GLSpecification.FeatureSetType.Requires)) {
 					foreach (string functionName in featureSet.Functions) {
+						var function = specification.Functions[functionName];
 
-
-						code.WriteLine($"public static void {functionName}() {{ }}");
+						code.WriteLine($"private static delegate*<{string.Join(", ", function.Parameters.Select(p => p.Type.Type))}> {function.Name};");
 						code.WriteLine();
 					}
 				}
