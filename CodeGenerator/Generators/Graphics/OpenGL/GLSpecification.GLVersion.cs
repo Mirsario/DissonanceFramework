@@ -5,14 +5,14 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 {
 	partial class GLSpecification
 	{
-		public class GLVersion
+		public class ApiVersion
 		{
 			public readonly string Api;
 			public readonly string Directive;
 			public readonly Version Version;
 			public readonly List<FeatureSet> FeatureSets = new();
 
-			public GLVersion(string api, string directive, Version version)
+			public ApiVersion(string api, string directive, Version version)
 			{
 				Api = api;
 				Directive = directive;

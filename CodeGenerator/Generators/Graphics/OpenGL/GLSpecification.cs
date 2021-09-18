@@ -9,7 +9,7 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 {
 	public partial class GLSpecification
 	{
-		public readonly List<GLVersion> Versions = new();
+		public readonly List<ApiVersion> ApiVersions = new();
 		public readonly Dictionary<string, Function> Functions = new();
 
 		public GLSpecification(string xmlPath)
@@ -42,7 +42,7 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 				string directive = featureElement.Attribute("name").Value;
 				var versionNumber = new Version(featureElement.Attribute("number").Value);
 
-				var glVersion = new GLVersion(api, directive, versionNumber);
+				var glVersion = new ApiVersion(api, directive, versionNumber);
 
 				void HandleFeatureSet(FeatureSetType type, XElement element)
 				{
@@ -67,7 +67,7 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 					HandleFeatureSet(FeatureSetType.Removes, removeElement);
 				}
 
-				Versions.Add(glVersion);
+				ApiVersions.Add(glVersion);
 			}
 		}
 	}

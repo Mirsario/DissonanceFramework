@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
@@ -26,8 +27,25 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 
 			Directory.CreateDirectory(outputPath);
 
-			foreach (var version in specification.Versions) {
-				string file = Path.Combine(outputPath, $"GL.{version.Version.Major}{version.Version.Minor}.cs");
+			var requiredFunctions = new HashSet<string>();
+			var functionsByVersion = new Dictionary<Version, List<GLSpecification.Function>>();
+
+			foreach (var version in specification.ApiVersions) {
+				var versionFunctions = functionsByVersion[version.Version] = new List<GLSpecification.Function>();
+
+				foreach (var featureSet in version.FeatureSets.Where(f => f.Type == GLSpecification.FeatureSetType.Requires)) {
+					foreach (string functionName in featureSet.Functions) {
+						var function = specification.Functions[functionName];
+
+						if (requiredFunctions.Add(function.Name)) {
+							versionFunctions.Add(function);
+						}
+					}
+				}
+			}
+
+			foreach (var apiVersion in specification.ApiVersions) {
+				string file = Path.Combine(outputPath, $"GL.{apiVersion.Version.Major}{apiVersion.Version.Minor}.cs");
 				var code = new CodeWriter(file);
 
 				code.WriteLine("using System;");
@@ -39,13 +57,12 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 				code.WriteLine("{");
 				code.Indent();
 
-				foreach (var featureSet in version.FeatureSets.Where(f => f.Type == GLSpecification.FeatureSetType.Requires)) {
-					foreach (string functionName in featureSet.Functions) {
-						var function = specification.Functions[functionName];
+				foreach (var function in functionsByVersion[apiVersion.Version]) {
+					var parameterNames = function.Parameters.Select(p => GetTypeName(p.Type));
+					string generics = string.Join(", ", parameterNames.Append(GetTypeName(function.ReturnType)));
 
-						code.WriteLine($"private static delegate*<{string.Join(", ", function.Parameters.Select(p => p.Type.Type))}> {function.Name};");
-						code.WriteLine();
-					}
+					code.WriteLine($"private static delegate*<{generics}> {function.Name};");
+					code.WriteLine();
 				}
 
 				code.Unindent();
@@ -55,6 +72,48 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 
 				code.Save();
 			}
+		}
+
+		private static string GetTypeName(GLSpecification.GLType type)
+		{
+			string name = type.Type switch {
+				"GLboolean" => "bool",
+				"GLbyte" => "sbyte",
+				"GLubyte" => "byte",
+				"GLshort" => "short",
+				"GLushort" => "ushort",
+				"GLint" => "int",
+				"GLuint" => "uint",
+				"GLfixed" => "int",
+				"GLint64" => "long",
+				"GLuint64" => "ulong",
+				"GLsizei" => "int",
+				"GLenum" => "uint",
+				"GLintptr" => "IntPtr",
+				"GLsizeiptr" => "IntPtr",
+				"GLsync" => "IntPtr",
+				"GLhalf" => "Half",
+				"GLfloat" => "float",
+				"GLclampf" => "float",
+				"GLdouble" => "double",
+				"GLclampd" => "double",
+				"GLclampx" => "int",
+				"GLchar" => "byte",
+				"GLbitfield" => "uint",
+
+				// TODO: Temporary hardcode
+				"GLDEBUGPROC" => "delegate*<uint, uint, uint, uint, int, byte*, void*, void>",
+
+				_ => type.Type
+			};
+
+			int pointerLevel = type.PointerLevel;
+
+			if (pointerLevel > 0) {
+				name += new string('*', type.PointerLevel);
+			}
+
+			return name;
 		}
 	}
 }
