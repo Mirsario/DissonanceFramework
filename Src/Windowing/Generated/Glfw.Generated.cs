@@ -2407,7 +2407,7 @@ namespace Dissonance.Framework.Windowing
         /// is destroyed or the library is terminated.@thread _safety This function may be called from any thread.@sa @ref context_glext@sa @ref glfwExtensionSupported@since Added in version 1.0. context
         /// </remarks>
         [DllImport(Library, EntryPoint = "glfwGetProcAddress", CallingConvention = CallingConvention.Cdecl)]
-        public static extern Glfw.Glproc GetProcAddress([MarshalAs(UnmanagedType.LPStr)] string procname);
+        public static extern IntPtr GetProcAddress([MarshalAs(UnmanagedType.LPStr)] string procname);
         
         /// <summary>
         /// 

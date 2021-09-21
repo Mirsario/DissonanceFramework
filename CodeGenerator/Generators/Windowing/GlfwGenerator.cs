@@ -101,6 +101,7 @@ namespace CodeGenerator.Generators.Windowing
 				e => e.Map<CppTypedef>("Errorfun").ParameterType("arg0", $"{Options.DefaultNamespace}.GlfwError"),
 
 				// Return type fixes
+				e => e.Map<CppFunction>("glfwGetProcAddress").ReturnType(CSharpPrimitiveType.IntPtr()),
 				e => ReturnToBool(e.Map<CppFunction>("glfwInit")),
 				e => ReturnToBool(e.Map<CppFunction>("glfwRawMouseMotionSupported")),
 				e => ReturnToBool(e.Map<CppFunction>("glfwJoystickPresent")),
