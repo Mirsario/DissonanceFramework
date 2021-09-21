@@ -7,7 +7,7 @@ using CppAst.CodeGen.CSharp;
 
 namespace CodeGenerator.Generators.Audio
 {
-	public abstract class AudioGenerator : CppGenerator
+	public abstract class AudioGenerator : CppParsedGeneratorBase
 	{
 		private static CppComment previousFunctionComment;
 

@@ -1,12 +1,12 @@
 ﻿using System;
-using CodeGenerator.Converters;
+using CodeGenerator.Plugins.Macros;
 using CodeGenerator.Utilities;
 using CppAst;
 using CppAst.CodeGen.CSharp;
 
 namespace CodeGenerator.Generators.Windowing
 {
-	public class GlfwGenerator : CppGenerator
+	public class GlfwGenerator : CppParsedGeneratorBase
 	{
 		public GlfwGenerator(string inputFile) : base(inputFile)
 		{

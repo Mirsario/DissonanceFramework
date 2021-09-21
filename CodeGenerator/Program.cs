@@ -26,6 +26,7 @@ namespace CodeGenerator
 
 				filesToPotentiallyDelete.AddRange(new DirectoryInfo(WindowingOutput).EnumerateFiles("*.cs", SearchOption.AllDirectories));
 				filesToPotentiallyDelete.AddRange(new DirectoryInfo(AudioOutput).EnumerateFiles("*.cs", SearchOption.AllDirectories));
+				filesToPotentiallyDelete.AddRange(new DirectoryInfo(OpenGLOutput).EnumerateFiles("*.cs", SearchOption.AllDirectories));
 
 				new GlfwGenerator("Generators/Windowing/Include/glfw3.h")
 					.Generate(WindowingOutput);

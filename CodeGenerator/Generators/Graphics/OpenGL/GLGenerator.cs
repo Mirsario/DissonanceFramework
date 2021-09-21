@@ -1,224 +1,193 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Xml.Linq;
+using CodeGenerator.Plugins;
 using CodeGenerator.Utilities;
+using CppAst;
+using CppAst.CodeGen.CSharp;
 
 namespace CodeGenerator.Generators.Graphics.OpenGL
 {
-	public class GLGenerator : Generator
+	public class GLGenerator : CppGeneratorBase
 	{
 		public readonly string InputFile;
 		public readonly string Namespace;
 		public readonly string Class;
 
-		public GLGenerator(string inputFile, string @namespace, string @class)
+		public GLGenerator(string inputFile, string @namespace, string @class) : base()
 		{
 			InputFile = inputFile;
 			Namespace = @namespace;
 			Class = @class;
+
+			Options.DefaultNamespace = "Dissonance.Framework.Graphics.OpenGL";
+			Options.DefaultClassLib = "GL";
+			Options.DefaultOutputFilePath = "GL.Generated.cs";
+
+			Options.Plugins.Insert(0, new FunctionsAsPointersConverter());
+			Options.Plugins.Insert(0, new FilePerTypeContainerResolver());
+
+			Options.MappingRules.AddRange(new Func<CppMappingRules, CppElementMappingRule>[] {
+				// Remove prefixes from elements' names.
+				e => e.MapAll<CppFunction>().CSharpAction((csConverter, csElement) => {
+
+				}),
+
+				e => e.MapAll<CppEnumItem>().CSharpAction((csConverter, csElement) => {
+					var csEnumItem = (CSharpEnumItem)csElement;
+
+					csEnumItem.Name = StringUtils.RemovePrefix(csEnumItem.Name, "GL_");
+					csEnumItem.Name = StringUtils.SnakeCaseToUpperCamelCase(csEnumItem.Name);
+
+					if (char.IsDigit(csEnumItem.Name[0])) {
+						csEnumItem.Name = $"_{csEnumItem.Name}";
+					}
+				}),
+
+				e => e.Map<CppEnum>("khronos_boolean_enum_t").Discard(),
+			});
 		}
 
-		public override void Generate(string outputPath)
+		public override CSharpCompilation GetCSharpCompilation()
 		{
-			var specification = new GLSpecification(InputFile);
+			var xml = XDocument.Load(InputFile);
 
-			Directory.CreateDirectory(outputPath);
+			// Generate C++
 
-			var requiredFunctions = new HashSet<string>();
-			var functionsByVersion = new Dictionary<GLSpecification.ApiVersion, List<GLSpecification.Function>>();
+			var csConversionFunc = (Func<CppParserOptions, CppCompilation>)(cppParserOptions => GenerateCpp(cppParserOptions, xml));
 
-			foreach (var apiVersion in specification.ApiVersions) {
-				if (apiVersion.Api != "gl") {
-					continue;
+			// Convert it to C#
+
+			object csConverter = Activator.CreateInstance(typeof(CSharpConverter), BindingFlags.NonPublic | BindingFlags.Instance, null, new object[] { Options }, null);
+
+			var csCompilation = (CSharpCompilation)typeof(CSharpConverter)
+				.GetMethod("Run", BindingFlags.Instance | BindingFlags.NonPublic)
+				.Invoke(csConverter, new object[] { csConversionFunc });
+
+			return csCompilation;
+		}
+
+		private CppCompilation GenerateCpp(CppParserOptions cppParserOptions, XDocument xml)
+		{
+			var cppCode = new StringBuilder();
+
+			// Parse typedefs (using CppAst)
+
+			foreach (var xmlTypes in xml.Root.Elements("types")) {
+				foreach (var xmlType in xmlTypes.Elements("type")) {
+					cppCode.AppendLine(xmlType.Value);
 				}
+			}
 
-				var versionFunctions = functionsByVersion[apiVersion] = new List<GLSpecification.Function>();
+			var cppCompilation = CppParser.Parse(cppCode.ToString(), new CppParserOptions {
+				IncludeFolders = {
+					Path.GetDirectoryName(InputFile)
+				}
+			});
 
-				foreach (var featureSet in apiVersion.FeatureSets.Where(f => f.Type == GLSpecification.FeatureSetType.Requires)) {
-					foreach (string functionName in featureSet.Functions) {
-						var function = specification.Functions[functionName];
+			if (cppCompilation.HasErrors) {
+				throw new InvalidOperationException($"Cpp compilation had errors:\r\n{string.Join("\r\n", cppCompilation.Diagnostics.Messages.Where(m => m.Type == CppLogMessageType.Error).Select(m => m.Text))}");
+			}
 
-						if (requiredFunctions.Add(function.Name)) {
-							versionFunctions.Add(function);
+			// Parse enums
+
+			var cppEnums = new Dictionary<string, (CppEnum cppEnum, HashSet<string> knownEntries)>();
+
+			foreach (var xmlEnums in xml.Root.Elements("enums")) {
+				string enumsNamespace = xmlEnums.Attribute("namespace").Value;
+				string enumsVendor = xmlEnums.Attribute("vendor")?.Value;
+				string enumsComment = xmlEnums.Attribute("comment")?.Value;
+
+				foreach (var xmlEnum in xmlEnums.Elements("enum")) {
+					string enumItemName = xmlEnum.Attribute("name").Value;
+					string enumItemValue = xmlEnum.Attribute("value").Value;
+					string[] enumItemGroups = xmlEnum.Attribute("group")?.Value?.Split(',');
+
+					void HandleGroup(string enumName)
+					{
+						if (!cppEnums.TryGetValue(enumName, out var enumTuple)) {
+							var cppEnum = new CppEnum(enumName) {
+								IntegerType = CppPrimitiveType.UnsignedInt
+							};
+
+							cppEnums[enumName] = enumTuple = (cppEnum, new HashSet<string>());
+
+							cppCompilation.Enums.Add(cppEnum);
+						}
+
+						if (enumTuple.knownEntries.Add(enumItemName)) {
+							var enumItem = new CppEnumItem(enumItemName, 0) {
+								ValueExpression = new CppLiteralExpression(CppExpressionKind.IntegerLiteral, enumItemValue)
+							};
+
+							enumTuple.cppEnum.Items.Add(enumItem);
 						}
 					}
-				}
-			}
 
-			void WriteHeader(CodeWriter code, string @namespace, params string[] usings)
-			{
-				if (usings?.Length > 0) {
-					foreach (string @using in usings) {
-						code.WriteLine($"using {@using};");
-					}
-
-					code.WriteLine();
-				}
-
-				code.WriteLine($"namespace {@namespace}");
-				code.WriteLine("{");
-				code.Indent();
-			}
-
-			void WriteFooter(CodeWriter code)
-			{
-				code.Unindent();
-				code.WriteLine("}");
-				code.WriteLine();
-			}
-
-			var usedEnumGroups = new HashSet<string>();
-
-			// Generate files with functions.
-
-			foreach (var apiVersion in specification.ApiVersions) {
-				if (apiVersion.Api != "gl") {
-					continue;
-				}
-
-				string file = Path.Combine(outputPath, $"GL.{apiVersion.Version.Major}{apiVersion.Version.Minor}.cs");
-				var code = new CodeWriter(file);
-
-				WriteHeader(code, Namespace, "System");
-				
-				code.WriteLine($"unsafe partial class {Class}");
-				code.WriteLine("{");
-				code.Indent();
-
-				bool firstMember = true;
-
-				foreach (var function in functionsByVersion[apiVersion]) {
-					if (firstMember) {
-						firstMember = false;
+					if (enumItemGroups != null) {
+						foreach (string enumGroup in enumItemGroups) {
+							HandleGroup(enumGroup);
+						}
 					} else {
-						code.WriteLine();
+						HandleGroup("Uncategorized");
+					}
+				}
+			}
+
+			// Parse functions
+
+			foreach (var xmlCommands in xml.Root.Elements("commands")) {
+				foreach (var xmlCommand in xmlCommands.Elements("command")) {
+					var xmlProto = xmlCommand.Element("proto");
+					string functionName = xmlProto.Element("name").Value;
+
+					var cppFunction = new CppFunction(functionName) {
+						LinkageKind = CppLinkageKind.Internal
+					};
+
+					// Parse return type
+
+					string returnTypeName = xmlProto.Element("ptype")?.Value;
+					var returnType = (returnTypeName != null ? cppCompilation.FindByName(returnTypeName) : null) as CppType ?? CppPrimitiveType.Void;
+
+					cppFunction.ReturnType = returnType;
+
+					// Parse parameters
+
+					var xmlParameters = xmlCommand.Elements("param").ToArray();
+
+					foreach (var xmlParameter in xmlParameters) {
+						string parameterName = xmlParameter.Element("name").Value;
+						string parameterTypeName = xmlParameter.Element("ptype")?.Value;
+						string parameterGroup = xmlParameter.Attribute("group")?.Value;
+
+						var parameterType = (parameterTypeName != null ? cppCompilation.FindByName(parameterTypeName) : null) as CppType ?? CppPrimitiveType.Void;
+
+						// Use enums if possible
+						if (parameterGroup != null && parameterType is CppTypedef parameterTypedef && parameterTypedef.Name == "GLenum") {
+							parameterType = cppCompilation.FindByName<CppType>(parameterGroup);
+						}
+
+						int pointerLevel = xmlParameter.ToString().Count(c => c == '*');
+
+						for (int i = 0; i < pointerLevel; i++) {
+							parameterType = new CppPointerType(parameterType);
+						}
+
+						var cppParameter = new CppParameter(parameterType, parameterName);
+
+						cppFunction.Parameters.Add(cppParameter);
 					}
 
-					var parameterPairs = (IEnumerable<(string csharpTypeName, string csharpParameterName)>)function.Parameters.Select(p => (ConvertTypeToCSharpType(p.Type, usedEnumGroups), SanitizeLocalName(p.Name)));
-					string returnType = ConvertTypeToCSharpType(function.ReturnType, usedEnumGroups);
-
-					string functionGenerics = string.Join(", ", parameterPairs.Select(t => t.csharpTypeName).Append(returnType));
-
-					code.WriteLine($@"[MethodImport(""{function.Name}"", ""{apiVersion.Version}"")]");
-					code.WriteLine($"private static delegate*<{functionGenerics}> {function.Name};");
-					code.WriteLine();
-
-					string methodParameters = string.Join(", ", parameterPairs.Select(t => $"{t.csharpTypeName} {t.csharpParameterName}"));
-
-					code.WriteLine($"public static {returnType} {function.Name.Substring(2)}({methodParameters})");
-					code.WriteLine("{");
-					code.Indent();
-
-					string functionCallArguments = string.Join(", ", parameterPairs.Select(t => t.csharpParameterName));
-
-					code.WriteLine($"{(returnType != "void" ? "return " : null)}{function.Name}({functionCallArguments});");
-
-					code.Unindent();
-					code.WriteLine("}");
+					cppCompilation.Functions.Add(cppFunction);
 				}
-
-				code.Unindent();
-				code.WriteLine("}");
-
-				WriteFooter(code);
-
-				code.Save();
 			}
 
-			// Generate files with enums
-
-			foreach (var pair in specification.EnumGroups) {
-				if (pair.Key != string.Empty && !usedEnumGroups.Contains(pair.Key)) {
-					continue;
-				}
-
-				string name = pair.Key != string.Empty ? pair.Key : "Enums";
-				string file = Path.Combine(outputPath, $"{name}.cs");
-				var code = new CodeWriter(file);
-
-				WriteHeader(code, Namespace);
-
-				code.WriteLine($"public enum {name} : uint");
-				code.WriteLine("{");
-				code.Indent();
-
-				var entries = pair.Value.Entries;
-
-				foreach (var entryPair in entries) {
-					string keyName = entryPair.Key;
-
-					if (keyName.StartsWith("GL_")) {
-						keyName = keyName.Substring(3);
-					}
-
-					keyName = StringUtils.SnakeCaseToUpperCamelCase(keyName);
-
-					code.WriteLine($"{keyName} = {entryPair.Value},");
-				}
-
-				code.Unindent();
-				code.WriteLine("}");
-
-				WriteFooter(code);
-
-				code.Save();
-			}
-		}
-
-		private static string SanitizeLocalName(string name)
-		{
-			return name switch {
-				"params" or "ref" or "in" or "out" or "string" or "base" => $"@{name}",
-				_ => name,
-			};
-		}
-
-		private static string ConvertTypeToCSharpType(GLSpecification.GLType type, HashSet<string> usedEnumGroups = null)
-		{
-			if (type.Group != null && (type.Name == "GLenum" || type.Name == "GLbitfield")) {
-				usedEnumGroups?.Add(type.Group);
-
-				return type.Group;
-			}
-
-			string name = type.Name switch {
-				"GLboolean" => "bool",
-				"GLbyte" => "sbyte",
-				"GLubyte" => "byte",
-				"GLshort" => "short",
-				"GLushort" => "ushort",
-				"GLint" => "int",
-				"GLuint" => "uint",
-				"GLfixed" => "int",
-				"GLint64" => "long",
-				"GLuint64" => "ulong",
-				"GLsizei" => "int",
-				"GLenum" => "uint",
-				"GLintptr" => "IntPtr",
-				"GLsizeiptr" => "IntPtr",
-				"GLsync" => "IntPtr",
-				"GLhalf" => "Half",
-				"GLfloat" => "float",
-				"GLclampf" => "float",
-				"GLdouble" => "double",
-				"GLclampd" => "double",
-				"GLclampx" => "int",
-				"GLchar" => "byte",
-				"GLbitfield" => "uint",
-
-				// TODO: Temporary hardcode
-				"GLDEBUGPROC" => "delegate*<uint, uint, uint, uint, int, byte*, void*, void>",
-
-				_ => type.Name
-			};
-
-			int pointerLevel = type.PointerLevel;
-
-			if (pointerLevel > 0) {
-				name += new string('*', type.PointerLevel);
-			}
-
-			return name;
+			return cppCompilation;
 		}
 	}
 }
