@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Xml;
-using System.Xml.Linq;
 using CodeGenerator.Utilities;
 
 namespace CodeGenerator.Generators.Graphics.OpenGL
@@ -28,12 +25,16 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 			Directory.CreateDirectory(outputPath);
 
 			var requiredFunctions = new HashSet<string>();
-			var functionsByVersion = new Dictionary<Version, List<GLSpecification.Function>>();
+			var functionsByVersion = new Dictionary<GLSpecification.ApiVersion, List<GLSpecification.Function>>();
 
-			foreach (var version in specification.ApiVersions) {
-				var versionFunctions = functionsByVersion[version.Version] = new List<GLSpecification.Function>();
+			foreach (var apiVersion in specification.ApiVersions) {
+				if (apiVersion.Api != "gl") {
+					continue;
+				}
 
-				foreach (var featureSet in version.FeatureSets.Where(f => f.Type == GLSpecification.FeatureSetType.Requires)) {
+				var versionFunctions = functionsByVersion[apiVersion] = new List<GLSpecification.Function>();
+
+				foreach (var featureSet in apiVersion.FeatureSets.Where(f => f.Type == GLSpecification.FeatureSetType.Requires)) {
 					foreach (string functionName in featureSet.Functions) {
 						var function = specification.Functions[functionName];
 
@@ -44,39 +45,143 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 				}
 			}
 
+			void WriteHeader(CodeWriter code, string @namespace, params string[] usings)
+			{
+				if (usings?.Length > 0) {
+					foreach (string @using in usings) {
+						code.WriteLine($"using {@using};");
+					}
+
+					code.WriteLine();
+				}
+
+				code.WriteLine($"namespace {@namespace}");
+				code.WriteLine("{");
+				code.Indent();
+			}
+
+			void WriteFooter(CodeWriter code)
+			{
+				code.Unindent();
+				code.WriteLine("}");
+				code.WriteLine();
+			}
+
+			var usedEnumGroups = new HashSet<string>();
+
+			// Generate files with functions.
+
 			foreach (var apiVersion in specification.ApiVersions) {
+				if (apiVersion.Api != "gl") {
+					continue;
+				}
+
 				string file = Path.Combine(outputPath, $"GL.{apiVersion.Version.Major}{apiVersion.Version.Minor}.cs");
 				var code = new CodeWriter(file);
 
-				code.WriteLine("using System;");
-				code.WriteLine();
-				code.WriteLine($"namespace {Namespace}");
-				code.WriteLine("{");
-				code.Indent();
+				WriteHeader(code, Namespace, "System");
+				
 				code.WriteLine($"unsafe partial class {Class}");
 				code.WriteLine("{");
 				code.Indent();
 
-				foreach (var function in functionsByVersion[apiVersion.Version]) {
-					var parameterNames = function.Parameters.Select(p => GetTypeName(p.Type));
-					string generics = string.Join(", ", parameterNames.Append(GetTypeName(function.ReturnType)));
+				bool firstMember = true;
 
-					code.WriteLine($"private static delegate*<{generics}> {function.Name};");
+				foreach (var function in functionsByVersion[apiVersion]) {
+					if (firstMember) {
+						firstMember = false;
+					} else {
+						code.WriteLine();
+					}
+
+					var parameterPairs = (IEnumerable<(string csharpTypeName, string csharpParameterName)>)function.Parameters.Select(p => (ConvertTypeToCSharpType(p.Type, usedEnumGroups), SanitizeLocalName(p.Name)));
+					string returnType = ConvertTypeToCSharpType(function.ReturnType, usedEnumGroups);
+
+					string functionGenerics = string.Join(", ", parameterPairs.Select(t => t.csharpTypeName).Append(returnType));
+
+					code.WriteLine($@"[MethodImport(""{function.Name}"", ""{apiVersion.Version}"")]");
+					code.WriteLine($"private static delegate*<{functionGenerics}> {function.Name};");
 					code.WriteLine();
+
+					string methodParameters = string.Join(", ", parameterPairs.Select(t => $"{t.csharpTypeName} {t.csharpParameterName}"));
+
+					code.WriteLine($"public static {returnType} {function.Name.Substring(2)}({methodParameters})");
+					code.WriteLine("{");
+					code.Indent();
+
+					string functionCallArguments = string.Join(", ", parameterPairs.Select(t => t.csharpParameterName));
+
+					code.WriteLine($"{(returnType != "void" ? "return " : null)}{function.Name}({functionCallArguments});");
+
+					code.Unindent();
+					code.WriteLine("}");
 				}
 
 				code.Unindent();
 				code.WriteLine("}");
+
+				WriteFooter(code);
+
+				code.Save();
+			}
+
+			// Generate files with enums
+
+			foreach (var pair in specification.EnumGroups) {
+				if (pair.Key != string.Empty && !usedEnumGroups.Contains(pair.Key)) {
+					continue;
+				}
+
+				string name = pair.Key != string.Empty ? pair.Key : "Enums";
+				string file = Path.Combine(outputPath, $"{name}.cs");
+				var code = new CodeWriter(file);
+
+				WriteHeader(code, Namespace);
+
+				code.WriteLine($"public enum {name} : uint");
+				code.WriteLine("{");
+				code.Indent();
+
+				var entries = pair.Value.Entries;
+
+				foreach (var entryPair in entries) {
+					string keyName = entryPair.Key;
+
+					if (keyName.StartsWith("GL_")) {
+						keyName = keyName.Substring(3);
+					}
+
+					keyName = StringUtils.SnakeCaseToUpperCamelCase(keyName);
+
+					code.WriteLine($"{keyName} = {entryPair.Value},");
+				}
+
 				code.Unindent();
 				code.WriteLine("}");
+
+				WriteFooter(code);
 
 				code.Save();
 			}
 		}
 
-		private static string GetTypeName(GLSpecification.GLType type)
+		private static string SanitizeLocalName(string name)
 		{
-			string name = type.Type switch {
+			return name switch {
+				"params" or "ref" or "in" or "out" or "string" or "base" => $"@{name}",
+				_ => name,
+			};
+		}
+
+		private static string ConvertTypeToCSharpType(GLSpecification.GLType type, HashSet<string> usedEnumGroups = null)
+		{
+			if (type.Group != null && (type.Name == "GLenum" || type.Name == "GLbitfield")) {
+				usedEnumGroups?.Add(type.Group);
+
+				return type.Group;
+			}
+
+			string name = type.Name switch {
 				"GLboolean" => "bool",
 				"GLbyte" => "sbyte",
 				"GLubyte" => "byte",
@@ -104,7 +209,7 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 				// TODO: Temporary hardcode
 				"GLDEBUGPROC" => "delegate*<uint, uint, uint, uint, int, byte*, void*, void>",
 
-				_ => type.Type
+				_ => type.Name
 			};
 
 			int pointerLevel = type.PointerLevel;
