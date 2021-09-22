@@ -17,7 +17,7 @@
 		{
 			uint result;
 
-			GenVertexArray(1, &result);
+			GenVertexArrays(1, &result);
 
 			return result;
 		}

@@ -13,14 +13,14 @@ namespace Dissonance.Framework.Graphics.OpenGL
 {
     public enum FeedbackType : uint
     {
-        _2d = unchecked((uint)0x0600),
+        GL2d = unchecked((uint)0x0600),
         
-        _3d = unchecked((uint)0x0601),
+        GL3d = unchecked((uint)0x0601),
         
-        _3dColor = unchecked((uint)0x0602),
+        GL3dColor = unchecked((uint)0x0602),
         
-        _3dColorTexture = unchecked((uint)0x0603),
+        GL3dColorTexture = unchecked((uint)0x0603),
         
-        _4dColorTexture = unchecked((uint)0x0604),
+        GL4dColorTexture = unchecked((uint)0x0604),
     }
 }

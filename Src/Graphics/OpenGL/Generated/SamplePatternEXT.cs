@@ -13,18 +13,18 @@ namespace Dissonance.Framework.Graphics.OpenGL
 {
     public enum SamplePatternEXT : uint
     {
-        _1passExt = unchecked((uint)0x80A1),
+        GL1passExt = unchecked((uint)0x80A1),
         
-        _2pass0Ext = unchecked((uint)0x80A2),
+        GL2pass0Ext = unchecked((uint)0x80A2),
         
-        _2pass1Ext = unchecked((uint)0x80A3),
+        GL2pass1Ext = unchecked((uint)0x80A3),
         
-        _4pass0Ext = unchecked((uint)0x80A4),
+        GL4pass0Ext = unchecked((uint)0x80A4),
         
-        _4pass1Ext = unchecked((uint)0x80A5),
+        GL4pass1Ext = unchecked((uint)0x80A5),
         
-        _4pass2Ext = unchecked((uint)0x80A6),
+        GL4pass2Ext = unchecked((uint)0x80A6),
         
-        _4pass3Ext = unchecked((uint)0x80A7),
+        GL4pass3Ext = unchecked((uint)0x80A7),
     }
 }

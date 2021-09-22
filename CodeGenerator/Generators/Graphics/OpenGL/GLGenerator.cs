@@ -34,7 +34,17 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 			Options.MappingRules.AddRange(new Func<CppMappingRules, CppElementMappingRule>[] {
 				// Remove prefixes from elements' names.
 				e => e.MapAll<CppFunction>().CSharpAction((csConverter, csElement) => {
+					var csMethod = (CSharpMethod)csElement;
 
+					if (csMethod.Name.StartsWith("gl")) {
+						string newName = csMethod.Name.Substring(2);
+
+						// Check for enums named the same way, and rename them if needed.
+						//string path = csMethod.Parent.FullIdentifier();
+						//string newPath = $"{path}.{newName}";
+
+						csMethod.Name = newName;
+					}
 				}),
 
 				e => e.MapAll<CppEnumItem>().CSharpAction((csConverter, csElement) => {
@@ -44,7 +54,7 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 					csEnumItem.Name = StringUtils.SnakeCaseToUpperCamelCase(csEnumItem.Name);
 
 					if (char.IsDigit(csEnumItem.Name[0])) {
-						csEnumItem.Name = $"_{csEnumItem.Name}";
+						csEnumItem.Name = $"GL{csEnumItem.Name}";
 					}
 				}),
 
@@ -133,7 +143,7 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 							HandleGroup(enumGroup);
 						}
 					} else {
-						HandleGroup("Uncategorized");
+						//HandleGroup("Uncategorized");
 					}
 				}
 			}

@@ -40,7 +40,7 @@ namespace CodeGenerator.Utilities
 					throw new Exception("Unknown C# element type.");
 				}
 
-				var type = element.FindType(fullTypeName);
+				var type = element.FindElement<CSharpType>(fullTypeName);
 
 				foreach (var parameter in parameters) {
 					if (parameter.Name == csParameterName) {
@@ -74,7 +74,7 @@ namespace CodeGenerator.Utilities
 		public static CppElementMappingRule ParameterType(this CppElementMappingRule rule, string fullTypeName)
 		{
 			return rule.CSharpAction((converter, element) => {
-				((CSharpParameter)element).ParameterType = element.FindType(fullTypeName);
+				((CSharpParameter)element).ParameterType = element.FindElement<CSharpType>(fullTypeName);
 			});
 		}
 
@@ -88,7 +88,7 @@ namespace CodeGenerator.Utilities
 		public static CppElementMappingRule ReturnType(this CppElementMappingRule rule, string fullTypeName)
 		{
 			return rule.CSharpAction((converter, element) => {
-				((CSharpMethod)element).ReturnType = element.FindType(fullTypeName);
+				((CSharpMethod)element).ReturnType = element.FindElement<CSharpType>(fullTypeName);
 			});
 		}
 

@@ -73,8 +73,9 @@ namespace CodeGenerator.Generators.Audio
 							_ => null
 						};
 
-						if (element.TryFindType($"{Namespace}.{primaryName}{suffix}", out var type) || alternateName != primaryName && element.TryFindType($"{Namespace}.{alternateName}{suffix}", out type)) {
-							parameter.ParameterType = type;
+						if (element.TryFindElement<CSharpType>($"{Namespace}.{primaryName}{suffix}", out var resultType)
+						|| (alternateName != primaryName && element.TryFindElement($"{Namespace}.{alternateName}{suffix}", out resultType))) {
+							parameter.ParameterType = resultType;
 						}
 					}
 

@@ -27,10 +27,10 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         Float = unchecked((uint)0x1406),
         
-        _2Bytes = unchecked((uint)0x1407),
+        GL2Bytes = unchecked((uint)0x1407),
         
-        _3Bytes = unchecked((uint)0x1408),
+        GL3Bytes = unchecked((uint)0x1408),
         
-        _4Bytes = unchecked((uint)0x1409),
+        GL4Bytes = unchecked((uint)0x1409),
     }
 }

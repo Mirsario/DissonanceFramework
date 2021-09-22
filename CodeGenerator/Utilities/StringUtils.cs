@@ -1,4 +1,6 @@
-﻿namespace CodeGenerator.Utilities
+﻿using System;
+
+namespace CodeGenerator.Utilities
 {
 	internal static class StringUtils
 	{
@@ -14,6 +16,7 @@
 
 			return text;
 		}
+
 		public static string RemovePrefix(string text, string prefix)
 		{
 			if (text.StartsWith(prefix)) {
@@ -22,6 +25,7 @@
 
 			return text;
 		}
+
 		public static string SnakeCaseToUpperCamelCase(string name)
 		{
 			string[] splits = name.Split('_');

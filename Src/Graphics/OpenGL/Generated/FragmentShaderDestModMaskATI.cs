@@ -13,11 +13,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
 {
     public enum FragmentShaderDestModMaskATI : uint
     {
-        _2xBitAti = unchecked((uint)0x00000001),
+        GL2xBitAti = unchecked((uint)0x00000001),
         
-        _4xBitAti = unchecked((uint)0x00000002),
+        GL4xBitAti = unchecked((uint)0x00000002),
         
-        _8xBitAti = unchecked((uint)0x00000004),
+        GL8xBitAti = unchecked((uint)0x00000004),
         
         HalfBitAti = unchecked((uint)0x00000008),
         

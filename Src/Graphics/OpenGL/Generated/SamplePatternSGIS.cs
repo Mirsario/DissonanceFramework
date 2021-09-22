@@ -13,32 +13,32 @@ namespace Dissonance.Framework.Graphics.OpenGL
 {
     public enum SamplePatternSGIS : uint
     {
-        _1passExt = unchecked((uint)0x80A1),
+        GL1passExt = unchecked((uint)0x80A1),
         
-        _1passSgis = unchecked((uint)0x80A1),
+        GL1passSgis = unchecked((uint)0x80A1),
         
-        _2pass0Ext = unchecked((uint)0x80A2),
+        GL2pass0Ext = unchecked((uint)0x80A2),
         
-        _2pass0Sgis = unchecked((uint)0x80A2),
+        GL2pass0Sgis = unchecked((uint)0x80A2),
         
-        _2pass1Ext = unchecked((uint)0x80A3),
+        GL2pass1Ext = unchecked((uint)0x80A3),
         
-        _2pass1Sgis = unchecked((uint)0x80A3),
+        GL2pass1Sgis = unchecked((uint)0x80A3),
         
-        _4pass0Ext = unchecked((uint)0x80A4),
+        GL4pass0Ext = unchecked((uint)0x80A4),
         
-        _4pass0Sgis = unchecked((uint)0x80A4),
+        GL4pass0Sgis = unchecked((uint)0x80A4),
         
-        _4pass1Ext = unchecked((uint)0x80A5),
+        GL4pass1Ext = unchecked((uint)0x80A5),
         
-        _4pass1Sgis = unchecked((uint)0x80A5),
+        GL4pass1Sgis = unchecked((uint)0x80A5),
         
-        _4pass2Ext = unchecked((uint)0x80A6),
+        GL4pass2Ext = unchecked((uint)0x80A6),
         
-        _4pass2Sgis = unchecked((uint)0x80A6),
+        GL4pass2Sgis = unchecked((uint)0x80A6),
         
-        _4pass3Ext = unchecked((uint)0x80A7),
+        GL4pass3Ext = unchecked((uint)0x80A7),
         
-        _4pass3Sgis = unchecked((uint)0x80A7),
+        GL4pass3Sgis = unchecked((uint)0x80A7),
     }
 }
