@@ -20,7 +20,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         ObjectLinear = unchecked((uint)0x2401),
         
         Constant = unchecked((uint)0x8576),
-        
-        PathObjectBoundingBoxNv = unchecked((uint)0x908A),
     }
 }

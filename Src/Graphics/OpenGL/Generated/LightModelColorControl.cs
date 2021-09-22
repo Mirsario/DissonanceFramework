@@ -15,10 +15,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
     {
         SingleColor = unchecked((uint)0x81F9),
         
-        SingleColorExt = unchecked((uint)0x81F9),
-        
         SeparateSpecularColor = unchecked((uint)0x81FA),
-        
-        SeparateSpecularColorExt = unchecked((uint)0x81FA),
     }
 }

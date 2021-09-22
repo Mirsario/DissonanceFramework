@@ -24,7 +24,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         FogMode = unchecked((uint)0x0B65),
         
         FogColor = unchecked((uint)0x0B66),
-        
-        FogOffsetValueSgix = unchecked((uint)0x8199),
     }
 }

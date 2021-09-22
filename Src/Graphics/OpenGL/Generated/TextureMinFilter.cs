@@ -24,21 +24,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         NearestMipmapLinear = unchecked((uint)0x2702),
         
         LinearMipmapLinear = unchecked((uint)0x2703),
-        
-        Filter4Sgis = unchecked((uint)0x8146),
-        
-        LinearClipmapLinearSgix = unchecked((uint)0x8170),
-        
-        PixelTexGenQCeilingSgix = unchecked((uint)0x8184),
-        
-        PixelTexGenQRoundSgix = unchecked((uint)0x8185),
-        
-        PixelTexGenQFloorSgix = unchecked((uint)0x8186),
-        
-        NearestClipmapNearestSgix = unchecked((uint)0x844D),
-        
-        NearestClipmapLinearSgix = unchecked((uint)0x844E),
-        
-        LinearClipmapNearestSgix = unchecked((uint)0x844F),
     }
 }

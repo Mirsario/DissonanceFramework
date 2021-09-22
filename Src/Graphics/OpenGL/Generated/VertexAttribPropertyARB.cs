@@ -35,8 +35,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         VertexAttribArrayInteger = unchecked((uint)0x88FD),
         
-        VertexAttribArrayIntegerExt = unchecked((uint)0x88FD),
-        
         VertexAttribArrayDivisor = unchecked((uint)0x88FE),
     }
 }

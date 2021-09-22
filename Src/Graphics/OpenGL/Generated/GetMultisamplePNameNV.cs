@@ -14,9 +14,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
     public enum GetMultisamplePNameNV : uint
     {
         SamplePosition = unchecked((uint)0x8E50),
-        
-        SampleLocationArb = unchecked((uint)0x8E50),
-        
-        ProgrammableSampleLocationArb = unchecked((uint)0x9341),
     }
 }

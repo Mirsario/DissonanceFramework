@@ -18,7 +18,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         Exp2 = unchecked((uint)0x0801),
         
         Linear = unchecked((uint)0x2601),
-        
-        FogFuncSgis = unchecked((uint)0x812A),
     }
 }

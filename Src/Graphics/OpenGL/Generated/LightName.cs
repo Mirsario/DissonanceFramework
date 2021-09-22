@@ -28,21 +28,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         Light6 = unchecked((uint)0x4006),
         
         Light7 = unchecked((uint)0x4007),
-        
-        FragmentLight0Sgix = unchecked((uint)0x840C),
-        
-        FragmentLight1Sgix = unchecked((uint)0x840D),
-        
-        FragmentLight2Sgix = unchecked((uint)0x840E),
-        
-        FragmentLight3Sgix = unchecked((uint)0x840F),
-        
-        FragmentLight4Sgix = unchecked((uint)0x8410),
-        
-        FragmentLight5Sgix = unchecked((uint)0x8411),
-        
-        FragmentLight6Sgix = unchecked((uint)0x8412),
-        
-        FragmentLight7Sgix = unchecked((uint)0x8413),
     }
 }

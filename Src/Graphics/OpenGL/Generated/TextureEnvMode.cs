@@ -20,9 +20,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         Modulate = unchecked((uint)0x2100),
         
         Decal = unchecked((uint)0x2101),
-        
-        ReplaceExt = unchecked((uint)0x8062),
-        
-        TextureEnvBiasSgix = unchecked((uint)0x80BE),
     }
 }

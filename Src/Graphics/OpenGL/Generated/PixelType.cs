@@ -31,22 +31,12 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         UnsignedByte332 = unchecked((uint)0x8032),
         
-        UnsignedByte332Ext = unchecked((uint)0x8032),
-        
         UnsignedShort4444 = unchecked((uint)0x8033),
-        
-        UnsignedShort4444Ext = unchecked((uint)0x8033),
         
         UnsignedShort5551 = unchecked((uint)0x8034),
         
-        UnsignedShort5551Ext = unchecked((uint)0x8034),
-        
         UnsignedInt8888 = unchecked((uint)0x8035),
         
-        UnsignedInt8888Ext = unchecked((uint)0x8035),
-        
         UnsignedInt1010102 = unchecked((uint)0x8036),
-        
-        UnsignedInt1010102Ext = unchecked((uint)0x8036),
     }
 }

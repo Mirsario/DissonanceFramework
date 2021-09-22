@@ -19,35 +19,15 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         ProxyTexture1d = unchecked((uint)0x8063),
         
-        ProxyTexture1dExt = unchecked((uint)0x8063),
-        
         ProxyTexture2d = unchecked((uint)0x8064),
-        
-        ProxyTexture2dExt = unchecked((uint)0x8064),
         
         Texture3d = unchecked((uint)0x806F),
         
-        Texture3dExt = unchecked((uint)0x806F),
-        
-        Texture3dOes = unchecked((uint)0x806F),
-        
         ProxyTexture3d = unchecked((uint)0x8070),
-        
-        ProxyTexture3dExt = unchecked((uint)0x8070),
-        
-        DetailTexture2dSgis = unchecked((uint)0x8095),
-        
-        Texture4dSgis = unchecked((uint)0x8134),
-        
-        ProxyTexture4dSgis = unchecked((uint)0x8135),
         
         TextureRectangle = unchecked((uint)0x84F5),
         
         ProxyTextureRectangle = unchecked((uint)0x84F7),
-        
-        ProxyTextureRectangleArb = unchecked((uint)0x84F7),
-        
-        ProxyTextureRectangleNv = unchecked((uint)0x84F7),
         
         TextureCubeMap = unchecked((uint)0x8513),
         
@@ -65,21 +45,13 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         ProxyTextureCubeMap = unchecked((uint)0x851B),
         
-        ProxyTextureCubeMapArb = unchecked((uint)0x851B),
-        
-        ProxyTextureCubeMapExt = unchecked((uint)0x851B),
-        
         Texture1dArray = unchecked((uint)0x8C18),
         
         ProxyTexture1dArray = unchecked((uint)0x8C19),
         
-        ProxyTexture1dArrayExt = unchecked((uint)0x8C19),
-        
         Texture2dArray = unchecked((uint)0x8C1A),
         
         ProxyTexture2dArray = unchecked((uint)0x8C1B),
-        
-        ProxyTexture2dArrayExt = unchecked((uint)0x8C1B),
         
         TextureBuffer = unchecked((uint)0x8C2A),
         
@@ -87,15 +59,7 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         TextureCubeMapArray = unchecked((uint)0x9009),
         
-        TextureCubeMapArrayArb = unchecked((uint)0x9009),
-        
-        TextureCubeMapArrayExt = unchecked((uint)0x9009),
-        
-        TextureCubeMapArrayOes = unchecked((uint)0x9009),
-        
         ProxyTextureCubeMapArray = unchecked((uint)0x900B),
-        
-        ProxyTextureCubeMapArrayArb = unchecked((uint)0x900B),
         
         Texture2dMultisample = unchecked((uint)0x9100),
         

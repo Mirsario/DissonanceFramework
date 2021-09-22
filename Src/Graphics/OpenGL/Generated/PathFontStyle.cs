@@ -13,10 +13,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
 {
     public enum PathFontStyle : uint
     {
-        BoldBitNv = unchecked((uint)0x01),
-        
-        ItalicBitNv = unchecked((uint)0x02),
-        
         None = unchecked((uint)0),
     }
 }

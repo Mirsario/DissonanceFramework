@@ -20,39 +20,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glAccum(op, value);
         }
         
-        public static unsafe delegate*<uint, int, void> _glAccumxOES;
-        
-        public static unsafe void AccumxOES(uint op, int value)
-        {
-            _glAccumxOES(op, value);
-        }
-        
-        public static unsafe delegate*<uint, void> _glActiveProgramEXT;
-        
-        public static unsafe void ActiveProgramEXT(uint program)
-        {
-            _glActiveProgramEXT(program);
-        }
-        
         public static unsafe delegate*<uint, uint, void> _glActiveShaderProgram;
         
         public static unsafe void ActiveShaderProgram(uint pipeline, uint program)
         {
             _glActiveShaderProgram(pipeline, program);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glActiveShaderProgramEXT;
-        
-        public static unsafe void ActiveShaderProgramEXT(uint pipeline, uint program)
-        {
-            _glActiveShaderProgramEXT(pipeline, program);
-        }
-        
-        public static unsafe delegate*<StencilFaceDirection, void> _glActiveStencilFaceEXT;
-        
-        public static unsafe void ActiveStencilFaceEXT(StencilFaceDirection face)
-        {
-            _glActiveStencilFaceEXT(face);
         }
         
         public static unsafe delegate*<TextureUnit, void> _glActiveTexture;
@@ -62,102 +34,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glActiveTexture(texture);
         }
         
-        public static unsafe delegate*<TextureUnit, void> _glActiveTextureARB;
-        
-        public static unsafe void ActiveTextureARB(TextureUnit texture)
-        {
-            _glActiveTextureARB(texture);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glActiveVaryingNV;
-        
-        public static unsafe void ActiveVaryingNV(uint program, ref sbyte name)
-        {
-            _glActiveVaryingNV(program, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<FragmentOpATI, uint, uint, uint, uint, uint, void> _glAlphaFragmentOp1ATI;
-        
-        public static unsafe void AlphaFragmentOp1ATI(FragmentOpATI op, uint dst, uint dstMod, uint arg1, uint arg1Rep, uint arg1Mod)
-        {
-            _glAlphaFragmentOp1ATI(op, dst, dstMod, arg1, arg1Rep, arg1Mod);
-        }
-        
-        public static unsafe delegate*<FragmentOpATI, uint, uint, uint, uint, uint, uint, uint, uint, void> _glAlphaFragmentOp2ATI;
-        
-        public static unsafe void AlphaFragmentOp2ATI(FragmentOpATI op, uint dst, uint dstMod, uint arg1, uint arg1Rep, uint arg1Mod, uint arg2, uint arg2Rep, uint arg2Mod)
-        {
-            _glAlphaFragmentOp2ATI(op, dst, dstMod, arg1, arg1Rep, arg1Mod, arg2, arg2Rep, arg2Mod);
-        }
-        
-        public static unsafe delegate*<FragmentOpATI, uint, uint, uint, uint, uint, uint, uint, uint, uint, uint, uint, void> _glAlphaFragmentOp3ATI;
-        
-        public static unsafe void AlphaFragmentOp3ATI(FragmentOpATI op, uint dst, uint dstMod, uint arg1, uint arg1Rep, uint arg1Mod, uint arg2, uint arg2Rep, uint arg2Mod, uint arg3, uint arg3Rep, uint arg3Mod)
-        {
-            _glAlphaFragmentOp3ATI(op, dst, dstMod, arg1, arg1Rep, arg1Mod, arg2, arg2Rep, arg2Mod, arg3, arg3Rep, arg3Mod);
-        }
-        
         public static unsafe delegate*<AlphaFunction, float, void> _glAlphaFunc;
         
         public static unsafe void AlphaFunc(AlphaFunction func, float @ref)
         {
             _glAlphaFunc(func, @ref);
-        }
-        
-        public static unsafe delegate*<uint, float, void> _glAlphaFuncQCOM;
-        
-        public static unsafe void AlphaFuncQCOM(uint func, float @ref)
-        {
-            _glAlphaFuncQCOM(func, @ref);
-        }
-        
-        public static unsafe delegate*<AlphaFunction, int, void> _glAlphaFuncx;
-        
-        public static unsafe void AlphaFuncx(AlphaFunction func, int @ref)
-        {
-            _glAlphaFuncx(func, @ref);
-        }
-        
-        public static unsafe delegate*<AlphaFunction, int, void> _glAlphaFuncxOES;
-        
-        public static unsafe void AlphaFuncxOES(AlphaFunction func, int @ref)
-        {
-            _glAlphaFuncxOES(func, @ref);
-        }
-        
-        public static unsafe delegate*<uint, void> _glAlphaToCoverageDitherControlNV;
-        
-        public static unsafe void AlphaToCoverageDitherControlNV(uint mode)
-        {
-            _glAlphaToCoverageDitherControlNV(mode);
-        }
-        
-        public static unsafe delegate*<void> _glApplyFramebufferAttachmentCMAAINTEL;
-        
-        public static unsafe void ApplyFramebufferAttachmentCMAAINTEL()
-        {
-            _glApplyFramebufferAttachmentCMAAINTEL();
-        }
-        
-        public static unsafe delegate*<LightTextureModeEXT, void> _glApplyTextureEXT;
-        
-        public static unsafe void ApplyTextureEXT(LightTextureModeEXT mode)
-        {
-            _glApplyTextureEXT(mode);
-        }
-        
-        public static unsafe delegate*<uint, ulong, uint, byte> _glAcquireKeyedMutexWin32EXT;
-        
-        public static unsafe byte AcquireKeyedMutexWin32EXT(uint memory, ulong key, uint timeout)
-        {
-            return _glAcquireKeyedMutexWin32EXT(memory, key, timeout);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, IntPtr, byte> _glAreProgramsResidentNV;
-        
-        public static unsafe byte AreProgramsResidentNV(int n, ref uint programs, ref byte residences)
-        {
-            return _glAreProgramsResidentNV(n, (IntPtr)programs, (IntPtr)residences);
         }
         
         public static unsafe delegate*<int, IntPtr, IntPtr, byte> _glAreTexturesResident;
@@ -167,60 +48,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glAreTexturesResident(n, (IntPtr)textures, (IntPtr)residences);
         }
         
-        public static unsafe delegate*<int, IntPtr, IntPtr, byte> _glAreTexturesResidentEXT;
-        
-        public static unsafe byte AreTexturesResidentEXT(int n, ref uint textures, ref byte residences)
-        {
-            return _glAreTexturesResidentEXT(n, (IntPtr)textures, (IntPtr)residences);
-        }
-        
         public static unsafe delegate*<int, void> _glArrayElement;
         
         public static unsafe void ArrayElement(int i)
         {
             _glArrayElement(i);
-        }
-        
-        public static unsafe delegate*<int, void> _glArrayElementEXT;
-        
-        public static unsafe void ArrayElementEXT(int i)
-        {
-            _glArrayElementEXT(i);
-        }
-        
-        public static unsafe delegate*<EnableCap, int, ScalarType, int, uint, uint, void> _glArrayObjectATI;
-        
-        public static unsafe void ArrayObjectATI(EnableCap array, int size, ScalarType type, int stride, uint buffer, uint offset)
-        {
-            _glArrayObjectATI(array, size, type, stride, buffer, offset);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, IntPtr, uint, uint, uint, uint, long, long, long, int, IntPtr, IntPtr, uint> _glAsyncCopyBufferSubDataNVX;
-        
-        public static unsafe uint AsyncCopyBufferSubDataNVX(int waitSemaphoreCount, ref uint waitSemaphoreArray, ref ulong fenceValueArray, uint readGpu, uint writeGpuMask, uint readBuffer, uint writeBuffer, long readOffset, long writeOffset, long size, int signalSemaphoreCount, ref uint signalSemaphoreArray, ref ulong signalValueArray)
-        {
-            return _glAsyncCopyBufferSubDataNVX(waitSemaphoreCount, (IntPtr)waitSemaphoreArray, (IntPtr)fenceValueArray, readGpu, writeGpuMask, readBuffer, writeBuffer, readOffset, writeOffset, size, signalSemaphoreCount, (IntPtr)signalSemaphoreArray, (IntPtr)signalValueArray);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, IntPtr, uint, uint, uint, uint, int, int, int, int, uint, uint, int, int, int, int, int, int, int, int, IntPtr, IntPtr, uint> _glAsyncCopyImageSubDataNVX;
-        
-        public static unsafe uint AsyncCopyImageSubDataNVX(int waitSemaphoreCount, ref uint waitSemaphoreArray, ref ulong waitValueArray, uint srcGpu, uint dstGpuMask, uint srcName, uint srcTarget, int srcLevel, int srcX, int srcY, int srcZ, uint dstName, uint dstTarget, int dstLevel, int dstX, int dstY, int dstZ, int srcWidth, int srcHeight, int srcDepth, int signalSemaphoreCount, ref uint signalSemaphoreArray, ref ulong signalValueArray)
-        {
-            return _glAsyncCopyImageSubDataNVX(waitSemaphoreCount, (IntPtr)waitSemaphoreArray, (IntPtr)waitValueArray, srcGpu, dstGpuMask, srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth, signalSemaphoreCount, (IntPtr)signalSemaphoreArray, (IntPtr)signalValueArray);
-        }
-        
-        public static unsafe delegate*<uint, void> _glAsyncMarkerSGIX;
-        
-        public static unsafe void AsyncMarkerSGIX(uint marker)
-        {
-            _glAsyncMarkerSGIX(marker);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glAttachObjectARB;
-        
-        public static unsafe void AttachObjectARB(uint containerObj, uint obj)
-        {
-            _glAttachObjectARB(containerObj, obj);
         }
         
         public static unsafe delegate*<uint, uint, void> _glAttachShader;
@@ -244,67 +76,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBeginConditionalRender(id, mode);
         }
         
-        public static unsafe delegate*<uint, ConditionalRenderMode, void> _glBeginConditionalRenderNV;
-        
-        public static unsafe void BeginConditionalRenderNV(uint id, ConditionalRenderMode mode)
-        {
-            _glBeginConditionalRenderNV(id, mode);
-        }
-        
-        public static unsafe delegate*<uint, void> _glBeginConditionalRenderNVX;
-        
-        public static unsafe void BeginConditionalRenderNVX(uint id)
-        {
-            _glBeginConditionalRenderNVX(id);
-        }
-        
-        public static unsafe delegate*<void> _glBeginFragmentShaderATI;
-        
-        public static unsafe void BeginFragmentShaderATI()
-        {
-            _glBeginFragmentShaderATI();
-        }
-        
-        public static unsafe delegate*<uint, void> _glBeginOcclusionQueryNV;
-        
-        public static unsafe void BeginOcclusionQueryNV(uint id)
-        {
-            _glBeginOcclusionQueryNV(id);
-        }
-        
-        public static unsafe delegate*<uint, void> _glBeginPerfMonitorAMD;
-        
-        public static unsafe void BeginPerfMonitorAMD(uint monitor)
-        {
-            _glBeginPerfMonitorAMD(monitor);
-        }
-        
-        public static unsafe delegate*<uint, void> _glBeginPerfQueryINTEL;
-        
-        public static unsafe void BeginPerfQueryINTEL(uint queryHandle)
-        {
-            _glBeginPerfQueryINTEL(queryHandle);
-        }
-        
         public static unsafe delegate*<QueryTarget, uint, void> _glBeginQuery;
         
         public static unsafe void BeginQuery(QueryTarget target, uint id)
         {
             _glBeginQuery(target, id);
-        }
-        
-        public static unsafe delegate*<QueryTarget, uint, void> _glBeginQueryARB;
-        
-        public static unsafe void BeginQueryARB(QueryTarget target, uint id)
-        {
-            _glBeginQueryARB(target, id);
-        }
-        
-        public static unsafe delegate*<QueryTarget, uint, void> _glBeginQueryEXT;
-        
-        public static unsafe void BeginQueryEXT(QueryTarget target, uint id)
-        {
-            _glBeginQueryEXT(target, id);
         }
         
         public static unsafe delegate*<QueryTarget, uint, uint, void> _glBeginQueryIndexed;
@@ -321,46 +97,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBeginTransformFeedback(primitiveMode);
         }
         
-        public static unsafe delegate*<PrimitiveType, void> _glBeginTransformFeedbackEXT;
-        
-        public static unsafe void BeginTransformFeedbackEXT(PrimitiveType primitiveMode)
-        {
-            _glBeginTransformFeedbackEXT(primitiveMode);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, void> _glBeginTransformFeedbackNV;
-        
-        public static unsafe void BeginTransformFeedbackNV(PrimitiveType primitiveMode)
-        {
-            _glBeginTransformFeedbackNV(primitiveMode);
-        }
-        
-        public static unsafe delegate*<void> _glBeginVertexShaderEXT;
-        
-        public static unsafe void BeginVertexShaderEXT()
-        {
-            _glBeginVertexShaderEXT();
-        }
-        
-        public static unsafe delegate*<uint, void> _glBeginVideoCaptureNV;
-        
-        public static unsafe void BeginVideoCaptureNV(uint video_capture_slot)
-        {
-            _glBeginVideoCaptureNV(video_capture_slot);
-        }
-        
         public static unsafe delegate*<uint, uint, IntPtr, void> _glBindAttribLocation;
         
         public static unsafe void BindAttribLocation(uint program, uint index, ref sbyte name)
         {
             _glBindAttribLocation(program, index, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glBindAttribLocationARB;
-        
-        public static unsafe void BindAttribLocationARB(uint programObj, uint index, ref sbyte name)
-        {
-            _glBindAttribLocationARB(programObj, index, (IntPtr)name);
         }
         
         public static unsafe delegate*<BufferTargetARB, uint, void> _glBindBuffer;
@@ -370,13 +111,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBindBuffer(target, buffer);
         }
         
-        public static unsafe delegate*<BufferTargetARB, uint, void> _glBindBufferARB;
-        
-        public static unsafe void BindBufferARB(BufferTargetARB target, uint buffer)
-        {
-            _glBindBufferARB(target, buffer);
-        }
-        
         public static unsafe delegate*<BufferTargetARB, uint, uint, void> _glBindBufferBase;
         
         public static unsafe void BindBufferBase(BufferTargetARB target, uint index, uint buffer)
@@ -384,53 +118,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBindBufferBase(target, index, buffer);
         }
         
-        public static unsafe delegate*<BufferTargetARB, uint, uint, void> _glBindBufferBaseEXT;
-        
-        public static unsafe void BindBufferBaseEXT(BufferTargetARB target, uint index, uint buffer)
-        {
-            _glBindBufferBaseEXT(target, index, buffer);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, uint, uint, void> _glBindBufferBaseNV;
-        
-        public static unsafe void BindBufferBaseNV(BufferTargetARB target, uint index, uint buffer)
-        {
-            _glBindBufferBaseNV(target, index, buffer);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, uint, uint, long, void> _glBindBufferOffsetEXT;
-        
-        public static unsafe void BindBufferOffsetEXT(BufferTargetARB target, uint index, uint buffer, long offset)
-        {
-            _glBindBufferOffsetEXT(target, index, buffer, offset);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, uint, uint, long, void> _glBindBufferOffsetNV;
-        
-        public static unsafe void BindBufferOffsetNV(BufferTargetARB target, uint index, uint buffer, long offset)
-        {
-            _glBindBufferOffsetNV(target, index, buffer, offset);
-        }
-        
         public static unsafe delegate*<BufferTargetARB, uint, uint, long, long, void> _glBindBufferRange;
         
         public static unsafe void BindBufferRange(BufferTargetARB target, uint index, uint buffer, long offset, long size)
         {
             _glBindBufferRange(target, index, buffer, offset, size);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, uint, uint, long, long, void> _glBindBufferRangeEXT;
-        
-        public static unsafe void BindBufferRangeEXT(BufferTargetARB target, uint index, uint buffer, long offset, long size)
-        {
-            _glBindBufferRangeEXT(target, index, buffer, offset, size);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, uint, uint, long, long, void> _glBindBufferRangeNV;
-        
-        public static unsafe void BindBufferRangeNV(BufferTargetARB target, uint index, uint buffer, long offset, long size)
-        {
-            _glBindBufferRangeNV(target, index, buffer, offset, size);
         }
         
         public static unsafe delegate*<BufferTargetARB, uint, int, IntPtr, void> _glBindBuffersBase;
@@ -454,32 +146,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBindFragDataLocation(program, color, (IntPtr)name);
         }
         
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glBindFragDataLocationEXT;
-        
-        public static unsafe void BindFragDataLocationEXT(uint program, uint color, ref sbyte name)
-        {
-            _glBindFragDataLocationEXT(program, color, (IntPtr)name);
-        }
-        
         public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glBindFragDataLocationIndexed;
         
         public static unsafe void BindFragDataLocationIndexed(uint program, uint colorNumber, uint index, ref sbyte name)
         {
             _glBindFragDataLocationIndexed(program, colorNumber, index, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glBindFragDataLocationIndexedEXT;
-        
-        public static unsafe void BindFragDataLocationIndexedEXT(uint program, uint colorNumber, uint index, ref sbyte name)
-        {
-            _glBindFragDataLocationIndexedEXT(program, colorNumber, index, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, void> _glBindFragmentShaderATI;
-        
-        public static unsafe void BindFragmentShaderATI(uint id)
-        {
-            _glBindFragmentShaderATI(id);
         }
         
         public static unsafe delegate*<FramebufferTarget, uint, void> _glBindFramebuffer;
@@ -489,32 +160,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBindFramebuffer(target, framebuffer);
         }
         
-        public static unsafe delegate*<FramebufferTarget, uint, void> _glBindFramebufferEXT;
-        
-        public static unsafe void BindFramebufferEXT(FramebufferTarget target, uint framebuffer)
-        {
-            _glBindFramebufferEXT(target, framebuffer);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, uint, void> _glBindFramebufferOES;
-        
-        public static unsafe void BindFramebufferOES(FramebufferTarget target, uint framebuffer)
-        {
-            _glBindFramebufferOES(target, framebuffer);
-        }
-        
         public static unsafe delegate*<uint, uint, int, byte, int, BufferAccessARB, InternalFormat, void> _glBindImageTexture;
         
         public static unsafe void BindImageTexture(uint unit, uint texture, int level, byte layered, int layer, BufferAccessARB access, InternalFormat format)
         {
             _glBindImageTexture(unit, texture, level, layered, layer, access, format);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, byte, int, BufferAccessARB, int, void> _glBindImageTextureEXT;
-        
-        public static unsafe void BindImageTextureEXT(uint index, uint texture, int level, byte layered, int layer, BufferAccessARB access, int format)
-        {
-            _glBindImageTextureEXT(index, texture, level, layered, layer, access, format);
         }
         
         public static unsafe delegate*<uint, int, IntPtr, void> _glBindImageTextures;
@@ -524,48 +174,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBindImageTextures(first, count, (IntPtr)textures);
         }
         
-        public static unsafe delegate*<LightName, LightParameter, uint> _glBindLightParameterEXT;
-        
-        public static unsafe uint BindLightParameterEXT(LightName light, LightParameter value)
-        {
-            return _glBindLightParameterEXT(light, value);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, uint> _glBindMaterialParameterEXT;
-        
-        public static unsafe uint BindMaterialParameterEXT(MaterialFace face, MaterialParameter value)
-        {
-            return _glBindMaterialParameterEXT(face, value);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, uint, void> _glBindMultiTextureEXT;
-        
-        public static unsafe void BindMultiTextureEXT(TextureUnit texunit, TextureTarget target, uint texture)
-        {
-            _glBindMultiTextureEXT(texunit, target, texture);
-        }
-        
-        public static unsafe delegate*<VertexShaderParameterEXT, uint> _glBindParameterEXT;
-        
-        public static unsafe uint BindParameterEXT(VertexShaderParameterEXT value)
-        {
-            return _glBindParameterEXT(value);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, void> _glBindProgramARB;
-        
-        public static unsafe void BindProgramARB(ProgramTarget target, uint program)
-        {
-            _glBindProgramARB(target, program);
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, void> _glBindProgramNV;
-        
-        public static unsafe void BindProgramNV(VertexAttribEnumNV target, uint id)
-        {
-            _glBindProgramNV(target, id);
-        }
-        
         public static unsafe delegate*<uint, void> _glBindProgramPipeline;
         
         public static unsafe void BindProgramPipeline(uint pipeline)
@@ -573,32 +181,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBindProgramPipeline(pipeline);
         }
         
-        public static unsafe delegate*<uint, void> _glBindProgramPipelineEXT;
-        
-        public static unsafe void BindProgramPipelineEXT(uint pipeline)
-        {
-            _glBindProgramPipelineEXT(pipeline);
-        }
-        
         public static unsafe delegate*<RenderbufferTarget, uint, void> _glBindRenderbuffer;
         
         public static unsafe void BindRenderbuffer(RenderbufferTarget target, uint renderbuffer)
         {
             _glBindRenderbuffer(target, renderbuffer);
-        }
-        
-        public static unsafe delegate*<RenderbufferTarget, uint, void> _glBindRenderbufferEXT;
-        
-        public static unsafe void BindRenderbufferEXT(RenderbufferTarget target, uint renderbuffer)
-        {
-            _glBindRenderbufferEXT(target, renderbuffer);
-        }
-        
-        public static unsafe delegate*<RenderbufferTarget, uint, void> _glBindRenderbufferOES;
-        
-        public static unsafe void BindRenderbufferOES(RenderbufferTarget target, uint renderbuffer)
-        {
-            _glBindRenderbufferOES(target, renderbuffer);
         }
         
         public static unsafe delegate*<uint, uint, void> _glBindSampler;
@@ -615,20 +202,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBindSamplers(first, count, (IntPtr)samplers);
         }
         
-        public static unsafe delegate*<uint, void> _glBindShadingRateImageNV;
-        
-        public static unsafe void BindShadingRateImageNV(uint texture)
-        {
-            _glBindShadingRateImageNV(texture);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureCoordName, TextureGenParameter, uint> _glBindTexGenParameterEXT;
-        
-        public static unsafe uint BindTexGenParameterEXT(TextureUnit unit, TextureCoordName coord, TextureGenParameter value)
-        {
-            return _glBindTexGenParameterEXT(unit, coord, value);
-        }
-        
         public static unsafe delegate*<TextureTarget, uint, void> _glBindTexture;
         
         public static unsafe void BindTexture(TextureTarget target, uint texture)
@@ -636,25 +209,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBindTexture(target, texture);
         }
         
-        public static unsafe delegate*<TextureTarget, uint, void> _glBindTextureEXT;
-        
-        public static unsafe void BindTextureEXT(TextureTarget target, uint texture)
-        {
-            _glBindTextureEXT(target, texture);
-        }
-        
         public static unsafe delegate*<uint, uint, void> _glBindTextureUnit;
         
         public static unsafe void BindTextureUnit(uint unit, uint texture)
         {
             _glBindTextureUnit(unit, texture);
-        }
-        
-        public static unsafe delegate*<TextureUnit, VertexShaderTextureUnitParameter, uint> _glBindTextureUnitParameterEXT;
-        
-        public static unsafe uint BindTextureUnitParameterEXT(TextureUnit unit, VertexShaderTextureUnitParameter value)
-        {
-            return _glBindTextureUnitParameterEXT(unit, value);
         }
         
         public static unsafe delegate*<uint, int, IntPtr, void> _glBindTextures;
@@ -671,32 +230,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBindTransformFeedback(target, id);
         }
         
-        public static unsafe delegate*<BufferTargetARB, uint, void> _glBindTransformFeedbackNV;
-        
-        public static unsafe void BindTransformFeedbackNV(BufferTargetARB target, uint id)
-        {
-            _glBindTransformFeedbackNV(target, id);
-        }
-        
         public static unsafe delegate*<uint, void> _glBindVertexArray;
         
         public static unsafe void BindVertexArray(uint array)
         {
             _glBindVertexArray(array);
-        }
-        
-        public static unsafe delegate*<uint, void> _glBindVertexArrayAPPLE;
-        
-        public static unsafe void BindVertexArrayAPPLE(uint array)
-        {
-            _glBindVertexArrayAPPLE(array);
-        }
-        
-        public static unsafe delegate*<uint, void> _glBindVertexArrayOES;
-        
-        public static unsafe void BindVertexArrayOES(uint array)
-        {
-            _glBindVertexArrayOES(array);
         }
         
         public static unsafe delegate*<uint, uint, long, int, void> _glBindVertexBuffer;
@@ -713,137 +251,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBindVertexBuffers(first, count, (IntPtr)buffers, (IntPtr)offsets, (IntPtr)strides);
         }
         
-        public static unsafe delegate*<uint, void> _glBindVertexShaderEXT;
-        
-        public static unsafe void BindVertexShaderEXT(uint id)
-        {
-            _glBindVertexShaderEXT(id);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, long, void> _glBindVideoCaptureStreamBufferNV;
-        
-        public static unsafe void BindVideoCaptureStreamBufferNV(uint video_capture_slot, uint stream, uint frame_region, long offset)
-        {
-            _glBindVideoCaptureStreamBufferNV(video_capture_slot, stream, frame_region, offset);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, uint, void> _glBindVideoCaptureStreamTextureNV;
-        
-        public static unsafe void BindVideoCaptureStreamTextureNV(uint video_capture_slot, uint stream, uint frame_region, uint target, uint texture)
-        {
-            _glBindVideoCaptureStreamTextureNV(video_capture_slot, stream, frame_region, target, texture);
-        }
-        
-        public static unsafe delegate*<sbyte, sbyte, sbyte, void> _glBinormal3bEXT;
-        
-        public static unsafe void Binormal3bEXT(sbyte bx, sbyte by, sbyte bz)
-        {
-            _glBinormal3bEXT(bx, by, bz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glBinormal3bvEXT;
-        
-        public static unsafe void Binormal3bvEXT(ref sbyte v)
-        {
-            _glBinormal3bvEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<double, double, double, void> _glBinormal3dEXT;
-        
-        public static unsafe void Binormal3dEXT(double bx, double by, double bz)
-        {
-            _glBinormal3dEXT(bx, by, bz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glBinormal3dvEXT;
-        
-        public static unsafe void Binormal3dvEXT(ref double v)
-        {
-            _glBinormal3dvEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<float, float, float, void> _glBinormal3fEXT;
-        
-        public static unsafe void Binormal3fEXT(float bx, float by, float bz)
-        {
-            _glBinormal3fEXT(bx, by, bz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glBinormal3fvEXT;
-        
-        public static unsafe void Binormal3fvEXT(ref float v)
-        {
-            _glBinormal3fvEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<int, int, int, void> _glBinormal3iEXT;
-        
-        public static unsafe void Binormal3iEXT(int bx, int by, int bz)
-        {
-            _glBinormal3iEXT(bx, by, bz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glBinormal3ivEXT;
-        
-        public static unsafe void Binormal3ivEXT(ref int v)
-        {
-            _glBinormal3ivEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<short, short, short, void> _glBinormal3sEXT;
-        
-        public static unsafe void Binormal3sEXT(short bx, short by, short bz)
-        {
-            _glBinormal3sEXT(bx, by, bz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glBinormal3svEXT;
-        
-        public static unsafe void Binormal3svEXT(ref short v)
-        {
-            _glBinormal3svEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<BinormalPointerTypeEXT, int, IntPtr, void> _glBinormalPointerEXT;
-        
-        public static unsafe void BinormalPointerEXT(BinormalPointerTypeEXT type, int stride, IntPtr pointer)
-        {
-            _glBinormalPointerEXT(type, stride, (IntPtr)pointer);
-        }
-        
         public static unsafe delegate*<int, int, float, float, float, float, IntPtr, void> _glBitmap;
         
         public static unsafe void Bitmap(int width, int height, float xorig, float yorig, float xmove, float ymove, ref byte bitmap)
         {
             _glBitmap(width, height, xorig, yorig, xmove, ymove, (IntPtr)bitmap);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, int, int, IntPtr, void> _glBitmapxOES;
-        
-        public static unsafe void BitmapxOES(int width, int height, int xorig, int yorig, int xmove, int ymove, ref byte bitmap)
-        {
-            _glBitmapxOES(width, height, xorig, yorig, xmove, ymove, (IntPtr)bitmap);
-        }
-        
-        public static unsafe delegate*<void> _glBlendBarrier;
-        
-        public static unsafe void BlendBarrier()
-        {
-            _glBlendBarrier();
-        }
-        
-        public static unsafe delegate*<void> _glBlendBarrierKHR;
-        
-        public static unsafe void BlendBarrierKHR()
-        {
-            _glBlendBarrierKHR();
-        }
-        
-        public static unsafe delegate*<void> _glBlendBarrierNV;
-        
-        public static unsafe void BlendBarrierNV()
-        {
-            _glBlendBarrierNV();
         }
         
         public static unsafe delegate*<float, float, float, float, void> _glBlendColor;
@@ -853,46 +265,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBlendColor(red, green, blue, alpha);
         }
         
-        public static unsafe delegate*<float, float, float, float, void> _glBlendColorEXT;
-        
-        public static unsafe void BlendColorEXT(float red, float green, float blue, float alpha)
-        {
-            _glBlendColorEXT(red, green, blue, alpha);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, void> _glBlendColorxOES;
-        
-        public static unsafe void BlendColorxOES(int red, int green, int blue, int alpha)
-        {
-            _glBlendColorxOES(red, green, blue, alpha);
-        }
-        
         public static unsafe delegate*<BlendEquationModeEXT, void> _glBlendEquation;
         
         public static unsafe void BlendEquation(BlendEquationModeEXT mode)
         {
             _glBlendEquation(mode);
-        }
-        
-        public static unsafe delegate*<BlendEquationModeEXT, void> _glBlendEquationEXT;
-        
-        public static unsafe void BlendEquationEXT(BlendEquationModeEXT mode)
-        {
-            _glBlendEquationEXT(mode);
-        }
-        
-        public static unsafe delegate*<uint, BlendEquationModeEXT, void> _glBlendEquationIndexedAMD;
-        
-        public static unsafe void BlendEquationIndexedAMD(uint buf, BlendEquationModeEXT mode)
-        {
-            _glBlendEquationIndexedAMD(buf, mode);
-        }
-        
-        public static unsafe delegate*<BlendEquationModeEXT, void> _glBlendEquationOES;
-        
-        public static unsafe void BlendEquationOES(BlendEquationModeEXT mode)
-        {
-            _glBlendEquationOES(mode);
         }
         
         public static unsafe delegate*<BlendEquationModeEXT, BlendEquationModeEXT, void> _glBlendEquationSeparate;
@@ -902,53 +279,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBlendEquationSeparate(modeRGB, modeAlpha);
         }
         
-        public static unsafe delegate*<BlendEquationModeEXT, BlendEquationModeEXT, void> _glBlendEquationSeparateEXT;
-        
-        public static unsafe void BlendEquationSeparateEXT(BlendEquationModeEXT modeRGB, BlendEquationModeEXT modeAlpha)
-        {
-            _glBlendEquationSeparateEXT(modeRGB, modeAlpha);
-        }
-        
-        public static unsafe delegate*<uint, BlendEquationModeEXT, BlendEquationModeEXT, void> _glBlendEquationSeparateIndexedAMD;
-        
-        public static unsafe void BlendEquationSeparateIndexedAMD(uint buf, BlendEquationModeEXT modeRGB, BlendEquationModeEXT modeAlpha)
-        {
-            _glBlendEquationSeparateIndexedAMD(buf, modeRGB, modeAlpha);
-        }
-        
-        public static unsafe delegate*<BlendEquationModeEXT, BlendEquationModeEXT, void> _glBlendEquationSeparateOES;
-        
-        public static unsafe void BlendEquationSeparateOES(BlendEquationModeEXT modeRGB, BlendEquationModeEXT modeAlpha)
-        {
-            _glBlendEquationSeparateOES(modeRGB, modeAlpha);
-        }
-        
         public static unsafe delegate*<uint, BlendEquationModeEXT, BlendEquationModeEXT, void> _glBlendEquationSeparatei;
         
         public static unsafe void BlendEquationSeparatei(uint buf, BlendEquationModeEXT modeRGB, BlendEquationModeEXT modeAlpha)
         {
             _glBlendEquationSeparatei(buf, modeRGB, modeAlpha);
-        }
-        
-        public static unsafe delegate*<uint, BlendEquationModeEXT, BlendEquationModeEXT, void> _glBlendEquationSeparateiARB;
-        
-        public static unsafe void BlendEquationSeparateiARB(uint buf, BlendEquationModeEXT modeRGB, BlendEquationModeEXT modeAlpha)
-        {
-            _glBlendEquationSeparateiARB(buf, modeRGB, modeAlpha);
-        }
-        
-        public static unsafe delegate*<uint, BlendEquationModeEXT, BlendEquationModeEXT, void> _glBlendEquationSeparateiEXT;
-        
-        public static unsafe void BlendEquationSeparateiEXT(uint buf, BlendEquationModeEXT modeRGB, BlendEquationModeEXT modeAlpha)
-        {
-            _glBlendEquationSeparateiEXT(buf, modeRGB, modeAlpha);
-        }
-        
-        public static unsafe delegate*<uint, BlendEquationModeEXT, BlendEquationModeEXT, void> _glBlendEquationSeparateiOES;
-        
-        public static unsafe void BlendEquationSeparateiOES(uint buf, BlendEquationModeEXT modeRGB, BlendEquationModeEXT modeAlpha)
-        {
-            _glBlendEquationSeparateiOES(buf, modeRGB, modeAlpha);
         }
         
         public static unsafe delegate*<uint, BlendEquationModeEXT, void> _glBlendEquationi;
@@ -958,39 +293,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBlendEquationi(buf, mode);
         }
         
-        public static unsafe delegate*<uint, BlendEquationModeEXT, void> _glBlendEquationiARB;
-        
-        public static unsafe void BlendEquationiARB(uint buf, BlendEquationModeEXT mode)
-        {
-            _glBlendEquationiARB(buf, mode);
-        }
-        
-        public static unsafe delegate*<uint, BlendEquationModeEXT, void> _glBlendEquationiEXT;
-        
-        public static unsafe void BlendEquationiEXT(uint buf, BlendEquationModeEXT mode)
-        {
-            _glBlendEquationiEXT(buf, mode);
-        }
-        
-        public static unsafe delegate*<uint, BlendEquationModeEXT, void> _glBlendEquationiOES;
-        
-        public static unsafe void BlendEquationiOES(uint buf, BlendEquationModeEXT mode)
-        {
-            _glBlendEquationiOES(buf, mode);
-        }
-        
         public static unsafe delegate*<BlendingFactor, BlendingFactor, void> _glBlendFunc;
         
         public static unsafe void BlendFunc(BlendingFactor sfactor, BlendingFactor dfactor)
         {
             _glBlendFunc(sfactor, dfactor);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, void> _glBlendFuncIndexedAMD;
-        
-        public static unsafe void BlendFuncIndexedAMD(uint buf, uint src, uint dst)
-        {
-            _glBlendFuncIndexedAMD(buf, src, dst);
         }
         
         public static unsafe delegate*<BlendingFactor, BlendingFactor, BlendingFactor, BlendingFactor, void> _glBlendFuncSeparate;
@@ -1000,60 +307,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBlendFuncSeparate(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
         }
         
-        public static unsafe delegate*<BlendingFactor, BlendingFactor, BlendingFactor, BlendingFactor, void> _glBlendFuncSeparateEXT;
-        
-        public static unsafe void BlendFuncSeparateEXT(BlendingFactor sfactorRGB, BlendingFactor dfactorRGB, BlendingFactor sfactorAlpha, BlendingFactor dfactorAlpha)
-        {
-            _glBlendFuncSeparateEXT(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
-        }
-        
-        public static unsafe delegate*<BlendingFactor, BlendingFactor, BlendingFactor, BlendingFactor, void> _glBlendFuncSeparateINGR;
-        
-        public static unsafe void BlendFuncSeparateINGR(BlendingFactor sfactorRGB, BlendingFactor dfactorRGB, BlendingFactor sfactorAlpha, BlendingFactor dfactorAlpha)
-        {
-            _glBlendFuncSeparateINGR(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
-        }
-        
-        public static unsafe delegate*<uint, BlendingFactor, BlendingFactor, BlendingFactor, BlendingFactor, void> _glBlendFuncSeparateIndexedAMD;
-        
-        public static unsafe void BlendFuncSeparateIndexedAMD(uint buf, BlendingFactor srcRGB, BlendingFactor dstRGB, BlendingFactor srcAlpha, BlendingFactor dstAlpha)
-        {
-            _glBlendFuncSeparateIndexedAMD(buf, srcRGB, dstRGB, srcAlpha, dstAlpha);
-        }
-        
-        public static unsafe delegate*<BlendingFactor, BlendingFactor, BlendingFactor, BlendingFactor, void> _glBlendFuncSeparateOES;
-        
-        public static unsafe void BlendFuncSeparateOES(BlendingFactor srcRGB, BlendingFactor dstRGB, BlendingFactor srcAlpha, BlendingFactor dstAlpha)
-        {
-            _glBlendFuncSeparateOES(srcRGB, dstRGB, srcAlpha, dstAlpha);
-        }
-        
         public static unsafe delegate*<uint, BlendingFactor, BlendingFactor, BlendingFactor, BlendingFactor, void> _glBlendFuncSeparatei;
         
         public static unsafe void BlendFuncSeparatei(uint buf, BlendingFactor srcRGB, BlendingFactor dstRGB, BlendingFactor srcAlpha, BlendingFactor dstAlpha)
         {
             _glBlendFuncSeparatei(buf, srcRGB, dstRGB, srcAlpha, dstAlpha);
-        }
-        
-        public static unsafe delegate*<uint, BlendingFactor, BlendingFactor, BlendingFactor, BlendingFactor, void> _glBlendFuncSeparateiARB;
-        
-        public static unsafe void BlendFuncSeparateiARB(uint buf, BlendingFactor srcRGB, BlendingFactor dstRGB, BlendingFactor srcAlpha, BlendingFactor dstAlpha)
-        {
-            _glBlendFuncSeparateiARB(buf, srcRGB, dstRGB, srcAlpha, dstAlpha);
-        }
-        
-        public static unsafe delegate*<uint, BlendingFactor, BlendingFactor, BlendingFactor, BlendingFactor, void> _glBlendFuncSeparateiEXT;
-        
-        public static unsafe void BlendFuncSeparateiEXT(uint buf, BlendingFactor srcRGB, BlendingFactor dstRGB, BlendingFactor srcAlpha, BlendingFactor dstAlpha)
-        {
-            _glBlendFuncSeparateiEXT(buf, srcRGB, dstRGB, srcAlpha, dstAlpha);
-        }
-        
-        public static unsafe delegate*<uint, BlendingFactor, BlendingFactor, BlendingFactor, BlendingFactor, void> _glBlendFuncSeparateiOES;
-        
-        public static unsafe void BlendFuncSeparateiOES(uint buf, BlendingFactor srcRGB, BlendingFactor dstRGB, BlendingFactor srcAlpha, BlendingFactor dstAlpha)
-        {
-            _glBlendFuncSeparateiOES(buf, srcRGB, dstRGB, srcAlpha, dstAlpha);
         }
         
         public static unsafe delegate*<uint, BlendingFactor, BlendingFactor, void> _glBlendFunci;
@@ -1063,60 +321,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBlendFunci(buf, src, dst);
         }
         
-        public static unsafe delegate*<uint, BlendingFactor, BlendingFactor, void> _glBlendFunciARB;
-        
-        public static unsafe void BlendFunciARB(uint buf, BlendingFactor src, BlendingFactor dst)
-        {
-            _glBlendFunciARB(buf, src, dst);
-        }
-        
-        public static unsafe delegate*<uint, BlendingFactor, BlendingFactor, void> _glBlendFunciEXT;
-        
-        public static unsafe void BlendFunciEXT(uint buf, BlendingFactor src, BlendingFactor dst)
-        {
-            _glBlendFunciEXT(buf, src, dst);
-        }
-        
-        public static unsafe delegate*<uint, BlendingFactor, BlendingFactor, void> _glBlendFunciOES;
-        
-        public static unsafe void BlendFunciOES(uint buf, BlendingFactor src, BlendingFactor dst)
-        {
-            _glBlendFunciOES(buf, src, dst);
-        }
-        
-        public static unsafe delegate*<uint, int, void> _glBlendParameteriNV;
-        
-        public static unsafe void BlendParameteriNV(uint pname, int value)
-        {
-            _glBlendParameteriNV(pname, value);
-        }
-        
         public static unsafe delegate*<int, int, int, int, int, int, int, int, uint, BlitFramebufferFilter, void> _glBlitFramebuffer;
         
         public static unsafe void BlitFramebuffer(int srcX0, int srcY0, int srcX1, int srcY1, int dstX0, int dstY0, int dstX1, int dstY1, uint mask, BlitFramebufferFilter filter)
         {
             _glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, int, int, int, int, uint, BlitFramebufferFilter, void> _glBlitFramebufferANGLE;
-        
-        public static unsafe void BlitFramebufferANGLE(int srcX0, int srcY0, int srcX1, int srcY1, int dstX0, int dstY0, int dstX1, int dstY1, uint mask, BlitFramebufferFilter filter)
-        {
-            _glBlitFramebufferANGLE(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, int, int, int, int, uint, BlitFramebufferFilter, void> _glBlitFramebufferEXT;
-        
-        public static unsafe void BlitFramebufferEXT(int srcX0, int srcY0, int srcX1, int srcY1, int dstX0, int dstY0, int dstX1, int dstY1, uint mask, BlitFramebufferFilter filter)
-        {
-            _glBlitFramebufferEXT(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, int, int, int, int, uint, BlitFramebufferFilter, void> _glBlitFramebufferNV;
-        
-        public static unsafe void BlitFramebufferNV(int srcX0, int srcY0, int srcX1, int srcY1, int dstX0, int dstY0, int dstX1, int dstY1, uint mask, BlitFramebufferFilter filter)
-        {
-            _glBlitFramebufferNV(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
         }
         
         public static unsafe delegate*<uint, uint, int, int, int, int, int, int, int, int, uint, BlitFramebufferFilter, void> _glBlitNamedFramebuffer;
@@ -1126,53 +335,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBlitNamedFramebuffer(readFramebuffer, drawFramebuffer, srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
         }
         
-        public static unsafe delegate*<uint, uint, ulong, long, void> _glBufferAddressRangeNV;
-        
-        public static unsafe void BufferAddressRangeNV(uint pname, uint index, ulong address, long length)
-        {
-            _glBufferAddressRangeNV(pname, index, address, length);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, uint, ulong, void> _glBufferAttachMemoryNV;
-        
-        public static unsafe void BufferAttachMemoryNV(BufferTargetARB target, uint memory, ulong offset)
-        {
-            _glBufferAttachMemoryNV(target, memory, offset);
-        }
-        
         public static unsafe delegate*<BufferTargetARB, long, IntPtr, BufferUsageARB, void> _glBufferData;
         
         public static unsafe void BufferData(BufferTargetARB target, long size, IntPtr data, BufferUsageARB usage)
         {
             _glBufferData(target, size, (IntPtr)data, usage);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, long, IntPtr, BufferUsageARB, void> _glBufferDataARB;
-        
-        public static unsafe void BufferDataARB(BufferTargetARB target, long size, IntPtr data, BufferUsageARB usage)
-        {
-            _glBufferDataARB(target, size, (IntPtr)data, usage);
-        }
-        
-        public static unsafe delegate*<uint, long, long, byte, void> _glBufferPageCommitmentARB;
-        
-        public static unsafe void BufferPageCommitmentARB(uint target, long offset, long size, byte commit)
-        {
-            _glBufferPageCommitmentARB(target, offset, size, commit);
-        }
-        
-        public static unsafe delegate*<BufferStorageTarget, long, long, uint, ulong, byte, void> _glBufferPageCommitmentMemNV;
-        
-        public static unsafe void BufferPageCommitmentMemNV(BufferStorageTarget target, long offset, long size, uint memory, ulong memOffset, byte commit)
-        {
-            _glBufferPageCommitmentMemNV(target, offset, size, memory, memOffset, commit);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, void> _glBufferParameteriAPPLE;
-        
-        public static unsafe void BufferParameteriAPPLE(uint target, uint pname, int param)
-        {
-            _glBufferParameteriAPPLE(target, pname, param);
         }
         
         public static unsafe delegate*<BufferStorageTarget, long, IntPtr, uint, void> _glBufferStorage;
@@ -1182,46 +349,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glBufferStorage(target, size, (IntPtr)data, flags);
         }
         
-        public static unsafe delegate*<BufferStorageTarget, long, IntPtr, uint, void> _glBufferStorageEXT;
-        
-        public static unsafe void BufferStorageEXT(BufferStorageTarget target, long size, IntPtr data, uint flags)
-        {
-            _glBufferStorageEXT(target, size, (IntPtr)data, flags);
-        }
-        
-        public static unsafe delegate*<uint, long, long, IntPtr, uint, void> _glBufferStorageExternalEXT;
-        
-        public static unsafe void BufferStorageExternalEXT(uint target, long offset, long size, IntPtr clientBuffer, uint flags)
-        {
-            _glBufferStorageExternalEXT(target, offset, size, clientBuffer, flags);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, long, uint, ulong, void> _glBufferStorageMemEXT;
-        
-        public static unsafe void BufferStorageMemEXT(BufferTargetARB target, long size, uint memory, ulong offset)
-        {
-            _glBufferStorageMemEXT(target, size, memory, offset);
-        }
-        
         public static unsafe delegate*<BufferTargetARB, long, long, IntPtr, void> _glBufferSubData;
         
         public static unsafe void BufferSubData(BufferTargetARB target, long offset, long size, IntPtr data)
         {
             _glBufferSubData(target, offset, size, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, long, long, IntPtr, void> _glBufferSubDataARB;
-        
-        public static unsafe void BufferSubDataARB(BufferTargetARB target, long offset, long size, IntPtr data)
-        {
-            _glBufferSubDataARB(target, offset, size, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, void> _glCallCommandListNV;
-        
-        public static unsafe void CallCommandListNV(uint list)
-        {
-            _glCallCommandListNV(list);
         }
         
         public static unsafe delegate*<uint, void> _glCallList;
@@ -1245,20 +377,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glCheckFramebufferStatus(target);
         }
         
-        public static unsafe delegate*<FramebufferTarget, uint> _glCheckFramebufferStatusEXT;
-        
-        public static unsafe uint CheckFramebufferStatusEXT(FramebufferTarget target)
-        {
-            return _glCheckFramebufferStatusEXT(target);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, uint> _glCheckFramebufferStatusOES;
-        
-        public static unsafe uint CheckFramebufferStatusOES(FramebufferTarget target)
-        {
-            return _glCheckFramebufferStatusOES(target);
-        }
-        
         public static unsafe delegate*<uint, FramebufferTarget, uint> _glCheckNamedFramebufferStatus;
         
         public static unsafe uint CheckNamedFramebufferStatus(uint framebuffer, FramebufferTarget target)
@@ -1266,25 +384,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glCheckNamedFramebufferStatus(framebuffer, target);
         }
         
-        public static unsafe delegate*<uint, FramebufferTarget, uint> _glCheckNamedFramebufferStatusEXT;
-        
-        public static unsafe uint CheckNamedFramebufferStatusEXT(uint framebuffer, FramebufferTarget target)
-        {
-            return _glCheckNamedFramebufferStatusEXT(framebuffer, target);
-        }
-        
         public static unsafe delegate*<ClampColorTargetARB, ClampColorModeARB, void> _glClampColor;
         
         public static unsafe void ClampColor(ClampColorTargetARB target, ClampColorModeARB clamp)
         {
             _glClampColor(target, clamp);
-        }
-        
-        public static unsafe delegate*<ClampColorTargetARB, ClampColorModeARB, void> _glClampColorARB;
-        
-        public static unsafe void ClampColorARB(ClampColorTargetARB target, ClampColorModeARB clamp)
-        {
-            _glClampColorARB(target, clamp);
         }
         
         public static unsafe delegate*<uint, void> _glClear;
@@ -1299,13 +403,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void ClearAccum(float red, float green, float blue, float alpha)
         {
             _glClearAccum(red, green, blue, alpha);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, void> _glClearAccumxOES;
-        
-        public static unsafe void ClearAccumxOES(int red, int green, int blue, int alpha)
-        {
-            _glClearAccumxOES(red, green, blue, alpha);
         }
         
         public static unsafe delegate*<BufferStorageTarget, SizedInternalFormat, PixelFormat, PixelType, IntPtr, void> _glClearBufferData;
@@ -1357,34 +454,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glClearColor(red, green, blue, alpha);
         }
         
-        public static unsafe delegate*<int, int, int, int, void> _glClearColorIiEXT;
-        
-        public static unsafe void ClearColorIiEXT(int red, int green, int blue, int alpha)
-        {
-            _glClearColorIiEXT(red, green, blue, alpha);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, void> _glClearColorIuiEXT;
-        
-        public static unsafe void ClearColorIuiEXT(uint red, uint green, uint blue, uint alpha)
-        {
-            _glClearColorIuiEXT(red, green, blue, alpha);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, void> _glClearColorx;
-        
-        public static unsafe void ClearColorx(int red, int green, int blue, int alpha)
-        {
-            _glClearColorx(red, green, blue, alpha);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, void> _glClearColorxOES;
-        
-        public static unsafe void ClearColorxOES(int red, int green, int blue, int alpha)
-        {
-            _glClearColorxOES(red, green, blue, alpha);
-        }
-        
         public static unsafe delegate*<double, void> _glClearDepth;
         
         public static unsafe void ClearDepth(double depth)
@@ -1392,39 +461,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glClearDepth(depth);
         }
         
-        public static unsafe delegate*<double, void> _glClearDepthdNV;
-        
-        public static unsafe void ClearDepthdNV(double depth)
-        {
-            _glClearDepthdNV(depth);
-        }
-        
         public static unsafe delegate*<float, void> _glClearDepthf;
         
         public static unsafe void ClearDepthf(float d)
         {
             _glClearDepthf(d);
-        }
-        
-        public static unsafe delegate*<float, void> _glClearDepthfOES;
-        
-        public static unsafe void ClearDepthfOES(float depth)
-        {
-            _glClearDepthfOES(depth);
-        }
-        
-        public static unsafe delegate*<int, void> _glClearDepthx;
-        
-        public static unsafe void ClearDepthx(int depth)
-        {
-            _glClearDepthx(depth);
-        }
-        
-        public static unsafe delegate*<int, void> _glClearDepthxOES;
-        
-        public static unsafe void ClearDepthxOES(int depth)
-        {
-            _glClearDepthxOES(depth);
         }
         
         public static unsafe delegate*<float, void> _glClearIndex;
@@ -1441,25 +482,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glClearNamedBufferData(buffer, internalformat, format, type, (IntPtr)data);
         }
         
-        public static unsafe delegate*<uint, SizedInternalFormat, PixelFormat, PixelType, IntPtr, void> _glClearNamedBufferDataEXT;
-        
-        public static unsafe void ClearNamedBufferDataEXT(uint buffer, SizedInternalFormat internalformat, PixelFormat format, PixelType type, IntPtr data)
-        {
-            _glClearNamedBufferDataEXT(buffer, internalformat, format, type, (IntPtr)data);
-        }
-        
         public static unsafe delegate*<uint, SizedInternalFormat, long, long, PixelFormat, PixelType, IntPtr, void> _glClearNamedBufferSubData;
         
         public static unsafe void ClearNamedBufferSubData(uint buffer, SizedInternalFormat internalformat, long offset, long size, PixelFormat format, PixelType type, IntPtr data)
         {
             _glClearNamedBufferSubData(buffer, internalformat, offset, size, format, type, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, SizedInternalFormat, long, long, PixelFormat, PixelType, IntPtr, void> _glClearNamedBufferSubDataEXT;
-        
-        public static unsafe void ClearNamedBufferSubDataEXT(uint buffer, SizedInternalFormat internalformat, long offset, long size, PixelFormat format, PixelType type, IntPtr data)
-        {
-            _glClearNamedBufferSubDataEXT(buffer, internalformat, offset, size, format, type, (IntPtr)data);
         }
         
         public static unsafe delegate*<uint, Buffer, int, float, int, void> _glClearNamedFramebufferfi;
@@ -1490,13 +517,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glClearNamedFramebufferuiv(framebuffer, buffer, drawbuffer, (IntPtr)value);
         }
         
-        public static unsafe delegate*<int, int, IntPtr, void> _glClearPixelLocalStorageuiEXT;
-        
-        public static unsafe void ClearPixelLocalStorageuiEXT(int offset, int n, ref uint values)
-        {
-            _glClearPixelLocalStorageuiEXT(offset, n, (IntPtr)values);
-        }
-        
         public static unsafe delegate*<int, void> _glClearStencil;
         
         public static unsafe void ClearStencil(int s)
@@ -1511,25 +531,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glClearTexImage(texture, level, format, type, (IntPtr)data);
         }
         
-        public static unsafe delegate*<uint, int, PixelFormat, PixelType, IntPtr, void> _glClearTexImageEXT;
-        
-        public static unsafe void ClearTexImageEXT(uint texture, int level, PixelFormat format, PixelType type, IntPtr data)
-        {
-            _glClearTexImageEXT(texture, level, format, type, (IntPtr)data);
-        }
-        
         public static unsafe delegate*<uint, int, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glClearTexSubImage;
         
         public static unsafe void ClearTexSubImage(uint texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, PixelFormat format, PixelType type, IntPtr data)
         {
             _glClearTexSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glClearTexSubImageEXT;
-        
-        public static unsafe void ClearTexSubImageEXT(uint texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, PixelFormat format, PixelType type, IntPtr data)
-        {
-            _glClearTexSubImageEXT(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, (IntPtr)data);
         }
         
         public static unsafe delegate*<TextureUnit, void> _glClientActiveTexture;
@@ -1539,46 +545,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glClientActiveTexture(texture);
         }
         
-        public static unsafe delegate*<TextureUnit, void> _glClientActiveTextureARB;
-        
-        public static unsafe void ClientActiveTextureARB(TextureUnit texture)
-        {
-            _glClientActiveTextureARB(texture);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, void> _glClientActiveVertexStreamATI;
-        
-        public static unsafe void ClientActiveVertexStreamATI(VertexStreamATI stream)
-        {
-            _glClientActiveVertexStreamATI(stream);
-        }
-        
-        public static unsafe delegate*<uint, void> _glClientAttribDefaultEXT;
-        
-        public static unsafe void ClientAttribDefaultEXT(uint mask)
-        {
-            _glClientAttribDefaultEXT(mask);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, IntPtr, void> _glClientWaitSemaphoreui64NVX;
-        
-        public static unsafe void ClientWaitSemaphoreui64NVX(int fenceObjectCount, ref uint semaphoreArray, ref ulong fenceValueArray)
-        {
-            _glClientWaitSemaphoreui64NVX(fenceObjectCount, (IntPtr)semaphoreArray, (IntPtr)fenceValueArray);
-        }
-        
         public static unsafe delegate*<IntPtr, uint, ulong, uint> _glClientWaitSync;
         
         public static unsafe uint ClientWaitSync(IntPtr sync, uint flags, ulong timeout)
         {
             return _glClientWaitSync(sync, flags, timeout);
-        }
-        
-        public static unsafe delegate*<IntPtr, uint, ulong, uint> _glClientWaitSyncAPPLE;
-        
-        public static unsafe uint ClientWaitSyncAPPLE(IntPtr sync, uint flags, ulong timeout)
-        {
-            return _glClientWaitSyncAPPLE(sync, flags, timeout);
         }
         
         public static unsafe delegate*<ClipControlOrigin, ClipControlDepth, void> _glClipControl;
@@ -1588,60 +559,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glClipControl(origin, depth);
         }
         
-        public static unsafe delegate*<uint, uint, void> _glClipControlEXT;
-        
-        public static unsafe void ClipControlEXT(uint origin, uint depth)
-        {
-            _glClipControlEXT(origin, depth);
-        }
-        
         public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glClipPlane;
         
         public static unsafe void ClipPlane(ClipPlaneName plane, ref double equation)
         {
             _glClipPlane(plane, (IntPtr)equation);
-        }
-        
-        public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glClipPlanef;
-        
-        public static unsafe void ClipPlanef(ClipPlaneName p, ref float eqn)
-        {
-            _glClipPlanef(p, (IntPtr)eqn);
-        }
-        
-        public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glClipPlanefIMG;
-        
-        public static unsafe void ClipPlanefIMG(ClipPlaneName p, ref float eqn)
-        {
-            _glClipPlanefIMG(p, (IntPtr)eqn);
-        }
-        
-        public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glClipPlanefOES;
-        
-        public static unsafe void ClipPlanefOES(ClipPlaneName plane, ref float equation)
-        {
-            _glClipPlanefOES(plane, (IntPtr)equation);
-        }
-        
-        public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glClipPlanex;
-        
-        public static unsafe void ClipPlanex(ClipPlaneName plane, ref int equation)
-        {
-            _glClipPlanex(plane, (IntPtr)equation);
-        }
-        
-        public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glClipPlanexIMG;
-        
-        public static unsafe void ClipPlanexIMG(ClipPlaneName p, ref int eqn)
-        {
-            _glClipPlanexIMG(p, (IntPtr)eqn);
-        }
-        
-        public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glClipPlanexOES;
-        
-        public static unsafe void ClipPlanexOES(ClipPlaneName plane, ref int equation)
-        {
-            _glClipPlanexOES(plane, (IntPtr)equation);
         }
         
         public static unsafe delegate*<sbyte, sbyte, sbyte, void> _glColor3b;
@@ -1679,39 +601,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glColor3f(red, green, blue);
         }
         
-        public static unsafe delegate*<float, float, float, float, float, float, void> _glColor3fVertex3fSUN;
-        
-        public static unsafe void Color3fVertex3fSUN(float r, float g, float b, float x, float y, float z)
-        {
-            _glColor3fVertex3fSUN(r, g, b, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, void> _glColor3fVertex3fvSUN;
-        
-        public static unsafe void Color3fVertex3fvSUN(ref float c, ref float v)
-        {
-            _glColor3fVertex3fvSUN((IntPtr)c, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glColor3fv;
         
         public static unsafe void Color3fv(ref float v)
         {
             _glColor3fv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<ushort, ushort, ushort, void> _glColor3hNV;
-        
-        public static unsafe void Color3hNV(ushort red, ushort green, ushort blue)
-        {
-            _glColor3hNV(red, green, blue);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glColor3hvNV;
-        
-        public static unsafe void Color3hvNV(ref ushort v)
-        {
-            _glColor3hvNV((IntPtr)v);
         }
         
         public static unsafe delegate*<int, int, int, void> _glColor3i;
@@ -1784,20 +678,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glColor3usv((IntPtr)v);
         }
         
-        public static unsafe delegate*<int, int, int, void> _glColor3xOES;
-        
-        public static unsafe void Color3xOES(int red, int green, int blue)
-        {
-            _glColor3xOES(red, green, blue);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glColor3xvOES;
-        
-        public static unsafe void Color3xvOES(ref int components)
-        {
-            _glColor3xvOES((IntPtr)components);
-        }
-        
         public static unsafe delegate*<sbyte, sbyte, sbyte, sbyte, void> _glColor4b;
         
         public static unsafe void Color4b(sbyte red, sbyte green, sbyte blue, sbyte alpha)
@@ -1833,39 +713,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glColor4f(red, green, blue, alpha);
         }
         
-        public static unsafe delegate*<float, float, float, float, float, float, float, float, float, float, void> _glColor4fNormal3fVertex3fSUN;
-        
-        public static unsafe void Color4fNormal3fVertex3fSUN(float r, float g, float b, float a, float nx, float ny, float nz, float x, float y, float z)
-        {
-            _glColor4fNormal3fVertex3fSUN(r, g, b, a, nx, ny, nz, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, void> _glColor4fNormal3fVertex3fvSUN;
-        
-        public static unsafe void Color4fNormal3fVertex3fvSUN(ref float c, ref float n, ref float v)
-        {
-            _glColor4fNormal3fVertex3fvSUN((IntPtr)c, (IntPtr)n, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glColor4fv;
         
         public static unsafe void Color4fv(ref float v)
         {
             _glColor4fv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<ushort, ushort, ushort, ushort, void> _glColor4hNV;
-        
-        public static unsafe void Color4hNV(ushort red, ushort green, ushort blue, ushort alpha)
-        {
-            _glColor4hNV(red, green, blue, alpha);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glColor4hvNV;
-        
-        public static unsafe void Color4hvNV(ref ushort v)
-        {
-            _glColor4hvNV((IntPtr)v);
         }
         
         public static unsafe delegate*<int, int, int, int, void> _glColor4i;
@@ -1903,34 +755,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glColor4ub(red, green, blue, alpha);
         }
         
-        public static unsafe delegate*<byte, byte, byte, byte, float, float, void> _glColor4ubVertex2fSUN;
-        
-        public static unsafe void Color4ubVertex2fSUN(byte r, byte g, byte b, byte a, float x, float y)
-        {
-            _glColor4ubVertex2fSUN(r, g, b, a, x, y);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, void> _glColor4ubVertex2fvSUN;
-        
-        public static unsafe void Color4ubVertex2fvSUN(ref byte c, ref float v)
-        {
-            _glColor4ubVertex2fvSUN((IntPtr)c, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<byte, byte, byte, byte, float, float, float, void> _glColor4ubVertex3fSUN;
-        
-        public static unsafe void Color4ubVertex3fSUN(byte r, byte g, byte b, byte a, float x, float y, float z)
-        {
-            _glColor4ubVertex3fSUN(r, g, b, a, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, void> _glColor4ubVertex3fvSUN;
-        
-        public static unsafe void Color4ubVertex3fvSUN(ref byte c, ref float v)
-        {
-            _glColor4ubVertex3fvSUN((IntPtr)c, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glColor4ubv;
         
         public static unsafe void Color4ubv(ref byte v)
@@ -1966,55 +790,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glColor4usv((IntPtr)v);
         }
         
-        public static unsafe delegate*<int, int, int, int, void> _glColor4x;
-        
-        public static unsafe void Color4x(int red, int green, int blue, int alpha)
-        {
-            _glColor4x(red, green, blue, alpha);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, void> _glColor4xOES;
-        
-        public static unsafe void Color4xOES(int red, int green, int blue, int alpha)
-        {
-            _glColor4xOES(red, green, blue, alpha);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glColor4xvOES;
-        
-        public static unsafe void Color4xvOES(ref int components)
-        {
-            _glColor4xvOES((IntPtr)components);
-        }
-        
-        public static unsafe delegate*<int, uint, int, void> _glColorFormatNV;
-        
-        public static unsafe void ColorFormatNV(int size, uint type, int stride)
-        {
-            _glColorFormatNV(size, type, stride);
-        }
-        
-        public static unsafe delegate*<FragmentOpATI, uint, uint, uint, uint, uint, uint, void> _glColorFragmentOp1ATI;
-        
-        public static unsafe void ColorFragmentOp1ATI(FragmentOpATI op, uint dst, uint dstMask, uint dstMod, uint arg1, uint arg1Rep, uint arg1Mod)
-        {
-            _glColorFragmentOp1ATI(op, dst, dstMask, dstMod, arg1, arg1Rep, arg1Mod);
-        }
-        
-        public static unsafe delegate*<FragmentOpATI, uint, uint, uint, uint, uint, uint, uint, uint, uint, void> _glColorFragmentOp2ATI;
-        
-        public static unsafe void ColorFragmentOp2ATI(FragmentOpATI op, uint dst, uint dstMask, uint dstMod, uint arg1, uint arg1Rep, uint arg1Mod, uint arg2, uint arg2Rep, uint arg2Mod)
-        {
-            _glColorFragmentOp2ATI(op, dst, dstMask, dstMod, arg1, arg1Rep, arg1Mod, arg2, arg2Rep, arg2Mod);
-        }
-        
-        public static unsafe delegate*<FragmentOpATI, uint, uint, uint, uint, uint, uint, uint, uint, uint, uint, uint, uint, void> _glColorFragmentOp3ATI;
-        
-        public static unsafe void ColorFragmentOp3ATI(FragmentOpATI op, uint dst, uint dstMask, uint dstMod, uint arg1, uint arg1Rep, uint arg1Mod, uint arg2, uint arg2Rep, uint arg2Mod, uint arg3, uint arg3Rep, uint arg3Mod)
-        {
-            _glColorFragmentOp3ATI(op, dst, dstMask, dstMod, arg1, arg1Rep, arg1Mod, arg2, arg2Rep, arg2Mod, arg3, arg3Rep, arg3Mod);
-        }
-        
         public static unsafe delegate*<byte, byte, byte, byte, void> _glColorMask;
         
         public static unsafe void ColorMask(byte red, byte green, byte blue, byte alpha)
@@ -2022,32 +797,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glColorMask(red, green, blue, alpha);
         }
         
-        public static unsafe delegate*<uint, byte, byte, byte, byte, void> _glColorMaskIndexedEXT;
-        
-        public static unsafe void ColorMaskIndexedEXT(uint index, byte r, byte g, byte b, byte a)
-        {
-            _glColorMaskIndexedEXT(index, r, g, b, a);
-        }
-        
         public static unsafe delegate*<uint, byte, byte, byte, byte, void> _glColorMaski;
         
         public static unsafe void ColorMaski(uint index, byte r, byte g, byte b, byte a)
         {
             _glColorMaski(index, r, g, b, a);
-        }
-        
-        public static unsafe delegate*<uint, byte, byte, byte, byte, void> _glColorMaskiEXT;
-        
-        public static unsafe void ColorMaskiEXT(uint index, byte r, byte g, byte b, byte a)
-        {
-            _glColorMaskiEXT(index, r, g, b, a);
-        }
-        
-        public static unsafe delegate*<uint, byte, byte, byte, byte, void> _glColorMaskiOES;
-        
-        public static unsafe void ColorMaskiOES(uint index, byte r, byte g, byte b, byte a)
-        {
-            _glColorMaskiOES(index, r, g, b, a);
         }
         
         public static unsafe delegate*<MaterialFace, ColorMaterialParameter, void> _glColorMaterial;
@@ -2092,214 +846,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glColorPointer(size, type, stride, (IntPtr)pointer);
         }
         
-        public static unsafe delegate*<int, ColorPointerType, int, int, IntPtr, void> _glColorPointerEXT;
-        
-        public static unsafe void ColorPointerEXT(int size, ColorPointerType type, int stride, int count, IntPtr pointer)
-        {
-            _glColorPointerEXT(size, type, stride, count, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<int, ColorPointerType, int, IntPtr, int, void> _glColorPointerListIBM;
-        
-        public static unsafe void ColorPointerListIBM(int size, ColorPointerType type, int stride, out IntPtr pointer, int ptrstride)
-        {
-            _glColorPointerListIBM(size, type, stride, (IntPtr)pointer, ptrstride);
-        }
-        
-        public static unsafe delegate*<int, VertexPointerType, IntPtr, void> _glColorPointervINTEL;
-        
-        public static unsafe void ColorPointervINTEL(int size, VertexPointerType type, out IntPtr pointer)
-        {
-            _glColorPointervINTEL(size, type, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, int, int, PixelFormat, PixelType, IntPtr, void> _glColorSubTable;
-        
-        public static unsafe void ColorSubTable(ColorTableTarget target, int start, int count, PixelFormat format, PixelType type, IntPtr data)
-        {
-            _glColorSubTable(target, start, count, format, type, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, int, int, PixelFormat, PixelType, IntPtr, void> _glColorSubTableEXT;
-        
-        public static unsafe void ColorSubTableEXT(ColorTableTarget target, int start, int count, PixelFormat format, PixelType type, IntPtr data)
-        {
-            _glColorSubTableEXT(target, start, count, format, type, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, InternalFormat, int, PixelFormat, PixelType, IntPtr, void> _glColorTable;
-        
-        public static unsafe void ColorTable(ColorTableTarget target, InternalFormat internalformat, int width, PixelFormat format, PixelType type, IntPtr table)
-        {
-            _glColorTable(target, internalformat, width, format, type, (IntPtr)table);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, InternalFormat, int, PixelFormat, PixelType, IntPtr, void> _glColorTableEXT;
-        
-        public static unsafe void ColorTableEXT(ColorTableTarget target, InternalFormat internalFormat, int width, PixelFormat format, PixelType type, IntPtr table)
-        {
-            _glColorTableEXT(target, internalFormat, width, format, type, (IntPtr)table);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, ColorTableParameterPNameSGI, IntPtr, void> _glColorTableParameterfv;
-        
-        public static unsafe void ColorTableParameterfv(ColorTableTarget target, ColorTableParameterPNameSGI pname, ref float @params)
-        {
-            _glColorTableParameterfv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ColorTableTargetSGI, ColorTableParameterPNameSGI, IntPtr, void> _glColorTableParameterfvSGI;
-        
-        public static unsafe void ColorTableParameterfvSGI(ColorTableTargetSGI target, ColorTableParameterPNameSGI pname, ref float @params)
-        {
-            _glColorTableParameterfvSGI(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, ColorTableParameterPNameSGI, IntPtr, void> _glColorTableParameteriv;
-        
-        public static unsafe void ColorTableParameteriv(ColorTableTarget target, ColorTableParameterPNameSGI pname, ref int @params)
-        {
-            _glColorTableParameteriv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ColorTableTargetSGI, ColorTableParameterPNameSGI, IntPtr, void> _glColorTableParameterivSGI;
-        
-        public static unsafe void ColorTableParameterivSGI(ColorTableTargetSGI target, ColorTableParameterPNameSGI pname, ref int @params)
-        {
-            _glColorTableParameterivSGI(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ColorTableTargetSGI, InternalFormat, int, PixelFormat, PixelType, IntPtr, void> _glColorTableSGI;
-        
-        public static unsafe void ColorTableSGI(ColorTableTargetSGI target, InternalFormat internalformat, int width, PixelFormat format, PixelType type, IntPtr table)
-        {
-            _glColorTableSGI(target, internalformat, width, format, type, (IntPtr)table);
-        }
-        
-        public static unsafe delegate*<CombinerStageNV, CombinerPortionNV, CombinerVariableNV, CombinerRegisterNV, CombinerMappingNV, CombinerComponentUsageNV, void> _glCombinerInputNV;
-        
-        public static unsafe void CombinerInputNV(CombinerStageNV stage, CombinerPortionNV portion, CombinerVariableNV variable, CombinerRegisterNV input, CombinerMappingNV mapping, CombinerComponentUsageNV componentUsage)
-        {
-            _glCombinerInputNV(stage, portion, variable, input, mapping, componentUsage);
-        }
-        
-        public static unsafe delegate*<CombinerStageNV, CombinerPortionNV, CombinerRegisterNV, CombinerRegisterNV, CombinerRegisterNV, CombinerScaleNV, CombinerBiasNV, byte, byte, byte, void> _glCombinerOutputNV;
-        
-        public static unsafe void CombinerOutputNV(CombinerStageNV stage, CombinerPortionNV portion, CombinerRegisterNV abOutput, CombinerRegisterNV cdOutput, CombinerRegisterNV sumOutput, CombinerScaleNV scale, CombinerBiasNV bias, byte abDotProduct, byte cdDotProduct, byte muxSum)
-        {
-            _glCombinerOutputNV(stage, portion, abOutput, cdOutput, sumOutput, scale, bias, abDotProduct, cdDotProduct, muxSum);
-        }
-        
-        public static unsafe delegate*<CombinerParameterNV, float, void> _glCombinerParameterfNV;
-        
-        public static unsafe void CombinerParameterfNV(CombinerParameterNV pname, float param)
-        {
-            _glCombinerParameterfNV(pname, param);
-        }
-        
-        public static unsafe delegate*<CombinerParameterNV, IntPtr, void> _glCombinerParameterfvNV;
-        
-        public static unsafe void CombinerParameterfvNV(CombinerParameterNV pname, ref float @params)
-        {
-            _glCombinerParameterfvNV(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<CombinerParameterNV, int, void> _glCombinerParameteriNV;
-        
-        public static unsafe void CombinerParameteriNV(CombinerParameterNV pname, int param)
-        {
-            _glCombinerParameteriNV(pname, param);
-        }
-        
-        public static unsafe delegate*<CombinerParameterNV, IntPtr, void> _glCombinerParameterivNV;
-        
-        public static unsafe void CombinerParameterivNV(CombinerParameterNV pname, ref int @params)
-        {
-            _glCombinerParameterivNV(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<CombinerStageNV, CombinerParameterNV, IntPtr, void> _glCombinerStageParameterfvNV;
-        
-        public static unsafe void CombinerStageParameterfvNV(CombinerStageNV stage, CombinerParameterNV pname, ref float @params)
-        {
-            _glCombinerStageParameterfvNV(stage, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glCommandListSegmentsNV;
-        
-        public static unsafe void CommandListSegmentsNV(uint list, uint segments)
-        {
-            _glCommandListSegmentsNV(list, segments);
-        }
-        
-        public static unsafe delegate*<uint, void> _glCompileCommandListNV;
-        
-        public static unsafe void CompileCommandListNV(uint list)
-        {
-            _glCompileCommandListNV(list);
-        }
-        
         public static unsafe delegate*<uint, void> _glCompileShader;
         
         public static unsafe void CompileShader(uint shader)
         {
             _glCompileShader(shader);
-        }
-        
-        public static unsafe delegate*<uint, void> _glCompileShaderARB;
-        
-        public static unsafe void CompileShaderARB(uint shaderObj)
-        {
-            _glCompileShaderARB(shaderObj);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glCompileShaderIncludeARB;
-        
-        public static unsafe void CompileShaderIncludeARB(uint shader, int count, out IntPtr path, ref int length)
-        {
-            _glCompileShaderIncludeARB(shader, count, (IntPtr)path, (IntPtr)length);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, InternalFormat, int, int, int, IntPtr, void> _glCompressedMultiTexImage1DEXT;
-        
-        public static unsafe void CompressedMultiTexImage1DEXT(TextureUnit texunit, TextureTarget target, int level, InternalFormat internalformat, int width, int border, int imageSize, IntPtr bits)
-        {
-            _glCompressedMultiTexImage1DEXT(texunit, target, level, internalformat, width, border, imageSize, (IntPtr)bits);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, InternalFormat, int, int, int, int, IntPtr, void> _glCompressedMultiTexImage2DEXT;
-        
-        public static unsafe void CompressedMultiTexImage2DEXT(TextureUnit texunit, TextureTarget target, int level, InternalFormat internalformat, int width, int height, int border, int imageSize, IntPtr bits)
-        {
-            _glCompressedMultiTexImage2DEXT(texunit, target, level, internalformat, width, height, border, imageSize, (IntPtr)bits);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, InternalFormat, int, int, int, int, int, IntPtr, void> _glCompressedMultiTexImage3DEXT;
-        
-        public static unsafe void CompressedMultiTexImage3DEXT(TextureUnit texunit, TextureTarget target, int level, InternalFormat internalformat, int width, int height, int depth, int border, int imageSize, IntPtr bits)
-        {
-            _glCompressedMultiTexImage3DEXT(texunit, target, level, internalformat, width, height, depth, border, imageSize, (IntPtr)bits);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedMultiTexSubImage1DEXT;
-        
-        public static unsafe void CompressedMultiTexSubImage1DEXT(TextureUnit texunit, TextureTarget target, int level, int xoffset, int width, InternalFormat format, int imageSize, IntPtr bits)
-        {
-            _glCompressedMultiTexSubImage1DEXT(texunit, target, level, xoffset, width, format, imageSize, (IntPtr)bits);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedMultiTexSubImage2DEXT;
-        
-        public static unsafe void CompressedMultiTexSubImage2DEXT(TextureUnit texunit, TextureTarget target, int level, int xoffset, int yoffset, int width, int height, InternalFormat format, int imageSize, IntPtr bits)
-        {
-            _glCompressedMultiTexSubImage2DEXT(texunit, target, level, xoffset, yoffset, width, height, format, imageSize, (IntPtr)bits);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, int, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedMultiTexSubImage3DEXT;
-        
-        public static unsafe void CompressedMultiTexSubImage3DEXT(TextureUnit texunit, TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, InternalFormat format, int imageSize, IntPtr bits)
-        {
-            _glCompressedMultiTexSubImage3DEXT(texunit, target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, (IntPtr)bits);
         }
         
         public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, IntPtr, void> _glCompressedTexImage1D;
@@ -2309,25 +860,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCompressedTexImage1D(target, level, internalformat, width, border, imageSize, (IntPtr)data);
         }
         
-        public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, IntPtr, void> _glCompressedTexImage1DARB;
-        
-        public static unsafe void CompressedTexImage1DARB(TextureTarget target, int level, InternalFormat internalformat, int width, int border, int imageSize, IntPtr data)
-        {
-            _glCompressedTexImage1DARB(target, level, internalformat, width, border, imageSize, (IntPtr)data);
-        }
-        
         public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, int, IntPtr, void> _glCompressedTexImage2D;
         
         public static unsafe void CompressedTexImage2D(TextureTarget target, int level, InternalFormat internalformat, int width, int height, int border, int imageSize, IntPtr data)
         {
             _glCompressedTexImage2D(target, level, internalformat, width, height, border, imageSize, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, int, IntPtr, void> _glCompressedTexImage2DARB;
-        
-        public static unsafe void CompressedTexImage2DARB(TextureTarget target, int level, InternalFormat internalformat, int width, int height, int border, int imageSize, IntPtr data)
-        {
-            _glCompressedTexImage2DARB(target, level, internalformat, width, height, border, imageSize, (IntPtr)data);
         }
         
         public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, int, int, IntPtr, void> _glCompressedTexImage3D;
@@ -2337,32 +874,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCompressedTexImage3D(target, level, internalformat, width, height, depth, border, imageSize, (IntPtr)data);
         }
         
-        public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, int, int, IntPtr, void> _glCompressedTexImage3DARB;
-        
-        public static unsafe void CompressedTexImage3DARB(TextureTarget target, int level, InternalFormat internalformat, int width, int height, int depth, int border, int imageSize, IntPtr data)
-        {
-            _glCompressedTexImage3DARB(target, level, internalformat, width, height, depth, border, imageSize, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, int, int, IntPtr, void> _glCompressedTexImage3DOES;
-        
-        public static unsafe void CompressedTexImage3DOES(TextureTarget target, int level, InternalFormat internalformat, int width, int height, int depth, int border, int imageSize, IntPtr data)
-        {
-            _glCompressedTexImage3DOES(target, level, internalformat, width, height, depth, border, imageSize, (IntPtr)data);
-        }
-        
         public static unsafe delegate*<TextureTarget, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTexSubImage1D;
         
         public static unsafe void CompressedTexSubImage1D(TextureTarget target, int level, int xoffset, int width, InternalFormat format, int imageSize, IntPtr data)
         {
             _glCompressedTexSubImage1D(target, level, xoffset, width, format, imageSize, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTexSubImage1DARB;
-        
-        public static unsafe void CompressedTexSubImage1DARB(TextureTarget target, int level, int xoffset, int width, InternalFormat format, int imageSize, IntPtr data)
-        {
-            _glCompressedTexSubImage1DARB(target, level, xoffset, width, format, imageSize, (IntPtr)data);
         }
         
         public static unsafe delegate*<TextureTarget, int, int, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTexSubImage2D;
@@ -2372,53 +888,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCompressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, imageSize, (IntPtr)data);
         }
         
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTexSubImage2DARB;
-        
-        public static unsafe void CompressedTexSubImage2DARB(TextureTarget target, int level, int xoffset, int yoffset, int width, int height, InternalFormat format, int imageSize, IntPtr data)
-        {
-            _glCompressedTexSubImage2DARB(target, level, xoffset, yoffset, width, height, format, imageSize, (IntPtr)data);
-        }
-        
         public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTexSubImage3D;
         
         public static unsafe void CompressedTexSubImage3D(TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, InternalFormat format, int imageSize, IntPtr data)
         {
             _glCompressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTexSubImage3DARB;
-        
-        public static unsafe void CompressedTexSubImage3DARB(TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, InternalFormat format, int imageSize, IntPtr data)
-        {
-            _glCompressedTexSubImage3DARB(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTexSubImage3DOES;
-        
-        public static unsafe void CompressedTexSubImage3DOES(TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, InternalFormat format, int imageSize, IntPtr data)
-        {
-            _glCompressedTexSubImage3DOES(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, InternalFormat, int, int, int, IntPtr, void> _glCompressedTextureImage1DEXT;
-        
-        public static unsafe void CompressedTextureImage1DEXT(uint texture, TextureTarget target, int level, InternalFormat internalformat, int width, int border, int imageSize, IntPtr bits)
-        {
-            _glCompressedTextureImage1DEXT(texture, target, level, internalformat, width, border, imageSize, (IntPtr)bits);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, InternalFormat, int, int, int, int, IntPtr, void> _glCompressedTextureImage2DEXT;
-        
-        public static unsafe void CompressedTextureImage2DEXT(uint texture, TextureTarget target, int level, InternalFormat internalformat, int width, int height, int border, int imageSize, IntPtr bits)
-        {
-            _glCompressedTextureImage2DEXT(texture, target, level, internalformat, width, height, border, imageSize, (IntPtr)bits);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, InternalFormat, int, int, int, int, int, IntPtr, void> _glCompressedTextureImage3DEXT;
-        
-        public static unsafe void CompressedTextureImage3DEXT(uint texture, TextureTarget target, int level, InternalFormat internalformat, int width, int height, int depth, int border, int imageSize, IntPtr bits)
-        {
-            _glCompressedTextureImage3DEXT(texture, target, level, internalformat, width, height, depth, border, imageSize, (IntPtr)bits);
         }
         
         public static unsafe delegate*<uint, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTextureSubImage1D;
@@ -2428,25 +902,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCompressedTextureSubImage1D(texture, level, xoffset, width, format, imageSize, (IntPtr)data);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTextureSubImage1DEXT;
-        
-        public static unsafe void CompressedTextureSubImage1DEXT(uint texture, TextureTarget target, int level, int xoffset, int width, InternalFormat format, int imageSize, IntPtr bits)
-        {
-            _glCompressedTextureSubImage1DEXT(texture, target, level, xoffset, width, format, imageSize, (IntPtr)bits);
-        }
-        
         public static unsafe delegate*<uint, int, int, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTextureSubImage2D;
         
         public static unsafe void CompressedTextureSubImage2D(uint texture, int level, int xoffset, int yoffset, int width, int height, InternalFormat format, int imageSize, IntPtr data)
         {
             _glCompressedTextureSubImage2D(texture, level, xoffset, yoffset, width, height, format, imageSize, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTextureSubImage2DEXT;
-        
-        public static unsafe void CompressedTextureSubImage2DEXT(uint texture, TextureTarget target, int level, int xoffset, int yoffset, int width, int height, InternalFormat format, int imageSize, IntPtr bits)
-        {
-            _glCompressedTextureSubImage2DEXT(texture, target, level, xoffset, yoffset, width, height, format, imageSize, (IntPtr)bits);
         }
         
         public static unsafe delegate*<uint, int, int, int, int, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTextureSubImage3D;
@@ -2456,193 +916,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCompressedTextureSubImage3D(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, (IntPtr)data);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, int, int, InternalFormat, int, IntPtr, void> _glCompressedTextureSubImage3DEXT;
-        
-        public static unsafe void CompressedTextureSubImage3DEXT(uint texture, TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, InternalFormat format, int imageSize, IntPtr bits)
-        {
-            _glCompressedTextureSubImage3DEXT(texture, target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, (IntPtr)bits);
-        }
-        
-        public static unsafe delegate*<uint, float, void> _glConservativeRasterParameterfNV;
-        
-        public static unsafe void ConservativeRasterParameterfNV(uint pname, float value)
-        {
-            _glConservativeRasterParameterfNV(pname, value);
-        }
-        
-        public static unsafe delegate*<uint, int, void> _glConservativeRasterParameteriNV;
-        
-        public static unsafe void ConservativeRasterParameteriNV(uint pname, int param)
-        {
-            _glConservativeRasterParameteriNV(pname, param);
-        }
-        
-        public static unsafe delegate*<ConvolutionTarget, InternalFormat, int, PixelFormat, PixelType, IntPtr, void> _glConvolutionFilter1D;
-        
-        public static unsafe void ConvolutionFilter1D(ConvolutionTarget target, InternalFormat internalformat, int width, PixelFormat format, PixelType type, IntPtr image)
-        {
-            _glConvolutionFilter1D(target, internalformat, width, format, type, (IntPtr)image);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, InternalFormat, int, PixelFormat, PixelType, IntPtr, void> _glConvolutionFilter1DEXT;
-        
-        public static unsafe void ConvolutionFilter1DEXT(ConvolutionTargetEXT target, InternalFormat internalformat, int width, PixelFormat format, PixelType type, IntPtr image)
-        {
-            _glConvolutionFilter1DEXT(target, internalformat, width, format, type, (IntPtr)image);
-        }
-        
-        public static unsafe delegate*<ConvolutionTarget, InternalFormat, int, int, PixelFormat, PixelType, IntPtr, void> _glConvolutionFilter2D;
-        
-        public static unsafe void ConvolutionFilter2D(ConvolutionTarget target, InternalFormat internalformat, int width, int height, PixelFormat format, PixelType type, IntPtr image)
-        {
-            _glConvolutionFilter2D(target, internalformat, width, height, format, type, (IntPtr)image);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, InternalFormat, int, int, PixelFormat, PixelType, IntPtr, void> _glConvolutionFilter2DEXT;
-        
-        public static unsafe void ConvolutionFilter2DEXT(ConvolutionTargetEXT target, InternalFormat internalformat, int width, int height, PixelFormat format, PixelType type, IntPtr image)
-        {
-            _glConvolutionFilter2DEXT(target, internalformat, width, height, format, type, (IntPtr)image);
-        }
-        
-        public static unsafe delegate*<ConvolutionTarget, ConvolutionParameterEXT, float, void> _glConvolutionParameterf;
-        
-        public static unsafe void ConvolutionParameterf(ConvolutionTarget target, ConvolutionParameterEXT pname, float @params)
-        {
-            _glConvolutionParameterf(target, pname, @params);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, ConvolutionParameterEXT, float, void> _glConvolutionParameterfEXT;
-        
-        public static unsafe void ConvolutionParameterfEXT(ConvolutionTargetEXT target, ConvolutionParameterEXT pname, float @params)
-        {
-            _glConvolutionParameterfEXT(target, pname, @params);
-        }
-        
-        public static unsafe delegate*<ConvolutionTarget, ConvolutionParameterEXT, IntPtr, void> _glConvolutionParameterfv;
-        
-        public static unsafe void ConvolutionParameterfv(ConvolutionTarget target, ConvolutionParameterEXT pname, ref float @params)
-        {
-            _glConvolutionParameterfv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, ConvolutionParameterEXT, IntPtr, void> _glConvolutionParameterfvEXT;
-        
-        public static unsafe void ConvolutionParameterfvEXT(ConvolutionTargetEXT target, ConvolutionParameterEXT pname, ref float @params)
-        {
-            _glConvolutionParameterfvEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ConvolutionTarget, ConvolutionParameterEXT, int, void> _glConvolutionParameteri;
-        
-        public static unsafe void ConvolutionParameteri(ConvolutionTarget target, ConvolutionParameterEXT pname, int @params)
-        {
-            _glConvolutionParameteri(target, pname, @params);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, ConvolutionParameterEXT, int, void> _glConvolutionParameteriEXT;
-        
-        public static unsafe void ConvolutionParameteriEXT(ConvolutionTargetEXT target, ConvolutionParameterEXT pname, int @params)
-        {
-            _glConvolutionParameteriEXT(target, pname, @params);
-        }
-        
-        public static unsafe delegate*<ConvolutionTarget, ConvolutionParameterEXT, IntPtr, void> _glConvolutionParameteriv;
-        
-        public static unsafe void ConvolutionParameteriv(ConvolutionTarget target, ConvolutionParameterEXT pname, ref int @params)
-        {
-            _glConvolutionParameteriv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, ConvolutionParameterEXT, IntPtr, void> _glConvolutionParameterivEXT;
-        
-        public static unsafe void ConvolutionParameterivEXT(ConvolutionTargetEXT target, ConvolutionParameterEXT pname, ref int @params)
-        {
-            _glConvolutionParameterivEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, ConvolutionParameterEXT, int, void> _glConvolutionParameterxOES;
-        
-        public static unsafe void ConvolutionParameterxOES(ConvolutionTargetEXT target, ConvolutionParameterEXT pname, int param)
-        {
-            _glConvolutionParameterxOES(target, pname, param);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, ConvolutionParameterEXT, IntPtr, void> _glConvolutionParameterxvOES;
-        
-        public static unsafe void ConvolutionParameterxvOES(ConvolutionTargetEXT target, ConvolutionParameterEXT pname, ref int @params)
-        {
-            _glConvolutionParameterxvOES(target, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<CopyBufferSubDataTarget, CopyBufferSubDataTarget, long, long, long, void> _glCopyBufferSubData;
         
         public static unsafe void CopyBufferSubData(CopyBufferSubDataTarget readTarget, CopyBufferSubDataTarget writeTarget, long readOffset, long writeOffset, long size)
         {
             _glCopyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size);
-        }
-        
-        public static unsafe delegate*<CopyBufferSubDataTarget, CopyBufferSubDataTarget, long, long, long, void> _glCopyBufferSubDataNV;
-        
-        public static unsafe void CopyBufferSubDataNV(CopyBufferSubDataTarget readTarget, CopyBufferSubDataTarget writeTarget, long readOffset, long writeOffset, long size)
-        {
-            _glCopyBufferSubDataNV(readTarget, writeTarget, readOffset, writeOffset, size);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, int, int, int, int, void> _glCopyColorSubTable;
-        
-        public static unsafe void CopyColorSubTable(ColorTableTarget target, int start, int x, int y, int width)
-        {
-            _glCopyColorSubTable(target, start, x, y, width);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, int, int, int, int, void> _glCopyColorSubTableEXT;
-        
-        public static unsafe void CopyColorSubTableEXT(ColorTableTarget target, int start, int x, int y, int width)
-        {
-            _glCopyColorSubTableEXT(target, start, x, y, width);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, InternalFormat, int, int, int, void> _glCopyColorTable;
-        
-        public static unsafe void CopyColorTable(ColorTableTarget target, InternalFormat internalformat, int x, int y, int width)
-        {
-            _glCopyColorTable(target, internalformat, x, y, width);
-        }
-        
-        public static unsafe delegate*<ColorTableTargetSGI, InternalFormat, int, int, int, void> _glCopyColorTableSGI;
-        
-        public static unsafe void CopyColorTableSGI(ColorTableTargetSGI target, InternalFormat internalformat, int x, int y, int width)
-        {
-            _glCopyColorTableSGI(target, internalformat, x, y, width);
-        }
-        
-        public static unsafe delegate*<ConvolutionTarget, InternalFormat, int, int, int, void> _glCopyConvolutionFilter1D;
-        
-        public static unsafe void CopyConvolutionFilter1D(ConvolutionTarget target, InternalFormat internalformat, int x, int y, int width)
-        {
-            _glCopyConvolutionFilter1D(target, internalformat, x, y, width);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, InternalFormat, int, int, int, void> _glCopyConvolutionFilter1DEXT;
-        
-        public static unsafe void CopyConvolutionFilter1DEXT(ConvolutionTargetEXT target, InternalFormat internalformat, int x, int y, int width)
-        {
-            _glCopyConvolutionFilter1DEXT(target, internalformat, x, y, width);
-        }
-        
-        public static unsafe delegate*<ConvolutionTarget, InternalFormat, int, int, int, int, void> _glCopyConvolutionFilter2D;
-        
-        public static unsafe void CopyConvolutionFilter2D(ConvolutionTarget target, InternalFormat internalformat, int x, int y, int width, int height)
-        {
-            _glCopyConvolutionFilter2D(target, internalformat, x, y, width, height);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, InternalFormat, int, int, int, int, void> _glCopyConvolutionFilter2DEXT;
-        
-        public static unsafe void CopyConvolutionFilter2DEXT(ConvolutionTargetEXT target, InternalFormat internalformat, int x, int y, int width, int height)
-        {
-            _glCopyConvolutionFilter2DEXT(target, internalformat, x, y, width, height);
         }
         
         public static unsafe delegate*<uint, CopyImageSubDataTarget, int, int, int, int, uint, CopyImageSubDataTarget, int, int, int, int, int, int, int, void> _glCopyImageSubData;
@@ -2652,74 +930,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCopyImageSubData(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
         }
         
-        public static unsafe delegate*<uint, CopyBufferSubDataTarget, int, int, int, int, uint, CopyBufferSubDataTarget, int, int, int, int, int, int, int, void> _glCopyImageSubDataEXT;
-        
-        public static unsafe void CopyImageSubDataEXT(uint srcName, CopyBufferSubDataTarget srcTarget, int srcLevel, int srcX, int srcY, int srcZ, uint dstName, CopyBufferSubDataTarget dstTarget, int dstLevel, int dstX, int dstY, int dstZ, int srcWidth, int srcHeight, int srcDepth)
-        {
-            _glCopyImageSubDataEXT(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
-        }
-        
-        public static unsafe delegate*<uint, CopyBufferSubDataTarget, int, int, int, int, uint, CopyBufferSubDataTarget, int, int, int, int, int, int, int, void> _glCopyImageSubDataNV;
-        
-        public static unsafe void CopyImageSubDataNV(uint srcName, CopyBufferSubDataTarget srcTarget, int srcLevel, int srcX, int srcY, int srcZ, uint dstName, CopyBufferSubDataTarget dstTarget, int dstLevel, int dstX, int dstY, int dstZ, int width, int height, int depth)
-        {
-            _glCopyImageSubDataNV(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth);
-        }
-        
-        public static unsafe delegate*<uint, CopyBufferSubDataTarget, int, int, int, int, uint, CopyBufferSubDataTarget, int, int, int, int, int, int, int, void> _glCopyImageSubDataOES;
-        
-        public static unsafe void CopyImageSubDataOES(uint srcName, CopyBufferSubDataTarget srcTarget, int srcLevel, int srcX, int srcY, int srcZ, uint dstName, CopyBufferSubDataTarget dstTarget, int dstLevel, int dstX, int dstY, int dstZ, int srcWidth, int srcHeight, int srcDepth)
-        {
-            _glCopyImageSubDataOES(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, InternalFormat, int, int, int, int, void> _glCopyMultiTexImage1DEXT;
-        
-        public static unsafe void CopyMultiTexImage1DEXT(TextureUnit texunit, TextureTarget target, int level, InternalFormat internalformat, int x, int y, int width, int border)
-        {
-            _glCopyMultiTexImage1DEXT(texunit, target, level, internalformat, x, y, width, border);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, InternalFormat, int, int, int, int, int, void> _glCopyMultiTexImage2DEXT;
-        
-        public static unsafe void CopyMultiTexImage2DEXT(TextureUnit texunit, TextureTarget target, int level, InternalFormat internalformat, int x, int y, int width, int height, int border)
-        {
-            _glCopyMultiTexImage2DEXT(texunit, target, level, internalformat, x, y, width, height, border);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, int, int, void> _glCopyMultiTexSubImage1DEXT;
-        
-        public static unsafe void CopyMultiTexSubImage1DEXT(TextureUnit texunit, TextureTarget target, int level, int xoffset, int x, int y, int width)
-        {
-            _glCopyMultiTexSubImage1DEXT(texunit, target, level, xoffset, x, y, width);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, int, int, int, int, void> _glCopyMultiTexSubImage2DEXT;
-        
-        public static unsafe void CopyMultiTexSubImage2DEXT(TextureUnit texunit, TextureTarget target, int level, int xoffset, int yoffset, int x, int y, int width, int height)
-        {
-            _glCopyMultiTexSubImage2DEXT(texunit, target, level, xoffset, yoffset, x, y, width, height);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, int, int, int, int, int, void> _glCopyMultiTexSubImage3DEXT;
-        
-        public static unsafe void CopyMultiTexSubImage3DEXT(TextureUnit texunit, TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int x, int y, int width, int height)
-        {
-            _glCopyMultiTexSubImage3DEXT(texunit, target, level, xoffset, yoffset, zoffset, x, y, width, height);
-        }
-        
         public static unsafe delegate*<uint, uint, long, long, long, void> _glCopyNamedBufferSubData;
         
         public static unsafe void CopyNamedBufferSubData(uint readBuffer, uint writeBuffer, long readOffset, long writeOffset, long size)
         {
             _glCopyNamedBufferSubData(readBuffer, writeBuffer, readOffset, writeOffset, size);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glCopyPathNV;
-        
-        public static unsafe void CopyPathNV(uint resultPath, uint srcPath)
-        {
-            _glCopyPathNV(resultPath, srcPath);
         }
         
         public static unsafe delegate*<int, int, int, int, PixelCopyType, void> _glCopyPixels;
@@ -2736,25 +951,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCopyTexImage1D(target, level, internalformat, x, y, width, border);
         }
         
-        public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, int, void> _glCopyTexImage1DEXT;
-        
-        public static unsafe void CopyTexImage1DEXT(TextureTarget target, int level, InternalFormat internalformat, int x, int y, int width, int border)
-        {
-            _glCopyTexImage1DEXT(target, level, internalformat, x, y, width, border);
-        }
-        
         public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, int, int, void> _glCopyTexImage2D;
         
         public static unsafe void CopyTexImage2D(TextureTarget target, int level, InternalFormat internalformat, int x, int y, int width, int height, int border)
         {
             _glCopyTexImage2D(target, level, internalformat, x, y, width, height, border);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, int, int, void> _glCopyTexImage2DEXT;
-        
-        public static unsafe void CopyTexImage2DEXT(TextureTarget target, int level, InternalFormat internalformat, int x, int y, int width, int height, int border)
-        {
-            _glCopyTexImage2DEXT(target, level, internalformat, x, y, width, height, border);
         }
         
         public static unsafe delegate*<TextureTarget, int, int, int, int, int, void> _glCopyTexSubImage1D;
@@ -2764,25 +965,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCopyTexSubImage1D(target, level, xoffset, x, y, width);
         }
         
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, void> _glCopyTexSubImage1DEXT;
-        
-        public static unsafe void CopyTexSubImage1DEXT(TextureTarget target, int level, int xoffset, int x, int y, int width)
-        {
-            _glCopyTexSubImage1DEXT(target, level, xoffset, x, y, width);
-        }
-        
         public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, void> _glCopyTexSubImage2D;
         
         public static unsafe void CopyTexSubImage2D(TextureTarget target, int level, int xoffset, int yoffset, int x, int y, int width, int height)
         {
             _glCopyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, void> _glCopyTexSubImage2DEXT;
-        
-        public static unsafe void CopyTexSubImage2DEXT(TextureTarget target, int level, int xoffset, int yoffset, int x, int y, int width, int height)
-        {
-            _glCopyTexSubImage2DEXT(target, level, xoffset, yoffset, x, y, width, height);
         }
         
         public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, int, void> _glCopyTexSubImage3D;
@@ -2792,53 +979,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCopyTexSubImage3D(target, level, xoffset, yoffset, zoffset, x, y, width, height);
         }
         
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, int, void> _glCopyTexSubImage3DEXT;
-        
-        public static unsafe void CopyTexSubImage3DEXT(TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int x, int y, int width, int height)
-        {
-            _glCopyTexSubImage3DEXT(target, level, xoffset, yoffset, zoffset, x, y, width, height);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, int, int, int, int, void> _glCopyTexSubImage3DOES;
-        
-        public static unsafe void CopyTexSubImage3DOES(uint target, int level, int xoffset, int yoffset, int zoffset, int x, int y, int width, int height)
-        {
-            _glCopyTexSubImage3DOES(target, level, xoffset, yoffset, zoffset, x, y, width, height);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, InternalFormat, int, int, int, int, void> _glCopyTextureImage1DEXT;
-        
-        public static unsafe void CopyTextureImage1DEXT(uint texture, TextureTarget target, int level, InternalFormat internalformat, int x, int y, int width, int border)
-        {
-            _glCopyTextureImage1DEXT(texture, target, level, internalformat, x, y, width, border);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, InternalFormat, int, int, int, int, int, void> _glCopyTextureImage2DEXT;
-        
-        public static unsafe void CopyTextureImage2DEXT(uint texture, TextureTarget target, int level, InternalFormat internalformat, int x, int y, int width, int height, int border)
-        {
-            _glCopyTextureImage2DEXT(texture, target, level, internalformat, x, y, width, height, border);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, int, void> _glCopyTextureLevelsAPPLE;
-        
-        public static unsafe void CopyTextureLevelsAPPLE(uint destinationTexture, uint sourceTexture, int sourceBaseLevel, int sourceLevelCount)
-        {
-            _glCopyTextureLevelsAPPLE(destinationTexture, sourceTexture, sourceBaseLevel, sourceLevelCount);
-        }
-        
         public static unsafe delegate*<uint, int, int, int, int, int, void> _glCopyTextureSubImage1D;
         
         public static unsafe void CopyTextureSubImage1D(uint texture, int level, int xoffset, int x, int y, int width)
         {
             _glCopyTextureSubImage1D(texture, level, xoffset, x, y, width);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, void> _glCopyTextureSubImage1DEXT;
-        
-        public static unsafe void CopyTextureSubImage1DEXT(uint texture, TextureTarget target, int level, int xoffset, int x, int y, int width)
-        {
-            _glCopyTextureSubImage1DEXT(texture, target, level, xoffset, x, y, width);
         }
         
         public static unsafe delegate*<uint, int, int, int, int, int, int, int, void> _glCopyTextureSubImage2D;
@@ -2848,81 +993,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCopyTextureSubImage2D(texture, level, xoffset, yoffset, x, y, width, height);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, int, int, void> _glCopyTextureSubImage2DEXT;
-        
-        public static unsafe void CopyTextureSubImage2DEXT(uint texture, TextureTarget target, int level, int xoffset, int yoffset, int x, int y, int width, int height)
-        {
-            _glCopyTextureSubImage2DEXT(texture, target, level, xoffset, yoffset, x, y, width, height);
-        }
-        
         public static unsafe delegate*<uint, int, int, int, int, int, int, int, int, void> _glCopyTextureSubImage3D;
         
         public static unsafe void CopyTextureSubImage3D(uint texture, int level, int xoffset, int yoffset, int zoffset, int x, int y, int width, int height)
         {
             _glCopyTextureSubImage3D(texture, level, xoffset, yoffset, zoffset, x, y, width, height);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, int, int, int, void> _glCopyTextureSubImage3DEXT;
-        
-        public static unsafe void CopyTextureSubImage3DEXT(uint texture, TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int x, int y, int width, int height)
-        {
-            _glCopyTextureSubImage3DEXT(texture, target, level, xoffset, yoffset, zoffset, x, y, width, height);
-        }
-        
-        public static unsafe delegate*<int, PathElementType, IntPtr, uint, PathCoverMode, PathTransformType, IntPtr, void> _glCoverFillPathInstancedNV;
-        
-        public static unsafe void CoverFillPathInstancedNV(int numPaths, PathElementType pathNameType, IntPtr paths, uint pathBase, PathCoverMode coverMode, PathTransformType transformType, ref float transformValues)
-        {
-            _glCoverFillPathInstancedNV(numPaths, pathNameType, (IntPtr)paths, pathBase, coverMode, transformType, (IntPtr)transformValues);
-        }
-        
-        public static unsafe delegate*<uint, PathCoverMode, void> _glCoverFillPathNV;
-        
-        public static unsafe void CoverFillPathNV(uint path, PathCoverMode coverMode)
-        {
-            _glCoverFillPathNV(path, coverMode);
-        }
-        
-        public static unsafe delegate*<int, PathElementType, IntPtr, uint, PathCoverMode, PathTransformType, IntPtr, void> _glCoverStrokePathInstancedNV;
-        
-        public static unsafe void CoverStrokePathInstancedNV(int numPaths, PathElementType pathNameType, IntPtr paths, uint pathBase, PathCoverMode coverMode, PathTransformType transformType, ref float transformValues)
-        {
-            _glCoverStrokePathInstancedNV(numPaths, pathNameType, (IntPtr)paths, pathBase, coverMode, transformType, (IntPtr)transformValues);
-        }
-        
-        public static unsafe delegate*<uint, PathCoverMode, void> _glCoverStrokePathNV;
-        
-        public static unsafe void CoverStrokePathNV(uint path, PathCoverMode coverMode)
-        {
-            _glCoverStrokePathNV(path, coverMode);
-        }
-        
-        public static unsafe delegate*<byte, void> _glCoverageMaskNV;
-        
-        public static unsafe void CoverageMaskNV(byte mask)
-        {
-            _glCoverageMaskNV(mask);
-        }
-        
-        public static unsafe delegate*<uint, void> _glCoverageModulationNV;
-        
-        public static unsafe void CoverageModulationNV(uint components)
-        {
-            _glCoverageModulationNV(components);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glCoverageModulationTableNV;
-        
-        public static unsafe void CoverageModulationTableNV(int n, ref float v)
-        {
-            _glCoverageModulationTableNV(n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, void> _glCoverageOperationNV;
-        
-        public static unsafe void CoverageOperationNV(uint operation)
-        {
-            _glCoverageOperationNV(operation);
         }
         
         public static unsafe delegate*<int, IntPtr, void> _glCreateBuffers;
@@ -2932,32 +1007,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCreateBuffers(n, (IntPtr)buffers);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glCreateCommandListsNV;
-        
-        public static unsafe void CreateCommandListsNV(int n, ref uint lists)
-        {
-            _glCreateCommandListsNV(n, (IntPtr)lists);
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glCreateFramebuffers;
         
         public static unsafe void CreateFramebuffers(int n, ref uint framebuffers)
         {
             _glCreateFramebuffers(n, (IntPtr)framebuffers);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glCreateMemoryObjectsEXT;
-        
-        public static unsafe void CreateMemoryObjectsEXT(int n, ref uint memoryObjects)
-        {
-            _glCreateMemoryObjectsEXT(n, (IntPtr)memoryObjects);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glCreatePerfQueryINTEL;
-        
-        public static unsafe void CreatePerfQueryINTEL(uint queryId, ref uint queryHandle)
-        {
-            _glCreatePerfQueryINTEL(queryId, (IntPtr)queryHandle);
         }
         
         public static unsafe delegate*<uint> _glCreateProgram;
@@ -2967,25 +1021,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glCreateProgram();
         }
         
-        public static unsafe delegate*<uint> _glCreateProgramObjectARB;
-        
-        public static unsafe uint CreateProgramObjectARB()
-        {
-            return _glCreateProgramObjectARB();
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glCreateProgramPipelines;
         
         public static unsafe void CreateProgramPipelines(int n, ref uint pipelines)
         {
             _glCreateProgramPipelines(n, (IntPtr)pipelines);
-        }
-        
-        public static unsafe delegate*<uint> _glCreateProgressFenceNVX;
-        
-        public static unsafe uint CreateProgressFenceNVX()
-        {
-            return _glCreateProgressFenceNVX();
         }
         
         public static unsafe delegate*<QueryTarget, int, IntPtr, void> _glCreateQueries;
@@ -3009,13 +1049,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCreateSamplers(n, (IntPtr)samplers);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glCreateSemaphoresNV;
-        
-        public static unsafe void CreateSemaphoresNV(int n, ref uint semaphores)
-        {
-            _glCreateSemaphoresNV(n, (IntPtr)semaphores);
-        }
-        
         public static unsafe delegate*<ShaderType, uint> _glCreateShader;
         
         public static unsafe uint CreateShader(ShaderType type)
@@ -3023,46 +1056,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glCreateShader(type);
         }
         
-        public static unsafe delegate*<ShaderType, uint> _glCreateShaderObjectARB;
-        
-        public static unsafe uint CreateShaderObjectARB(ShaderType shaderType)
-        {
-            return _glCreateShaderObjectARB(shaderType);
-        }
-        
-        public static unsafe delegate*<ShaderType, IntPtr, uint> _glCreateShaderProgramEXT;
-        
-        public static unsafe uint CreateShaderProgramEXT(ShaderType type, ref sbyte @string)
-        {
-            return _glCreateShaderProgramEXT(type, (IntPtr)@string);
-        }
-        
         public static unsafe delegate*<ShaderType, int, IntPtr, uint> _glCreateShaderProgramv;
         
         public static unsafe uint CreateShaderProgramv(ShaderType type, int count, out IntPtr strings)
         {
             return _glCreateShaderProgramv(type, count, (IntPtr)strings);
-        }
-        
-        public static unsafe delegate*<ShaderType, int, IntPtr, uint> _glCreateShaderProgramvEXT;
-        
-        public static unsafe uint CreateShaderProgramvEXT(ShaderType type, int count, out IntPtr strings)
-        {
-            return _glCreateShaderProgramvEXT(type, count, (IntPtr)strings);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glCreateStatesNV;
-        
-        public static unsafe void CreateStatesNV(int n, ref uint states)
-        {
-            _glCreateStatesNV(n, (IntPtr)states);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, uint, IntPtr> _glCreateSyncFromCLeventARB;
-        
-        public static unsafe IntPtr CreateSyncFromCLeventARB(IntPtr context, IntPtr @event, uint flags)
-        {
-            return _glCreateSyncFromCLeventARB((IntPtr)context, (IntPtr)@event, flags);
         }
         
         public static unsafe delegate*<TextureTarget, int, IntPtr, void> _glCreateTextures;
@@ -3093,60 +1091,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glCullFace(mode);
         }
         
-        public static unsafe delegate*<CullParameterEXT, IntPtr, void> _glCullParameterdvEXT;
-        
-        public static unsafe void CullParameterdvEXT(CullParameterEXT pname, ref double @params)
-        {
-            _glCullParameterdvEXT(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<CullParameterEXT, IntPtr, void> _glCullParameterfvEXT;
-        
-        public static unsafe void CullParameterfvEXT(CullParameterEXT pname, ref float @params)
-        {
-            _glCullParameterfvEXT(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<int, void> _glCurrentPaletteMatrixARB;
-        
-        public static unsafe void CurrentPaletteMatrixARB(int index)
-        {
-            _glCurrentPaletteMatrixARB(index);
-        }
-        
-        public static unsafe delegate*<uint, void> _glCurrentPaletteMatrixOES;
-        
-        public static unsafe void CurrentPaletteMatrixOES(uint matrixpaletteindex)
-        {
-            _glCurrentPaletteMatrixOES(matrixpaletteindex);
-        }
-        
         public static unsafe delegate*<GLDEBUGPROC, IntPtr, void> _glDebugMessageCallback;
         
         public static unsafe void DebugMessageCallback(GLDEBUGPROC callback, IntPtr userParam)
         {
             _glDebugMessageCallback(callback, (IntPtr)userParam);
-        }
-        
-        public static unsafe delegate*<GLDEBUGPROCAMD, IntPtr, void> _glDebugMessageCallbackAMD;
-        
-        public static unsafe void DebugMessageCallbackAMD(GLDEBUGPROCAMD callback, IntPtr userParam)
-        {
-            _glDebugMessageCallbackAMD(callback, (IntPtr)userParam);
-        }
-        
-        public static unsafe delegate*<GLDEBUGPROCARB, IntPtr, void> _glDebugMessageCallbackARB;
-        
-        public static unsafe void DebugMessageCallbackARB(GLDEBUGPROCARB callback, IntPtr userParam)
-        {
-            _glDebugMessageCallbackARB(callback, (IntPtr)userParam);
-        }
-        
-        public static unsafe delegate*<GLDEBUGPROCKHR, IntPtr, void> _glDebugMessageCallbackKHR;
-        
-        public static unsafe void DebugMessageCallbackKHR(GLDEBUGPROCKHR callback, IntPtr userParam)
-        {
-            _glDebugMessageCallbackKHR(callback, (IntPtr)userParam);
         }
         
         public static unsafe delegate*<DebugSource, DebugType, DebugSeverity, int, IntPtr, byte, void> _glDebugMessageControl;
@@ -3156,81 +1105,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDebugMessageControl(source, type, severity, count, (IntPtr)ids, enabled);
         }
         
-        public static unsafe delegate*<DebugSource, DebugType, DebugSeverity, int, IntPtr, byte, void> _glDebugMessageControlARB;
-        
-        public static unsafe void DebugMessageControlARB(DebugSource source, DebugType type, DebugSeverity severity, int count, ref uint ids, byte enabled)
-        {
-            _glDebugMessageControlARB(source, type, severity, count, (IntPtr)ids, enabled);
-        }
-        
-        public static unsafe delegate*<DebugSource, DebugType, DebugSeverity, int, IntPtr, byte, void> _glDebugMessageControlKHR;
-        
-        public static unsafe void DebugMessageControlKHR(DebugSource source, DebugType type, DebugSeverity severity, int count, ref uint ids, byte enabled)
-        {
-            _glDebugMessageControlKHR(source, type, severity, count, (IntPtr)ids, enabled);
-        }
-        
-        public static unsafe delegate*<uint, DebugSeverity, int, IntPtr, byte, void> _glDebugMessageEnableAMD;
-        
-        public static unsafe void DebugMessageEnableAMD(uint category, DebugSeverity severity, int count, ref uint ids, byte enabled)
-        {
-            _glDebugMessageEnableAMD(category, severity, count, (IntPtr)ids, enabled);
-        }
-        
         public static unsafe delegate*<DebugSource, DebugType, uint, DebugSeverity, int, IntPtr, void> _glDebugMessageInsert;
         
         public static unsafe void DebugMessageInsert(DebugSource source, DebugType type, uint id, DebugSeverity severity, int length, ref sbyte buf)
         {
             _glDebugMessageInsert(source, type, id, severity, length, (IntPtr)buf);
-        }
-        
-        public static unsafe delegate*<uint, DebugSeverity, uint, int, IntPtr, void> _glDebugMessageInsertAMD;
-        
-        public static unsafe void DebugMessageInsertAMD(uint category, DebugSeverity severity, uint id, int length, ref sbyte buf)
-        {
-            _glDebugMessageInsertAMD(category, severity, id, length, (IntPtr)buf);
-        }
-        
-        public static unsafe delegate*<DebugSource, DebugType, uint, DebugSeverity, int, IntPtr, void> _glDebugMessageInsertARB;
-        
-        public static unsafe void DebugMessageInsertARB(DebugSource source, DebugType type, uint id, DebugSeverity severity, int length, ref sbyte buf)
-        {
-            _glDebugMessageInsertARB(source, type, id, severity, length, (IntPtr)buf);
-        }
-        
-        public static unsafe delegate*<DebugSource, DebugType, uint, DebugSeverity, int, IntPtr, void> _glDebugMessageInsertKHR;
-        
-        public static unsafe void DebugMessageInsertKHR(DebugSource source, DebugType type, uint id, DebugSeverity severity, int length, ref sbyte buf)
-        {
-            _glDebugMessageInsertKHR(source, type, id, severity, length, (IntPtr)buf);
-        }
-        
-        public static unsafe delegate*<uint, void> _glDeformSGIX;
-        
-        public static unsafe void DeformSGIX(uint mask)
-        {
-            _glDeformSGIX(mask);
-        }
-        
-        public static unsafe delegate*<FfdTargetSGIX, double, double, int, int, double, double, int, int, double, double, int, int, IntPtr, void> _glDeformationMap3dSGIX;
-        
-        public static unsafe void DeformationMap3dSGIX(FfdTargetSGIX target, double u1, double u2, int ustride, int uorder, double v1, double v2, int vstride, int vorder, double w1, double w2, int wstride, int worder, ref double points)
-        {
-            _glDeformationMap3dSGIX(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, w1, w2, wstride, worder, (IntPtr)points);
-        }
-        
-        public static unsafe delegate*<FfdTargetSGIX, float, float, int, int, float, float, int, int, float, float, int, int, IntPtr, void> _glDeformationMap3fSGIX;
-        
-        public static unsafe void DeformationMap3fSGIX(FfdTargetSGIX target, float u1, float u2, int ustride, int uorder, float v1, float v2, int vstride, int vorder, float w1, float w2, int wstride, int worder, ref float points)
-        {
-            _glDeformationMap3fSGIX(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, w1, w2, wstride, worder, (IntPtr)points);
-        }
-        
-        public static unsafe delegate*<uint, int, void> _glDeleteAsyncMarkersSGIX;
-        
-        public static unsafe void DeleteAsyncMarkersSGIX(uint marker, int range)
-        {
-            _glDeleteAsyncMarkersSGIX(marker, range);
         }
         
         public static unsafe delegate*<int, IntPtr, void> _glDeleteBuffers;
@@ -3240,41 +1119,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDeleteBuffers(n, (IntPtr)buffers);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteBuffersARB;
-        
-        public static unsafe void DeleteBuffersARB(int n, ref uint buffers)
-        {
-            _glDeleteBuffersARB(n, (IntPtr)buffers);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteCommandListsNV;
-        
-        public static unsafe void DeleteCommandListsNV(int n, ref uint lists)
-        {
-            _glDeleteCommandListsNV(n, (IntPtr)lists);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteFencesAPPLE;
-        
-        public static unsafe void DeleteFencesAPPLE(int n, ref uint fences)
-        {
-            _glDeleteFencesAPPLE(n, (IntPtr)fences);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteFencesNV;
-        
-        public static unsafe void DeleteFencesNV(int n, ref uint fences)
-        {
-            _glDeleteFencesNV(n, (IntPtr)fences);
-        }
-        
-        public static unsafe delegate*<uint, void> _glDeleteFragmentShaderATI;
-        
-        public static unsafe void DeleteFragmentShaderATI(uint id)
-        {
-            _glDeleteFragmentShaderATI(id);
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glDeleteFramebuffers;
         
         public static unsafe void DeleteFramebuffers(int n, ref uint framebuffers)
@@ -3282,81 +1126,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDeleteFramebuffers(n, (IntPtr)framebuffers);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteFramebuffersEXT;
-        
-        public static unsafe void DeleteFramebuffersEXT(int n, ref uint framebuffers)
-        {
-            _glDeleteFramebuffersEXT(n, (IntPtr)framebuffers);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteFramebuffersOES;
-        
-        public static unsafe void DeleteFramebuffersOES(int n, ref uint framebuffers)
-        {
-            _glDeleteFramebuffersOES(n, (IntPtr)framebuffers);
-        }
-        
         public static unsafe delegate*<uint, int, void> _glDeleteLists;
         
         public static unsafe void DeleteLists(uint list, int range)
         {
             _glDeleteLists(list, range);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteMemoryObjectsEXT;
-        
-        public static unsafe void DeleteMemoryObjectsEXT(int n, ref uint memoryObjects)
-        {
-            _glDeleteMemoryObjectsEXT(n, (IntPtr)memoryObjects);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteNamedStringARB;
-        
-        public static unsafe void DeleteNamedStringARB(int namelen, ref sbyte name)
-        {
-            _glDeleteNamedStringARB(namelen, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glDeleteNamesAMD;
-        
-        public static unsafe void DeleteNamesAMD(uint identifier, uint num, ref uint names)
-        {
-            _glDeleteNamesAMD(identifier, num, (IntPtr)names);
-        }
-        
-        public static unsafe delegate*<uint, void> _glDeleteObjectARB;
-        
-        public static unsafe void DeleteObjectARB(uint obj)
-        {
-            _glDeleteObjectARB(obj);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteOcclusionQueriesNV;
-        
-        public static unsafe void DeleteOcclusionQueriesNV(int n, ref uint ids)
-        {
-            _glDeleteOcclusionQueriesNV(n, (IntPtr)ids);
-        }
-        
-        public static unsafe delegate*<uint, int, void> _glDeletePathsNV;
-        
-        public static unsafe void DeletePathsNV(uint path, int range)
-        {
-            _glDeletePathsNV(path, range);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeletePerfMonitorsAMD;
-        
-        public static unsafe void DeletePerfMonitorsAMD(int n, ref uint monitors)
-        {
-            _glDeletePerfMonitorsAMD(n, (IntPtr)monitors);
-        }
-        
-        public static unsafe delegate*<uint, void> _glDeletePerfQueryINTEL;
-        
-        public static unsafe void DeletePerfQueryINTEL(uint queryHandle)
-        {
-            _glDeletePerfQueryINTEL(queryHandle);
         }
         
         public static unsafe delegate*<uint, void> _glDeleteProgram;
@@ -3373,53 +1147,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDeleteProgramPipelines(n, (IntPtr)pipelines);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteProgramPipelinesEXT;
-        
-        public static unsafe void DeleteProgramPipelinesEXT(int n, ref uint pipelines)
-        {
-            _glDeleteProgramPipelinesEXT(n, (IntPtr)pipelines);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteProgramsARB;
-        
-        public static unsafe void DeleteProgramsARB(int n, ref uint programs)
-        {
-            _glDeleteProgramsARB(n, (IntPtr)programs);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteProgramsNV;
-        
-        public static unsafe void DeleteProgramsNV(int n, ref uint programs)
-        {
-            _glDeleteProgramsNV(n, (IntPtr)programs);
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glDeleteQueries;
         
         public static unsafe void DeleteQueries(int n, ref uint ids)
         {
             _glDeleteQueries(n, (IntPtr)ids);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteQueriesARB;
-        
-        public static unsafe void DeleteQueriesARB(int n, ref uint ids)
-        {
-            _glDeleteQueriesARB(n, (IntPtr)ids);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteQueriesEXT;
-        
-        public static unsafe void DeleteQueriesEXT(int n, ref uint ids)
-        {
-            _glDeleteQueriesEXT(n, (IntPtr)ids);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteQueryResourceTagNV;
-        
-        public static unsafe void DeleteQueryResourceTagNV(int n, ref int tagIds)
-        {
-            _glDeleteQueryResourceTagNV(n, (IntPtr)tagIds);
         }
         
         public static unsafe delegate*<int, IntPtr, void> _glDeleteRenderbuffers;
@@ -3429,32 +1161,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDeleteRenderbuffers(n, (IntPtr)renderbuffers);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteRenderbuffersEXT;
-        
-        public static unsafe void DeleteRenderbuffersEXT(int n, ref uint renderbuffers)
-        {
-            _glDeleteRenderbuffersEXT(n, (IntPtr)renderbuffers);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteRenderbuffersOES;
-        
-        public static unsafe void DeleteRenderbuffersOES(int n, ref uint renderbuffers)
-        {
-            _glDeleteRenderbuffersOES(n, (IntPtr)renderbuffers);
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glDeleteSamplers;
         
         public static unsafe void DeleteSamplers(int count, ref uint samplers)
         {
             _glDeleteSamplers(count, (IntPtr)samplers);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteSemaphoresEXT;
-        
-        public static unsafe void DeleteSemaphoresEXT(int n, ref uint semaphores)
-        {
-            _glDeleteSemaphoresEXT(n, (IntPtr)semaphores);
         }
         
         public static unsafe delegate*<uint, void> _glDeleteShader;
@@ -3464,25 +1175,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDeleteShader(shader);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteStatesNV;
-        
-        public static unsafe void DeleteStatesNV(int n, ref uint states)
-        {
-            _glDeleteStatesNV(n, (IntPtr)states);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glDeleteSync;
         
         public static unsafe void DeleteSync(IntPtr sync)
         {
             _glDeleteSync(sync);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glDeleteSyncAPPLE;
-        
-        public static unsafe void DeleteSyncAPPLE(IntPtr sync)
-        {
-            _glDeleteSyncAPPLE(sync);
         }
         
         public static unsafe delegate*<int, IntPtr, void> _glDeleteTextures;
@@ -3492,13 +1189,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDeleteTextures(n, (IntPtr)textures);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteTexturesEXT;
-        
-        public static unsafe void DeleteTexturesEXT(int n, ref uint textures)
-        {
-            _glDeleteTexturesEXT(n, (IntPtr)textures);
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glDeleteTransformFeedbacks;
         
         public static unsafe void DeleteTransformFeedbacks(int n, ref uint ids)
@@ -3506,53 +1196,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDeleteTransformFeedbacks(n, (IntPtr)ids);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteTransformFeedbacksNV;
-        
-        public static unsafe void DeleteTransformFeedbacksNV(int n, ref uint ids)
-        {
-            _glDeleteTransformFeedbacksNV(n, (IntPtr)ids);
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glDeleteVertexArrays;
         
         public static unsafe void DeleteVertexArrays(int n, ref uint arrays)
         {
             _glDeleteVertexArrays(n, (IntPtr)arrays);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteVertexArraysAPPLE;
-        
-        public static unsafe void DeleteVertexArraysAPPLE(int n, ref uint arrays)
-        {
-            _glDeleteVertexArraysAPPLE(n, (IntPtr)arrays);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDeleteVertexArraysOES;
-        
-        public static unsafe void DeleteVertexArraysOES(int n, ref uint arrays)
-        {
-            _glDeleteVertexArraysOES(n, (IntPtr)arrays);
-        }
-        
-        public static unsafe delegate*<uint, void> _glDeleteVertexShaderEXT;
-        
-        public static unsafe void DeleteVertexShaderEXT(uint id)
-        {
-            _glDeleteVertexShaderEXT(id);
-        }
-        
-        public static unsafe delegate*<double, double, void> _glDepthBoundsEXT;
-        
-        public static unsafe void DepthBoundsEXT(double zmin, double zmax)
-        {
-            _glDepthBoundsEXT(zmin, zmax);
-        }
-        
-        public static unsafe delegate*<double, double, void> _glDepthBoundsdNV;
-        
-        public static unsafe void DepthBoundsdNV(double zmin, double zmax)
-        {
-            _glDepthBoundsdNV(zmin, zmax);
         }
         
         public static unsafe delegate*<DepthFunction, void> _glDepthFunc;
@@ -3576,27 +1224,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDepthRange(n, f);
         }
         
-        public static unsafe delegate*<uint, int, IntPtr, void> _glDepthRangeArraydvNV;
-        
-        public static unsafe void DepthRangeArraydvNV(uint first, int count, ref double v)
-        {
-            _glDepthRangeArraydvNV(first, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glDepthRangeArrayfvNV;
-        
-        public static unsafe void DepthRangeArrayfvNV(uint first, int count, ref float v)
-        {
-            _glDepthRangeArrayfvNV(first, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glDepthRangeArrayfvOES;
-        
-        public static unsafe void DepthRangeArrayfvOES(uint first, int count, ref float v)
-        {
-            _glDepthRangeArrayfvOES(first, count, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, int, IntPtr, void> _glDepthRangeArrayv;
         
         public static unsafe void DepthRangeArrayv(uint first, int count, ref double v)
@@ -3611,34 +1238,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDepthRangeIndexed(index, n, f);
         }
         
-        public static unsafe delegate*<uint, double, double, void> _glDepthRangeIndexeddNV;
-        
-        public static unsafe void DepthRangeIndexeddNV(uint index, double n, double f)
-        {
-            _glDepthRangeIndexeddNV(index, n, f);
-        }
-        
-        public static unsafe delegate*<uint, float, float, void> _glDepthRangeIndexedfNV;
-        
-        public static unsafe void DepthRangeIndexedfNV(uint index, float n, float f)
-        {
-            _glDepthRangeIndexedfNV(index, n, f);
-        }
-        
-        public static unsafe delegate*<uint, float, float, void> _glDepthRangeIndexedfOES;
-        
-        public static unsafe void DepthRangeIndexedfOES(uint index, float n, float f)
-        {
-            _glDepthRangeIndexedfOES(index, n, f);
-        }
-        
-        public static unsafe delegate*<double, double, void> _glDepthRangedNV;
-        
-        public static unsafe void DepthRangedNV(double zNear, double zFar)
-        {
-            _glDepthRangedNV(zNear, zFar);
-        }
-        
         public static unsafe delegate*<float, float, void> _glDepthRangef;
         
         public static unsafe void DepthRangef(float n, float f)
@@ -3646,46 +1245,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDepthRangef(n, f);
         }
         
-        public static unsafe delegate*<float, float, void> _glDepthRangefOES;
-        
-        public static unsafe void DepthRangefOES(float n, float f)
-        {
-            _glDepthRangefOES(n, f);
-        }
-        
-        public static unsafe delegate*<int, int, void> _glDepthRangex;
-        
-        public static unsafe void DepthRangex(int n, int f)
-        {
-            _glDepthRangex(n, f);
-        }
-        
-        public static unsafe delegate*<int, int, void> _glDepthRangexOES;
-        
-        public static unsafe void DepthRangexOES(int n, int f)
-        {
-            _glDepthRangexOES(n, f);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glDetachObjectARB;
-        
-        public static unsafe void DetachObjectARB(uint containerObj, uint attachedObj)
-        {
-            _glDetachObjectARB(containerObj, attachedObj);
-        }
-        
         public static unsafe delegate*<uint, uint, void> _glDetachShader;
         
         public static unsafe void DetachShader(uint program, uint shader)
         {
             _glDetachShader(program, shader);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, IntPtr, void> _glDetailTexFuncSGIS;
-        
-        public static unsafe void DetailTexFuncSGIS(TextureTarget target, int n, out IntPtr points)
-        {
-            _glDetailTexFuncSGIS(target, n, (IntPtr)points);
         }
         
         public static unsafe delegate*<EnableCap, void> _glDisable;
@@ -3702,67 +1266,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDisableClientState(array);
         }
         
-        public static unsafe delegate*<EnableCap, uint, void> _glDisableClientStateIndexedEXT;
-        
-        public static unsafe void DisableClientStateIndexedEXT(EnableCap array, uint index)
-        {
-            _glDisableClientStateIndexedEXT(array, index);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, void> _glDisableClientStateiEXT;
-        
-        public static unsafe void DisableClientStateiEXT(EnableCap array, uint index)
-        {
-            _glDisableClientStateiEXT(array, index);
-        }
-        
-        public static unsafe delegate*<uint, void> _glDisableDriverControlQCOM;
-        
-        public static unsafe void DisableDriverControlQCOM(uint driverControl)
-        {
-            _glDisableDriverControlQCOM(driverControl);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, void> _glDisableIndexedEXT;
-        
-        public static unsafe void DisableIndexedEXT(EnableCap target, uint index)
-        {
-            _glDisableIndexedEXT(target, index);
-        }
-        
-        public static unsafe delegate*<uint, void> _glDisableVariantClientStateEXT;
-        
-        public static unsafe void DisableVariantClientStateEXT(uint id)
-        {
-            _glDisableVariantClientStateEXT(id);
-        }
-        
         public static unsafe delegate*<uint, uint, void> _glDisableVertexArrayAttrib;
         
         public static unsafe void DisableVertexArrayAttrib(uint vaobj, uint index)
         {
             _glDisableVertexArrayAttrib(vaobj, index);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glDisableVertexArrayAttribEXT;
-        
-        public static unsafe void DisableVertexArrayAttribEXT(uint vaobj, uint index)
-        {
-            _glDisableVertexArrayAttribEXT(vaobj, index);
-        }
-        
-        public static unsafe delegate*<uint, EnableCap, void> _glDisableVertexArrayEXT;
-        
-        public static unsafe void DisableVertexArrayEXT(uint vaobj, EnableCap array)
-        {
-            _glDisableVertexArrayEXT(vaobj, array);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glDisableVertexAttribAPPLE;
-        
-        public static unsafe void DisableVertexAttribAPPLE(uint index, uint pname)
-        {
-            _glDisableVertexAttribAPPLE(index, pname);
         }
         
         public static unsafe delegate*<uint, void> _glDisableVertexAttribArray;
@@ -3772,13 +1280,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDisableVertexAttribArray(index);
         }
         
-        public static unsafe delegate*<uint, void> _glDisableVertexAttribArrayARB;
-        
-        public static unsafe void DisableVertexAttribArrayARB(uint index)
-        {
-            _glDisableVertexAttribArrayARB(index);
-        }
-        
         public static unsafe delegate*<EnableCap, uint, void> _glDisablei;
         
         public static unsafe void Disablei(EnableCap target, uint index)
@@ -3786,46 +1287,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDisablei(target, index);
         }
         
-        public static unsafe delegate*<EnableCap, uint, void> _glDisableiEXT;
-        
-        public static unsafe void DisableiEXT(EnableCap target, uint index)
-        {
-            _glDisableiEXT(target, index);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, void> _glDisableiNV;
-        
-        public static unsafe void DisableiNV(EnableCap target, uint index)
-        {
-            _glDisableiNV(target, index);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, void> _glDisableiOES;
-        
-        public static unsafe void DisableiOES(EnableCap target, uint index)
-        {
-            _glDisableiOES(target, index);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, int, IntPtr, void> _glDiscardFramebufferEXT;
-        
-        public static unsafe void DiscardFramebufferEXT(FramebufferTarget target, int numAttachments, ref InvalidateFramebufferAttachment attachments)
-        {
-            _glDiscardFramebufferEXT(target, numAttachments, (IntPtr)attachments);
-        }
-        
         public static unsafe delegate*<uint, uint, uint, void> _glDispatchCompute;
         
         public static unsafe void DispatchCompute(uint num_groups_x, uint num_groups_y, uint num_groups_z)
         {
             _glDispatchCompute(num_groups_x, num_groups_y, num_groups_z);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, uint, uint, void> _glDispatchComputeGroupSizeARB;
-        
-        public static unsafe void DispatchComputeGroupSizeARB(uint num_groups_x, uint num_groups_y, uint num_groups_z, uint group_size_x, uint group_size_y, uint group_size_z)
-        {
-            _glDispatchComputeGroupSizeARB(num_groups_x, num_groups_y, num_groups_z, group_size_x, group_size_y, group_size_z);
         }
         
         public static unsafe delegate*<long, void> _glDispatchComputeIndirect;
@@ -3842,13 +1308,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDrawArrays(mode, first, count);
         }
         
-        public static unsafe delegate*<PrimitiveType, int, int, void> _glDrawArraysEXT;
-        
-        public static unsafe void DrawArraysEXT(PrimitiveType mode, int first, int count)
-        {
-            _glDrawArraysEXT(mode, first, count);
-        }
-        
         public static unsafe delegate*<PrimitiveType, IntPtr, void> _glDrawArraysIndirect;
         
         public static unsafe void DrawArraysIndirect(PrimitiveType mode, IntPtr indirect)
@@ -3863,46 +1322,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDrawArraysInstanced(mode, first, count, instancecount);
         }
         
-        public static unsafe delegate*<PrimitiveType, int, int, int, void> _glDrawArraysInstancedANGLE;
-        
-        public static unsafe void DrawArraysInstancedANGLE(PrimitiveType mode, int first, int count, int primcount)
-        {
-            _glDrawArraysInstancedANGLE(mode, first, count, primcount);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, int, int, void> _glDrawArraysInstancedARB;
-        
-        public static unsafe void DrawArraysInstancedARB(PrimitiveType mode, int first, int count, int primcount)
-        {
-            _glDrawArraysInstancedARB(mode, first, count, primcount);
-        }
-        
         public static unsafe delegate*<PrimitiveType, int, int, int, uint, void> _glDrawArraysInstancedBaseInstance;
         
         public static unsafe void DrawArraysInstancedBaseInstance(PrimitiveType mode, int first, int count, int instancecount, uint baseinstance)
         {
             _glDrawArraysInstancedBaseInstance(mode, first, count, instancecount, baseinstance);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, int, int, uint, void> _glDrawArraysInstancedBaseInstanceEXT;
-        
-        public static unsafe void DrawArraysInstancedBaseInstanceEXT(PrimitiveType mode, int first, int count, int instancecount, uint baseinstance)
-        {
-            _glDrawArraysInstancedBaseInstanceEXT(mode, first, count, instancecount, baseinstance);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, int, int, void> _glDrawArraysInstancedEXT;
-        
-        public static unsafe void DrawArraysInstancedEXT(PrimitiveType mode, int start, int count, int primcount)
-        {
-            _glDrawArraysInstancedEXT(mode, start, count, primcount);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, int, int, void> _glDrawArraysInstancedNV;
-        
-        public static unsafe void DrawArraysInstancedNV(PrimitiveType mode, int first, int count, int primcount)
-        {
-            _glDrawArraysInstancedNV(mode, first, count, primcount);
         }
         
         public static unsafe delegate*<DrawBufferMode, void> _glDrawBuffer;
@@ -3919,83 +1343,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDrawBuffers(n, (IntPtr)bufs);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glDrawBuffersARB;
-        
-        public static unsafe void DrawBuffersARB(int n, ref DrawBufferMode bufs)
-        {
-            _glDrawBuffersARB(n, (IntPtr)bufs);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDrawBuffersATI;
-        
-        public static unsafe void DrawBuffersATI(int n, ref DrawBufferMode bufs)
-        {
-            _glDrawBuffersATI(n, (IntPtr)bufs);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDrawBuffersEXT;
-        
-        public static unsafe void DrawBuffersEXT(int n, ref uint bufs)
-        {
-            _glDrawBuffersEXT(n, (IntPtr)bufs);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, IntPtr, void> _glDrawBuffersIndexedEXT;
-        
-        public static unsafe void DrawBuffersIndexedEXT(int n, ref uint location, ref int indices)
-        {
-            _glDrawBuffersIndexedEXT(n, (IntPtr)location, (IntPtr)indices);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glDrawBuffersNV;
-        
-        public static unsafe void DrawBuffersNV(int n, ref uint bufs)
-        {
-            _glDrawBuffersNV(n, (IntPtr)bufs);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, IntPtr, uint, void> _glDrawCommandsAddressNV;
-        
-        public static unsafe void DrawCommandsAddressNV(uint primitiveMode, ref ulong indirects, ref int sizes, uint count)
-        {
-            _glDrawCommandsAddressNV(primitiveMode, (IntPtr)indirects, (IntPtr)sizes, count);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, IntPtr, uint, void> _glDrawCommandsNV;
-        
-        public static unsafe void DrawCommandsNV(uint primitiveMode, uint buffer, ref long indirects, ref int sizes, uint count)
-        {
-            _glDrawCommandsNV(primitiveMode, buffer, (IntPtr)indirects, (IntPtr)sizes, count);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, IntPtr, uint, void> _glDrawCommandsStatesAddressNV;
-        
-        public static unsafe void DrawCommandsStatesAddressNV(ref ulong indirects, ref int sizes, ref uint states, ref uint fbos, uint count)
-        {
-            _glDrawCommandsStatesAddressNV((IntPtr)indirects, (IntPtr)sizes, (IntPtr)states, (IntPtr)fbos, count);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, IntPtr, IntPtr, IntPtr, uint, void> _glDrawCommandsStatesNV;
-        
-        public static unsafe void DrawCommandsStatesNV(uint buffer, ref long indirects, ref int sizes, ref uint states, ref uint fbos, uint count)
-        {
-            _glDrawCommandsStatesNV(buffer, (IntPtr)indirects, (IntPtr)sizes, (IntPtr)states, (IntPtr)fbos, count);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, int, void> _glDrawElementArrayAPPLE;
-        
-        public static unsafe void DrawElementArrayAPPLE(PrimitiveType mode, int first, int count)
-        {
-            _glDrawElementArrayAPPLE(mode, first, count);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, void> _glDrawElementArrayATI;
-        
-        public static unsafe void DrawElementArrayATI(PrimitiveType mode, int count)
-        {
-            _glDrawElementArrayATI(mode, count);
-        }
-        
         public static unsafe delegate*<PrimitiveType, int, DrawElementsType, IntPtr, void> _glDrawElements;
         
         public static unsafe void DrawElements(PrimitiveType mode, int count, DrawElementsType type, IntPtr indices)
@@ -4008,20 +1355,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void DrawElementsBaseVertex(PrimitiveType mode, int count, DrawElementsType type, IntPtr indices, int basevertex)
         {
             _glDrawElementsBaseVertex(mode, count, type, (IntPtr)indices, basevertex);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, DrawElementsType, IntPtr, int, void> _glDrawElementsBaseVertexEXT;
-        
-        public static unsafe void DrawElementsBaseVertexEXT(PrimitiveType mode, int count, DrawElementsType type, IntPtr indices, int basevertex)
-        {
-            _glDrawElementsBaseVertexEXT(mode, count, type, (IntPtr)indices, basevertex);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, DrawElementsType, IntPtr, int, void> _glDrawElementsBaseVertexOES;
-        
-        public static unsafe void DrawElementsBaseVertexOES(PrimitiveType mode, int count, DrawElementsType type, IntPtr indices, int basevertex)
-        {
-            _glDrawElementsBaseVertexOES(mode, count, type, (IntPtr)indices, basevertex);
         }
         
         public static unsafe delegate*<PrimitiveType, DrawElementsType, IntPtr, void> _glDrawElementsIndirect;
@@ -4038,32 +1371,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDrawElementsInstanced(mode, count, type, (IntPtr)indices, instancecount);
         }
         
-        public static unsafe delegate*<PrimitiveType, int, PrimitiveType, IntPtr, int, void> _glDrawElementsInstancedANGLE;
-        
-        public static unsafe void DrawElementsInstancedANGLE(PrimitiveType mode, int count, PrimitiveType type, IntPtr indices, int primcount)
-        {
-            _glDrawElementsInstancedANGLE(mode, count, type, (IntPtr)indices, primcount);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, DrawElementsType, IntPtr, int, void> _glDrawElementsInstancedARB;
-        
-        public static unsafe void DrawElementsInstancedARB(PrimitiveType mode, int count, DrawElementsType type, IntPtr indices, int primcount)
-        {
-            _glDrawElementsInstancedARB(mode, count, type, (IntPtr)indices, primcount);
-        }
-        
         public static unsafe delegate*<PrimitiveType, int, PrimitiveType, IntPtr, int, uint, void> _glDrawElementsInstancedBaseInstance;
         
         public static unsafe void DrawElementsInstancedBaseInstance(PrimitiveType mode, int count, PrimitiveType type, IntPtr indices, int instancecount, uint baseinstance)
         {
             _glDrawElementsInstancedBaseInstance(mode, count, type, (IntPtr)indices, instancecount, baseinstance);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, PrimitiveType, IntPtr, int, uint, void> _glDrawElementsInstancedBaseInstanceEXT;
-        
-        public static unsafe void DrawElementsInstancedBaseInstanceEXT(PrimitiveType mode, int count, PrimitiveType type, IntPtr indices, int instancecount, uint baseinstance)
-        {
-            _glDrawElementsInstancedBaseInstanceEXT(mode, count, type, (IntPtr)indices, instancecount, baseinstance);
         }
         
         public static unsafe delegate*<PrimitiveType, int, DrawElementsType, IntPtr, int, int, void> _glDrawElementsInstancedBaseVertex;
@@ -4080,81 +1392,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDrawElementsInstancedBaseVertexBaseInstance(mode, count, type, (IntPtr)indices, instancecount, basevertex, baseinstance);
         }
         
-        public static unsafe delegate*<PrimitiveType, int, DrawElementsType, IntPtr, int, int, uint, void> _glDrawElementsInstancedBaseVertexBaseInstanceEXT;
-        
-        public static unsafe void DrawElementsInstancedBaseVertexBaseInstanceEXT(PrimitiveType mode, int count, DrawElementsType type, IntPtr indices, int instancecount, int basevertex, uint baseinstance)
-        {
-            _glDrawElementsInstancedBaseVertexBaseInstanceEXT(mode, count, type, (IntPtr)indices, instancecount, basevertex, baseinstance);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, DrawElementsType, IntPtr, int, int, void> _glDrawElementsInstancedBaseVertexEXT;
-        
-        public static unsafe void DrawElementsInstancedBaseVertexEXT(PrimitiveType mode, int count, DrawElementsType type, IntPtr indices, int instancecount, int basevertex)
-        {
-            _glDrawElementsInstancedBaseVertexEXT(mode, count, type, (IntPtr)indices, instancecount, basevertex);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, DrawElementsType, IntPtr, int, int, void> _glDrawElementsInstancedBaseVertexOES;
-        
-        public static unsafe void DrawElementsInstancedBaseVertexOES(PrimitiveType mode, int count, DrawElementsType type, IntPtr indices, int instancecount, int basevertex)
-        {
-            _glDrawElementsInstancedBaseVertexOES(mode, count, type, (IntPtr)indices, instancecount, basevertex);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, DrawElementsType, IntPtr, int, void> _glDrawElementsInstancedEXT;
-        
-        public static unsafe void DrawElementsInstancedEXT(PrimitiveType mode, int count, DrawElementsType type, IntPtr indices, int primcount)
-        {
-            _glDrawElementsInstancedEXT(mode, count, type, (IntPtr)indices, primcount);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, PrimitiveType, IntPtr, int, void> _glDrawElementsInstancedNV;
-        
-        public static unsafe void DrawElementsInstancedNV(PrimitiveType mode, int count, PrimitiveType type, IntPtr indices, int primcount)
-        {
-            _glDrawElementsInstancedNV(mode, count, type, (IntPtr)indices, primcount);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, int, int, int, void> _glDrawMeshArraysSUN;
-        
-        public static unsafe void DrawMeshArraysSUN(PrimitiveType mode, int first, int count, int width)
-        {
-            _glDrawMeshArraysSUN(mode, first, count, width);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glDrawMeshTasksNV;
-        
-        public static unsafe void DrawMeshTasksNV(uint first, uint count)
-        {
-            _glDrawMeshTasksNV(first, count);
-        }
-        
-        public static unsafe delegate*<long, void> _glDrawMeshTasksIndirectNV;
-        
-        public static unsafe void DrawMeshTasksIndirectNV(long indirect)
-        {
-            _glDrawMeshTasksIndirectNV(indirect);
-        }
-        
         public static unsafe delegate*<int, int, PixelFormat, PixelType, IntPtr, void> _glDrawPixels;
         
         public static unsafe void DrawPixels(int width, int height, PixelFormat format, PixelType type, IntPtr pixels)
         {
             _glDrawPixels(width, height, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, uint, uint, int, int, void> _glDrawRangeElementArrayAPPLE;
-        
-        public static unsafe void DrawRangeElementArrayAPPLE(PrimitiveType mode, uint start, uint end, int first, int count)
-        {
-            _glDrawRangeElementArrayAPPLE(mode, start, end, first, count);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, uint, uint, int, void> _glDrawRangeElementArrayATI;
-        
-        public static unsafe void DrawRangeElementArrayATI(PrimitiveType mode, uint start, uint end, int count)
-        {
-            _glDrawRangeElementArrayATI(mode, start, end, count);
         }
         
         public static unsafe delegate*<PrimitiveType, uint, uint, int, DrawElementsType, IntPtr, void> _glDrawRangeElements;
@@ -4171,90 +1413,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDrawRangeElementsBaseVertex(mode, start, end, count, type, (IntPtr)indices, basevertex);
         }
         
-        public static unsafe delegate*<PrimitiveType, uint, uint, int, DrawElementsType, IntPtr, int, void> _glDrawRangeElementsBaseVertexEXT;
-        
-        public static unsafe void DrawRangeElementsBaseVertexEXT(PrimitiveType mode, uint start, uint end, int count, DrawElementsType type, IntPtr indices, int basevertex)
-        {
-            _glDrawRangeElementsBaseVertexEXT(mode, start, end, count, type, (IntPtr)indices, basevertex);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, uint, uint, int, DrawElementsType, IntPtr, int, void> _glDrawRangeElementsBaseVertexOES;
-        
-        public static unsafe void DrawRangeElementsBaseVertexOES(PrimitiveType mode, uint start, uint end, int count, DrawElementsType type, IntPtr indices, int basevertex)
-        {
-            _glDrawRangeElementsBaseVertexOES(mode, start, end, count, type, (IntPtr)indices, basevertex);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, uint, uint, int, DrawElementsType, IntPtr, void> _glDrawRangeElementsEXT;
-        
-        public static unsafe void DrawRangeElementsEXT(PrimitiveType mode, uint start, uint end, int count, DrawElementsType type, IntPtr indices)
-        {
-            _glDrawRangeElementsEXT(mode, start, end, count, type, (IntPtr)indices);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, float, void> _glDrawTexfOES;
-        
-        public static unsafe void DrawTexfOES(float x, float y, float z, float width, float height)
-        {
-            _glDrawTexfOES(x, y, z, width, height);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glDrawTexfvOES;
-        
-        public static unsafe void DrawTexfvOES(ref float coords)
-        {
-            _glDrawTexfvOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, int, void> _glDrawTexiOES;
-        
-        public static unsafe void DrawTexiOES(int x, int y, int z, int width, int height)
-        {
-            _glDrawTexiOES(x, y, z, width, height);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glDrawTexivOES;
-        
-        public static unsafe void DrawTexivOES(ref int coords)
-        {
-            _glDrawTexivOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<short, short, short, short, short, void> _glDrawTexsOES;
-        
-        public static unsafe void DrawTexsOES(short x, short y, short z, short width, short height)
-        {
-            _glDrawTexsOES(x, y, z, width, height);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glDrawTexsvOES;
-        
-        public static unsafe void DrawTexsvOES(ref short coords)
-        {
-            _glDrawTexsvOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<uint, uint, float, float, float, float, float, float, float, float, float, void> _glDrawTextureNV;
-        
-        public static unsafe void DrawTextureNV(uint texture, uint sampler, float x0, float y0, float x1, float y1, float z, float s0, float t0, float s1, float t1)
-        {
-            _glDrawTextureNV(texture, sampler, x0, y0, x1, y1, z, s0, t0, s1, t1);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, int, void> _glDrawTexxOES;
-        
-        public static unsafe void DrawTexxOES(int x, int y, int z, int width, int height)
-        {
-            _glDrawTexxOES(x, y, z, width, height);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glDrawTexxvOES;
-        
-        public static unsafe void DrawTexxvOES(ref int coords)
-        {
-            _glDrawTexxvOES((IntPtr)coords);
-        }
-        
         public static unsafe delegate*<PrimitiveType, uint, void> _glDrawTransformFeedback;
         
         public static unsafe void DrawTransformFeedback(PrimitiveType mode, uint id)
@@ -4262,32 +1420,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDrawTransformFeedback(mode, id);
         }
         
-        public static unsafe delegate*<PrimitiveType, uint, void> _glDrawTransformFeedbackEXT;
-        
-        public static unsafe void DrawTransformFeedbackEXT(PrimitiveType mode, uint id)
-        {
-            _glDrawTransformFeedbackEXT(mode, id);
-        }
-        
         public static unsafe delegate*<PrimitiveType, uint, int, void> _glDrawTransformFeedbackInstanced;
         
         public static unsafe void DrawTransformFeedbackInstanced(PrimitiveType mode, uint id, int instancecount)
         {
             _glDrawTransformFeedbackInstanced(mode, id, instancecount);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, uint, int, void> _glDrawTransformFeedbackInstancedEXT;
-        
-        public static unsafe void DrawTransformFeedbackInstancedEXT(PrimitiveType mode, uint id, int instancecount)
-        {
-            _glDrawTransformFeedbackInstancedEXT(mode, id, instancecount);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, uint, void> _glDrawTransformFeedbackNV;
-        
-        public static unsafe void DrawTransformFeedbackNV(PrimitiveType mode, uint id)
-        {
-            _glDrawTransformFeedbackNV(mode, id);
         }
         
         public static unsafe delegate*<PrimitiveType, uint, uint, void> _glDrawTransformFeedbackStream;
@@ -4304,46 +1441,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glDrawTransformFeedbackStreamInstanced(mode, id, stream, instancecount);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glEGLImageTargetRenderbufferStorageOES;
-        
-        public static unsafe void EGLImageTargetRenderbufferStorageOES(uint target, IntPtr image)
-        {
-            _glEGLImageTargetRenderbufferStorageOES(target, image);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, IntPtr, void> _glEGLImageTargetTexStorageEXT;
-        
-        public static unsafe void EGLImageTargetTexStorageEXT(uint target, IntPtr image, ref int attrib_list)
-        {
-            _glEGLImageTargetTexStorageEXT(target, image, (IntPtr)attrib_list);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glEGLImageTargetTexture2DOES;
-        
-        public static unsafe void EGLImageTargetTexture2DOES(uint target, IntPtr image)
-        {
-            _glEGLImageTargetTexture2DOES(target, image);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, IntPtr, void> _glEGLImageTargetTextureStorageEXT;
-        
-        public static unsafe void EGLImageTargetTextureStorageEXT(uint texture, IntPtr image, ref int attrib_list)
-        {
-            _glEGLImageTargetTextureStorageEXT(texture, image, (IntPtr)attrib_list);
-        }
-        
         public static unsafe delegate*<byte, void> _glEdgeFlag;
         
         public static unsafe void EdgeFlag(byte flag)
         {
             _glEdgeFlag(flag);
-        }
-        
-        public static unsafe delegate*<int, void> _glEdgeFlagFormatNV;
-        
-        public static unsafe void EdgeFlagFormatNV(int stride)
-        {
-            _glEdgeFlagFormatNV(stride);
         }
         
         public static unsafe delegate*<int, IntPtr, void> _glEdgeFlagPointer;
@@ -4353,39 +1455,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glEdgeFlagPointer(stride, (IntPtr)pointer);
         }
         
-        public static unsafe delegate*<int, int, IntPtr, void> _glEdgeFlagPointerEXT;
-        
-        public static unsafe void EdgeFlagPointerEXT(int stride, int count, ref byte pointer)
-        {
-            _glEdgeFlagPointerEXT(stride, count, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, int, void> _glEdgeFlagPointerListIBM;
-        
-        public static unsafe void EdgeFlagPointerListIBM(int stride, out IntPtr pointer, int ptrstride)
-        {
-            _glEdgeFlagPointerListIBM(stride, (IntPtr)pointer, ptrstride);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glEdgeFlagv;
         
         public static unsafe void EdgeFlagv(ref byte flag)
         {
             _glEdgeFlagv((IntPtr)flag);
-        }
-        
-        public static unsafe delegate*<ElementPointerTypeATI, IntPtr, void> _glElementPointerAPPLE;
-        
-        public static unsafe void ElementPointerAPPLE(ElementPointerTypeATI type, IntPtr pointer)
-        {
-            _glElementPointerAPPLE(type, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<ElementPointerTypeATI, IntPtr, void> _glElementPointerATI;
-        
-        public static unsafe void ElementPointerATI(ElementPointerTypeATI type, IntPtr pointer)
-        {
-            _glElementPointerATI(type, (IntPtr)pointer);
         }
         
         public static unsafe delegate*<EnableCap, void> _glEnable;
@@ -4402,67 +1476,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glEnableClientState(array);
         }
         
-        public static unsafe delegate*<EnableCap, uint, void> _glEnableClientStateIndexedEXT;
-        
-        public static unsafe void EnableClientStateIndexedEXT(EnableCap array, uint index)
-        {
-            _glEnableClientStateIndexedEXT(array, index);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, void> _glEnableClientStateiEXT;
-        
-        public static unsafe void EnableClientStateiEXT(EnableCap array, uint index)
-        {
-            _glEnableClientStateiEXT(array, index);
-        }
-        
-        public static unsafe delegate*<uint, void> _glEnableDriverControlQCOM;
-        
-        public static unsafe void EnableDriverControlQCOM(uint driverControl)
-        {
-            _glEnableDriverControlQCOM(driverControl);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, void> _glEnableIndexedEXT;
-        
-        public static unsafe void EnableIndexedEXT(EnableCap target, uint index)
-        {
-            _glEnableIndexedEXT(target, index);
-        }
-        
-        public static unsafe delegate*<uint, void> _glEnableVariantClientStateEXT;
-        
-        public static unsafe void EnableVariantClientStateEXT(uint id)
-        {
-            _glEnableVariantClientStateEXT(id);
-        }
-        
         public static unsafe delegate*<uint, uint, void> _glEnableVertexArrayAttrib;
         
         public static unsafe void EnableVertexArrayAttrib(uint vaobj, uint index)
         {
             _glEnableVertexArrayAttrib(vaobj, index);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glEnableVertexArrayAttribEXT;
-        
-        public static unsafe void EnableVertexArrayAttribEXT(uint vaobj, uint index)
-        {
-            _glEnableVertexArrayAttribEXT(vaobj, index);
-        }
-        
-        public static unsafe delegate*<uint, EnableCap, void> _glEnableVertexArrayEXT;
-        
-        public static unsafe void EnableVertexArrayEXT(uint vaobj, EnableCap array)
-        {
-            _glEnableVertexArrayEXT(vaobj, array);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glEnableVertexAttribAPPLE;
-        
-        public static unsafe void EnableVertexAttribAPPLE(uint index, uint pname)
-        {
-            _glEnableVertexAttribAPPLE(index, pname);
         }
         
         public static unsafe delegate*<uint, void> _glEnableVertexAttribArray;
@@ -4472,39 +1490,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glEnableVertexAttribArray(index);
         }
         
-        public static unsafe delegate*<uint, void> _glEnableVertexAttribArrayARB;
-        
-        public static unsafe void EnableVertexAttribArrayARB(uint index)
-        {
-            _glEnableVertexAttribArrayARB(index);
-        }
-        
         public static unsafe delegate*<EnableCap, uint, void> _glEnablei;
         
         public static unsafe void Enablei(EnableCap target, uint index)
         {
             _glEnablei(target, index);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, void> _glEnableiEXT;
-        
-        public static unsafe void EnableiEXT(EnableCap target, uint index)
-        {
-            _glEnableiEXT(target, index);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, void> _glEnableiNV;
-        
-        public static unsafe void EnableiNV(EnableCap target, uint index)
-        {
-            _glEnableiNV(target, index);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, void> _glEnableiOES;
-        
-        public static unsafe void EnableiOES(EnableCap target, uint index)
-        {
-            _glEnableiOES(target, index);
         }
         
         public static unsafe delegate*<void> _glEnd;
@@ -4521,53 +1511,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glEndConditionalRender();
         }
         
-        public static unsafe delegate*<void> _glEndConditionalRenderNV;
-        
-        public static unsafe void EndConditionalRenderNV()
-        {
-            _glEndConditionalRenderNV();
-        }
-        
-        public static unsafe delegate*<void> _glEndConditionalRenderNVX;
-        
-        public static unsafe void EndConditionalRenderNVX()
-        {
-            _glEndConditionalRenderNVX();
-        }
-        
-        public static unsafe delegate*<void> _glEndFragmentShaderATI;
-        
-        public static unsafe void EndFragmentShaderATI()
-        {
-            _glEndFragmentShaderATI();
-        }
-        
         public static unsafe delegate*<void> _glEndList;
         
         public static unsafe void EndList()
         {
             _glEndList();
-        }
-        
-        public static unsafe delegate*<void> _glEndOcclusionQueryNV;
-        
-        public static unsafe void EndOcclusionQueryNV()
-        {
-            _glEndOcclusionQueryNV();
-        }
-        
-        public static unsafe delegate*<uint, void> _glEndPerfMonitorAMD;
-        
-        public static unsafe void EndPerfMonitorAMD(uint monitor)
-        {
-            _glEndPerfMonitorAMD(monitor);
-        }
-        
-        public static unsafe delegate*<uint, void> _glEndPerfQueryINTEL;
-        
-        public static unsafe void EndPerfQueryINTEL(uint queryHandle)
-        {
-            _glEndPerfQueryINTEL(queryHandle);
         }
         
         public static unsafe delegate*<QueryTarget, void> _glEndQuery;
@@ -4577,20 +1525,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glEndQuery(target);
         }
         
-        public static unsafe delegate*<QueryTarget, void> _glEndQueryARB;
-        
-        public static unsafe void EndQueryARB(QueryTarget target)
-        {
-            _glEndQueryARB(target);
-        }
-        
-        public static unsafe delegate*<QueryTarget, void> _glEndQueryEXT;
-        
-        public static unsafe void EndQueryEXT(QueryTarget target)
-        {
-            _glEndQueryEXT(target);
-        }
-        
         public static unsafe delegate*<QueryTarget, uint, void> _glEndQueryIndexed;
         
         public static unsafe void EndQueryIndexed(QueryTarget target, uint index)
@@ -4598,46 +1532,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glEndQueryIndexed(target, index);
         }
         
-        public static unsafe delegate*<uint, void> _glEndTilingQCOM;
-        
-        public static unsafe void EndTilingQCOM(uint preserveMask)
-        {
-            _glEndTilingQCOM(preserveMask);
-        }
-        
         public static unsafe delegate*<void> _glEndTransformFeedback;
         
         public static unsafe void EndTransformFeedback()
         {
             _glEndTransformFeedback();
-        }
-        
-        public static unsafe delegate*<void> _glEndTransformFeedbackEXT;
-        
-        public static unsafe void EndTransformFeedbackEXT()
-        {
-            _glEndTransformFeedbackEXT();
-        }
-        
-        public static unsafe delegate*<void> _glEndTransformFeedbackNV;
-        
-        public static unsafe void EndTransformFeedbackNV()
-        {
-            _glEndTransformFeedbackNV();
-        }
-        
-        public static unsafe delegate*<void> _glEndVertexShaderEXT;
-        
-        public static unsafe void EndVertexShaderEXT()
-        {
-            _glEndVertexShaderEXT();
-        }
-        
-        public static unsafe delegate*<uint, void> _glEndVideoCaptureNV;
-        
-        public static unsafe void EndVideoCaptureNV(uint video_capture_slot)
-        {
-            _glEndVideoCaptureNV(video_capture_slot);
         }
         
         public static unsafe delegate*<double, void> _glEvalCoord1d;
@@ -4668,20 +1567,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glEvalCoord1fv((IntPtr)u);
         }
         
-        public static unsafe delegate*<int, void> _glEvalCoord1xOES;
-        
-        public static unsafe void EvalCoord1xOES(int u)
-        {
-            _glEvalCoord1xOES(u);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glEvalCoord1xvOES;
-        
-        public static unsafe void EvalCoord1xvOES(ref int coords)
-        {
-            _glEvalCoord1xvOES((IntPtr)coords);
-        }
-        
         public static unsafe delegate*<double, double, void> _glEvalCoord2d;
         
         public static unsafe void EvalCoord2d(double u, double v)
@@ -4708,27 +1593,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void EvalCoord2fv(ref float u)
         {
             _glEvalCoord2fv((IntPtr)u);
-        }
-        
-        public static unsafe delegate*<int, int, void> _glEvalCoord2xOES;
-        
-        public static unsafe void EvalCoord2xOES(int u, int v)
-        {
-            _glEvalCoord2xOES(u, v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glEvalCoord2xvOES;
-        
-        public static unsafe void EvalCoord2xvOES(ref int coords)
-        {
-            _glEvalCoord2xvOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<EvalTargetNV, EvalMapsModeNV, void> _glEvalMapsNV;
-        
-        public static unsafe void EvalMapsNV(EvalTargetNV target, EvalMapsModeNV mode)
-        {
-            _glEvalMapsNV(target, mode);
         }
         
         public static unsafe delegate*<MeshMode1, int, int, void> _glEvalMesh1;
@@ -4759,123 +1623,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glEvalPoint2(i, j);
         }
         
-        public static unsafe delegate*<void> _glEvaluateDepthValuesARB;
-        
-        public static unsafe void EvaluateDepthValuesARB()
-        {
-            _glEvaluateDepthValuesARB();
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, IntPtr, void> _glExecuteProgramNV;
-        
-        public static unsafe void ExecuteProgramNV(VertexAttribEnumNV target, uint id, ref float @params)
-        {
-            _glExecuteProgramNV(target, id, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glExtGetBufferPointervQCOM;
-        
-        public static unsafe void ExtGetBufferPointervQCOM(uint target, out IntPtr @params)
-        {
-            _glExtGetBufferPointervQCOM(target, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<IntPtr, int, IntPtr, void> _glExtGetBuffersQCOM;
-        
-        public static unsafe void ExtGetBuffersQCOM(ref uint buffers, int maxBuffers, ref int numBuffers)
-        {
-            _glExtGetBuffersQCOM((IntPtr)buffers, maxBuffers, (IntPtr)numBuffers);
-        }
-        
-        public static unsafe delegate*<IntPtr, int, IntPtr, void> _glExtGetFramebuffersQCOM;
-        
-        public static unsafe void ExtGetFramebuffersQCOM(ref uint framebuffers, int maxFramebuffers, ref int numFramebuffers)
-        {
-            _glExtGetFramebuffersQCOM((IntPtr)framebuffers, maxFramebuffers, (IntPtr)numFramebuffers);
-        }
-        
-        public static unsafe delegate*<uint, ShaderType, IntPtr, IntPtr, void> _glExtGetProgramBinarySourceQCOM;
-        
-        public static unsafe void ExtGetProgramBinarySourceQCOM(uint program, ShaderType shadertype, ref sbyte source, ref int length)
-        {
-            _glExtGetProgramBinarySourceQCOM(program, shadertype, (IntPtr)source, (IntPtr)length);
-        }
-        
-        public static unsafe delegate*<IntPtr, int, IntPtr, void> _glExtGetProgramsQCOM;
-        
-        public static unsafe void ExtGetProgramsQCOM(ref uint programs, int maxPrograms, ref int numPrograms)
-        {
-            _glExtGetProgramsQCOM((IntPtr)programs, maxPrograms, (IntPtr)numPrograms);
-        }
-        
-        public static unsafe delegate*<IntPtr, int, IntPtr, void> _glExtGetRenderbuffersQCOM;
-        
-        public static unsafe void ExtGetRenderbuffersQCOM(ref uint renderbuffers, int maxRenderbuffers, ref int numRenderbuffers)
-        {
-            _glExtGetRenderbuffersQCOM((IntPtr)renderbuffers, maxRenderbuffers, (IntPtr)numRenderbuffers);
-        }
-        
-        public static unsafe delegate*<IntPtr, int, IntPtr, void> _glExtGetShadersQCOM;
-        
-        public static unsafe void ExtGetShadersQCOM(ref uint shaders, int maxShaders, ref int numShaders)
-        {
-            _glExtGetShadersQCOM((IntPtr)shaders, maxShaders, (IntPtr)numShaders);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, uint, IntPtr, void> _glExtGetTexLevelParameterivQCOM;
-        
-        public static unsafe void ExtGetTexLevelParameterivQCOM(uint texture, uint face, int level, uint pname, ref int @params)
-        {
-            _glExtGetTexLevelParameterivQCOM(texture, face, level, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glExtGetTexSubImageQCOM;
-        
-        public static unsafe void ExtGetTexSubImageQCOM(uint target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, PixelFormat format, PixelType type, IntPtr texels)
-        {
-            _glExtGetTexSubImageQCOM(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, (IntPtr)texels);
-        }
-        
-        public static unsafe delegate*<IntPtr, int, IntPtr, void> _glExtGetTexturesQCOM;
-        
-        public static unsafe void ExtGetTexturesQCOM(ref uint textures, int maxTextures, ref int numTextures)
-        {
-            _glExtGetTexturesQCOM((IntPtr)textures, maxTextures, (IntPtr)numTextures);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glExtIsProgramBinaryQCOM;
-        
-        public static unsafe byte ExtIsProgramBinaryQCOM(uint program)
-        {
-            return _glExtIsProgramBinaryQCOM(program);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, void> _glExtTexObjectStateOverrideiQCOM;
-        
-        public static unsafe void ExtTexObjectStateOverrideiQCOM(uint target, uint pname, int param)
-        {
-            _glExtTexObjectStateOverrideiQCOM(target, pname, param);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, void> _glExtractComponentEXT;
-        
-        public static unsafe void ExtractComponentEXT(uint res, uint src, uint num)
-        {
-            _glExtractComponentEXT(res, src, num);
-        }
-        
         public static unsafe delegate*<int, FeedbackType, IntPtr, void> _glFeedbackBuffer;
         
         public static unsafe void FeedbackBuffer(int size, FeedbackType type, ref float buffer)
         {
             _glFeedbackBuffer(size, type, (IntPtr)buffer);
-        }
-        
-        public static unsafe delegate*<int, uint, IntPtr, void> _glFeedbackBufferxOES;
-        
-        public static unsafe void FeedbackBufferxOES(int n, uint type, ref int buffer)
-        {
-            _glFeedbackBufferxOES(n, type, (IntPtr)buffer);
         }
         
         public static unsafe delegate*<SyncCondition, uint, IntPtr> _glFenceSync;
@@ -4885,60 +1637,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glFenceSync(condition, flags);
         }
         
-        public static unsafe delegate*<SyncCondition, uint, IntPtr> _glFenceSyncAPPLE;
-        
-        public static unsafe IntPtr FenceSyncAPPLE(SyncCondition condition, uint flags)
-        {
-            return _glFenceSyncAPPLE(condition, flags);
-        }
-        
-        public static unsafe delegate*<CombinerVariableNV, CombinerRegisterNV, CombinerMappingNV, CombinerComponentUsageNV, void> _glFinalCombinerInputNV;
-        
-        public static unsafe void FinalCombinerInputNV(CombinerVariableNV variable, CombinerRegisterNV input, CombinerMappingNV mapping, CombinerComponentUsageNV componentUsage)
-        {
-            _glFinalCombinerInputNV(variable, input, mapping, componentUsage);
-        }
-        
         public static unsafe delegate*<void> _glFinish;
         
         public static unsafe void Finish()
         {
             _glFinish();
-        }
-        
-        public static unsafe delegate*<IntPtr, int> _glFinishAsyncSGIX;
-        
-        public static unsafe int FinishAsyncSGIX(ref uint markerp)
-        {
-            return _glFinishAsyncSGIX((IntPtr)markerp);
-        }
-        
-        public static unsafe delegate*<uint, void> _glFinishFenceAPPLE;
-        
-        public static unsafe void FinishFenceAPPLE(uint fence)
-        {
-            _glFinishFenceAPPLE(fence);
-        }
-        
-        public static unsafe delegate*<uint, void> _glFinishFenceNV;
-        
-        public static unsafe void FinishFenceNV(uint fence)
-        {
-            _glFinishFenceNV(fence);
-        }
-        
-        public static unsafe delegate*<ObjectTypeAPPLE, int, void> _glFinishObjectAPPLE;
-        
-        public static unsafe void FinishObjectAPPLE(ObjectTypeAPPLE @object, int name)
-        {
-            _glFinishObjectAPPLE(@object, name);
-        }
-        
-        public static unsafe delegate*<void> _glFinishTextureSUNX;
-        
-        public static unsafe void FinishTextureSUNX()
-        {
-            _glFinishTextureSUNX();
         }
         
         public static unsafe delegate*<void> _glFlush;
@@ -4955,74 +1658,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glFlushMappedBufferRange(target, offset, length);
         }
         
-        public static unsafe delegate*<BufferTargetARB, long, long, void> _glFlushMappedBufferRangeAPPLE;
-        
-        public static unsafe void FlushMappedBufferRangeAPPLE(BufferTargetARB target, long offset, long size)
-        {
-            _glFlushMappedBufferRangeAPPLE(target, offset, size);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, long, long, void> _glFlushMappedBufferRangeEXT;
-        
-        public static unsafe void FlushMappedBufferRangeEXT(BufferTargetARB target, long offset, long length)
-        {
-            _glFlushMappedBufferRangeEXT(target, offset, length);
-        }
-        
         public static unsafe delegate*<uint, long, long, void> _glFlushMappedNamedBufferRange;
         
         public static unsafe void FlushMappedNamedBufferRange(uint buffer, long offset, long length)
         {
             _glFlushMappedNamedBufferRange(buffer, offset, length);
-        }
-        
-        public static unsafe delegate*<uint, long, long, void> _glFlushMappedNamedBufferRangeEXT;
-        
-        public static unsafe void FlushMappedNamedBufferRangeEXT(uint buffer, long offset, long length)
-        {
-            _glFlushMappedNamedBufferRangeEXT(buffer, offset, length);
-        }
-        
-        public static unsafe delegate*<PixelDataRangeTargetNV, void> _glFlushPixelDataRangeNV;
-        
-        public static unsafe void FlushPixelDataRangeNV(PixelDataRangeTargetNV target)
-        {
-            _glFlushPixelDataRangeNV(target);
-        }
-        
-        public static unsafe delegate*<void> _glFlushRasterSGIX;
-        
-        public static unsafe void FlushRasterSGIX()
-        {
-            _glFlushRasterSGIX();
-        }
-        
-        public static unsafe delegate*<uint, void> _glFlushStaticDataIBM;
-        
-        public static unsafe void FlushStaticDataIBM(uint target)
-        {
-            _glFlushStaticDataIBM(target);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glFlushVertexArrayRangeAPPLE;
-        
-        public static unsafe void FlushVertexArrayRangeAPPLE(int length, IntPtr pointer)
-        {
-            _glFlushVertexArrayRangeAPPLE(length, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<void> _glFlushVertexArrayRangeNV;
-        
-        public static unsafe void FlushVertexArrayRangeNV()
-        {
-            _glFlushVertexArrayRangeNV();
-        }
-        
-        public static unsafe delegate*<uint, int, void> _glFogCoordFormatNV;
-        
-        public static unsafe void FogCoordFormatNV(uint type, int stride)
-        {
-            _glFogCoordFormatNV(type, stride);
         }
         
         public static unsafe delegate*<FogPointerTypeEXT, int, IntPtr, void> _glFogCoordPointer;
@@ -5032,32 +1672,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glFogCoordPointer(type, stride, (IntPtr)pointer);
         }
         
-        public static unsafe delegate*<FogPointerTypeEXT, int, IntPtr, void> _glFogCoordPointerEXT;
-        
-        public static unsafe void FogCoordPointerEXT(FogPointerTypeEXT type, int stride, IntPtr pointer)
-        {
-            _glFogCoordPointerEXT(type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<FogPointerTypeIBM, int, IntPtr, int, void> _glFogCoordPointerListIBM;
-        
-        public static unsafe void FogCoordPointerListIBM(FogPointerTypeIBM type, int stride, out IntPtr pointer, int ptrstride)
-        {
-            _glFogCoordPointerListIBM(type, stride, (IntPtr)pointer, ptrstride);
-        }
-        
         public static unsafe delegate*<double, void> _glFogCoordd;
         
         public static unsafe void FogCoordd(double coord)
         {
             _glFogCoordd(coord);
-        }
-        
-        public static unsafe delegate*<double, void> _glFogCoorddEXT;
-        
-        public static unsafe void FogCoorddEXT(double coord)
-        {
-            _glFogCoorddEXT(coord);
         }
         
         public static unsafe delegate*<IntPtr, void> _glFogCoorddv;
@@ -5067,13 +1686,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glFogCoorddv((IntPtr)coord);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glFogCoorddvEXT;
-        
-        public static unsafe void FogCoorddvEXT(ref double coord)
-        {
-            _glFogCoorddvEXT((IntPtr)coord);
-        }
-        
         public static unsafe delegate*<float, void> _glFogCoordf;
         
         public static unsafe void FogCoordf(float coord)
@@ -5081,46 +1693,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glFogCoordf(coord);
         }
         
-        public static unsafe delegate*<float, void> _glFogCoordfEXT;
-        
-        public static unsafe void FogCoordfEXT(float coord)
-        {
-            _glFogCoordfEXT(coord);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glFogCoordfv;
         
         public static unsafe void FogCoordfv(ref float coord)
         {
             _glFogCoordfv((IntPtr)coord);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glFogCoordfvEXT;
-        
-        public static unsafe void FogCoordfvEXT(ref float coord)
-        {
-            _glFogCoordfvEXT((IntPtr)coord);
-        }
-        
-        public static unsafe delegate*<ushort, void> _glFogCoordhNV;
-        
-        public static unsafe void FogCoordhNV(ushort fog)
-        {
-            _glFogCoordhNV(fog);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glFogCoordhvNV;
-        
-        public static unsafe void FogCoordhvNV(ref ushort fog)
-        {
-            _glFogCoordhvNV((IntPtr)fog);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glFogFuncSGIS;
-        
-        public static unsafe void FogFuncSGIS(int n, out IntPtr points)
-        {
-            _glFogFuncSGIS(n, (IntPtr)points);
         }
         
         public static unsafe delegate*<FogParameter, float, void> _glFogf;
@@ -5151,188 +1728,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glFogiv(pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<FogPName, int, void> _glFogx;
-        
-        public static unsafe void Fogx(FogPName pname, int param)
-        {
-            _glFogx(pname, param);
-        }
-        
-        public static unsafe delegate*<FogPName, int, void> _glFogxOES;
-        
-        public static unsafe void FogxOES(FogPName pname, int param)
-        {
-            _glFogxOES(pname, param);
-        }
-        
-        public static unsafe delegate*<FogPName, IntPtr, void> _glFogxv;
-        
-        public static unsafe void Fogxv(FogPName pname, ref int param)
-        {
-            _glFogxv(pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<FogPName, IntPtr, void> _glFogxvOES;
-        
-        public static unsafe void FogxvOES(FogPName pname, ref int param)
-        {
-            _glFogxvOES(pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, void> _glFragmentColorMaterialSGIX;
-        
-        public static unsafe void FragmentColorMaterialSGIX(MaterialFace face, MaterialParameter mode)
-        {
-            _glFragmentColorMaterialSGIX(face, mode);
-        }
-        
-        public static unsafe delegate*<uint, void> _glFragmentCoverageColorNV;
-        
-        public static unsafe void FragmentCoverageColorNV(uint color)
-        {
-            _glFragmentCoverageColorNV(color);
-        }
-        
-        public static unsafe delegate*<FragmentLightModelParameterSGIX, float, void> _glFragmentLightModelfSGIX;
-        
-        public static unsafe void FragmentLightModelfSGIX(FragmentLightModelParameterSGIX pname, float param)
-        {
-            _glFragmentLightModelfSGIX(pname, param);
-        }
-        
-        public static unsafe delegate*<FragmentLightModelParameterSGIX, IntPtr, void> _glFragmentLightModelfvSGIX;
-        
-        public static unsafe void FragmentLightModelfvSGIX(FragmentLightModelParameterSGIX pname, ref float @params)
-        {
-            _glFragmentLightModelfvSGIX(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<FragmentLightModelParameterSGIX, int, void> _glFragmentLightModeliSGIX;
-        
-        public static unsafe void FragmentLightModeliSGIX(FragmentLightModelParameterSGIX pname, int param)
-        {
-            _glFragmentLightModeliSGIX(pname, param);
-        }
-        
-        public static unsafe delegate*<FragmentLightModelParameterSGIX, IntPtr, void> _glFragmentLightModelivSGIX;
-        
-        public static unsafe void FragmentLightModelivSGIX(FragmentLightModelParameterSGIX pname, ref int @params)
-        {
-            _glFragmentLightModelivSGIX(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<FragmentLightNameSGIX, FragmentLightParameterSGIX, float, void> _glFragmentLightfSGIX;
-        
-        public static unsafe void FragmentLightfSGIX(FragmentLightNameSGIX light, FragmentLightParameterSGIX pname, float param)
-        {
-            _glFragmentLightfSGIX(light, pname, param);
-        }
-        
-        public static unsafe delegate*<FragmentLightNameSGIX, FragmentLightParameterSGIX, IntPtr, void> _glFragmentLightfvSGIX;
-        
-        public static unsafe void FragmentLightfvSGIX(FragmentLightNameSGIX light, FragmentLightParameterSGIX pname, ref float @params)
-        {
-            _glFragmentLightfvSGIX(light, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<FragmentLightNameSGIX, FragmentLightParameterSGIX, int, void> _glFragmentLightiSGIX;
-        
-        public static unsafe void FragmentLightiSGIX(FragmentLightNameSGIX light, FragmentLightParameterSGIX pname, int param)
-        {
-            _glFragmentLightiSGIX(light, pname, param);
-        }
-        
-        public static unsafe delegate*<FragmentLightNameSGIX, FragmentLightParameterSGIX, IntPtr, void> _glFragmentLightivSGIX;
-        
-        public static unsafe void FragmentLightivSGIX(FragmentLightNameSGIX light, FragmentLightParameterSGIX pname, ref int @params)
-        {
-            _glFragmentLightivSGIX(light, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, float, void> _glFragmentMaterialfSGIX;
-        
-        public static unsafe void FragmentMaterialfSGIX(MaterialFace face, MaterialParameter pname, float param)
-        {
-            _glFragmentMaterialfSGIX(face, pname, param);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, IntPtr, void> _glFragmentMaterialfvSGIX;
-        
-        public static unsafe void FragmentMaterialfvSGIX(MaterialFace face, MaterialParameter pname, ref float @params)
-        {
-            _glFragmentMaterialfvSGIX(face, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, int, void> _glFragmentMaterialiSGIX;
-        
-        public static unsafe void FragmentMaterialiSGIX(MaterialFace face, MaterialParameter pname, int param)
-        {
-            _glFragmentMaterialiSGIX(face, pname, param);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, IntPtr, void> _glFragmentMaterialivSGIX;
-        
-        public static unsafe void FragmentMaterialivSGIX(MaterialFace face, MaterialParameter pname, ref int @params)
-        {
-            _glFragmentMaterialivSGIX(face, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<void> _glFrameTerminatorGREMEDY;
-        
-        public static unsafe void FrameTerminatorGREMEDY()
-        {
-            _glFrameTerminatorGREMEDY();
-        }
-        
-        public static unsafe delegate*<int, void> _glFrameZoomSGIX;
-        
-        public static unsafe void FrameZoomSGIX(int factor)
-        {
-            _glFrameZoomSGIX(factor);
-        }
-        
-        public static unsafe delegate*<uint, DrawBufferMode, void> _glFramebufferDrawBufferEXT;
-        
-        public static unsafe void FramebufferDrawBufferEXT(uint framebuffer, DrawBufferMode mode)
-        {
-            _glFramebufferDrawBufferEXT(framebuffer, mode);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glFramebufferDrawBuffersEXT;
-        
-        public static unsafe void FramebufferDrawBuffersEXT(uint framebuffer, int n, ref DrawBufferMode bufs)
-        {
-            _glFramebufferDrawBuffersEXT(framebuffer, n, (IntPtr)bufs);
-        }
-        
-        public static unsafe delegate*<void> _glFramebufferFetchBarrierEXT;
-        
-        public static unsafe void FramebufferFetchBarrierEXT()
-        {
-            _glFramebufferFetchBarrierEXT();
-        }
-        
-        public static unsafe delegate*<void> _glFramebufferFetchBarrierQCOM;
-        
-        public static unsafe void FramebufferFetchBarrierQCOM()
-        {
-            _glFramebufferFetchBarrierQCOM();
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, IntPtr, void> _glFramebufferFoveationConfigQCOM;
-        
-        public static unsafe void FramebufferFoveationConfigQCOM(uint framebuffer, uint numLayers, uint focalPointsPerLayer, uint requestedFeatures, ref uint providedFeatures)
-        {
-            _glFramebufferFoveationConfigQCOM(framebuffer, numLayers, focalPointsPerLayer, requestedFeatures, (IntPtr)providedFeatures);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, float, float, float, float, float, void> _glFramebufferFoveationParametersQCOM;
-        
-        public static unsafe void FramebufferFoveationParametersQCOM(uint framebuffer, uint layer, uint focalPoint, float focalX, float focalY, float gainX, float gainY, float foveaArea)
-        {
-            _glFramebufferFoveationParametersQCOM(framebuffer, layer, focalPoint, focalX, focalY, gainX, gainY, foveaArea);
-        }
-        
         public static unsafe delegate*<FramebufferTarget, FramebufferParameterName, int, void> _glFramebufferParameteri;
         
         public static unsafe void FramebufferParameteri(FramebufferTarget target, FramebufferParameterName pname, int param)
@@ -5340,60 +1735,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glFramebufferParameteri(target, pname, param);
         }
         
-        public static unsafe delegate*<uint, int, void> _glFramebufferPixelLocalStorageSizeEXT;
-        
-        public static unsafe void FramebufferPixelLocalStorageSizeEXT(uint target, int size)
-        {
-            _glFramebufferPixelLocalStorageSizeEXT(target, size);
-        }
-        
-        public static unsafe delegate*<uint, ReadBufferMode, void> _glFramebufferReadBufferEXT;
-        
-        public static unsafe void FramebufferReadBufferEXT(uint framebuffer, ReadBufferMode mode)
-        {
-            _glFramebufferReadBufferEXT(framebuffer, mode);
-        }
-        
         public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, RenderbufferTarget, uint, void> _glFramebufferRenderbuffer;
         
         public static unsafe void FramebufferRenderbuffer(FramebufferTarget target, FramebufferAttachment attachment, RenderbufferTarget renderbuffertarget, uint renderbuffer)
         {
             _glFramebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, RenderbufferTarget, uint, void> _glFramebufferRenderbufferEXT;
-        
-        public static unsafe void FramebufferRenderbufferEXT(FramebufferTarget target, FramebufferAttachment attachment, RenderbufferTarget renderbuffertarget, uint renderbuffer)
-        {
-            _glFramebufferRenderbufferEXT(target, attachment, renderbuffertarget, renderbuffer);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, RenderbufferTarget, uint, void> _glFramebufferRenderbufferOES;
-        
-        public static unsafe void FramebufferRenderbufferOES(FramebufferTarget target, FramebufferAttachment attachment, RenderbufferTarget renderbuffertarget, uint renderbuffer)
-        {
-            _glFramebufferRenderbufferOES(target, attachment, renderbuffertarget, renderbuffer);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, uint, int, IntPtr, void> _glFramebufferSampleLocationsfvARB;
-        
-        public static unsafe void FramebufferSampleLocationsfvARB(FramebufferTarget target, uint start, int count, ref float v)
-        {
-            _glFramebufferSampleLocationsfvARB(target, start, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, uint, int, IntPtr, void> _glFramebufferSampleLocationsfvNV;
-        
-        public static unsafe void FramebufferSampleLocationsfvNV(FramebufferTarget target, uint start, int count, ref float v)
-        {
-            _glFramebufferSampleLocationsfvNV(target, start, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, uint, uint, IntPtr, void> _glFramebufferSamplePositionsfvAMD;
-        
-        public static unsafe void FramebufferSamplePositionsfvAMD(FramebufferTarget target, uint numsamples, uint pixelindex, ref float values)
-        {
-            _glFramebufferSamplePositionsfvAMD(target, numsamples, pixelindex, (IntPtr)values);
         }
         
         public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, void> _glFramebufferTexture;
@@ -5410,53 +1756,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glFramebufferTexture1D(target, attachment, textarget, texture, level);
         }
         
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, TextureTarget, uint, int, void> _glFramebufferTexture1DEXT;
-        
-        public static unsafe void FramebufferTexture1DEXT(FramebufferTarget target, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level)
-        {
-            _glFramebufferTexture1DEXT(target, attachment, textarget, texture, level);
-        }
-        
         public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, TextureTarget, uint, int, void> _glFramebufferTexture2D;
         
         public static unsafe void FramebufferTexture2D(FramebufferTarget target, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level)
         {
             _glFramebufferTexture2D(target, attachment, textarget, texture, level);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, TextureTarget, uint, int, void> _glFramebufferTexture2DEXT;
-        
-        public static unsafe void FramebufferTexture2DEXT(FramebufferTarget target, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level)
-        {
-            _glFramebufferTexture2DEXT(target, attachment, textarget, texture, level);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, TextureTarget, uint, int, int, int, void> _glFramebufferTexture2DDownsampleIMG;
-        
-        public static unsafe void FramebufferTexture2DDownsampleIMG(FramebufferTarget target, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level, int xscale, int yscale)
-        {
-            _glFramebufferTexture2DDownsampleIMG(target, attachment, textarget, texture, level, xscale, yscale);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, TextureTarget, uint, int, int, void> _glFramebufferTexture2DMultisampleEXT;
-        
-        public static unsafe void FramebufferTexture2DMultisampleEXT(FramebufferTarget target, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level, int samples)
-        {
-            _glFramebufferTexture2DMultisampleEXT(target, attachment, textarget, texture, level, samples);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, TextureTarget, uint, int, int, void> _glFramebufferTexture2DMultisampleIMG;
-        
-        public static unsafe void FramebufferTexture2DMultisampleIMG(FramebufferTarget target, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level, int samples)
-        {
-            _glFramebufferTexture2DMultisampleIMG(target, attachment, textarget, texture, level, samples);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, TextureTarget, uint, int, void> _glFramebufferTexture2DOES;
-        
-        public static unsafe void FramebufferTexture2DOES(FramebufferTarget target, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level)
-        {
-            _glFramebufferTexture2DOES(target, attachment, textarget, texture, level);
         }
         
         public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, TextureTarget, uint, int, int, void> _glFramebufferTexture3D;
@@ -5466,102 +1770,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glFramebufferTexture3D(target, attachment, textarget, texture, level, zoffset);
         }
         
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, TextureTarget, uint, int, int, void> _glFramebufferTexture3DEXT;
-        
-        public static unsafe void FramebufferTexture3DEXT(FramebufferTarget target, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level, int zoffset)
-        {
-            _glFramebufferTexture3DEXT(target, attachment, textarget, texture, level, zoffset);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, TextureTarget, uint, int, int, void> _glFramebufferTexture3DOES;
-        
-        public static unsafe void FramebufferTexture3DOES(FramebufferTarget target, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level, int zoffset)
-        {
-            _glFramebufferTexture3DOES(target, attachment, textarget, texture, level, zoffset);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, void> _glFramebufferTextureARB;
-        
-        public static unsafe void FramebufferTextureARB(FramebufferTarget target, FramebufferAttachment attachment, uint texture, int level)
-        {
-            _glFramebufferTextureARB(target, attachment, texture, level);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, void> _glFramebufferTextureEXT;
-        
-        public static unsafe void FramebufferTextureEXT(FramebufferTarget target, FramebufferAttachment attachment, uint texture, int level)
-        {
-            _glFramebufferTextureEXT(target, attachment, texture, level);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, TextureTarget, void> _glFramebufferTextureFaceARB;
-        
-        public static unsafe void FramebufferTextureFaceARB(FramebufferTarget target, FramebufferAttachment attachment, uint texture, int level, TextureTarget face)
-        {
-            _glFramebufferTextureFaceARB(target, attachment, texture, level, face);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, TextureTarget, void> _glFramebufferTextureFaceEXT;
-        
-        public static unsafe void FramebufferTextureFaceEXT(FramebufferTarget target, FramebufferAttachment attachment, uint texture, int level, TextureTarget face)
-        {
-            _glFramebufferTextureFaceEXT(target, attachment, texture, level, face);
-        }
-        
         public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, int, void> _glFramebufferTextureLayer;
         
         public static unsafe void FramebufferTextureLayer(FramebufferTarget target, FramebufferAttachment attachment, uint texture, int level, int layer)
         {
             _glFramebufferTextureLayer(target, attachment, texture, level, layer);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, int, void> _glFramebufferTextureLayerARB;
-        
-        public static unsafe void FramebufferTextureLayerARB(FramebufferTarget target, FramebufferAttachment attachment, uint texture, int level, int layer)
-        {
-            _glFramebufferTextureLayerARB(target, attachment, texture, level, layer);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, int, void> _glFramebufferTextureLayerEXT;
-        
-        public static unsafe void FramebufferTextureLayerEXT(FramebufferTarget target, FramebufferAttachment attachment, uint texture, int level, int layer)
-        {
-            _glFramebufferTextureLayerEXT(target, attachment, texture, level, layer);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, int, int, int, void> _glFramebufferTextureLayerDownsampleIMG;
-        
-        public static unsafe void FramebufferTextureLayerDownsampleIMG(FramebufferTarget target, FramebufferAttachment attachment, uint texture, int level, int layer, int xscale, int yscale)
-        {
-            _glFramebufferTextureLayerDownsampleIMG(target, attachment, texture, level, layer, xscale, yscale);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, int, int, int, void> _glFramebufferTextureMultisampleMultiviewOVR;
-        
-        public static unsafe void FramebufferTextureMultisampleMultiviewOVR(FramebufferTarget target, FramebufferAttachment attachment, uint texture, int level, int samples, int baseViewIndex, int numViews)
-        {
-            _glFramebufferTextureMultisampleMultiviewOVR(target, attachment, texture, level, samples, baseViewIndex, numViews);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, int, int, void> _glFramebufferTextureMultiviewOVR;
-        
-        public static unsafe void FramebufferTextureMultiviewOVR(FramebufferTarget target, FramebufferAttachment attachment, uint texture, int level, int baseViewIndex, int numViews)
-        {
-            _glFramebufferTextureMultiviewOVR(target, attachment, texture, level, baseViewIndex, numViews);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, uint, int, void> _glFramebufferTextureOES;
-        
-        public static unsafe void FramebufferTextureOES(FramebufferTarget target, FramebufferAttachment attachment, uint texture, int level)
-        {
-            _glFramebufferTextureOES(target, attachment, texture, level);
-        }
-        
-        public static unsafe delegate*<uint, void> _glFreeObjectBufferATI;
-        
-        public static unsafe void FreeObjectBufferATI(uint buffer)
-        {
-            _glFreeObjectBufferATI(buffer);
         }
         
         public static unsafe delegate*<FrontFaceDirection, void> _glFrontFace;
@@ -5578,74 +1791,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glFrustum(left, right, bottom, top, zNear, zFar);
         }
         
-        public static unsafe delegate*<float, float, float, float, float, float, void> _glFrustumf;
-        
-        public static unsafe void Frustumf(float l, float r, float b, float t, float n, float f)
-        {
-            _glFrustumf(l, r, b, t, n, f);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, float, float, void> _glFrustumfOES;
-        
-        public static unsafe void FrustumfOES(float l, float r, float b, float t, float n, float f)
-        {
-            _glFrustumfOES(l, r, b, t, n, f);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, int, int, void> _glFrustumx;
-        
-        public static unsafe void Frustumx(int l, int r, int b, int t, int n, int f)
-        {
-            _glFrustumx(l, r, b, t, n, f);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, int, int, void> _glFrustumxOES;
-        
-        public static unsafe void FrustumxOES(int l, int r, int b, int t, int n, int f)
-        {
-            _glFrustumxOES(l, r, b, t, n, f);
-        }
-        
-        public static unsafe delegate*<int, uint> _glGenAsyncMarkersSGIX;
-        
-        public static unsafe uint GenAsyncMarkersSGIX(int range)
-        {
-            return _glGenAsyncMarkersSGIX(range);
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glGenBuffers;
         
         public static unsafe void GenBuffers(int n, ref uint buffers)
         {
             _glGenBuffers(n, (IntPtr)buffers);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenBuffersARB;
-        
-        public static unsafe void GenBuffersARB(int n, ref uint buffers)
-        {
-            _glGenBuffersARB(n, (IntPtr)buffers);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenFencesAPPLE;
-        
-        public static unsafe void GenFencesAPPLE(int n, ref uint fences)
-        {
-            _glGenFencesAPPLE(n, (IntPtr)fences);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenFencesNV;
-        
-        public static unsafe void GenFencesNV(int n, ref uint fences)
-        {
-            _glGenFencesNV(n, (IntPtr)fences);
-        }
-        
-        public static unsafe delegate*<uint, uint> _glGenFragmentShadersATI;
-        
-        public static unsafe uint GenFragmentShadersATI(uint range)
-        {
-            return _glGenFragmentShadersATI(range);
         }
         
         public static unsafe delegate*<int, IntPtr, void> _glGenFramebuffers;
@@ -5655,53 +1805,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGenFramebuffers(n, (IntPtr)framebuffers);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glGenFramebuffersEXT;
-        
-        public static unsafe void GenFramebuffersEXT(int n, ref uint framebuffers)
-        {
-            _glGenFramebuffersEXT(n, (IntPtr)framebuffers);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenFramebuffersOES;
-        
-        public static unsafe void GenFramebuffersOES(int n, ref uint framebuffers)
-        {
-            _glGenFramebuffersOES(n, (IntPtr)framebuffers);
-        }
-        
         public static unsafe delegate*<int, uint> _glGenLists;
         
         public static unsafe uint GenLists(int range)
         {
             return _glGenLists(range);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGenNamesAMD;
-        
-        public static unsafe void GenNamesAMD(uint identifier, uint num, ref uint names)
-        {
-            _glGenNamesAMD(identifier, num, (IntPtr)names);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenOcclusionQueriesNV;
-        
-        public static unsafe void GenOcclusionQueriesNV(int n, ref uint ids)
-        {
-            _glGenOcclusionQueriesNV(n, (IntPtr)ids);
-        }
-        
-        public static unsafe delegate*<int, uint> _glGenPathsNV;
-        
-        public static unsafe uint GenPathsNV(int range)
-        {
-            return _glGenPathsNV(range);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenPerfMonitorsAMD;
-        
-        public static unsafe void GenPerfMonitorsAMD(int n, ref uint monitors)
-        {
-            _glGenPerfMonitorsAMD(n, (IntPtr)monitors);
         }
         
         public static unsafe delegate*<int, IntPtr, void> _glGenProgramPipelines;
@@ -5711,53 +1819,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGenProgramPipelines(n, (IntPtr)pipelines);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glGenProgramPipelinesEXT;
-        
-        public static unsafe void GenProgramPipelinesEXT(int n, ref uint pipelines)
-        {
-            _glGenProgramPipelinesEXT(n, (IntPtr)pipelines);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenProgramsARB;
-        
-        public static unsafe void GenProgramsARB(int n, ref uint programs)
-        {
-            _glGenProgramsARB(n, (IntPtr)programs);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenProgramsNV;
-        
-        public static unsafe void GenProgramsNV(int n, ref uint programs)
-        {
-            _glGenProgramsNV(n, (IntPtr)programs);
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glGenQueries;
         
         public static unsafe void GenQueries(int n, ref uint ids)
         {
             _glGenQueries(n, (IntPtr)ids);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenQueriesARB;
-        
-        public static unsafe void GenQueriesARB(int n, ref uint ids)
-        {
-            _glGenQueriesARB(n, (IntPtr)ids);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenQueriesEXT;
-        
-        public static unsafe void GenQueriesEXT(int n, ref uint ids)
-        {
-            _glGenQueriesEXT(n, (IntPtr)ids);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenQueryResourceTagNV;
-        
-        public static unsafe void GenQueryResourceTagNV(int n, ref int tagIds)
-        {
-            _glGenQueryResourceTagNV(n, (IntPtr)tagIds);
         }
         
         public static unsafe delegate*<int, IntPtr, void> _glGenRenderbuffers;
@@ -5767,39 +1833,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGenRenderbuffers(n, (IntPtr)renderbuffers);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glGenRenderbuffersEXT;
-        
-        public static unsafe void GenRenderbuffersEXT(int n, ref uint renderbuffers)
-        {
-            _glGenRenderbuffersEXT(n, (IntPtr)renderbuffers);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenRenderbuffersOES;
-        
-        public static unsafe void GenRenderbuffersOES(int n, ref uint renderbuffers)
-        {
-            _glGenRenderbuffersOES(n, (IntPtr)renderbuffers);
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glGenSamplers;
         
         public static unsafe void GenSamplers(int count, ref uint samplers)
         {
             _glGenSamplers(count, (IntPtr)samplers);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenSemaphoresEXT;
-        
-        public static unsafe void GenSemaphoresEXT(int n, ref uint semaphores)
-        {
-            _glGenSemaphoresEXT(n, (IntPtr)semaphores);
-        }
-        
-        public static unsafe delegate*<DataTypeEXT, VertexShaderStorageTypeEXT, ParameterRangeEXT, uint, uint> _glGenSymbolsEXT;
-        
-        public static unsafe uint GenSymbolsEXT(DataTypeEXT datatype, VertexShaderStorageTypeEXT storagetype, ParameterRangeEXT range, uint components)
-        {
-            return _glGenSymbolsEXT(datatype, storagetype, range, components);
         }
         
         public static unsafe delegate*<int, IntPtr, void> _glGenTextures;
@@ -5809,25 +1847,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGenTextures(n, (IntPtr)textures);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glGenTexturesEXT;
-        
-        public static unsafe void GenTexturesEXT(int n, ref uint textures)
-        {
-            _glGenTexturesEXT(n, (IntPtr)textures);
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glGenTransformFeedbacks;
         
         public static unsafe void GenTransformFeedbacks(int n, ref uint ids)
         {
             _glGenTransformFeedbacks(n, (IntPtr)ids);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenTransformFeedbacksNV;
-        
-        public static unsafe void GenTransformFeedbacksNV(int n, ref uint ids)
-        {
-            _glGenTransformFeedbacksNV(n, (IntPtr)ids);
         }
         
         public static unsafe delegate*<int, IntPtr, void> _glGenVertexArrays;
@@ -5837,27 +1861,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGenVertexArrays(n, (IntPtr)arrays);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glGenVertexArraysAPPLE;
-        
-        public static unsafe void GenVertexArraysAPPLE(int n, ref uint arrays)
-        {
-            _glGenVertexArraysAPPLE(n, (IntPtr)arrays);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGenVertexArraysOES;
-        
-        public static unsafe void GenVertexArraysOES(int n, ref uint arrays)
-        {
-            _glGenVertexArraysOES(n, (IntPtr)arrays);
-        }
-        
-        public static unsafe delegate*<uint, uint> _glGenVertexShadersEXT;
-        
-        public static unsafe uint GenVertexShadersEXT(uint range)
-        {
-            return _glGenVertexShadersEXT(range);
-        }
-        
         public static unsafe delegate*<TextureTarget, void> _glGenerateMipmap;
         
         public static unsafe void GenerateMipmap(TextureTarget target)
@@ -5865,39 +1868,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGenerateMipmap(target);
         }
         
-        public static unsafe delegate*<TextureTarget, void> _glGenerateMipmapEXT;
-        
-        public static unsafe void GenerateMipmapEXT(TextureTarget target)
-        {
-            _glGenerateMipmapEXT(target);
-        }
-        
-        public static unsafe delegate*<TextureTarget, void> _glGenerateMipmapOES;
-        
-        public static unsafe void GenerateMipmapOES(TextureTarget target)
-        {
-            _glGenerateMipmapOES(target);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, void> _glGenerateMultiTexMipmapEXT;
-        
-        public static unsafe void GenerateMultiTexMipmapEXT(TextureUnit texunit, TextureTarget target)
-        {
-            _glGenerateMultiTexMipmapEXT(texunit, target);
-        }
-        
         public static unsafe delegate*<uint, void> _glGenerateTextureMipmap;
         
         public static unsafe void GenerateTextureMipmap(uint texture)
         {
             _glGenerateTextureMipmap(texture);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, void> _glGenerateTextureMipmapEXT;
-        
-        public static unsafe void GenerateTextureMipmapEXT(uint texture, TextureTarget target)
-        {
-            _glGenerateTextureMipmapEXT(texture, target);
         }
         
         public static unsafe delegate*<uint, uint, AtomicCounterBufferPName, IntPtr, void> _glGetActiveAtomicCounterBufferiv;
@@ -5912,13 +1887,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void GetActiveAttrib(uint program, uint index, int bufSize, ref int length, ref int size, ref AttributeType type, ref sbyte name)
         {
             _glGetActiveAttrib(program, index, bufSize, (IntPtr)length, (IntPtr)size, (IntPtr)type, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, IntPtr, IntPtr, IntPtr, void> _glGetActiveAttribARB;
-        
-        public static unsafe void GetActiveAttribARB(uint programObj, uint index, int maxLength, ref int length, ref int size, ref AttributeType type, ref sbyte name)
-        {
-            _glGetActiveAttribARB(programObj, index, maxLength, (IntPtr)length, (IntPtr)size, (IntPtr)type, (IntPtr)name);
         }
         
         public static unsafe delegate*<uint, ShaderType, uint, int, IntPtr, IntPtr, void> _glGetActiveSubroutineName;
@@ -5949,13 +1917,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetActiveUniform(program, index, bufSize, (IntPtr)length, (IntPtr)size, (IntPtr)type, (IntPtr)name);
         }
         
-        public static unsafe delegate*<uint, uint, int, IntPtr, IntPtr, IntPtr, IntPtr, void> _glGetActiveUniformARB;
-        
-        public static unsafe void GetActiveUniformARB(uint programObj, uint index, int maxLength, ref int length, ref int size, ref UniformType type, ref sbyte name)
-        {
-            _glGetActiveUniformARB(programObj, index, maxLength, (IntPtr)length, (IntPtr)size, (IntPtr)type, (IntPtr)name);
-        }
-        
         public static unsafe delegate*<uint, uint, int, IntPtr, IntPtr, void> _glGetActiveUniformBlockName;
         
         public static unsafe void GetActiveUniformBlockName(uint program, uint uniformBlockIndex, int bufSize, ref int length, ref sbyte uniformBlockName)
@@ -5984,34 +1945,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetActiveUniformsiv(program, uniformCount, (IntPtr)uniformIndices, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, uint, int, IntPtr, IntPtr, IntPtr, IntPtr, void> _glGetActiveVaryingNV;
-        
-        public static unsafe void GetActiveVaryingNV(uint program, uint index, int bufSize, ref int length, ref int size, ref uint type, ref sbyte name)
-        {
-            _glGetActiveVaryingNV(program, index, bufSize, (IntPtr)length, (IntPtr)size, (IntPtr)type, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<EnableCap, ArrayObjectPNameATI, IntPtr, void> _glGetArrayObjectfvATI;
-        
-        public static unsafe void GetArrayObjectfvATI(EnableCap array, ArrayObjectPNameATI pname, ref float @params)
-        {
-            _glGetArrayObjectfvATI(array, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<EnableCap, ArrayObjectPNameATI, IntPtr, void> _glGetArrayObjectivATI;
-        
-        public static unsafe void GetArrayObjectivATI(EnableCap array, ArrayObjectPNameATI pname, ref int @params)
-        {
-            _glGetArrayObjectivATI(array, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetAttachedObjectsARB;
-        
-        public static unsafe void GetAttachedObjectsARB(uint containerObj, int maxCount, ref int count, ref uint obj)
-        {
-            _glGetAttachedObjectsARB(containerObj, maxCount, (IntPtr)count, (IntPtr)obj);
-        }
-        
         public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetAttachedShaders;
         
         public static unsafe void GetAttachedShaders(uint program, int maxCount, ref int count, ref uint shaders)
@@ -6024,20 +1957,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe int GetAttribLocation(uint program, ref sbyte name)
         {
             return _glGetAttribLocation(program, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, int> _glGetAttribLocationARB;
-        
-        public static unsafe int GetAttribLocationARB(uint programObj, ref sbyte name)
-        {
-            return _glGetAttribLocationARB(programObj, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, uint, IntPtr, void> _glGetBooleanIndexedvEXT;
-        
-        public static unsafe void GetBooleanIndexedvEXT(BufferTargetARB target, uint index, ref byte data)
-        {
-            _glGetBooleanIndexedvEXT(target, index, (IntPtr)data);
         }
         
         public static unsafe delegate*<BufferTargetARB, uint, IntPtr, void> _glGetBooleani_v;
@@ -6068,39 +1987,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetBufferParameteriv(target, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<BufferTargetARB, BufferPNameARB, IntPtr, void> _glGetBufferParameterivARB;
-        
-        public static unsafe void GetBufferParameterivARB(BufferTargetARB target, BufferPNameARB pname, ref int @params)
-        {
-            _glGetBufferParameterivARB(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, uint, IntPtr, void> _glGetBufferParameterui64vNV;
-        
-        public static unsafe void GetBufferParameterui64vNV(BufferTargetARB target, uint pname, ref ulong @params)
-        {
-            _glGetBufferParameterui64vNV(target, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<BufferTargetARB, BufferPointerNameARB, IntPtr, void> _glGetBufferPointerv;
         
         public static unsafe void GetBufferPointerv(BufferTargetARB target, BufferPointerNameARB pname, out IntPtr @params)
         {
             _glGetBufferPointerv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, BufferPointerNameARB, IntPtr, void> _glGetBufferPointervARB;
-        
-        public static unsafe void GetBufferPointervARB(BufferTargetARB target, BufferPointerNameARB pname, out IntPtr @params)
-        {
-            _glGetBufferPointervARB(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, BufferPointerNameARB, IntPtr, void> _glGetBufferPointervOES;
-        
-        public static unsafe void GetBufferPointervOES(BufferTargetARB target, BufferPointerNameARB pname, out IntPtr @params)
-        {
-            _glGetBufferPointervOES(target, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<BufferTargetARB, long, long, IntPtr, void> _glGetBufferSubData;
@@ -6110,158 +2001,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetBufferSubData(target, offset, size, (IntPtr)data);
         }
         
-        public static unsafe delegate*<BufferTargetARB, long, long, IntPtr, void> _glGetBufferSubDataARB;
-        
-        public static unsafe void GetBufferSubDataARB(BufferTargetARB target, long offset, long size, IntPtr data)
-        {
-            _glGetBufferSubDataARB(target, offset, size, (IntPtr)data);
-        }
-        
         public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glGetClipPlane;
         
         public static unsafe void GetClipPlane(ClipPlaneName plane, ref double equation)
         {
             _glGetClipPlane(plane, (IntPtr)equation);
-        }
-        
-        public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glGetClipPlanef;
-        
-        public static unsafe void GetClipPlanef(ClipPlaneName plane, ref float equation)
-        {
-            _glGetClipPlanef(plane, (IntPtr)equation);
-        }
-        
-        public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glGetClipPlanefOES;
-        
-        public static unsafe void GetClipPlanefOES(ClipPlaneName plane, ref float equation)
-        {
-            _glGetClipPlanefOES(plane, (IntPtr)equation);
-        }
-        
-        public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glGetClipPlanex;
-        
-        public static unsafe void GetClipPlanex(ClipPlaneName plane, ref int equation)
-        {
-            _glGetClipPlanex(plane, (IntPtr)equation);
-        }
-        
-        public static unsafe delegate*<ClipPlaneName, IntPtr, void> _glGetClipPlanexOES;
-        
-        public static unsafe void GetClipPlanexOES(ClipPlaneName plane, ref int equation)
-        {
-            _glGetClipPlanexOES(plane, (IntPtr)equation);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, PixelFormat, PixelType, IntPtr, void> _glGetColorTable;
-        
-        public static unsafe void GetColorTable(ColorTableTarget target, PixelFormat format, PixelType type, IntPtr table)
-        {
-            _glGetColorTable(target, format, type, (IntPtr)table);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, PixelFormat, PixelType, IntPtr, void> _glGetColorTableEXT;
-        
-        public static unsafe void GetColorTableEXT(ColorTableTarget target, PixelFormat format, PixelType type, IntPtr data)
-        {
-            _glGetColorTableEXT(target, format, type, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, GetColorTableParameterPNameSGI, IntPtr, void> _glGetColorTableParameterfv;
-        
-        public static unsafe void GetColorTableParameterfv(ColorTableTarget target, GetColorTableParameterPNameSGI pname, ref float @params)
-        {
-            _glGetColorTableParameterfv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, GetColorTableParameterPNameSGI, IntPtr, void> _glGetColorTableParameterfvEXT;
-        
-        public static unsafe void GetColorTableParameterfvEXT(ColorTableTarget target, GetColorTableParameterPNameSGI pname, ref float @params)
-        {
-            _glGetColorTableParameterfvEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ColorTableTargetSGI, GetColorTableParameterPNameSGI, IntPtr, void> _glGetColorTableParameterfvSGI;
-        
-        public static unsafe void GetColorTableParameterfvSGI(ColorTableTargetSGI target, GetColorTableParameterPNameSGI pname, ref float @params)
-        {
-            _glGetColorTableParameterfvSGI(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, GetColorTableParameterPNameSGI, IntPtr, void> _glGetColorTableParameteriv;
-        
-        public static unsafe void GetColorTableParameteriv(ColorTableTarget target, GetColorTableParameterPNameSGI pname, ref int @params)
-        {
-            _glGetColorTableParameteriv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, GetColorTableParameterPNameSGI, IntPtr, void> _glGetColorTableParameterivEXT;
-        
-        public static unsafe void GetColorTableParameterivEXT(ColorTableTarget target, GetColorTableParameterPNameSGI pname, ref int @params)
-        {
-            _glGetColorTableParameterivEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ColorTableTargetSGI, GetColorTableParameterPNameSGI, IntPtr, void> _glGetColorTableParameterivSGI;
-        
-        public static unsafe void GetColorTableParameterivSGI(ColorTableTargetSGI target, GetColorTableParameterPNameSGI pname, ref int @params)
-        {
-            _glGetColorTableParameterivSGI(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ColorTableTargetSGI, PixelFormat, PixelType, IntPtr, void> _glGetColorTableSGI;
-        
-        public static unsafe void GetColorTableSGI(ColorTableTargetSGI target, PixelFormat format, PixelType type, IntPtr table)
-        {
-            _glGetColorTableSGI(target, format, type, (IntPtr)table);
-        }
-        
-        public static unsafe delegate*<CombinerStageNV, CombinerPortionNV, CombinerVariableNV, CombinerParameterNV, IntPtr, void> _glGetCombinerInputParameterfvNV;
-        
-        public static unsafe void GetCombinerInputParameterfvNV(CombinerStageNV stage, CombinerPortionNV portion, CombinerVariableNV variable, CombinerParameterNV pname, ref float @params)
-        {
-            _glGetCombinerInputParameterfvNV(stage, portion, variable, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<CombinerStageNV, CombinerPortionNV, CombinerVariableNV, CombinerParameterNV, IntPtr, void> _glGetCombinerInputParameterivNV;
-        
-        public static unsafe void GetCombinerInputParameterivNV(CombinerStageNV stage, CombinerPortionNV portion, CombinerVariableNV variable, CombinerParameterNV pname, ref int @params)
-        {
-            _glGetCombinerInputParameterivNV(stage, portion, variable, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<CombinerStageNV, CombinerPortionNV, CombinerParameterNV, IntPtr, void> _glGetCombinerOutputParameterfvNV;
-        
-        public static unsafe void GetCombinerOutputParameterfvNV(CombinerStageNV stage, CombinerPortionNV portion, CombinerParameterNV pname, ref float @params)
-        {
-            _glGetCombinerOutputParameterfvNV(stage, portion, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<CombinerStageNV, CombinerPortionNV, CombinerParameterNV, IntPtr, void> _glGetCombinerOutputParameterivNV;
-        
-        public static unsafe void GetCombinerOutputParameterivNV(CombinerStageNV stage, CombinerPortionNV portion, CombinerParameterNV pname, ref int @params)
-        {
-            _glGetCombinerOutputParameterivNV(stage, portion, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<CombinerStageNV, CombinerParameterNV, IntPtr, void> _glGetCombinerStageParameterfvNV;
-        
-        public static unsafe void GetCombinerStageParameterfvNV(CombinerStageNV stage, CombinerParameterNV pname, ref float @params)
-        {
-            _glGetCombinerStageParameterfvNV(stage, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint> _glGetCommandHeaderNV;
-        
-        public static unsafe uint GetCommandHeaderNV(uint tokenID, uint size)
-        {
-            return _glGetCommandHeaderNV(tokenID, size);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, IntPtr, void> _glGetCompressedMultiTexImageEXT;
-        
-        public static unsafe void GetCompressedMultiTexImageEXT(TextureUnit texunit, TextureTarget target, int lod, IntPtr img)
-        {
-            _glGetCompressedMultiTexImageEXT(texunit, target, lod, (IntPtr)img);
         }
         
         public static unsafe delegate*<TextureTarget, int, IntPtr, void> _glGetCompressedTexImage;
@@ -6271,25 +2015,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetCompressedTexImage(target, level, (IntPtr)img);
         }
         
-        public static unsafe delegate*<TextureTarget, int, IntPtr, void> _glGetCompressedTexImageARB;
-        
-        public static unsafe void GetCompressedTexImageARB(TextureTarget target, int level, IntPtr img)
-        {
-            _glGetCompressedTexImageARB(target, level, (IntPtr)img);
-        }
-        
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetCompressedTextureImage;
         
         public static unsafe void GetCompressedTextureImage(uint texture, int level, int bufSize, IntPtr pixels)
         {
             _glGetCompressedTextureImage(texture, level, bufSize, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, IntPtr, void> _glGetCompressedTextureImageEXT;
-        
-        public static unsafe void GetCompressedTextureImageEXT(uint texture, TextureTarget target, int lod, IntPtr img)
-        {
-            _glGetCompressedTextureImageEXT(texture, target, lod, (IntPtr)img);
         }
         
         public static unsafe delegate*<uint, int, int, int, int, int, int, int, int, IntPtr, void> _glGetCompressedTextureSubImage;
@@ -6299,102 +2029,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetCompressedTextureSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth, bufSize, (IntPtr)pixels);
         }
         
-        public static unsafe delegate*<ConvolutionTarget, PixelFormat, PixelType, IntPtr, void> _glGetConvolutionFilter;
-        
-        public static unsafe void GetConvolutionFilter(ConvolutionTarget target, PixelFormat format, PixelType type, IntPtr image)
-        {
-            _glGetConvolutionFilter(target, format, type, (IntPtr)image);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, PixelFormat, PixelType, IntPtr, void> _glGetConvolutionFilterEXT;
-        
-        public static unsafe void GetConvolutionFilterEXT(ConvolutionTargetEXT target, PixelFormat format, PixelType type, IntPtr image)
-        {
-            _glGetConvolutionFilterEXT(target, format, type, (IntPtr)image);
-        }
-        
-        public static unsafe delegate*<ConvolutionTarget, ConvolutionParameterEXT, IntPtr, void> _glGetConvolutionParameterfv;
-        
-        public static unsafe void GetConvolutionParameterfv(ConvolutionTarget target, ConvolutionParameterEXT pname, ref float @params)
-        {
-            _glGetConvolutionParameterfv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, ConvolutionParameterEXT, IntPtr, void> _glGetConvolutionParameterfvEXT;
-        
-        public static unsafe void GetConvolutionParameterfvEXT(ConvolutionTargetEXT target, ConvolutionParameterEXT pname, ref float @params)
-        {
-            _glGetConvolutionParameterfvEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ConvolutionTarget, ConvolutionParameterEXT, IntPtr, void> _glGetConvolutionParameteriv;
-        
-        public static unsafe void GetConvolutionParameteriv(ConvolutionTarget target, ConvolutionParameterEXT pname, ref int @params)
-        {
-            _glGetConvolutionParameteriv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ConvolutionTargetEXT, ConvolutionParameterEXT, IntPtr, void> _glGetConvolutionParameterivEXT;
-        
-        public static unsafe void GetConvolutionParameterivEXT(ConvolutionTargetEXT target, ConvolutionParameterEXT pname, ref int @params)
-        {
-            _glGetConvolutionParameterivEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetConvolutionParameterxvOES;
-        
-        public static unsafe void GetConvolutionParameterxvOES(uint target, uint pname, ref int @params)
-        {
-            _glGetConvolutionParameterxvOES(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glGetCoverageModulationTableNV;
-        
-        public static unsafe void GetCoverageModulationTableNV(int bufSize, ref float v)
-        {
-            _glGetCoverageModulationTableNV(bufSize, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, int, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, uint> _glGetDebugMessageLog;
         
         public static unsafe uint GetDebugMessageLog(uint count, int bufSize, ref DebugSource sources, ref DebugType types, ref uint ids, ref DebugSeverity severities, ref int lengths, ref sbyte messageLog)
         {
             return _glGetDebugMessageLog(count, bufSize, (IntPtr)sources, (IntPtr)types, (IntPtr)ids, (IntPtr)severities, (IntPtr)lengths, (IntPtr)messageLog);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, uint> _glGetDebugMessageLogAMD;
-        
-        public static unsafe uint GetDebugMessageLogAMD(uint count, int bufSize, ref uint categories, ref uint severities, ref uint ids, ref int lengths, ref sbyte message)
-        {
-            return _glGetDebugMessageLogAMD(count, bufSize, (IntPtr)categories, (IntPtr)severities, (IntPtr)ids, (IntPtr)lengths, (IntPtr)message);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, uint> _glGetDebugMessageLogARB;
-        
-        public static unsafe uint GetDebugMessageLogARB(uint count, int bufSize, ref DebugSource sources, ref DebugType types, ref uint ids, ref DebugSeverity severities, ref int lengths, ref sbyte messageLog)
-        {
-            return _glGetDebugMessageLogARB(count, bufSize, (IntPtr)sources, (IntPtr)types, (IntPtr)ids, (IntPtr)severities, (IntPtr)lengths, (IntPtr)messageLog);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, uint> _glGetDebugMessageLogKHR;
-        
-        public static unsafe uint GetDebugMessageLogKHR(uint count, int bufSize, ref DebugSource sources, ref DebugType types, ref uint ids, ref DebugSeverity severities, ref int lengths, ref sbyte messageLog)
-        {
-            return _glGetDebugMessageLogKHR(count, bufSize, (IntPtr)sources, (IntPtr)types, (IntPtr)ids, (IntPtr)severities, (IntPtr)lengths, (IntPtr)messageLog);
-        }
-        
-        public static unsafe delegate*<TextureTarget, IntPtr, void> _glGetDetailTexFuncSGIS;
-        
-        public static unsafe void GetDetailTexFuncSGIS(TextureTarget target, ref float points)
-        {
-            _glGetDetailTexFuncSGIS(target, (IntPtr)points);
-        }
-        
-        public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetDoubleIndexedvEXT;
-        
-        public static unsafe void GetDoubleIndexedvEXT(GetPName target, uint index, ref double data)
-        {
-            _glGetDoubleIndexedvEXT(target, index, (IntPtr)data);
         }
         
         public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetDoublei_v;
@@ -6404,32 +2043,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetDoublei_v(target, index, (IntPtr)data);
         }
         
-        public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetDoublei_vEXT;
-        
-        public static unsafe void GetDoublei_vEXT(GetPName pname, uint index, ref double @params)
-        {
-            _glGetDoublei_vEXT(pname, index, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<GetPName, IntPtr, void> _glGetDoublev;
         
         public static unsafe void GetDoublev(GetPName pname, ref double data)
         {
             _glGetDoublev(pname, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetDriverControlStringQCOM;
-        
-        public static unsafe void GetDriverControlStringQCOM(uint driverControl, int bufSize, ref int length, ref sbyte driverControlString)
-        {
-            _glGetDriverControlStringQCOM(driverControl, bufSize, (IntPtr)length, (IntPtr)driverControlString);
-        }
-        
-        public static unsafe delegate*<IntPtr, int, IntPtr, void> _glGetDriverControlsQCOM;
-        
-        public static unsafe void GetDriverControlsQCOM(ref int num, int size, ref uint driverControls)
-        {
-            _glGetDriverControlsQCOM((IntPtr)num, size, (IntPtr)driverControls);
         }
         
         public static unsafe delegate*<uint> _glGetError;
@@ -6439,81 +2057,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glGetError();
         }
         
-        public static unsafe delegate*<uint, FenceParameterNameNV, IntPtr, void> _glGetFenceivNV;
-        
-        public static unsafe void GetFenceivNV(uint fence, FenceParameterNameNV pname, ref int @params)
-        {
-            _glGetFenceivNV(fence, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<CombinerVariableNV, CombinerParameterNV, IntPtr, void> _glGetFinalCombinerInputParameterfvNV;
-        
-        public static unsafe void GetFinalCombinerInputParameterfvNV(CombinerVariableNV variable, CombinerParameterNV pname, ref float @params)
-        {
-            _glGetFinalCombinerInputParameterfvNV(variable, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<CombinerVariableNV, CombinerParameterNV, IntPtr, void> _glGetFinalCombinerInputParameterivNV;
-        
-        public static unsafe void GetFinalCombinerInputParameterivNV(CombinerVariableNV variable, CombinerParameterNV pname, ref int @params)
-        {
-            _glGetFinalCombinerInputParameterivNV(variable, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glGetFirstPerfQueryIdINTEL;
-        
-        public static unsafe void GetFirstPerfQueryIdINTEL(ref uint queryId)
-        {
-            _glGetFirstPerfQueryIdINTEL((IntPtr)queryId);
-        }
-        
-        public static unsafe delegate*<GetPName, IntPtr, void> _glGetFixedv;
-        
-        public static unsafe void GetFixedv(GetPName pname, ref int @params)
-        {
-            _glGetFixedv(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<GetPName, IntPtr, void> _glGetFixedvOES;
-        
-        public static unsafe void GetFixedvOES(GetPName pname, ref int @params)
-        {
-            _glGetFixedvOES(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetFloatIndexedvEXT;
-        
-        public static unsafe void GetFloatIndexedvEXT(GetPName target, uint index, ref float data)
-        {
-            _glGetFloatIndexedvEXT(target, index, (IntPtr)data);
-        }
-        
         public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetFloati_v;
         
         public static unsafe void GetFloati_v(GetPName target, uint index, ref float data)
         {
             _glGetFloati_v(target, index, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetFloati_vEXT;
-        
-        public static unsafe void GetFloati_vEXT(GetPName pname, uint index, ref float @params)
-        {
-            _glGetFloati_vEXT(pname, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetFloati_vNV;
-        
-        public static unsafe void GetFloati_vNV(GetPName target, uint index, ref float data)
-        {
-            _glGetFloati_vNV(target, index, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetFloati_vOES;
-        
-        public static unsafe void GetFloati_vOES(GetPName target, uint index, ref float data)
-        {
-            _glGetFloati_vOES(target, index, (IntPtr)data);
         }
         
         public static unsafe delegate*<GetPName, IntPtr, void> _glGetFloatv;
@@ -6523,25 +2071,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetFloatv(pname, (IntPtr)data);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glGetFogFuncSGIS;
-        
-        public static unsafe void GetFogFuncSGIS(ref float points)
-        {
-            _glGetFogFuncSGIS((IntPtr)points);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, int> _glGetFragDataIndex;
         
         public static unsafe int GetFragDataIndex(uint program, ref sbyte name)
         {
             return _glGetFragDataIndex(program, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, int> _glGetFragDataIndexEXT;
-        
-        public static unsafe int GetFragDataIndexEXT(uint program, ref sbyte name)
-        {
-            return _glGetFragDataIndexEXT(program, (IntPtr)name);
         }
         
         public static unsafe delegate*<uint, IntPtr, int> _glGetFragDataLocation;
@@ -6551,67 +2085,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glGetFragDataLocation(program, (IntPtr)name);
         }
         
-        public static unsafe delegate*<uint, IntPtr, int> _glGetFragDataLocationEXT;
-        
-        public static unsafe int GetFragDataLocationEXT(uint program, ref sbyte name)
-        {
-            return _glGetFragDataLocationEXT(program, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<FragmentLightNameSGIX, FragmentLightParameterSGIX, IntPtr, void> _glGetFragmentLightfvSGIX;
-        
-        public static unsafe void GetFragmentLightfvSGIX(FragmentLightNameSGIX light, FragmentLightParameterSGIX pname, ref float @params)
-        {
-            _glGetFragmentLightfvSGIX(light, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<FragmentLightNameSGIX, FragmentLightParameterSGIX, IntPtr, void> _glGetFragmentLightivSGIX;
-        
-        public static unsafe void GetFragmentLightivSGIX(FragmentLightNameSGIX light, FragmentLightParameterSGIX pname, ref int @params)
-        {
-            _glGetFragmentLightivSGIX(light, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, IntPtr, void> _glGetFragmentMaterialfvSGIX;
-        
-        public static unsafe void GetFragmentMaterialfvSGIX(MaterialFace face, MaterialParameter pname, ref float @params)
-        {
-            _glGetFragmentMaterialfvSGIX(face, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, IntPtr, void> _glGetFragmentMaterialivSGIX;
-        
-        public static unsafe void GetFragmentMaterialivSGIX(MaterialFace face, MaterialParameter pname, ref int @params)
-        {
-            _glGetFragmentMaterialivSGIX(face, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, FramebufferAttachmentParameterName, IntPtr, void> _glGetFramebufferAttachmentParameteriv;
         
         public static unsafe void GetFramebufferAttachmentParameteriv(FramebufferTarget target, FramebufferAttachment attachment, FramebufferAttachmentParameterName pname, ref int @params)
         {
             _glGetFramebufferAttachmentParameteriv(target, attachment, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, FramebufferAttachmentParameterName, IntPtr, void> _glGetFramebufferAttachmentParameterivEXT;
-        
-        public static unsafe void GetFramebufferAttachmentParameterivEXT(FramebufferTarget target, FramebufferAttachment attachment, FramebufferAttachmentParameterName pname, ref int @params)
-        {
-            _glGetFramebufferAttachmentParameterivEXT(target, attachment, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachment, FramebufferAttachmentParameterName, IntPtr, void> _glGetFramebufferAttachmentParameterivOES;
-        
-        public static unsafe void GetFramebufferAttachmentParameterivOES(FramebufferTarget target, FramebufferAttachment attachment, FramebufferAttachmentParameterName pname, ref int @params)
-        {
-            _glGetFramebufferAttachmentParameterivOES(target, attachment, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachmentParameterName, uint, uint, int, IntPtr, void> _glGetFramebufferParameterfvAMD;
-        
-        public static unsafe void GetFramebufferParameterfvAMD(FramebufferTarget target, FramebufferAttachmentParameterName pname, uint numsamples, uint pixelindex, int size, ref float values)
-        {
-            _glGetFramebufferParameterfvAMD(target, pname, numsamples, pixelindex, size, (IntPtr)values);
         }
         
         public static unsafe delegate*<FramebufferTarget, FramebufferAttachmentParameterName, IntPtr, void> _glGetFramebufferParameteriv;
@@ -6621,144 +2099,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetFramebufferParameteriv(target, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, GetFramebufferParameter, IntPtr, void> _glGetFramebufferParameterivEXT;
-        
-        public static unsafe void GetFramebufferParameterivEXT(uint framebuffer, GetFramebufferParameter pname, ref int @params)
-        {
-            _glGetFramebufferParameterivEXT(framebuffer, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int> _glGetFramebufferPixelLocalStorageSizeEXT;
-        
-        public static unsafe int GetFramebufferPixelLocalStorageSizeEXT(uint target)
-        {
-            return _glGetFramebufferPixelLocalStorageSizeEXT(target);
-        }
-        
         public static unsafe delegate*<uint> _glGetGraphicsResetStatus;
         
         public static unsafe uint GetGraphicsResetStatus()
         {
             return _glGetGraphicsResetStatus();
-        }
-        
-        public static unsafe delegate*<uint> _glGetGraphicsResetStatusARB;
-        
-        public static unsafe uint GetGraphicsResetStatusARB()
-        {
-            return _glGetGraphicsResetStatusARB();
-        }
-        
-        public static unsafe delegate*<uint> _glGetGraphicsResetStatusEXT;
-        
-        public static unsafe uint GetGraphicsResetStatusEXT()
-        {
-            return _glGetGraphicsResetStatusEXT();
-        }
-        
-        public static unsafe delegate*<uint> _glGetGraphicsResetStatusKHR;
-        
-        public static unsafe uint GetGraphicsResetStatusKHR()
-        {
-            return _glGetGraphicsResetStatusKHR();
-        }
-        
-        public static unsafe delegate*<uint, uint> _glGetHandleARB;
-        
-        public static unsafe uint GetHandleARB(uint pname)
-        {
-            return _glGetHandleARB(pname);
-        }
-        
-        public static unsafe delegate*<HistogramTargetEXT, byte, PixelFormat, PixelType, IntPtr, void> _glGetHistogram;
-        
-        public static unsafe void GetHistogram(HistogramTargetEXT target, byte reset, PixelFormat format, PixelType type, IntPtr values)
-        {
-            _glGetHistogram(target, reset, format, type, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<HistogramTargetEXT, byte, PixelFormat, PixelType, IntPtr, void> _glGetHistogramEXT;
-        
-        public static unsafe void GetHistogramEXT(HistogramTargetEXT target, byte reset, PixelFormat format, PixelType type, IntPtr values)
-        {
-            _glGetHistogramEXT(target, reset, format, type, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<HistogramTargetEXT, GetHistogramParameterPNameEXT, IntPtr, void> _glGetHistogramParameterfv;
-        
-        public static unsafe void GetHistogramParameterfv(HistogramTargetEXT target, GetHistogramParameterPNameEXT pname, ref float @params)
-        {
-            _glGetHistogramParameterfv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<HistogramTargetEXT, GetHistogramParameterPNameEXT, IntPtr, void> _glGetHistogramParameterfvEXT;
-        
-        public static unsafe void GetHistogramParameterfvEXT(HistogramTargetEXT target, GetHistogramParameterPNameEXT pname, ref float @params)
-        {
-            _glGetHistogramParameterfvEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<HistogramTargetEXT, GetHistogramParameterPNameEXT, IntPtr, void> _glGetHistogramParameteriv;
-        
-        public static unsafe void GetHistogramParameteriv(HistogramTargetEXT target, GetHistogramParameterPNameEXT pname, ref int @params)
-        {
-            _glGetHistogramParameteriv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<HistogramTargetEXT, GetHistogramParameterPNameEXT, IntPtr, void> _glGetHistogramParameterivEXT;
-        
-        public static unsafe void GetHistogramParameterivEXT(HistogramTargetEXT target, GetHistogramParameterPNameEXT pname, ref int @params)
-        {
-            _glGetHistogramParameterivEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<HistogramTargetEXT, GetHistogramParameterPNameEXT, IntPtr, void> _glGetHistogramParameterxvOES;
-        
-        public static unsafe void GetHistogramParameterxvOES(HistogramTargetEXT target, GetHistogramParameterPNameEXT pname, ref int @params)
-        {
-            _glGetHistogramParameterxvOES(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, byte, int, PixelFormat, ulong> _glGetImageHandleARB;
-        
-        public static unsafe ulong GetImageHandleARB(uint texture, int level, byte layered, int layer, PixelFormat format)
-        {
-            return _glGetImageHandleARB(texture, level, layered, layer, format);
-        }
-        
-        public static unsafe delegate*<uint, int, byte, int, PixelFormat, ulong> _glGetImageHandleNV;
-        
-        public static unsafe ulong GetImageHandleNV(uint texture, int level, byte layered, int layer, PixelFormat format)
-        {
-            return _glGetImageHandleNV(texture, level, layered, layer, format);
-        }
-        
-        public static unsafe delegate*<ImageTransformTargetHP, ImageTransformPNameHP, IntPtr, void> _glGetImageTransformParameterfvHP;
-        
-        public static unsafe void GetImageTransformParameterfvHP(ImageTransformTargetHP target, ImageTransformPNameHP pname, ref float @params)
-        {
-            _glGetImageTransformParameterfvHP(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ImageTransformTargetHP, ImageTransformPNameHP, IntPtr, void> _glGetImageTransformParameterivHP;
-        
-        public static unsafe void GetImageTransformParameterivHP(ImageTransformTargetHP target, ImageTransformPNameHP pname, ref int @params)
-        {
-            _glGetImageTransformParameterivHP(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetInfoLogARB;
-        
-        public static unsafe void GetInfoLogARB(uint obj, int maxLength, ref int length, ref sbyte infoLog)
-        {
-            _glGetInfoLogARB(obj, maxLength, (IntPtr)length, (IntPtr)infoLog);
-        }
-        
-        public static unsafe delegate*<int> _glGetInstrumentsSGIX;
-        
-        public static unsafe int GetInstrumentsSGIX()
-        {
-            return _glGetInstrumentsSGIX();
         }
         
         public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetInteger64i_v;
@@ -6775,27 +2120,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetInteger64v(pname, (IntPtr)data);
         }
         
-        public static unsafe delegate*<GetPName, IntPtr, void> _glGetInteger64vAPPLE;
-        
-        public static unsafe void GetInteger64vAPPLE(GetPName pname, ref long @params)
-        {
-            _glGetInteger64vAPPLE(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<GetPName, IntPtr, void> _glGetInteger64vEXT;
-        
-        public static unsafe void GetInteger64vEXT(GetPName pname, ref long data)
-        {
-            _glGetInteger64vEXT(pname, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetIntegerIndexedvEXT;
-        
-        public static unsafe void GetIntegerIndexedvEXT(GetPName target, uint index, ref int data)
-        {
-            _glGetIntegerIndexedvEXT(target, index, (IntPtr)data);
-        }
-        
         public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetIntegeri_v;
         
         public static unsafe void GetIntegeri_v(GetPName target, uint index, ref int data)
@@ -6803,39 +2127,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetIntegeri_v(target, index, (IntPtr)data);
         }
         
-        public static unsafe delegate*<GetPName, uint, IntPtr, void> _glGetIntegeri_vEXT;
-        
-        public static unsafe void GetIntegeri_vEXT(GetPName target, uint index, ref int data)
-        {
-            _glGetIntegeri_vEXT(target, index, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetIntegerui64i_vNV;
-        
-        public static unsafe void GetIntegerui64i_vNV(uint value, uint index, ref ulong result)
-        {
-            _glGetIntegerui64i_vNV(value, index, (IntPtr)result);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glGetIntegerui64vNV;
-        
-        public static unsafe void GetIntegerui64vNV(uint value, ref ulong result)
-        {
-            _glGetIntegerui64vNV(value, (IntPtr)result);
-        }
-        
         public static unsafe delegate*<GetPName, IntPtr, void> _glGetIntegerv;
         
         public static unsafe void GetIntegerv(GetPName pname, ref int data)
         {
             _glGetIntegerv(pname, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<TextureTarget, InternalFormat, int, InternalFormatPName, int, IntPtr, void> _glGetInternalformatSampleivNV;
-        
-        public static unsafe void GetInternalformatSampleivNV(TextureTarget target, InternalFormat internalformat, int samples, InternalFormatPName pname, int count, ref int @params)
-        {
-            _glGetInternalformatSampleivNV(target, internalformat, samples, pname, count, (IntPtr)@params);
         }
         
         public static unsafe delegate*<TextureTarget, InternalFormat, InternalFormatPName, int, IntPtr, void> _glGetInternalformati64v;
@@ -6852,27 +2148,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetInternalformativ(target, internalformat, pname, count, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, GetVariantValueEXT, IntPtr, void> _glGetInvariantBooleanvEXT;
-        
-        public static unsafe void GetInvariantBooleanvEXT(uint id, GetVariantValueEXT value, ref byte data)
-        {
-            _glGetInvariantBooleanvEXT(id, value, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, GetVariantValueEXT, IntPtr, void> _glGetInvariantFloatvEXT;
-        
-        public static unsafe void GetInvariantFloatvEXT(uint id, GetVariantValueEXT value, ref float data)
-        {
-            _glGetInvariantFloatvEXT(id, value, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, GetVariantValueEXT, IntPtr, void> _glGetInvariantIntegervEXT;
-        
-        public static unsafe void GetInvariantIntegervEXT(uint id, GetVariantValueEXT value, ref int data)
-        {
-            _glGetInvariantIntegervEXT(id, value, (IntPtr)data);
-        }
-        
         public static unsafe delegate*<LightName, LightParameter, IntPtr, void> _glGetLightfv;
         
         public static unsafe void GetLightfv(LightName light, LightParameter pname, ref float @params)
@@ -6885,97 +2160,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void GetLightiv(LightName light, LightParameter pname, ref int @params)
         {
             _glGetLightiv(light, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<LightName, LightParameter, IntPtr, void> _glGetLightxOES;
-        
-        public static unsafe void GetLightxOES(LightName light, LightParameter pname, ref int @params)
-        {
-            _glGetLightxOES(light, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<LightName, LightParameter, IntPtr, void> _glGetLightxv;
-        
-        public static unsafe void GetLightxv(LightName light, LightParameter pname, ref int @params)
-        {
-            _glGetLightxv(light, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<LightName, LightParameter, IntPtr, void> _glGetLightxvOES;
-        
-        public static unsafe void GetLightxvOES(LightName light, LightParameter pname, ref int @params)
-        {
-            _glGetLightxvOES(light, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ListParameterName, IntPtr, void> _glGetListParameterfvSGIX;
-        
-        public static unsafe void GetListParameterfvSGIX(uint list, ListParameterName pname, ref float @params)
-        {
-            _glGetListParameterfvSGIX(list, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ListParameterName, IntPtr, void> _glGetListParameterivSGIX;
-        
-        public static unsafe void GetListParameterivSGIX(uint list, ListParameterName pname, ref int @params)
-        {
-            _glGetListParameterivSGIX(list, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, GetVariantValueEXT, IntPtr, void> _glGetLocalConstantBooleanvEXT;
-        
-        public static unsafe void GetLocalConstantBooleanvEXT(uint id, GetVariantValueEXT value, ref byte data)
-        {
-            _glGetLocalConstantBooleanvEXT(id, value, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, GetVariantValueEXT, IntPtr, void> _glGetLocalConstantFloatvEXT;
-        
-        public static unsafe void GetLocalConstantFloatvEXT(uint id, GetVariantValueEXT value, ref float data)
-        {
-            _glGetLocalConstantFloatvEXT(id, value, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, GetVariantValueEXT, IntPtr, void> _glGetLocalConstantIntegervEXT;
-        
-        public static unsafe void GetLocalConstantIntegervEXT(uint id, GetVariantValueEXT value, ref int data)
-        {
-            _glGetLocalConstantIntegervEXT(id, value, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<EvalTargetNV, uint, MapAttribParameterNV, IntPtr, void> _glGetMapAttribParameterfvNV;
-        
-        public static unsafe void GetMapAttribParameterfvNV(EvalTargetNV target, uint index, MapAttribParameterNV pname, ref float @params)
-        {
-            _glGetMapAttribParameterfvNV(target, index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<EvalTargetNV, uint, MapAttribParameterNV, IntPtr, void> _glGetMapAttribParameterivNV;
-        
-        public static unsafe void GetMapAttribParameterivNV(EvalTargetNV target, uint index, MapAttribParameterNV pname, ref int @params)
-        {
-            _glGetMapAttribParameterivNV(target, index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<EvalTargetNV, uint, MapTypeNV, int, int, byte, IntPtr, void> _glGetMapControlPointsNV;
-        
-        public static unsafe void GetMapControlPointsNV(EvalTargetNV target, uint index, MapTypeNV type, int ustride, int vstride, byte packed, IntPtr points)
-        {
-            _glGetMapControlPointsNV(target, index, type, ustride, vstride, packed, (IntPtr)points);
-        }
-        
-        public static unsafe delegate*<EvalTargetNV, MapParameterNV, IntPtr, void> _glGetMapParameterfvNV;
-        
-        public static unsafe void GetMapParameterfvNV(EvalTargetNV target, MapParameterNV pname, ref float @params)
-        {
-            _glGetMapParameterfvNV(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<EvalTargetNV, MapParameterNV, IntPtr, void> _glGetMapParameterivNV;
-        
-        public static unsafe void GetMapParameterivNV(EvalTargetNV target, MapParameterNV pname, ref int @params)
-        {
-            _glGetMapParameterivNV(target, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<MapTarget, GetMapQuery, IntPtr, void> _glGetMapdv;
@@ -6999,13 +2183,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetMapiv(target, query, (IntPtr)v);
         }
         
-        public static unsafe delegate*<MapTarget, GetMapQuery, IntPtr, void> _glGetMapxvOES;
-        
-        public static unsafe void GetMapxvOES(MapTarget target, GetMapQuery query, ref int v)
-        {
-            _glGetMapxvOES(target, query, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<MaterialFace, MaterialParameter, IntPtr, void> _glGetMaterialfv;
         
         public static unsafe void GetMaterialfv(MaterialFace face, MaterialParameter pname, ref float @params)
@@ -7020,179 +2197,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetMaterialiv(face, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<MaterialFace, MaterialParameter, int, void> _glGetMaterialxOES;
-        
-        public static unsafe void GetMaterialxOES(MaterialFace face, MaterialParameter pname, int param)
-        {
-            _glGetMaterialxOES(face, pname, param);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, IntPtr, void> _glGetMaterialxv;
-        
-        public static unsafe void GetMaterialxv(MaterialFace face, MaterialParameter pname, ref int @params)
-        {
-            _glGetMaterialxv(face, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, IntPtr, void> _glGetMaterialxvOES;
-        
-        public static unsafe void GetMaterialxvOES(MaterialFace face, MaterialParameter pname, ref int @params)
-        {
-            _glGetMaterialxvOES(face, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, int, IntPtr, void> _glGetMemoryObjectDetachedResourcesuivNV;
-        
-        public static unsafe void GetMemoryObjectDetachedResourcesuivNV(uint memory, uint pname, int first, int count, ref uint @params)
-        {
-            _glGetMemoryObjectDetachedResourcesuivNV(memory, pname, first, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, MemoryObjectParameterName, IntPtr, void> _glGetMemoryObjectParameterivEXT;
-        
-        public static unsafe void GetMemoryObjectParameterivEXT(uint memoryObject, MemoryObjectParameterName pname, ref int @params)
-        {
-            _glGetMemoryObjectParameterivEXT(memoryObject, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<MinmaxTargetEXT, byte, PixelFormat, PixelType, IntPtr, void> _glGetMinmax;
-        
-        public static unsafe void GetMinmax(MinmaxTargetEXT target, byte reset, PixelFormat format, PixelType type, IntPtr values)
-        {
-            _glGetMinmax(target, reset, format, type, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<MinmaxTargetEXT, byte, PixelFormat, PixelType, IntPtr, void> _glGetMinmaxEXT;
-        
-        public static unsafe void GetMinmaxEXT(MinmaxTargetEXT target, byte reset, PixelFormat format, PixelType type, IntPtr values)
-        {
-            _glGetMinmaxEXT(target, reset, format, type, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<MinmaxTargetEXT, GetMinmaxParameterPNameEXT, IntPtr, void> _glGetMinmaxParameterfv;
-        
-        public static unsafe void GetMinmaxParameterfv(MinmaxTargetEXT target, GetMinmaxParameterPNameEXT pname, ref float @params)
-        {
-            _glGetMinmaxParameterfv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<MinmaxTargetEXT, GetMinmaxParameterPNameEXT, IntPtr, void> _glGetMinmaxParameterfvEXT;
-        
-        public static unsafe void GetMinmaxParameterfvEXT(MinmaxTargetEXT target, GetMinmaxParameterPNameEXT pname, ref float @params)
-        {
-            _glGetMinmaxParameterfvEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<MinmaxTargetEXT, GetMinmaxParameterPNameEXT, IntPtr, void> _glGetMinmaxParameteriv;
-        
-        public static unsafe void GetMinmaxParameteriv(MinmaxTargetEXT target, GetMinmaxParameterPNameEXT pname, ref int @params)
-        {
-            _glGetMinmaxParameteriv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<MinmaxTargetEXT, GetMinmaxParameterPNameEXT, IntPtr, void> _glGetMinmaxParameterivEXT;
-        
-        public static unsafe void GetMinmaxParameterivEXT(MinmaxTargetEXT target, GetMinmaxParameterPNameEXT pname, ref int @params)
-        {
-            _glGetMinmaxParameterivEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureEnvTarget, TextureEnvParameter, IntPtr, void> _glGetMultiTexEnvfvEXT;
-        
-        public static unsafe void GetMultiTexEnvfvEXT(TextureUnit texunit, TextureEnvTarget target, TextureEnvParameter pname, ref float @params)
-        {
-            _glGetMultiTexEnvfvEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureEnvTarget, TextureEnvParameter, IntPtr, void> _glGetMultiTexEnvivEXT;
-        
-        public static unsafe void GetMultiTexEnvivEXT(TextureUnit texunit, TextureEnvTarget target, TextureEnvParameter pname, ref int @params)
-        {
-            _glGetMultiTexEnvivEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureCoordName, TextureGenParameter, IntPtr, void> _glGetMultiTexGendvEXT;
-        
-        public static unsafe void GetMultiTexGendvEXT(TextureUnit texunit, TextureCoordName coord, TextureGenParameter pname, ref double @params)
-        {
-            _glGetMultiTexGendvEXT(texunit, coord, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureCoordName, TextureGenParameter, IntPtr, void> _glGetMultiTexGenfvEXT;
-        
-        public static unsafe void GetMultiTexGenfvEXT(TextureUnit texunit, TextureCoordName coord, TextureGenParameter pname, ref float @params)
-        {
-            _glGetMultiTexGenfvEXT(texunit, coord, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureCoordName, TextureGenParameter, IntPtr, void> _glGetMultiTexGenivEXT;
-        
-        public static unsafe void GetMultiTexGenivEXT(TextureUnit texunit, TextureCoordName coord, TextureGenParameter pname, ref int @params)
-        {
-            _glGetMultiTexGenivEXT(texunit, coord, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, PixelFormat, PixelType, IntPtr, void> _glGetMultiTexImageEXT;
-        
-        public static unsafe void GetMultiTexImageEXT(TextureUnit texunit, TextureTarget target, int level, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glGetMultiTexImageEXT(texunit, target, level, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, GetTextureParameter, IntPtr, void> _glGetMultiTexLevelParameterfvEXT;
-        
-        public static unsafe void GetMultiTexLevelParameterfvEXT(TextureUnit texunit, TextureTarget target, int level, GetTextureParameter pname, ref float @params)
-        {
-            _glGetMultiTexLevelParameterfvEXT(texunit, target, level, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, GetTextureParameter, IntPtr, void> _glGetMultiTexLevelParameterivEXT;
-        
-        public static unsafe void GetMultiTexLevelParameterivEXT(TextureUnit texunit, TextureTarget target, int level, GetTextureParameter pname, ref int @params)
-        {
-            _glGetMultiTexLevelParameterivEXT(texunit, target, level, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, GetTextureParameter, IntPtr, void> _glGetMultiTexParameterIivEXT;
-        
-        public static unsafe void GetMultiTexParameterIivEXT(TextureUnit texunit, TextureTarget target, GetTextureParameter pname, ref int @params)
-        {
-            _glGetMultiTexParameterIivEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, GetTextureParameter, IntPtr, void> _glGetMultiTexParameterIuivEXT;
-        
-        public static unsafe void GetMultiTexParameterIuivEXT(TextureUnit texunit, TextureTarget target, GetTextureParameter pname, ref uint @params)
-        {
-            _glGetMultiTexParameterIuivEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, GetTextureParameter, IntPtr, void> _glGetMultiTexParameterfvEXT;
-        
-        public static unsafe void GetMultiTexParameterfvEXT(TextureUnit texunit, TextureTarget target, GetTextureParameter pname, ref float @params)
-        {
-            _glGetMultiTexParameterfvEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, GetTextureParameter, IntPtr, void> _glGetMultiTexParameterivEXT;
-        
-        public static unsafe void GetMultiTexParameterivEXT(TextureUnit texunit, TextureTarget target, GetTextureParameter pname, ref int @params)
-        {
-            _glGetMultiTexParameterivEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<GetMultisamplePNameNV, uint, IntPtr, void> _glGetMultisamplefv;
         
         public static unsafe void GetMultisamplefv(GetMultisamplePNameNV pname, uint index, ref float val)
         {
             _glGetMultisamplefv(pname, index, (IntPtr)val);
-        }
-        
-        public static unsafe delegate*<GetMultisamplePNameNV, uint, IntPtr, void> _glGetMultisamplefvNV;
-        
-        public static unsafe void GetMultisamplefvNV(GetMultisamplePNameNV pname, uint index, ref float val)
-        {
-            _glGetMultisamplefvNV(pname, index, (IntPtr)val);
         }
         
         public static unsafe delegate*<uint, BufferPNameARB, IntPtr, void> _glGetNamedBufferParameteri64v;
@@ -7209,32 +2218,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetNamedBufferParameteriv(buffer, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, BufferPNameARB, IntPtr, void> _glGetNamedBufferParameterivEXT;
-        
-        public static unsafe void GetNamedBufferParameterivEXT(uint buffer, BufferPNameARB pname, ref int @params)
-        {
-            _glGetNamedBufferParameterivEXT(buffer, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, BufferPNameARB, IntPtr, void> _glGetNamedBufferParameterui64vNV;
-        
-        public static unsafe void GetNamedBufferParameterui64vNV(uint buffer, BufferPNameARB pname, ref ulong @params)
-        {
-            _glGetNamedBufferParameterui64vNV(buffer, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, BufferPointerNameARB, IntPtr, void> _glGetNamedBufferPointerv;
         
         public static unsafe void GetNamedBufferPointerv(uint buffer, BufferPointerNameARB pname, out IntPtr @params)
         {
             _glGetNamedBufferPointerv(buffer, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, BufferPointerNameARB, IntPtr, void> _glGetNamedBufferPointervEXT;
-        
-        public static unsafe void GetNamedBufferPointervEXT(uint buffer, BufferPointerNameARB pname, out IntPtr @params)
-        {
-            _glGetNamedBufferPointervEXT(buffer, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, long, long, IntPtr, void> _glGetNamedBufferSubData;
@@ -7244,32 +2232,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetNamedBufferSubData(buffer, offset, size, (IntPtr)data);
         }
         
-        public static unsafe delegate*<uint, long, long, IntPtr, void> _glGetNamedBufferSubDataEXT;
-        
-        public static unsafe void GetNamedBufferSubDataEXT(uint buffer, long offset, long size, IntPtr data)
-        {
-            _glGetNamedBufferSubDataEXT(buffer, offset, size, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, int, IntPtr, void> _glGetNamedFramebufferParameterfvAMD;
-        
-        public static unsafe void GetNamedFramebufferParameterfvAMD(uint framebuffer, uint pname, uint numsamples, uint pixelindex, int size, ref float values)
-        {
-            _glGetNamedFramebufferParameterfvAMD(framebuffer, pname, numsamples, pixelindex, size, (IntPtr)values);
-        }
-        
         public static unsafe delegate*<uint, FramebufferAttachment, FramebufferAttachmentParameterName, IntPtr, void> _glGetNamedFramebufferAttachmentParameteriv;
         
         public static unsafe void GetNamedFramebufferAttachmentParameteriv(uint framebuffer, FramebufferAttachment attachment, FramebufferAttachmentParameterName pname, ref int @params)
         {
             _glGetNamedFramebufferAttachmentParameteriv(framebuffer, attachment, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, FramebufferAttachment, FramebufferAttachmentParameterName, IntPtr, void> _glGetNamedFramebufferAttachmentParameterivEXT;
-        
-        public static unsafe void GetNamedFramebufferAttachmentParameterivEXT(uint framebuffer, FramebufferAttachment attachment, FramebufferAttachmentParameterName pname, ref int @params)
-        {
-            _glGetNamedFramebufferAttachmentParameterivEXT(framebuffer, attachment, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, GetFramebufferParameter, IntPtr, void> _glGetNamedFramebufferParameteriv;
@@ -7279,102 +2246,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetNamedFramebufferParameteriv(framebuffer, pname, (IntPtr)param);
         }
         
-        public static unsafe delegate*<uint, GetFramebufferParameter, IntPtr, void> _glGetNamedFramebufferParameterivEXT;
-        
-        public static unsafe void GetNamedFramebufferParameterivEXT(uint framebuffer, GetFramebufferParameter pname, ref int @params)
-        {
-            _glGetNamedFramebufferParameterivEXT(framebuffer, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, IntPtr, void> _glGetNamedProgramLocalParameterIivEXT;
-        
-        public static unsafe void GetNamedProgramLocalParameterIivEXT(uint program, ProgramTarget target, uint index, ref int @params)
-        {
-            _glGetNamedProgramLocalParameterIivEXT(program, target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, IntPtr, void> _glGetNamedProgramLocalParameterIuivEXT;
-        
-        public static unsafe void GetNamedProgramLocalParameterIuivEXT(uint program, ProgramTarget target, uint index, ref uint @params)
-        {
-            _glGetNamedProgramLocalParameterIuivEXT(program, target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, IntPtr, void> _glGetNamedProgramLocalParameterdvEXT;
-        
-        public static unsafe void GetNamedProgramLocalParameterdvEXT(uint program, ProgramTarget target, uint index, ref double @params)
-        {
-            _glGetNamedProgramLocalParameterdvEXT(program, target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, IntPtr, void> _glGetNamedProgramLocalParameterfvEXT;
-        
-        public static unsafe void GetNamedProgramLocalParameterfvEXT(uint program, ProgramTarget target, uint index, ref float @params)
-        {
-            _glGetNamedProgramLocalParameterfvEXT(program, target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, ProgramStringProperty, IntPtr, void> _glGetNamedProgramStringEXT;
-        
-        public static unsafe void GetNamedProgramStringEXT(uint program, ProgramTarget target, ProgramStringProperty pname, IntPtr @string)
-        {
-            _glGetNamedProgramStringEXT(program, target, pname, (IntPtr)@string);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, ProgramPropertyARB, IntPtr, void> _glGetNamedProgramivEXT;
-        
-        public static unsafe void GetNamedProgramivEXT(uint program, ProgramTarget target, ProgramPropertyARB pname, ref int @params)
-        {
-            _glGetNamedProgramivEXT(program, target, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, RenderbufferParameterName, IntPtr, void> _glGetNamedRenderbufferParameteriv;
         
         public static unsafe void GetNamedRenderbufferParameteriv(uint renderbuffer, RenderbufferParameterName pname, ref int @params)
         {
             _glGetNamedRenderbufferParameteriv(renderbuffer, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, RenderbufferParameterName, IntPtr, void> _glGetNamedRenderbufferParameterivEXT;
-        
-        public static unsafe void GetNamedRenderbufferParameterivEXT(uint renderbuffer, RenderbufferParameterName pname, ref int @params)
-        {
-            _glGetNamedRenderbufferParameterivEXT(renderbuffer, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, int, IntPtr, IntPtr, void> _glGetNamedStringARB;
-        
-        public static unsafe void GetNamedStringARB(int namelen, ref sbyte name, int bufSize, ref int stringlen, ref sbyte @string)
-        {
-            _glGetNamedStringARB(namelen, (IntPtr)name, bufSize, (IntPtr)stringlen, (IntPtr)@string);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, uint, IntPtr, void> _glGetNamedStringivARB;
-        
-        public static unsafe void GetNamedStringivARB(int namelen, ref sbyte name, uint pname, ref int @params)
-        {
-            _glGetNamedStringivARB(namelen, (IntPtr)name, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glGetNextPerfQueryIdINTEL;
-        
-        public static unsafe void GetNextPerfQueryIdINTEL(uint queryId, ref uint nextQueryId)
-        {
-            _glGetNextPerfQueryIdINTEL(queryId, (IntPtr)nextQueryId);
-        }
-        
-        public static unsafe delegate*<uint, ArrayObjectPNameATI, IntPtr, void> _glGetObjectBufferfvATI;
-        
-        public static unsafe void GetObjectBufferfvATI(uint buffer, ArrayObjectPNameATI pname, ref float @params)
-        {
-            _glGetObjectBufferfvATI(buffer, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ArrayObjectPNameATI, IntPtr, void> _glGetObjectBufferivATI;
-        
-        public static unsafe void GetObjectBufferivATI(uint buffer, ArrayObjectPNameATI pname, ref int @params)
-        {
-            _glGetObjectBufferivATI(buffer, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<ObjectIdentifier, uint, int, IntPtr, IntPtr, void> _glGetObjectLabel;
@@ -7384,228 +2260,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetObjectLabel(identifier, name, bufSize, (IntPtr)length, (IntPtr)label);
         }
         
-        public static unsafe delegate*<uint, uint, int, IntPtr, IntPtr, void> _glGetObjectLabelEXT;
-        
-        public static unsafe void GetObjectLabelEXT(uint type, uint @object, int bufSize, ref int length, ref sbyte label)
-        {
-            _glGetObjectLabelEXT(type, @object, bufSize, (IntPtr)length, (IntPtr)label);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, IntPtr, void> _glGetObjectLabelKHR;
-        
-        public static unsafe void GetObjectLabelKHR(uint identifier, uint name, int bufSize, ref int length, ref sbyte label)
-        {
-            _glGetObjectLabelKHR(identifier, name, bufSize, (IntPtr)length, (IntPtr)label);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetObjectParameterfvARB;
-        
-        public static unsafe void GetObjectParameterfvARB(uint obj, uint pname, ref float @params)
-        {
-            _glGetObjectParameterfvARB(obj, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glGetObjectParameterivAPPLE;
-        
-        public static unsafe void GetObjectParameterivAPPLE(uint objectType, uint name, uint pname, ref int @params)
-        {
-            _glGetObjectParameterivAPPLE(objectType, name, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetObjectParameterivARB;
-        
-        public static unsafe void GetObjectParameterivARB(uint obj, uint pname, ref int @params)
-        {
-            _glGetObjectParameterivARB(obj, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<IntPtr, int, IntPtr, IntPtr, void> _glGetObjectPtrLabel;
         
         public static unsafe void GetObjectPtrLabel(IntPtr ptr, int bufSize, ref int length, ref sbyte label)
         {
             _glGetObjectPtrLabel((IntPtr)ptr, bufSize, (IntPtr)length, (IntPtr)label);
-        }
-        
-        public static unsafe delegate*<IntPtr, int, IntPtr, IntPtr, void> _glGetObjectPtrLabelKHR;
-        
-        public static unsafe void GetObjectPtrLabelKHR(IntPtr ptr, int bufSize, ref int length, ref sbyte label)
-        {
-            _glGetObjectPtrLabelKHR((IntPtr)ptr, bufSize, (IntPtr)length, (IntPtr)label);
-        }
-        
-        public static unsafe delegate*<uint, OcclusionQueryParameterNameNV, IntPtr, void> _glGetOcclusionQueryivNV;
-        
-        public static unsafe void GetOcclusionQueryivNV(uint id, OcclusionQueryParameterNameNV pname, ref int @params)
-        {
-            _glGetOcclusionQueryivNV(id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, OcclusionQueryParameterNameNV, IntPtr, void> _glGetOcclusionQueryuivNV;
-        
-        public static unsafe void GetOcclusionQueryuivNV(uint id, OcclusionQueryParameterNameNV pname, ref uint @params)
-        {
-            _glGetOcclusionQueryuivNV(id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<PathColor, PathGenMode, IntPtr, void> _glGetPathColorGenfvNV;
-        
-        public static unsafe void GetPathColorGenfvNV(PathColor color, PathGenMode pname, ref float value)
-        {
-            _glGetPathColorGenfvNV(color, pname, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<PathColor, PathGenMode, IntPtr, void> _glGetPathColorGenivNV;
-        
-        public static unsafe void GetPathColorGenivNV(PathColor color, PathGenMode pname, ref int value)
-        {
-            _glGetPathColorGenivNV(color, pname, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glGetPathCommandsNV;
-        
-        public static unsafe void GetPathCommandsNV(uint path, ref byte commands)
-        {
-            _glGetPathCommandsNV(path, (IntPtr)commands);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glGetPathCoordsNV;
-        
-        public static unsafe void GetPathCoordsNV(uint path, ref float coords)
-        {
-            _glGetPathCoordsNV(path, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glGetPathDashArrayNV;
-        
-        public static unsafe void GetPathDashArrayNV(uint path, ref float dashArray)
-        {
-            _glGetPathDashArrayNV(path, (IntPtr)dashArray);
-        }
-        
-        public static unsafe delegate*<uint, int, int, float> _glGetPathLengthNV;
-        
-        public static unsafe float GetPathLengthNV(uint path, int startSegment, int numSegments)
-        {
-            return _glGetPathLengthNV(path, startSegment, numSegments);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, int, IntPtr, void> _glGetPathMetricRangeNV;
-        
-        public static unsafe void GetPathMetricRangeNV(uint metricQueryMask, uint firstPathName, int numPaths, int stride, ref float metrics)
-        {
-            _glGetPathMetricRangeNV(metricQueryMask, firstPathName, numPaths, stride, (IntPtr)metrics);
-        }
-        
-        public static unsafe delegate*<uint, int, PathElementType, IntPtr, uint, int, IntPtr, void> _glGetPathMetricsNV;
-        
-        public static unsafe void GetPathMetricsNV(uint metricQueryMask, int numPaths, PathElementType pathNameType, IntPtr paths, uint pathBase, int stride, ref float metrics)
-        {
-            _glGetPathMetricsNV(metricQueryMask, numPaths, pathNameType, (IntPtr)paths, pathBase, stride, (IntPtr)metrics);
-        }
-        
-        public static unsafe delegate*<uint, PathParameter, IntPtr, void> _glGetPathParameterfvNV;
-        
-        public static unsafe void GetPathParameterfvNV(uint path, PathParameter pname, ref float value)
-        {
-            _glGetPathParameterfvNV(path, pname, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, PathParameter, IntPtr, void> _glGetPathParameterivNV;
-        
-        public static unsafe void GetPathParameterivNV(uint path, PathParameter pname, ref int value)
-        {
-            _glGetPathParameterivNV(path, pname, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<PathListMode, int, PathElementType, IntPtr, uint, float, float, PathTransformType, IntPtr, void> _glGetPathSpacingNV;
-        
-        public static unsafe void GetPathSpacingNV(PathListMode pathListMode, int numPaths, PathElementType pathNameType, IntPtr paths, uint pathBase, float advanceScale, float kerningScale, PathTransformType transformType, ref float returnedSpacing)
-        {
-            _glGetPathSpacingNV(pathListMode, numPaths, pathNameType, (IntPtr)paths, pathBase, advanceScale, kerningScale, transformType, (IntPtr)returnedSpacing);
-        }
-        
-        public static unsafe delegate*<TextureUnit, PathGenMode, IntPtr, void> _glGetPathTexGenfvNV;
-        
-        public static unsafe void GetPathTexGenfvNV(TextureUnit texCoordSet, PathGenMode pname, ref float value)
-        {
-            _glGetPathTexGenfvNV(texCoordSet, pname, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<TextureUnit, PathGenMode, IntPtr, void> _glGetPathTexGenivNV;
-        
-        public static unsafe void GetPathTexGenivNV(TextureUnit texCoordSet, PathGenMode pname, ref int value)
-        {
-            _glGetPathTexGenivNV(texCoordSet, pname, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, uint, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, void> _glGetPerfCounterInfoINTEL;
-        
-        public static unsafe void GetPerfCounterInfoINTEL(uint queryId, uint counterId, uint counterNameLength, ref sbyte counterName, uint counterDescLength, ref sbyte counterDesc, ref uint counterOffset, ref uint counterDataSize, ref uint counterTypeEnum, ref uint counterDataTypeEnum, ref ulong rawCounterMaxValue)
-        {
-            _glGetPerfCounterInfoINTEL(queryId, counterId, counterNameLength, (IntPtr)counterName, counterDescLength, (IntPtr)counterDesc, (IntPtr)counterOffset, (IntPtr)counterDataSize, (IntPtr)counterTypeEnum, (IntPtr)counterDataTypeEnum, (IntPtr)rawCounterMaxValue);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, IntPtr, void> _glGetPerfMonitorCounterDataAMD;
-        
-        public static unsafe void GetPerfMonitorCounterDataAMD(uint monitor, uint pname, int dataSize, ref uint data, ref int bytesWritten)
-        {
-            _glGetPerfMonitorCounterDataAMD(monitor, pname, dataSize, (IntPtr)data, (IntPtr)bytesWritten);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glGetPerfMonitorCounterInfoAMD;
-        
-        public static unsafe void GetPerfMonitorCounterInfoAMD(uint group, uint counter, uint pname, IntPtr data)
-        {
-            _glGetPerfMonitorCounterInfoAMD(group, counter, pname, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, IntPtr, void> _glGetPerfMonitorCounterStringAMD;
-        
-        public static unsafe void GetPerfMonitorCounterStringAMD(uint group, uint counter, int bufSize, ref int length, ref sbyte counterString)
-        {
-            _glGetPerfMonitorCounterStringAMD(group, counter, bufSize, (IntPtr)length, (IntPtr)counterString);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, IntPtr, int, IntPtr, void> _glGetPerfMonitorCountersAMD;
-        
-        public static unsafe void GetPerfMonitorCountersAMD(uint group, ref int numCounters, ref int maxActiveCounters, int counterSize, ref uint counters)
-        {
-            _glGetPerfMonitorCountersAMD(group, (IntPtr)numCounters, (IntPtr)maxActiveCounters, counterSize, (IntPtr)counters);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetPerfMonitorGroupStringAMD;
-        
-        public static unsafe void GetPerfMonitorGroupStringAMD(uint group, int bufSize, ref int length, ref sbyte groupString)
-        {
-            _glGetPerfMonitorGroupStringAMD(group, bufSize, (IntPtr)length, (IntPtr)groupString);
-        }
-        
-        public static unsafe delegate*<IntPtr, int, IntPtr, void> _glGetPerfMonitorGroupsAMD;
-        
-        public static unsafe void GetPerfMonitorGroupsAMD(ref int numGroups, int groupsSize, ref uint groups)
-        {
-            _glGetPerfMonitorGroupsAMD((IntPtr)numGroups, groupsSize, (IntPtr)groups);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, IntPtr, void> _glGetPerfQueryDataINTEL;
-        
-        public static unsafe void GetPerfQueryDataINTEL(uint queryHandle, uint flags, int dataSize, IntPtr data, ref uint bytesWritten)
-        {
-            _glGetPerfQueryDataINTEL(queryHandle, flags, dataSize, (IntPtr)data, (IntPtr)bytesWritten);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, void> _glGetPerfQueryIdByNameINTEL;
-        
-        public static unsafe void GetPerfQueryIdByNameINTEL(ref sbyte queryName, ref uint queryId)
-        {
-            _glGetPerfQueryIdByNameINTEL((IntPtr)queryName, (IntPtr)queryId);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, void> _glGetPerfQueryInfoINTEL;
-        
-        public static unsafe void GetPerfQueryInfoINTEL(uint queryId, uint queryNameLength, ref sbyte queryName, ref uint dataSize, ref uint noCounters, ref uint noInstances, ref uint capsMask)
-        {
-            _glGetPerfQueryInfoINTEL(queryId, queryNameLength, (IntPtr)queryName, (IntPtr)dataSize, (IntPtr)noCounters, (IntPtr)noInstances, (IntPtr)capsMask);
         }
         
         public static unsafe delegate*<PixelMap, IntPtr, void> _glGetPixelMapfv;
@@ -7629,74 +2288,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetPixelMapusv(map, (IntPtr)values);
         }
         
-        public static unsafe delegate*<PixelMap, int, IntPtr, void> _glGetPixelMapxv;
-        
-        public static unsafe void GetPixelMapxv(PixelMap map, int size, ref int values)
-        {
-            _glGetPixelMapxv(map, size, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<PixelTexGenParameterNameSGIS, IntPtr, void> _glGetPixelTexGenParameterfvSGIS;
-        
-        public static unsafe void GetPixelTexGenParameterfvSGIS(PixelTexGenParameterNameSGIS pname, ref float @params)
-        {
-            _glGetPixelTexGenParameterfvSGIS(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<PixelTexGenParameterNameSGIS, IntPtr, void> _glGetPixelTexGenParameterivSGIS;
-        
-        public static unsafe void GetPixelTexGenParameterivSGIS(PixelTexGenParameterNameSGIS pname, ref int @params)
-        {
-            _glGetPixelTexGenParameterivSGIS(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetPixelTransformParameterfvEXT;
-        
-        public static unsafe void GetPixelTransformParameterfvEXT(uint target, uint pname, ref float @params)
-        {
-            _glGetPixelTransformParameterfvEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetPixelTransformParameterivEXT;
-        
-        public static unsafe void GetPixelTransformParameterivEXT(uint target, uint pname, ref int @params)
-        {
-            _glGetPixelTransformParameterivEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetPointerIndexedvEXT;
-        
-        public static unsafe void GetPointerIndexedvEXT(uint target, uint index, out IntPtr data)
-        {
-            _glGetPointerIndexedvEXT(target, index, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetPointeri_vEXT;
-        
-        public static unsafe void GetPointeri_vEXT(uint pname, uint index, out IntPtr @params)
-        {
-            _glGetPointeri_vEXT(pname, index, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<GetPointervPName, IntPtr, void> _glGetPointerv;
         
         public static unsafe void GetPointerv(GetPointervPName pname, out IntPtr @params)
         {
             _glGetPointerv(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<GetPointervPName, IntPtr, void> _glGetPointervEXT;
-        
-        public static unsafe void GetPointervEXT(GetPointervPName pname, out IntPtr @params)
-        {
-            _glGetPointervEXT(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glGetPointervKHR;
-        
-        public static unsafe void GetPointervKHR(uint pname, out IntPtr @params)
-        {
-            _glGetPointervKHR(pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<IntPtr, void> _glGetPolygonStipple;
@@ -7713,41 +2309,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetProgramBinary(program, bufSize, (IntPtr)length, (IntPtr)binaryFormat, (IntPtr)binary);
         }
         
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, IntPtr, void> _glGetProgramBinaryOES;
-        
-        public static unsafe void GetProgramBinaryOES(uint program, int bufSize, ref int length, ref uint binaryFormat, IntPtr binary)
-        {
-            _glGetProgramBinaryOES(program, bufSize, (IntPtr)length, (IntPtr)binaryFormat, (IntPtr)binary);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glGetProgramEnvParameterIivNV;
-        
-        public static unsafe void GetProgramEnvParameterIivNV(ProgramTarget target, uint index, ref int @params)
-        {
-            _glGetProgramEnvParameterIivNV(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glGetProgramEnvParameterIuivNV;
-        
-        public static unsafe void GetProgramEnvParameterIuivNV(ProgramTarget target, uint index, ref uint @params)
-        {
-            _glGetProgramEnvParameterIuivNV(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glGetProgramEnvParameterdvARB;
-        
-        public static unsafe void GetProgramEnvParameterdvARB(ProgramTarget target, uint index, ref double @params)
-        {
-            _glGetProgramEnvParameterdvARB(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glGetProgramEnvParameterfvARB;
-        
-        public static unsafe void GetProgramEnvParameterfvARB(ProgramTarget target, uint index, ref float @params)
-        {
-            _glGetProgramEnvParameterfvARB(target, index, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetProgramInfoLog;
         
         public static unsafe void GetProgramInfoLog(uint program, int bufSize, ref int length, ref sbyte infoLog)
@@ -7762,62 +2323,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetProgramInterfaceiv(program, programInterface, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glGetProgramLocalParameterIivNV;
-        
-        public static unsafe void GetProgramLocalParameterIivNV(ProgramTarget target, uint index, ref int @params)
-        {
-            _glGetProgramLocalParameterIivNV(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glGetProgramLocalParameterIuivNV;
-        
-        public static unsafe void GetProgramLocalParameterIuivNV(ProgramTarget target, uint index, ref uint @params)
-        {
-            _glGetProgramLocalParameterIuivNV(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glGetProgramLocalParameterdvARB;
-        
-        public static unsafe void GetProgramLocalParameterdvARB(ProgramTarget target, uint index, ref double @params)
-        {
-            _glGetProgramLocalParameterdvARB(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glGetProgramLocalParameterfvARB;
-        
-        public static unsafe void GetProgramLocalParameterfvARB(ProgramTarget target, uint index, ref float @params)
-        {
-            _glGetProgramLocalParameterfvARB(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetProgramNamedParameterdvNV;
-        
-        public static unsafe void GetProgramNamedParameterdvNV(uint id, int len, ref byte name, ref double @params)
-        {
-            _glGetProgramNamedParameterdvNV(id, len, (IntPtr)name, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetProgramNamedParameterfvNV;
-        
-        public static unsafe void GetProgramNamedParameterfvNV(uint id, int len, ref byte name, ref float @params)
-        {
-            _glGetProgramNamedParameterfvNV(id, len, (IntPtr)name, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, VertexAttribEnumNV, IntPtr, void> _glGetProgramParameterdvNV;
-        
-        public static unsafe void GetProgramParameterdvNV(VertexAttribEnumNV target, uint index, VertexAttribEnumNV pname, ref double @params)
-        {
-            _glGetProgramParameterdvNV(target, index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, VertexAttribEnumNV, IntPtr, void> _glGetProgramParameterfvNV;
-        
-        public static unsafe void GetProgramParameterfvNV(VertexAttribEnumNV target, uint index, VertexAttribEnumNV pname, ref float @params)
-        {
-            _glGetProgramParameterfvNV(target, index, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetProgramPipelineInfoLog;
         
         public static unsafe void GetProgramPipelineInfoLog(uint pipeline, int bufSize, ref int length, ref sbyte infoLog)
@@ -7825,25 +2330,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetProgramPipelineInfoLog(pipeline, bufSize, (IntPtr)length, (IntPtr)infoLog);
         }
         
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetProgramPipelineInfoLogEXT;
-        
-        public static unsafe void GetProgramPipelineInfoLogEXT(uint pipeline, int bufSize, ref int length, ref sbyte infoLog)
-        {
-            _glGetProgramPipelineInfoLogEXT(pipeline, bufSize, (IntPtr)length, (IntPtr)infoLog);
-        }
-        
         public static unsafe delegate*<uint, PipelineParameterName, IntPtr, void> _glGetProgramPipelineiv;
         
         public static unsafe void GetProgramPipelineiv(uint pipeline, PipelineParameterName pname, ref int @params)
         {
             _glGetProgramPipelineiv(pipeline, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, PipelineParameterName, IntPtr, void> _glGetProgramPipelineivEXT;
-        
-        public static unsafe void GetProgramPipelineivEXT(uint pipeline, PipelineParameterName pname, ref int @params)
-        {
-            _glGetProgramPipelineivEXT(pipeline, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, ProgramInterface, IntPtr, uint> _glGetProgramResourceIndex;
@@ -7867,25 +2358,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glGetProgramResourceLocationIndex(program, programInterface, (IntPtr)name);
         }
         
-        public static unsafe delegate*<uint, ProgramInterface, IntPtr, int> _glGetProgramResourceLocationIndexEXT;
-        
-        public static unsafe int GetProgramResourceLocationIndexEXT(uint program, ProgramInterface programInterface, ref sbyte name)
-        {
-            return _glGetProgramResourceLocationIndexEXT(program, programInterface, (IntPtr)name);
-        }
-        
         public static unsafe delegate*<uint, ProgramInterface, uint, int, IntPtr, IntPtr, void> _glGetProgramResourceName;
         
         public static unsafe void GetProgramResourceName(uint program, ProgramInterface programInterface, uint index, int bufSize, ref int length, ref sbyte name)
         {
             _glGetProgramResourceName(program, programInterface, index, bufSize, (IntPtr)length, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, ProgramInterface, uint, int, IntPtr, int, IntPtr, IntPtr, void> _glGetProgramResourcefvNV;
-        
-        public static unsafe void GetProgramResourcefvNV(uint program, ProgramInterface programInterface, uint index, int propCount, ref uint props, int count, ref int length, ref float @params)
-        {
-            _glGetProgramResourcefvNV(program, programInterface, index, propCount, (IntPtr)props, count, (IntPtr)length, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, ProgramInterface, uint, int, IntPtr, int, IntPtr, IntPtr, void> _glGetProgramResourceiv;
@@ -7902,46 +2379,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetProgramStageiv(program, shadertype, pname, (IntPtr)values);
         }
         
-        public static unsafe delegate*<ProgramTarget, ProgramStringProperty, IntPtr, void> _glGetProgramStringARB;
-        
-        public static unsafe void GetProgramStringARB(ProgramTarget target, ProgramStringProperty pname, IntPtr @string)
-        {
-            _glGetProgramStringARB(target, pname, (IntPtr)@string);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribEnumNV, IntPtr, void> _glGetProgramStringNV;
-        
-        public static unsafe void GetProgramStringNV(uint id, VertexAttribEnumNV pname, ref byte program)
-        {
-            _glGetProgramStringNV(id, pname, (IntPtr)program);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetProgramSubroutineParameteruivNV;
-        
-        public static unsafe void GetProgramSubroutineParameteruivNV(uint target, uint index, ref uint param)
-        {
-            _glGetProgramSubroutineParameteruivNV(target, index, (IntPtr)param);
-        }
-        
         public static unsafe delegate*<uint, ProgramPropertyARB, IntPtr, void> _glGetProgramiv;
         
         public static unsafe void GetProgramiv(uint program, ProgramPropertyARB pname, ref int @params)
         {
             _glGetProgramiv(program, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, ProgramPropertyARB, IntPtr, void> _glGetProgramivARB;
-        
-        public static unsafe void GetProgramivARB(ProgramTarget target, ProgramPropertyARB pname, ref int @params)
-        {
-            _glGetProgramivARB(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribEnumNV, IntPtr, void> _glGetProgramivNV;
-        
-        public static unsafe void GetProgramivNV(uint id, VertexAttribEnumNV pname, ref int @params)
-        {
-            _glGetProgramivNV(id, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, uint, QueryObjectParameterName, long, void> _glGetQueryBufferObjecti64v;
@@ -7986,32 +2428,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetQueryObjecti64v(id, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, QueryObjectParameterName, IntPtr, void> _glGetQueryObjecti64vEXT;
-        
-        public static unsafe void GetQueryObjecti64vEXT(uint id, QueryObjectParameterName pname, ref long @params)
-        {
-            _glGetQueryObjecti64vEXT(id, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, QueryObjectParameterName, IntPtr, void> _glGetQueryObjectiv;
         
         public static unsafe void GetQueryObjectiv(uint id, QueryObjectParameterName pname, ref int @params)
         {
             _glGetQueryObjectiv(id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, QueryObjectParameterName, IntPtr, void> _glGetQueryObjectivARB;
-        
-        public static unsafe void GetQueryObjectivARB(uint id, QueryObjectParameterName pname, ref int @params)
-        {
-            _glGetQueryObjectivARB(id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, QueryObjectParameterName, IntPtr, void> _glGetQueryObjectivEXT;
-        
-        public static unsafe void GetQueryObjectivEXT(uint id, QueryObjectParameterName pname, ref int @params)
-        {
-            _glGetQueryObjectivEXT(id, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, QueryObjectParameterName, IntPtr, void> _glGetQueryObjectui64v;
@@ -8021,32 +2442,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetQueryObjectui64v(id, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, QueryObjectParameterName, IntPtr, void> _glGetQueryObjectui64vEXT;
-        
-        public static unsafe void GetQueryObjectui64vEXT(uint id, QueryObjectParameterName pname, ref ulong @params)
-        {
-            _glGetQueryObjectui64vEXT(id, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, QueryObjectParameterName, IntPtr, void> _glGetQueryObjectuiv;
         
         public static unsafe void GetQueryObjectuiv(uint id, QueryObjectParameterName pname, ref uint @params)
         {
             _glGetQueryObjectuiv(id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, QueryObjectParameterName, IntPtr, void> _glGetQueryObjectuivARB;
-        
-        public static unsafe void GetQueryObjectuivARB(uint id, QueryObjectParameterName pname, ref uint @params)
-        {
-            _glGetQueryObjectuivARB(id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, QueryObjectParameterName, IntPtr, void> _glGetQueryObjectuivEXT;
-        
-        public static unsafe void GetQueryObjectuivEXT(uint id, QueryObjectParameterName pname, ref uint @params)
-        {
-            _glGetQueryObjectuivEXT(id, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<QueryTarget, QueryParameterName, IntPtr, void> _glGetQueryiv;
@@ -8056,39 +2456,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetQueryiv(target, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<QueryTarget, QueryParameterName, IntPtr, void> _glGetQueryivARB;
-        
-        public static unsafe void GetQueryivARB(QueryTarget target, QueryParameterName pname, ref int @params)
-        {
-            _glGetQueryivARB(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<QueryTarget, QueryParameterName, IntPtr, void> _glGetQueryivEXT;
-        
-        public static unsafe void GetQueryivEXT(QueryTarget target, QueryParameterName pname, ref int @params)
-        {
-            _glGetQueryivEXT(target, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<RenderbufferTarget, RenderbufferParameterName, IntPtr, void> _glGetRenderbufferParameteriv;
         
         public static unsafe void GetRenderbufferParameteriv(RenderbufferTarget target, RenderbufferParameterName pname, ref int @params)
         {
             _glGetRenderbufferParameteriv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<RenderbufferTarget, RenderbufferParameterName, IntPtr, void> _glGetRenderbufferParameterivEXT;
-        
-        public static unsafe void GetRenderbufferParameterivEXT(RenderbufferTarget target, RenderbufferParameterName pname, ref int @params)
-        {
-            _glGetRenderbufferParameterivEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<RenderbufferTarget, RenderbufferParameterName, IntPtr, void> _glGetRenderbufferParameterivOES;
-        
-        public static unsafe void GetRenderbufferParameterivOES(RenderbufferTarget target, RenderbufferParameterName pname, ref int @params)
-        {
-            _glGetRenderbufferParameterivOES(target, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glGetSamplerParameterIiv;
@@ -8098,39 +2470,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetSamplerParameterIiv(sampler, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glGetSamplerParameterIivEXT;
-        
-        public static unsafe void GetSamplerParameterIivEXT(uint sampler, SamplerParameterI pname, ref int @params)
-        {
-            _glGetSamplerParameterIivEXT(sampler, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glGetSamplerParameterIivOES;
-        
-        public static unsafe void GetSamplerParameterIivOES(uint sampler, SamplerParameterI pname, ref int @params)
-        {
-            _glGetSamplerParameterIivOES(sampler, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glGetSamplerParameterIuiv;
         
         public static unsafe void GetSamplerParameterIuiv(uint sampler, SamplerParameterI pname, ref uint @params)
         {
             _glGetSamplerParameterIuiv(sampler, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glGetSamplerParameterIuivEXT;
-        
-        public static unsafe void GetSamplerParameterIuivEXT(uint sampler, SamplerParameterI pname, ref uint @params)
-        {
-            _glGetSamplerParameterIuivEXT(sampler, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glGetSamplerParameterIuivOES;
-        
-        public static unsafe void GetSamplerParameterIuivOES(uint sampler, SamplerParameterI pname, ref uint @params)
-        {
-            _glGetSamplerParameterIuivOES(sampler, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, SamplerParameterF, IntPtr, void> _glGetSamplerParameterfv;
@@ -8145,34 +2489,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void GetSamplerParameteriv(uint sampler, SamplerParameterI pname, ref int @params)
         {
             _glGetSamplerParameteriv(sampler, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, SemaphoreParameterName, IntPtr, void> _glGetSemaphoreParameterivNV;
-        
-        public static unsafe void GetSemaphoreParameterivNV(uint semaphore, SemaphoreParameterName pname, ref int @params)
-        {
-            _glGetSemaphoreParameterivNV(semaphore, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, SemaphoreParameterName, IntPtr, void> _glGetSemaphoreParameterui64vEXT;
-        
-        public static unsafe void GetSemaphoreParameterui64vEXT(uint semaphore, SemaphoreParameterName pname, ref ulong @params)
-        {
-            _glGetSemaphoreParameterui64vEXT(semaphore, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<SeparableTargetEXT, PixelFormat, PixelType, IntPtr, IntPtr, IntPtr, void> _glGetSeparableFilter;
-        
-        public static unsafe void GetSeparableFilter(SeparableTargetEXT target, PixelFormat format, PixelType type, IntPtr row, IntPtr column, IntPtr span)
-        {
-            _glGetSeparableFilter(target, format, type, (IntPtr)row, (IntPtr)column, (IntPtr)span);
-        }
-        
-        public static unsafe delegate*<SeparableTargetEXT, PixelFormat, PixelType, IntPtr, IntPtr, IntPtr, void> _glGetSeparableFilterEXT;
-        
-        public static unsafe void GetSeparableFilterEXT(SeparableTargetEXT target, PixelFormat format, PixelType type, IntPtr row, IntPtr column, IntPtr span)
-        {
-            _glGetSeparableFilterEXT(target, format, type, (IntPtr)row, (IntPtr)column, (IntPtr)span);
         }
         
         public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetShaderInfoLog;
@@ -8196,46 +2512,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetShaderSource(shader, bufSize, (IntPtr)length, (IntPtr)source);
         }
         
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetShaderSourceARB;
-        
-        public static unsafe void GetShaderSourceARB(uint obj, int maxLength, ref int length, ref sbyte source)
-        {
-            _glGetShaderSourceARB(obj, maxLength, (IntPtr)length, (IntPtr)source);
-        }
-        
         public static unsafe delegate*<uint, ShaderParameterName, IntPtr, void> _glGetShaderiv;
         
         public static unsafe void GetShaderiv(uint shader, ShaderParameterName pname, ref int @params)
         {
             _glGetShaderiv(shader, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetShadingRateImagePaletteNV;
-        
-        public static unsafe void GetShadingRateImagePaletteNV(uint viewport, uint entry, ref uint rate)
-        {
-            _glGetShadingRateImagePaletteNV(viewport, entry, (IntPtr)rate);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glGetShadingRateSampleLocationivNV;
-        
-        public static unsafe void GetShadingRateSampleLocationivNV(uint rate, uint samples, uint index, ref int location)
-        {
-            _glGetShadingRateSampleLocationivNV(rate, samples, index, (IntPtr)location);
-        }
-        
-        public static unsafe delegate*<TextureTarget, IntPtr, void> _glGetSharpenTexFuncSGIS;
-        
-        public static unsafe void GetSharpenTexFuncSGIS(TextureTarget target, ref float points)
-        {
-            _glGetSharpenTexFuncSGIS(target, (IntPtr)points);
-        }
-        
-        public static unsafe delegate*<ShaderType, ushort> _glGetStageIndexNV;
-        
-        public static unsafe ushort GetStageIndexNV(ShaderType shadertype)
-        {
-            return _glGetStageIndexNV(shadertype);
         }
         
         public static unsafe delegate*<StringName, byte> _glGetString;
@@ -8273,27 +2554,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetSynciv(sync, pname, count, (IntPtr)length, (IntPtr)values);
         }
         
-        public static unsafe delegate*<IntPtr, SyncParameterName, int, IntPtr, IntPtr, void> _glGetSyncivAPPLE;
-        
-        public static unsafe void GetSyncivAPPLE(IntPtr sync, SyncParameterName pname, int count, ref int length, ref int values)
-        {
-            _glGetSyncivAPPLE(sync, pname, count, (IntPtr)length, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<GetTexBumpParameterATI, IntPtr, void> _glGetTexBumpParameterfvATI;
-        
-        public static unsafe void GetTexBumpParameterfvATI(GetTexBumpParameterATI pname, ref float param)
-        {
-            _glGetTexBumpParameterfvATI(pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<GetTexBumpParameterATI, IntPtr, void> _glGetTexBumpParameterivATI;
-        
-        public static unsafe void GetTexBumpParameterivATI(GetTexBumpParameterATI pname, ref int param)
-        {
-            _glGetTexBumpParameterivATI(pname, (IntPtr)param);
-        }
-        
         public static unsafe delegate*<TextureEnvTarget, TextureEnvParameter, IntPtr, void> _glGetTexEnvfv;
         
         public static unsafe void GetTexEnvfv(TextureEnvTarget target, TextureEnvParameter pname, ref float @params)
@@ -8306,27 +2566,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void GetTexEnviv(TextureEnvTarget target, TextureEnvParameter pname, ref int @params)
         {
             _glGetTexEnviv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureEnvTarget, TextureEnvParameter, IntPtr, void> _glGetTexEnvxv;
-        
-        public static unsafe void GetTexEnvxv(TextureEnvTarget target, TextureEnvParameter pname, ref int @params)
-        {
-            _glGetTexEnvxv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureEnvTarget, TextureEnvParameter, IntPtr, void> _glGetTexEnvxvOES;
-        
-        public static unsafe void GetTexEnvxvOES(TextureEnvTarget target, TextureEnvParameter pname, ref int @params)
-        {
-            _glGetTexEnvxvOES(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureTarget, TextureFilterSGIS, IntPtr, void> _glGetTexFilterFuncSGIS;
-        
-        public static unsafe void GetTexFilterFuncSGIS(TextureTarget target, TextureFilterSGIS filter, ref float weights)
-        {
-            _glGetTexFilterFuncSGIS(target, filter, (IntPtr)weights);
         }
         
         public static unsafe delegate*<TextureCoordName, TextureGenParameter, IntPtr, void> _glGetTexGendv;
@@ -8343,32 +2582,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetTexGenfv(coord, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<TextureCoordName, TextureGenParameter, IntPtr, void> _glGetTexGenfvOES;
-        
-        public static unsafe void GetTexGenfvOES(TextureCoordName coord, TextureGenParameter pname, ref float @params)
-        {
-            _glGetTexGenfvOES(coord, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<TextureCoordName, TextureGenParameter, IntPtr, void> _glGetTexGeniv;
         
         public static unsafe void GetTexGeniv(TextureCoordName coord, TextureGenParameter pname, ref int @params)
         {
             _glGetTexGeniv(coord, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureCoordName, TextureGenParameter, IntPtr, void> _glGetTexGenivOES;
-        
-        public static unsafe void GetTexGenivOES(TextureCoordName coord, TextureGenParameter pname, ref int @params)
-        {
-            _glGetTexGenivOES(coord, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureCoordName, TextureGenParameter, IntPtr, void> _glGetTexGenxvOES;
-        
-        public static unsafe void GetTexGenxvOES(TextureCoordName coord, TextureGenParameter pname, ref int @params)
-        {
-            _glGetTexGenxvOES(coord, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<TextureTarget, int, PixelFormat, PixelType, IntPtr, void> _glGetTexImage;
@@ -8392,13 +2610,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetTexLevelParameteriv(target, level, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<TextureTarget, int, GetTextureParameter, IntPtr, void> _glGetTexLevelParameterxvOES;
-        
-        public static unsafe void GetTexLevelParameterxvOES(TextureTarget target, int level, GetTextureParameter pname, ref int @params)
-        {
-            _glGetTexLevelParameterxvOES(target, level, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<TextureTarget, GetTextureParameter, IntPtr, void> _glGetTexParameterIiv;
         
         public static unsafe void GetTexParameterIiv(TextureTarget target, GetTextureParameter pname, ref int @params)
@@ -8406,46 +2617,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetTexParameterIiv(target, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<TextureTarget, GetTextureParameter, IntPtr, void> _glGetTexParameterIivEXT;
-        
-        public static unsafe void GetTexParameterIivEXT(TextureTarget target, GetTextureParameter pname, ref int @params)
-        {
-            _glGetTexParameterIivEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureTarget, GetTextureParameter, IntPtr, void> _glGetTexParameterIivOES;
-        
-        public static unsafe void GetTexParameterIivOES(TextureTarget target, GetTextureParameter pname, ref int @params)
-        {
-            _glGetTexParameterIivOES(target, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<TextureTarget, GetTextureParameter, IntPtr, void> _glGetTexParameterIuiv;
         
         public static unsafe void GetTexParameterIuiv(TextureTarget target, GetTextureParameter pname, ref uint @params)
         {
             _glGetTexParameterIuiv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureTarget, GetTextureParameter, IntPtr, void> _glGetTexParameterIuivEXT;
-        
-        public static unsafe void GetTexParameterIuivEXT(TextureTarget target, GetTextureParameter pname, ref uint @params)
-        {
-            _glGetTexParameterIuivEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureTarget, GetTextureParameter, IntPtr, void> _glGetTexParameterIuivOES;
-        
-        public static unsafe void GetTexParameterIuivOES(TextureTarget target, GetTextureParameter pname, ref uint @params)
-        {
-            _glGetTexParameterIuivOES(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetTexParameterPointervAPPLE;
-        
-        public static unsafe void GetTexParameterPointervAPPLE(uint target, uint pname, out IntPtr @params)
-        {
-            _glGetTexParameterPointervAPPLE(target, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<TextureTarget, GetTextureParameter, IntPtr, void> _glGetTexParameterfv;
@@ -8462,53 +2638,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetTexParameteriv(target, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<TextureTarget, GetTextureParameter, IntPtr, void> _glGetTexParameterxv;
-        
-        public static unsafe void GetTexParameterxv(TextureTarget target, GetTextureParameter pname, ref int @params)
-        {
-            _glGetTexParameterxv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureTarget, GetTextureParameter, IntPtr, void> _glGetTexParameterxvOES;
-        
-        public static unsafe void GetTexParameterxvOES(TextureTarget target, GetTextureParameter pname, ref int @params)
-        {
-            _glGetTexParameterxvOES(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ulong> _glGetTextureHandleARB;
-        
-        public static unsafe ulong GetTextureHandleARB(uint texture)
-        {
-            return _glGetTextureHandleARB(texture);
-        }
-        
-        public static unsafe delegate*<uint, ulong> _glGetTextureHandleIMG;
-        
-        public static unsafe ulong GetTextureHandleIMG(uint texture)
-        {
-            return _glGetTextureHandleIMG(texture);
-        }
-        
-        public static unsafe delegate*<uint, ulong> _glGetTextureHandleNV;
-        
-        public static unsafe ulong GetTextureHandleNV(uint texture)
-        {
-            return _glGetTextureHandleNV(texture);
-        }
-        
         public static unsafe delegate*<uint, int, PixelFormat, PixelType, int, IntPtr, void> _glGetTextureImage;
         
         public static unsafe void GetTextureImage(uint texture, int level, PixelFormat format, PixelType type, int bufSize, IntPtr pixels)
         {
             _glGetTextureImage(texture, level, format, type, bufSize, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, PixelFormat, PixelType, IntPtr, void> _glGetTextureImageEXT;
-        
-        public static unsafe void GetTextureImageEXT(uint texture, TextureTarget target, int level, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glGetTextureImageEXT(texture, target, level, format, type, (IntPtr)pixels);
         }
         
         public static unsafe delegate*<uint, int, GetTextureParameter, IntPtr, void> _glGetTextureLevelParameterfv;
@@ -8518,25 +2652,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetTextureLevelParameterfv(texture, level, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, int, GetTextureParameter, IntPtr, void> _glGetTextureLevelParameterfvEXT;
-        
-        public static unsafe void GetTextureLevelParameterfvEXT(uint texture, TextureTarget target, int level, GetTextureParameter pname, ref float @params)
-        {
-            _glGetTextureLevelParameterfvEXT(texture, target, level, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, int, GetTextureParameter, IntPtr, void> _glGetTextureLevelParameteriv;
         
         public static unsafe void GetTextureLevelParameteriv(uint texture, int level, GetTextureParameter pname, ref int @params)
         {
             _glGetTextureLevelParameteriv(texture, level, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, GetTextureParameter, IntPtr, void> _glGetTextureLevelParameterivEXT;
-        
-        public static unsafe void GetTextureLevelParameterivEXT(uint texture, TextureTarget target, int level, GetTextureParameter pname, ref int @params)
-        {
-            _glGetTextureLevelParameterivEXT(texture, target, level, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, GetTextureParameter, IntPtr, void> _glGetTextureParameterIiv;
@@ -8546,25 +2666,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetTextureParameterIiv(texture, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, GetTextureParameter, IntPtr, void> _glGetTextureParameterIivEXT;
-        
-        public static unsafe void GetTextureParameterIivEXT(uint texture, TextureTarget target, GetTextureParameter pname, ref int @params)
-        {
-            _glGetTextureParameterIivEXT(texture, target, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, GetTextureParameter, IntPtr, void> _glGetTextureParameterIuiv;
         
         public static unsafe void GetTextureParameterIuiv(uint texture, GetTextureParameter pname, ref uint @params)
         {
             _glGetTextureParameterIuiv(texture, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, GetTextureParameter, IntPtr, void> _glGetTextureParameterIuivEXT;
-        
-        public static unsafe void GetTextureParameterIuivEXT(uint texture, TextureTarget target, GetTextureParameter pname, ref uint @params)
-        {
-            _glGetTextureParameterIuivEXT(texture, target, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, GetTextureParameter, IntPtr, void> _glGetTextureParameterfv;
@@ -8574,46 +2680,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetTextureParameterfv(texture, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, GetTextureParameter, IntPtr, void> _glGetTextureParameterfvEXT;
-        
-        public static unsafe void GetTextureParameterfvEXT(uint texture, TextureTarget target, GetTextureParameter pname, ref float @params)
-        {
-            _glGetTextureParameterfvEXT(texture, target, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, GetTextureParameter, IntPtr, void> _glGetTextureParameteriv;
         
         public static unsafe void GetTextureParameteriv(uint texture, GetTextureParameter pname, ref int @params)
         {
             _glGetTextureParameteriv(texture, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, GetTextureParameter, IntPtr, void> _glGetTextureParameterivEXT;
-        
-        public static unsafe void GetTextureParameterivEXT(uint texture, TextureTarget target, GetTextureParameter pname, ref int @params)
-        {
-            _glGetTextureParameterivEXT(texture, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, ulong> _glGetTextureSamplerHandleARB;
-        
-        public static unsafe ulong GetTextureSamplerHandleARB(uint texture, uint sampler)
-        {
-            return _glGetTextureSamplerHandleARB(texture, sampler);
-        }
-        
-        public static unsafe delegate*<uint, uint, ulong> _glGetTextureSamplerHandleIMG;
-        
-        public static unsafe ulong GetTextureSamplerHandleIMG(uint texture, uint sampler)
-        {
-            return _glGetTextureSamplerHandleIMG(texture, sampler);
-        }
-        
-        public static unsafe delegate*<uint, uint, ulong> _glGetTextureSamplerHandleNV;
-        
-        public static unsafe ulong GetTextureSamplerHandleNV(uint texture, uint sampler)
-        {
-            return _glGetTextureSamplerHandleNV(texture, sampler);
         }
         
         public static unsafe delegate*<uint, int, int, int, int, int, int, int, PixelFormat, PixelType, int, IntPtr, void> _glGetTextureSubImage;
@@ -8623,32 +2694,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetTextureSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bufSize, (IntPtr)pixels);
         }
         
-        public static unsafe delegate*<VertexAttribEnumNV, uint, VertexAttribEnumNV, IntPtr, void> _glGetTrackMatrixivNV;
-        
-        public static unsafe void GetTrackMatrixivNV(VertexAttribEnumNV target, uint address, VertexAttribEnumNV pname, ref int @params)
-        {
-            _glGetTrackMatrixivNV(target, address, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, uint, int, IntPtr, IntPtr, IntPtr, IntPtr, void> _glGetTransformFeedbackVarying;
         
         public static unsafe void GetTransformFeedbackVarying(uint program, uint index, int bufSize, ref int length, ref int size, ref AttributeType type, ref sbyte name)
         {
             _glGetTransformFeedbackVarying(program, index, bufSize, (IntPtr)length, (IntPtr)size, (IntPtr)type, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, IntPtr, IntPtr, IntPtr, void> _glGetTransformFeedbackVaryingEXT;
-        
-        public static unsafe void GetTransformFeedbackVaryingEXT(uint program, uint index, int bufSize, ref int length, ref int size, ref AttributeType type, ref sbyte name)
-        {
-            _glGetTransformFeedbackVaryingEXT(program, index, bufSize, (IntPtr)length, (IntPtr)size, (IntPtr)type, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetTransformFeedbackVaryingNV;
-        
-        public static unsafe void GetTransformFeedbackVaryingNV(uint program, uint index, ref int location)
-        {
-            _glGetTransformFeedbackVaryingNV(program, index, (IntPtr)location);
         }
         
         public static unsafe delegate*<uint, TransformFeedbackPName, uint, IntPtr, void> _glGetTransformFeedbacki64_v;
@@ -8672,25 +2722,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetTransformFeedbackiv(xfb, pname, (IntPtr)param);
         }
         
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetTranslatedShaderSourceANGLE;
-        
-        public static unsafe void GetTranslatedShaderSourceANGLE(uint shader, int bufSize, ref int length, ref sbyte source)
-        {
-            _glGetTranslatedShaderSourceANGLE(shader, bufSize, (IntPtr)length, (IntPtr)source);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, uint> _glGetUniformBlockIndex;
         
         public static unsafe uint GetUniformBlockIndex(uint program, ref sbyte uniformBlockName)
         {
             return _glGetUniformBlockIndex(program, (IntPtr)uniformBlockName);
-        }
-        
-        public static unsafe delegate*<uint, int, int> _glGetUniformBufferSizeEXT;
-        
-        public static unsafe int GetUniformBufferSizeEXT(uint program, int location)
-        {
-            return _glGetUniformBufferSizeEXT(program, location);
         }
         
         public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glGetUniformIndices;
@@ -8705,20 +2741,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe int GetUniformLocation(uint program, ref sbyte name)
         {
             return _glGetUniformLocation(program, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, int> _glGetUniformLocationARB;
-        
-        public static unsafe int GetUniformLocationARB(uint programObj, ref sbyte name)
-        {
-            return _glGetUniformLocationARB(programObj, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, int, long> _glGetUniformOffsetEXT;
-        
-        public static unsafe long GetUniformOffsetEXT(uint program, int location)
-        {
-            return _glGetUniformOffsetEXT(program, location);
         }
         
         public static unsafe delegate*<ShaderType, int, IntPtr, void> _glGetUniformSubroutineuiv;
@@ -8742,27 +2764,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetUniformfv(program, location, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, int, IntPtr, void> _glGetUniformfvARB;
-        
-        public static unsafe void GetUniformfvARB(uint programObj, int location, ref float @params)
-        {
-            _glGetUniformfvARB(programObj, location, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glGetUniformi64vARB;
-        
-        public static unsafe void GetUniformi64vARB(uint program, int location, ref long @params)
-        {
-            _glGetUniformi64vARB(program, location, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glGetUniformi64vNV;
-        
-        public static unsafe void GetUniformi64vNV(uint program, int location, ref long @params)
-        {
-            _glGetUniformi64vNV(program, location, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, int, IntPtr, void> _glGetUniformiv;
         
         public static unsafe void GetUniformiv(uint program, int location, ref int @params)
@@ -8770,102 +2771,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetUniformiv(program, location, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, int, IntPtr, void> _glGetUniformivARB;
-        
-        public static unsafe void GetUniformivARB(uint programObj, int location, ref int @params)
-        {
-            _glGetUniformivARB(programObj, location, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glGetUniformui64vARB;
-        
-        public static unsafe void GetUniformui64vARB(uint program, int location, ref ulong @params)
-        {
-            _glGetUniformui64vARB(program, location, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glGetUniformui64vNV;
-        
-        public static unsafe void GetUniformui64vNV(uint program, int location, ref ulong @params)
-        {
-            _glGetUniformui64vNV(program, location, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, int, IntPtr, void> _glGetUniformuiv;
         
         public static unsafe void GetUniformuiv(uint program, int location, ref uint @params)
         {
             _glGetUniformuiv(program, location, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glGetUniformuivEXT;
-        
-        public static unsafe void GetUniformuivEXT(uint program, int location, ref uint @params)
-        {
-            _glGetUniformuivEXT(program, location, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<GetPName, IntPtr, void> _glGetUnsignedBytevEXT;
-        
-        public static unsafe void GetUnsignedBytevEXT(GetPName pname, ref byte data)
-        {
-            _glGetUnsignedBytevEXT(pname, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetUnsignedBytei_vEXT;
-        
-        public static unsafe void GetUnsignedBytei_vEXT(uint target, uint index, ref byte data)
-        {
-            _glGetUnsignedBytei_vEXT(target, index, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, ArrayObjectPNameATI, IntPtr, void> _glGetVariantArrayObjectfvATI;
-        
-        public static unsafe void GetVariantArrayObjectfvATI(uint id, ArrayObjectPNameATI pname, ref float @params)
-        {
-            _glGetVariantArrayObjectfvATI(id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ArrayObjectPNameATI, IntPtr, void> _glGetVariantArrayObjectivATI;
-        
-        public static unsafe void GetVariantArrayObjectivATI(uint id, ArrayObjectPNameATI pname, ref int @params)
-        {
-            _glGetVariantArrayObjectivATI(id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, GetVariantValueEXT, IntPtr, void> _glGetVariantBooleanvEXT;
-        
-        public static unsafe void GetVariantBooleanvEXT(uint id, GetVariantValueEXT value, ref byte data)
-        {
-            _glGetVariantBooleanvEXT(id, value, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, GetVariantValueEXT, IntPtr, void> _glGetVariantFloatvEXT;
-        
-        public static unsafe void GetVariantFloatvEXT(uint id, GetVariantValueEXT value, ref float data)
-        {
-            _glGetVariantFloatvEXT(id, value, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, GetVariantValueEXT, IntPtr, void> _glGetVariantIntegervEXT;
-        
-        public static unsafe void GetVariantIntegervEXT(uint id, GetVariantValueEXT value, ref int data)
-        {
-            _glGetVariantIntegervEXT(id, value, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, GetVariantValueEXT, IntPtr, void> _glGetVariantPointervEXT;
-        
-        public static unsafe void GetVariantPointervEXT(uint id, GetVariantValueEXT value, out IntPtr data)
-        {
-            _glGetVariantPointervEXT(id, value, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, int> _glGetVaryingLocationNV;
-        
-        public static unsafe int GetVaryingLocationNV(uint program, ref sbyte name)
-        {
-            return _glGetVaryingLocationNV(program, (IntPtr)name);
         }
         
         public static unsafe delegate*<uint, uint, VertexArrayPName, IntPtr, void> _glGetVertexArrayIndexed64iv;
@@ -8882,53 +2792,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetVertexArrayIndexediv(vaobj, index, pname, (IntPtr)param);
         }
         
-        public static unsafe delegate*<uint, uint, VertexArrayPName, IntPtr, void> _glGetVertexArrayIntegeri_vEXT;
-        
-        public static unsafe void GetVertexArrayIntegeri_vEXT(uint vaobj, uint index, VertexArrayPName pname, ref int param)
-        {
-            _glGetVertexArrayIntegeri_vEXT(vaobj, index, pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<uint, VertexArrayPName, IntPtr, void> _glGetVertexArrayIntegervEXT;
-        
-        public static unsafe void GetVertexArrayIntegervEXT(uint vaobj, VertexArrayPName pname, ref int param)
-        {
-            _glGetVertexArrayIntegervEXT(vaobj, pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<uint, uint, VertexArrayPName, IntPtr, void> _glGetVertexArrayPointeri_vEXT;
-        
-        public static unsafe void GetVertexArrayPointeri_vEXT(uint vaobj, uint index, VertexArrayPName pname, out IntPtr param)
-        {
-            _glGetVertexArrayPointeri_vEXT(vaobj, index, pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<uint, VertexArrayPName, IntPtr, void> _glGetVertexArrayPointervEXT;
-        
-        public static unsafe void GetVertexArrayPointervEXT(uint vaobj, VertexArrayPName pname, out IntPtr param)
-        {
-            _glGetVertexArrayPointervEXT(vaobj, pname, (IntPtr)param);
-        }
-        
         public static unsafe delegate*<uint, VertexArrayPName, IntPtr, void> _glGetVertexArrayiv;
         
         public static unsafe void GetVertexArrayiv(uint vaobj, VertexArrayPName pname, ref int param)
         {
             _glGetVertexArrayiv(vaobj, pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<uint, ArrayObjectPNameATI, IntPtr, void> _glGetVertexAttribArrayObjectfvATI;
-        
-        public static unsafe void GetVertexAttribArrayObjectfvATI(uint index, ArrayObjectPNameATI pname, ref float @params)
-        {
-            _glGetVertexAttribArrayObjectfvATI(index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ArrayObjectPNameATI, IntPtr, void> _glGetVertexAttribArrayObjectivATI;
-        
-        public static unsafe void GetVertexAttribArrayObjectivATI(uint index, ArrayObjectPNameATI pname, ref int @params)
-        {
-            _glGetVertexAttribArrayObjectivATI(index, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, VertexAttribEnum, IntPtr, void> _glGetVertexAttribIiv;
@@ -8938,25 +2806,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetVertexAttribIiv(index, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, VertexAttribEnum, IntPtr, void> _glGetVertexAttribIivEXT;
-        
-        public static unsafe void GetVertexAttribIivEXT(uint index, VertexAttribEnum pname, ref int @params)
-        {
-            _glGetVertexAttribIivEXT(index, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, VertexAttribEnum, IntPtr, void> _glGetVertexAttribIuiv;
         
         public static unsafe void GetVertexAttribIuiv(uint index, VertexAttribEnum pname, ref uint @params)
         {
             _glGetVertexAttribIuiv(index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribEnum, IntPtr, void> _glGetVertexAttribIuivEXT;
-        
-        public static unsafe void GetVertexAttribIuivEXT(uint index, VertexAttribEnum pname, ref uint @params)
-        {
-            _glGetVertexAttribIuivEXT(index, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, VertexAttribEnum, IntPtr, void> _glGetVertexAttribLdv;
@@ -8966,53 +2820,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetVertexAttribLdv(index, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, VertexAttribEnum, IntPtr, void> _glGetVertexAttribLdvEXT;
-        
-        public static unsafe void GetVertexAttribLdvEXT(uint index, VertexAttribEnum pname, ref double @params)
-        {
-            _glGetVertexAttribLdvEXT(index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribEnum, IntPtr, void> _glGetVertexAttribLi64vNV;
-        
-        public static unsafe void GetVertexAttribLi64vNV(uint index, VertexAttribEnum pname, ref long @params)
-        {
-            _glGetVertexAttribLi64vNV(index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribEnum, IntPtr, void> _glGetVertexAttribLui64vARB;
-        
-        public static unsafe void GetVertexAttribLui64vARB(uint index, VertexAttribEnum pname, ref ulong @params)
-        {
-            _glGetVertexAttribLui64vARB(index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribEnum, IntPtr, void> _glGetVertexAttribLui64vNV;
-        
-        public static unsafe void GetVertexAttribLui64vNV(uint index, VertexAttribEnum pname, ref ulong @params)
-        {
-            _glGetVertexAttribLui64vNV(index, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, VertexAttribPointerPropertyARB, IntPtr, void> _glGetVertexAttribPointerv;
         
         public static unsafe void GetVertexAttribPointerv(uint index, VertexAttribPointerPropertyARB pname, out IntPtr pointer)
         {
             _glGetVertexAttribPointerv(index, pname, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribPointerPropertyARB, IntPtr, void> _glGetVertexAttribPointervARB;
-        
-        public static unsafe void GetVertexAttribPointervARB(uint index, VertexAttribPointerPropertyARB pname, out IntPtr pointer)
-        {
-            _glGetVertexAttribPointervARB(index, pname, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribEnumNV, IntPtr, void> _glGetVertexAttribPointervNV;
-        
-        public static unsafe void GetVertexAttribPointervNV(uint index, VertexAttribEnumNV pname, out IntPtr pointer)
-        {
-            _glGetVertexAttribPointervNV(index, pname, (IntPtr)pointer);
         }
         
         public static unsafe delegate*<uint, VertexAttribPropertyARB, IntPtr, void> _glGetVertexAttribdv;
@@ -9022,39 +2834,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetVertexAttribdv(index, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, VertexAttribPropertyARB, IntPtr, void> _glGetVertexAttribdvARB;
-        
-        public static unsafe void GetVertexAttribdvARB(uint index, VertexAttribPropertyARB pname, ref double @params)
-        {
-            _glGetVertexAttribdvARB(index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribEnumNV, IntPtr, void> _glGetVertexAttribdvNV;
-        
-        public static unsafe void GetVertexAttribdvNV(uint index, VertexAttribEnumNV pname, ref double @params)
-        {
-            _glGetVertexAttribdvNV(index, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, VertexAttribPropertyARB, IntPtr, void> _glGetVertexAttribfv;
         
         public static unsafe void GetVertexAttribfv(uint index, VertexAttribPropertyARB pname, ref float @params)
         {
             _glGetVertexAttribfv(index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribPropertyARB, IntPtr, void> _glGetVertexAttribfvARB;
-        
-        public static unsafe void GetVertexAttribfvARB(uint index, VertexAttribPropertyARB pname, ref float @params)
-        {
-            _glGetVertexAttribfvARB(index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribEnumNV, IntPtr, void> _glGetVertexAttribfvNV;
-        
-        public static unsafe void GetVertexAttribfvNV(uint index, VertexAttribEnumNV pname, ref float @params)
-        {
-            _glGetVertexAttribfvNV(index, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, VertexAttribPropertyARB, IntPtr, void> _glGetVertexAttribiv;
@@ -9064,88 +2848,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetVertexAttribiv(index, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, VertexAttribPropertyARB, IntPtr, void> _glGetVertexAttribivARB;
-        
-        public static unsafe void GetVertexAttribivARB(uint index, VertexAttribPropertyARB pname, ref int @params)
-        {
-            _glGetVertexAttribivARB(index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, VertexAttribEnumNV, IntPtr, void> _glGetVertexAttribivNV;
-        
-        public static unsafe void GetVertexAttribivNV(uint index, VertexAttribEnumNV pname, ref int @params)
-        {
-            _glGetVertexAttribivNV(index, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glGetVideoCaptureStreamdvNV;
-        
-        public static unsafe void GetVideoCaptureStreamdvNV(uint video_capture_slot, uint stream, uint pname, ref double @params)
-        {
-            _glGetVideoCaptureStreamdvNV(video_capture_slot, stream, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glGetVideoCaptureStreamfvNV;
-        
-        public static unsafe void GetVideoCaptureStreamfvNV(uint video_capture_slot, uint stream, uint pname, ref float @params)
-        {
-            _glGetVideoCaptureStreamfvNV(video_capture_slot, stream, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glGetVideoCaptureStreamivNV;
-        
-        public static unsafe void GetVideoCaptureStreamivNV(uint video_capture_slot, uint stream, uint pname, ref int @params)
-        {
-            _glGetVideoCaptureStreamivNV(video_capture_slot, stream, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetVideoCaptureivNV;
-        
-        public static unsafe void GetVideoCaptureivNV(uint video_capture_slot, uint pname, ref int @params)
-        {
-            _glGetVideoCaptureivNV(video_capture_slot, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetVideoi64vNV;
-        
-        public static unsafe void GetVideoi64vNV(uint video_slot, uint pname, ref long @params)
-        {
-            _glGetVideoi64vNV(video_slot, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetVideoivNV;
-        
-        public static unsafe void GetVideoivNV(uint video_slot, uint pname, ref int @params)
-        {
-            _glGetVideoivNV(video_slot, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetVideoui64vNV;
-        
-        public static unsafe void GetVideoui64vNV(uint video_slot, uint pname, ref ulong @params)
-        {
-            _glGetVideoui64vNV(video_slot, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glGetVideouivNV;
-        
-        public static unsafe void GetVideouivNV(uint video_slot, uint pname, ref uint @params)
-        {
-            _glGetVideouivNV(video_slot, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<ColorTableTarget, PixelFormat, PixelType, int, IntPtr, void> _glGetnColorTable;
         
         public static unsafe void GetnColorTable(ColorTableTarget target, PixelFormat format, PixelType type, int bufSize, IntPtr table)
         {
             _glGetnColorTable(target, format, type, bufSize, (IntPtr)table);
-        }
-        
-        public static unsafe delegate*<ColorTableTarget, PixelFormat, PixelType, int, IntPtr, void> _glGetnColorTableARB;
-        
-        public static unsafe void GetnColorTableARB(ColorTableTarget target, PixelFormat format, PixelType type, int bufSize, IntPtr table)
-        {
-            _glGetnColorTableARB(target, format, type, bufSize, (IntPtr)table);
         }
         
         public static unsafe delegate*<TextureTarget, int, int, IntPtr, void> _glGetnCompressedTexImage;
@@ -9155,25 +2862,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetnCompressedTexImage(target, lod, bufSize, (IntPtr)pixels);
         }
         
-        public static unsafe delegate*<TextureTarget, int, int, IntPtr, void> _glGetnCompressedTexImageARB;
-        
-        public static unsafe void GetnCompressedTexImageARB(TextureTarget target, int lod, int bufSize, IntPtr img)
-        {
-            _glGetnCompressedTexImageARB(target, lod, bufSize, (IntPtr)img);
-        }
-        
         public static unsafe delegate*<ConvolutionTarget, PixelFormat, PixelType, int, IntPtr, void> _glGetnConvolutionFilter;
         
         public static unsafe void GetnConvolutionFilter(ConvolutionTarget target, PixelFormat format, PixelType type, int bufSize, IntPtr image)
         {
             _glGetnConvolutionFilter(target, format, type, bufSize, (IntPtr)image);
-        }
-        
-        public static unsafe delegate*<ConvolutionTarget, PixelFormat, PixelType, int, IntPtr, void> _glGetnConvolutionFilterARB;
-        
-        public static unsafe void GetnConvolutionFilterARB(ConvolutionTarget target, PixelFormat format, PixelType type, int bufSize, IntPtr image)
-        {
-            _glGetnConvolutionFilterARB(target, format, type, bufSize, (IntPtr)image);
         }
         
         public static unsafe delegate*<HistogramTarget, byte, PixelFormat, PixelType, int, IntPtr, void> _glGetnHistogram;
@@ -9183,25 +2876,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetnHistogram(target, reset, format, type, bufSize, (IntPtr)values);
         }
         
-        public static unsafe delegate*<HistogramTargetEXT, byte, PixelFormat, PixelType, int, IntPtr, void> _glGetnHistogramARB;
-        
-        public static unsafe void GetnHistogramARB(HistogramTargetEXT target, byte reset, PixelFormat format, PixelType type, int bufSize, IntPtr values)
-        {
-            _glGetnHistogramARB(target, reset, format, type, bufSize, (IntPtr)values);
-        }
-        
         public static unsafe delegate*<MapTarget, MapQuery, int, IntPtr, void> _glGetnMapdv;
         
         public static unsafe void GetnMapdv(MapTarget target, MapQuery query, int bufSize, ref double v)
         {
             _glGetnMapdv(target, query, bufSize, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<MapTarget, MapQuery, int, IntPtr, void> _glGetnMapdvARB;
-        
-        public static unsafe void GetnMapdvARB(MapTarget target, MapQuery query, int bufSize, ref double v)
-        {
-            _glGetnMapdvARB(target, query, bufSize, (IntPtr)v);
         }
         
         public static unsafe delegate*<MapTarget, MapQuery, int, IntPtr, void> _glGetnMapfv;
@@ -9211,25 +2890,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetnMapfv(target, query, bufSize, (IntPtr)v);
         }
         
-        public static unsafe delegate*<MapTarget, MapQuery, int, IntPtr, void> _glGetnMapfvARB;
-        
-        public static unsafe void GetnMapfvARB(MapTarget target, MapQuery query, int bufSize, ref float v)
-        {
-            _glGetnMapfvARB(target, query, bufSize, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<MapTarget, MapQuery, int, IntPtr, void> _glGetnMapiv;
         
         public static unsafe void GetnMapiv(MapTarget target, MapQuery query, int bufSize, ref int v)
         {
             _glGetnMapiv(target, query, bufSize, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<MapTarget, MapQuery, int, IntPtr, void> _glGetnMapivARB;
-        
-        public static unsafe void GetnMapivARB(MapTarget target, MapQuery query, int bufSize, ref int v)
-        {
-            _glGetnMapivARB(target, query, bufSize, (IntPtr)v);
         }
         
         public static unsafe delegate*<MinmaxTarget, byte, PixelFormat, PixelType, int, IntPtr, void> _glGetnMinmax;
@@ -9239,25 +2904,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetnMinmax(target, reset, format, type, bufSize, (IntPtr)values);
         }
         
-        public static unsafe delegate*<MinmaxTargetEXT, byte, PixelFormat, PixelType, int, IntPtr, void> _glGetnMinmaxARB;
-        
-        public static unsafe void GetnMinmaxARB(MinmaxTargetEXT target, byte reset, PixelFormat format, PixelType type, int bufSize, IntPtr values)
-        {
-            _glGetnMinmaxARB(target, reset, format, type, bufSize, (IntPtr)values);
-        }
-        
         public static unsafe delegate*<PixelMap, int, IntPtr, void> _glGetnPixelMapfv;
         
         public static unsafe void GetnPixelMapfv(PixelMap map, int bufSize, ref float values)
         {
             _glGetnPixelMapfv(map, bufSize, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<PixelMap, int, IntPtr, void> _glGetnPixelMapfvARB;
-        
-        public static unsafe void GetnPixelMapfvARB(PixelMap map, int bufSize, ref float values)
-        {
-            _glGetnPixelMapfvARB(map, bufSize, (IntPtr)values);
         }
         
         public static unsafe delegate*<PixelMap, int, IntPtr, void> _glGetnPixelMapuiv;
@@ -9267,25 +2918,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetnPixelMapuiv(map, bufSize, (IntPtr)values);
         }
         
-        public static unsafe delegate*<PixelMap, int, IntPtr, void> _glGetnPixelMapuivARB;
-        
-        public static unsafe void GetnPixelMapuivARB(PixelMap map, int bufSize, ref uint values)
-        {
-            _glGetnPixelMapuivARB(map, bufSize, (IntPtr)values);
-        }
-        
         public static unsafe delegate*<PixelMap, int, IntPtr, void> _glGetnPixelMapusv;
         
         public static unsafe void GetnPixelMapusv(PixelMap map, int bufSize, ref ushort values)
         {
             _glGetnPixelMapusv(map, bufSize, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<PixelMap, int, IntPtr, void> _glGetnPixelMapusvARB;
-        
-        public static unsafe void GetnPixelMapusvARB(PixelMap map, int bufSize, ref ushort values)
-        {
-            _glGetnPixelMapusvARB(map, bufSize, (IntPtr)values);
         }
         
         public static unsafe delegate*<int, IntPtr, void> _glGetnPolygonStipple;
@@ -9295,25 +2932,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetnPolygonStipple(bufSize, (IntPtr)pattern);
         }
         
-        public static unsafe delegate*<int, IntPtr, void> _glGetnPolygonStippleARB;
-        
-        public static unsafe void GetnPolygonStippleARB(int bufSize, ref byte pattern)
-        {
-            _glGetnPolygonStippleARB(bufSize, (IntPtr)pattern);
-        }
-        
         public static unsafe delegate*<SeparableTarget, PixelFormat, PixelType, int, IntPtr, int, IntPtr, IntPtr, void> _glGetnSeparableFilter;
         
         public static unsafe void GetnSeparableFilter(SeparableTarget target, PixelFormat format, PixelType type, int rowBufSize, IntPtr row, int columnBufSize, IntPtr column, IntPtr span)
         {
             _glGetnSeparableFilter(target, format, type, rowBufSize, (IntPtr)row, columnBufSize, (IntPtr)column, (IntPtr)span);
-        }
-        
-        public static unsafe delegate*<SeparableTargetEXT, PixelFormat, PixelType, int, IntPtr, int, IntPtr, IntPtr, void> _glGetnSeparableFilterARB;
-        
-        public static unsafe void GetnSeparableFilterARB(SeparableTargetEXT target, PixelFormat format, PixelType type, int rowBufSize, IntPtr row, int columnBufSize, IntPtr column, IntPtr span)
-        {
-            _glGetnSeparableFilterARB(target, format, type, rowBufSize, (IntPtr)row, columnBufSize, (IntPtr)column, (IntPtr)span);
         }
         
         public static unsafe delegate*<TextureTarget, int, PixelFormat, PixelType, int, IntPtr, void> _glGetnTexImage;
@@ -9323,25 +2946,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetnTexImage(target, level, format, type, bufSize, (IntPtr)pixels);
         }
         
-        public static unsafe delegate*<TextureTarget, int, PixelFormat, PixelType, int, IntPtr, void> _glGetnTexImageARB;
-        
-        public static unsafe void GetnTexImageARB(TextureTarget target, int level, PixelFormat format, PixelType type, int bufSize, IntPtr img)
-        {
-            _glGetnTexImageARB(target, level, format, type, bufSize, (IntPtr)img);
-        }
-        
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformdv;
         
         public static unsafe void GetnUniformdv(uint program, int location, int bufSize, ref double @params)
         {
             _glGetnUniformdv(program, location, bufSize, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformdvARB;
-        
-        public static unsafe void GetnUniformdvARB(uint program, int location, int bufSize, ref double @params)
-        {
-            _glGetnUniformdvARB(program, location, bufSize, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformfv;
@@ -9351,67 +2960,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetnUniformfv(program, location, bufSize, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformfvARB;
-        
-        public static unsafe void GetnUniformfvARB(uint program, int location, int bufSize, ref float @params)
-        {
-            _glGetnUniformfvARB(program, location, bufSize, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformfvEXT;
-        
-        public static unsafe void GetnUniformfvEXT(uint program, int location, int bufSize, ref float @params)
-        {
-            _glGetnUniformfvEXT(program, location, bufSize, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformfvKHR;
-        
-        public static unsafe void GetnUniformfvKHR(uint program, int location, int bufSize, ref float @params)
-        {
-            _glGetnUniformfvKHR(program, location, bufSize, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformi64vARB;
-        
-        public static unsafe void GetnUniformi64vARB(uint program, int location, int bufSize, ref long @params)
-        {
-            _glGetnUniformi64vARB(program, location, bufSize, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformiv;
         
         public static unsafe void GetnUniformiv(uint program, int location, int bufSize, ref int @params)
         {
             _glGetnUniformiv(program, location, bufSize, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformivARB;
-        
-        public static unsafe void GetnUniformivARB(uint program, int location, int bufSize, ref int @params)
-        {
-            _glGetnUniformivARB(program, location, bufSize, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformivEXT;
-        
-        public static unsafe void GetnUniformivEXT(uint program, int location, int bufSize, ref int @params)
-        {
-            _glGetnUniformivEXT(program, location, bufSize, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformivKHR;
-        
-        public static unsafe void GetnUniformivKHR(uint program, int location, int bufSize, ref int @params)
-        {
-            _glGetnUniformivKHR(program, location, bufSize, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformui64vARB;
-        
-        public static unsafe void GetnUniformui64vARB(uint program, int location, int bufSize, ref ulong @params)
-        {
-            _glGetnUniformui64vARB(program, location, bufSize, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformuiv;
@@ -9421,200 +2974,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glGetnUniformuiv(program, location, bufSize, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformuivARB;
-        
-        public static unsafe void GetnUniformuivARB(uint program, int location, int bufSize, ref uint @params)
-        {
-            _glGetnUniformuivARB(program, location, bufSize, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glGetnUniformuivKHR;
-        
-        public static unsafe void GetnUniformuivKHR(uint program, int location, int bufSize, ref uint @params)
-        {
-            _glGetnUniformuivKHR(program, location, bufSize, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<sbyte, void> _glGlobalAlphaFactorbSUN;
-        
-        public static unsafe void GlobalAlphaFactorbSUN(sbyte factor)
-        {
-            _glGlobalAlphaFactorbSUN(factor);
-        }
-        
-        public static unsafe delegate*<double, void> _glGlobalAlphaFactordSUN;
-        
-        public static unsafe void GlobalAlphaFactordSUN(double factor)
-        {
-            _glGlobalAlphaFactordSUN(factor);
-        }
-        
-        public static unsafe delegate*<float, void> _glGlobalAlphaFactorfSUN;
-        
-        public static unsafe void GlobalAlphaFactorfSUN(float factor)
-        {
-            _glGlobalAlphaFactorfSUN(factor);
-        }
-        
-        public static unsafe delegate*<int, void> _glGlobalAlphaFactoriSUN;
-        
-        public static unsafe void GlobalAlphaFactoriSUN(int factor)
-        {
-            _glGlobalAlphaFactoriSUN(factor);
-        }
-        
-        public static unsafe delegate*<short, void> _glGlobalAlphaFactorsSUN;
-        
-        public static unsafe void GlobalAlphaFactorsSUN(short factor)
-        {
-            _glGlobalAlphaFactorsSUN(factor);
-        }
-        
-        public static unsafe delegate*<byte, void> _glGlobalAlphaFactorubSUN;
-        
-        public static unsafe void GlobalAlphaFactorubSUN(byte factor)
-        {
-            _glGlobalAlphaFactorubSUN(factor);
-        }
-        
-        public static unsafe delegate*<uint, void> _glGlobalAlphaFactoruiSUN;
-        
-        public static unsafe void GlobalAlphaFactoruiSUN(uint factor)
-        {
-            _glGlobalAlphaFactoruiSUN(factor);
-        }
-        
-        public static unsafe delegate*<ushort, void> _glGlobalAlphaFactorusSUN;
-        
-        public static unsafe void GlobalAlphaFactorusSUN(ushort factor)
-        {
-            _glGlobalAlphaFactorusSUN(factor);
-        }
-        
         public static unsafe delegate*<HintTarget, HintMode, void> _glHint;
         
         public static unsafe void Hint(HintTarget target, HintMode mode)
         {
             _glHint(target, mode);
-        }
-        
-        public static unsafe delegate*<HintTargetPGI, int, void> _glHintPGI;
-        
-        public static unsafe void HintPGI(HintTargetPGI target, int mode)
-        {
-            _glHintPGI(target, mode);
-        }
-        
-        public static unsafe delegate*<HistogramTargetEXT, int, InternalFormat, byte, void> _glHistogram;
-        
-        public static unsafe void Histogram(HistogramTargetEXT target, int width, InternalFormat internalformat, byte sink)
-        {
-            _glHistogram(target, width, internalformat, sink);
-        }
-        
-        public static unsafe delegate*<HistogramTargetEXT, int, InternalFormat, byte, void> _glHistogramEXT;
-        
-        public static unsafe void HistogramEXT(HistogramTargetEXT target, int width, InternalFormat internalformat, byte sink)
-        {
-            _glHistogramEXT(target, width, internalformat, sink);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glIglooInterfaceSGIX;
-        
-        public static unsafe void IglooInterfaceSGIX(uint pname, IntPtr @params)
-        {
-            _glIglooInterfaceSGIX(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ImageTransformTargetHP, ImageTransformPNameHP, float, void> _glImageTransformParameterfHP;
-        
-        public static unsafe void ImageTransformParameterfHP(ImageTransformTargetHP target, ImageTransformPNameHP pname, float param)
-        {
-            _glImageTransformParameterfHP(target, pname, param);
-        }
-        
-        public static unsafe delegate*<ImageTransformTargetHP, ImageTransformPNameHP, IntPtr, void> _glImageTransformParameterfvHP;
-        
-        public static unsafe void ImageTransformParameterfvHP(ImageTransformTargetHP target, ImageTransformPNameHP pname, ref float @params)
-        {
-            _glImageTransformParameterfvHP(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ImageTransformTargetHP, ImageTransformPNameHP, int, void> _glImageTransformParameteriHP;
-        
-        public static unsafe void ImageTransformParameteriHP(ImageTransformTargetHP target, ImageTransformPNameHP pname, int param)
-        {
-            _glImageTransformParameteriHP(target, pname, param);
-        }
-        
-        public static unsafe delegate*<ImageTransformTargetHP, ImageTransformPNameHP, IntPtr, void> _glImageTransformParameterivHP;
-        
-        public static unsafe void ImageTransformParameterivHP(ImageTransformTargetHP target, ImageTransformPNameHP pname, ref int @params)
-        {
-            _glImageTransformParameterivHP(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ulong, ExternalHandleType, int, void> _glImportMemoryFdEXT;
-        
-        public static unsafe void ImportMemoryFdEXT(uint memory, ulong size, ExternalHandleType handleType, int fd)
-        {
-            _glImportMemoryFdEXT(memory, size, handleType, fd);
-        }
-        
-        public static unsafe delegate*<uint, ulong, ExternalHandleType, IntPtr, void> _glImportMemoryWin32HandleEXT;
-        
-        public static unsafe void ImportMemoryWin32HandleEXT(uint memory, ulong size, ExternalHandleType handleType, IntPtr handle)
-        {
-            _glImportMemoryWin32HandleEXT(memory, size, handleType, (IntPtr)handle);
-        }
-        
-        public static unsafe delegate*<uint, ulong, ExternalHandleType, IntPtr, void> _glImportMemoryWin32NameEXT;
-        
-        public static unsafe void ImportMemoryWin32NameEXT(uint memory, ulong size, ExternalHandleType handleType, IntPtr name)
-        {
-            _glImportMemoryWin32NameEXT(memory, size, handleType, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, ExternalHandleType, int, void> _glImportSemaphoreFdEXT;
-        
-        public static unsafe void ImportSemaphoreFdEXT(uint semaphore, ExternalHandleType handleType, int fd)
-        {
-            _glImportSemaphoreFdEXT(semaphore, handleType, fd);
-        }
-        
-        public static unsafe delegate*<uint, ExternalHandleType, IntPtr, void> _glImportSemaphoreWin32HandleEXT;
-        
-        public static unsafe void ImportSemaphoreWin32HandleEXT(uint semaphore, ExternalHandleType handleType, IntPtr handle)
-        {
-            _glImportSemaphoreWin32HandleEXT(semaphore, handleType, (IntPtr)handle);
-        }
-        
-        public static unsafe delegate*<uint, ExternalHandleType, IntPtr, void> _glImportSemaphoreWin32NameEXT;
-        
-        public static unsafe void ImportSemaphoreWin32NameEXT(uint semaphore, ExternalHandleType handleType, IntPtr name)
-        {
-            _glImportSemaphoreWin32NameEXT(semaphore, handleType, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, long, uint, IntPtr> _glImportSyncEXT;
-        
-        public static unsafe IntPtr ImportSyncEXT(uint external_sync_type, long external_sync, uint flags)
-        {
-            return _glImportSyncEXT(external_sync_type, external_sync, flags);
-        }
-        
-        public static unsafe delegate*<uint, int, void> _glIndexFormatNV;
-        
-        public static unsafe void IndexFormatNV(uint type, int stride)
-        {
-            _glIndexFormatNV(type, stride);
-        }
-        
-        public static unsafe delegate*<IndexFunctionEXT, float, void> _glIndexFuncEXT;
-        
-        public static unsafe void IndexFuncEXT(IndexFunctionEXT func, float @ref)
-        {
-            _glIndexFuncEXT(func, @ref);
         }
         
         public static unsafe delegate*<uint, void> _glIndexMask;
@@ -9624,32 +2988,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glIndexMask(mask);
         }
         
-        public static unsafe delegate*<MaterialFace, IndexMaterialParameterEXT, void> _glIndexMaterialEXT;
-        
-        public static unsafe void IndexMaterialEXT(MaterialFace face, IndexMaterialParameterEXT mode)
-        {
-            _glIndexMaterialEXT(face, mode);
-        }
-        
         public static unsafe delegate*<IndexPointerType, int, IntPtr, void> _glIndexPointer;
         
         public static unsafe void IndexPointer(IndexPointerType type, int stride, IntPtr pointer)
         {
             _glIndexPointer(type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<IndexPointerType, int, int, IntPtr, void> _glIndexPointerEXT;
-        
-        public static unsafe void IndexPointerEXT(IndexPointerType type, int stride, int count, IntPtr pointer)
-        {
-            _glIndexPointerEXT(type, stride, count, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<IndexPointerType, int, IntPtr, int, void> _glIndexPointerListIBM;
-        
-        public static unsafe void IndexPointerListIBM(IndexPointerType type, int stride, out IntPtr pointer, int ptrstride)
-        {
-            _glIndexPointerListIBM(type, stride, (IntPtr)pointer, ptrstride);
         }
         
         public static unsafe delegate*<double, void> _glIndexd;
@@ -9722,20 +3065,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glIndexubv((IntPtr)c);
         }
         
-        public static unsafe delegate*<int, void> _glIndexxOES;
-        
-        public static unsafe void IndexxOES(int component)
-        {
-            _glIndexxOES(component);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glIndexxvOES;
-        
-        public static unsafe void IndexxvOES(ref int component)
-        {
-            _glIndexxvOES((IntPtr)component);
-        }
-        
         public static unsafe delegate*<void> _glInitNames;
         
         public static unsafe void InitNames()
@@ -9743,39 +3072,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glInitNames();
         }
         
-        public static unsafe delegate*<uint, uint, uint, void> _glInsertComponentEXT;
-        
-        public static unsafe void InsertComponentEXT(uint res, uint src, uint num)
-        {
-            _glInsertComponentEXT(res, src, num);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glInsertEventMarkerEXT;
-        
-        public static unsafe void InsertEventMarkerEXT(int length, ref sbyte marker)
-        {
-            _glInsertEventMarkerEXT(length, (IntPtr)marker);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glInstrumentsBufferSGIX;
-        
-        public static unsafe void InstrumentsBufferSGIX(int size, ref int buffer)
-        {
-            _glInstrumentsBufferSGIX(size, (IntPtr)buffer);
-        }
-        
         public static unsafe delegate*<InterleavedArrayFormat, int, IntPtr, void> _glInterleavedArrays;
         
         public static unsafe void InterleavedArrays(InterleavedArrayFormat format, int stride, IntPtr pointer)
         {
             _glInterleavedArrays(format, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, float, void> _glInterpolatePathsNV;
-        
-        public static unsafe void InterpolatePathsNV(uint resultPath, uint pathA, uint pathB, float weight)
-        {
-            _glInterpolatePathsNV(resultPath, pathA, pathB, weight);
         }
         
         public static unsafe delegate*<uint, void> _glInvalidateBufferData;
@@ -9834,39 +3135,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glInvalidateTexSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth);
         }
         
-        public static unsafe delegate*<uint, byte> _glIsAsyncMarkerSGIX;
-        
-        public static unsafe byte IsAsyncMarkerSGIX(uint marker)
-        {
-            return _glIsAsyncMarkerSGIX(marker);
-        }
-        
         public static unsafe delegate*<uint, byte> _glIsBuffer;
         
         public static unsafe byte IsBuffer(uint buffer)
         {
             return _glIsBuffer(buffer);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsBufferARB;
-        
-        public static unsafe byte IsBufferARB(uint buffer)
-        {
-            return _glIsBufferARB(buffer);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsBufferResidentNV;
-        
-        public static unsafe byte IsBufferResidentNV(uint target)
-        {
-            return _glIsBufferResidentNV(target);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsCommandListNV;
-        
-        public static unsafe byte IsCommandListNV(uint list)
-        {
-            return _glIsCommandListNV(list);
         }
         
         public static unsafe delegate*<EnableCap, byte> _glIsEnabled;
@@ -9876,53 +3149,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glIsEnabled(cap);
         }
         
-        public static unsafe delegate*<EnableCap, uint, byte> _glIsEnabledIndexedEXT;
-        
-        public static unsafe byte IsEnabledIndexedEXT(EnableCap target, uint index)
-        {
-            return _glIsEnabledIndexedEXT(target, index);
-        }
-        
         public static unsafe delegate*<EnableCap, uint, byte> _glIsEnabledi;
         
         public static unsafe byte IsEnabledi(EnableCap target, uint index)
         {
             return _glIsEnabledi(target, index);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, byte> _glIsEnablediEXT;
-        
-        public static unsafe byte IsEnablediEXT(EnableCap target, uint index)
-        {
-            return _glIsEnablediEXT(target, index);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, byte> _glIsEnablediNV;
-        
-        public static unsafe byte IsEnablediNV(EnableCap target, uint index)
-        {
-            return _glIsEnablediNV(target, index);
-        }
-        
-        public static unsafe delegate*<EnableCap, uint, byte> _glIsEnablediOES;
-        
-        public static unsafe byte IsEnablediOES(EnableCap target, uint index)
-        {
-            return _glIsEnablediOES(target, index);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsFenceAPPLE;
-        
-        public static unsafe byte IsFenceAPPLE(uint fence)
-        {
-            return _glIsFenceAPPLE(fence);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsFenceNV;
-        
-        public static unsafe byte IsFenceNV(uint fence)
-        {
-            return _glIsFenceNV(fence);
         }
         
         public static unsafe delegate*<uint, byte> _glIsFramebuffer;
@@ -9932,102 +3163,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glIsFramebuffer(framebuffer);
         }
         
-        public static unsafe delegate*<uint, byte> _glIsFramebufferEXT;
-        
-        public static unsafe byte IsFramebufferEXT(uint framebuffer)
-        {
-            return _glIsFramebufferEXT(framebuffer);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsFramebufferOES;
-        
-        public static unsafe byte IsFramebufferOES(uint framebuffer)
-        {
-            return _glIsFramebufferOES(framebuffer);
-        }
-        
-        public static unsafe delegate*<ulong, byte> _glIsImageHandleResidentARB;
-        
-        public static unsafe byte IsImageHandleResidentARB(ulong handle)
-        {
-            return _glIsImageHandleResidentARB(handle);
-        }
-        
-        public static unsafe delegate*<ulong, byte> _glIsImageHandleResidentNV;
-        
-        public static unsafe byte IsImageHandleResidentNV(ulong handle)
-        {
-            return _glIsImageHandleResidentNV(handle);
-        }
-        
         public static unsafe delegate*<uint, byte> _glIsList;
         
         public static unsafe byte IsList(uint list)
         {
             return _glIsList(list);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsMemoryObjectEXT;
-        
-        public static unsafe byte IsMemoryObjectEXT(uint memoryObject)
-        {
-            return _glIsMemoryObjectEXT(memoryObject);
-        }
-        
-        public static unsafe delegate*<uint, uint, byte> _glIsNameAMD;
-        
-        public static unsafe byte IsNameAMD(uint identifier, uint name)
-        {
-            return _glIsNameAMD(identifier, name);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsNamedBufferResidentNV;
-        
-        public static unsafe byte IsNamedBufferResidentNV(uint buffer)
-        {
-            return _glIsNamedBufferResidentNV(buffer);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, byte> _glIsNamedStringARB;
-        
-        public static unsafe byte IsNamedStringARB(int namelen, ref sbyte name)
-        {
-            return _glIsNamedStringARB(namelen, (IntPtr)name);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsObjectBufferATI;
-        
-        public static unsafe byte IsObjectBufferATI(uint buffer)
-        {
-            return _glIsObjectBufferATI(buffer);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsOcclusionQueryNV;
-        
-        public static unsafe byte IsOcclusionQueryNV(uint id)
-        {
-            return _glIsOcclusionQueryNV(id);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsPathNV;
-        
-        public static unsafe byte IsPathNV(uint path)
-        {
-            return _glIsPathNV(path);
-        }
-        
-        public static unsafe delegate*<uint, uint, float, float, byte> _glIsPointInFillPathNV;
-        
-        public static unsafe byte IsPointInFillPathNV(uint path, uint mask, float x, float y)
-        {
-            return _glIsPointInFillPathNV(path, mask, x, y);
-        }
-        
-        public static unsafe delegate*<uint, float, float, byte> _glIsPointInStrokePathNV;
-        
-        public static unsafe byte IsPointInStrokePathNV(uint path, float x, float y)
-        {
-            return _glIsPointInStrokePathNV(path, x, y);
         }
         
         public static unsafe delegate*<uint, byte> _glIsProgram;
@@ -10037,32 +3177,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glIsProgram(program);
         }
         
-        public static unsafe delegate*<uint, byte> _glIsProgramARB;
-        
-        public static unsafe byte IsProgramARB(uint program)
-        {
-            return _glIsProgramARB(program);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsProgramNV;
-        
-        public static unsafe byte IsProgramNV(uint id)
-        {
-            return _glIsProgramNV(id);
-        }
-        
         public static unsafe delegate*<uint, byte> _glIsProgramPipeline;
         
         public static unsafe byte IsProgramPipeline(uint pipeline)
         {
             return _glIsProgramPipeline(pipeline);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsProgramPipelineEXT;
-        
-        public static unsafe byte IsProgramPipelineEXT(uint pipeline)
-        {
-            return _glIsProgramPipelineEXT(pipeline);
         }
         
         public static unsafe delegate*<uint, byte> _glIsQuery;
@@ -10072,46 +3191,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glIsQuery(id);
         }
         
-        public static unsafe delegate*<uint, byte> _glIsQueryARB;
-        
-        public static unsafe byte IsQueryARB(uint id)
-        {
-            return _glIsQueryARB(id);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsQueryEXT;
-        
-        public static unsafe byte IsQueryEXT(uint id)
-        {
-            return _glIsQueryEXT(id);
-        }
-        
         public static unsafe delegate*<uint, byte> _glIsRenderbuffer;
         
         public static unsafe byte IsRenderbuffer(uint renderbuffer)
         {
             return _glIsRenderbuffer(renderbuffer);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsRenderbufferEXT;
-        
-        public static unsafe byte IsRenderbufferEXT(uint renderbuffer)
-        {
-            return _glIsRenderbufferEXT(renderbuffer);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsRenderbufferOES;
-        
-        public static unsafe byte IsRenderbufferOES(uint renderbuffer)
-        {
-            return _glIsRenderbufferOES(renderbuffer);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsSemaphoreEXT;
-        
-        public static unsafe byte IsSemaphoreEXT(uint semaphore)
-        {
-            return _glIsSemaphoreEXT(semaphore);
         }
         
         public static unsafe delegate*<uint, byte> _glIsSampler;
@@ -10128,25 +3212,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glIsShader(shader);
         }
         
-        public static unsafe delegate*<uint, byte> _glIsStateNV;
-        
-        public static unsafe byte IsStateNV(uint state)
-        {
-            return _glIsStateNV(state);
-        }
-        
         public static unsafe delegate*<IntPtr, byte> _glIsSync;
         
         public static unsafe byte IsSync(IntPtr sync)
         {
             return _glIsSync(sync);
-        }
-        
-        public static unsafe delegate*<IntPtr, byte> _glIsSyncAPPLE;
-        
-        public static unsafe byte IsSyncAPPLE(IntPtr sync)
-        {
-            return _glIsSyncAPPLE(sync);
         }
         
         public static unsafe delegate*<uint, byte> _glIsTexture;
@@ -10156,27 +3226,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glIsTexture(texture);
         }
         
-        public static unsafe delegate*<uint, byte> _glIsTextureEXT;
-        
-        public static unsafe byte IsTextureEXT(uint texture)
-        {
-            return _glIsTextureEXT(texture);
-        }
-        
-        public static unsafe delegate*<ulong, byte> _glIsTextureHandleResidentARB;
-        
-        public static unsafe byte IsTextureHandleResidentARB(ulong handle)
-        {
-            return _glIsTextureHandleResidentARB(handle);
-        }
-        
-        public static unsafe delegate*<ulong, byte> _glIsTextureHandleResidentNV;
-        
-        public static unsafe byte IsTextureHandleResidentNV(ulong handle)
-        {
-            return _glIsTextureHandleResidentNV(handle);
-        }
-        
         public static unsafe delegate*<uint, byte> _glIsTransformFeedback;
         
         public static unsafe byte IsTransformFeedback(uint id)
@@ -10184,81 +3233,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glIsTransformFeedback(id);
         }
         
-        public static unsafe delegate*<uint, byte> _glIsTransformFeedbackNV;
-        
-        public static unsafe byte IsTransformFeedbackNV(uint id)
-        {
-            return _glIsTransformFeedbackNV(id);
-        }
-        
-        public static unsafe delegate*<uint, VariantCapEXT, byte> _glIsVariantEnabledEXT;
-        
-        public static unsafe byte IsVariantEnabledEXT(uint id, VariantCapEXT cap)
-        {
-            return _glIsVariantEnabledEXT(id, cap);
-        }
-        
         public static unsafe delegate*<uint, byte> _glIsVertexArray;
         
         public static unsafe byte IsVertexArray(uint array)
         {
             return _glIsVertexArray(array);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsVertexArrayAPPLE;
-        
-        public static unsafe byte IsVertexArrayAPPLE(uint array)
-        {
-            return _glIsVertexArrayAPPLE(array);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glIsVertexArrayOES;
-        
-        public static unsafe byte IsVertexArrayOES(uint array)
-        {
-            return _glIsVertexArrayOES(array);
-        }
-        
-        public static unsafe delegate*<uint, uint, byte> _glIsVertexAttribEnabledAPPLE;
-        
-        public static unsafe byte IsVertexAttribEnabledAPPLE(uint index, uint pname)
-        {
-            return _glIsVertexAttribEnabledAPPLE(index, pname);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, int, int, int, int, uint, uint, int, int, int, int, int, int, int, void> _glLGPUCopyImageSubDataNVX;
-        
-        public static unsafe void LGPUCopyImageSubDataNVX(uint sourceGpu, uint destinationGpuMask, uint srcName, uint srcTarget, int srcLevel, int srcX, int srxY, int srcZ, uint dstName, uint dstTarget, int dstLevel, int dstX, int dstY, int dstZ, int width, int height, int depth)
-        {
-            _glLGPUCopyImageSubDataNVX(sourceGpu, destinationGpuMask, srcName, srcTarget, srcLevel, srcX, srxY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth);
-        }
-        
-        public static unsafe delegate*<void> _glLGPUInterlockNVX;
-        
-        public static unsafe void LGPUInterlockNVX()
-        {
-            _glLGPUInterlockNVX();
-        }
-        
-        public static unsafe delegate*<uint, uint, long, long, IntPtr, void> _glLGPUNamedBufferSubDataNVX;
-        
-        public static unsafe void LGPUNamedBufferSubDataNVX(uint gpuMask, uint buffer, long offset, long size, IntPtr data)
-        {
-            _glLGPUNamedBufferSubDataNVX(gpuMask, buffer, offset, size, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, void> _glLabelObjectEXT;
-        
-        public static unsafe void LabelObjectEXT(uint type, uint @object, int length, ref sbyte label)
-        {
-            _glLabelObjectEXT(type, @object, length, (IntPtr)label);
-        }
-        
-        public static unsafe delegate*<LightEnvParameterSGIX, int, void> _glLightEnviSGIX;
-        
-        public static unsafe void LightEnviSGIX(LightEnvParameterSGIX pname, int param)
-        {
-            _glLightEnviSGIX(pname, param);
         }
         
         public static unsafe delegate*<LightModelParameter, float, void> _glLightModelf;
@@ -10289,34 +3268,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glLightModeliv(pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<LightModelParameter, int, void> _glLightModelx;
-        
-        public static unsafe void LightModelx(LightModelParameter pname, int param)
-        {
-            _glLightModelx(pname, param);
-        }
-        
-        public static unsafe delegate*<LightModelParameter, int, void> _glLightModelxOES;
-        
-        public static unsafe void LightModelxOES(LightModelParameter pname, int param)
-        {
-            _glLightModelxOES(pname, param);
-        }
-        
-        public static unsafe delegate*<LightModelParameter, IntPtr, void> _glLightModelxv;
-        
-        public static unsafe void LightModelxv(LightModelParameter pname, ref int param)
-        {
-            _glLightModelxv(pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<LightModelParameter, IntPtr, void> _glLightModelxvOES;
-        
-        public static unsafe void LightModelxvOES(LightModelParameter pname, ref int param)
-        {
-            _glLightModelxvOES(pname, (IntPtr)param);
-        }
-        
         public static unsafe delegate*<LightName, LightParameter, float, void> _glLightf;
         
         public static unsafe void Lightf(LightName light, LightParameter pname, float param)
@@ -10345,34 +3296,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glLightiv(light, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<LightName, LightParameter, int, void> _glLightx;
-        
-        public static unsafe void Lightx(LightName light, LightParameter pname, int param)
-        {
-            _glLightx(light, pname, param);
-        }
-        
-        public static unsafe delegate*<LightName, LightParameter, int, void> _glLightxOES;
-        
-        public static unsafe void LightxOES(LightName light, LightParameter pname, int param)
-        {
-            _glLightxOES(light, pname, param);
-        }
-        
-        public static unsafe delegate*<LightName, LightParameter, IntPtr, void> _glLightxv;
-        
-        public static unsafe void Lightxv(LightName light, LightParameter pname, ref int @params)
-        {
-            _glLightxv(light, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<LightName, LightParameter, IntPtr, void> _glLightxvOES;
-        
-        public static unsafe void LightxvOES(LightName light, LightParameter pname, ref int @params)
-        {
-            _glLightxvOES(light, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<int, ushort, void> _glLineStipple;
         
         public static unsafe void LineStipple(int factor, ushort pattern)
@@ -10387,32 +3310,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glLineWidth(width);
         }
         
-        public static unsafe delegate*<int, void> _glLineWidthx;
-        
-        public static unsafe void LineWidthx(int width)
-        {
-            _glLineWidthx(width);
-        }
-        
-        public static unsafe delegate*<int, void> _glLineWidthxOES;
-        
-        public static unsafe void LineWidthxOES(int width)
-        {
-            _glLineWidthxOES(width);
-        }
-        
         public static unsafe delegate*<uint, void> _glLinkProgram;
         
         public static unsafe void LinkProgram(uint program)
         {
             _glLinkProgram(program);
-        }
-        
-        public static unsafe delegate*<uint, void> _glLinkProgramARB;
-        
-        public static unsafe void LinkProgramARB(uint programObj)
-        {
-            _glLinkProgramARB(programObj);
         }
         
         public static unsafe delegate*<uint, void> _glListBase;
@@ -10422,53 +3324,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glListBase(@base);
         }
         
-        public static unsafe delegate*<uint, uint, IntPtr, IntPtr, IntPtr, IntPtr, uint, void> _glListDrawCommandsStatesClientNV;
-        
-        public static unsafe void ListDrawCommandsStatesClientNV(uint list, uint segment, out IntPtr indirects, ref int sizes, ref uint states, ref uint fbos, uint count)
-        {
-            _glListDrawCommandsStatesClientNV(list, segment, (IntPtr)indirects, (IntPtr)sizes, (IntPtr)states, (IntPtr)fbos, count);
-        }
-        
-        public static unsafe delegate*<uint, ListParameterName, float, void> _glListParameterfSGIX;
-        
-        public static unsafe void ListParameterfSGIX(uint list, ListParameterName pname, float param)
-        {
-            _glListParameterfSGIX(list, pname, param);
-        }
-        
-        public static unsafe delegate*<uint, ListParameterName, IntPtr, void> _glListParameterfvSGIX;
-        
-        public static unsafe void ListParameterfvSGIX(uint list, ListParameterName pname, ref float @params)
-        {
-            _glListParameterfvSGIX(list, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ListParameterName, int, void> _glListParameteriSGIX;
-        
-        public static unsafe void ListParameteriSGIX(uint list, ListParameterName pname, int param)
-        {
-            _glListParameteriSGIX(list, pname, param);
-        }
-        
-        public static unsafe delegate*<uint, ListParameterName, IntPtr, void> _glListParameterivSGIX;
-        
-        public static unsafe void ListParameterivSGIX(uint list, ListParameterName pname, ref int @params)
-        {
-            _glListParameterivSGIX(list, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<void> _glLoadIdentity;
         
         public static unsafe void LoadIdentity()
         {
             _glLoadIdentity();
-        }
-        
-        public static unsafe delegate*<uint, void> _glLoadIdentityDeformationMapSGIX;
-        
-        public static unsafe void LoadIdentityDeformationMapSGIX(uint mask)
-        {
-            _glLoadIdentityDeformationMapSGIX(mask);
         }
         
         public static unsafe delegate*<IntPtr, void> _glLoadMatrixd;
@@ -10485,39 +3345,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glLoadMatrixf((IntPtr)m);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glLoadMatrixx;
-        
-        public static unsafe void LoadMatrixx(ref int m)
-        {
-            _glLoadMatrixx((IntPtr)m);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glLoadMatrixxOES;
-        
-        public static unsafe void LoadMatrixxOES(ref int m)
-        {
-            _glLoadMatrixxOES((IntPtr)m);
-        }
-        
         public static unsafe delegate*<uint, void> _glLoadName;
         
         public static unsafe void LoadName(uint name)
         {
             _glLoadName(name);
-        }
-        
-        public static unsafe delegate*<void> _glLoadPaletteFromModelViewMatrixOES;
-        
-        public static unsafe void LoadPaletteFromModelViewMatrixOES()
-        {
-            _glLoadPaletteFromModelViewMatrixOES();
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, int, IntPtr, void> _glLoadProgramNV;
-        
-        public static unsafe void LoadProgramNV(VertexAttribEnumNV target, uint id, int len, ref byte program)
-        {
-            _glLoadProgramNV(target, id, len, (IntPtr)program);
         }
         
         public static unsafe delegate*<IntPtr, void> _glLoadTransposeMatrixd;
@@ -10527,13 +3359,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glLoadTransposeMatrixd((IntPtr)m);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glLoadTransposeMatrixdARB;
-        
-        public static unsafe void LoadTransposeMatrixdARB(ref double m)
-        {
-            _glLoadTransposeMatrixdARB((IntPtr)m);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glLoadTransposeMatrixf;
         
         public static unsafe void LoadTransposeMatrixf(ref float m)
@@ -10541,116 +3366,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glLoadTransposeMatrixf((IntPtr)m);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glLoadTransposeMatrixfARB;
-        
-        public static unsafe void LoadTransposeMatrixfARB(ref float m)
-        {
-            _glLoadTransposeMatrixfARB((IntPtr)m);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glLoadTransposeMatrixxOES;
-        
-        public static unsafe void LoadTransposeMatrixxOES(ref int m)
-        {
-            _glLoadTransposeMatrixxOES((IntPtr)m);
-        }
-        
-        public static unsafe delegate*<int, int, void> _glLockArraysEXT;
-        
-        public static unsafe void LockArraysEXT(int first, int count)
-        {
-            _glLockArraysEXT(first, count);
-        }
-        
         public static unsafe delegate*<LogicOp, void> _glLogicOp;
         
         public static unsafe void LogicOp(LogicOp opcode)
         {
             _glLogicOp(opcode);
-        }
-        
-        public static unsafe delegate*<uint, void> _glMakeBufferNonResidentNV;
-        
-        public static unsafe void MakeBufferNonResidentNV(uint target)
-        {
-            _glMakeBufferNonResidentNV(target);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glMakeBufferResidentNV;
-        
-        public static unsafe void MakeBufferResidentNV(uint target, uint access)
-        {
-            _glMakeBufferResidentNV(target, access);
-        }
-        
-        public static unsafe delegate*<ulong, void> _glMakeImageHandleNonResidentARB;
-        
-        public static unsafe void MakeImageHandleNonResidentARB(ulong handle)
-        {
-            _glMakeImageHandleNonResidentARB(handle);
-        }
-        
-        public static unsafe delegate*<ulong, void> _glMakeImageHandleNonResidentNV;
-        
-        public static unsafe void MakeImageHandleNonResidentNV(ulong handle)
-        {
-            _glMakeImageHandleNonResidentNV(handle);
-        }
-        
-        public static unsafe delegate*<ulong, uint, void> _glMakeImageHandleResidentARB;
-        
-        public static unsafe void MakeImageHandleResidentARB(ulong handle, uint access)
-        {
-            _glMakeImageHandleResidentARB(handle, access);
-        }
-        
-        public static unsafe delegate*<ulong, uint, void> _glMakeImageHandleResidentNV;
-        
-        public static unsafe void MakeImageHandleResidentNV(ulong handle, uint access)
-        {
-            _glMakeImageHandleResidentNV(handle, access);
-        }
-        
-        public static unsafe delegate*<uint, void> _glMakeNamedBufferNonResidentNV;
-        
-        public static unsafe void MakeNamedBufferNonResidentNV(uint buffer)
-        {
-            _glMakeNamedBufferNonResidentNV(buffer);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glMakeNamedBufferResidentNV;
-        
-        public static unsafe void MakeNamedBufferResidentNV(uint buffer, uint access)
-        {
-            _glMakeNamedBufferResidentNV(buffer, access);
-        }
-        
-        public static unsafe delegate*<ulong, void> _glMakeTextureHandleNonResidentARB;
-        
-        public static unsafe void MakeTextureHandleNonResidentARB(ulong handle)
-        {
-            _glMakeTextureHandleNonResidentARB(handle);
-        }
-        
-        public static unsafe delegate*<ulong, void> _glMakeTextureHandleNonResidentNV;
-        
-        public static unsafe void MakeTextureHandleNonResidentNV(ulong handle)
-        {
-            _glMakeTextureHandleNonResidentNV(handle);
-        }
-        
-        public static unsafe delegate*<ulong, void> _glMakeTextureHandleResidentARB;
-        
-        public static unsafe void MakeTextureHandleResidentARB(ulong handle)
-        {
-            _glMakeTextureHandleResidentARB(handle);
-        }
-        
-        public static unsafe delegate*<ulong, void> _glMakeTextureHandleResidentNV;
-        
-        public static unsafe void MakeTextureHandleResidentNV(ulong handle)
-        {
-            _glMakeTextureHandleResidentNV(handle);
         }
         
         public static unsafe delegate*<MapTarget, double, double, int, int, IntPtr, void> _glMap1d;
@@ -10667,13 +3387,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMap1f(target, u1, u2, stride, order, (IntPtr)points);
         }
         
-        public static unsafe delegate*<MapTarget, int, int, int, int, int, void> _glMap1xOES;
-        
-        public static unsafe void Map1xOES(MapTarget target, int u1, int u2, int stride, int order, int points)
-        {
-            _glMap1xOES(target, u1, u2, stride, order, points);
-        }
-        
         public static unsafe delegate*<MapTarget, double, double, int, int, double, double, int, int, IntPtr, void> _glMap2d;
         
         public static unsafe void Map2d(MapTarget target, double u1, double u2, int ustride, int uorder, double v1, double v2, int vstride, int vorder, ref double points)
@@ -10688,13 +3401,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMap2f(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, (IntPtr)points);
         }
         
-        public static unsafe delegate*<MapTarget, int, int, int, int, int, int, int, int, int, void> _glMap2xOES;
-        
-        public static unsafe void Map2xOES(MapTarget target, int u1, int u2, int ustride, int uorder, int v1, int v2, int vstride, int vorder, int points)
-        {
-            _glMap2xOES(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points);
-        }
-        
         public static unsafe delegate*<BufferTargetARB, BufferAccessARB, void> _glMapBuffer;
         
         public static unsafe void MapBuffer(BufferTargetARB target, BufferAccessARB access)
@@ -10702,39 +3408,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMapBuffer(target, access);
         }
         
-        public static unsafe delegate*<BufferTargetARB, BufferAccessARB, void> _glMapBufferARB;
-        
-        public static unsafe void MapBufferARB(BufferTargetARB target, BufferAccessARB access)
-        {
-            _glMapBufferARB(target, access);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, BufferAccessARB, void> _glMapBufferOES;
-        
-        public static unsafe void MapBufferOES(BufferTargetARB target, BufferAccessARB access)
-        {
-            _glMapBufferOES(target, access);
-        }
-        
         public static unsafe delegate*<BufferTargetARB, long, long, uint, void> _glMapBufferRange;
         
         public static unsafe void MapBufferRange(BufferTargetARB target, long offset, long length, uint access)
         {
             _glMapBufferRange(target, offset, length, access);
-        }
-        
-        public static unsafe delegate*<BufferTargetARB, long, long, uint, void> _glMapBufferRangeEXT;
-        
-        public static unsafe void MapBufferRangeEXT(BufferTargetARB target, long offset, long length, uint access)
-        {
-            _glMapBufferRangeEXT(target, offset, length, access);
-        }
-        
-        public static unsafe delegate*<EvalTargetNV, uint, MapTypeNV, int, int, int, int, byte, IntPtr, void> _glMapControlPointsNV;
-        
-        public static unsafe void MapControlPointsNV(EvalTargetNV target, uint index, MapTypeNV type, int ustride, int vstride, int uorder, int vorder, byte packed, IntPtr points)
-        {
-            _glMapControlPointsNV(target, index, type, ustride, vstride, uorder, vorder, packed, (IntPtr)points);
         }
         
         public static unsafe delegate*<int, double, double, void> _glMapGrid1d;
@@ -10751,13 +3429,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMapGrid1f(un, u1, u2);
         }
         
-        public static unsafe delegate*<int, int, int, void> _glMapGrid1xOES;
-        
-        public static unsafe void MapGrid1xOES(int n, int u1, int u2)
-        {
-            _glMapGrid1xOES(n, u1, u2);
-        }
-        
         public static unsafe delegate*<int, double, double, int, double, double, void> _glMapGrid2d;
         
         public static unsafe void MapGrid2d(int un, double u1, double u2, int vn, double v1, double v2)
@@ -10772,13 +3443,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMapGrid2f(un, u1, u2, vn, v1, v2);
         }
         
-        public static unsafe delegate*<int, int, int, int, int, void> _glMapGrid2xOES;
-        
-        public static unsafe void MapGrid2xOES(int n, int u1, int u2, int v1, int v2)
-        {
-            _glMapGrid2xOES(n, u1, u2, v1, v2);
-        }
-        
         public static unsafe delegate*<uint, BufferAccessARB, void> _glMapNamedBuffer;
         
         public static unsafe void MapNamedBuffer(uint buffer, BufferAccessARB access)
@@ -10786,81 +3450,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMapNamedBuffer(buffer, access);
         }
         
-        public static unsafe delegate*<uint, BufferAccessARB, void> _glMapNamedBufferEXT;
-        
-        public static unsafe void MapNamedBufferEXT(uint buffer, BufferAccessARB access)
-        {
-            _glMapNamedBufferEXT(buffer, access);
-        }
-        
         public static unsafe delegate*<uint, long, long, uint, void> _glMapNamedBufferRange;
         
         public static unsafe void MapNamedBufferRange(uint buffer, long offset, long length, uint access)
         {
             _glMapNamedBufferRange(buffer, offset, length, access);
-        }
-        
-        public static unsafe delegate*<uint, long, long, uint, void> _glMapNamedBufferRangeEXT;
-        
-        public static unsafe void MapNamedBufferRangeEXT(uint buffer, long offset, long length, uint access)
-        {
-            _glMapNamedBufferRangeEXT(buffer, offset, length, access);
-        }
-        
-        public static unsafe delegate*<uint, void> _glMapObjectBufferATI;
-        
-        public static unsafe void MapObjectBufferATI(uint buffer)
-        {
-            _glMapObjectBufferATI(buffer);
-        }
-        
-        public static unsafe delegate*<EvalTargetNV, MapParameterNV, IntPtr, void> _glMapParameterfvNV;
-        
-        public static unsafe void MapParameterfvNV(EvalTargetNV target, MapParameterNV pname, ref float @params)
-        {
-            _glMapParameterfvNV(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<EvalTargetNV, MapParameterNV, IntPtr, void> _glMapParameterivNV;
-        
-        public static unsafe void MapParameterivNV(EvalTargetNV target, MapParameterNV pname, ref int @params)
-        {
-            _glMapParameterivNV(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, uint, IntPtr, IntPtr, void> _glMapTexture2DINTEL;
-        
-        public static unsafe void MapTexture2DINTEL(uint texture, int level, uint access, ref int stride, ref uint layout)
-        {
-            _glMapTexture2DINTEL(texture, level, access, (IntPtr)stride, (IntPtr)layout);
-        }
-        
-        public static unsafe delegate*<uint, uint, double, double, int, int, IntPtr, void> _glMapVertexAttrib1dAPPLE;
-        
-        public static unsafe void MapVertexAttrib1dAPPLE(uint index, uint size, double u1, double u2, int stride, int order, ref double points)
-        {
-            _glMapVertexAttrib1dAPPLE(index, size, u1, u2, stride, order, (IntPtr)points);
-        }
-        
-        public static unsafe delegate*<uint, uint, float, float, int, int, IntPtr, void> _glMapVertexAttrib1fAPPLE;
-        
-        public static unsafe void MapVertexAttrib1fAPPLE(uint index, uint size, float u1, float u2, int stride, int order, ref float points)
-        {
-            _glMapVertexAttrib1fAPPLE(index, size, u1, u2, stride, order, (IntPtr)points);
-        }
-        
-        public static unsafe delegate*<uint, uint, double, double, int, int, double, double, int, int, IntPtr, void> _glMapVertexAttrib2dAPPLE;
-        
-        public static unsafe void MapVertexAttrib2dAPPLE(uint index, uint size, double u1, double u2, int ustride, int uorder, double v1, double v2, int vstride, int vorder, ref double points)
-        {
-            _glMapVertexAttrib2dAPPLE(index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, (IntPtr)points);
-        }
-        
-        public static unsafe delegate*<uint, uint, float, float, int, int, float, float, int, int, IntPtr, void> _glMapVertexAttrib2fAPPLE;
-        
-        public static unsafe void MapVertexAttrib2fAPPLE(uint index, uint size, float u1, float u2, int ustride, int uorder, float v1, float v2, int vstride, int vorder, ref float points)
-        {
-            _glMapVertexAttrib2fAPPLE(index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, (IntPtr)points);
         }
         
         public static unsafe delegate*<MaterialFace, MaterialParameter, float, void> _glMaterialf;
@@ -10891,263 +3485,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMaterialiv(face, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<MaterialFace, MaterialParameter, int, void> _glMaterialx;
-        
-        public static unsafe void Materialx(MaterialFace face, MaterialParameter pname, int param)
-        {
-            _glMaterialx(face, pname, param);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, int, void> _glMaterialxOES;
-        
-        public static unsafe void MaterialxOES(MaterialFace face, MaterialParameter pname, int param)
-        {
-            _glMaterialxOES(face, pname, param);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, IntPtr, void> _glMaterialxv;
-        
-        public static unsafe void Materialxv(MaterialFace face, MaterialParameter pname, ref int param)
-        {
-            _glMaterialxv(face, pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, IntPtr, void> _glMaterialxvOES;
-        
-        public static unsafe void MaterialxvOES(MaterialFace face, MaterialParameter pname, ref int param)
-        {
-            _glMaterialxvOES(face, pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<MatrixMode, double, double, double, double, double, double, void> _glMatrixFrustumEXT;
-        
-        public static unsafe void MatrixFrustumEXT(MatrixMode mode, double left, double right, double bottom, double top, double zNear, double zFar)
-        {
-            _glMatrixFrustumEXT(mode, left, right, bottom, top, zNear, zFar);
-        }
-        
-        public static unsafe delegate*<int, MatrixIndexPointerTypeARB, int, IntPtr, void> _glMatrixIndexPointerARB;
-        
-        public static unsafe void MatrixIndexPointerARB(int size, MatrixIndexPointerTypeARB type, int stride, IntPtr pointer)
-        {
-            _glMatrixIndexPointerARB(size, type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<int, MatrixIndexPointerTypeARB, int, IntPtr, void> _glMatrixIndexPointerOES;
-        
-        public static unsafe void MatrixIndexPointerOES(int size, MatrixIndexPointerTypeARB type, int stride, IntPtr pointer)
-        {
-            _glMatrixIndexPointerOES(size, type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glMatrixIndexubvARB;
-        
-        public static unsafe void MatrixIndexubvARB(int size, ref byte indices)
-        {
-            _glMatrixIndexubvARB(size, (IntPtr)indices);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glMatrixIndexuivARB;
-        
-        public static unsafe void MatrixIndexuivARB(int size, ref uint indices)
-        {
-            _glMatrixIndexuivARB(size, (IntPtr)indices);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glMatrixIndexusvARB;
-        
-        public static unsafe void MatrixIndexusvARB(int size, ref ushort indices)
-        {
-            _glMatrixIndexusvARB(size, (IntPtr)indices);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glMatrixLoad3x2fNV;
-        
-        public static unsafe void MatrixLoad3x2fNV(uint matrixMode, ref float m)
-        {
-            _glMatrixLoad3x2fNV(matrixMode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glMatrixLoad3x3fNV;
-        
-        public static unsafe void MatrixLoad3x3fNV(uint matrixMode, ref float m)
-        {
-            _glMatrixLoad3x3fNV(matrixMode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<MatrixMode, void> _glMatrixLoadIdentityEXT;
-        
-        public static unsafe void MatrixLoadIdentityEXT(MatrixMode mode)
-        {
-            _glMatrixLoadIdentityEXT(mode);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glMatrixLoadTranspose3x3fNV;
-        
-        public static unsafe void MatrixLoadTranspose3x3fNV(uint matrixMode, ref float m)
-        {
-            _glMatrixLoadTranspose3x3fNV(matrixMode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<MatrixMode, IntPtr, void> _glMatrixLoadTransposedEXT;
-        
-        public static unsafe void MatrixLoadTransposedEXT(MatrixMode mode, ref double m)
-        {
-            _glMatrixLoadTransposedEXT(mode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<MatrixMode, IntPtr, void> _glMatrixLoadTransposefEXT;
-        
-        public static unsafe void MatrixLoadTransposefEXT(MatrixMode mode, ref float m)
-        {
-            _glMatrixLoadTransposefEXT(mode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<MatrixMode, IntPtr, void> _glMatrixLoaddEXT;
-        
-        public static unsafe void MatrixLoaddEXT(MatrixMode mode, ref double m)
-        {
-            _glMatrixLoaddEXT(mode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<MatrixMode, IntPtr, void> _glMatrixLoadfEXT;
-        
-        public static unsafe void MatrixLoadfEXT(MatrixMode mode, ref float m)
-        {
-            _glMatrixLoadfEXT(mode, (IntPtr)m);
-        }
-        
         public static unsafe delegate*<MatrixMode, void> _glMatrixMode;
         
         public static unsafe void MatrixMode(MatrixMode mode)
         {
             _glMatrixMode(mode);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glMatrixMult3x2fNV;
-        
-        public static unsafe void MatrixMult3x2fNV(uint matrixMode, ref float m)
-        {
-            _glMatrixMult3x2fNV(matrixMode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glMatrixMult3x3fNV;
-        
-        public static unsafe void MatrixMult3x3fNV(uint matrixMode, ref float m)
-        {
-            _glMatrixMult3x3fNV(matrixMode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glMatrixMultTranspose3x3fNV;
-        
-        public static unsafe void MatrixMultTranspose3x3fNV(uint matrixMode, ref float m)
-        {
-            _glMatrixMultTranspose3x3fNV(matrixMode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<MatrixMode, IntPtr, void> _glMatrixMultTransposedEXT;
-        
-        public static unsafe void MatrixMultTransposedEXT(MatrixMode mode, ref double m)
-        {
-            _glMatrixMultTransposedEXT(mode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<MatrixMode, IntPtr, void> _glMatrixMultTransposefEXT;
-        
-        public static unsafe void MatrixMultTransposefEXT(MatrixMode mode, ref float m)
-        {
-            _glMatrixMultTransposefEXT(mode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<MatrixMode, IntPtr, void> _glMatrixMultdEXT;
-        
-        public static unsafe void MatrixMultdEXT(MatrixMode mode, ref double m)
-        {
-            _glMatrixMultdEXT(mode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<MatrixMode, IntPtr, void> _glMatrixMultfEXT;
-        
-        public static unsafe void MatrixMultfEXT(MatrixMode mode, ref float m)
-        {
-            _glMatrixMultfEXT(mode, (IntPtr)m);
-        }
-        
-        public static unsafe delegate*<MatrixMode, double, double, double, double, double, double, void> _glMatrixOrthoEXT;
-        
-        public static unsafe void MatrixOrthoEXT(MatrixMode mode, double left, double right, double bottom, double top, double zNear, double zFar)
-        {
-            _glMatrixOrthoEXT(mode, left, right, bottom, top, zNear, zFar);
-        }
-        
-        public static unsafe delegate*<MatrixMode, void> _glMatrixPopEXT;
-        
-        public static unsafe void MatrixPopEXT(MatrixMode mode)
-        {
-            _glMatrixPopEXT(mode);
-        }
-        
-        public static unsafe delegate*<MatrixMode, void> _glMatrixPushEXT;
-        
-        public static unsafe void MatrixPushEXT(MatrixMode mode)
-        {
-            _glMatrixPushEXT(mode);
-        }
-        
-        public static unsafe delegate*<MatrixMode, double, double, double, double, void> _glMatrixRotatedEXT;
-        
-        public static unsafe void MatrixRotatedEXT(MatrixMode mode, double angle, double x, double y, double z)
-        {
-            _glMatrixRotatedEXT(mode, angle, x, y, z);
-        }
-        
-        public static unsafe delegate*<MatrixMode, float, float, float, float, void> _glMatrixRotatefEXT;
-        
-        public static unsafe void MatrixRotatefEXT(MatrixMode mode, float angle, float x, float y, float z)
-        {
-            _glMatrixRotatefEXT(mode, angle, x, y, z);
-        }
-        
-        public static unsafe delegate*<MatrixMode, double, double, double, void> _glMatrixScaledEXT;
-        
-        public static unsafe void MatrixScaledEXT(MatrixMode mode, double x, double y, double z)
-        {
-            _glMatrixScaledEXT(mode, x, y, z);
-        }
-        
-        public static unsafe delegate*<MatrixMode, float, float, float, void> _glMatrixScalefEXT;
-        
-        public static unsafe void MatrixScalefEXT(MatrixMode mode, float x, float y, float z)
-        {
-            _glMatrixScalefEXT(mode, x, y, z);
-        }
-        
-        public static unsafe delegate*<MatrixMode, double, double, double, void> _glMatrixTranslatedEXT;
-        
-        public static unsafe void MatrixTranslatedEXT(MatrixMode mode, double x, double y, double z)
-        {
-            _glMatrixTranslatedEXT(mode, x, y, z);
-        }
-        
-        public static unsafe delegate*<MatrixMode, float, float, float, void> _glMatrixTranslatefEXT;
-        
-        public static unsafe void MatrixTranslatefEXT(MatrixMode mode, float x, float y, float z)
-        {
-            _glMatrixTranslatefEXT(mode, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, void> _glMaxShaderCompilerThreadsKHR;
-        
-        public static unsafe void MaxShaderCompilerThreadsKHR(uint count)
-        {
-            _glMaxShaderCompilerThreadsKHR(count);
-        }
-        
-        public static unsafe delegate*<uint, void> _glMaxShaderCompilerThreadsARB;
-        
-        public static unsafe void MaxShaderCompilerThreadsARB(uint count)
-        {
-            _glMaxShaderCompilerThreadsARB(count);
         }
         
         public static unsafe delegate*<uint, void> _glMemoryBarrier;
@@ -11164,53 +3506,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMemoryBarrierByRegion(barriers);
         }
         
-        public static unsafe delegate*<uint, void> _glMemoryBarrierEXT;
-        
-        public static unsafe void MemoryBarrierEXT(uint barriers)
-        {
-            _glMemoryBarrierEXT(barriers);
-        }
-        
-        public static unsafe delegate*<uint, MemoryObjectParameterName, IntPtr, void> _glMemoryObjectParameterivEXT;
-        
-        public static unsafe void MemoryObjectParameterivEXT(uint memoryObject, MemoryObjectParameterName pname, ref int @params)
-        {
-            _glMemoryObjectParameterivEXT(memoryObject, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<float, void> _glMinSampleShading;
         
         public static unsafe void MinSampleShading(float value)
         {
             _glMinSampleShading(value);
-        }
-        
-        public static unsafe delegate*<float, void> _glMinSampleShadingARB;
-        
-        public static unsafe void MinSampleShadingARB(float value)
-        {
-            _glMinSampleShadingARB(value);
-        }
-        
-        public static unsafe delegate*<float, void> _glMinSampleShadingOES;
-        
-        public static unsafe void MinSampleShadingOES(float value)
-        {
-            _glMinSampleShadingOES(value);
-        }
-        
-        public static unsafe delegate*<MinmaxTargetEXT, InternalFormat, byte, void> _glMinmax;
-        
-        public static unsafe void Minmax(MinmaxTargetEXT target, InternalFormat internalformat, byte sink)
-        {
-            _glMinmax(target, internalformat, sink);
-        }
-        
-        public static unsafe delegate*<MinmaxTargetEXT, InternalFormat, byte, void> _glMinmaxEXT;
-        
-        public static unsafe void MinmaxEXT(MinmaxTargetEXT target, InternalFormat internalformat, byte sink)
-        {
-            _glMinmaxEXT(target, internalformat, sink);
         }
         
         public static unsafe delegate*<IntPtr, void> _glMultMatrixd;
@@ -11227,32 +3527,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultMatrixf((IntPtr)m);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glMultMatrixx;
-        
-        public static unsafe void MultMatrixx(ref int m)
-        {
-            _glMultMatrixx((IntPtr)m);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glMultMatrixxOES;
-        
-        public static unsafe void MultMatrixxOES(ref int m)
-        {
-            _glMultMatrixxOES((IntPtr)m);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glMultTransposeMatrixd;
         
         public static unsafe void MultTransposeMatrixd(ref double m)
         {
             _glMultTransposeMatrixd((IntPtr)m);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glMultTransposeMatrixdARB;
-        
-        public static unsafe void MultTransposeMatrixdARB(ref double m)
-        {
-            _glMultTransposeMatrixdARB((IntPtr)m);
         }
         
         public static unsafe delegate*<IntPtr, void> _glMultTransposeMatrixf;
@@ -11262,32 +3541,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultTransposeMatrixf((IntPtr)m);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glMultTransposeMatrixfARB;
-        
-        public static unsafe void MultTransposeMatrixfARB(ref float m)
-        {
-            _glMultTransposeMatrixfARB((IntPtr)m);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glMultTransposeMatrixxOES;
-        
-        public static unsafe void MultTransposeMatrixxOES(ref int m)
-        {
-            _glMultTransposeMatrixxOES((IntPtr)m);
-        }
-        
         public static unsafe delegate*<PrimitiveType, IntPtr, IntPtr, int, void> _glMultiDrawArrays;
         
         public static unsafe void MultiDrawArrays(PrimitiveType mode, ref int first, ref int count, int drawcount)
         {
             _glMultiDrawArrays(mode, (IntPtr)first, (IntPtr)count, drawcount);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, IntPtr, IntPtr, int, void> _glMultiDrawArraysEXT;
-        
-        public static unsafe void MultiDrawArraysEXT(PrimitiveType mode, ref int first, ref int count, int primcount)
-        {
-            _glMultiDrawArraysEXT(mode, (IntPtr)first, (IntPtr)count, primcount);
         }
         
         public static unsafe delegate*<PrimitiveType, IntPtr, int, int, void> _glMultiDrawArraysIndirect;
@@ -11297,53 +3555,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiDrawArraysIndirect(mode, (IntPtr)indirect, drawcount, stride);
         }
         
-        public static unsafe delegate*<PrimitiveType, IntPtr, int, int, void> _glMultiDrawArraysIndirectAMD;
-        
-        public static unsafe void MultiDrawArraysIndirectAMD(PrimitiveType mode, IntPtr indirect, int primcount, int stride)
-        {
-            _glMultiDrawArraysIndirectAMD(mode, (IntPtr)indirect, primcount, stride);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, IntPtr, int, int, int, int, void> _glMultiDrawArraysIndirectBindlessCountNV;
-        
-        public static unsafe void MultiDrawArraysIndirectBindlessCountNV(PrimitiveType mode, IntPtr indirect, int drawCount, int maxDrawCount, int stride, int vertexBufferCount)
-        {
-            _glMultiDrawArraysIndirectBindlessCountNV(mode, (IntPtr)indirect, drawCount, maxDrawCount, stride, vertexBufferCount);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, IntPtr, int, int, int, void> _glMultiDrawArraysIndirectBindlessNV;
-        
-        public static unsafe void MultiDrawArraysIndirectBindlessNV(PrimitiveType mode, IntPtr indirect, int drawCount, int stride, int vertexBufferCount)
-        {
-            _glMultiDrawArraysIndirectBindlessNV(mode, (IntPtr)indirect, drawCount, stride, vertexBufferCount);
-        }
-        
         public static unsafe delegate*<PrimitiveType, IntPtr, long, int, int, void> _glMultiDrawArraysIndirectCount;
         
         public static unsafe void MultiDrawArraysIndirectCount(PrimitiveType mode, IntPtr indirect, long drawcount, int maxdrawcount, int stride)
         {
             _glMultiDrawArraysIndirectCount(mode, (IntPtr)indirect, drawcount, maxdrawcount, stride);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, IntPtr, long, int, int, void> _glMultiDrawArraysIndirectCountARB;
-        
-        public static unsafe void MultiDrawArraysIndirectCountARB(PrimitiveType mode, IntPtr indirect, long drawcount, int maxdrawcount, int stride)
-        {
-            _glMultiDrawArraysIndirectCountARB(mode, (IntPtr)indirect, drawcount, maxdrawcount, stride);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, IntPtr, int, int, void> _glMultiDrawArraysIndirectEXT;
-        
-        public static unsafe void MultiDrawArraysIndirectEXT(PrimitiveType mode, IntPtr indirect, int drawcount, int stride)
-        {
-            _glMultiDrawArraysIndirectEXT(mode, (IntPtr)indirect, drawcount, stride);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, IntPtr, IntPtr, int, void> _glMultiDrawElementArrayAPPLE;
-        
-        public static unsafe void MultiDrawElementArrayAPPLE(PrimitiveType mode, ref int first, ref int count, int primcount)
-        {
-            _glMultiDrawElementArrayAPPLE(mode, (IntPtr)first, (IntPtr)count, primcount);
         }
         
         public static unsafe delegate*<PrimitiveType, IntPtr, DrawElementsType, IntPtr, int, void> _glMultiDrawElements;
@@ -11360,46 +3576,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiDrawElementsBaseVertex(mode, (IntPtr)count, type, (IntPtr)indices, drawcount, (IntPtr)basevertex);
         }
         
-        public static unsafe delegate*<PrimitiveType, IntPtr, DrawElementsType, IntPtr, int, IntPtr, void> _glMultiDrawElementsBaseVertexEXT;
-        
-        public static unsafe void MultiDrawElementsBaseVertexEXT(PrimitiveType mode, ref int count, DrawElementsType type, out IntPtr indices, int drawcount, ref int basevertex)
-        {
-            _glMultiDrawElementsBaseVertexEXT(mode, (IntPtr)count, type, (IntPtr)indices, drawcount, (IntPtr)basevertex);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, IntPtr, DrawElementsType, IntPtr, int, void> _glMultiDrawElementsEXT;
-        
-        public static unsafe void MultiDrawElementsEXT(PrimitiveType mode, ref int count, DrawElementsType type, out IntPtr indices, int primcount)
-        {
-            _glMultiDrawElementsEXT(mode, (IntPtr)count, type, (IntPtr)indices, primcount);
-        }
-        
         public static unsafe delegate*<PrimitiveType, DrawElementsType, IntPtr, int, int, void> _glMultiDrawElementsIndirect;
         
         public static unsafe void MultiDrawElementsIndirect(PrimitiveType mode, DrawElementsType type, IntPtr indirect, int drawcount, int stride)
         {
             _glMultiDrawElementsIndirect(mode, type, (IntPtr)indirect, drawcount, stride);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, DrawElementsType, IntPtr, int, int, void> _glMultiDrawElementsIndirectAMD;
-        
-        public static unsafe void MultiDrawElementsIndirectAMD(PrimitiveType mode, DrawElementsType type, IntPtr indirect, int primcount, int stride)
-        {
-            _glMultiDrawElementsIndirectAMD(mode, type, (IntPtr)indirect, primcount, stride);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, DrawElementsType, IntPtr, int, int, int, int, void> _glMultiDrawElementsIndirectBindlessCountNV;
-        
-        public static unsafe void MultiDrawElementsIndirectBindlessCountNV(PrimitiveType mode, DrawElementsType type, IntPtr indirect, int drawCount, int maxDrawCount, int stride, int vertexBufferCount)
-        {
-            _glMultiDrawElementsIndirectBindlessCountNV(mode, type, (IntPtr)indirect, drawCount, maxDrawCount, stride, vertexBufferCount);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, DrawElementsType, IntPtr, int, int, int, void> _glMultiDrawElementsIndirectBindlessNV;
-        
-        public static unsafe void MultiDrawElementsIndirectBindlessNV(PrimitiveType mode, DrawElementsType type, IntPtr indirect, int drawCount, int stride, int vertexBufferCount)
-        {
-            _glMultiDrawElementsIndirectBindlessNV(mode, type, (IntPtr)indirect, drawCount, stride, vertexBufferCount);
         }
         
         public static unsafe delegate*<PrimitiveType, DrawElementsType, IntPtr, long, int, int, void> _glMultiDrawElementsIndirectCount;
@@ -11409,88 +3590,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiDrawElementsIndirectCount(mode, type, (IntPtr)indirect, drawcount, maxdrawcount, stride);
         }
         
-        public static unsafe delegate*<PrimitiveType, DrawElementsType, IntPtr, long, int, int, void> _glMultiDrawElementsIndirectCountARB;
-        
-        public static unsafe void MultiDrawElementsIndirectCountARB(PrimitiveType mode, DrawElementsType type, IntPtr indirect, long drawcount, int maxdrawcount, int stride)
-        {
-            _glMultiDrawElementsIndirectCountARB(mode, type, (IntPtr)indirect, drawcount, maxdrawcount, stride);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, DrawElementsType, IntPtr, int, int, void> _glMultiDrawElementsIndirectEXT;
-        
-        public static unsafe void MultiDrawElementsIndirectEXT(PrimitiveType mode, DrawElementsType type, IntPtr indirect, int drawcount, int stride)
-        {
-            _glMultiDrawElementsIndirectEXT(mode, type, (IntPtr)indirect, drawcount, stride);
-        }
-        
-        public static unsafe delegate*<long, int, int, void> _glMultiDrawMeshTasksIndirectNV;
-        
-        public static unsafe void MultiDrawMeshTasksIndirectNV(long indirect, int drawcount, int stride)
-        {
-            _glMultiDrawMeshTasksIndirectNV(indirect, drawcount, stride);
-        }
-        
-        public static unsafe delegate*<long, long, int, int, void> _glMultiDrawMeshTasksIndirectCountNV;
-        
-        public static unsafe void MultiDrawMeshTasksIndirectCountNV(long indirect, long drawcount, int maxdrawcount, int stride)
-        {
-            _glMultiDrawMeshTasksIndirectCountNV(indirect, drawcount, maxdrawcount, stride);
-        }
-        
-        public static unsafe delegate*<PrimitiveType, uint, uint, IntPtr, IntPtr, int, void> _glMultiDrawRangeElementArrayAPPLE;
-        
-        public static unsafe void MultiDrawRangeElementArrayAPPLE(PrimitiveType mode, uint start, uint end, ref int first, ref int count, int primcount)
-        {
-            _glMultiDrawRangeElementArrayAPPLE(mode, start, end, (IntPtr)first, (IntPtr)count, primcount);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, int, int, void> _glMultiModeDrawArraysIBM;
-        
-        public static unsafe void MultiModeDrawArraysIBM(ref PrimitiveType mode, ref int first, ref int count, int primcount, int modestride)
-        {
-            _glMultiModeDrawArraysIBM((IntPtr)mode, (IntPtr)first, (IntPtr)count, primcount, modestride);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, DrawElementsType, IntPtr, int, int, void> _glMultiModeDrawElementsIBM;
-        
-        public static unsafe void MultiModeDrawElementsIBM(ref PrimitiveType mode, ref int count, DrawElementsType type, out IntPtr indices, int primcount, int modestride)
-        {
-            _glMultiModeDrawElementsIBM((IntPtr)mode, (IntPtr)count, type, (IntPtr)indices, primcount, modestride);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, InternalFormat, uint, void> _glMultiTexBufferEXT;
-        
-        public static unsafe void MultiTexBufferEXT(TextureUnit texunit, TextureTarget target, InternalFormat internalformat, uint buffer)
-        {
-            _glMultiTexBufferEXT(texunit, target, internalformat, buffer);
-        }
-        
-        public static unsafe delegate*<TextureUnit, sbyte, void> _glMultiTexCoord1bOES;
-        
-        public static unsafe void MultiTexCoord1bOES(TextureUnit texture, sbyte s)
-        {
-            _glMultiTexCoord1bOES(texture, s);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord1bvOES;
-        
-        public static unsafe void MultiTexCoord1bvOES(TextureUnit texture, ref sbyte coords)
-        {
-            _glMultiTexCoord1bvOES(texture, (IntPtr)coords);
-        }
-        
         public static unsafe delegate*<TextureUnit, double, void> _glMultiTexCoord1d;
         
         public static unsafe void MultiTexCoord1d(TextureUnit target, double s)
         {
             _glMultiTexCoord1d(target, s);
-        }
-        
-        public static unsafe delegate*<TextureUnit, double, void> _glMultiTexCoord1dARB;
-        
-        public static unsafe void MultiTexCoord1dARB(TextureUnit target, double s)
-        {
-            _glMultiTexCoord1dARB(target, s);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord1dv;
@@ -11500,25 +3604,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord1dv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord1dvARB;
-        
-        public static unsafe void MultiTexCoord1dvARB(TextureUnit target, ref double v)
-        {
-            _glMultiTexCoord1dvARB(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, float, void> _glMultiTexCoord1f;
         
         public static unsafe void MultiTexCoord1f(TextureUnit target, float s)
         {
             _glMultiTexCoord1f(target, s);
-        }
-        
-        public static unsafe delegate*<TextureUnit, float, void> _glMultiTexCoord1fARB;
-        
-        public static unsafe void MultiTexCoord1fARB(TextureUnit target, float s)
-        {
-            _glMultiTexCoord1fARB(target, s);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord1fv;
@@ -11528,39 +3618,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord1fv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord1fvARB;
-        
-        public static unsafe void MultiTexCoord1fvARB(TextureUnit target, ref float v)
-        {
-            _glMultiTexCoord1fvARB(target, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<TextureUnit, ushort, void> _glMultiTexCoord1hNV;
-        
-        public static unsafe void MultiTexCoord1hNV(TextureUnit target, ushort s)
-        {
-            _glMultiTexCoord1hNV(target, s);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord1hvNV;
-        
-        public static unsafe void MultiTexCoord1hvNV(TextureUnit target, ref ushort v)
-        {
-            _glMultiTexCoord1hvNV(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, int, void> _glMultiTexCoord1i;
         
         public static unsafe void MultiTexCoord1i(TextureUnit target, int s)
         {
             _glMultiTexCoord1i(target, s);
-        }
-        
-        public static unsafe delegate*<TextureUnit, int, void> _glMultiTexCoord1iARB;
-        
-        public static unsafe void MultiTexCoord1iARB(TextureUnit target, int s)
-        {
-            _glMultiTexCoord1iARB(target, s);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord1iv;
@@ -11570,25 +3632,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord1iv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord1ivARB;
-        
-        public static unsafe void MultiTexCoord1ivARB(TextureUnit target, ref int v)
-        {
-            _glMultiTexCoord1ivARB(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, short, void> _glMultiTexCoord1s;
         
         public static unsafe void MultiTexCoord1s(TextureUnit target, short s)
         {
             _glMultiTexCoord1s(target, s);
-        }
-        
-        public static unsafe delegate*<TextureUnit, short, void> _glMultiTexCoord1sARB;
-        
-        public static unsafe void MultiTexCoord1sARB(TextureUnit target, short s)
-        {
-            _glMultiTexCoord1sARB(target, s);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord1sv;
@@ -11598,53 +3646,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord1sv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord1svARB;
-        
-        public static unsafe void MultiTexCoord1svARB(TextureUnit target, ref short v)
-        {
-            _glMultiTexCoord1svARB(target, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<TextureUnit, int, void> _glMultiTexCoord1xOES;
-        
-        public static unsafe void MultiTexCoord1xOES(TextureUnit texture, int s)
-        {
-            _glMultiTexCoord1xOES(texture, s);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord1xvOES;
-        
-        public static unsafe void MultiTexCoord1xvOES(TextureUnit texture, ref int coords)
-        {
-            _glMultiTexCoord1xvOES(texture, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<TextureUnit, sbyte, sbyte, void> _glMultiTexCoord2bOES;
-        
-        public static unsafe void MultiTexCoord2bOES(TextureUnit texture, sbyte s, sbyte t)
-        {
-            _glMultiTexCoord2bOES(texture, s, t);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord2bvOES;
-        
-        public static unsafe void MultiTexCoord2bvOES(TextureUnit texture, ref sbyte coords)
-        {
-            _glMultiTexCoord2bvOES(texture, (IntPtr)coords);
-        }
-        
         public static unsafe delegate*<TextureUnit, double, double, void> _glMultiTexCoord2d;
         
         public static unsafe void MultiTexCoord2d(TextureUnit target, double s, double t)
         {
             _glMultiTexCoord2d(target, s, t);
-        }
-        
-        public static unsafe delegate*<TextureUnit, double, double, void> _glMultiTexCoord2dARB;
-        
-        public static unsafe void MultiTexCoord2dARB(TextureUnit target, double s, double t)
-        {
-            _glMultiTexCoord2dARB(target, s, t);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord2dv;
@@ -11654,25 +3660,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord2dv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord2dvARB;
-        
-        public static unsafe void MultiTexCoord2dvARB(TextureUnit target, ref double v)
-        {
-            _glMultiTexCoord2dvARB(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, float, float, void> _glMultiTexCoord2f;
         
         public static unsafe void MultiTexCoord2f(TextureUnit target, float s, float t)
         {
             _glMultiTexCoord2f(target, s, t);
-        }
-        
-        public static unsafe delegate*<TextureUnit, float, float, void> _glMultiTexCoord2fARB;
-        
-        public static unsafe void MultiTexCoord2fARB(TextureUnit target, float s, float t)
-        {
-            _glMultiTexCoord2fARB(target, s, t);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord2fv;
@@ -11682,39 +3674,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord2fv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord2fvARB;
-        
-        public static unsafe void MultiTexCoord2fvARB(TextureUnit target, ref float v)
-        {
-            _glMultiTexCoord2fvARB(target, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<TextureUnit, ushort, ushort, void> _glMultiTexCoord2hNV;
-        
-        public static unsafe void MultiTexCoord2hNV(TextureUnit target, ushort s, ushort t)
-        {
-            _glMultiTexCoord2hNV(target, s, t);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord2hvNV;
-        
-        public static unsafe void MultiTexCoord2hvNV(TextureUnit target, ref ushort v)
-        {
-            _glMultiTexCoord2hvNV(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, int, int, void> _glMultiTexCoord2i;
         
         public static unsafe void MultiTexCoord2i(TextureUnit target, int s, int t)
         {
             _glMultiTexCoord2i(target, s, t);
-        }
-        
-        public static unsafe delegate*<TextureUnit, int, int, void> _glMultiTexCoord2iARB;
-        
-        public static unsafe void MultiTexCoord2iARB(TextureUnit target, int s, int t)
-        {
-            _glMultiTexCoord2iARB(target, s, t);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord2iv;
@@ -11724,25 +3688,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord2iv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord2ivARB;
-        
-        public static unsafe void MultiTexCoord2ivARB(TextureUnit target, ref int v)
-        {
-            _glMultiTexCoord2ivARB(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, short, short, void> _glMultiTexCoord2s;
         
         public static unsafe void MultiTexCoord2s(TextureUnit target, short s, short t)
         {
             _glMultiTexCoord2s(target, s, t);
-        }
-        
-        public static unsafe delegate*<TextureUnit, short, short, void> _glMultiTexCoord2sARB;
-        
-        public static unsafe void MultiTexCoord2sARB(TextureUnit target, short s, short t)
-        {
-            _glMultiTexCoord2sARB(target, s, t);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord2sv;
@@ -11752,53 +3702,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord2sv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord2svARB;
-        
-        public static unsafe void MultiTexCoord2svARB(TextureUnit target, ref short v)
-        {
-            _glMultiTexCoord2svARB(target, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<TextureUnit, int, int, void> _glMultiTexCoord2xOES;
-        
-        public static unsafe void MultiTexCoord2xOES(TextureUnit texture, int s, int t)
-        {
-            _glMultiTexCoord2xOES(texture, s, t);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord2xvOES;
-        
-        public static unsafe void MultiTexCoord2xvOES(TextureUnit texture, ref int coords)
-        {
-            _glMultiTexCoord2xvOES(texture, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<TextureUnit, sbyte, sbyte, sbyte, void> _glMultiTexCoord3bOES;
-        
-        public static unsafe void MultiTexCoord3bOES(TextureUnit texture, sbyte s, sbyte t, sbyte r)
-        {
-            _glMultiTexCoord3bOES(texture, s, t, r);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord3bvOES;
-        
-        public static unsafe void MultiTexCoord3bvOES(TextureUnit texture, ref sbyte coords)
-        {
-            _glMultiTexCoord3bvOES(texture, (IntPtr)coords);
-        }
-        
         public static unsafe delegate*<TextureUnit, double, double, double, void> _glMultiTexCoord3d;
         
         public static unsafe void MultiTexCoord3d(TextureUnit target, double s, double t, double r)
         {
             _glMultiTexCoord3d(target, s, t, r);
-        }
-        
-        public static unsafe delegate*<TextureUnit, double, double, double, void> _glMultiTexCoord3dARB;
-        
-        public static unsafe void MultiTexCoord3dARB(TextureUnit target, double s, double t, double r)
-        {
-            _glMultiTexCoord3dARB(target, s, t, r);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord3dv;
@@ -11808,25 +3716,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord3dv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord3dvARB;
-        
-        public static unsafe void MultiTexCoord3dvARB(TextureUnit target, ref double v)
-        {
-            _glMultiTexCoord3dvARB(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, float, float, float, void> _glMultiTexCoord3f;
         
         public static unsafe void MultiTexCoord3f(TextureUnit target, float s, float t, float r)
         {
             _glMultiTexCoord3f(target, s, t, r);
-        }
-        
-        public static unsafe delegate*<TextureUnit, float, float, float, void> _glMultiTexCoord3fARB;
-        
-        public static unsafe void MultiTexCoord3fARB(TextureUnit target, float s, float t, float r)
-        {
-            _glMultiTexCoord3fARB(target, s, t, r);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord3fv;
@@ -11836,39 +3730,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord3fv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord3fvARB;
-        
-        public static unsafe void MultiTexCoord3fvARB(TextureUnit target, ref float v)
-        {
-            _glMultiTexCoord3fvARB(target, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<TextureUnit, ushort, ushort, ushort, void> _glMultiTexCoord3hNV;
-        
-        public static unsafe void MultiTexCoord3hNV(TextureUnit target, ushort s, ushort t, ushort r)
-        {
-            _glMultiTexCoord3hNV(target, s, t, r);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord3hvNV;
-        
-        public static unsafe void MultiTexCoord3hvNV(TextureUnit target, ref ushort v)
-        {
-            _glMultiTexCoord3hvNV(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, int, int, int, void> _glMultiTexCoord3i;
         
         public static unsafe void MultiTexCoord3i(TextureUnit target, int s, int t, int r)
         {
             _glMultiTexCoord3i(target, s, t, r);
-        }
-        
-        public static unsafe delegate*<TextureUnit, int, int, int, void> _glMultiTexCoord3iARB;
-        
-        public static unsafe void MultiTexCoord3iARB(TextureUnit target, int s, int t, int r)
-        {
-            _glMultiTexCoord3iARB(target, s, t, r);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord3iv;
@@ -11878,25 +3744,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord3iv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord3ivARB;
-        
-        public static unsafe void MultiTexCoord3ivARB(TextureUnit target, ref int v)
-        {
-            _glMultiTexCoord3ivARB(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, short, short, short, void> _glMultiTexCoord3s;
         
         public static unsafe void MultiTexCoord3s(TextureUnit target, short s, short t, short r)
         {
             _glMultiTexCoord3s(target, s, t, r);
-        }
-        
-        public static unsafe delegate*<TextureUnit, short, short, short, void> _glMultiTexCoord3sARB;
-        
-        public static unsafe void MultiTexCoord3sARB(TextureUnit target, short s, short t, short r)
-        {
-            _glMultiTexCoord3sARB(target, s, t, r);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord3sv;
@@ -11906,53 +3758,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord3sv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord3svARB;
-        
-        public static unsafe void MultiTexCoord3svARB(TextureUnit target, ref short v)
-        {
-            _glMultiTexCoord3svARB(target, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<TextureUnit, int, int, int, void> _glMultiTexCoord3xOES;
-        
-        public static unsafe void MultiTexCoord3xOES(TextureUnit texture, int s, int t, int r)
-        {
-            _glMultiTexCoord3xOES(texture, s, t, r);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord3xvOES;
-        
-        public static unsafe void MultiTexCoord3xvOES(TextureUnit texture, ref int coords)
-        {
-            _glMultiTexCoord3xvOES(texture, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<TextureUnit, sbyte, sbyte, sbyte, sbyte, void> _glMultiTexCoord4bOES;
-        
-        public static unsafe void MultiTexCoord4bOES(TextureUnit texture, sbyte s, sbyte t, sbyte r, sbyte q)
-        {
-            _glMultiTexCoord4bOES(texture, s, t, r, q);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord4bvOES;
-        
-        public static unsafe void MultiTexCoord4bvOES(TextureUnit texture, ref sbyte coords)
-        {
-            _glMultiTexCoord4bvOES(texture, (IntPtr)coords);
-        }
-        
         public static unsafe delegate*<TextureUnit, double, double, double, double, void> _glMultiTexCoord4d;
         
         public static unsafe void MultiTexCoord4d(TextureUnit target, double s, double t, double r, double q)
         {
             _glMultiTexCoord4d(target, s, t, r, q);
-        }
-        
-        public static unsafe delegate*<TextureUnit, double, double, double, double, void> _glMultiTexCoord4dARB;
-        
-        public static unsafe void MultiTexCoord4dARB(TextureUnit target, double s, double t, double r, double q)
-        {
-            _glMultiTexCoord4dARB(target, s, t, r, q);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord4dv;
@@ -11962,25 +3772,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord4dv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord4dvARB;
-        
-        public static unsafe void MultiTexCoord4dvARB(TextureUnit target, ref double v)
-        {
-            _glMultiTexCoord4dvARB(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, float, float, float, float, void> _glMultiTexCoord4f;
         
         public static unsafe void MultiTexCoord4f(TextureUnit target, float s, float t, float r, float q)
         {
             _glMultiTexCoord4f(target, s, t, r, q);
-        }
-        
-        public static unsafe delegate*<TextureUnit, float, float, float, float, void> _glMultiTexCoord4fARB;
-        
-        public static unsafe void MultiTexCoord4fARB(TextureUnit target, float s, float t, float r, float q)
-        {
-            _glMultiTexCoord4fARB(target, s, t, r, q);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord4fv;
@@ -11990,39 +3786,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord4fv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord4fvARB;
-        
-        public static unsafe void MultiTexCoord4fvARB(TextureUnit target, ref float v)
-        {
-            _glMultiTexCoord4fvARB(target, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<TextureUnit, ushort, ushort, ushort, ushort, void> _glMultiTexCoord4hNV;
-        
-        public static unsafe void MultiTexCoord4hNV(TextureUnit target, ushort s, ushort t, ushort r, ushort q)
-        {
-            _glMultiTexCoord4hNV(target, s, t, r, q);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord4hvNV;
-        
-        public static unsafe void MultiTexCoord4hvNV(TextureUnit target, ref ushort v)
-        {
-            _glMultiTexCoord4hvNV(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, int, int, int, int, void> _glMultiTexCoord4i;
         
         public static unsafe void MultiTexCoord4i(TextureUnit target, int s, int t, int r, int q)
         {
             _glMultiTexCoord4i(target, s, t, r, q);
-        }
-        
-        public static unsafe delegate*<TextureUnit, int, int, int, int, void> _glMultiTexCoord4iARB;
-        
-        public static unsafe void MultiTexCoord4iARB(TextureUnit target, int s, int t, int r, int q)
-        {
-            _glMultiTexCoord4iARB(target, s, t, r, q);
         }
         
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord4iv;
@@ -12032,13 +3800,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord4iv(target, (IntPtr)v);
         }
         
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord4ivARB;
-        
-        public static unsafe void MultiTexCoord4ivARB(TextureUnit target, ref int v)
-        {
-            _glMultiTexCoord4ivARB(target, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<TextureUnit, short, short, short, short, void> _glMultiTexCoord4s;
         
         public static unsafe void MultiTexCoord4s(TextureUnit target, short s, short t, short r, short q)
@@ -12046,46 +3807,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoord4s(target, s, t, r, q);
         }
         
-        public static unsafe delegate*<TextureUnit, short, short, short, short, void> _glMultiTexCoord4sARB;
-        
-        public static unsafe void MultiTexCoord4sARB(TextureUnit target, short s, short t, short r, short q)
-        {
-            _glMultiTexCoord4sARB(target, s, t, r, q);
-        }
-        
         public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord4sv;
         
         public static unsafe void MultiTexCoord4sv(TextureUnit target, ref short v)
         {
             _glMultiTexCoord4sv(target, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord4svARB;
-        
-        public static unsafe void MultiTexCoord4svARB(TextureUnit target, ref short v)
-        {
-            _glMultiTexCoord4svARB(target, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<TextureUnit, int, int, int, int, void> _glMultiTexCoord4x;
-        
-        public static unsafe void MultiTexCoord4x(TextureUnit texture, int s, int t, int r, int q)
-        {
-            _glMultiTexCoord4x(texture, s, t, r, q);
-        }
-        
-        public static unsafe delegate*<TextureUnit, int, int, int, int, void> _glMultiTexCoord4xOES;
-        
-        public static unsafe void MultiTexCoord4xOES(TextureUnit texture, int s, int t, int r, int q)
-        {
-            _glMultiTexCoord4xOES(texture, s, t, r, q);
-        }
-        
-        public static unsafe delegate*<TextureUnit, IntPtr, void> _glMultiTexCoord4xvOES;
-        
-        public static unsafe void MultiTexCoord4xvOES(TextureUnit texture, ref int coords)
-        {
-            _glMultiTexCoord4xvOES(texture, (IntPtr)coords);
         }
         
         public static unsafe delegate*<TextureUnit, TexCoordPointerType, uint, void> _glMultiTexCoordP1ui;
@@ -12144,312 +3870,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glMultiTexCoordP4uiv(texture, type, (IntPtr)coords);
         }
         
-        public static unsafe delegate*<TextureUnit, int, TexCoordPointerType, int, IntPtr, void> _glMultiTexCoordPointerEXT;
-        
-        public static unsafe void MultiTexCoordPointerEXT(TextureUnit texunit, int size, TexCoordPointerType type, int stride, IntPtr pointer)
-        {
-            _glMultiTexCoordPointerEXT(texunit, size, type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureEnvTarget, TextureEnvParameter, float, void> _glMultiTexEnvfEXT;
-        
-        public static unsafe void MultiTexEnvfEXT(TextureUnit texunit, TextureEnvTarget target, TextureEnvParameter pname, float param)
-        {
-            _glMultiTexEnvfEXT(texunit, target, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureEnvTarget, TextureEnvParameter, IntPtr, void> _glMultiTexEnvfvEXT;
-        
-        public static unsafe void MultiTexEnvfvEXT(TextureUnit texunit, TextureEnvTarget target, TextureEnvParameter pname, ref float @params)
-        {
-            _glMultiTexEnvfvEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureEnvTarget, TextureEnvParameter, int, void> _glMultiTexEnviEXT;
-        
-        public static unsafe void MultiTexEnviEXT(TextureUnit texunit, TextureEnvTarget target, TextureEnvParameter pname, int param)
-        {
-            _glMultiTexEnviEXT(texunit, target, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureEnvTarget, TextureEnvParameter, IntPtr, void> _glMultiTexEnvivEXT;
-        
-        public static unsafe void MultiTexEnvivEXT(TextureUnit texunit, TextureEnvTarget target, TextureEnvParameter pname, ref int @params)
-        {
-            _glMultiTexEnvivEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureCoordName, TextureGenParameter, double, void> _glMultiTexGendEXT;
-        
-        public static unsafe void MultiTexGendEXT(TextureUnit texunit, TextureCoordName coord, TextureGenParameter pname, double param)
-        {
-            _glMultiTexGendEXT(texunit, coord, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureCoordName, TextureGenParameter, IntPtr, void> _glMultiTexGendvEXT;
-        
-        public static unsafe void MultiTexGendvEXT(TextureUnit texunit, TextureCoordName coord, TextureGenParameter pname, ref double @params)
-        {
-            _glMultiTexGendvEXT(texunit, coord, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureCoordName, TextureGenParameter, float, void> _glMultiTexGenfEXT;
-        
-        public static unsafe void MultiTexGenfEXT(TextureUnit texunit, TextureCoordName coord, TextureGenParameter pname, float param)
-        {
-            _glMultiTexGenfEXT(texunit, coord, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureCoordName, TextureGenParameter, IntPtr, void> _glMultiTexGenfvEXT;
-        
-        public static unsafe void MultiTexGenfvEXT(TextureUnit texunit, TextureCoordName coord, TextureGenParameter pname, ref float @params)
-        {
-            _glMultiTexGenfvEXT(texunit, coord, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureCoordName, TextureGenParameter, int, void> _glMultiTexGeniEXT;
-        
-        public static unsafe void MultiTexGeniEXT(TextureUnit texunit, TextureCoordName coord, TextureGenParameter pname, int param)
-        {
-            _glMultiTexGeniEXT(texunit, coord, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureCoordName, TextureGenParameter, IntPtr, void> _glMultiTexGenivEXT;
-        
-        public static unsafe void MultiTexGenivEXT(TextureUnit texunit, TextureCoordName coord, TextureGenParameter pname, ref int @params)
-        {
-            _glMultiTexGenivEXT(texunit, coord, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glMultiTexImage1DEXT;
-        
-        public static unsafe void MultiTexImage1DEXT(TextureUnit texunit, TextureTarget target, int level, int internalformat, int width, int border, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glMultiTexImage1DEXT(texunit, target, level, internalformat, width, border, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glMultiTexImage2DEXT;
-        
-        public static unsafe void MultiTexImage2DEXT(TextureUnit texunit, TextureTarget target, int level, int internalformat, int width, int height, int border, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glMultiTexImage2DEXT(texunit, target, level, internalformat, width, height, border, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glMultiTexImage3DEXT;
-        
-        public static unsafe void MultiTexImage3DEXT(TextureUnit texunit, TextureTarget target, int level, int internalformat, int width, int height, int depth, int border, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glMultiTexImage3DEXT(texunit, target, level, internalformat, width, height, depth, border, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, TextureParameterName, IntPtr, void> _glMultiTexParameterIivEXT;
-        
-        public static unsafe void MultiTexParameterIivEXT(TextureUnit texunit, TextureTarget target, TextureParameterName pname, ref int @params)
-        {
-            _glMultiTexParameterIivEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, TextureParameterName, IntPtr, void> _glMultiTexParameterIuivEXT;
-        
-        public static unsafe void MultiTexParameterIuivEXT(TextureUnit texunit, TextureTarget target, TextureParameterName pname, ref uint @params)
-        {
-            _glMultiTexParameterIuivEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, TextureParameterName, float, void> _glMultiTexParameterfEXT;
-        
-        public static unsafe void MultiTexParameterfEXT(TextureUnit texunit, TextureTarget target, TextureParameterName pname, float param)
-        {
-            _glMultiTexParameterfEXT(texunit, target, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, TextureParameterName, IntPtr, void> _glMultiTexParameterfvEXT;
-        
-        public static unsafe void MultiTexParameterfvEXT(TextureUnit texunit, TextureTarget target, TextureParameterName pname, ref float @params)
-        {
-            _glMultiTexParameterfvEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, TextureParameterName, int, void> _glMultiTexParameteriEXT;
-        
-        public static unsafe void MultiTexParameteriEXT(TextureUnit texunit, TextureTarget target, TextureParameterName pname, int param)
-        {
-            _glMultiTexParameteriEXT(texunit, target, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, TextureParameterName, IntPtr, void> _glMultiTexParameterivEXT;
-        
-        public static unsafe void MultiTexParameterivEXT(TextureUnit texunit, TextureTarget target, TextureParameterName pname, ref int @params)
-        {
-            _glMultiTexParameterivEXT(texunit, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, uint, void> _glMultiTexRenderbufferEXT;
-        
-        public static unsafe void MultiTexRenderbufferEXT(TextureUnit texunit, TextureTarget target, uint renderbuffer)
-        {
-            _glMultiTexRenderbufferEXT(texunit, target, renderbuffer);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, PixelFormat, PixelType, IntPtr, void> _glMultiTexSubImage1DEXT;
-        
-        public static unsafe void MultiTexSubImage1DEXT(TextureUnit texunit, TextureTarget target, int level, int xoffset, int width, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glMultiTexSubImage1DEXT(texunit, target, level, xoffset, width, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glMultiTexSubImage2DEXT;
-        
-        public static unsafe void MultiTexSubImage2DEXT(TextureUnit texunit, TextureTarget target, int level, int xoffset, int yoffset, int width, int height, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glMultiTexSubImage2DEXT(texunit, target, level, xoffset, yoffset, width, height, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<TextureUnit, TextureTarget, int, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glMultiTexSubImage3DEXT;
-        
-        public static unsafe void MultiTexSubImage3DEXT(TextureUnit texunit, TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glMultiTexSubImage3DEXT(texunit, target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<void> _glMulticastBarrierNV;
-        
-        public static unsafe void MulticastBarrierNV()
-        {
-            _glMulticastBarrierNV();
-        }
-        
-        public static unsafe delegate*<uint, uint, int, int, int, int, int, int, int, int, uint, uint, void> _glMulticastBlitFramebufferNV;
-        
-        public static unsafe void MulticastBlitFramebufferNV(uint srcGpu, uint dstGpu, int srcX0, int srcY0, int srcX1, int srcY1, int dstX0, int dstY0, int dstX1, int dstY1, uint mask, uint filter)
-        {
-            _glMulticastBlitFramebufferNV(srcGpu, dstGpu, srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
-        }
-        
-        public static unsafe delegate*<uint, uint, long, long, IntPtr, void> _glMulticastBufferSubDataNV;
-        
-        public static unsafe void MulticastBufferSubDataNV(uint gpuMask, uint buffer, long offset, long size, IntPtr data)
-        {
-            _glMulticastBufferSubDataNV(gpuMask, buffer, offset, size, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, long, long, long, void> _glMulticastCopyBufferSubDataNV;
-        
-        public static unsafe void MulticastCopyBufferSubDataNV(uint readGpu, uint writeGpuMask, uint readBuffer, uint writeBuffer, long readOffset, long writeOffset, long size)
-        {
-            _glMulticastCopyBufferSubDataNV(readGpu, writeGpuMask, readBuffer, writeBuffer, readOffset, writeOffset, size);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, int, int, int, int, uint, uint, int, int, int, int, int, int, int, void> _glMulticastCopyImageSubDataNV;
-        
-        public static unsafe void MulticastCopyImageSubDataNV(uint srcGpu, uint dstGpuMask, uint srcName, uint srcTarget, int srcLevel, int srcX, int srcY, int srcZ, uint dstName, uint dstTarget, int dstLevel, int dstX, int dstY, int dstZ, int srcWidth, int srcHeight, int srcDepth)
-        {
-            _glMulticastCopyImageSubDataNV(srcGpu, dstGpuMask, srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, int, IntPtr, void> _glMulticastFramebufferSampleLocationsfvNV;
-        
-        public static unsafe void MulticastFramebufferSampleLocationsfvNV(uint gpu, uint framebuffer, uint start, int count, ref float v)
-        {
-            _glMulticastFramebufferSampleLocationsfvNV(gpu, framebuffer, start, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glMulticastGetQueryObjecti64vNV;
-        
-        public static unsafe void MulticastGetQueryObjecti64vNV(uint gpu, uint id, uint pname, ref long @params)
-        {
-            _glMulticastGetQueryObjecti64vNV(gpu, id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glMulticastGetQueryObjectivNV;
-        
-        public static unsafe void MulticastGetQueryObjectivNV(uint gpu, uint id, uint pname, ref int @params)
-        {
-            _glMulticastGetQueryObjectivNV(gpu, id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glMulticastGetQueryObjectui64vNV;
-        
-        public static unsafe void MulticastGetQueryObjectui64vNV(uint gpu, uint id, uint pname, ref ulong @params)
-        {
-            _glMulticastGetQueryObjectui64vNV(gpu, id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glMulticastGetQueryObjectuivNV;
-        
-        public static unsafe void MulticastGetQueryObjectuivNV(uint gpu, uint id, uint pname, ref uint @params)
-        {
-            _glMulticastGetQueryObjectuivNV(gpu, id, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, void> _glMulticastScissorArrayvNVX;
-        
-        public static unsafe void MulticastScissorArrayvNVX(uint gpu, uint first, int count, ref int v)
-        {
-            _glMulticastScissorArrayvNVX(gpu, first, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, void> _glMulticastViewportArrayvNVX;
-        
-        public static unsafe void MulticastViewportArrayvNVX(uint gpu, uint first, int count, ref float v)
-        {
-            _glMulticastViewportArrayvNVX(gpu, first, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, uint, float, float, void> _glMulticastViewportPositionWScaleNVX;
-        
-        public static unsafe void MulticastViewportPositionWScaleNVX(uint gpu, uint index, float xcoeff, float ycoeff)
-        {
-            _glMulticastViewportPositionWScaleNVX(gpu, index, xcoeff, ycoeff);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glMulticastWaitSyncNV;
-        
-        public static unsafe void MulticastWaitSyncNV(uint signalGpu, uint waitGpuMask)
-        {
-            _glMulticastWaitSyncNV(signalGpu, waitGpuMask);
-        }
-        
-        public static unsafe delegate*<uint, uint, ulong, void> _glNamedBufferAttachMemoryNV;
-        
-        public static unsafe void NamedBufferAttachMemoryNV(uint buffer, uint memory, ulong offset)
-        {
-            _glNamedBufferAttachMemoryNV(buffer, memory, offset);
-        }
-        
         public static unsafe delegate*<uint, long, IntPtr, VertexBufferObjectUsage, void> _glNamedBufferData;
         
         public static unsafe void NamedBufferData(uint buffer, long size, IntPtr data, VertexBufferObjectUsage usage)
         {
             _glNamedBufferData(buffer, size, (IntPtr)data, usage);
-        }
-        
-        public static unsafe delegate*<uint, long, IntPtr, VertexBufferObjectUsage, void> _glNamedBufferDataEXT;
-        
-        public static unsafe void NamedBufferDataEXT(uint buffer, long size, IntPtr data, VertexBufferObjectUsage usage)
-        {
-            _glNamedBufferDataEXT(buffer, size, (IntPtr)data, usage);
-        }
-        
-        public static unsafe delegate*<uint, long, long, byte, void> _glNamedBufferPageCommitmentARB;
-        
-        public static unsafe void NamedBufferPageCommitmentARB(uint buffer, long offset, long size, byte commit)
-        {
-            _glNamedBufferPageCommitmentARB(buffer, offset, size, commit);
-        }
-        
-        public static unsafe delegate*<uint, long, long, byte, void> _glNamedBufferPageCommitmentEXT;
-        
-        public static unsafe void NamedBufferPageCommitmentEXT(uint buffer, long offset, long size, byte commit)
-        {
-            _glNamedBufferPageCommitmentEXT(buffer, offset, size, commit);
-        }
-        
-        public static unsafe delegate*<uint, long, long, uint, ulong, byte, void> _glNamedBufferPageCommitmentMemNV;
-        
-        public static unsafe void NamedBufferPageCommitmentMemNV(uint buffer, long offset, long size, uint memory, ulong memOffset, byte commit)
-        {
-            _glNamedBufferPageCommitmentMemNV(buffer, offset, size, memory, memOffset, commit);
         }
         
         public static unsafe delegate*<uint, long, IntPtr, uint, void> _glNamedBufferStorage;
@@ -12459,46 +3884,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glNamedBufferStorage(buffer, size, (IntPtr)data, flags);
         }
         
-        public static unsafe delegate*<uint, long, long, IntPtr, uint, void> _glNamedBufferStorageExternalEXT;
-        
-        public static unsafe void NamedBufferStorageExternalEXT(uint buffer, long offset, long size, IntPtr clientBuffer, uint flags)
-        {
-            _glNamedBufferStorageExternalEXT(buffer, offset, size, clientBuffer, flags);
-        }
-        
-        public static unsafe delegate*<uint, long, IntPtr, uint, void> _glNamedBufferStorageEXT;
-        
-        public static unsafe void NamedBufferStorageEXT(uint buffer, long size, IntPtr data, uint flags)
-        {
-            _glNamedBufferStorageEXT(buffer, size, (IntPtr)data, flags);
-        }
-        
-        public static unsafe delegate*<uint, long, uint, ulong, void> _glNamedBufferStorageMemEXT;
-        
-        public static unsafe void NamedBufferStorageMemEXT(uint buffer, long size, uint memory, ulong offset)
-        {
-            _glNamedBufferStorageMemEXT(buffer, size, memory, offset);
-        }
-        
         public static unsafe delegate*<uint, long, long, IntPtr, void> _glNamedBufferSubData;
         
         public static unsafe void NamedBufferSubData(uint buffer, long offset, long size, IntPtr data)
         {
             _glNamedBufferSubData(buffer, offset, size, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, long, long, IntPtr, void> _glNamedBufferSubDataEXT;
-        
-        public static unsafe void NamedBufferSubDataEXT(uint buffer, long offset, long size, IntPtr data)
-        {
-            _glNamedBufferSubDataEXT(buffer, offset, size, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, uint, long, long, long, void> _glNamedCopyBufferSubDataEXT;
-        
-        public static unsafe void NamedCopyBufferSubDataEXT(uint readBuffer, uint writeBuffer, long readOffset, long writeOffset, long size)
-        {
-            _glNamedCopyBufferSubDataEXT(readBuffer, writeBuffer, readOffset, writeOffset, size);
         }
         
         public static unsafe delegate*<uint, ColorBuffer, void> _glNamedFramebufferDrawBuffer;
@@ -12522,13 +3912,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glNamedFramebufferParameteri(framebuffer, pname, param);
         }
         
-        public static unsafe delegate*<uint, FramebufferParameterName, int, void> _glNamedFramebufferParameteriEXT;
-        
-        public static unsafe void NamedFramebufferParameteriEXT(uint framebuffer, FramebufferParameterName pname, int param)
-        {
-            _glNamedFramebufferParameteriEXT(framebuffer, pname, param);
-        }
-        
         public static unsafe delegate*<uint, ColorBuffer, void> _glNamedFramebufferReadBuffer;
         
         public static unsafe void NamedFramebufferReadBuffer(uint framebuffer, ColorBuffer src)
@@ -12543,74 +3926,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glNamedFramebufferRenderbuffer(framebuffer, attachment, renderbuffertarget, renderbuffer);
         }
         
-        public static unsafe delegate*<uint, FramebufferAttachment, RenderbufferTarget, uint, void> _glNamedFramebufferRenderbufferEXT;
-        
-        public static unsafe void NamedFramebufferRenderbufferEXT(uint framebuffer, FramebufferAttachment attachment, RenderbufferTarget renderbuffertarget, uint renderbuffer)
-        {
-            _glNamedFramebufferRenderbufferEXT(framebuffer, attachment, renderbuffertarget, renderbuffer);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, void> _glNamedFramebufferSampleLocationsfvARB;
-        
-        public static unsafe void NamedFramebufferSampleLocationsfvARB(uint framebuffer, uint start, int count, ref float v)
-        {
-            _glNamedFramebufferSampleLocationsfvARB(framebuffer, start, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, void> _glNamedFramebufferSampleLocationsfvNV;
-        
-        public static unsafe void NamedFramebufferSampleLocationsfvNV(uint framebuffer, uint start, int count, ref float v)
-        {
-            _glNamedFramebufferSampleLocationsfvNV(framebuffer, start, count, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, FramebufferAttachment, uint, int, void> _glNamedFramebufferTexture;
         
         public static unsafe void NamedFramebufferTexture(uint framebuffer, FramebufferAttachment attachment, uint texture, int level)
         {
             _glNamedFramebufferTexture(framebuffer, attachment, texture, level);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glNamedFramebufferSamplePositionsfvAMD;
-        
-        public static unsafe void NamedFramebufferSamplePositionsfvAMD(uint framebuffer, uint numsamples, uint pixelindex, ref float values)
-        {
-            _glNamedFramebufferSamplePositionsfvAMD(framebuffer, numsamples, pixelindex, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<uint, FramebufferAttachment, TextureTarget, uint, int, void> _glNamedFramebufferTexture1DEXT;
-        
-        public static unsafe void NamedFramebufferTexture1DEXT(uint framebuffer, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level)
-        {
-            _glNamedFramebufferTexture1DEXT(framebuffer, attachment, textarget, texture, level);
-        }
-        
-        public static unsafe delegate*<uint, FramebufferAttachment, TextureTarget, uint, int, void> _glNamedFramebufferTexture2DEXT;
-        
-        public static unsafe void NamedFramebufferTexture2DEXT(uint framebuffer, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level)
-        {
-            _glNamedFramebufferTexture2DEXT(framebuffer, attachment, textarget, texture, level);
-        }
-        
-        public static unsafe delegate*<uint, FramebufferAttachment, TextureTarget, uint, int, int, void> _glNamedFramebufferTexture3DEXT;
-        
-        public static unsafe void NamedFramebufferTexture3DEXT(uint framebuffer, FramebufferAttachment attachment, TextureTarget textarget, uint texture, int level, int zoffset)
-        {
-            _glNamedFramebufferTexture3DEXT(framebuffer, attachment, textarget, texture, level, zoffset);
-        }
-        
-        public static unsafe delegate*<uint, FramebufferAttachment, uint, int, void> _glNamedFramebufferTextureEXT;
-        
-        public static unsafe void NamedFramebufferTextureEXT(uint framebuffer, FramebufferAttachment attachment, uint texture, int level)
-        {
-            _glNamedFramebufferTextureEXT(framebuffer, attachment, texture, level);
-        }
-        
-        public static unsafe delegate*<uint, FramebufferAttachment, uint, int, TextureTarget, void> _glNamedFramebufferTextureFaceEXT;
-        
-        public static unsafe void NamedFramebufferTextureFaceEXT(uint framebuffer, FramebufferAttachment attachment, uint texture, int level, TextureTarget face)
-        {
-            _glNamedFramebufferTextureFaceEXT(framebuffer, attachment, texture, level, face);
         }
         
         public static unsafe delegate*<uint, FramebufferAttachment, uint, int, int, void> _glNamedFramebufferTextureLayer;
@@ -12620,109 +3940,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glNamedFramebufferTextureLayer(framebuffer, attachment, texture, level, layer);
         }
         
-        public static unsafe delegate*<uint, FramebufferAttachment, uint, int, int, void> _glNamedFramebufferTextureLayerEXT;
-        
-        public static unsafe void NamedFramebufferTextureLayerEXT(uint framebuffer, FramebufferAttachment attachment, uint texture, int level, int layer)
-        {
-            _glNamedFramebufferTextureLayerEXT(framebuffer, attachment, texture, level, layer);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, double, double, double, double, void> _glNamedProgramLocalParameter4dEXT;
-        
-        public static unsafe void NamedProgramLocalParameter4dEXT(uint program, ProgramTarget target, uint index, double x, double y, double z, double w)
-        {
-            _glNamedProgramLocalParameter4dEXT(program, target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, IntPtr, void> _glNamedProgramLocalParameter4dvEXT;
-        
-        public static unsafe void NamedProgramLocalParameter4dvEXT(uint program, ProgramTarget target, uint index, ref double @params)
-        {
-            _glNamedProgramLocalParameter4dvEXT(program, target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, float, float, float, float, void> _glNamedProgramLocalParameter4fEXT;
-        
-        public static unsafe void NamedProgramLocalParameter4fEXT(uint program, ProgramTarget target, uint index, float x, float y, float z, float w)
-        {
-            _glNamedProgramLocalParameter4fEXT(program, target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, IntPtr, void> _glNamedProgramLocalParameter4fvEXT;
-        
-        public static unsafe void NamedProgramLocalParameter4fvEXT(uint program, ProgramTarget target, uint index, ref float @params)
-        {
-            _glNamedProgramLocalParameter4fvEXT(program, target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, int, int, int, int, void> _glNamedProgramLocalParameterI4iEXT;
-        
-        public static unsafe void NamedProgramLocalParameterI4iEXT(uint program, ProgramTarget target, uint index, int x, int y, int z, int w)
-        {
-            _glNamedProgramLocalParameterI4iEXT(program, target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, IntPtr, void> _glNamedProgramLocalParameterI4ivEXT;
-        
-        public static unsafe void NamedProgramLocalParameterI4ivEXT(uint program, ProgramTarget target, uint index, ref int @params)
-        {
-            _glNamedProgramLocalParameterI4ivEXT(program, target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, uint, uint, uint, uint, void> _glNamedProgramLocalParameterI4uiEXT;
-        
-        public static unsafe void NamedProgramLocalParameterI4uiEXT(uint program, ProgramTarget target, uint index, uint x, uint y, uint z, uint w)
-        {
-            _glNamedProgramLocalParameterI4uiEXT(program, target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, IntPtr, void> _glNamedProgramLocalParameterI4uivEXT;
-        
-        public static unsafe void NamedProgramLocalParameterI4uivEXT(uint program, ProgramTarget target, uint index, ref uint @params)
-        {
-            _glNamedProgramLocalParameterI4uivEXT(program, target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, int, IntPtr, void> _glNamedProgramLocalParameters4fvEXT;
-        
-        public static unsafe void NamedProgramLocalParameters4fvEXT(uint program, ProgramTarget target, uint index, int count, out IntPtr @params)
-        {
-            _glNamedProgramLocalParameters4fvEXT(program, target, index, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, int, IntPtr, void> _glNamedProgramLocalParametersI4ivEXT;
-        
-        public static unsafe void NamedProgramLocalParametersI4ivEXT(uint program, ProgramTarget target, uint index, int count, out IntPtr @params)
-        {
-            _glNamedProgramLocalParametersI4ivEXT(program, target, index, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, uint, int, IntPtr, void> _glNamedProgramLocalParametersI4uivEXT;
-        
-        public static unsafe void NamedProgramLocalParametersI4uivEXT(uint program, ProgramTarget target, uint index, int count, out IntPtr @params)
-        {
-            _glNamedProgramLocalParametersI4uivEXT(program, target, index, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, ProgramTarget, ProgramFormat, int, IntPtr, void> _glNamedProgramStringEXT;
-        
-        public static unsafe void NamedProgramStringEXT(uint program, ProgramTarget target, ProgramFormat format, int len, IntPtr @string)
-        {
-            _glNamedProgramStringEXT(program, target, format, len, (IntPtr)@string);
-        }
-        
         public static unsafe delegate*<uint, InternalFormat, int, int, void> _glNamedRenderbufferStorage;
         
         public static unsafe void NamedRenderbufferStorage(uint renderbuffer, InternalFormat internalformat, int width, int height)
         {
             _glNamedRenderbufferStorage(renderbuffer, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<uint, InternalFormat, int, int, void> _glNamedRenderbufferStorageEXT;
-        
-        public static unsafe void NamedRenderbufferStorageEXT(uint renderbuffer, InternalFormat internalformat, int width, int height)
-        {
-            _glNamedRenderbufferStorageEXT(renderbuffer, internalformat, width, height);
         }
         
         public static unsafe delegate*<uint, int, InternalFormat, int, int, void> _glNamedRenderbufferStorageMultisample;
@@ -12732,46 +3954,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glNamedRenderbufferStorageMultisample(renderbuffer, samples, internalformat, width, height);
         }
         
-        public static unsafe delegate*<uint, int, int, InternalFormat, int, int, void> _glNamedRenderbufferStorageMultisampleAdvancedAMD;
-        
-        public static unsafe void NamedRenderbufferStorageMultisampleAdvancedAMD(uint renderbuffer, int samples, int storageSamples, InternalFormat internalformat, int width, int height)
-        {
-            _glNamedRenderbufferStorageMultisampleAdvancedAMD(renderbuffer, samples, storageSamples, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<uint, int, int, InternalFormat, int, int, void> _glNamedRenderbufferStorageMultisampleCoverageEXT;
-        
-        public static unsafe void NamedRenderbufferStorageMultisampleCoverageEXT(uint renderbuffer, int coverageSamples, int colorSamples, InternalFormat internalformat, int width, int height)
-        {
-            _glNamedRenderbufferStorageMultisampleCoverageEXT(renderbuffer, coverageSamples, colorSamples, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<uint, int, InternalFormat, int, int, void> _glNamedRenderbufferStorageMultisampleEXT;
-        
-        public static unsafe void NamedRenderbufferStorageMultisampleEXT(uint renderbuffer, int samples, InternalFormat internalformat, int width, int height)
-        {
-            _glNamedRenderbufferStorageMultisampleEXT(renderbuffer, samples, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, int, IntPtr, void> _glNamedStringARB;
-        
-        public static unsafe void NamedStringARB(uint type, int namelen, ref sbyte name, int stringlen, ref sbyte @string)
-        {
-            _glNamedStringARB(type, namelen, (IntPtr)name, stringlen, (IntPtr)@string);
-        }
-        
         public static unsafe delegate*<uint, ListMode, void> _glNewList;
         
         public static unsafe void NewList(uint list, ListMode mode)
         {
             _glNewList(list, mode);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, ArrayObjectUsageATI, uint> _glNewObjectBufferATI;
-        
-        public static unsafe uint NewObjectBufferATI(int size, IntPtr pointer, ArrayObjectUsageATI usage)
-        {
-            return _glNewObjectBufferATI(size, (IntPtr)pointer, usage);
         }
         
         public static unsafe delegate*<sbyte, sbyte, sbyte, void> _glNormal3b;
@@ -12809,39 +3996,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glNormal3f(nx, ny, nz);
         }
         
-        public static unsafe delegate*<float, float, float, float, float, float, void> _glNormal3fVertex3fSUN;
-        
-        public static unsafe void Normal3fVertex3fSUN(float nx, float ny, float nz, float x, float y, float z)
-        {
-            _glNormal3fVertex3fSUN(nx, ny, nz, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, void> _glNormal3fVertex3fvSUN;
-        
-        public static unsafe void Normal3fVertex3fvSUN(ref float n, ref float v)
-        {
-            _glNormal3fVertex3fvSUN((IntPtr)n, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glNormal3fv;
         
         public static unsafe void Normal3fv(ref float v)
         {
             _glNormal3fv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<ushort, ushort, ushort, void> _glNormal3hNV;
-        
-        public static unsafe void Normal3hNV(ushort nx, ushort ny, ushort nz)
-        {
-            _glNormal3hNV(nx, ny, nz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glNormal3hvNV;
-        
-        public static unsafe void Normal3hvNV(ref ushort v)
-        {
-            _glNormal3hvNV((IntPtr)v);
         }
         
         public static unsafe delegate*<int, int, int, void> _glNormal3i;
@@ -12872,34 +4031,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glNormal3sv((IntPtr)v);
         }
         
-        public static unsafe delegate*<int, int, int, void> _glNormal3x;
-        
-        public static unsafe void Normal3x(int nx, int ny, int nz)
-        {
-            _glNormal3x(nx, ny, nz);
-        }
-        
-        public static unsafe delegate*<int, int, int, void> _glNormal3xOES;
-        
-        public static unsafe void Normal3xOES(int nx, int ny, int nz)
-        {
-            _glNormal3xOES(nx, ny, nz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glNormal3xvOES;
-        
-        public static unsafe void Normal3xvOES(ref int coords)
-        {
-            _glNormal3xvOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<uint, int, void> _glNormalFormatNV;
-        
-        public static unsafe void NormalFormatNV(uint type, int stride)
-        {
-            _glNormalFormatNV(type, stride);
-        }
-        
         public static unsafe delegate*<NormalPointerType, uint, void> _glNormalP3ui;
         
         public static unsafe void NormalP3ui(NormalPointerType type, uint coords)
@@ -12921,109 +4052,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glNormalPointer(type, stride, (IntPtr)pointer);
         }
         
-        public static unsafe delegate*<NormalPointerType, int, int, IntPtr, void> _glNormalPointerEXT;
-        
-        public static unsafe void NormalPointerEXT(NormalPointerType type, int stride, int count, IntPtr pointer)
-        {
-            _glNormalPointerEXT(type, stride, count, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<NormalPointerType, int, IntPtr, int, void> _glNormalPointerListIBM;
-        
-        public static unsafe void NormalPointerListIBM(NormalPointerType type, int stride, out IntPtr pointer, int ptrstride)
-        {
-            _glNormalPointerListIBM(type, stride, (IntPtr)pointer, ptrstride);
-        }
-        
-        public static unsafe delegate*<NormalPointerType, IntPtr, void> _glNormalPointervINTEL;
-        
-        public static unsafe void NormalPointervINTEL(NormalPointerType type, out IntPtr pointer)
-        {
-            _glNormalPointervINTEL(type, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, sbyte, sbyte, sbyte, void> _glNormalStream3bATI;
-        
-        public static unsafe void NormalStream3bATI(VertexStreamATI stream, sbyte nx, sbyte ny, sbyte nz)
-        {
-            _glNormalStream3bATI(stream, nx, ny, nz);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glNormalStream3bvATI;
-        
-        public static unsafe void NormalStream3bvATI(VertexStreamATI stream, ref sbyte coords)
-        {
-            _glNormalStream3bvATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, double, double, double, void> _glNormalStream3dATI;
-        
-        public static unsafe void NormalStream3dATI(VertexStreamATI stream, double nx, double ny, double nz)
-        {
-            _glNormalStream3dATI(stream, nx, ny, nz);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glNormalStream3dvATI;
-        
-        public static unsafe void NormalStream3dvATI(VertexStreamATI stream, ref double coords)
-        {
-            _glNormalStream3dvATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, float, float, float, void> _glNormalStream3fATI;
-        
-        public static unsafe void NormalStream3fATI(VertexStreamATI stream, float nx, float ny, float nz)
-        {
-            _glNormalStream3fATI(stream, nx, ny, nz);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glNormalStream3fvATI;
-        
-        public static unsafe void NormalStream3fvATI(VertexStreamATI stream, ref float coords)
-        {
-            _glNormalStream3fvATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, int, int, int, void> _glNormalStream3iATI;
-        
-        public static unsafe void NormalStream3iATI(VertexStreamATI stream, int nx, int ny, int nz)
-        {
-            _glNormalStream3iATI(stream, nx, ny, nz);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glNormalStream3ivATI;
-        
-        public static unsafe void NormalStream3ivATI(VertexStreamATI stream, ref int coords)
-        {
-            _glNormalStream3ivATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, short, short, short, void> _glNormalStream3sATI;
-        
-        public static unsafe void NormalStream3sATI(VertexStreamATI stream, short nx, short ny, short nz)
-        {
-            _glNormalStream3sATI(stream, nx, ny, nz);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glNormalStream3svATI;
-        
-        public static unsafe void NormalStream3svATI(VertexStreamATI stream, ref short coords)
-        {
-            _glNormalStream3svATI(stream, (IntPtr)coords);
-        }
-        
         public static unsafe delegate*<ObjectIdentifier, uint, int, IntPtr, void> _glObjectLabel;
         
         public static unsafe void ObjectLabel(ObjectIdentifier identifier, uint name, int length, ref sbyte label)
         {
             _glObjectLabel(identifier, name, length, (IntPtr)label);
-        }
-        
-        public static unsafe delegate*<ObjectIdentifier, uint, int, IntPtr, void> _glObjectLabelKHR;
-        
-        public static unsafe void ObjectLabelKHR(ObjectIdentifier identifier, uint name, int length, ref sbyte label)
-        {
-            _glObjectLabelKHR(identifier, name, length, (IntPtr)label);
         }
         
         public static unsafe delegate*<IntPtr, int, IntPtr, void> _glObjectPtrLabel;
@@ -13033,27 +4066,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glObjectPtrLabel((IntPtr)ptr, length, (IntPtr)label);
         }
         
-        public static unsafe delegate*<IntPtr, int, IntPtr, void> _glObjectPtrLabelKHR;
-        
-        public static unsafe void ObjectPtrLabelKHR(IntPtr ptr, int length, ref sbyte label)
-        {
-            _glObjectPtrLabelKHR((IntPtr)ptr, length, (IntPtr)label);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint> _glObjectPurgeableAPPLE;
-        
-        public static unsafe uint ObjectPurgeableAPPLE(uint objectType, uint name, uint option)
-        {
-            return _glObjectPurgeableAPPLE(objectType, name, option);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint> _glObjectUnpurgeableAPPLE;
-        
-        public static unsafe uint ObjectUnpurgeableAPPLE(uint objectType, uint name, uint option)
-        {
-            return _glObjectUnpurgeableAPPLE(objectType, name, option);
-        }
-        
         public static unsafe delegate*<double, double, double, double, double, double, void> _glOrtho;
         
         public static unsafe void Ortho(double left, double right, double bottom, double top, double zNear, double zFar)
@@ -13061,67 +4073,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glOrtho(left, right, bottom, top, zNear, zFar);
         }
         
-        public static unsafe delegate*<float, float, float, float, float, float, void> _glOrthof;
-        
-        public static unsafe void Orthof(float l, float r, float b, float t, float n, float f)
-        {
-            _glOrthof(l, r, b, t, n, f);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, float, float, void> _glOrthofOES;
-        
-        public static unsafe void OrthofOES(float l, float r, float b, float t, float n, float f)
-        {
-            _glOrthofOES(l, r, b, t, n, f);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, int, int, void> _glOrthox;
-        
-        public static unsafe void Orthox(int l, int r, int b, int t, int n, int f)
-        {
-            _glOrthox(l, r, b, t, n, f);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, int, int, void> _glOrthoxOES;
-        
-        public static unsafe void OrthoxOES(int l, int r, int b, int t, int n, int f)
-        {
-            _glOrthoxOES(l, r, b, t, n, f);
-        }
-        
-        public static unsafe delegate*<PNTrianglesPNameATI, float, void> _glPNTrianglesfATI;
-        
-        public static unsafe void PNTrianglesfATI(PNTrianglesPNameATI pname, float param)
-        {
-            _glPNTrianglesfATI(pname, param);
-        }
-        
-        public static unsafe delegate*<PNTrianglesPNameATI, int, void> _glPNTrianglesiATI;
-        
-        public static unsafe void PNTrianglesiATI(PNTrianglesPNameATI pname, int param)
-        {
-            _glPNTrianglesiATI(pname, param);
-        }
-        
-        public static unsafe delegate*<uint, uint, SwizzleOpATI, void> _glPassTexCoordATI;
-        
-        public static unsafe void PassTexCoordATI(uint dst, uint coord, SwizzleOpATI swizzle)
-        {
-            _glPassTexCoordATI(dst, coord, swizzle);
-        }
-        
         public static unsafe delegate*<float, void> _glPassThrough;
         
         public static unsafe void PassThrough(float token)
         {
             _glPassThrough(token);
-        }
-        
-        public static unsafe delegate*<int, void> _glPassThroughxOES;
-        
-        public static unsafe void PassThroughxOES(int token)
-        {
-            _glPassThroughxOES(token);
         }
         
         public static unsafe delegate*<PatchParameterName, IntPtr, void> _glPatchParameterfv;
@@ -13138,186 +4094,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glPatchParameteri(pname, value);
         }
         
-        public static unsafe delegate*<PatchParameterName, int, void> _glPatchParameteriEXT;
-        
-        public static unsafe void PatchParameteriEXT(PatchParameterName pname, int value)
-        {
-            _glPatchParameteriEXT(pname, value);
-        }
-        
-        public static unsafe delegate*<PatchParameterName, int, void> _glPatchParameteriOES;
-        
-        public static unsafe void PatchParameteriOES(PatchParameterName pname, int value)
-        {
-            _glPatchParameteriOES(pname, value);
-        }
-        
-        public static unsafe delegate*<PathColor, PathGenMode, PathColorFormat, IntPtr, void> _glPathColorGenNV;
-        
-        public static unsafe void PathColorGenNV(PathColor color, PathGenMode genMode, PathColorFormat colorFormat, ref float coeffs)
-        {
-            _glPathColorGenNV(color, genMode, colorFormat, (IntPtr)coeffs);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, int, PathCoordType, IntPtr, void> _glPathCommandsNV;
-        
-        public static unsafe void PathCommandsNV(uint path, int numCommands, ref byte commands, int numCoords, PathCoordType coordType, IntPtr coords)
-        {
-            _glPathCommandsNV(path, numCommands, (IntPtr)commands, numCoords, coordType, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<uint, int, PathCoordType, IntPtr, void> _glPathCoordsNV;
-        
-        public static unsafe void PathCoordsNV(uint path, int numCoords, PathCoordType coordType, IntPtr coords)
-        {
-            _glPathCoordsNV(path, numCoords, coordType, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<DepthFunction, void> _glPathCoverDepthFuncNV;
-        
-        public static unsafe void PathCoverDepthFuncNV(DepthFunction func)
-        {
-            _glPathCoverDepthFuncNV(func);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glPathDashArrayNV;
-        
-        public static unsafe void PathDashArrayNV(uint path, int dashCount, ref float dashArray)
-        {
-            _glPathDashArrayNV(path, dashCount, (IntPtr)dashArray);
-        }
-        
-        public static unsafe delegate*<PathGenMode, void> _glPathFogGenNV;
-        
-        public static unsafe void PathFogGenNV(PathGenMode genMode)
-        {
-            _glPathFogGenNV(genMode);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, uint, uint, int, uint, float, uint> _glPathGlyphIndexArrayNV;
-        
-        public static unsafe uint PathGlyphIndexArrayNV(uint firstPathName, uint fontTarget, IntPtr fontName, uint fontStyle, uint firstGlyphIndex, int numGlyphs, uint pathParameterTemplate, float emScale)
-        {
-            return _glPathGlyphIndexArrayNV(firstPathName, fontTarget, (IntPtr)fontName, fontStyle, firstGlyphIndex, numGlyphs, pathParameterTemplate, emScale);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, uint, uint, float, IntPtr, uint> _glPathGlyphIndexRangeNV;
-        
-        public static unsafe uint PathGlyphIndexRangeNV(uint fontTarget, IntPtr fontName, uint fontStyle, uint pathParameterTemplate, float emScale, ref uint baseAndCount)
-        {
-            return _glPathGlyphIndexRangeNV(fontTarget, (IntPtr)fontName, fontStyle, pathParameterTemplate, emScale, (IntPtr)baseAndCount);
-        }
-        
-        public static unsafe delegate*<uint, PathFontTarget, IntPtr, uint, uint, int, PathHandleMissingGlyphs, uint, float, void> _glPathGlyphRangeNV;
-        
-        public static unsafe void PathGlyphRangeNV(uint firstPathName, PathFontTarget fontTarget, IntPtr fontName, uint fontStyle, uint firstGlyph, int numGlyphs, PathHandleMissingGlyphs handleMissingGlyphs, uint pathParameterTemplate, float emScale)
-        {
-            _glPathGlyphRangeNV(firstPathName, fontTarget, (IntPtr)fontName, fontStyle, firstGlyph, numGlyphs, handleMissingGlyphs, pathParameterTemplate, emScale);
-        }
-        
-        public static unsafe delegate*<uint, PathFontTarget, IntPtr, uint, int, PathElementType, IntPtr, PathHandleMissingGlyphs, uint, float, void> _glPathGlyphsNV;
-        
-        public static unsafe void PathGlyphsNV(uint firstPathName, PathFontTarget fontTarget, IntPtr fontName, uint fontStyle, int numGlyphs, PathElementType type, IntPtr charcodes, PathHandleMissingGlyphs handleMissingGlyphs, uint pathParameterTemplate, float emScale)
-        {
-            _glPathGlyphsNV(firstPathName, fontTarget, (IntPtr)fontName, fontStyle, numGlyphs, type, (IntPtr)charcodes, handleMissingGlyphs, pathParameterTemplate, emScale);
-        }
-        
-        public static unsafe delegate*<uint, uint, long, IntPtr, int, uint, int, uint, float, uint> _glPathMemoryGlyphIndexArrayNV;
-        
-        public static unsafe uint PathMemoryGlyphIndexArrayNV(uint firstPathName, uint fontTarget, long fontSize, IntPtr fontData, int faceIndex, uint firstGlyphIndex, int numGlyphs, uint pathParameterTemplate, float emScale)
-        {
-            return _glPathMemoryGlyphIndexArrayNV(firstPathName, fontTarget, fontSize, (IntPtr)fontData, faceIndex, firstGlyphIndex, numGlyphs, pathParameterTemplate, emScale);
-        }
-        
-        public static unsafe delegate*<uint, PathParameter, float, void> _glPathParameterfNV;
-        
-        public static unsafe void PathParameterfNV(uint path, PathParameter pname, float value)
-        {
-            _glPathParameterfNV(path, pname, value);
-        }
-        
-        public static unsafe delegate*<uint, PathParameter, IntPtr, void> _glPathParameterfvNV;
-        
-        public static unsafe void PathParameterfvNV(uint path, PathParameter pname, ref float value)
-        {
-            _glPathParameterfvNV(path, pname, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, PathParameter, int, void> _glPathParameteriNV;
-        
-        public static unsafe void PathParameteriNV(uint path, PathParameter pname, int value)
-        {
-            _glPathParameteriNV(path, pname, value);
-        }
-        
-        public static unsafe delegate*<uint, PathParameter, IntPtr, void> _glPathParameterivNV;
-        
-        public static unsafe void PathParameterivNV(uint path, PathParameter pname, ref int value)
-        {
-            _glPathParameterivNV(path, pname, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<float, float, void> _glPathStencilDepthOffsetNV;
-        
-        public static unsafe void PathStencilDepthOffsetNV(float factor, float units)
-        {
-            _glPathStencilDepthOffsetNV(factor, units);
-        }
-        
-        public static unsafe delegate*<StencilFunction, int, uint, void> _glPathStencilFuncNV;
-        
-        public static unsafe void PathStencilFuncNV(StencilFunction func, int @ref, uint mask)
-        {
-            _glPathStencilFuncNV(func, @ref, mask);
-        }
-        
-        public static unsafe delegate*<uint, PathStringFormat, int, IntPtr, void> _glPathStringNV;
-        
-        public static unsafe void PathStringNV(uint path, PathStringFormat format, int length, IntPtr pathString)
-        {
-            _glPathStringNV(path, format, length, (IntPtr)pathString);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, IntPtr, int, PathCoordType, IntPtr, void> _glPathSubCommandsNV;
-        
-        public static unsafe void PathSubCommandsNV(uint path, int commandStart, int commandsToDelete, int numCommands, ref byte commands, int numCoords, PathCoordType coordType, IntPtr coords)
-        {
-            _glPathSubCommandsNV(path, commandStart, commandsToDelete, numCommands, (IntPtr)commands, numCoords, coordType, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<uint, int, int, PathCoordType, IntPtr, void> _glPathSubCoordsNV;
-        
-        public static unsafe void PathSubCoordsNV(uint path, int coordStart, int numCoords, PathCoordType coordType, IntPtr coords)
-        {
-            _glPathSubCoordsNV(path, coordStart, numCoords, coordType, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<PathColor, PathGenMode, int, IntPtr, void> _glPathTexGenNV;
-        
-        public static unsafe void PathTexGenNV(PathColor texCoordSet, PathGenMode genMode, int components, ref float coeffs)
-        {
-            _glPathTexGenNV(texCoordSet, genMode, components, (IntPtr)coeffs);
-        }
-        
         public static unsafe delegate*<void> _glPauseTransformFeedback;
         
         public static unsafe void PauseTransformFeedback()
         {
             _glPauseTransformFeedback();
-        }
-        
-        public static unsafe delegate*<void> _glPauseTransformFeedbackNV;
-        
-        public static unsafe void PauseTransformFeedbackNV()
-        {
-            _glPauseTransformFeedbackNV();
-        }
-        
-        public static unsafe delegate*<PixelDataRangeTargetNV, int, IntPtr, void> _glPixelDataRangeNV;
-        
-        public static unsafe void PixelDataRangeNV(PixelDataRangeTargetNV target, int length, IntPtr pointer)
-        {
-            _glPixelDataRangeNV(target, length, (IntPtr)pointer);
         }
         
         public static unsafe delegate*<PixelMap, int, IntPtr, void> _glPixelMapfv;
@@ -13341,13 +4122,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glPixelMapusv(map, mapsize, (IntPtr)values);
         }
         
-        public static unsafe delegate*<PixelMap, int, IntPtr, void> _glPixelMapx;
-        
-        public static unsafe void PixelMapx(PixelMap map, int size, ref int values)
-        {
-            _glPixelMapx(map, size, (IntPtr)values);
-        }
-        
         public static unsafe delegate*<PixelStoreParameter, float, void> _glPixelStoref;
         
         public static unsafe void PixelStoref(PixelStoreParameter pname, float param)
@@ -13360,48 +4134,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void PixelStorei(PixelStoreParameter pname, int param)
         {
             _glPixelStorei(pname, param);
-        }
-        
-        public static unsafe delegate*<PixelStoreParameter, int, void> _glPixelStorex;
-        
-        public static unsafe void PixelStorex(PixelStoreParameter pname, int param)
-        {
-            _glPixelStorex(pname, param);
-        }
-        
-        public static unsafe delegate*<PixelTexGenParameterNameSGIS, float, void> _glPixelTexGenParameterfSGIS;
-        
-        public static unsafe void PixelTexGenParameterfSGIS(PixelTexGenParameterNameSGIS pname, float param)
-        {
-            _glPixelTexGenParameterfSGIS(pname, param);
-        }
-        
-        public static unsafe delegate*<PixelTexGenParameterNameSGIS, IntPtr, void> _glPixelTexGenParameterfvSGIS;
-        
-        public static unsafe void PixelTexGenParameterfvSGIS(PixelTexGenParameterNameSGIS pname, ref float @params)
-        {
-            _glPixelTexGenParameterfvSGIS(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<PixelTexGenParameterNameSGIS, int, void> _glPixelTexGenParameteriSGIS;
-        
-        public static unsafe void PixelTexGenParameteriSGIS(PixelTexGenParameterNameSGIS pname, int param)
-        {
-            _glPixelTexGenParameteriSGIS(pname, param);
-        }
-        
-        public static unsafe delegate*<PixelTexGenParameterNameSGIS, IntPtr, void> _glPixelTexGenParameterivSGIS;
-        
-        public static unsafe void PixelTexGenParameterivSGIS(PixelTexGenParameterNameSGIS pname, ref int @params)
-        {
-            _glPixelTexGenParameterivSGIS(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<PixelTexGenModeSGIX, void> _glPixelTexGenSGIX;
-        
-        public static unsafe void PixelTexGenSGIX(PixelTexGenModeSGIX mode)
-        {
-            _glPixelTexGenSGIX(mode);
         }
         
         public static unsafe delegate*<PixelTransferParameter, float, void> _glPixelTransferf;
@@ -13418,60 +4150,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glPixelTransferi(pname, param);
         }
         
-        public static unsafe delegate*<PixelTransferParameter, int, void> _glPixelTransferxOES;
-        
-        public static unsafe void PixelTransferxOES(PixelTransferParameter pname, int param)
-        {
-            _glPixelTransferxOES(pname, param);
-        }
-        
-        public static unsafe delegate*<PixelTransformTargetEXT, PixelTransformPNameEXT, float, void> _glPixelTransformParameterfEXT;
-        
-        public static unsafe void PixelTransformParameterfEXT(PixelTransformTargetEXT target, PixelTransformPNameEXT pname, float param)
-        {
-            _glPixelTransformParameterfEXT(target, pname, param);
-        }
-        
-        public static unsafe delegate*<PixelTransformTargetEXT, PixelTransformPNameEXT, IntPtr, void> _glPixelTransformParameterfvEXT;
-        
-        public static unsafe void PixelTransformParameterfvEXT(PixelTransformTargetEXT target, PixelTransformPNameEXT pname, ref float @params)
-        {
-            _glPixelTransformParameterfvEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<PixelTransformTargetEXT, PixelTransformPNameEXT, int, void> _glPixelTransformParameteriEXT;
-        
-        public static unsafe void PixelTransformParameteriEXT(PixelTransformTargetEXT target, PixelTransformPNameEXT pname, int param)
-        {
-            _glPixelTransformParameteriEXT(target, pname, param);
-        }
-        
-        public static unsafe delegate*<PixelTransformTargetEXT, PixelTransformPNameEXT, IntPtr, void> _glPixelTransformParameterivEXT;
-        
-        public static unsafe void PixelTransformParameterivEXT(PixelTransformTargetEXT target, PixelTransformPNameEXT pname, ref int @params)
-        {
-            _glPixelTransformParameterivEXT(target, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<float, float, void> _glPixelZoom;
         
         public static unsafe void PixelZoom(float xfactor, float yfactor)
         {
             _glPixelZoom(xfactor, yfactor);
-        }
-        
-        public static unsafe delegate*<int, int, void> _glPixelZoomxOES;
-        
-        public static unsafe void PixelZoomxOES(int xfactor, int yfactor)
-        {
-            _glPixelZoomxOES(xfactor, yfactor);
-        }
-        
-        public static unsafe delegate*<uint, int, int, float, IntPtr, IntPtr, IntPtr, IntPtr, byte> _glPointAlongPathNV;
-        
-        public static unsafe byte PointAlongPathNV(uint path, int startSegment, int numSegments, float distance, ref float x, ref float y, ref float tangentX, ref float tangentY)
-        {
-            return _glPointAlongPathNV(path, startSegment, numSegments, distance, (IntPtr)x, (IntPtr)y, (IntPtr)tangentX, (IntPtr)tangentY);
         }
         
         public static unsafe delegate*<PointParameterNameARB, float, void> _glPointParameterf;
@@ -13481,53 +4164,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glPointParameterf(pname, param);
         }
         
-        public static unsafe delegate*<PointParameterNameARB, float, void> _glPointParameterfARB;
-        
-        public static unsafe void PointParameterfARB(PointParameterNameARB pname, float param)
-        {
-            _glPointParameterfARB(pname, param);
-        }
-        
-        public static unsafe delegate*<PointParameterNameARB, float, void> _glPointParameterfEXT;
-        
-        public static unsafe void PointParameterfEXT(PointParameterNameARB pname, float param)
-        {
-            _glPointParameterfEXT(pname, param);
-        }
-        
-        public static unsafe delegate*<PointParameterNameARB, float, void> _glPointParameterfSGIS;
-        
-        public static unsafe void PointParameterfSGIS(PointParameterNameARB pname, float param)
-        {
-            _glPointParameterfSGIS(pname, param);
-        }
-        
         public static unsafe delegate*<PointParameterNameARB, IntPtr, void> _glPointParameterfv;
         
         public static unsafe void PointParameterfv(PointParameterNameARB pname, ref float @params)
         {
             _glPointParameterfv(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<PointParameterNameARB, IntPtr, void> _glPointParameterfvARB;
-        
-        public static unsafe void PointParameterfvARB(PointParameterNameARB pname, ref float @params)
-        {
-            _glPointParameterfvARB(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<PointParameterNameARB, IntPtr, void> _glPointParameterfvEXT;
-        
-        public static unsafe void PointParameterfvEXT(PointParameterNameARB pname, ref float @params)
-        {
-            _glPointParameterfvEXT(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<PointParameterNameARB, IntPtr, void> _glPointParameterfvSGIS;
-        
-        public static unsafe void PointParameterfvSGIS(PointParameterNameARB pname, ref float @params)
-        {
-            _glPointParameterfvSGIS(pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<PointParameterNameARB, int, void> _glPointParameteri;
@@ -13537,53 +4178,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glPointParameteri(pname, param);
         }
         
-        public static unsafe delegate*<PointParameterNameARB, int, void> _glPointParameteriNV;
-        
-        public static unsafe void PointParameteriNV(PointParameterNameARB pname, int param)
-        {
-            _glPointParameteriNV(pname, param);
-        }
-        
         public static unsafe delegate*<PointParameterNameARB, IntPtr, void> _glPointParameteriv;
         
         public static unsafe void PointParameteriv(PointParameterNameARB pname, ref int @params)
         {
             _glPointParameteriv(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<PointParameterNameARB, IntPtr, void> _glPointParameterivNV;
-        
-        public static unsafe void PointParameterivNV(PointParameterNameARB pname, ref int @params)
-        {
-            _glPointParameterivNV(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<PointParameterNameARB, int, void> _glPointParameterx;
-        
-        public static unsafe void PointParameterx(PointParameterNameARB pname, int param)
-        {
-            _glPointParameterx(pname, param);
-        }
-        
-        public static unsafe delegate*<PointParameterNameARB, int, void> _glPointParameterxOES;
-        
-        public static unsafe void PointParameterxOES(PointParameterNameARB pname, int param)
-        {
-            _glPointParameterxOES(pname, param);
-        }
-        
-        public static unsafe delegate*<PointParameterNameARB, IntPtr, void> _glPointParameterxv;
-        
-        public static unsafe void PointParameterxv(PointParameterNameARB pname, ref int @params)
-        {
-            _glPointParameterxv(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<PointParameterNameARB, IntPtr, void> _glPointParameterxvOES;
-        
-        public static unsafe void PointParameterxvOES(PointParameterNameARB pname, ref int @params)
-        {
-            _glPointParameterxvOES(pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<float, void> _glPointSize;
@@ -13593,53 +4192,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glPointSize(size);
         }
         
-        public static unsafe delegate*<uint, int, IntPtr, void> _glPointSizePointerOES;
-        
-        public static unsafe void PointSizePointerOES(uint type, int stride, IntPtr pointer)
-        {
-            _glPointSizePointerOES(type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<int, void> _glPointSizex;
-        
-        public static unsafe void PointSizex(int size)
-        {
-            _glPointSizex(size);
-        }
-        
-        public static unsafe delegate*<int, void> _glPointSizexOES;
-        
-        public static unsafe void PointSizexOES(int size)
-        {
-            _glPointSizexOES(size);
-        }
-        
-        public static unsafe delegate*<IntPtr, int> _glPollAsyncSGIX;
-        
-        public static unsafe int PollAsyncSGIX(ref uint markerp)
-        {
-            return _glPollAsyncSGIX((IntPtr)markerp);
-        }
-        
-        public static unsafe delegate*<IntPtr, int> _glPollInstrumentsSGIX;
-        
-        public static unsafe int PollInstrumentsSGIX(ref int marker_p)
-        {
-            return _glPollInstrumentsSGIX((IntPtr)marker_p);
-        }
-        
         public static unsafe delegate*<MaterialFace, PolygonMode, void> _glPolygonMode;
         
         public static unsafe void PolygonMode(MaterialFace face, PolygonMode mode)
         {
             _glPolygonMode(face, mode);
-        }
-        
-        public static unsafe delegate*<MaterialFace, PolygonMode, void> _glPolygonModeNV;
-        
-        public static unsafe void PolygonModeNV(MaterialFace face, PolygonMode mode)
-        {
-            _glPolygonModeNV(face, mode);
         }
         
         public static unsafe delegate*<float, float, void> _glPolygonOffset;
@@ -13654,34 +4211,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void PolygonOffsetClamp(float factor, float units, float clamp)
         {
             _glPolygonOffsetClamp(factor, units, clamp);
-        }
-        
-        public static unsafe delegate*<float, float, float, void> _glPolygonOffsetClampEXT;
-        
-        public static unsafe void PolygonOffsetClampEXT(float factor, float units, float clamp)
-        {
-            _glPolygonOffsetClampEXT(factor, units, clamp);
-        }
-        
-        public static unsafe delegate*<float, float, void> _glPolygonOffsetEXT;
-        
-        public static unsafe void PolygonOffsetEXT(float factor, float bias)
-        {
-            _glPolygonOffsetEXT(factor, bias);
-        }
-        
-        public static unsafe delegate*<int, int, void> _glPolygonOffsetx;
-        
-        public static unsafe void PolygonOffsetx(int factor, int units)
-        {
-            _glPolygonOffsetx(factor, units);
-        }
-        
-        public static unsafe delegate*<int, int, void> _glPolygonOffsetxOES;
-        
-        public static unsafe void PolygonOffsetxOES(int factor, int units)
-        {
-            _glPolygonOffsetxOES(factor, units);
         }
         
         public static unsafe delegate*<IntPtr, void> _glPolygonStipple;
@@ -13712,20 +4241,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glPopDebugGroup();
         }
         
-        public static unsafe delegate*<void> _glPopDebugGroupKHR;
-        
-        public static unsafe void PopDebugGroupKHR()
-        {
-            _glPopDebugGroupKHR();
-        }
-        
-        public static unsafe delegate*<void> _glPopGroupMarkerEXT;
-        
-        public static unsafe void PopGroupMarkerEXT()
-        {
-            _glPopGroupMarkerEXT();
-        }
-        
         public static unsafe delegate*<void> _glPopMatrix;
         
         public static unsafe void PopMatrix()
@@ -13740,67 +4255,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glPopName();
         }
         
-        public static unsafe delegate*<uint, ulong, uint, uint, uint, uint, uint, uint, uint, uint, uint, uint, uint, void> _glPresentFrameDualFillNV;
-        
-        public static unsafe void PresentFrameDualFillNV(uint video_slot, ulong minPresentTime, uint beginPresentTimeId, uint presentDurationId, uint type, uint target0, uint fill0, uint target1, uint fill1, uint target2, uint fill2, uint target3, uint fill3)
-        {
-            _glPresentFrameDualFillNV(video_slot, minPresentTime, beginPresentTimeId, presentDurationId, type, target0, fill0, target1, fill1, target2, fill2, target3, fill3);
-        }
-        
-        public static unsafe delegate*<uint, ulong, uint, uint, uint, uint, uint, uint, uint, uint, uint, void> _glPresentFrameKeyedNV;
-        
-        public static unsafe void PresentFrameKeyedNV(uint video_slot, ulong minPresentTime, uint beginPresentTimeId, uint presentDurationId, uint type, uint target0, uint fill0, uint key0, uint target1, uint fill1, uint key1)
-        {
-            _glPresentFrameKeyedNV(video_slot, minPresentTime, beginPresentTimeId, presentDurationId, type, target0, fill0, key0, target1, fill1, key1);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, float, float, float, float, void> _glPrimitiveBoundingBox;
-        
-        public static unsafe void PrimitiveBoundingBox(float minX, float minY, float minZ, float minW, float maxX, float maxY, float maxZ, float maxW)
-        {
-            _glPrimitiveBoundingBox(minX, minY, minZ, minW, maxX, maxY, maxZ, maxW);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, float, float, float, float, void> _glPrimitiveBoundingBoxARB;
-        
-        public static unsafe void PrimitiveBoundingBoxARB(float minX, float minY, float minZ, float minW, float maxX, float maxY, float maxZ, float maxW)
-        {
-            _glPrimitiveBoundingBoxARB(minX, minY, minZ, minW, maxX, maxY, maxZ, maxW);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, float, float, float, float, void> _glPrimitiveBoundingBoxEXT;
-        
-        public static unsafe void PrimitiveBoundingBoxEXT(float minX, float minY, float minZ, float minW, float maxX, float maxY, float maxZ, float maxW)
-        {
-            _glPrimitiveBoundingBoxEXT(minX, minY, minZ, minW, maxX, maxY, maxZ, maxW);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, float, float, float, float, void> _glPrimitiveBoundingBoxOES;
-        
-        public static unsafe void PrimitiveBoundingBoxOES(float minX, float minY, float minZ, float minW, float maxX, float maxY, float maxZ, float maxW)
-        {
-            _glPrimitiveBoundingBoxOES(minX, minY, minZ, minW, maxX, maxY, maxZ, maxW);
-        }
-        
         public static unsafe delegate*<uint, void> _glPrimitiveRestartIndex;
         
         public static unsafe void PrimitiveRestartIndex(uint index)
         {
             _glPrimitiveRestartIndex(index);
-        }
-        
-        public static unsafe delegate*<uint, void> _glPrimitiveRestartIndexNV;
-        
-        public static unsafe void PrimitiveRestartIndexNV(uint index)
-        {
-            _glPrimitiveRestartIndexNV(index);
-        }
-        
-        public static unsafe delegate*<void> _glPrimitiveRestartNV;
-        
-        public static unsafe void PrimitiveRestartNV()
-        {
-            _glPrimitiveRestartNV();
         }
         
         public static unsafe delegate*<int, IntPtr, IntPtr, void> _glPrioritizeTextures;
@@ -13810,263 +4269,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glPrioritizeTextures(n, (IntPtr)textures, (IntPtr)priorities);
         }
         
-        public static unsafe delegate*<int, IntPtr, IntPtr, void> _glPrioritizeTexturesEXT;
-        
-        public static unsafe void PrioritizeTexturesEXT(int n, ref uint textures, ref float priorities)
-        {
-            _glPrioritizeTexturesEXT(n, (IntPtr)textures, (IntPtr)priorities);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, IntPtr, void> _glPrioritizeTexturesxOES;
-        
-        public static unsafe void PrioritizeTexturesxOES(int n, ref uint textures, ref int priorities)
-        {
-            _glPrioritizeTexturesxOES(n, (IntPtr)textures, (IntPtr)priorities);
-        }
-        
         public static unsafe delegate*<uint, uint, IntPtr, int, void> _glProgramBinary;
         
         public static unsafe void ProgramBinary(uint program, uint binaryFormat, IntPtr binary, int length)
         {
             _glProgramBinary(program, binaryFormat, (IntPtr)binary, length);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, int, void> _glProgramBinaryOES;
-        
-        public static unsafe void ProgramBinaryOES(uint program, uint binaryFormat, IntPtr binary, int length)
-        {
-            _glProgramBinaryOES(program, binaryFormat, (IntPtr)binary, length);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, uint, int, IntPtr, void> _glProgramBufferParametersIivNV;
-        
-        public static unsafe void ProgramBufferParametersIivNV(ProgramTarget target, uint bindingIndex, uint wordIndex, int count, ref int @params)
-        {
-            _glProgramBufferParametersIivNV(target, bindingIndex, wordIndex, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, uint, int, IntPtr, void> _glProgramBufferParametersIuivNV;
-        
-        public static unsafe void ProgramBufferParametersIuivNV(ProgramTarget target, uint bindingIndex, uint wordIndex, int count, ref uint @params)
-        {
-            _glProgramBufferParametersIuivNV(target, bindingIndex, wordIndex, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, uint, int, IntPtr, void> _glProgramBufferParametersfvNV;
-        
-        public static unsafe void ProgramBufferParametersfvNV(ProgramTarget target, uint bindingIndex, uint wordIndex, int count, ref float @params)
-        {
-            _glProgramBufferParametersfvNV(target, bindingIndex, wordIndex, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, double, double, double, double, void> _glProgramEnvParameter4dARB;
-        
-        public static unsafe void ProgramEnvParameter4dARB(ProgramTarget target, uint index, double x, double y, double z, double w)
-        {
-            _glProgramEnvParameter4dARB(target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glProgramEnvParameter4dvARB;
-        
-        public static unsafe void ProgramEnvParameter4dvARB(ProgramTarget target, uint index, ref double @params)
-        {
-            _glProgramEnvParameter4dvARB(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, float, float, float, float, void> _glProgramEnvParameter4fARB;
-        
-        public static unsafe void ProgramEnvParameter4fARB(ProgramTarget target, uint index, float x, float y, float z, float w)
-        {
-            _glProgramEnvParameter4fARB(target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glProgramEnvParameter4fvARB;
-        
-        public static unsafe void ProgramEnvParameter4fvARB(ProgramTarget target, uint index, ref float @params)
-        {
-            _glProgramEnvParameter4fvARB(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, int, int, int, int, void> _glProgramEnvParameterI4iNV;
-        
-        public static unsafe void ProgramEnvParameterI4iNV(ProgramTarget target, uint index, int x, int y, int z, int w)
-        {
-            _glProgramEnvParameterI4iNV(target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glProgramEnvParameterI4ivNV;
-        
-        public static unsafe void ProgramEnvParameterI4ivNV(ProgramTarget target, uint index, ref int @params)
-        {
-            _glProgramEnvParameterI4ivNV(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, uint, uint, uint, uint, void> _glProgramEnvParameterI4uiNV;
-        
-        public static unsafe void ProgramEnvParameterI4uiNV(ProgramTarget target, uint index, uint x, uint y, uint z, uint w)
-        {
-            _glProgramEnvParameterI4uiNV(target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glProgramEnvParameterI4uivNV;
-        
-        public static unsafe void ProgramEnvParameterI4uivNV(ProgramTarget target, uint index, ref uint @params)
-        {
-            _glProgramEnvParameterI4uivNV(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, int, IntPtr, void> _glProgramEnvParameters4fvEXT;
-        
-        public static unsafe void ProgramEnvParameters4fvEXT(ProgramTarget target, uint index, int count, out IntPtr @params)
-        {
-            _glProgramEnvParameters4fvEXT(target, index, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, int, IntPtr, void> _glProgramEnvParametersI4ivNV;
-        
-        public static unsafe void ProgramEnvParametersI4ivNV(ProgramTarget target, uint index, int count, out IntPtr @params)
-        {
-            _glProgramEnvParametersI4ivNV(target, index, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, int, IntPtr, void> _glProgramEnvParametersI4uivNV;
-        
-        public static unsafe void ProgramEnvParametersI4uivNV(ProgramTarget target, uint index, int count, out IntPtr @params)
-        {
-            _glProgramEnvParametersI4uivNV(target, index, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, double, double, double, double, void> _glProgramLocalParameter4dARB;
-        
-        public static unsafe void ProgramLocalParameter4dARB(ProgramTarget target, uint index, double x, double y, double z, double w)
-        {
-            _glProgramLocalParameter4dARB(target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glProgramLocalParameter4dvARB;
-        
-        public static unsafe void ProgramLocalParameter4dvARB(ProgramTarget target, uint index, ref double @params)
-        {
-            _glProgramLocalParameter4dvARB(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, float, float, float, float, void> _glProgramLocalParameter4fARB;
-        
-        public static unsafe void ProgramLocalParameter4fARB(ProgramTarget target, uint index, float x, float y, float z, float w)
-        {
-            _glProgramLocalParameter4fARB(target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glProgramLocalParameter4fvARB;
-        
-        public static unsafe void ProgramLocalParameter4fvARB(ProgramTarget target, uint index, ref float @params)
-        {
-            _glProgramLocalParameter4fvARB(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, int, int, int, int, void> _glProgramLocalParameterI4iNV;
-        
-        public static unsafe void ProgramLocalParameterI4iNV(ProgramTarget target, uint index, int x, int y, int z, int w)
-        {
-            _glProgramLocalParameterI4iNV(target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glProgramLocalParameterI4ivNV;
-        
-        public static unsafe void ProgramLocalParameterI4ivNV(ProgramTarget target, uint index, ref int @params)
-        {
-            _glProgramLocalParameterI4ivNV(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, uint, uint, uint, uint, void> _glProgramLocalParameterI4uiNV;
-        
-        public static unsafe void ProgramLocalParameterI4uiNV(ProgramTarget target, uint index, uint x, uint y, uint z, uint w)
-        {
-            _glProgramLocalParameterI4uiNV(target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, IntPtr, void> _glProgramLocalParameterI4uivNV;
-        
-        public static unsafe void ProgramLocalParameterI4uivNV(ProgramTarget target, uint index, ref uint @params)
-        {
-            _glProgramLocalParameterI4uivNV(target, index, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, int, IntPtr, void> _glProgramLocalParameters4fvEXT;
-        
-        public static unsafe void ProgramLocalParameters4fvEXT(ProgramTarget target, uint index, int count, out IntPtr @params)
-        {
-            _glProgramLocalParameters4fvEXT(target, index, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, int, IntPtr, void> _glProgramLocalParametersI4ivNV;
-        
-        public static unsafe void ProgramLocalParametersI4ivNV(ProgramTarget target, uint index, int count, out IntPtr @params)
-        {
-            _glProgramLocalParametersI4ivNV(target, index, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, uint, int, IntPtr, void> _glProgramLocalParametersI4uivNV;
-        
-        public static unsafe void ProgramLocalParametersI4uivNV(ProgramTarget target, uint index, int count, out IntPtr @params)
-        {
-            _glProgramLocalParametersI4uivNV(target, index, count, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, double, double, double, double, void> _glProgramNamedParameter4dNV;
-        
-        public static unsafe void ProgramNamedParameter4dNV(uint id, int len, ref byte name, double x, double y, double z, double w)
-        {
-            _glProgramNamedParameter4dNV(id, len, (IntPtr)name, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glProgramNamedParameter4dvNV;
-        
-        public static unsafe void ProgramNamedParameter4dvNV(uint id, int len, ref byte name, ref double v)
-        {
-            _glProgramNamedParameter4dvNV(id, len, (IntPtr)name, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, float, float, float, float, void> _glProgramNamedParameter4fNV;
-        
-        public static unsafe void ProgramNamedParameter4fNV(uint id, int len, ref byte name, float x, float y, float z, float w)
-        {
-            _glProgramNamedParameter4fNV(id, len, (IntPtr)name, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glProgramNamedParameter4fvNV;
-        
-        public static unsafe void ProgramNamedParameter4fvNV(uint id, int len, ref byte name, ref float v)
-        {
-            _glProgramNamedParameter4fvNV(id, len, (IntPtr)name, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, double, double, double, double, void> _glProgramParameter4dNV;
-        
-        public static unsafe void ProgramParameter4dNV(VertexAttribEnumNV target, uint index, double x, double y, double z, double w)
-        {
-            _glProgramParameter4dNV(target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, IntPtr, void> _glProgramParameter4dvNV;
-        
-        public static unsafe void ProgramParameter4dvNV(VertexAttribEnumNV target, uint index, ref double v)
-        {
-            _glProgramParameter4dvNV(target, index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, float, float, float, float, void> _glProgramParameter4fNV;
-        
-        public static unsafe void ProgramParameter4fNV(VertexAttribEnumNV target, uint index, float x, float y, float z, float w)
-        {
-            _glProgramParameter4fNV(target, index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, IntPtr, void> _glProgramParameter4fvNV;
-        
-        public static unsafe void ProgramParameter4fvNV(VertexAttribEnumNV target, uint index, ref float v)
-        {
-            _glProgramParameter4fvNV(target, index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, ProgramParameterPName, int, void> _glProgramParameteri;
@@ -14076,67 +4283,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramParameteri(program, pname, value);
         }
         
-        public static unsafe delegate*<uint, ProgramParameterPName, int, void> _glProgramParameteriARB;
-        
-        public static unsafe void ProgramParameteriARB(uint program, ProgramParameterPName pname, int value)
-        {
-            _glProgramParameteriARB(program, pname, value);
-        }
-        
-        public static unsafe delegate*<uint, ProgramParameterPName, int, void> _glProgramParameteriEXT;
-        
-        public static unsafe void ProgramParameteriEXT(uint program, ProgramParameterPName pname, int value)
-        {
-            _glProgramParameteriEXT(program, pname, value);
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, int, IntPtr, void> _glProgramParameters4dvNV;
-        
-        public static unsafe void ProgramParameters4dvNV(VertexAttribEnumNV target, uint index, int count, out IntPtr v)
-        {
-            _glProgramParameters4dvNV(target, index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, int, IntPtr, void> _glProgramParameters4fvNV;
-        
-        public static unsafe void ProgramParameters4fvNV(VertexAttribEnumNV target, uint index, int count, out IntPtr v)
-        {
-            _glProgramParameters4fvNV(target, index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, uint, int, IntPtr, void> _glProgramPathFragmentInputGenNV;
-        
-        public static unsafe void ProgramPathFragmentInputGenNV(uint program, int location, uint genMode, int components, ref float coeffs)
-        {
-            _glProgramPathFragmentInputGenNV(program, location, genMode, components, (IntPtr)coeffs);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, ProgramFormat, int, IntPtr, void> _glProgramStringARB;
-        
-        public static unsafe void ProgramStringARB(ProgramTarget target, ProgramFormat format, int len, IntPtr @string)
-        {
-            _glProgramStringARB(target, format, len, (IntPtr)@string);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glProgramSubroutineParametersuivNV;
-        
-        public static unsafe void ProgramSubroutineParametersuivNV(uint target, int count, ref uint @params)
-        {
-            _glProgramSubroutineParametersuivNV(target, count, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, int, double, void> _glProgramUniform1d;
         
         public static unsafe void ProgramUniform1d(uint program, int location, double v0)
         {
             _glProgramUniform1d(program, location, v0);
-        }
-        
-        public static unsafe delegate*<uint, int, double, void> _glProgramUniform1dEXT;
-        
-        public static unsafe void ProgramUniform1dEXT(uint program, int location, double x)
-        {
-            _glProgramUniform1dEXT(program, location, x);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1dv;
@@ -14146,25 +4297,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform1dv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1dvEXT;
-        
-        public static unsafe void ProgramUniform1dvEXT(uint program, int location, int count, ref double value)
-        {
-            _glProgramUniform1dvEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, float, void> _glProgramUniform1f;
         
         public static unsafe void ProgramUniform1f(uint program, int location, float v0)
         {
             _glProgramUniform1f(program, location, v0);
-        }
-        
-        public static unsafe delegate*<uint, int, float, void> _glProgramUniform1fEXT;
-        
-        public static unsafe void ProgramUniform1fEXT(uint program, int location, float v0)
-        {
-            _glProgramUniform1fEXT(program, location, v0);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1fv;
@@ -14174,53 +4311,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform1fv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1fvEXT;
-        
-        public static unsafe void ProgramUniform1fvEXT(uint program, int location, int count, ref float value)
-        {
-            _glProgramUniform1fvEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, void> _glProgramUniform1i;
         
         public static unsafe void ProgramUniform1i(uint program, int location, int v0)
         {
             _glProgramUniform1i(program, location, v0);
-        }
-        
-        public static unsafe delegate*<uint, int, long, void> _glProgramUniform1i64ARB;
-        
-        public static unsafe void ProgramUniform1i64ARB(uint program, int location, long x)
-        {
-            _glProgramUniform1i64ARB(program, location, x);
-        }
-        
-        public static unsafe delegate*<uint, int, long, void> _glProgramUniform1i64NV;
-        
-        public static unsafe void ProgramUniform1i64NV(uint program, int location, long x)
-        {
-            _glProgramUniform1i64NV(program, location, x);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1i64vARB;
-        
-        public static unsafe void ProgramUniform1i64vARB(uint program, int location, int count, ref long value)
-        {
-            _glProgramUniform1i64vARB(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1i64vNV;
-        
-        public static unsafe void ProgramUniform1i64vNV(uint program, int location, int count, ref long value)
-        {
-            _glProgramUniform1i64vNV(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, void> _glProgramUniform1iEXT;
-        
-        public static unsafe void ProgramUniform1iEXT(uint program, int location, int v0)
-        {
-            _glProgramUniform1iEXT(program, location, v0);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1iv;
@@ -14230,53 +4325,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform1iv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1ivEXT;
-        
-        public static unsafe void ProgramUniform1ivEXT(uint program, int location, int count, ref int value)
-        {
-            _glProgramUniform1ivEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, uint, void> _glProgramUniform1ui;
         
         public static unsafe void ProgramUniform1ui(uint program, int location, uint v0)
         {
             _glProgramUniform1ui(program, location, v0);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, void> _glProgramUniform1ui64ARB;
-        
-        public static unsafe void ProgramUniform1ui64ARB(uint program, int location, ulong x)
-        {
-            _glProgramUniform1ui64ARB(program, location, x);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, void> _glProgramUniform1ui64NV;
-        
-        public static unsafe void ProgramUniform1ui64NV(uint program, int location, ulong x)
-        {
-            _glProgramUniform1ui64NV(program, location, x);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1ui64vARB;
-        
-        public static unsafe void ProgramUniform1ui64vARB(uint program, int location, int count, ref ulong value)
-        {
-            _glProgramUniform1ui64vARB(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1ui64vNV;
-        
-        public static unsafe void ProgramUniform1ui64vNV(uint program, int location, int count, ref ulong value)
-        {
-            _glProgramUniform1ui64vNV(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, uint, void> _glProgramUniform1uiEXT;
-        
-        public static unsafe void ProgramUniform1uiEXT(uint program, int location, uint v0)
-        {
-            _glProgramUniform1uiEXT(program, location, v0);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1uiv;
@@ -14286,25 +4339,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform1uiv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform1uivEXT;
-        
-        public static unsafe void ProgramUniform1uivEXT(uint program, int location, int count, ref uint value)
-        {
-            _glProgramUniform1uivEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, double, double, void> _glProgramUniform2d;
         
         public static unsafe void ProgramUniform2d(uint program, int location, double v0, double v1)
         {
             _glProgramUniform2d(program, location, v0, v1);
-        }
-        
-        public static unsafe delegate*<uint, int, double, double, void> _glProgramUniform2dEXT;
-        
-        public static unsafe void ProgramUniform2dEXT(uint program, int location, double x, double y)
-        {
-            _glProgramUniform2dEXT(program, location, x, y);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2dv;
@@ -14314,25 +4353,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform2dv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2dvEXT;
-        
-        public static unsafe void ProgramUniform2dvEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform2dvEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, float, float, void> _glProgramUniform2f;
         
         public static unsafe void ProgramUniform2f(uint program, int location, float v0, float v1)
         {
             _glProgramUniform2f(program, location, v0, v1);
-        }
-        
-        public static unsafe delegate*<uint, int, float, float, void> _glProgramUniform2fEXT;
-        
-        public static unsafe void ProgramUniform2fEXT(uint program, int location, float v0, float v1)
-        {
-            _glProgramUniform2fEXT(program, location, v0, v1);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2fv;
@@ -14342,53 +4367,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform2fv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2fvEXT;
-        
-        public static unsafe void ProgramUniform2fvEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform2fvEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, int, void> _glProgramUniform2i;
         
         public static unsafe void ProgramUniform2i(uint program, int location, int v0, int v1)
         {
             _glProgramUniform2i(program, location, v0, v1);
-        }
-        
-        public static unsafe delegate*<uint, int, long, long, void> _glProgramUniform2i64ARB;
-        
-        public static unsafe void ProgramUniform2i64ARB(uint program, int location, long x, long y)
-        {
-            _glProgramUniform2i64ARB(program, location, x, y);
-        }
-        
-        public static unsafe delegate*<uint, int, long, long, void> _glProgramUniform2i64NV;
-        
-        public static unsafe void ProgramUniform2i64NV(uint program, int location, long x, long y)
-        {
-            _glProgramUniform2i64NV(program, location, x, y);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2i64vARB;
-        
-        public static unsafe void ProgramUniform2i64vARB(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform2i64vARB(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2i64vNV;
-        
-        public static unsafe void ProgramUniform2i64vNV(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform2i64vNV(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, void> _glProgramUniform2iEXT;
-        
-        public static unsafe void ProgramUniform2iEXT(uint program, int location, int v0, int v1)
-        {
-            _glProgramUniform2iEXT(program, location, v0, v1);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2iv;
@@ -14398,53 +4381,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform2iv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2ivEXT;
-        
-        public static unsafe void ProgramUniform2ivEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform2ivEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, uint, uint, void> _glProgramUniform2ui;
         
         public static unsafe void ProgramUniform2ui(uint program, int location, uint v0, uint v1)
         {
             _glProgramUniform2ui(program, location, v0, v1);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, ulong, void> _glProgramUniform2ui64ARB;
-        
-        public static unsafe void ProgramUniform2ui64ARB(uint program, int location, ulong x, ulong y)
-        {
-            _glProgramUniform2ui64ARB(program, location, x, y);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, ulong, void> _glProgramUniform2ui64NV;
-        
-        public static unsafe void ProgramUniform2ui64NV(uint program, int location, ulong x, ulong y)
-        {
-            _glProgramUniform2ui64NV(program, location, x, y);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2ui64vARB;
-        
-        public static unsafe void ProgramUniform2ui64vARB(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform2ui64vARB(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2ui64vNV;
-        
-        public static unsafe void ProgramUniform2ui64vNV(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform2ui64vNV(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, uint, uint, void> _glProgramUniform2uiEXT;
-        
-        public static unsafe void ProgramUniform2uiEXT(uint program, int location, uint v0, uint v1)
-        {
-            _glProgramUniform2uiEXT(program, location, v0, v1);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2uiv;
@@ -14454,25 +4395,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform2uiv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform2uivEXT;
-        
-        public static unsafe void ProgramUniform2uivEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform2uivEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, double, double, double, void> _glProgramUniform3d;
         
         public static unsafe void ProgramUniform3d(uint program, int location, double v0, double v1, double v2)
         {
             _glProgramUniform3d(program, location, v0, v1, v2);
-        }
-        
-        public static unsafe delegate*<uint, int, double, double, double, void> _glProgramUniform3dEXT;
-        
-        public static unsafe void ProgramUniform3dEXT(uint program, int location, double x, double y, double z)
-        {
-            _glProgramUniform3dEXT(program, location, x, y, z);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3dv;
@@ -14482,25 +4409,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform3dv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3dvEXT;
-        
-        public static unsafe void ProgramUniform3dvEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform3dvEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, float, float, float, void> _glProgramUniform3f;
         
         public static unsafe void ProgramUniform3f(uint program, int location, float v0, float v1, float v2)
         {
             _glProgramUniform3f(program, location, v0, v1, v2);
-        }
-        
-        public static unsafe delegate*<uint, int, float, float, float, void> _glProgramUniform3fEXT;
-        
-        public static unsafe void ProgramUniform3fEXT(uint program, int location, float v0, float v1, float v2)
-        {
-            _glProgramUniform3fEXT(program, location, v0, v1, v2);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3fv;
@@ -14510,53 +4423,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform3fv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3fvEXT;
-        
-        public static unsafe void ProgramUniform3fvEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform3fvEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, int, int, void> _glProgramUniform3i;
         
         public static unsafe void ProgramUniform3i(uint program, int location, int v0, int v1, int v2)
         {
             _glProgramUniform3i(program, location, v0, v1, v2);
-        }
-        
-        public static unsafe delegate*<uint, int, long, long, long, void> _glProgramUniform3i64ARB;
-        
-        public static unsafe void ProgramUniform3i64ARB(uint program, int location, long x, long y, long z)
-        {
-            _glProgramUniform3i64ARB(program, location, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, int, long, long, long, void> _glProgramUniform3i64NV;
-        
-        public static unsafe void ProgramUniform3i64NV(uint program, int location, long x, long y, long z)
-        {
-            _glProgramUniform3i64NV(program, location, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3i64vARB;
-        
-        public static unsafe void ProgramUniform3i64vARB(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform3i64vARB(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3i64vNV;
-        
-        public static unsafe void ProgramUniform3i64vNV(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform3i64vNV(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, void> _glProgramUniform3iEXT;
-        
-        public static unsafe void ProgramUniform3iEXT(uint program, int location, int v0, int v1, int v2)
-        {
-            _glProgramUniform3iEXT(program, location, v0, v1, v2);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3iv;
@@ -14566,53 +4437,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform3iv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3ivEXT;
-        
-        public static unsafe void ProgramUniform3ivEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform3ivEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, uint, uint, uint, void> _glProgramUniform3ui;
         
         public static unsafe void ProgramUniform3ui(uint program, int location, uint v0, uint v1, uint v2)
         {
             _glProgramUniform3ui(program, location, v0, v1, v2);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, ulong, ulong, void> _glProgramUniform3ui64ARB;
-        
-        public static unsafe void ProgramUniform3ui64ARB(uint program, int location, ulong x, ulong y, ulong z)
-        {
-            _glProgramUniform3ui64ARB(program, location, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, ulong, ulong, void> _glProgramUniform3ui64NV;
-        
-        public static unsafe void ProgramUniform3ui64NV(uint program, int location, ulong x, ulong y, ulong z)
-        {
-            _glProgramUniform3ui64NV(program, location, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3ui64vARB;
-        
-        public static unsafe void ProgramUniform3ui64vARB(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform3ui64vARB(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3ui64vNV;
-        
-        public static unsafe void ProgramUniform3ui64vNV(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform3ui64vNV(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, uint, uint, uint, void> _glProgramUniform3uiEXT;
-        
-        public static unsafe void ProgramUniform3uiEXT(uint program, int location, uint v0, uint v1, uint v2)
-        {
-            _glProgramUniform3uiEXT(program, location, v0, v1, v2);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3uiv;
@@ -14622,25 +4451,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform3uiv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform3uivEXT;
-        
-        public static unsafe void ProgramUniform3uivEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform3uivEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, double, double, double, double, void> _glProgramUniform4d;
         
         public static unsafe void ProgramUniform4d(uint program, int location, double v0, double v1, double v2, double v3)
         {
             _glProgramUniform4d(program, location, v0, v1, v2, v3);
-        }
-        
-        public static unsafe delegate*<uint, int, double, double, double, double, void> _glProgramUniform4dEXT;
-        
-        public static unsafe void ProgramUniform4dEXT(uint program, int location, double x, double y, double z, double w)
-        {
-            _glProgramUniform4dEXT(program, location, x, y, z, w);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4dv;
@@ -14650,25 +4465,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform4dv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4dvEXT;
-        
-        public static unsafe void ProgramUniform4dvEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform4dvEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, float, float, float, float, void> _glProgramUniform4f;
         
         public static unsafe void ProgramUniform4f(uint program, int location, float v0, float v1, float v2, float v3)
         {
             _glProgramUniform4f(program, location, v0, v1, v2, v3);
-        }
-        
-        public static unsafe delegate*<uint, int, float, float, float, float, void> _glProgramUniform4fEXT;
-        
-        public static unsafe void ProgramUniform4fEXT(uint program, int location, float v0, float v1, float v2, float v3)
-        {
-            _glProgramUniform4fEXT(program, location, v0, v1, v2, v3);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4fv;
@@ -14678,53 +4479,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform4fv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4fvEXT;
-        
-        public static unsafe void ProgramUniform4fvEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform4fvEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, int, int, int, void> _glProgramUniform4i;
         
         public static unsafe void ProgramUniform4i(uint program, int location, int v0, int v1, int v2, int v3)
         {
             _glProgramUniform4i(program, location, v0, v1, v2, v3);
-        }
-        
-        public static unsafe delegate*<uint, int, long, long, long, long, void> _glProgramUniform4i64ARB;
-        
-        public static unsafe void ProgramUniform4i64ARB(uint program, int location, long x, long y, long z, long w)
-        {
-            _glProgramUniform4i64ARB(program, location, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, int, long, long, long, long, void> _glProgramUniform4i64NV;
-        
-        public static unsafe void ProgramUniform4i64NV(uint program, int location, long x, long y, long z, long w)
-        {
-            _glProgramUniform4i64NV(program, location, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4i64vARB;
-        
-        public static unsafe void ProgramUniform4i64vARB(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform4i64vARB(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4i64vNV;
-        
-        public static unsafe void ProgramUniform4i64vNV(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform4i64vNV(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, int, void> _glProgramUniform4iEXT;
-        
-        public static unsafe void ProgramUniform4iEXT(uint program, int location, int v0, int v1, int v2, int v3)
-        {
-            _glProgramUniform4iEXT(program, location, v0, v1, v2, v3);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4iv;
@@ -14734,53 +4493,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform4iv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4ivEXT;
-        
-        public static unsafe void ProgramUniform4ivEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform4ivEXT(program, location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, uint, uint, uint, uint, void> _glProgramUniform4ui;
         
         public static unsafe void ProgramUniform4ui(uint program, int location, uint v0, uint v1, uint v2, uint v3)
         {
             _glProgramUniform4ui(program, location, v0, v1, v2, v3);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, ulong, ulong, ulong, void> _glProgramUniform4ui64ARB;
-        
-        public static unsafe void ProgramUniform4ui64ARB(uint program, int location, ulong x, ulong y, ulong z, ulong w)
-        {
-            _glProgramUniform4ui64ARB(program, location, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, ulong, ulong, ulong, void> _glProgramUniform4ui64NV;
-        
-        public static unsafe void ProgramUniform4ui64NV(uint program, int location, ulong x, ulong y, ulong z, ulong w)
-        {
-            _glProgramUniform4ui64NV(program, location, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4ui64vARB;
-        
-        public static unsafe void ProgramUniform4ui64vARB(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform4ui64vARB(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4ui64vNV;
-        
-        public static unsafe void ProgramUniform4ui64vNV(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform4ui64vNV(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, uint, uint, uint, uint, void> _glProgramUniform4uiEXT;
-        
-        public static unsafe void ProgramUniform4uiEXT(uint program, int location, uint v0, uint v1, uint v2, uint v3)
-        {
-            _glProgramUniform4uiEXT(program, location, v0, v1, v2, v3);
         }
         
         public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4uiv;
@@ -14790,67 +4507,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniform4uiv(program, location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniform4uivEXT;
-        
-        public static unsafe void ProgramUniform4uivEXT(uint program, int location, int count, out IntPtr value)
-        {
-            _glProgramUniform4uivEXT(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, void> _glProgramUniformHandleui64ARB;
-        
-        public static unsafe void ProgramUniformHandleui64ARB(uint program, int location, ulong value)
-        {
-            _glProgramUniformHandleui64ARB(program, location, value);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, void> _glProgramUniformHandleui64IMG;
-        
-        public static unsafe void ProgramUniformHandleui64IMG(uint program, int location, ulong value)
-        {
-            _glProgramUniformHandleui64IMG(program, location, value);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, void> _glProgramUniformHandleui64NV;
-        
-        public static unsafe void ProgramUniformHandleui64NV(uint program, int location, ulong value)
-        {
-            _glProgramUniformHandleui64NV(program, location, value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniformHandleui64vARB;
-        
-        public static unsafe void ProgramUniformHandleui64vARB(uint program, int location, int count, ref ulong values)
-        {
-            _glProgramUniformHandleui64vARB(program, location, count, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniformHandleui64vIMG;
-        
-        public static unsafe void ProgramUniformHandleui64vIMG(uint program, int location, int count, ref ulong values)
-        {
-            _glProgramUniformHandleui64vIMG(program, location, count, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniformHandleui64vNV;
-        
-        public static unsafe void ProgramUniformHandleui64vNV(uint program, int location, int count, ref ulong values)
-        {
-            _glProgramUniformHandleui64vNV(program, location, count, (IntPtr)values);
-        }
-        
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2dv;
         
         public static unsafe void ProgramUniformMatrix2dv(uint program, int location, int count, byte transpose, out IntPtr value)
         {
             _glProgramUniformMatrix2dv(program, location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2dvEXT;
-        
-        public static unsafe void ProgramUniformMatrix2dvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix2dvEXT(program, location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2fv;
@@ -14860,25 +4521,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniformMatrix2fv(program, location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2fvEXT;
-        
-        public static unsafe void ProgramUniformMatrix2fvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix2fvEXT(program, location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2x3dv;
         
         public static unsafe void ProgramUniformMatrix2x3dv(uint program, int location, int count, byte transpose, out IntPtr value)
         {
             _glProgramUniformMatrix2x3dv(program, location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2x3dvEXT;
-        
-        public static unsafe void ProgramUniformMatrix2x3dvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix2x3dvEXT(program, location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2x3fv;
@@ -14888,25 +4535,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniformMatrix2x3fv(program, location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2x3fvEXT;
-        
-        public static unsafe void ProgramUniformMatrix2x3fvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix2x3fvEXT(program, location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2x4dv;
         
         public static unsafe void ProgramUniformMatrix2x4dv(uint program, int location, int count, byte transpose, out IntPtr value)
         {
             _glProgramUniformMatrix2x4dv(program, location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2x4dvEXT;
-        
-        public static unsafe void ProgramUniformMatrix2x4dvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix2x4dvEXT(program, location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2x4fv;
@@ -14916,25 +4549,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniformMatrix2x4fv(program, location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix2x4fvEXT;
-        
-        public static unsafe void ProgramUniformMatrix2x4fvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix2x4fvEXT(program, location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3dv;
         
         public static unsafe void ProgramUniformMatrix3dv(uint program, int location, int count, byte transpose, out IntPtr value)
         {
             _glProgramUniformMatrix3dv(program, location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3dvEXT;
-        
-        public static unsafe void ProgramUniformMatrix3dvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix3dvEXT(program, location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3fv;
@@ -14944,25 +4563,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniformMatrix3fv(program, location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3fvEXT;
-        
-        public static unsafe void ProgramUniformMatrix3fvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix3fvEXT(program, location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3x2dv;
         
         public static unsafe void ProgramUniformMatrix3x2dv(uint program, int location, int count, byte transpose, out IntPtr value)
         {
             _glProgramUniformMatrix3x2dv(program, location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3x2dvEXT;
-        
-        public static unsafe void ProgramUniformMatrix3x2dvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix3x2dvEXT(program, location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3x2fv;
@@ -14972,25 +4577,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniformMatrix3x2fv(program, location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3x2fvEXT;
-        
-        public static unsafe void ProgramUniformMatrix3x2fvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix3x2fvEXT(program, location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3x4dv;
         
         public static unsafe void ProgramUniformMatrix3x4dv(uint program, int location, int count, byte transpose, out IntPtr value)
         {
             _glProgramUniformMatrix3x4dv(program, location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3x4dvEXT;
-        
-        public static unsafe void ProgramUniformMatrix3x4dvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix3x4dvEXT(program, location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3x4fv;
@@ -15000,25 +4591,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniformMatrix3x4fv(program, location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix3x4fvEXT;
-        
-        public static unsafe void ProgramUniformMatrix3x4fvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix3x4fvEXT(program, location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4dv;
         
         public static unsafe void ProgramUniformMatrix4dv(uint program, int location, int count, byte transpose, out IntPtr value)
         {
             _glProgramUniformMatrix4dv(program, location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4dvEXT;
-        
-        public static unsafe void ProgramUniformMatrix4dvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix4dvEXT(program, location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4fv;
@@ -15028,25 +4605,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniformMatrix4fv(program, location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4fvEXT;
-        
-        public static unsafe void ProgramUniformMatrix4fvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix4fvEXT(program, location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4x2dv;
         
         public static unsafe void ProgramUniformMatrix4x2dv(uint program, int location, int count, byte transpose, out IntPtr value)
         {
             _glProgramUniformMatrix4x2dv(program, location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4x2dvEXT;
-        
-        public static unsafe void ProgramUniformMatrix4x2dvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix4x2dvEXT(program, location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4x2fv;
@@ -15056,25 +4619,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniformMatrix4x2fv(program, location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4x2fvEXT;
-        
-        public static unsafe void ProgramUniformMatrix4x2fvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix4x2fvEXT(program, location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4x3dv;
         
         public static unsafe void ProgramUniformMatrix4x3dv(uint program, int location, int count, byte transpose, out IntPtr value)
         {
             _glProgramUniformMatrix4x3dv(program, location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4x3dvEXT;
-        
-        public static unsafe void ProgramUniformMatrix4x3dvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix4x3dvEXT(program, location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4x3fv;
@@ -15084,46 +4633,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glProgramUniformMatrix4x3fv(program, location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, int, int, byte, IntPtr, void> _glProgramUniformMatrix4x3fvEXT;
-        
-        public static unsafe void ProgramUniformMatrix4x3fvEXT(uint program, int location, int count, byte transpose, out IntPtr value)
-        {
-            _glProgramUniformMatrix4x3fvEXT(program, location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, int, ulong, void> _glProgramUniformui64NV;
-        
-        public static unsafe void ProgramUniformui64NV(uint program, int location, ulong value)
-        {
-            _glProgramUniformui64NV(program, location, value);
-        }
-        
-        public static unsafe delegate*<uint, int, int, IntPtr, void> _glProgramUniformui64vNV;
-        
-        public static unsafe void ProgramUniformui64vNV(uint program, int location, int count, ref ulong value)
-        {
-            _glProgramUniformui64vNV(program, location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<ProgramTarget, int, void> _glProgramVertexLimitNV;
-        
-        public static unsafe void ProgramVertexLimitNV(ProgramTarget target, int limit)
-        {
-            _glProgramVertexLimitNV(target, limit);
-        }
-        
         public static unsafe delegate*<VertexProvokingMode, void> _glProvokingVertex;
         
         public static unsafe void ProvokingVertex(VertexProvokingMode mode)
         {
             _glProvokingVertex(mode);
-        }
-        
-        public static unsafe delegate*<VertexProvokingMode, void> _glProvokingVertexEXT;
-        
-        public static unsafe void ProvokingVertexEXT(VertexProvokingMode mode)
-        {
-            _glProvokingVertexEXT(mode);
         }
         
         public static unsafe delegate*<uint, void> _glPushAttrib;
@@ -15140,32 +4654,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glPushClientAttrib(mask);
         }
         
-        public static unsafe delegate*<uint, void> _glPushClientAttribDefaultEXT;
-        
-        public static unsafe void PushClientAttribDefaultEXT(uint mask)
-        {
-            _glPushClientAttribDefaultEXT(mask);
-        }
-        
         public static unsafe delegate*<DebugSource, uint, int, IntPtr, void> _glPushDebugGroup;
         
         public static unsafe void PushDebugGroup(DebugSource source, uint id, int length, ref sbyte message)
         {
             _glPushDebugGroup(source, id, length, (IntPtr)message);
-        }
-        
-        public static unsafe delegate*<DebugSource, uint, int, IntPtr, void> _glPushDebugGroupKHR;
-        
-        public static unsafe void PushDebugGroupKHR(DebugSource source, uint id, int length, ref sbyte message)
-        {
-            _glPushDebugGroupKHR(source, id, length, (IntPtr)message);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glPushGroupMarkerEXT;
-        
-        public static unsafe void PushGroupMarkerEXT(int length, ref sbyte marker)
-        {
-            _glPushGroupMarkerEXT(length, (IntPtr)marker);
         }
         
         public static unsafe delegate*<void> _glPushMatrix;
@@ -15187,41 +4680,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void QueryCounter(uint id, QueryCounterTarget target)
         {
             _glQueryCounter(id, target);
-        }
-        
-        public static unsafe delegate*<uint, QueryCounterTarget, void> _glQueryCounterEXT;
-        
-        public static unsafe void QueryCounterEXT(uint id, QueryCounterTarget target)
-        {
-            _glQueryCounterEXT(id, target);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, uint> _glQueryMatrixxOES;
-        
-        public static unsafe uint QueryMatrixxOES(ref int mantissa, ref int exponent)
-        {
-            return _glQueryMatrixxOES((IntPtr)mantissa, (IntPtr)exponent);
-        }
-        
-        public static unsafe delegate*<QueryTarget, uint, uint, uint, void> _glQueryObjectParameteruiAMD;
-        
-        public static unsafe void QueryObjectParameteruiAMD(QueryTarget target, uint id, uint pname, uint param)
-        {
-            _glQueryObjectParameteruiAMD(target, id, pname, param);
-        }
-        
-        public static unsafe delegate*<uint, int, uint, IntPtr, int> _glQueryResourceNV;
-        
-        public static unsafe int QueryResourceNV(uint queryType, int tagId, uint count, ref int buffer)
-        {
-            return _glQueryResourceNV(queryType, tagId, count, (IntPtr)buffer);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glQueryResourceTagNV;
-        
-        public static unsafe void QueryResourceTagNV(int tagId, ref sbyte tagString)
-        {
-            _glQueryResourceTagNV(tagId, (IntPtr)tagString);
         }
         
         public static unsafe delegate*<double, double, void> _glRasterPos2d;
@@ -15280,20 +4738,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glRasterPos2sv((IntPtr)v);
         }
         
-        public static unsafe delegate*<int, int, void> _glRasterPos2xOES;
-        
-        public static unsafe void RasterPos2xOES(int x, int y)
-        {
-            _glRasterPos2xOES(x, y);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glRasterPos2xvOES;
-        
-        public static unsafe void RasterPos2xvOES(ref int coords)
-        {
-            _glRasterPos2xvOES((IntPtr)coords);
-        }
-        
         public static unsafe delegate*<double, double, double, void> _glRasterPos3d;
         
         public static unsafe void RasterPos3d(double x, double y, double z)
@@ -15348,20 +4792,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void RasterPos3sv(ref short v)
         {
             _glRasterPos3sv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<int, int, int, void> _glRasterPos3xOES;
-        
-        public static unsafe void RasterPos3xOES(int x, int y, int z)
-        {
-            _glRasterPos3xOES(x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glRasterPos3xvOES;
-        
-        public static unsafe void RasterPos3xvOES(ref int coords)
-        {
-            _glRasterPos3xvOES((IntPtr)coords);
         }
         
         public static unsafe delegate*<double, double, double, double, void> _glRasterPos4d;
@@ -15420,53 +4850,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glRasterPos4sv((IntPtr)v);
         }
         
-        public static unsafe delegate*<int, int, int, int, void> _glRasterPos4xOES;
-        
-        public static unsafe void RasterPos4xOES(int x, int y, int z, int w)
-        {
-            _glRasterPos4xOES(x, y, z, w);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glRasterPos4xvOES;
-        
-        public static unsafe void RasterPos4xvOES(ref int coords)
-        {
-            _glRasterPos4xvOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<uint, byte, void> _glRasterSamplesEXT;
-        
-        public static unsafe void RasterSamplesEXT(uint samples, byte fixedsamplelocations)
-        {
-            _glRasterSamplesEXT(samples, fixedsamplelocations);
-        }
-        
         public static unsafe delegate*<ReadBufferMode, void> _glReadBuffer;
         
         public static unsafe void ReadBuffer(ReadBufferMode src)
         {
             _glReadBuffer(src);
-        }
-        
-        public static unsafe delegate*<ReadBufferMode, int, void> _glReadBufferIndexedEXT;
-        
-        public static unsafe void ReadBufferIndexedEXT(ReadBufferMode src, int index)
-        {
-            _glReadBufferIndexedEXT(src, index);
-        }
-        
-        public static unsafe delegate*<uint, void> _glReadBufferNV;
-        
-        public static unsafe void ReadBufferNV(uint mode)
-        {
-            _glReadBufferNV(mode);
-        }
-        
-        public static unsafe delegate*<int, void> _glReadInstrumentsSGIX;
-        
-        public static unsafe void ReadInstrumentsSGIX(int marker)
-        {
-            _glReadInstrumentsSGIX(marker);
         }
         
         public static unsafe delegate*<int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glReadPixels;
@@ -15481,34 +4869,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void ReadnPixels(int x, int y, int width, int height, PixelFormat format, PixelType type, int bufSize, IntPtr data)
         {
             _glReadnPixels(x, y, width, height, format, type, bufSize, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, PixelFormat, PixelType, int, IntPtr, void> _glReadnPixelsARB;
-        
-        public static unsafe void ReadnPixelsARB(int x, int y, int width, int height, PixelFormat format, PixelType type, int bufSize, IntPtr data)
-        {
-            _glReadnPixelsARB(x, y, width, height, format, type, bufSize, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, PixelFormat, PixelType, int, IntPtr, void> _glReadnPixelsEXT;
-        
-        public static unsafe void ReadnPixelsEXT(int x, int y, int width, int height, PixelFormat format, PixelType type, int bufSize, IntPtr data)
-        {
-            _glReadnPixelsEXT(x, y, width, height, format, type, bufSize, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, PixelFormat, PixelType, int, IntPtr, void> _glReadnPixelsKHR;
-        
-        public static unsafe void ReadnPixelsKHR(int x, int y, int width, int height, PixelFormat format, PixelType type, int bufSize, IntPtr data)
-        {
-            _glReadnPixelsKHR(x, y, width, height, format, type, bufSize, (IntPtr)data);
-        }
-        
-        public static unsafe delegate*<uint, ulong, byte> _glReleaseKeyedMutexWin32EXT;
-        
-        public static unsafe byte ReleaseKeyedMutexWin32EXT(uint memory, ulong key)
-        {
-            return _glReleaseKeyedMutexWin32EXT(memory, key);
         }
         
         public static unsafe delegate*<double, double, double, double, void> _glRectd;
@@ -15567,39 +4927,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glRectsv((IntPtr)v1, (IntPtr)v2);
         }
         
-        public static unsafe delegate*<int, int, int, int, void> _glRectxOES;
-        
-        public static unsafe void RectxOES(int x1, int y1, int x2, int y2)
-        {
-            _glRectxOES(x1, y1, x2, y2);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, void> _glRectxvOES;
-        
-        public static unsafe void RectxvOES(ref int v1, ref int v2)
-        {
-            _glRectxvOES((IntPtr)v1, (IntPtr)v2);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glReferencePlaneSGIX;
-        
-        public static unsafe void ReferencePlaneSGIX(ref double equation)
-        {
-            _glReferencePlaneSGIX((IntPtr)equation);
-        }
-        
         public static unsafe delegate*<void> _glReleaseShaderCompiler;
         
         public static unsafe void ReleaseShaderCompiler()
         {
             _glReleaseShaderCompiler();
-        }
-        
-        public static unsafe delegate*<uint, void> _glRenderGpuMaskNV;
-        
-        public static unsafe void RenderGpuMaskNV(uint mask)
-        {
-            _glRenderGpuMaskNV(mask);
         }
         
         public static unsafe delegate*<RenderingMode, int> _glRenderMode;
@@ -15616,13 +4948,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glRenderbufferStorage(target, internalformat, width, height);
         }
         
-        public static unsafe delegate*<RenderbufferTarget, InternalFormat, int, int, void> _glRenderbufferStorageEXT;
-        
-        public static unsafe void RenderbufferStorageEXT(RenderbufferTarget target, InternalFormat internalformat, int width, int height)
-        {
-            _glRenderbufferStorageEXT(target, internalformat, width, height);
-        }
-        
         public static unsafe delegate*<RenderbufferTarget, int, InternalFormat, int, int, void> _glRenderbufferStorageMultisample;
         
         public static unsafe void RenderbufferStorageMultisample(RenderbufferTarget target, int samples, InternalFormat internalformat, int width, int height)
@@ -15630,298 +4955,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glRenderbufferStorageMultisample(target, samples, internalformat, width, height);
         }
         
-        public static unsafe delegate*<RenderbufferTarget, int, InternalFormat, int, int, void> _glRenderbufferStorageMultisampleANGLE;
-        
-        public static unsafe void RenderbufferStorageMultisampleANGLE(RenderbufferTarget target, int samples, InternalFormat internalformat, int width, int height)
-        {
-            _glRenderbufferStorageMultisampleANGLE(target, samples, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<RenderbufferTarget, int, InternalFormat, int, int, void> _glRenderbufferStorageMultisampleAPPLE;
-        
-        public static unsafe void RenderbufferStorageMultisampleAPPLE(RenderbufferTarget target, int samples, InternalFormat internalformat, int width, int height)
-        {
-            _glRenderbufferStorageMultisampleAPPLE(target, samples, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<RenderbufferTarget, int, int, InternalFormat, int, int, void> _glRenderbufferStorageMultisampleAdvancedAMD;
-        
-        public static unsafe void RenderbufferStorageMultisampleAdvancedAMD(RenderbufferTarget target, int samples, int storageSamples, InternalFormat internalformat, int width, int height)
-        {
-            _glRenderbufferStorageMultisampleAdvancedAMD(target, samples, storageSamples, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<RenderbufferTarget, int, int, InternalFormat, int, int, void> _glRenderbufferStorageMultisampleCoverageNV;
-        
-        public static unsafe void RenderbufferStorageMultisampleCoverageNV(RenderbufferTarget target, int coverageSamples, int colorSamples, InternalFormat internalformat, int width, int height)
-        {
-            _glRenderbufferStorageMultisampleCoverageNV(target, coverageSamples, colorSamples, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<RenderbufferTarget, int, InternalFormat, int, int, void> _glRenderbufferStorageMultisampleEXT;
-        
-        public static unsafe void RenderbufferStorageMultisampleEXT(RenderbufferTarget target, int samples, InternalFormat internalformat, int width, int height)
-        {
-            _glRenderbufferStorageMultisampleEXT(target, samples, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<RenderbufferTarget, int, InternalFormat, int, int, void> _glRenderbufferStorageMultisampleIMG;
-        
-        public static unsafe void RenderbufferStorageMultisampleIMG(RenderbufferTarget target, int samples, InternalFormat internalformat, int width, int height)
-        {
-            _glRenderbufferStorageMultisampleIMG(target, samples, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<RenderbufferTarget, int, InternalFormat, int, int, void> _glRenderbufferStorageMultisampleNV;
-        
-        public static unsafe void RenderbufferStorageMultisampleNV(RenderbufferTarget target, int samples, InternalFormat internalformat, int width, int height)
-        {
-            _glRenderbufferStorageMultisampleNV(target, samples, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<RenderbufferTarget, InternalFormat, int, int, void> _glRenderbufferStorageOES;
-        
-        public static unsafe void RenderbufferStorageOES(RenderbufferTarget target, InternalFormat internalformat, int width, int height)
-        {
-            _glRenderbufferStorageOES(target, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<ReplacementCodeTypeSUN, int, IntPtr, void> _glReplacementCodePointerSUN;
-        
-        public static unsafe void ReplacementCodePointerSUN(ReplacementCodeTypeSUN type, int stride, out IntPtr pointer)
-        {
-            _glReplacementCodePointerSUN(type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<byte, void> _glReplacementCodeubSUN;
-        
-        public static unsafe void ReplacementCodeubSUN(byte code)
-        {
-            _glReplacementCodeubSUN(code);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glReplacementCodeubvSUN;
-        
-        public static unsafe void ReplacementCodeubvSUN(ref byte code)
-        {
-            _glReplacementCodeubvSUN((IntPtr)code);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, float, float, float, void> _glReplacementCodeuiColor3fVertex3fSUN;
-        
-        public static unsafe void ReplacementCodeuiColor3fVertex3fSUN(uint rc, float r, float g, float b, float x, float y, float z)
-        {
-            _glReplacementCodeuiColor3fVertex3fSUN(rc, r, g, b, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, void> _glReplacementCodeuiColor3fVertex3fvSUN;
-        
-        public static unsafe void ReplacementCodeuiColor3fVertex3fvSUN(ref uint rc, ref float c, ref float v)
-        {
-            _glReplacementCodeuiColor3fVertex3fvSUN((IntPtr)rc, (IntPtr)c, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, float, float, float, float, float, float, float, void> _glReplacementCodeuiColor4fNormal3fVertex3fSUN;
-        
-        public static unsafe void ReplacementCodeuiColor4fNormal3fVertex3fSUN(uint rc, float r, float g, float b, float a, float nx, float ny, float nz, float x, float y, float z)
-        {
-            _glReplacementCodeuiColor4fNormal3fVertex3fSUN(rc, r, g, b, a, nx, ny, nz, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, IntPtr, void> _glReplacementCodeuiColor4fNormal3fVertex3fvSUN;
-        
-        public static unsafe void ReplacementCodeuiColor4fNormal3fVertex3fvSUN(ref uint rc, ref float c, ref float n, ref float v)
-        {
-            _glReplacementCodeuiColor4fNormal3fVertex3fvSUN((IntPtr)rc, (IntPtr)c, (IntPtr)n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, byte, byte, byte, byte, float, float, float, void> _glReplacementCodeuiColor4ubVertex3fSUN;
-        
-        public static unsafe void ReplacementCodeuiColor4ubVertex3fSUN(uint rc, byte r, byte g, byte b, byte a, float x, float y, float z)
-        {
-            _glReplacementCodeuiColor4ubVertex3fSUN(rc, r, g, b, a, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, void> _glReplacementCodeuiColor4ubVertex3fvSUN;
-        
-        public static unsafe void ReplacementCodeuiColor4ubVertex3fvSUN(ref uint rc, ref byte c, ref float v)
-        {
-            _glReplacementCodeuiColor4ubVertex3fvSUN((IntPtr)rc, (IntPtr)c, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, float, float, float, void> _glReplacementCodeuiNormal3fVertex3fSUN;
-        
-        public static unsafe void ReplacementCodeuiNormal3fVertex3fSUN(uint rc, float nx, float ny, float nz, float x, float y, float z)
-        {
-            _glReplacementCodeuiNormal3fVertex3fSUN(rc, nx, ny, nz, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, void> _glReplacementCodeuiNormal3fVertex3fvSUN;
-        
-        public static unsafe void ReplacementCodeuiNormal3fVertex3fvSUN(ref uint rc, ref float n, ref float v)
-        {
-            _glReplacementCodeuiNormal3fVertex3fvSUN((IntPtr)rc, (IntPtr)n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, void> _glReplacementCodeuiSUN;
-        
-        public static unsafe void ReplacementCodeuiSUN(uint code)
-        {
-            _glReplacementCodeuiSUN(code);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, float, float, float, float, float, float, float, float, float, void> _glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN;
-        
-        public static unsafe void ReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(uint rc, float s, float t, float r, float g, float b, float a, float nx, float ny, float nz, float x, float y, float z)
-        {
-            _glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(rc, s, t, r, g, b, a, nx, ny, nz, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, void> _glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN;
-        
-        public static unsafe void ReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(ref uint rc, ref float tc, ref float c, ref float n, ref float v)
-        {
-            _glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN((IntPtr)rc, (IntPtr)tc, (IntPtr)c, (IntPtr)n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, float, float, float, float, float, void> _glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN;
-        
-        public static unsafe void ReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(uint rc, float s, float t, float nx, float ny, float nz, float x, float y, float z)
-        {
-            _glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(rc, s, t, nx, ny, nz, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, IntPtr, void> _glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN;
-        
-        public static unsafe void ReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(ref uint rc, ref float tc, ref float n, ref float v)
-        {
-            _glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN((IntPtr)rc, (IntPtr)tc, (IntPtr)n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, float, float, void> _glReplacementCodeuiTexCoord2fVertex3fSUN;
-        
-        public static unsafe void ReplacementCodeuiTexCoord2fVertex3fSUN(uint rc, float s, float t, float x, float y, float z)
-        {
-            _glReplacementCodeuiTexCoord2fVertex3fSUN(rc, s, t, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, void> _glReplacementCodeuiTexCoord2fVertex3fvSUN;
-        
-        public static unsafe void ReplacementCodeuiTexCoord2fVertex3fvSUN(ref uint rc, ref float tc, ref float v)
-        {
-            _glReplacementCodeuiTexCoord2fVertex3fvSUN((IntPtr)rc, (IntPtr)tc, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, void> _glReplacementCodeuiVertex3fSUN;
-        
-        public static unsafe void ReplacementCodeuiVertex3fSUN(uint rc, float x, float y, float z)
-        {
-            _glReplacementCodeuiVertex3fSUN(rc, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, void> _glReplacementCodeuiVertex3fvSUN;
-        
-        public static unsafe void ReplacementCodeuiVertex3fvSUN(ref uint rc, ref float v)
-        {
-            _glReplacementCodeuiVertex3fvSUN((IntPtr)rc, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glReplacementCodeuivSUN;
-        
-        public static unsafe void ReplacementCodeuivSUN(ref uint code)
-        {
-            _glReplacementCodeuivSUN((IntPtr)code);
-        }
-        
-        public static unsafe delegate*<ushort, void> _glReplacementCodeusSUN;
-        
-        public static unsafe void ReplacementCodeusSUN(ushort code)
-        {
-            _glReplacementCodeusSUN(code);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glReplacementCodeusvSUN;
-        
-        public static unsafe void ReplacementCodeusvSUN(ref ushort code)
-        {
-            _glReplacementCodeusvSUN((IntPtr)code);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glRequestResidentProgramsNV;
-        
-        public static unsafe void RequestResidentProgramsNV(int n, ref uint programs)
-        {
-            _glRequestResidentProgramsNV(n, (IntPtr)programs);
-        }
-        
-        public static unsafe delegate*<HistogramTargetEXT, void> _glResetHistogram;
-        
-        public static unsafe void ResetHistogram(HistogramTargetEXT target)
-        {
-            _glResetHistogram(target);
-        }
-        
-        public static unsafe delegate*<HistogramTargetEXT, void> _glResetHistogramEXT;
-        
-        public static unsafe void ResetHistogramEXT(HistogramTargetEXT target)
-        {
-            _glResetHistogramEXT(target);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glResetMemoryObjectParameterNV;
-        
-        public static unsafe void ResetMemoryObjectParameterNV(uint memory, uint pname)
-        {
-            _glResetMemoryObjectParameterNV(memory, pname);
-        }
-        
-        public static unsafe delegate*<MinmaxTargetEXT, void> _glResetMinmax;
-        
-        public static unsafe void ResetMinmax(MinmaxTargetEXT target)
-        {
-            _glResetMinmax(target);
-        }
-        
-        public static unsafe delegate*<MinmaxTargetEXT, void> _glResetMinmaxEXT;
-        
-        public static unsafe void ResetMinmaxEXT(MinmaxTargetEXT target)
-        {
-            _glResetMinmaxEXT(target);
-        }
-        
-        public static unsafe delegate*<void> _glResizeBuffersMESA;
-        
-        public static unsafe void ResizeBuffersMESA()
-        {
-            _glResizeBuffersMESA();
-        }
-        
-        public static unsafe delegate*<void> _glResolveDepthValuesNV;
-        
-        public static unsafe void ResolveDepthValuesNV()
-        {
-            _glResolveDepthValuesNV();
-        }
-        
-        public static unsafe delegate*<void> _glResolveMultisampleFramebufferAPPLE;
-        
-        public static unsafe void ResolveMultisampleFramebufferAPPLE()
-        {
-            _glResolveMultisampleFramebufferAPPLE();
-        }
-        
         public static unsafe delegate*<void> _glResumeTransformFeedback;
         
         public static unsafe void ResumeTransformFeedback()
         {
             _glResumeTransformFeedback();
-        }
-        
-        public static unsafe delegate*<void> _glResumeTransformFeedbackNV;
-        
-        public static unsafe void ResumeTransformFeedbackNV()
-        {
-            _glResumeTransformFeedbackNV();
         }
         
         public static unsafe delegate*<double, double, double, double, void> _glRotated;
@@ -15938,74 +4976,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glRotatef(angle, x, y, z);
         }
         
-        public static unsafe delegate*<int, int, int, int, void> _glRotatex;
-        
-        public static unsafe void Rotatex(int angle, int x, int y, int z)
-        {
-            _glRotatex(angle, x, y, z);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, void> _glRotatexOES;
-        
-        public static unsafe void RotatexOES(int angle, int x, int y, int z)
-        {
-            _glRotatexOES(angle, x, y, z);
-        }
-        
         public static unsafe delegate*<float, byte, void> _glSampleCoverage;
         
         public static unsafe void SampleCoverage(float value, byte invert)
         {
             _glSampleCoverage(value, invert);
-        }
-        
-        public static unsafe delegate*<float, byte, void> _glSampleCoverageARB;
-        
-        public static unsafe void SampleCoverageARB(float value, byte invert)
-        {
-            _glSampleCoverageARB(value, invert);
-        }
-        
-        public static unsafe delegate*<int, byte, void> _glSampleCoveragex;
-        
-        public static unsafe void SampleCoveragex(int value, byte invert)
-        {
-            _glSampleCoveragex(value, invert);
-        }
-        
-        public static unsafe delegate*<int, byte, void> _glSampleCoveragexOES;
-        
-        public static unsafe void SampleCoveragexOES(int value, byte invert)
-        {
-            _glSampleCoveragexOES(value, invert);
-        }
-        
-        public static unsafe delegate*<uint, uint, SwizzleOpATI, void> _glSampleMapATI;
-        
-        public static unsafe void SampleMapATI(uint dst, uint interp, SwizzleOpATI swizzle)
-        {
-            _glSampleMapATI(dst, interp, swizzle);
-        }
-        
-        public static unsafe delegate*<float, byte, void> _glSampleMaskEXT;
-        
-        public static unsafe void SampleMaskEXT(float value, byte invert)
-        {
-            _glSampleMaskEXT(value, invert);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glSampleMaskIndexedNV;
-        
-        public static unsafe void SampleMaskIndexedNV(uint index, uint mask)
-        {
-            _glSampleMaskIndexedNV(index, mask);
-        }
-        
-        public static unsafe delegate*<float, byte, void> _glSampleMaskSGIS;
-        
-        public static unsafe void SampleMaskSGIS(float value, byte invert)
-        {
-            _glSampleMaskSGIS(value, invert);
         }
         
         public static unsafe delegate*<uint, uint, void> _glSampleMaski;
@@ -16015,20 +4990,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glSampleMaski(maskNumber, mask);
         }
         
-        public static unsafe delegate*<SamplePatternEXT, void> _glSamplePatternEXT;
-        
-        public static unsafe void SamplePatternEXT(SamplePatternEXT pattern)
-        {
-            _glSamplePatternEXT(pattern);
-        }
-        
-        public static unsafe delegate*<SamplePatternSGIS, void> _glSamplePatternSGIS;
-        
-        public static unsafe void SamplePatternSGIS(SamplePatternSGIS pattern)
-        {
-            _glSamplePatternSGIS(pattern);
-        }
-        
         public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glSamplerParameterIiv;
         
         public static unsafe void SamplerParameterIiv(uint sampler, SamplerParameterI pname, ref int param)
@@ -16036,39 +4997,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glSamplerParameterIiv(sampler, pname, (IntPtr)param);
         }
         
-        public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glSamplerParameterIivEXT;
-        
-        public static unsafe void SamplerParameterIivEXT(uint sampler, SamplerParameterI pname, ref int param)
-        {
-            _glSamplerParameterIivEXT(sampler, pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glSamplerParameterIivOES;
-        
-        public static unsafe void SamplerParameterIivOES(uint sampler, SamplerParameterI pname, ref int param)
-        {
-            _glSamplerParameterIivOES(sampler, pname, (IntPtr)param);
-        }
-        
         public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glSamplerParameterIuiv;
         
         public static unsafe void SamplerParameterIuiv(uint sampler, SamplerParameterI pname, ref uint param)
         {
             _glSamplerParameterIuiv(sampler, pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glSamplerParameterIuivEXT;
-        
-        public static unsafe void SamplerParameterIuivEXT(uint sampler, SamplerParameterI pname, ref uint param)
-        {
-            _glSamplerParameterIuivEXT(sampler, pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<uint, SamplerParameterI, IntPtr, void> _glSamplerParameterIuivOES;
-        
-        public static unsafe void SamplerParameterIuivOES(uint sampler, SamplerParameterI pname, ref uint param)
-        {
-            _glSamplerParameterIuivOES(sampler, pname, (IntPtr)param);
         }
         
         public static unsafe delegate*<uint, SamplerParameterF, float, void> _glSamplerParameterf;
@@ -16113,20 +5046,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glScalef(x, y, z);
         }
         
-        public static unsafe delegate*<int, int, int, void> _glScalex;
-        
-        public static unsafe void Scalex(int x, int y, int z)
-        {
-            _glScalex(x, y, z);
-        }
-        
-        public static unsafe delegate*<int, int, int, void> _glScalexOES;
-        
-        public static unsafe void ScalexOES(int x, int y, int z)
-        {
-            _glScalexOES(x, y, z);
-        }
-        
         public static unsafe delegate*<int, int, int, int, void> _glScissor;
         
         public static unsafe void Scissor(int x, int y, int width, int height)
@@ -16141,53 +5060,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glScissorArrayv(first, count, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, int, IntPtr, void> _glScissorArrayvNV;
-        
-        public static unsafe void ScissorArrayvNV(uint first, int count, ref int v)
-        {
-            _glScissorArrayvNV(first, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glScissorArrayvOES;
-        
-        public static unsafe void ScissorArrayvOES(uint first, int count, ref int v)
-        {
-            _glScissorArrayvOES(first, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glScissorExclusiveArrayvNV;
-        
-        public static unsafe void ScissorExclusiveArrayvNV(uint first, int count, ref int v)
-        {
-            _glScissorExclusiveArrayvNV(first, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, void> _glScissorExclusiveNV;
-        
-        public static unsafe void ScissorExclusiveNV(int x, int y, int width, int height)
-        {
-            _glScissorExclusiveNV(x, y, width, height);
-        }
-        
         public static unsafe delegate*<uint, int, int, int, int, void> _glScissorIndexed;
         
         public static unsafe void ScissorIndexed(uint index, int left, int bottom, int width, int height)
         {
             _glScissorIndexed(index, left, bottom, width, height);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, void> _glScissorIndexedNV;
-        
-        public static unsafe void ScissorIndexedNV(uint index, int left, int bottom, int width, int height)
-        {
-            _glScissorIndexedNV(index, left, bottom, width, height);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, void> _glScissorIndexedOES;
-        
-        public static unsafe void ScissorIndexedOES(uint index, int left, int bottom, int width, int height)
-        {
-            _glScissorIndexedOES(index, left, bottom, width, height);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glScissorIndexedv;
@@ -16197,32 +5074,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glScissorIndexedv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glScissorIndexedvNV;
-        
-        public static unsafe void ScissorIndexedvNV(uint index, ref int v)
-        {
-            _glScissorIndexedvNV(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glScissorIndexedvOES;
-        
-        public static unsafe void ScissorIndexedvOES(uint index, ref int v)
-        {
-            _glScissorIndexedvOES(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<sbyte, sbyte, sbyte, void> _glSecondaryColor3b;
         
         public static unsafe void SecondaryColor3b(sbyte red, sbyte green, sbyte blue)
         {
             _glSecondaryColor3b(red, green, blue);
-        }
-        
-        public static unsafe delegate*<sbyte, sbyte, sbyte, void> _glSecondaryColor3bEXT;
-        
-        public static unsafe void SecondaryColor3bEXT(sbyte red, sbyte green, sbyte blue)
-        {
-            _glSecondaryColor3bEXT(red, green, blue);
         }
         
         public static unsafe delegate*<IntPtr, void> _glSecondaryColor3bv;
@@ -16232,25 +5088,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glSecondaryColor3bv((IntPtr)v);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glSecondaryColor3bvEXT;
-        
-        public static unsafe void SecondaryColor3bvEXT(ref sbyte v)
-        {
-            _glSecondaryColor3bvEXT((IntPtr)v);
-        }
-        
         public static unsafe delegate*<double, double, double, void> _glSecondaryColor3d;
         
         public static unsafe void SecondaryColor3d(double red, double green, double blue)
         {
             _glSecondaryColor3d(red, green, blue);
-        }
-        
-        public static unsafe delegate*<double, double, double, void> _glSecondaryColor3dEXT;
-        
-        public static unsafe void SecondaryColor3dEXT(double red, double green, double blue)
-        {
-            _glSecondaryColor3dEXT(red, green, blue);
         }
         
         public static unsafe delegate*<IntPtr, void> _glSecondaryColor3dv;
@@ -16260,25 +5102,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glSecondaryColor3dv((IntPtr)v);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glSecondaryColor3dvEXT;
-        
-        public static unsafe void SecondaryColor3dvEXT(ref double v)
-        {
-            _glSecondaryColor3dvEXT((IntPtr)v);
-        }
-        
         public static unsafe delegate*<float, float, float, void> _glSecondaryColor3f;
         
         public static unsafe void SecondaryColor3f(float red, float green, float blue)
         {
             _glSecondaryColor3f(red, green, blue);
-        }
-        
-        public static unsafe delegate*<float, float, float, void> _glSecondaryColor3fEXT;
-        
-        public static unsafe void SecondaryColor3fEXT(float red, float green, float blue)
-        {
-            _glSecondaryColor3fEXT(red, green, blue);
         }
         
         public static unsafe delegate*<IntPtr, void> _glSecondaryColor3fv;
@@ -16288,39 +5116,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glSecondaryColor3fv((IntPtr)v);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glSecondaryColor3fvEXT;
-        
-        public static unsafe void SecondaryColor3fvEXT(ref float v)
-        {
-            _glSecondaryColor3fvEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<ushort, ushort, ushort, void> _glSecondaryColor3hNV;
-        
-        public static unsafe void SecondaryColor3hNV(ushort red, ushort green, ushort blue)
-        {
-            _glSecondaryColor3hNV(red, green, blue);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glSecondaryColor3hvNV;
-        
-        public static unsafe void SecondaryColor3hvNV(ref ushort v)
-        {
-            _glSecondaryColor3hvNV((IntPtr)v);
-        }
-        
         public static unsafe delegate*<int, int, int, void> _glSecondaryColor3i;
         
         public static unsafe void SecondaryColor3i(int red, int green, int blue)
         {
             _glSecondaryColor3i(red, green, blue);
-        }
-        
-        public static unsafe delegate*<int, int, int, void> _glSecondaryColor3iEXT;
-        
-        public static unsafe void SecondaryColor3iEXT(int red, int green, int blue)
-        {
-            _glSecondaryColor3iEXT(red, green, blue);
         }
         
         public static unsafe delegate*<IntPtr, void> _glSecondaryColor3iv;
@@ -16330,25 +5130,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glSecondaryColor3iv((IntPtr)v);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glSecondaryColor3ivEXT;
-        
-        public static unsafe void SecondaryColor3ivEXT(ref int v)
-        {
-            _glSecondaryColor3ivEXT((IntPtr)v);
-        }
-        
         public static unsafe delegate*<short, short, short, void> _glSecondaryColor3s;
         
         public static unsafe void SecondaryColor3s(short red, short green, short blue)
         {
             _glSecondaryColor3s(red, green, blue);
-        }
-        
-        public static unsafe delegate*<short, short, short, void> _glSecondaryColor3sEXT;
-        
-        public static unsafe void SecondaryColor3sEXT(short red, short green, short blue)
-        {
-            _glSecondaryColor3sEXT(red, green, blue);
         }
         
         public static unsafe delegate*<IntPtr, void> _glSecondaryColor3sv;
@@ -16358,25 +5144,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glSecondaryColor3sv((IntPtr)v);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glSecondaryColor3svEXT;
-        
-        public static unsafe void SecondaryColor3svEXT(ref short v)
-        {
-            _glSecondaryColor3svEXT((IntPtr)v);
-        }
-        
         public static unsafe delegate*<byte, byte, byte, void> _glSecondaryColor3ub;
         
         public static unsafe void SecondaryColor3ub(byte red, byte green, byte blue)
         {
             _glSecondaryColor3ub(red, green, blue);
-        }
-        
-        public static unsafe delegate*<byte, byte, byte, void> _glSecondaryColor3ubEXT;
-        
-        public static unsafe void SecondaryColor3ubEXT(byte red, byte green, byte blue)
-        {
-            _glSecondaryColor3ubEXT(red, green, blue);
         }
         
         public static unsafe delegate*<IntPtr, void> _glSecondaryColor3ubv;
@@ -16386,25 +5158,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glSecondaryColor3ubv((IntPtr)v);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glSecondaryColor3ubvEXT;
-        
-        public static unsafe void SecondaryColor3ubvEXT(ref byte v)
-        {
-            _glSecondaryColor3ubvEXT((IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, uint, uint, void> _glSecondaryColor3ui;
         
         public static unsafe void SecondaryColor3ui(uint red, uint green, uint blue)
         {
             _glSecondaryColor3ui(red, green, blue);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, void> _glSecondaryColor3uiEXT;
-        
-        public static unsafe void SecondaryColor3uiEXT(uint red, uint green, uint blue)
-        {
-            _glSecondaryColor3uiEXT(red, green, blue);
         }
         
         public static unsafe delegate*<IntPtr, void> _glSecondaryColor3uiv;
@@ -16414,13 +5172,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glSecondaryColor3uiv((IntPtr)v);
         }
         
-        public static unsafe delegate*<IntPtr, void> _glSecondaryColor3uivEXT;
-        
-        public static unsafe void SecondaryColor3uivEXT(ref uint v)
-        {
-            _glSecondaryColor3uivEXT((IntPtr)v);
-        }
-        
         public static unsafe delegate*<ushort, ushort, ushort, void> _glSecondaryColor3us;
         
         public static unsafe void SecondaryColor3us(ushort red, ushort green, ushort blue)
@@ -16428,32 +5179,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glSecondaryColor3us(red, green, blue);
         }
         
-        public static unsafe delegate*<ushort, ushort, ushort, void> _glSecondaryColor3usEXT;
-        
-        public static unsafe void SecondaryColor3usEXT(ushort red, ushort green, ushort blue)
-        {
-            _glSecondaryColor3usEXT(red, green, blue);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glSecondaryColor3usv;
         
         public static unsafe void SecondaryColor3usv(ref ushort v)
         {
             _glSecondaryColor3usv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glSecondaryColor3usvEXT;
-        
-        public static unsafe void SecondaryColor3usvEXT(ref ushort v)
-        {
-            _glSecondaryColor3usvEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<int, ColorPointerType, int, void> _glSecondaryColorFormatNV;
-        
-        public static unsafe void SecondaryColorFormatNV(int size, ColorPointerType type, int stride)
-        {
-            _glSecondaryColorFormatNV(size, type, stride);
         }
         
         public static unsafe delegate*<ColorPointerType, uint, void> _glSecondaryColorP3ui;
@@ -16477,102 +5207,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glSecondaryColorPointer(size, type, stride, (IntPtr)pointer);
         }
         
-        public static unsafe delegate*<int, ColorPointerType, int, IntPtr, void> _glSecondaryColorPointerEXT;
-        
-        public static unsafe void SecondaryColorPointerEXT(int size, ColorPointerType type, int stride, IntPtr pointer)
-        {
-            _glSecondaryColorPointerEXT(size, type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<int, SecondaryColorPointerTypeIBM, int, IntPtr, int, void> _glSecondaryColorPointerListIBM;
-        
-        public static unsafe void SecondaryColorPointerListIBM(int size, SecondaryColorPointerTypeIBM type, int stride, out IntPtr pointer, int ptrstride)
-        {
-            _glSecondaryColorPointerListIBM(size, type, stride, (IntPtr)pointer, ptrstride);
-        }
-        
         public static unsafe delegate*<int, IntPtr, void> _glSelectBuffer;
         
         public static unsafe void SelectBuffer(int size, ref uint buffer)
         {
             _glSelectBuffer(size, (IntPtr)buffer);
-        }
-        
-        public static unsafe delegate*<uint, byte, uint, int, IntPtr, void> _glSelectPerfMonitorCountersAMD;
-        
-        public static unsafe void SelectPerfMonitorCountersAMD(uint monitor, byte enable, uint group, int numCounters, ref uint counterList)
-        {
-            _glSelectPerfMonitorCountersAMD(monitor, enable, group, numCounters, (IntPtr)counterList);
-        }
-        
-        public static unsafe delegate*<uint, SemaphoreParameterName, IntPtr, void> _glSemaphoreParameterivNV;
-        
-        public static unsafe void SemaphoreParameterivNV(uint semaphore, SemaphoreParameterName pname, ref int @params)
-        {
-            _glSemaphoreParameterivNV(semaphore, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, SemaphoreParameterName, IntPtr, void> _glSemaphoreParameterui64vEXT;
-        
-        public static unsafe void SemaphoreParameterui64vEXT(uint semaphore, SemaphoreParameterName pname, ref ulong @params)
-        {
-            _glSemaphoreParameterui64vEXT(semaphore, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<SeparableTargetEXT, InternalFormat, int, int, PixelFormat, PixelType, IntPtr, IntPtr, void> _glSeparableFilter2D;
-        
-        public static unsafe void SeparableFilter2D(SeparableTargetEXT target, InternalFormat internalformat, int width, int height, PixelFormat format, PixelType type, IntPtr row, IntPtr column)
-        {
-            _glSeparableFilter2D(target, internalformat, width, height, format, type, (IntPtr)row, (IntPtr)column);
-        }
-        
-        public static unsafe delegate*<SeparableTargetEXT, InternalFormat, int, int, PixelFormat, PixelType, IntPtr, IntPtr, void> _glSeparableFilter2DEXT;
-        
-        public static unsafe void SeparableFilter2DEXT(SeparableTargetEXT target, InternalFormat internalformat, int width, int height, PixelFormat format, PixelType type, IntPtr row, IntPtr column)
-        {
-            _glSeparableFilter2DEXT(target, internalformat, width, height, format, type, (IntPtr)row, (IntPtr)column);
-        }
-        
-        public static unsafe delegate*<uint, void> _glSetFenceAPPLE;
-        
-        public static unsafe void SetFenceAPPLE(uint fence)
-        {
-            _glSetFenceAPPLE(fence);
-        }
-        
-        public static unsafe delegate*<uint, FenceConditionNV, void> _glSetFenceNV;
-        
-        public static unsafe void SetFenceNV(uint fence, FenceConditionNV condition)
-        {
-            _glSetFenceNV(fence, condition);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glSetFragmentShaderConstantATI;
-        
-        public static unsafe void SetFragmentShaderConstantATI(uint dst, ref float value)
-        {
-            _glSetFragmentShaderConstantATI(dst, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<uint, ScalarType, IntPtr, void> _glSetInvariantEXT;
-        
-        public static unsafe void SetInvariantEXT(uint id, ScalarType type, IntPtr addr)
-        {
-            _glSetInvariantEXT(id, type, (IntPtr)addr);
-        }
-        
-        public static unsafe delegate*<uint, ScalarType, IntPtr, void> _glSetLocalConstantEXT;
-        
-        public static unsafe void SetLocalConstantEXT(uint id, ScalarType type, IntPtr addr)
-        {
-            _glSetLocalConstantEXT(id, type, (IntPtr)addr);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glSetMultisamplefvAMD;
-        
-        public static unsafe void SetMultisamplefvAMD(uint pname, uint index, ref float val)
-        {
-            _glSetMultisamplefvAMD(pname, index, (IntPtr)val);
         }
         
         public static unsafe delegate*<ShadingModel, void> _glShadeModel;
@@ -16589,39 +5228,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glShaderBinary(count, (IntPtr)shaders, binaryFormat, (IntPtr)binary, length);
         }
         
-        public static unsafe delegate*<VertexShaderOpEXT, uint, uint, void> _glShaderOp1EXT;
-        
-        public static unsafe void ShaderOp1EXT(VertexShaderOpEXT op, uint res, uint arg1)
-        {
-            _glShaderOp1EXT(op, res, arg1);
-        }
-        
-        public static unsafe delegate*<VertexShaderOpEXT, uint, uint, uint, void> _glShaderOp2EXT;
-        
-        public static unsafe void ShaderOp2EXT(VertexShaderOpEXT op, uint res, uint arg1, uint arg2)
-        {
-            _glShaderOp2EXT(op, res, arg1, arg2);
-        }
-        
-        public static unsafe delegate*<VertexShaderOpEXT, uint, uint, uint, uint, void> _glShaderOp3EXT;
-        
-        public static unsafe void ShaderOp3EXT(VertexShaderOpEXT op, uint res, uint arg1, uint arg2, uint arg3)
-        {
-            _glShaderOp3EXT(op, res, arg1, arg2, arg3);
-        }
-        
         public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glShaderSource;
         
         public static unsafe void ShaderSource(uint shader, int count, out IntPtr @string, ref int length)
         {
             _glShaderSource(shader, count, (IntPtr)@string, (IntPtr)length);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glShaderSourceARB;
-        
-        public static unsafe void ShaderSourceARB(uint shaderObj, int count, out IntPtr @string, ref int length)
-        {
-            _glShaderSourceARB(shaderObj, count, (IntPtr)@string, (IntPtr)length);
         }
         
         public static unsafe delegate*<uint, uint, uint, void> _glShaderStorageBlockBinding;
@@ -16631,144 +5242,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glShaderStorageBlockBinding(program, storageBlockIndex, storageBlockBinding);
         }
         
-        public static unsafe delegate*<byte, void> _glShadingRateImageBarrierNV;
-        
-        public static unsafe void ShadingRateImageBarrierNV(byte synchronize)
-        {
-            _glShadingRateImageBarrierNV(synchronize);
-        }
-        
-        public static unsafe delegate*<ShadingRateQCOM, void> _glShadingRateQCOM;
-        
-        public static unsafe void ShadingRateQCOM(ShadingRateQCOM rate)
-        {
-            _glShadingRateQCOM(rate);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, void> _glShadingRateImagePaletteNV;
-        
-        public static unsafe void ShadingRateImagePaletteNV(uint viewport, uint first, int count, ref uint rates)
-        {
-            _glShadingRateImagePaletteNV(viewport, first, count, (IntPtr)rates);
-        }
-        
-        public static unsafe delegate*<uint, void> _glShadingRateSampleOrderNV;
-        
-        public static unsafe void ShadingRateSampleOrderNV(uint order)
-        {
-            _glShadingRateSampleOrderNV(order);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, void> _glShadingRateSampleOrderCustomNV;
-        
-        public static unsafe void ShadingRateSampleOrderCustomNV(uint rate, uint samples, ref int locations)
-        {
-            _glShadingRateSampleOrderCustomNV(rate, samples, (IntPtr)locations);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, IntPtr, void> _glSharpenTexFuncSGIS;
-        
-        public static unsafe void SharpenTexFuncSGIS(TextureTarget target, int n, out IntPtr points)
-        {
-            _glSharpenTexFuncSGIS(target, n, (IntPtr)points);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, uint, IntPtr, IntPtr, void> _glSignalSemaphoreEXT;
-        
-        public static unsafe void SignalSemaphoreEXT(uint semaphore, uint numBufferBarriers, ref uint buffers, uint numTextureBarriers, ref uint textures, ref TextureLayout dstLayouts)
-        {
-            _glSignalSemaphoreEXT(semaphore, numBufferBarriers, (IntPtr)buffers, numTextureBarriers, (IntPtr)textures, (IntPtr)dstLayouts);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glSignalSemaphoreui64NVX;
-        
-        public static unsafe void SignalSemaphoreui64NVX(uint signalGpu, int fenceObjectCount, ref uint semaphoreArray, ref ulong fenceValueArray)
-        {
-            _glSignalSemaphoreui64NVX(signalGpu, fenceObjectCount, (IntPtr)semaphoreArray, (IntPtr)fenceValueArray);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, uint, IntPtr, IntPtr, void> _glSpecializeShader;
         
         public static unsafe void SpecializeShader(uint shader, ref sbyte pEntryPoint, uint numSpecializationConstants, ref uint pConstantIndex, ref uint pConstantValue)
         {
             _glSpecializeShader(shader, (IntPtr)pEntryPoint, numSpecializationConstants, (IntPtr)pConstantIndex, (IntPtr)pConstantValue);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, uint, IntPtr, IntPtr, void> _glSpecializeShaderARB;
-        
-        public static unsafe void SpecializeShaderARB(uint shader, ref sbyte pEntryPoint, uint numSpecializationConstants, ref uint pConstantIndex, ref uint pConstantValue)
-        {
-            _glSpecializeShaderARB(shader, (IntPtr)pEntryPoint, numSpecializationConstants, (IntPtr)pConstantIndex, (IntPtr)pConstantValue);
-        }
-        
-        public static unsafe delegate*<SpriteParameterNameSGIX, float, void> _glSpriteParameterfSGIX;
-        
-        public static unsafe void SpriteParameterfSGIX(SpriteParameterNameSGIX pname, float param)
-        {
-            _glSpriteParameterfSGIX(pname, param);
-        }
-        
-        public static unsafe delegate*<SpriteParameterNameSGIX, IntPtr, void> _glSpriteParameterfvSGIX;
-        
-        public static unsafe void SpriteParameterfvSGIX(SpriteParameterNameSGIX pname, ref float @params)
-        {
-            _glSpriteParameterfvSGIX(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<SpriteParameterNameSGIX, int, void> _glSpriteParameteriSGIX;
-        
-        public static unsafe void SpriteParameteriSGIX(SpriteParameterNameSGIX pname, int param)
-        {
-            _glSpriteParameteriSGIX(pname, param);
-        }
-        
-        public static unsafe delegate*<SpriteParameterNameSGIX, IntPtr, void> _glSpriteParameterivSGIX;
-        
-        public static unsafe void SpriteParameterivSGIX(SpriteParameterNameSGIX pname, ref int @params)
-        {
-            _glSpriteParameterivSGIX(pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<void> _glStartInstrumentsSGIX;
-        
-        public static unsafe void StartInstrumentsSGIX()
-        {
-            _glStartInstrumentsSGIX();
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, uint, void> _glStartTilingQCOM;
-        
-        public static unsafe void StartTilingQCOM(uint x, uint y, uint width, uint height, uint preserveMask)
-        {
-            _glStartTilingQCOM(x, y, width, height, preserveMask);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glStateCaptureNV;
-        
-        public static unsafe void StateCaptureNV(uint state, uint mode)
-        {
-            _glStateCaptureNV(state, mode);
-        }
-        
-        public static unsafe delegate*<int, uint, void> _glStencilClearTagEXT;
-        
-        public static unsafe void StencilClearTagEXT(int stencilTagBits, uint stencilClearTag)
-        {
-            _glStencilClearTagEXT(stencilTagBits, stencilClearTag);
-        }
-        
-        public static unsafe delegate*<int, PathElementType, IntPtr, uint, PathFillMode, uint, PathTransformType, IntPtr, void> _glStencilFillPathInstancedNV;
-        
-        public static unsafe void StencilFillPathInstancedNV(int numPaths, PathElementType pathNameType, IntPtr paths, uint pathBase, PathFillMode fillMode, uint mask, PathTransformType transformType, ref float transformValues)
-        {
-            _glStencilFillPathInstancedNV(numPaths, pathNameType, (IntPtr)paths, pathBase, fillMode, mask, transformType, (IntPtr)transformValues);
-        }
-        
-        public static unsafe delegate*<uint, PathFillMode, uint, void> _glStencilFillPathNV;
-        
-        public static unsafe void StencilFillPathNV(uint path, PathFillMode fillMode, uint mask)
-        {
-            _glStencilFillPathNV(path, fillMode, mask);
         }
         
         public static unsafe delegate*<StencilFunction, int, uint, void> _glStencilFunc;
@@ -16783,13 +5261,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void StencilFuncSeparate(StencilFaceDirection face, StencilFunction func, int @ref, uint mask)
         {
             _glStencilFuncSeparate(face, func, @ref, mask);
-        }
-        
-        public static unsafe delegate*<StencilFunction, StencilFunction, int, uint, void> _glStencilFuncSeparateATI;
-        
-        public static unsafe void StencilFuncSeparateATI(StencilFunction frontfunc, StencilFunction backfunc, int @ref, uint mask)
-        {
-            _glStencilFuncSeparateATI(frontfunc, backfunc, @ref, mask);
         }
         
         public static unsafe delegate*<uint, void> _glStencilMask;
@@ -16820,230 +5291,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glStencilOpSeparate(face, sfail, dpfail, dppass);
         }
         
-        public static unsafe delegate*<StencilFaceDirection, StencilOp, StencilOp, StencilOp, void> _glStencilOpSeparateATI;
-        
-        public static unsafe void StencilOpSeparateATI(StencilFaceDirection face, StencilOp sfail, StencilOp dpfail, StencilOp dppass)
-        {
-            _glStencilOpSeparateATI(face, sfail, dpfail, dppass);
-        }
-        
-        public static unsafe delegate*<StencilFaceDirection, uint, void> _glStencilOpValueAMD;
-        
-        public static unsafe void StencilOpValueAMD(StencilFaceDirection face, uint value)
-        {
-            _glStencilOpValueAMD(face, value);
-        }
-        
-        public static unsafe delegate*<int, PathElementType, IntPtr, uint, int, uint, PathTransformType, IntPtr, void> _glStencilStrokePathInstancedNV;
-        
-        public static unsafe void StencilStrokePathInstancedNV(int numPaths, PathElementType pathNameType, IntPtr paths, uint pathBase, int reference, uint mask, PathTransformType transformType, ref float transformValues)
-        {
-            _glStencilStrokePathInstancedNV(numPaths, pathNameType, (IntPtr)paths, pathBase, reference, mask, transformType, (IntPtr)transformValues);
-        }
-        
-        public static unsafe delegate*<uint, int, uint, void> _glStencilStrokePathNV;
-        
-        public static unsafe void StencilStrokePathNV(uint path, int reference, uint mask)
-        {
-            _glStencilStrokePathNV(path, reference, mask);
-        }
-        
-        public static unsafe delegate*<int, uint, IntPtr, uint, uint, uint, uint, uint, IntPtr, void> _glStencilThenCoverFillPathInstancedNV;
-        
-        public static unsafe void StencilThenCoverFillPathInstancedNV(int numPaths, uint pathNameType, IntPtr paths, uint pathBase, uint fillMode, uint mask, uint coverMode, uint transformType, ref float transformValues)
-        {
-            _glStencilThenCoverFillPathInstancedNV(numPaths, pathNameType, (IntPtr)paths, pathBase, fillMode, mask, coverMode, transformType, (IntPtr)transformValues);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, void> _glStencilThenCoverFillPathNV;
-        
-        public static unsafe void StencilThenCoverFillPathNV(uint path, uint fillMode, uint mask, uint coverMode)
-        {
-            _glStencilThenCoverFillPathNV(path, fillMode, mask, coverMode);
-        }
-        
-        public static unsafe delegate*<int, uint, IntPtr, uint, int, uint, uint, uint, IntPtr, void> _glStencilThenCoverStrokePathInstancedNV;
-        
-        public static unsafe void StencilThenCoverStrokePathInstancedNV(int numPaths, uint pathNameType, IntPtr paths, uint pathBase, int reference, uint mask, uint coverMode, uint transformType, ref float transformValues)
-        {
-            _glStencilThenCoverStrokePathInstancedNV(numPaths, pathNameType, (IntPtr)paths, pathBase, reference, mask, coverMode, transformType, (IntPtr)transformValues);
-        }
-        
-        public static unsafe delegate*<uint, int, uint, uint, void> _glStencilThenCoverStrokePathNV;
-        
-        public static unsafe void StencilThenCoverStrokePathNV(uint path, int reference, uint mask, uint coverMode)
-        {
-            _glStencilThenCoverStrokePathNV(path, reference, mask, coverMode);
-        }
-        
-        public static unsafe delegate*<int, void> _glStopInstrumentsSGIX;
-        
-        public static unsafe void StopInstrumentsSGIX(int marker)
-        {
-            _glStopInstrumentsSGIX(marker);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glStringMarkerGREMEDY;
-        
-        public static unsafe void StringMarkerGREMEDY(int len, IntPtr @string)
-        {
-            _glStringMarkerGREMEDY(len, (IntPtr)@string);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glSubpixelPrecisionBiasNV;
-        
-        public static unsafe void SubpixelPrecisionBiasNV(uint xbits, uint ybits)
-        {
-            _glSubpixelPrecisionBiasNV(xbits, ybits);
-        }
-        
-        public static unsafe delegate*<uint, uint, VertexShaderCoordOutEXT, VertexShaderCoordOutEXT, VertexShaderCoordOutEXT, VertexShaderCoordOutEXT, void> _glSwizzleEXT;
-        
-        public static unsafe void SwizzleEXT(uint res, uint @in, VertexShaderCoordOutEXT outX, VertexShaderCoordOutEXT outY, VertexShaderCoordOutEXT outZ, VertexShaderCoordOutEXT outW)
-        {
-            _glSwizzleEXT(res, @in, outX, outY, outZ, outW);
-        }
-        
-        public static unsafe delegate*<uint, void> _glSyncTextureINTEL;
-        
-        public static unsafe void SyncTextureINTEL(uint texture)
-        {
-            _glSyncTextureINTEL(texture);
-        }
-        
-        public static unsafe delegate*<void> _glTagSampleBufferSGIX;
-        
-        public static unsafe void TagSampleBufferSGIX()
-        {
-            _glTagSampleBufferSGIX();
-        }
-        
-        public static unsafe delegate*<sbyte, sbyte, sbyte, void> _glTangent3bEXT;
-        
-        public static unsafe void Tangent3bEXT(sbyte tx, sbyte ty, sbyte tz)
-        {
-            _glTangent3bEXT(tx, ty, tz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTangent3bvEXT;
-        
-        public static unsafe void Tangent3bvEXT(ref sbyte v)
-        {
-            _glTangent3bvEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<double, double, double, void> _glTangent3dEXT;
-        
-        public static unsafe void Tangent3dEXT(double tx, double ty, double tz)
-        {
-            _glTangent3dEXT(tx, ty, tz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTangent3dvEXT;
-        
-        public static unsafe void Tangent3dvEXT(ref double v)
-        {
-            _glTangent3dvEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<float, float, float, void> _glTangent3fEXT;
-        
-        public static unsafe void Tangent3fEXT(float tx, float ty, float tz)
-        {
-            _glTangent3fEXT(tx, ty, tz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTangent3fvEXT;
-        
-        public static unsafe void Tangent3fvEXT(ref float v)
-        {
-            _glTangent3fvEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<int, int, int, void> _glTangent3iEXT;
-        
-        public static unsafe void Tangent3iEXT(int tx, int ty, int tz)
-        {
-            _glTangent3iEXT(tx, ty, tz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTangent3ivEXT;
-        
-        public static unsafe void Tangent3ivEXT(ref int v)
-        {
-            _glTangent3ivEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<short, short, short, void> _glTangent3sEXT;
-        
-        public static unsafe void Tangent3sEXT(short tx, short ty, short tz)
-        {
-            _glTangent3sEXT(tx, ty, tz);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTangent3svEXT;
-        
-        public static unsafe void Tangent3svEXT(ref short v)
-        {
-            _glTangent3svEXT((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<TangentPointerTypeEXT, int, IntPtr, void> _glTangentPointerEXT;
-        
-        public static unsafe void TangentPointerEXT(TangentPointerTypeEXT type, int stride, IntPtr pointer)
-        {
-            _glTangentPointerEXT(type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<uint, void> _glTbufferMask3DFX;
-        
-        public static unsafe void TbufferMask3DFX(uint mask)
-        {
-            _glTbufferMask3DFX(mask);
-        }
-        
-        public static unsafe delegate*<float, void> _glTessellationFactorAMD;
-        
-        public static unsafe void TessellationFactorAMD(float factor)
-        {
-            _glTessellationFactorAMD(factor);
-        }
-        
-        public static unsafe delegate*<uint, void> _glTessellationModeAMD;
-        
-        public static unsafe void TessellationModeAMD(uint mode)
-        {
-            _glTessellationModeAMD(mode);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glTestFenceAPPLE;
-        
-        public static unsafe byte TestFenceAPPLE(uint fence)
-        {
-            return _glTestFenceAPPLE(fence);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glTestFenceNV;
-        
-        public static unsafe byte TestFenceNV(uint fence)
-        {
-            return _glTestFenceNV(fence);
-        }
-        
-        public static unsafe delegate*<ObjectTypeAPPLE, uint, byte> _glTestObjectAPPLE;
-        
-        public static unsafe byte TestObjectAPPLE(ObjectTypeAPPLE @object, uint name)
-        {
-            return _glTestObjectAPPLE(@object, name);
-        }
-        
-        public static unsafe delegate*<TextureTarget, uint, ulong, void> _glTexAttachMemoryNV;
-        
-        public static unsafe void TexAttachMemoryNV(TextureTarget target, uint memory, ulong offset)
-        {
-            _glTexAttachMemoryNV(target, memory, offset);
-        }
-        
         public static unsafe delegate*<TextureTarget, SizedInternalFormat, uint, void> _glTexBuffer;
         
         public static unsafe void TexBuffer(TextureTarget target, SizedInternalFormat internalformat, uint buffer)
@@ -17051,74 +5298,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexBuffer(target, internalformat, buffer);
         }
         
-        public static unsafe delegate*<TextureTarget, SizedInternalFormat, uint, void> _glTexBufferARB;
-        
-        public static unsafe void TexBufferARB(TextureTarget target, SizedInternalFormat internalformat, uint buffer)
-        {
-            _glTexBufferARB(target, internalformat, buffer);
-        }
-        
-        public static unsafe delegate*<TextureTarget, SizedInternalFormat, uint, void> _glTexBufferEXT;
-        
-        public static unsafe void TexBufferEXT(TextureTarget target, SizedInternalFormat internalformat, uint buffer)
-        {
-            _glTexBufferEXT(target, internalformat, buffer);
-        }
-        
-        public static unsafe delegate*<TextureTarget, SizedInternalFormat, uint, void> _glTexBufferOES;
-        
-        public static unsafe void TexBufferOES(TextureTarget target, SizedInternalFormat internalformat, uint buffer)
-        {
-            _glTexBufferOES(target, internalformat, buffer);
-        }
-        
         public static unsafe delegate*<TextureTarget, SizedInternalFormat, uint, long, long, void> _glTexBufferRange;
         
         public static unsafe void TexBufferRange(TextureTarget target, SizedInternalFormat internalformat, uint buffer, long offset, long size)
         {
             _glTexBufferRange(target, internalformat, buffer, offset, size);
-        }
-        
-        public static unsafe delegate*<TextureTarget, SizedInternalFormat, uint, long, long, void> _glTexBufferRangeEXT;
-        
-        public static unsafe void TexBufferRangeEXT(TextureTarget target, SizedInternalFormat internalformat, uint buffer, long offset, long size)
-        {
-            _glTexBufferRangeEXT(target, internalformat, buffer, offset, size);
-        }
-        
-        public static unsafe delegate*<TextureTarget, SizedInternalFormat, uint, long, long, void> _glTexBufferRangeOES;
-        
-        public static unsafe void TexBufferRangeOES(TextureTarget target, SizedInternalFormat internalformat, uint buffer, long offset, long size)
-        {
-            _glTexBufferRangeOES(target, internalformat, buffer, offset, size);
-        }
-        
-        public static unsafe delegate*<TexBumpParameterATI, IntPtr, void> _glTexBumpParameterfvATI;
-        
-        public static unsafe void TexBumpParameterfvATI(TexBumpParameterATI pname, ref float param)
-        {
-            _glTexBumpParameterfvATI(pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<TexBumpParameterATI, IntPtr, void> _glTexBumpParameterivATI;
-        
-        public static unsafe void TexBumpParameterivATI(TexBumpParameterATI pname, ref int param)
-        {
-            _glTexBumpParameterivATI(pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<sbyte, void> _glTexCoord1bOES;
-        
-        public static unsafe void TexCoord1bOES(sbyte s)
-        {
-            _glTexCoord1bOES(s);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord1bvOES;
-        
-        public static unsafe void TexCoord1bvOES(ref sbyte coords)
-        {
-            _glTexCoord1bvOES((IntPtr)coords);
         }
         
         public static unsafe delegate*<double, void> _glTexCoord1d;
@@ -17149,20 +5333,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexCoord1fv((IntPtr)v);
         }
         
-        public static unsafe delegate*<ushort, void> _glTexCoord1hNV;
-        
-        public static unsafe void TexCoord1hNV(ushort s)
-        {
-            _glTexCoord1hNV(s);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord1hvNV;
-        
-        public static unsafe void TexCoord1hvNV(ref ushort v)
-        {
-            _glTexCoord1hvNV((IntPtr)v);
-        }
-        
         public static unsafe delegate*<int, void> _glTexCoord1i;
         
         public static unsafe void TexCoord1i(int s)
@@ -17191,34 +5361,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexCoord1sv((IntPtr)v);
         }
         
-        public static unsafe delegate*<int, void> _glTexCoord1xOES;
-        
-        public static unsafe void TexCoord1xOES(int s)
-        {
-            _glTexCoord1xOES(s);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord1xvOES;
-        
-        public static unsafe void TexCoord1xvOES(ref int coords)
-        {
-            _glTexCoord1xvOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<sbyte, sbyte, void> _glTexCoord2bOES;
-        
-        public static unsafe void TexCoord2bOES(sbyte s, sbyte t)
-        {
-            _glTexCoord2bOES(s, t);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord2bvOES;
-        
-        public static unsafe void TexCoord2bvOES(ref sbyte coords)
-        {
-            _glTexCoord2bvOES((IntPtr)coords);
-        }
-        
         public static unsafe delegate*<double, double, void> _glTexCoord2d;
         
         public static unsafe void TexCoord2d(double s, double t)
@@ -17240,95 +5382,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexCoord2f(s, t);
         }
         
-        public static unsafe delegate*<float, float, float, float, float, float, float, float, void> _glTexCoord2fColor3fVertex3fSUN;
-        
-        public static unsafe void TexCoord2fColor3fVertex3fSUN(float s, float t, float r, float g, float b, float x, float y, float z)
-        {
-            _glTexCoord2fColor3fVertex3fSUN(s, t, r, g, b, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, void> _glTexCoord2fColor3fVertex3fvSUN;
-        
-        public static unsafe void TexCoord2fColor3fVertex3fvSUN(ref float tc, ref float c, ref float v)
-        {
-            _glTexCoord2fColor3fVertex3fvSUN((IntPtr)tc, (IntPtr)c, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, float, float, float, float, float, float, float, float, void> _glTexCoord2fColor4fNormal3fVertex3fSUN;
-        
-        public static unsafe void TexCoord2fColor4fNormal3fVertex3fSUN(float s, float t, float r, float g, float b, float a, float nx, float ny, float nz, float x, float y, float z)
-        {
-            _glTexCoord2fColor4fNormal3fVertex3fSUN(s, t, r, g, b, a, nx, ny, nz, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, IntPtr, void> _glTexCoord2fColor4fNormal3fVertex3fvSUN;
-        
-        public static unsafe void TexCoord2fColor4fNormal3fVertex3fvSUN(ref float tc, ref float c, ref float n, ref float v)
-        {
-            _glTexCoord2fColor4fNormal3fVertex3fvSUN((IntPtr)tc, (IntPtr)c, (IntPtr)n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<float, float, byte, byte, byte, byte, float, float, float, void> _glTexCoord2fColor4ubVertex3fSUN;
-        
-        public static unsafe void TexCoord2fColor4ubVertex3fSUN(float s, float t, byte r, byte g, byte b, byte a, float x, float y, float z)
-        {
-            _glTexCoord2fColor4ubVertex3fSUN(s, t, r, g, b, a, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, void> _glTexCoord2fColor4ubVertex3fvSUN;
-        
-        public static unsafe void TexCoord2fColor4ubVertex3fvSUN(ref float tc, ref byte c, ref float v)
-        {
-            _glTexCoord2fColor4ubVertex3fvSUN((IntPtr)tc, (IntPtr)c, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, float, float, float, float, void> _glTexCoord2fNormal3fVertex3fSUN;
-        
-        public static unsafe void TexCoord2fNormal3fVertex3fSUN(float s, float t, float nx, float ny, float nz, float x, float y, float z)
-        {
-            _glTexCoord2fNormal3fVertex3fSUN(s, t, nx, ny, nz, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, void> _glTexCoord2fNormal3fVertex3fvSUN;
-        
-        public static unsafe void TexCoord2fNormal3fVertex3fvSUN(ref float tc, ref float n, ref float v)
-        {
-            _glTexCoord2fNormal3fVertex3fvSUN((IntPtr)tc, (IntPtr)n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, float, void> _glTexCoord2fVertex3fSUN;
-        
-        public static unsafe void TexCoord2fVertex3fSUN(float s, float t, float x, float y, float z)
-        {
-            _glTexCoord2fVertex3fSUN(s, t, x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, void> _glTexCoord2fVertex3fvSUN;
-        
-        public static unsafe void TexCoord2fVertex3fvSUN(ref float tc, ref float v)
-        {
-            _glTexCoord2fVertex3fvSUN((IntPtr)tc, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glTexCoord2fv;
         
         public static unsafe void TexCoord2fv(ref float v)
         {
             _glTexCoord2fv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<ushort, ushort, void> _glTexCoord2hNV;
-        
-        public static unsafe void TexCoord2hNV(ushort s, ushort t)
-        {
-            _glTexCoord2hNV(s, t);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord2hvNV;
-        
-        public static unsafe void TexCoord2hvNV(ref ushort v)
-        {
-            _glTexCoord2hvNV((IntPtr)v);
         }
         
         public static unsafe delegate*<int, int, void> _glTexCoord2i;
@@ -17359,34 +5417,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexCoord2sv((IntPtr)v);
         }
         
-        public static unsafe delegate*<int, int, void> _glTexCoord2xOES;
-        
-        public static unsafe void TexCoord2xOES(int s, int t)
-        {
-            _glTexCoord2xOES(s, t);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord2xvOES;
-        
-        public static unsafe void TexCoord2xvOES(ref int coords)
-        {
-            _glTexCoord2xvOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<sbyte, sbyte, sbyte, void> _glTexCoord3bOES;
-        
-        public static unsafe void TexCoord3bOES(sbyte s, sbyte t, sbyte r)
-        {
-            _glTexCoord3bOES(s, t, r);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord3bvOES;
-        
-        public static unsafe void TexCoord3bvOES(ref sbyte coords)
-        {
-            _glTexCoord3bvOES((IntPtr)coords);
-        }
-        
         public static unsafe delegate*<double, double, double, void> _glTexCoord3d;
         
         public static unsafe void TexCoord3d(double s, double t, double r)
@@ -17413,20 +5443,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void TexCoord3fv(ref float v)
         {
             _glTexCoord3fv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<ushort, ushort, ushort, void> _glTexCoord3hNV;
-        
-        public static unsafe void TexCoord3hNV(ushort s, ushort t, ushort r)
-        {
-            _glTexCoord3hNV(s, t, r);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord3hvNV;
-        
-        public static unsafe void TexCoord3hvNV(ref ushort v)
-        {
-            _glTexCoord3hvNV((IntPtr)v);
         }
         
         public static unsafe delegate*<int, int, int, void> _glTexCoord3i;
@@ -17457,34 +5473,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexCoord3sv((IntPtr)v);
         }
         
-        public static unsafe delegate*<int, int, int, void> _glTexCoord3xOES;
-        
-        public static unsafe void TexCoord3xOES(int s, int t, int r)
-        {
-            _glTexCoord3xOES(s, t, r);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord3xvOES;
-        
-        public static unsafe void TexCoord3xvOES(ref int coords)
-        {
-            _glTexCoord3xvOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<sbyte, sbyte, sbyte, sbyte, void> _glTexCoord4bOES;
-        
-        public static unsafe void TexCoord4bOES(sbyte s, sbyte t, sbyte r, sbyte q)
-        {
-            _glTexCoord4bOES(s, t, r, q);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord4bvOES;
-        
-        public static unsafe void TexCoord4bvOES(ref sbyte coords)
-        {
-            _glTexCoord4bvOES((IntPtr)coords);
-        }
-        
         public static unsafe delegate*<double, double, double, double, void> _glTexCoord4d;
         
         public static unsafe void TexCoord4d(double s, double t, double r, double q)
@@ -17506,53 +5494,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexCoord4f(s, t, r, q);
         }
         
-        public static unsafe delegate*<float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, void> _glTexCoord4fColor4fNormal3fVertex4fSUN;
-        
-        public static unsafe void TexCoord4fColor4fNormal3fVertex4fSUN(float s, float t, float p, float q, float r, float g, float b, float a, float nx, float ny, float nz, float x, float y, float z, float w)
-        {
-            _glTexCoord4fColor4fNormal3fVertex4fSUN(s, t, p, q, r, g, b, a, nx, ny, nz, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, IntPtr, IntPtr, void> _glTexCoord4fColor4fNormal3fVertex4fvSUN;
-        
-        public static unsafe void TexCoord4fColor4fNormal3fVertex4fvSUN(ref float tc, ref float c, ref float n, ref float v)
-        {
-            _glTexCoord4fColor4fNormal3fVertex4fvSUN((IntPtr)tc, (IntPtr)c, (IntPtr)n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, float, float, float, float, void> _glTexCoord4fVertex4fSUN;
-        
-        public static unsafe void TexCoord4fVertex4fSUN(float s, float t, float p, float q, float x, float y, float z, float w)
-        {
-            _glTexCoord4fVertex4fSUN(s, t, p, q, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, void> _glTexCoord4fVertex4fvSUN;
-        
-        public static unsafe void TexCoord4fVertex4fvSUN(ref float tc, ref float v)
-        {
-            _glTexCoord4fVertex4fvSUN((IntPtr)tc, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glTexCoord4fv;
         
         public static unsafe void TexCoord4fv(ref float v)
         {
             _glTexCoord4fv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<ushort, ushort, ushort, ushort, void> _glTexCoord4hNV;
-        
-        public static unsafe void TexCoord4hNV(ushort s, ushort t, ushort r, ushort q)
-        {
-            _glTexCoord4hNV(s, t, r, q);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord4hvNV;
-        
-        public static unsafe void TexCoord4hvNV(ref ushort v)
-        {
-            _glTexCoord4hvNV((IntPtr)v);
         }
         
         public static unsafe delegate*<int, int, int, int, void> _glTexCoord4i;
@@ -17581,27 +5527,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void TexCoord4sv(ref short v)
         {
             _glTexCoord4sv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, void> _glTexCoord4xOES;
-        
-        public static unsafe void TexCoord4xOES(int s, int t, int r, int q)
-        {
-            _glTexCoord4xOES(s, t, r, q);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glTexCoord4xvOES;
-        
-        public static unsafe void TexCoord4xvOES(ref int coords)
-        {
-            _glTexCoord4xvOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<int, uint, int, void> _glTexCoordFormatNV;
-        
-        public static unsafe void TexCoordFormatNV(int size, uint type, int stride)
-        {
-            _glTexCoordFormatNV(size, type, stride);
         }
         
         public static unsafe delegate*<TexCoordPointerType, uint, void> _glTexCoordP1ui;
@@ -17667,27 +5592,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexCoordPointer(size, type, stride, (IntPtr)pointer);
         }
         
-        public static unsafe delegate*<int, TexCoordPointerType, int, int, IntPtr, void> _glTexCoordPointerEXT;
-        
-        public static unsafe void TexCoordPointerEXT(int size, TexCoordPointerType type, int stride, int count, IntPtr pointer)
-        {
-            _glTexCoordPointerEXT(size, type, stride, count, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<int, TexCoordPointerType, int, IntPtr, int, void> _glTexCoordPointerListIBM;
-        
-        public static unsafe void TexCoordPointerListIBM(int size, TexCoordPointerType type, int stride, out IntPtr pointer, int ptrstride)
-        {
-            _glTexCoordPointerListIBM(size, type, stride, (IntPtr)pointer, ptrstride);
-        }
-        
-        public static unsafe delegate*<int, VertexPointerType, IntPtr, void> _glTexCoordPointervINTEL;
-        
-        public static unsafe void TexCoordPointervINTEL(int size, VertexPointerType type, out IntPtr pointer)
-        {
-            _glTexCoordPointervINTEL(size, type, (IntPtr)pointer);
-        }
-        
         public static unsafe delegate*<TextureEnvTarget, TextureEnvParameter, float, void> _glTexEnvf;
         
         public static unsafe void TexEnvf(TextureEnvTarget target, TextureEnvParameter pname, float param)
@@ -17716,62 +5620,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexEnviv(target, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<TextureEnvTarget, TextureEnvParameter, int, void> _glTexEnvx;
-        
-        public static unsafe void TexEnvx(TextureEnvTarget target, TextureEnvParameter pname, int param)
-        {
-            _glTexEnvx(target, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureEnvTarget, TextureEnvParameter, int, void> _glTexEnvxOES;
-        
-        public static unsafe void TexEnvxOES(TextureEnvTarget target, TextureEnvParameter pname, int param)
-        {
-            _glTexEnvxOES(target, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureEnvTarget, TextureEnvParameter, IntPtr, void> _glTexEnvxv;
-        
-        public static unsafe void TexEnvxv(TextureEnvTarget target, TextureEnvParameter pname, ref int @params)
-        {
-            _glTexEnvxv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureEnvTarget, TextureEnvParameter, IntPtr, void> _glTexEnvxvOES;
-        
-        public static unsafe void TexEnvxvOES(TextureEnvTarget target, TextureEnvParameter pname, ref int @params)
-        {
-            _glTexEnvxvOES(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, void> _glTexEstimateMotionQCOM;
-        
-        public static unsafe void TexEstimateMotionQCOM(uint @ref, uint target, uint output)
-        {
-            _glTexEstimateMotionQCOM(@ref, target, output);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, void> _glTexEstimateMotionRegionsQCOM;
-        
-        public static unsafe void TexEstimateMotionRegionsQCOM(uint @ref, uint target, uint output, uint mask)
-        {
-            _glTexEstimateMotionRegionsQCOM(@ref, target, output, mask);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, float, void> _glExtrapolateTex2DQCOM;
-        
-        public static unsafe void ExtrapolateTex2DQCOM(uint src1, uint src2, uint output, float scaleFactor)
-        {
-            _glExtrapolateTex2DQCOM(src1, src2, output, scaleFactor);
-        }
-        
-        public static unsafe delegate*<TextureTarget, TextureFilterSGIS, int, IntPtr, void> _glTexFilterFuncSGIS;
-        
-        public static unsafe void TexFilterFuncSGIS(TextureTarget target, TextureFilterSGIS filter, int n, ref float weights)
-        {
-            _glTexFilterFuncSGIS(target, filter, n, (IntPtr)weights);
-        }
-        
         public static unsafe delegate*<TextureCoordName, TextureGenParameter, double, void> _glTexGend;
         
         public static unsafe void TexGend(TextureCoordName coord, TextureGenParameter pname, double param)
@@ -17793,25 +5641,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexGenf(coord, pname, param);
         }
         
-        public static unsafe delegate*<TextureCoordName, TextureGenParameter, float, void> _glTexGenfOES;
-        
-        public static unsafe void TexGenfOES(TextureCoordName coord, TextureGenParameter pname, float param)
-        {
-            _glTexGenfOES(coord, pname, param);
-        }
-        
         public static unsafe delegate*<TextureCoordName, TextureGenParameter, IntPtr, void> _glTexGenfv;
         
         public static unsafe void TexGenfv(TextureCoordName coord, TextureGenParameter pname, ref float @params)
         {
             _glTexGenfv(coord, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureCoordName, TextureGenParameter, IntPtr, void> _glTexGenfvOES;
-        
-        public static unsafe void TexGenfvOES(TextureCoordName coord, TextureGenParameter pname, ref float @params)
-        {
-            _glTexGenfvOES(coord, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<TextureCoordName, TextureGenParameter, int, void> _glTexGeni;
@@ -17821,39 +5655,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexGeni(coord, pname, param);
         }
         
-        public static unsafe delegate*<TextureCoordName, TextureGenParameter, int, void> _glTexGeniOES;
-        
-        public static unsafe void TexGeniOES(TextureCoordName coord, TextureGenParameter pname, int param)
-        {
-            _glTexGeniOES(coord, pname, param);
-        }
-        
         public static unsafe delegate*<TextureCoordName, TextureGenParameter, IntPtr, void> _glTexGeniv;
         
         public static unsafe void TexGeniv(TextureCoordName coord, TextureGenParameter pname, ref int @params)
         {
             _glTexGeniv(coord, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureCoordName, TextureGenParameter, IntPtr, void> _glTexGenivOES;
-        
-        public static unsafe void TexGenivOES(TextureCoordName coord, TextureGenParameter pname, ref int @params)
-        {
-            _glTexGenivOES(coord, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureCoordName, TextureGenParameter, int, void> _glTexGenxOES;
-        
-        public static unsafe void TexGenxOES(TextureCoordName coord, TextureGenParameter pname, int param)
-        {
-            _glTexGenxOES(coord, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureCoordName, TextureGenParameter, IntPtr, void> _glTexGenxvOES;
-        
-        public static unsafe void TexGenxvOES(TextureCoordName coord, TextureGenParameter pname, ref int @params)
-        {
-            _glTexGenxvOES(coord, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<TextureTarget, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexImage1D;
@@ -17877,25 +5683,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
         }
         
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, byte, void> _glTexImage2DMultisampleCoverageNV;
-        
-        public static unsafe void TexImage2DMultisampleCoverageNV(TextureTarget target, int coverageSamples, int colorSamples, int internalFormat, int width, int height, byte fixedSampleLocations)
-        {
-            _glTexImage2DMultisampleCoverageNV(target, coverageSamples, colorSamples, internalFormat, width, height, fixedSampleLocations);
-        }
-        
         public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexImage3D;
         
         public static unsafe void TexImage3D(TextureTarget target, int level, int internalformat, int width, int height, int depth, int border, PixelFormat format, PixelType type, IntPtr pixels)
         {
             _glTexImage3D(target, level, internalformat, width, height, depth, border, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexImage3DEXT;
-        
-        public static unsafe void TexImage3DEXT(TextureTarget target, int level, InternalFormat internalformat, int width, int height, int depth, int border, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTexImage3DEXT(target, level, internalformat, width, height, depth, border, format, type, (IntPtr)pixels);
         }
         
         public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, byte, void> _glTexImage3DMultisample;
@@ -17905,48 +5697,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexImage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
         }
         
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, byte, void> _glTexImage3DMultisampleCoverageNV;
-        
-        public static unsafe void TexImage3DMultisampleCoverageNV(TextureTarget target, int coverageSamples, int colorSamples, int internalFormat, int width, int height, int depth, byte fixedSampleLocations)
-        {
-            _glTexImage3DMultisampleCoverageNV(target, coverageSamples, colorSamples, internalFormat, width, height, depth, fixedSampleLocations);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexImage3DOES;
-        
-        public static unsafe void TexImage3DOES(TextureTarget target, int level, InternalFormat internalformat, int width, int height, int depth, int border, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTexImage3DOES(target, level, internalformat, width, height, depth, border, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, InternalFormat, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexImage4DSGIS;
-        
-        public static unsafe void TexImage4DSGIS(TextureTarget target, int level, InternalFormat internalformat, int width, int height, int depth, int size4d, int border, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTexImage4DSGIS(target, level, internalformat, width, height, depth, size4d, border, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, int, int, int, byte, void> _glTexPageCommitmentARB;
-        
-        public static unsafe void TexPageCommitmentARB(uint target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, byte commit)
-        {
-            _glTexPageCommitmentARB(target, level, xoffset, yoffset, zoffset, width, height, depth, commit);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, int, int, int, byte, void> _glTexPageCommitmentEXT;
-        
-        public static unsafe void TexPageCommitmentEXT(uint target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, byte commit)
-        {
-            _glTexPageCommitmentEXT(target, level, xoffset, yoffset, zoffset, width, height, depth, commit);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, int, uint, ulong, byte, void> _glTexPageCommitmentMemNV;
-        
-        public static unsafe void TexPageCommitmentMemNV(TextureTarget target, int layer, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, uint memory, ulong offset, byte commit)
-        {
-            _glTexPageCommitmentMemNV(target, layer, level, xoffset, yoffset, zoffset, width, height, depth, memory, offset, commit);
-        }
-        
         public static unsafe delegate*<TextureTarget, TextureParameterName, IntPtr, void> _glTexParameterIiv;
         
         public static unsafe void TexParameterIiv(TextureTarget target, TextureParameterName pname, ref int @params)
@@ -17954,39 +5704,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexParameterIiv(target, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<TextureTarget, TextureParameterName, IntPtr, void> _glTexParameterIivEXT;
-        
-        public static unsafe void TexParameterIivEXT(TextureTarget target, TextureParameterName pname, ref int @params)
-        {
-            _glTexParameterIivEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureTarget, TextureParameterName, IntPtr, void> _glTexParameterIivOES;
-        
-        public static unsafe void TexParameterIivOES(TextureTarget target, TextureParameterName pname, ref int @params)
-        {
-            _glTexParameterIivOES(target, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<TextureTarget, TextureParameterName, IntPtr, void> _glTexParameterIuiv;
         
         public static unsafe void TexParameterIuiv(TextureTarget target, TextureParameterName pname, ref uint @params)
         {
             _glTexParameterIuiv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureTarget, TextureParameterName, IntPtr, void> _glTexParameterIuivEXT;
-        
-        public static unsafe void TexParameterIuivEXT(TextureTarget target, TextureParameterName pname, ref uint @params)
-        {
-            _glTexParameterIuivEXT(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureTarget, TextureParameterName, IntPtr, void> _glTexParameterIuivOES;
-        
-        public static unsafe void TexParameterIuivOES(TextureTarget target, TextureParameterName pname, ref uint @params)
-        {
-            _glTexParameterIuivOES(target, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<TextureTarget, TextureParameterName, float, void> _glTexParameterf;
@@ -18017,41 +5739,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexParameteriv(target, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<TextureTarget, GetTextureParameter, int, void> _glTexParameterx;
-        
-        public static unsafe void TexParameterx(TextureTarget target, GetTextureParameter pname, int param)
-        {
-            _glTexParameterx(target, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureTarget, GetTextureParameter, int, void> _glTexParameterxOES;
-        
-        public static unsafe void TexParameterxOES(TextureTarget target, GetTextureParameter pname, int param)
-        {
-            _glTexParameterxOES(target, pname, param);
-        }
-        
-        public static unsafe delegate*<TextureTarget, GetTextureParameter, IntPtr, void> _glTexParameterxv;
-        
-        public static unsafe void TexParameterxv(TextureTarget target, GetTextureParameter pname, ref int @params)
-        {
-            _glTexParameterxv(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureTarget, GetTextureParameter, IntPtr, void> _glTexParameterxvOES;
-        
-        public static unsafe void TexParameterxvOES(TextureTarget target, GetTextureParameter pname, ref int @params)
-        {
-            _glTexParameterxvOES(target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<TextureTarget, uint, void> _glTexRenderbufferNV;
-        
-        public static unsafe void TexRenderbufferNV(TextureTarget target, uint renderbuffer)
-        {
-            _glTexRenderbufferNV(target, renderbuffer);
-        }
-        
         public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, void> _glTexStorage1D;
         
         public static unsafe void TexStorage1D(TextureTarget target, int levels, SizedInternalFormat internalformat, int width)
@@ -18059,25 +5746,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexStorage1D(target, levels, internalformat, width);
         }
         
-        public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, void> _glTexStorage1DEXT;
-        
-        public static unsafe void TexStorage1DEXT(TextureTarget target, int levels, SizedInternalFormat internalformat, int width)
-        {
-            _glTexStorage1DEXT(target, levels, internalformat, width);
-        }
-        
         public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, int, void> _glTexStorage2D;
         
         public static unsafe void TexStorage2D(TextureTarget target, int levels, SizedInternalFormat internalformat, int width, int height)
         {
             _glTexStorage2D(target, levels, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, int, void> _glTexStorage2DEXT;
-        
-        public static unsafe void TexStorage2DEXT(TextureTarget target, int levels, SizedInternalFormat internalformat, int width, int height)
-        {
-            _glTexStorage2DEXT(target, levels, internalformat, width, height);
         }
         
         public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, int, byte, void> _glTexStorage2DMultisample;
@@ -18094,67 +5767,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexStorage3D(target, levels, internalformat, width, height, depth);
         }
         
-        public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, int, int, void> _glTexStorage3DEXT;
-        
-        public static unsafe void TexStorage3DEXT(TextureTarget target, int levels, SizedInternalFormat internalformat, int width, int height, int depth)
-        {
-            _glTexStorage3DEXT(target, levels, internalformat, width, height, depth);
-        }
-        
         public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, int, int, byte, void> _glTexStorage3DMultisample;
         
         public static unsafe void TexStorage3DMultisample(TextureTarget target, int samples, SizedInternalFormat internalformat, int width, int height, int depth, byte fixedsamplelocations)
         {
             _glTexStorage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, int, int, byte, void> _glTexStorage3DMultisampleOES;
-        
-        public static unsafe void TexStorage3DMultisampleOES(TextureTarget target, int samples, SizedInternalFormat internalformat, int width, int height, int depth, byte fixedsamplelocations)
-        {
-            _glTexStorage3DMultisampleOES(target, samples, internalformat, width, height, depth, fixedsamplelocations);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, uint, ulong, void> _glTexStorageMem1DEXT;
-        
-        public static unsafe void TexStorageMem1DEXT(TextureTarget target, int levels, SizedInternalFormat internalFormat, int width, uint memory, ulong offset)
-        {
-            _glTexStorageMem1DEXT(target, levels, internalFormat, width, memory, offset);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, int, uint, ulong, void> _glTexStorageMem2DEXT;
-        
-        public static unsafe void TexStorageMem2DEXT(TextureTarget target, int levels, SizedInternalFormat internalFormat, int width, int height, uint memory, ulong offset)
-        {
-            _glTexStorageMem2DEXT(target, levels, internalFormat, width, height, memory, offset);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, int, byte, uint, ulong, void> _glTexStorageMem2DMultisampleEXT;
-        
-        public static unsafe void TexStorageMem2DMultisampleEXT(TextureTarget target, int samples, SizedInternalFormat internalFormat, int width, int height, byte fixedSampleLocations, uint memory, ulong offset)
-        {
-            _glTexStorageMem2DMultisampleEXT(target, samples, internalFormat, width, height, fixedSampleLocations, memory, offset);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, int, int, uint, ulong, void> _glTexStorageMem3DEXT;
-        
-        public static unsafe void TexStorageMem3DEXT(TextureTarget target, int levels, SizedInternalFormat internalFormat, int width, int height, int depth, uint memory, ulong offset)
-        {
-            _glTexStorageMem3DEXT(target, levels, internalFormat, width, height, depth, memory, offset);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, SizedInternalFormat, int, int, int, byte, uint, ulong, void> _glTexStorageMem3DMultisampleEXT;
-        
-        public static unsafe void TexStorageMem3DMultisampleEXT(TextureTarget target, int samples, SizedInternalFormat internalFormat, int width, int height, int depth, byte fixedSampleLocations, uint memory, ulong offset)
-        {
-            _glTexStorageMem3DMultisampleEXT(target, samples, internalFormat, width, height, depth, fixedSampleLocations, memory, offset);
-        }
-        
-        public static unsafe delegate*<TextureTarget, SizedInternalFormat, int, int, int, int, uint, void> _glTexStorageSparseAMD;
-        
-        public static unsafe void TexStorageSparseAMD(TextureTarget target, SizedInternalFormat internalFormat, int width, int height, int depth, int layers, uint flags)
-        {
-            _glTexStorageSparseAMD(target, internalFormat, width, height, depth, layers, flags);
         }
         
         public static unsafe delegate*<TextureTarget, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexSubImage1D;
@@ -18164,25 +5781,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexSubImage1D(target, level, xoffset, width, format, type, (IntPtr)pixels);
         }
         
-        public static unsafe delegate*<TextureTarget, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexSubImage1DEXT;
-        
-        public static unsafe void TexSubImage1DEXT(TextureTarget target, int level, int xoffset, int width, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTexSubImage1DEXT(target, level, xoffset, width, format, type, (IntPtr)pixels);
-        }
-        
         public static unsafe delegate*<TextureTarget, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexSubImage2D;
         
         public static unsafe void TexSubImage2D(TextureTarget target, int level, int xoffset, int yoffset, int width, int height, PixelFormat format, PixelType type, IntPtr pixels)
         {
             _glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexSubImage2DEXT;
-        
-        public static unsafe void TexSubImage2DEXT(TextureTarget target, int level, int xoffset, int yoffset, int width, int height, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTexSubImage2DEXT(target, level, xoffset, yoffset, width, height, format, type, (IntPtr)pixels);
         }
         
         public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexSubImage3D;
@@ -18192,46 +5795,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, (IntPtr)pixels);
         }
         
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexSubImage3DEXT;
-        
-        public static unsafe void TexSubImage3DEXT(TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTexSubImage3DEXT(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexSubImage3DOES;
-        
-        public static unsafe void TexSubImage3DOES(TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTexSubImage3DOES(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<TextureTarget, int, int, int, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTexSubImage4DSGIS;
-        
-        public static unsafe void TexSubImage4DSGIS(TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int woffset, int width, int height, int depth, int size4d, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTexSubImage4DSGIS(target, level, xoffset, yoffset, zoffset, woffset, width, height, depth, size4d, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<uint, uint, ulong, void> _glTextureAttachMemoryNV;
-        
-        public static unsafe void TextureAttachMemoryNV(uint texture, uint memory, ulong offset)
-        {
-            _glTextureAttachMemoryNV(texture, memory, offset);
-        }
-        
         public static unsafe delegate*<void> _glTextureBarrier;
         
         public static unsafe void TextureBarrier()
         {
             _glTextureBarrier();
-        }
-        
-        public static unsafe delegate*<void> _glTextureBarrierNV;
-        
-        public static unsafe void TextureBarrierNV()
-        {
-            _glTextureBarrierNV();
         }
         
         public static unsafe delegate*<uint, SizedInternalFormat, uint, void> _glTextureBuffer;
@@ -18241,123 +5809,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTextureBuffer(texture, internalformat, buffer);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, SizedInternalFormat, uint, void> _glTextureBufferEXT;
-        
-        public static unsafe void TextureBufferEXT(uint texture, TextureTarget target, SizedInternalFormat internalformat, uint buffer)
-        {
-            _glTextureBufferEXT(texture, target, internalformat, buffer);
-        }
-        
         public static unsafe delegate*<uint, SizedInternalFormat, uint, long, long, void> _glTextureBufferRange;
         
         public static unsafe void TextureBufferRange(uint texture, SizedInternalFormat internalformat, uint buffer, long offset, long size)
         {
             _glTextureBufferRange(texture, internalformat, buffer, offset, size);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, SizedInternalFormat, uint, long, long, void> _glTextureBufferRangeEXT;
-        
-        public static unsafe void TextureBufferRangeEXT(uint texture, TextureTarget target, SizedInternalFormat internalformat, uint buffer, long offset, long size)
-        {
-            _glTextureBufferRangeEXT(texture, target, internalformat, buffer, offset, size);
-        }
-        
-        public static unsafe delegate*<byte, byte, byte, byte, void> _glTextureColorMaskSGIS;
-        
-        public static unsafe void TextureColorMaskSGIS(byte red, byte green, byte blue, byte alpha)
-        {
-            _glTextureColorMaskSGIS(red, green, blue, alpha);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, float, float, float, float, float, void> _glTextureFoveationParametersQCOM;
-        
-        public static unsafe void TextureFoveationParametersQCOM(uint texture, uint layer, uint focalPoint, float focalX, float focalY, float gainX, float gainY, float foveaArea)
-        {
-            _glTextureFoveationParametersQCOM(texture, layer, focalPoint, focalX, focalY, gainX, gainY, foveaArea);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTextureImage1DEXT;
-        
-        public static unsafe void TextureImage1DEXT(uint texture, TextureTarget target, int level, int internalformat, int width, int border, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTextureImage1DEXT(texture, target, level, internalformat, width, border, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTextureImage2DEXT;
-        
-        public static unsafe void TextureImage2DEXT(uint texture, TextureTarget target, int level, int internalformat, int width, int height, int border, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTextureImage2DEXT(texture, target, level, internalformat, width, height, border, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, byte, void> _glTextureImage2DMultisampleCoverageNV;
-        
-        public static unsafe void TextureImage2DMultisampleCoverageNV(uint texture, TextureTarget target, int coverageSamples, int colorSamples, int internalFormat, int width, int height, byte fixedSampleLocations)
-        {
-            _glTextureImage2DMultisampleCoverageNV(texture, target, coverageSamples, colorSamples, internalFormat, width, height, fixedSampleLocations);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, byte, void> _glTextureImage2DMultisampleNV;
-        
-        public static unsafe void TextureImage2DMultisampleNV(uint texture, TextureTarget target, int samples, int internalFormat, int width, int height, byte fixedSampleLocations)
-        {
-            _glTextureImage2DMultisampleNV(texture, target, samples, internalFormat, width, height, fixedSampleLocations);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTextureImage3DEXT;
-        
-        public static unsafe void TextureImage3DEXT(uint texture, TextureTarget target, int level, int internalformat, int width, int height, int depth, int border, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTextureImage3DEXT(texture, target, level, internalformat, width, height, depth, border, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, int, byte, void> _glTextureImage3DMultisampleCoverageNV;
-        
-        public static unsafe void TextureImage3DMultisampleCoverageNV(uint texture, TextureTarget target, int coverageSamples, int colorSamples, int internalFormat, int width, int height, int depth, byte fixedSampleLocations)
-        {
-            _glTextureImage3DMultisampleCoverageNV(texture, target, coverageSamples, colorSamples, internalFormat, width, height, depth, fixedSampleLocations);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, byte, void> _glTextureImage3DMultisampleNV;
-        
-        public static unsafe void TextureImage3DMultisampleNV(uint texture, TextureTarget target, int samples, int internalFormat, int width, int height, int depth, byte fixedSampleLocations)
-        {
-            _glTextureImage3DMultisampleNV(texture, target, samples, internalFormat, width, height, depth, fixedSampleLocations);
-        }
-        
-        public static unsafe delegate*<LightTexturePNameEXT, void> _glTextureLightEXT;
-        
-        public static unsafe void TextureLightEXT(LightTexturePNameEXT pname)
-        {
-            _glTextureLightEXT(pname);
-        }
-        
-        public static unsafe delegate*<MaterialFace, MaterialParameter, void> _glTextureMaterialEXT;
-        
-        public static unsafe void TextureMaterialEXT(MaterialFace face, MaterialParameter mode)
-        {
-            _glTextureMaterialEXT(face, mode);
-        }
-        
-        public static unsafe delegate*<TextureNormalModeEXT, void> _glTextureNormalEXT;
-        
-        public static unsafe void TextureNormalEXT(TextureNormalModeEXT mode)
-        {
-            _glTextureNormalEXT(mode);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, int, int, int, byte, void> _glTexturePageCommitmentEXT;
-        
-        public static unsafe void TexturePageCommitmentEXT(uint texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, byte commit)
-        {
-            _glTexturePageCommitmentEXT(texture, level, xoffset, yoffset, zoffset, width, height, depth, commit);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, int, int, int, int, uint, ulong, byte, void> _glTexturePageCommitmentMemNV;
-        
-        public static unsafe void TexturePageCommitmentMemNV(uint texture, int layer, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, uint memory, ulong offset, byte commit)
-        {
-            _glTexturePageCommitmentMemNV(texture, layer, level, xoffset, yoffset, zoffset, width, height, depth, memory, offset, commit);
         }
         
         public static unsafe delegate*<uint, TextureParameterName, IntPtr, void> _glTextureParameterIiv;
@@ -18367,25 +5823,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTextureParameterIiv(texture, pname, (IntPtr)@params);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, TextureParameterName, IntPtr, void> _glTextureParameterIivEXT;
-        
-        public static unsafe void TextureParameterIivEXT(uint texture, TextureTarget target, TextureParameterName pname, ref int @params)
-        {
-            _glTextureParameterIivEXT(texture, target, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<uint, TextureParameterName, IntPtr, void> _glTextureParameterIuiv;
         
         public static unsafe void TextureParameterIuiv(uint texture, TextureParameterName pname, ref uint @params)
         {
             _glTextureParameterIuiv(texture, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, TextureParameterName, IntPtr, void> _glTextureParameterIuivEXT;
-        
-        public static unsafe void TextureParameterIuivEXT(uint texture, TextureTarget target, TextureParameterName pname, ref uint @params)
-        {
-            _glTextureParameterIuivEXT(texture, target, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, TextureParameterName, float, void> _glTextureParameterf;
@@ -18395,25 +5837,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTextureParameterf(texture, pname, param);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, TextureParameterName, float, void> _glTextureParameterfEXT;
-        
-        public static unsafe void TextureParameterfEXT(uint texture, TextureTarget target, TextureParameterName pname, float param)
-        {
-            _glTextureParameterfEXT(texture, target, pname, param);
-        }
-        
         public static unsafe delegate*<uint, TextureParameterName, IntPtr, void> _glTextureParameterfv;
         
         public static unsafe void TextureParameterfv(uint texture, TextureParameterName pname, ref float param)
         {
             _glTextureParameterfv(texture, pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, TextureParameterName, IntPtr, void> _glTextureParameterfvEXT;
-        
-        public static unsafe void TextureParameterfvEXT(uint texture, TextureTarget target, TextureParameterName pname, ref float @params)
-        {
-            _glTextureParameterfvEXT(texture, target, pname, (IntPtr)@params);
         }
         
         public static unsafe delegate*<uint, TextureParameterName, int, void> _glTextureParameteri;
@@ -18423,39 +5851,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTextureParameteri(texture, pname, param);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, TextureParameterName, int, void> _glTextureParameteriEXT;
-        
-        public static unsafe void TextureParameteriEXT(uint texture, TextureTarget target, TextureParameterName pname, int param)
-        {
-            _glTextureParameteriEXT(texture, target, pname, param);
-        }
-        
         public static unsafe delegate*<uint, TextureParameterName, IntPtr, void> _glTextureParameteriv;
         
         public static unsafe void TextureParameteriv(uint texture, TextureParameterName pname, ref int param)
         {
             _glTextureParameteriv(texture, pname, (IntPtr)param);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, TextureParameterName, IntPtr, void> _glTextureParameterivEXT;
-        
-        public static unsafe void TextureParameterivEXT(uint texture, TextureTarget target, TextureParameterName pname, ref int @params)
-        {
-            _glTextureParameterivEXT(texture, target, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glTextureRangeAPPLE;
-        
-        public static unsafe void TextureRangeAPPLE(uint target, int length, IntPtr pointer)
-        {
-            _glTextureRangeAPPLE(target, length, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, uint, void> _glTextureRenderbufferEXT;
-        
-        public static unsafe void TextureRenderbufferEXT(uint texture, TextureTarget target, uint renderbuffer)
-        {
-            _glTextureRenderbufferEXT(texture, target, renderbuffer);
         }
         
         public static unsafe delegate*<uint, int, SizedInternalFormat, int, void> _glTextureStorage1D;
@@ -18465,25 +5865,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTextureStorage1D(texture, levels, internalformat, width);
         }
         
-        public static unsafe delegate*<uint, uint, int, SizedInternalFormat, int, void> _glTextureStorage1DEXT;
-        
-        public static unsafe void TextureStorage1DEXT(uint texture, uint target, int levels, SizedInternalFormat internalformat, int width)
-        {
-            _glTextureStorage1DEXT(texture, target, levels, internalformat, width);
-        }
-        
         public static unsafe delegate*<uint, int, SizedInternalFormat, int, int, void> _glTextureStorage2D;
         
         public static unsafe void TextureStorage2D(uint texture, int levels, SizedInternalFormat internalformat, int width, int height)
         {
             _glTextureStorage2D(texture, levels, internalformat, width, height);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, SizedInternalFormat, int, int, void> _glTextureStorage2DEXT;
-        
-        public static unsafe void TextureStorage2DEXT(uint texture, uint target, int levels, SizedInternalFormat internalformat, int width, int height)
-        {
-            _glTextureStorage2DEXT(texture, target, levels, internalformat, width, height);
         }
         
         public static unsafe delegate*<uint, int, SizedInternalFormat, int, int, byte, void> _glTextureStorage2DMultisample;
@@ -18493,25 +5879,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTextureStorage2DMultisample(texture, samples, internalformat, width, height, fixedsamplelocations);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, int, SizedInternalFormat, int, int, byte, void> _glTextureStorage2DMultisampleEXT;
-        
-        public static unsafe void TextureStorage2DMultisampleEXT(uint texture, TextureTarget target, int samples, SizedInternalFormat internalformat, int width, int height, byte fixedsamplelocations)
-        {
-            _glTextureStorage2DMultisampleEXT(texture, target, samples, internalformat, width, height, fixedsamplelocations);
-        }
-        
         public static unsafe delegate*<uint, int, SizedInternalFormat, int, int, int, void> _glTextureStorage3D;
         
         public static unsafe void TextureStorage3D(uint texture, int levels, SizedInternalFormat internalformat, int width, int height, int depth)
         {
             _glTextureStorage3D(texture, levels, internalformat, width, height, depth);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, SizedInternalFormat, int, int, int, void> _glTextureStorage3DEXT;
-        
-        public static unsafe void TextureStorage3DEXT(uint texture, uint target, int levels, SizedInternalFormat internalformat, int width, int height, int depth)
-        {
-            _glTextureStorage3DEXT(texture, target, levels, internalformat, width, height, depth);
         }
         
         public static unsafe delegate*<uint, int, SizedInternalFormat, int, int, int, byte, void> _glTextureStorage3DMultisample;
@@ -18521,67 +5893,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTextureStorage3DMultisample(texture, samples, internalformat, width, height, depth, fixedsamplelocations);
         }
         
-        public static unsafe delegate*<uint, uint, int, SizedInternalFormat, int, int, int, byte, void> _glTextureStorage3DMultisampleEXT;
-        
-        public static unsafe void TextureStorage3DMultisampleEXT(uint texture, uint target, int samples, SizedInternalFormat internalformat, int width, int height, int depth, byte fixedsamplelocations)
-        {
-            _glTextureStorage3DMultisampleEXT(texture, target, samples, internalformat, width, height, depth, fixedsamplelocations);
-        }
-        
-        public static unsafe delegate*<uint, int, SizedInternalFormat, int, uint, ulong, void> _glTextureStorageMem1DEXT;
-        
-        public static unsafe void TextureStorageMem1DEXT(uint texture, int levels, SizedInternalFormat internalFormat, int width, uint memory, ulong offset)
-        {
-            _glTextureStorageMem1DEXT(texture, levels, internalFormat, width, memory, offset);
-        }
-        
-        public static unsafe delegate*<uint, int, SizedInternalFormat, int, int, uint, ulong, void> _glTextureStorageMem2DEXT;
-        
-        public static unsafe void TextureStorageMem2DEXT(uint texture, int levels, SizedInternalFormat internalFormat, int width, int height, uint memory, ulong offset)
-        {
-            _glTextureStorageMem2DEXT(texture, levels, internalFormat, width, height, memory, offset);
-        }
-        
-        public static unsafe delegate*<uint, int, SizedInternalFormat, int, int, byte, uint, ulong, void> _glTextureStorageMem2DMultisampleEXT;
-        
-        public static unsafe void TextureStorageMem2DMultisampleEXT(uint texture, int samples, SizedInternalFormat internalFormat, int width, int height, byte fixedSampleLocations, uint memory, ulong offset)
-        {
-            _glTextureStorageMem2DMultisampleEXT(texture, samples, internalFormat, width, height, fixedSampleLocations, memory, offset);
-        }
-        
-        public static unsafe delegate*<uint, int, SizedInternalFormat, int, int, int, uint, ulong, void> _glTextureStorageMem3DEXT;
-        
-        public static unsafe void TextureStorageMem3DEXT(uint texture, int levels, SizedInternalFormat internalFormat, int width, int height, int depth, uint memory, ulong offset)
-        {
-            _glTextureStorageMem3DEXT(texture, levels, internalFormat, width, height, depth, memory, offset);
-        }
-        
-        public static unsafe delegate*<uint, int, SizedInternalFormat, int, int, int, byte, uint, ulong, void> _glTextureStorageMem3DMultisampleEXT;
-        
-        public static unsafe void TextureStorageMem3DMultisampleEXT(uint texture, int samples, SizedInternalFormat internalFormat, int width, int height, int depth, byte fixedSampleLocations, uint memory, ulong offset)
-        {
-            _glTextureStorageMem3DMultisampleEXT(texture, samples, internalFormat, width, height, depth, fixedSampleLocations, memory, offset);
-        }
-        
-        public static unsafe delegate*<uint, uint, SizedInternalFormat, int, int, int, int, uint, void> _glTextureStorageSparseAMD;
-        
-        public static unsafe void TextureStorageSparseAMD(uint texture, uint target, SizedInternalFormat internalFormat, int width, int height, int depth, int layers, uint flags)
-        {
-            _glTextureStorageSparseAMD(texture, target, internalFormat, width, height, depth, layers, flags);
-        }
-        
         public static unsafe delegate*<uint, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTextureSubImage1D;
         
         public static unsafe void TextureSubImage1D(uint texture, int level, int xoffset, int width, PixelFormat format, PixelType type, IntPtr pixels)
         {
             _glTextureSubImage1D(texture, level, xoffset, width, format, type, (IntPtr)pixels);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTextureSubImage1DEXT;
-        
-        public static unsafe void TextureSubImage1DEXT(uint texture, TextureTarget target, int level, int xoffset, int width, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTextureSubImage1DEXT(texture, target, level, xoffset, width, format, type, (IntPtr)pixels);
         }
         
         public static unsafe delegate*<uint, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTextureSubImage2D;
@@ -18591,13 +5907,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTextureSubImage2D(texture, level, xoffset, yoffset, width, height, format, type, (IntPtr)pixels);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTextureSubImage2DEXT;
-        
-        public static unsafe void TextureSubImage2DEXT(uint texture, TextureTarget target, int level, int xoffset, int yoffset, int width, int height, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTextureSubImage2DEXT(texture, target, level, xoffset, yoffset, width, height, format, type, (IntPtr)pixels);
-        }
-        
         public static unsafe delegate*<uint, int, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTextureSubImage3D;
         
         public static unsafe void TextureSubImage3D(uint texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, PixelFormat format, PixelType type, IntPtr pixels)
@@ -18605,46 +5914,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTextureSubImage3D(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, (IntPtr)pixels);
         }
         
-        public static unsafe delegate*<uint, TextureTarget, int, int, int, int, int, int, int, PixelFormat, PixelType, IntPtr, void> _glTextureSubImage3DEXT;
-        
-        public static unsafe void TextureSubImage3DEXT(uint texture, TextureTarget target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, PixelFormat format, PixelType type, IntPtr pixels)
-        {
-            _glTextureSubImage3DEXT(texture, target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, (IntPtr)pixels);
-        }
-        
         public static unsafe delegate*<uint, TextureTarget, uint, SizedInternalFormat, uint, uint, uint, uint, void> _glTextureView;
         
         public static unsafe void TextureView(uint texture, TextureTarget target, uint origtexture, SizedInternalFormat internalformat, uint minlevel, uint numlevels, uint minlayer, uint numlayers)
         {
             _glTextureView(texture, target, origtexture, internalformat, minlevel, numlevels, minlayer, numlayers);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, uint, SizedInternalFormat, uint, uint, uint, uint, void> _glTextureViewEXT;
-        
-        public static unsafe void TextureViewEXT(uint texture, TextureTarget target, uint origtexture, SizedInternalFormat internalformat, uint minlevel, uint numlevels, uint minlayer, uint numlayers)
-        {
-            _glTextureViewEXT(texture, target, origtexture, internalformat, minlevel, numlevels, minlayer, numlayers);
-        }
-        
-        public static unsafe delegate*<uint, TextureTarget, uint, SizedInternalFormat, uint, uint, uint, uint, void> _glTextureViewOES;
-        
-        public static unsafe void TextureViewOES(uint texture, TextureTarget target, uint origtexture, SizedInternalFormat internalformat, uint minlevel, uint numlevels, uint minlayer, uint numlayers)
-        {
-            _glTextureViewOES(texture, target, origtexture, internalformat, minlevel, numlevels, minlayer, numlayers);
-        }
-        
-        public static unsafe delegate*<VertexAttribEnumNV, uint, VertexAttribEnumNV, VertexAttribEnumNV, void> _glTrackMatrixNV;
-        
-        public static unsafe void TrackMatrixNV(VertexAttribEnumNV target, uint address, VertexAttribEnumNV matrix, VertexAttribEnumNV transform)
-        {
-            _glTrackMatrixNV(target, address, matrix, transform);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, uint, void> _glTransformFeedbackAttribsNV;
-        
-        public static unsafe void TransformFeedbackAttribsNV(int count, ref int attribs, uint bufferMode)
-        {
-            _glTransformFeedbackAttribsNV(count, (IntPtr)attribs, bufferMode);
         }
         
         public static unsafe delegate*<uint, uint, uint, void> _glTransformFeedbackBufferBase;
@@ -18661,39 +5935,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glTransformFeedbackBufferRange(xfb, index, buffer, offset, size);
         }
         
-        public static unsafe delegate*<int, IntPtr, int, IntPtr, uint, void> _glTransformFeedbackStreamAttribsNV;
-        
-        public static unsafe void TransformFeedbackStreamAttribsNV(int count, ref int attribs, int nbuffers, ref int bufstreams, uint bufferMode)
-        {
-            _glTransformFeedbackStreamAttribsNV(count, (IntPtr)attribs, nbuffers, (IntPtr)bufstreams, bufferMode);
-        }
-        
         public static unsafe delegate*<uint, int, IntPtr, TransformFeedbackBufferMode, void> _glTransformFeedbackVaryings;
         
         public static unsafe void TransformFeedbackVaryings(uint program, int count, out IntPtr varyings, TransformFeedbackBufferMode bufferMode)
         {
             _glTransformFeedbackVaryings(program, count, (IntPtr)varyings, bufferMode);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, uint, void> _glTransformFeedbackVaryingsEXT;
-        
-        public static unsafe void TransformFeedbackVaryingsEXT(uint program, int count, out IntPtr varyings, uint bufferMode)
-        {
-            _glTransformFeedbackVaryingsEXT(program, count, (IntPtr)varyings, bufferMode);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, uint, void> _glTransformFeedbackVaryingsNV;
-        
-        public static unsafe void TransformFeedbackVaryingsNV(uint program, int count, ref int locations, uint bufferMode)
-        {
-            _glTransformFeedbackVaryingsNV(program, count, (IntPtr)locations, bufferMode);
-        }
-        
-        public static unsafe delegate*<uint, uint, PathTransformType, IntPtr, void> _glTransformPathNV;
-        
-        public static unsafe void TransformPathNV(uint resultPath, uint srcPath, PathTransformType transformType, ref float transformValues)
-        {
-            _glTransformPathNV(resultPath, srcPath, transformType, (IntPtr)transformValues);
         }
         
         public static unsafe delegate*<double, double, double, void> _glTranslated;
@@ -18708,20 +5954,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void Translatef(float x, float y, float z)
         {
             _glTranslatef(x, y, z);
-        }
-        
-        public static unsafe delegate*<int, int, int, void> _glTranslatex;
-        
-        public static unsafe void Translatex(int x, int y, int z)
-        {
-            _glTranslatex(x, y, z);
-        }
-        
-        public static unsafe delegate*<int, int, int, void> _glTranslatexOES;
-        
-        public static unsafe void TranslatexOES(int x, int y, int z)
-        {
-            _glTranslatexOES(x, y, z);
         }
         
         public static unsafe delegate*<int, double, void> _glUniform1d;
@@ -18745,25 +5977,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform1f(location, v0);
         }
         
-        public static unsafe delegate*<int, float, void> _glUniform1fARB;
-        
-        public static unsafe void Uniform1fARB(int location, float v0)
-        {
-            _glUniform1fARB(location, v0);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform1fv;
         
         public static unsafe void Uniform1fv(int location, int count, out IntPtr value)
         {
             _glUniform1fv(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform1fvARB;
-        
-        public static unsafe void Uniform1fvARB(int location, int count, out IntPtr value)
-        {
-            _glUniform1fvARB(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, int, void> _glUniform1i;
@@ -18773,53 +5991,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform1i(location, v0);
         }
         
-        public static unsafe delegate*<int, long, void> _glUniform1i64ARB;
-        
-        public static unsafe void Uniform1i64ARB(int location, long x)
-        {
-            _glUniform1i64ARB(location, x);
-        }
-        
-        public static unsafe delegate*<int, long, void> _glUniform1i64NV;
-        
-        public static unsafe void Uniform1i64NV(int location, long x)
-        {
-            _glUniform1i64NV(location, x);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform1i64vARB;
-        
-        public static unsafe void Uniform1i64vARB(int location, int count, out IntPtr value)
-        {
-            _glUniform1i64vARB(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform1i64vNV;
-        
-        public static unsafe void Uniform1i64vNV(int location, int count, out IntPtr value)
-        {
-            _glUniform1i64vNV(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, void> _glUniform1iARB;
-        
-        public static unsafe void Uniform1iARB(int location, int v0)
-        {
-            _glUniform1iARB(location, v0);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform1iv;
         
         public static unsafe void Uniform1iv(int location, int count, out IntPtr value)
         {
             _glUniform1iv(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform1ivARB;
-        
-        public static unsafe void Uniform1ivARB(int location, int count, out IntPtr value)
-        {
-            _glUniform1ivARB(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, uint, void> _glUniform1ui;
@@ -18829,53 +6005,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform1ui(location, v0);
         }
         
-        public static unsafe delegate*<int, ulong, void> _glUniform1ui64ARB;
-        
-        public static unsafe void Uniform1ui64ARB(int location, ulong x)
-        {
-            _glUniform1ui64ARB(location, x);
-        }
-        
-        public static unsafe delegate*<int, ulong, void> _glUniform1ui64NV;
-        
-        public static unsafe void Uniform1ui64NV(int location, ulong x)
-        {
-            _glUniform1ui64NV(location, x);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform1ui64vARB;
-        
-        public static unsafe void Uniform1ui64vARB(int location, int count, out IntPtr value)
-        {
-            _glUniform1ui64vARB(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform1ui64vNV;
-        
-        public static unsafe void Uniform1ui64vNV(int location, int count, out IntPtr value)
-        {
-            _glUniform1ui64vNV(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, uint, void> _glUniform1uiEXT;
-        
-        public static unsafe void Uniform1uiEXT(int location, uint v0)
-        {
-            _glUniform1uiEXT(location, v0);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform1uiv;
         
         public static unsafe void Uniform1uiv(int location, int count, out IntPtr value)
         {
             _glUniform1uiv(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform1uivEXT;
-        
-        public static unsafe void Uniform1uivEXT(int location, int count, out IntPtr value)
-        {
-            _glUniform1uivEXT(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, double, double, void> _glUniform2d;
@@ -18899,25 +6033,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform2f(location, v0, v1);
         }
         
-        public static unsafe delegate*<int, float, float, void> _glUniform2fARB;
-        
-        public static unsafe void Uniform2fARB(int location, float v0, float v1)
-        {
-            _glUniform2fARB(location, v0, v1);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform2fv;
         
         public static unsafe void Uniform2fv(int location, int count, out IntPtr value)
         {
             _glUniform2fv(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform2fvARB;
-        
-        public static unsafe void Uniform2fvARB(int location, int count, out IntPtr value)
-        {
-            _glUniform2fvARB(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, int, int, void> _glUniform2i;
@@ -18927,53 +6047,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform2i(location, v0, v1);
         }
         
-        public static unsafe delegate*<int, long, long, void> _glUniform2i64ARB;
-        
-        public static unsafe void Uniform2i64ARB(int location, long x, long y)
-        {
-            _glUniform2i64ARB(location, x, y);
-        }
-        
-        public static unsafe delegate*<int, long, long, void> _glUniform2i64NV;
-        
-        public static unsafe void Uniform2i64NV(int location, long x, long y)
-        {
-            _glUniform2i64NV(location, x, y);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform2i64vARB;
-        
-        public static unsafe void Uniform2i64vARB(int location, int count, out IntPtr value)
-        {
-            _glUniform2i64vARB(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform2i64vNV;
-        
-        public static unsafe void Uniform2i64vNV(int location, int count, out IntPtr value)
-        {
-            _glUniform2i64vNV(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, int, void> _glUniform2iARB;
-        
-        public static unsafe void Uniform2iARB(int location, int v0, int v1)
-        {
-            _glUniform2iARB(location, v0, v1);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform2iv;
         
         public static unsafe void Uniform2iv(int location, int count, out IntPtr value)
         {
             _glUniform2iv(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform2ivARB;
-        
-        public static unsafe void Uniform2ivARB(int location, int count, out IntPtr value)
-        {
-            _glUniform2ivARB(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, uint, uint, void> _glUniform2ui;
@@ -18983,53 +6061,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform2ui(location, v0, v1);
         }
         
-        public static unsafe delegate*<int, ulong, ulong, void> _glUniform2ui64ARB;
-        
-        public static unsafe void Uniform2ui64ARB(int location, ulong x, ulong y)
-        {
-            _glUniform2ui64ARB(location, x, y);
-        }
-        
-        public static unsafe delegate*<int, ulong, ulong, void> _glUniform2ui64NV;
-        
-        public static unsafe void Uniform2ui64NV(int location, ulong x, ulong y)
-        {
-            _glUniform2ui64NV(location, x, y);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform2ui64vARB;
-        
-        public static unsafe void Uniform2ui64vARB(int location, int count, out IntPtr value)
-        {
-            _glUniform2ui64vARB(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform2ui64vNV;
-        
-        public static unsafe void Uniform2ui64vNV(int location, int count, out IntPtr value)
-        {
-            _glUniform2ui64vNV(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, uint, uint, void> _glUniform2uiEXT;
-        
-        public static unsafe void Uniform2uiEXT(int location, uint v0, uint v1)
-        {
-            _glUniform2uiEXT(location, v0, v1);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform2uiv;
         
         public static unsafe void Uniform2uiv(int location, int count, out IntPtr value)
         {
             _glUniform2uiv(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform2uivEXT;
-        
-        public static unsafe void Uniform2uivEXT(int location, int count, out IntPtr value)
-        {
-            _glUniform2uivEXT(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, double, double, double, void> _glUniform3d;
@@ -19053,25 +6089,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform3f(location, v0, v1, v2);
         }
         
-        public static unsafe delegate*<int, float, float, float, void> _glUniform3fARB;
-        
-        public static unsafe void Uniform3fARB(int location, float v0, float v1, float v2)
-        {
-            _glUniform3fARB(location, v0, v1, v2);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform3fv;
         
         public static unsafe void Uniform3fv(int location, int count, out IntPtr value)
         {
             _glUniform3fv(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform3fvARB;
-        
-        public static unsafe void Uniform3fvARB(int location, int count, out IntPtr value)
-        {
-            _glUniform3fvARB(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, int, int, int, void> _glUniform3i;
@@ -19081,53 +6103,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform3i(location, v0, v1, v2);
         }
         
-        public static unsafe delegate*<int, long, long, long, void> _glUniform3i64ARB;
-        
-        public static unsafe void Uniform3i64ARB(int location, long x, long y, long z)
-        {
-            _glUniform3i64ARB(location, x, y, z);
-        }
-        
-        public static unsafe delegate*<int, long, long, long, void> _glUniform3i64NV;
-        
-        public static unsafe void Uniform3i64NV(int location, long x, long y, long z)
-        {
-            _glUniform3i64NV(location, x, y, z);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform3i64vARB;
-        
-        public static unsafe void Uniform3i64vARB(int location, int count, out IntPtr value)
-        {
-            _glUniform3i64vARB(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform3i64vNV;
-        
-        public static unsafe void Uniform3i64vNV(int location, int count, out IntPtr value)
-        {
-            _glUniform3i64vNV(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, void> _glUniform3iARB;
-        
-        public static unsafe void Uniform3iARB(int location, int v0, int v1, int v2)
-        {
-            _glUniform3iARB(location, v0, v1, v2);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform3iv;
         
         public static unsafe void Uniform3iv(int location, int count, out IntPtr value)
         {
             _glUniform3iv(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform3ivARB;
-        
-        public static unsafe void Uniform3ivARB(int location, int count, out IntPtr value)
-        {
-            _glUniform3ivARB(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, uint, uint, uint, void> _glUniform3ui;
@@ -19137,53 +6117,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform3ui(location, v0, v1, v2);
         }
         
-        public static unsafe delegate*<int, ulong, ulong, ulong, void> _glUniform3ui64ARB;
-        
-        public static unsafe void Uniform3ui64ARB(int location, ulong x, ulong y, ulong z)
-        {
-            _glUniform3ui64ARB(location, x, y, z);
-        }
-        
-        public static unsafe delegate*<int, ulong, ulong, ulong, void> _glUniform3ui64NV;
-        
-        public static unsafe void Uniform3ui64NV(int location, ulong x, ulong y, ulong z)
-        {
-            _glUniform3ui64NV(location, x, y, z);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform3ui64vARB;
-        
-        public static unsafe void Uniform3ui64vARB(int location, int count, out IntPtr value)
-        {
-            _glUniform3ui64vARB(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform3ui64vNV;
-        
-        public static unsafe void Uniform3ui64vNV(int location, int count, out IntPtr value)
-        {
-            _glUniform3ui64vNV(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, uint, uint, uint, void> _glUniform3uiEXT;
-        
-        public static unsafe void Uniform3uiEXT(int location, uint v0, uint v1, uint v2)
-        {
-            _glUniform3uiEXT(location, v0, v1, v2);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform3uiv;
         
         public static unsafe void Uniform3uiv(int location, int count, out IntPtr value)
         {
             _glUniform3uiv(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform3uivEXT;
-        
-        public static unsafe void Uniform3uivEXT(int location, int count, out IntPtr value)
-        {
-            _glUniform3uivEXT(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, double, double, double, double, void> _glUniform4d;
@@ -19207,25 +6145,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform4f(location, v0, v1, v2, v3);
         }
         
-        public static unsafe delegate*<int, float, float, float, float, void> _glUniform4fARB;
-        
-        public static unsafe void Uniform4fARB(int location, float v0, float v1, float v2, float v3)
-        {
-            _glUniform4fARB(location, v0, v1, v2, v3);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform4fv;
         
         public static unsafe void Uniform4fv(int location, int count, out IntPtr value)
         {
             _glUniform4fv(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform4fvARB;
-        
-        public static unsafe void Uniform4fvARB(int location, int count, out IntPtr value)
-        {
-            _glUniform4fvARB(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, int, int, int, int, void> _glUniform4i;
@@ -19235,53 +6159,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform4i(location, v0, v1, v2, v3);
         }
         
-        public static unsafe delegate*<int, long, long, long, long, void> _glUniform4i64ARB;
-        
-        public static unsafe void Uniform4i64ARB(int location, long x, long y, long z, long w)
-        {
-            _glUniform4i64ARB(location, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<int, long, long, long, long, void> _glUniform4i64NV;
-        
-        public static unsafe void Uniform4i64NV(int location, long x, long y, long z, long w)
-        {
-            _glUniform4i64NV(location, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform4i64vARB;
-        
-        public static unsafe void Uniform4i64vARB(int location, int count, out IntPtr value)
-        {
-            _glUniform4i64vARB(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform4i64vNV;
-        
-        public static unsafe void Uniform4i64vNV(int location, int count, out IntPtr value)
-        {
-            _glUniform4i64vNV(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, int, void> _glUniform4iARB;
-        
-        public static unsafe void Uniform4iARB(int location, int v0, int v1, int v2, int v3)
-        {
-            _glUniform4iARB(location, v0, v1, v2, v3);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform4iv;
         
         public static unsafe void Uniform4iv(int location, int count, out IntPtr value)
         {
             _glUniform4iv(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform4ivARB;
-        
-        public static unsafe void Uniform4ivARB(int location, int count, out IntPtr value)
-        {
-            _glUniform4ivARB(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, uint, uint, uint, uint, void> _glUniform4ui;
@@ -19291,41 +6173,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform4ui(location, v0, v1, v2, v3);
         }
         
-        public static unsafe delegate*<int, ulong, ulong, ulong, ulong, void> _glUniform4ui64ARB;
-        
-        public static unsafe void Uniform4ui64ARB(int location, ulong x, ulong y, ulong z, ulong w)
-        {
-            _glUniform4ui64ARB(location, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<int, ulong, ulong, ulong, ulong, void> _glUniform4ui64NV;
-        
-        public static unsafe void Uniform4ui64NV(int location, ulong x, ulong y, ulong z, ulong w)
-        {
-            _glUniform4ui64NV(location, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform4ui64vARB;
-        
-        public static unsafe void Uniform4ui64vARB(int location, int count, out IntPtr value)
-        {
-            _glUniform4ui64vARB(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform4ui64vNV;
-        
-        public static unsafe void Uniform4ui64vNV(int location, int count, out IntPtr value)
-        {
-            _glUniform4ui64vNV(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, uint, uint, uint, uint, void> _glUniform4uiEXT;
-        
-        public static unsafe void Uniform4uiEXT(int location, uint v0, uint v1, uint v2, uint v3)
-        {
-            _glUniform4uiEXT(location, v0, v1, v2, v3);
-        }
-        
         public static unsafe delegate*<int, int, IntPtr, void> _glUniform4uiv;
         
         public static unsafe void Uniform4uiv(int location, int count, out IntPtr value)
@@ -19333,67 +6180,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniform4uiv(location, count, (IntPtr)value);
         }
         
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniform4uivEXT;
-        
-        public static unsafe void Uniform4uivEXT(int location, int count, out IntPtr value)
-        {
-            _glUniform4uivEXT(location, count, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<uint, uint, uint, void> _glUniformBlockBinding;
         
         public static unsafe void UniformBlockBinding(uint program, uint uniformBlockIndex, uint uniformBlockBinding)
         {
             _glUniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
-        }
-        
-        public static unsafe delegate*<uint, int, uint, void> _glUniformBufferEXT;
-        
-        public static unsafe void UniformBufferEXT(uint program, int location, uint buffer)
-        {
-            _glUniformBufferEXT(program, location, buffer);
-        }
-        
-        public static unsafe delegate*<int, ulong, void> _glUniformHandleui64ARB;
-        
-        public static unsafe void UniformHandleui64ARB(int location, ulong value)
-        {
-            _glUniformHandleui64ARB(location, value);
-        }
-        
-        public static unsafe delegate*<int, ulong, void> _glUniformHandleui64IMG;
-        
-        public static unsafe void UniformHandleui64IMG(int location, ulong value)
-        {
-            _glUniformHandleui64IMG(location, value);
-        }
-        
-        public static unsafe delegate*<int, ulong, void> _glUniformHandleui64NV;
-        
-        public static unsafe void UniformHandleui64NV(int location, ulong value)
-        {
-            _glUniformHandleui64NV(location, value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniformHandleui64vARB;
-        
-        public static unsafe void UniformHandleui64vARB(int location, int count, ref ulong value)
-        {
-            _glUniformHandleui64vARB(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniformHandleui64vIMG;
-        
-        public static unsafe void UniformHandleui64vIMG(int location, int count, ref ulong value)
-        {
-            _glUniformHandleui64vIMG(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniformHandleui64vNV;
-        
-        public static unsafe void UniformHandleui64vNV(int location, int count, ref ulong value)
-        {
-            _glUniformHandleui64vNV(location, count, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix2dv;
@@ -19410,13 +6201,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniformMatrix2fv(location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix2fvARB;
-        
-        public static unsafe void UniformMatrix2fvARB(int location, int count, byte transpose, out IntPtr value)
-        {
-            _glUniformMatrix2fvARB(location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix2x3dv;
         
         public static unsafe void UniformMatrix2x3dv(int location, int count, byte transpose, out IntPtr value)
@@ -19429,13 +6213,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void UniformMatrix2x3fv(int location, int count, byte transpose, out IntPtr value)
         {
             _glUniformMatrix2x3fv(location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix2x3fvNV;
-        
-        public static unsafe void UniformMatrix2x3fvNV(int location, int count, byte transpose, out IntPtr value)
-        {
-            _glUniformMatrix2x3fvNV(location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix2x4dv;
@@ -19452,13 +6229,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniformMatrix2x4fv(location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix2x4fvNV;
-        
-        public static unsafe void UniformMatrix2x4fvNV(int location, int count, byte transpose, out IntPtr value)
-        {
-            _glUniformMatrix2x4fvNV(location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix3dv;
         
         public static unsafe void UniformMatrix3dv(int location, int count, byte transpose, out IntPtr value)
@@ -19471,13 +6241,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void UniformMatrix3fv(int location, int count, byte transpose, out IntPtr value)
         {
             _glUniformMatrix3fv(location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix3fvARB;
-        
-        public static unsafe void UniformMatrix3fvARB(int location, int count, byte transpose, out IntPtr value)
-        {
-            _glUniformMatrix3fvARB(location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix3x2dv;
@@ -19494,13 +6257,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniformMatrix3x2fv(location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix3x2fvNV;
-        
-        public static unsafe void UniformMatrix3x2fvNV(int location, int count, byte transpose, out IntPtr value)
-        {
-            _glUniformMatrix3x2fvNV(location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix3x4dv;
         
         public static unsafe void UniformMatrix3x4dv(int location, int count, byte transpose, out IntPtr value)
@@ -19513,13 +6269,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void UniformMatrix3x4fv(int location, int count, byte transpose, out IntPtr value)
         {
             _glUniformMatrix3x4fv(location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix3x4fvNV;
-        
-        public static unsafe void UniformMatrix3x4fvNV(int location, int count, byte transpose, out IntPtr value)
-        {
-            _glUniformMatrix3x4fvNV(location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix4dv;
@@ -19536,13 +6285,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniformMatrix4fv(location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix4fvARB;
-        
-        public static unsafe void UniformMatrix4fvARB(int location, int count, byte transpose, out IntPtr value)
-        {
-            _glUniformMatrix4fvARB(location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix4x2dv;
         
         public static unsafe void UniformMatrix4x2dv(int location, int count, byte transpose, out IntPtr value)
@@ -19555,13 +6297,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void UniformMatrix4x2fv(int location, int count, byte transpose, out IntPtr value)
         {
             _glUniformMatrix4x2fv(location, count, transpose, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix4x2fvNV;
-        
-        public static unsafe void UniformMatrix4x2fvNV(int location, int count, byte transpose, out IntPtr value)
-        {
-            _glUniformMatrix4x2fvNV(location, count, transpose, (IntPtr)value);
         }
         
         public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix4x3dv;
@@ -19578,39 +6313,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUniformMatrix4x3fv(location, count, transpose, (IntPtr)value);
         }
         
-        public static unsafe delegate*<int, int, byte, IntPtr, void> _glUniformMatrix4x3fvNV;
-        
-        public static unsafe void UniformMatrix4x3fvNV(int location, int count, byte transpose, out IntPtr value)
-        {
-            _glUniformMatrix4x3fvNV(location, count, transpose, (IntPtr)value);
-        }
-        
         public static unsafe delegate*<ShaderType, int, IntPtr, void> _glUniformSubroutinesuiv;
         
         public static unsafe void UniformSubroutinesuiv(ShaderType shadertype, int count, ref uint indices)
         {
             _glUniformSubroutinesuiv(shadertype, count, (IntPtr)indices);
-        }
-        
-        public static unsafe delegate*<int, ulong, void> _glUniformui64NV;
-        
-        public static unsafe void Uniformui64NV(int location, ulong value)
-        {
-            _glUniformui64NV(location, value);
-        }
-        
-        public static unsafe delegate*<int, int, IntPtr, void> _glUniformui64vNV;
-        
-        public static unsafe void Uniformui64vNV(int location, int count, out IntPtr value)
-        {
-            _glUniformui64vNV(location, count, (IntPtr)value);
-        }
-        
-        public static unsafe delegate*<void> _glUnlockArraysEXT;
-        
-        public static unsafe void UnlockArraysEXT()
-        {
-            _glUnlockArraysEXT();
         }
         
         public static unsafe delegate*<BufferTargetARB, byte> _glUnmapBuffer;
@@ -19620,60 +6327,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             return _glUnmapBuffer(target);
         }
         
-        public static unsafe delegate*<BufferTargetARB, byte> _glUnmapBufferARB;
-        
-        public static unsafe byte UnmapBufferARB(BufferTargetARB target)
-        {
-            return _glUnmapBufferARB(target);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glUnmapBufferOES;
-        
-        public static unsafe byte UnmapBufferOES(uint target)
-        {
-            return _glUnmapBufferOES(target);
-        }
-        
         public static unsafe delegate*<uint, byte> _glUnmapNamedBuffer;
         
         public static unsafe byte UnmapNamedBuffer(uint buffer)
         {
             return _glUnmapNamedBuffer(buffer);
-        }
-        
-        public static unsafe delegate*<uint, byte> _glUnmapNamedBufferEXT;
-        
-        public static unsafe byte UnmapNamedBufferEXT(uint buffer)
-        {
-            return _glUnmapNamedBufferEXT(buffer);
-        }
-        
-        public static unsafe delegate*<uint, void> _glUnmapObjectBufferATI;
-        
-        public static unsafe void UnmapObjectBufferATI(uint buffer)
-        {
-            _glUnmapObjectBufferATI(buffer);
-        }
-        
-        public static unsafe delegate*<uint, int, void> _glUnmapTexture2DINTEL;
-        
-        public static unsafe void UnmapTexture2DINTEL(uint texture, int level)
-        {
-            _glUnmapTexture2DINTEL(texture, level);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, IntPtr, PreserveModeATI, void> _glUpdateObjectBufferATI;
-        
-        public static unsafe void UpdateObjectBufferATI(uint buffer, uint offset, int size, IntPtr pointer, PreserveModeATI preserve)
-        {
-            _glUpdateObjectBufferATI(buffer, offset, size, (IntPtr)pointer, preserve);
-        }
-        
-        public static unsafe delegate*<uint, void> _glUploadGpuMaskNVX;
-        
-        public static unsafe void UploadGpuMaskNVX(uint mask)
-        {
-            _glUploadGpuMaskNVX(mask);
         }
         
         public static unsafe delegate*<uint, void> _glUseProgram;
@@ -19683,109 +6341,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glUseProgram(program);
         }
         
-        public static unsafe delegate*<uint, void> _glUseProgramObjectARB;
-        
-        public static unsafe void UseProgramObjectARB(uint programObj)
-        {
-            _glUseProgramObjectARB(programObj);
-        }
-        
         public static unsafe delegate*<uint, uint, uint, void> _glUseProgramStages;
         
         public static unsafe void UseProgramStages(uint pipeline, uint stages, uint program)
         {
             _glUseProgramStages(pipeline, stages, program);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, void> _glUseProgramStagesEXT;
-        
-        public static unsafe void UseProgramStagesEXT(uint pipeline, uint stages, uint program)
-        {
-            _glUseProgramStagesEXT(pipeline, stages, program);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glUseShaderProgramEXT;
-        
-        public static unsafe void UseShaderProgramEXT(uint type, uint program)
-        {
-            _glUseShaderProgramEXT(type, program);
-        }
-        
-        public static unsafe delegate*<void> _glVDPAUFiniNV;
-        
-        public static unsafe void VDPAUFiniNV()
-        {
-            _glVDPAUFiniNV();
-        }
-        
-        public static unsafe delegate*<long, uint, int, IntPtr, IntPtr, void> _glVDPAUGetSurfaceivNV;
-        
-        public static unsafe void VDPAUGetSurfaceivNV(long surface, uint pname, int count, ref int length, ref int values)
-        {
-            _glVDPAUGetSurfaceivNV(surface, pname, count, (IntPtr)length, (IntPtr)values);
-        }
-        
-        public static unsafe delegate*<IntPtr, IntPtr, void> _glVDPAUInitNV;
-        
-        public static unsafe void VDPAUInitNV(IntPtr vdpDevice, IntPtr getProcAddress)
-        {
-            _glVDPAUInitNV((IntPtr)vdpDevice, (IntPtr)getProcAddress);
-        }
-        
-        public static unsafe delegate*<long, byte> _glVDPAUIsSurfaceNV;
-        
-        public static unsafe byte VDPAUIsSurfaceNV(long surface)
-        {
-            return _glVDPAUIsSurfaceNV(surface);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glVDPAUMapSurfacesNV;
-        
-        public static unsafe void VDPAUMapSurfacesNV(int numSurfaces, ref long surfaces)
-        {
-            _glVDPAUMapSurfacesNV(numSurfaces, (IntPtr)surfaces);
-        }
-        
-        public static unsafe delegate*<IntPtr, uint, int, IntPtr, long> _glVDPAURegisterOutputSurfaceNV;
-        
-        public static unsafe long VDPAURegisterOutputSurfaceNV(IntPtr vdpSurface, uint target, int numTextureNames, ref uint textureNames)
-        {
-            return _glVDPAURegisterOutputSurfaceNV((IntPtr)vdpSurface, target, numTextureNames, (IntPtr)textureNames);
-        }
-        
-        public static unsafe delegate*<IntPtr, uint, int, IntPtr, long> _glVDPAURegisterVideoSurfaceNV;
-        
-        public static unsafe long VDPAURegisterVideoSurfaceNV(IntPtr vdpSurface, uint target, int numTextureNames, ref uint textureNames)
-        {
-            return _glVDPAURegisterVideoSurfaceNV((IntPtr)vdpSurface, target, numTextureNames, (IntPtr)textureNames);
-        }
-        
-        public static unsafe delegate*<IntPtr, uint, int, IntPtr, byte, long> _glVDPAURegisterVideoSurfaceWithPictureStructureNV;
-        
-        public static unsafe long VDPAURegisterVideoSurfaceWithPictureStructureNV(IntPtr vdpSurface, uint target, int numTextureNames, ref uint textureNames, byte isFrameStructure)
-        {
-            return _glVDPAURegisterVideoSurfaceWithPictureStructureNV((IntPtr)vdpSurface, target, numTextureNames, (IntPtr)textureNames, isFrameStructure);
-        }
-        
-        public static unsafe delegate*<long, uint, void> _glVDPAUSurfaceAccessNV;
-        
-        public static unsafe void VDPAUSurfaceAccessNV(long surface, uint access)
-        {
-            _glVDPAUSurfaceAccessNV(surface, access);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glVDPAUUnmapSurfacesNV;
-        
-        public static unsafe void VDPAUUnmapSurfacesNV(int numSurface, ref long surfaces)
-        {
-            _glVDPAUUnmapSurfacesNV(numSurface, (IntPtr)surfaces);
-        }
-        
-        public static unsafe delegate*<long, void> _glVDPAUUnregisterSurfaceNV;
-        
-        public static unsafe void VDPAUUnregisterSurfaceNV(long surface)
-        {
-            _glVDPAUUnregisterSurfaceNV(surface);
         }
         
         public static unsafe delegate*<uint, void> _glValidateProgram;
@@ -19795,109 +6355,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glValidateProgram(program);
         }
         
-        public static unsafe delegate*<uint, void> _glValidateProgramARB;
-        
-        public static unsafe void ValidateProgramARB(uint programObj)
-        {
-            _glValidateProgramARB(programObj);
-        }
-        
         public static unsafe delegate*<uint, void> _glValidateProgramPipeline;
         
         public static unsafe void ValidateProgramPipeline(uint pipeline)
         {
             _glValidateProgramPipeline(pipeline);
-        }
-        
-        public static unsafe delegate*<uint, void> _glValidateProgramPipelineEXT;
-        
-        public static unsafe void ValidateProgramPipelineEXT(uint pipeline)
-        {
-            _glValidateProgramPipelineEXT(pipeline);
-        }
-        
-        public static unsafe delegate*<uint, ScalarType, int, uint, uint, void> _glVariantArrayObjectATI;
-        
-        public static unsafe void VariantArrayObjectATI(uint id, ScalarType type, int stride, uint buffer, uint offset)
-        {
-            _glVariantArrayObjectATI(id, type, stride, buffer, offset);
-        }
-        
-        public static unsafe delegate*<uint, ScalarType, uint, IntPtr, void> _glVariantPointerEXT;
-        
-        public static unsafe void VariantPointerEXT(uint id, ScalarType type, uint stride, IntPtr addr)
-        {
-            _glVariantPointerEXT(id, type, stride, (IntPtr)addr);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVariantbvEXT;
-        
-        public static unsafe void VariantbvEXT(uint id, ref sbyte addr)
-        {
-            _glVariantbvEXT(id, (IntPtr)addr);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVariantdvEXT;
-        
-        public static unsafe void VariantdvEXT(uint id, ref double addr)
-        {
-            _glVariantdvEXT(id, (IntPtr)addr);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVariantfvEXT;
-        
-        public static unsafe void VariantfvEXT(uint id, ref float addr)
-        {
-            _glVariantfvEXT(id, (IntPtr)addr);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVariantivEXT;
-        
-        public static unsafe void VariantivEXT(uint id, ref int addr)
-        {
-            _glVariantivEXT(id, (IntPtr)addr);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVariantsvEXT;
-        
-        public static unsafe void VariantsvEXT(uint id, ref short addr)
-        {
-            _glVariantsvEXT(id, (IntPtr)addr);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVariantubvEXT;
-        
-        public static unsafe void VariantubvEXT(uint id, ref byte addr)
-        {
-            _glVariantubvEXT(id, (IntPtr)addr);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVariantuivEXT;
-        
-        public static unsafe void VariantuivEXT(uint id, ref uint addr)
-        {
-            _glVariantuivEXT(id, (IntPtr)addr);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVariantusvEXT;
-        
-        public static unsafe void VariantusvEXT(uint id, ref ushort addr)
-        {
-            _glVariantusvEXT(id, (IntPtr)addr);
-        }
-        
-        public static unsafe delegate*<sbyte, sbyte, void> _glVertex2bOES;
-        
-        public static unsafe void Vertex2bOES(sbyte x, sbyte y)
-        {
-            _glVertex2bOES(x, y);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glVertex2bvOES;
-        
-        public static unsafe void Vertex2bvOES(ref sbyte coords)
-        {
-            _glVertex2bvOES((IntPtr)coords);
         }
         
         public static unsafe delegate*<double, double, void> _glVertex2d;
@@ -19928,20 +6390,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertex2fv((IntPtr)v);
         }
         
-        public static unsafe delegate*<ushort, ushort, void> _glVertex2hNV;
-        
-        public static unsafe void Vertex2hNV(ushort x, ushort y)
-        {
-            _glVertex2hNV(x, y);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glVertex2hvNV;
-        
-        public static unsafe void Vertex2hvNV(ref ushort v)
-        {
-            _glVertex2hvNV((IntPtr)v);
-        }
-        
         public static unsafe delegate*<int, int, void> _glVertex2i;
         
         public static unsafe void Vertex2i(int x, int y)
@@ -19968,34 +6416,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void Vertex2sv(ref short v)
         {
             _glVertex2sv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<int, void> _glVertex2xOES;
-        
-        public static unsafe void Vertex2xOES(int x)
-        {
-            _glVertex2xOES(x);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glVertex2xvOES;
-        
-        public static unsafe void Vertex2xvOES(ref int coords)
-        {
-            _glVertex2xvOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<sbyte, sbyte, sbyte, void> _glVertex3bOES;
-        
-        public static unsafe void Vertex3bOES(sbyte x, sbyte y, sbyte z)
-        {
-            _glVertex3bOES(x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glVertex3bvOES;
-        
-        public static unsafe void Vertex3bvOES(ref sbyte coords)
-        {
-            _glVertex3bvOES((IntPtr)coords);
         }
         
         public static unsafe delegate*<double, double, double, void> _glVertex3d;
@@ -20026,20 +6446,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertex3fv((IntPtr)v);
         }
         
-        public static unsafe delegate*<ushort, ushort, ushort, void> _glVertex3hNV;
-        
-        public static unsafe void Vertex3hNV(ushort x, ushort y, ushort z)
-        {
-            _glVertex3hNV(x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glVertex3hvNV;
-        
-        public static unsafe void Vertex3hvNV(ref ushort v)
-        {
-            _glVertex3hvNV((IntPtr)v);
-        }
-        
         public static unsafe delegate*<int, int, int, void> _glVertex3i;
         
         public static unsafe void Vertex3i(int x, int y, int z)
@@ -20066,34 +6472,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void Vertex3sv(ref short v)
         {
             _glVertex3sv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<int, int, void> _glVertex3xOES;
-        
-        public static unsafe void Vertex3xOES(int x, int y)
-        {
-            _glVertex3xOES(x, y);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glVertex3xvOES;
-        
-        public static unsafe void Vertex3xvOES(ref int coords)
-        {
-            _glVertex3xvOES((IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<sbyte, sbyte, sbyte, sbyte, void> _glVertex4bOES;
-        
-        public static unsafe void Vertex4bOES(sbyte x, sbyte y, sbyte z, sbyte w)
-        {
-            _glVertex4bOES(x, y, z, w);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glVertex4bvOES;
-        
-        public static unsafe void Vertex4bvOES(ref sbyte coords)
-        {
-            _glVertex4bvOES((IntPtr)coords);
         }
         
         public static unsafe delegate*<double, double, double, double, void> _glVertex4d;
@@ -20124,20 +6502,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertex4fv((IntPtr)v);
         }
         
-        public static unsafe delegate*<ushort, ushort, ushort, ushort, void> _glVertex4hNV;
-        
-        public static unsafe void Vertex4hNV(ushort x, ushort y, ushort z, ushort w)
-        {
-            _glVertex4hNV(x, y, z, w);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glVertex4hvNV;
-        
-        public static unsafe void Vertex4hvNV(ref ushort v)
-        {
-            _glVertex4hvNV((IntPtr)v);
-        }
-        
         public static unsafe delegate*<int, int, int, int, void> _glVertex4i;
         
         public static unsafe void Vertex4i(int x, int y, int z, int w)
@@ -20164,20 +6528,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         public static unsafe void Vertex4sv(ref short v)
         {
             _glVertex4sv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<int, int, int, void> _glVertex4xOES;
-        
-        public static unsafe void Vertex4xOES(int x, int y, int z)
-        {
-            _glVertex4xOES(x, y, z);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glVertex4xvOES;
-        
-        public static unsafe void Vertex4xvOES(ref int coords)
-        {
-            _glVertex4xvOES((IntPtr)coords);
         }
         
         public static unsafe delegate*<uint, uint, uint, void> _glVertexArrayAttribBinding;
@@ -20208,13 +6558,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexArrayAttribLFormat(vaobj, attribindex, size, type, relativeoffset);
         }
         
-        public static unsafe delegate*<uint, uint, uint, long, int, void> _glVertexArrayBindVertexBufferEXT;
-        
-        public static unsafe void VertexArrayBindVertexBufferEXT(uint vaobj, uint bindingindex, uint buffer, long offset, int stride)
-        {
-            _glVertexArrayBindVertexBufferEXT(vaobj, bindingindex, buffer, offset, stride);
-        }
-        
         public static unsafe delegate*<uint, uint, uint, void> _glVertexArrayBindingDivisor;
         
         public static unsafe void VertexArrayBindingDivisor(uint vaobj, uint bindingindex, uint divisor)
@@ -20222,151 +6565,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexArrayBindingDivisor(vaobj, bindingindex, divisor);
         }
         
-        public static unsafe delegate*<uint, uint, int, ColorPointerType, int, long, void> _glVertexArrayColorOffsetEXT;
-        
-        public static unsafe void VertexArrayColorOffsetEXT(uint vaobj, uint buffer, int size, ColorPointerType type, int stride, long offset)
-        {
-            _glVertexArrayColorOffsetEXT(vaobj, buffer, size, type, stride, offset);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, long, void> _glVertexArrayEdgeFlagOffsetEXT;
-        
-        public static unsafe void VertexArrayEdgeFlagOffsetEXT(uint vaobj, uint buffer, int stride, long offset)
-        {
-            _glVertexArrayEdgeFlagOffsetEXT(vaobj, buffer, stride, offset);
-        }
-        
         public static unsafe delegate*<uint, uint, void> _glVertexArrayElementBuffer;
         
         public static unsafe void VertexArrayElementBuffer(uint vaobj, uint buffer)
         {
             _glVertexArrayElementBuffer(vaobj, buffer);
-        }
-        
-        public static unsafe delegate*<uint, uint, FogCoordinatePointerType, int, long, void> _glVertexArrayFogCoordOffsetEXT;
-        
-        public static unsafe void VertexArrayFogCoordOffsetEXT(uint vaobj, uint buffer, FogCoordinatePointerType type, int stride, long offset)
-        {
-            _glVertexArrayFogCoordOffsetEXT(vaobj, buffer, type, stride, offset);
-        }
-        
-        public static unsafe delegate*<uint, uint, IndexPointerType, int, long, void> _glVertexArrayIndexOffsetEXT;
-        
-        public static unsafe void VertexArrayIndexOffsetEXT(uint vaobj, uint buffer, IndexPointerType type, int stride, long offset)
-        {
-            _glVertexArrayIndexOffsetEXT(vaobj, buffer, type, stride, offset);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, int, TexCoordPointerType, int, long, void> _glVertexArrayMultiTexCoordOffsetEXT;
-        
-        public static unsafe void VertexArrayMultiTexCoordOffsetEXT(uint vaobj, uint buffer, uint texunit, int size, TexCoordPointerType type, int stride, long offset)
-        {
-            _glVertexArrayMultiTexCoordOffsetEXT(vaobj, buffer, texunit, size, type, stride, offset);
-        }
-        
-        public static unsafe delegate*<uint, uint, NormalPointerType, int, long, void> _glVertexArrayNormalOffsetEXT;
-        
-        public static unsafe void VertexArrayNormalOffsetEXT(uint vaobj, uint buffer, NormalPointerType type, int stride, long offset)
-        {
-            _glVertexArrayNormalOffsetEXT(vaobj, buffer, type, stride, offset);
-        }
-        
-        public static unsafe delegate*<VertexArrayPNameAPPLE, int, void> _glVertexArrayParameteriAPPLE;
-        
-        public static unsafe void VertexArrayParameteriAPPLE(VertexArrayPNameAPPLE pname, int param)
-        {
-            _glVertexArrayParameteriAPPLE(pname, param);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glVertexArrayRangeAPPLE;
-        
-        public static unsafe void VertexArrayRangeAPPLE(int length, IntPtr pointer)
-        {
-            _glVertexArrayRangeAPPLE(length, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glVertexArrayRangeNV;
-        
-        public static unsafe void VertexArrayRangeNV(int length, IntPtr pointer)
-        {
-            _glVertexArrayRangeNV(length, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, ColorPointerType, int, long, void> _glVertexArraySecondaryColorOffsetEXT;
-        
-        public static unsafe void VertexArraySecondaryColorOffsetEXT(uint vaobj, uint buffer, int size, ColorPointerType type, int stride, long offset)
-        {
-            _glVertexArraySecondaryColorOffsetEXT(vaobj, buffer, size, type, stride, offset);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, TexCoordPointerType, int, long, void> _glVertexArrayTexCoordOffsetEXT;
-        
-        public static unsafe void VertexArrayTexCoordOffsetEXT(uint vaobj, uint buffer, int size, TexCoordPointerType type, int stride, long offset)
-        {
-            _glVertexArrayTexCoordOffsetEXT(vaobj, buffer, size, type, stride, offset);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, void> _glVertexArrayVertexAttribBindingEXT;
-        
-        public static unsafe void VertexArrayVertexAttribBindingEXT(uint vaobj, uint attribindex, uint bindingindex)
-        {
-            _glVertexArrayVertexAttribBindingEXT(vaobj, attribindex, bindingindex);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, void> _glVertexArrayVertexAttribDivisorEXT;
-        
-        public static unsafe void VertexArrayVertexAttribDivisorEXT(uint vaobj, uint index, uint divisor)
-        {
-            _glVertexArrayVertexAttribDivisorEXT(vaobj, index, divisor);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, VertexAttribType, byte, uint, void> _glVertexArrayVertexAttribFormatEXT;
-        
-        public static unsafe void VertexArrayVertexAttribFormatEXT(uint vaobj, uint attribindex, int size, VertexAttribType type, byte normalized, uint relativeoffset)
-        {
-            _glVertexArrayVertexAttribFormatEXT(vaobj, attribindex, size, type, normalized, relativeoffset);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, VertexAttribIType, uint, void> _glVertexArrayVertexAttribIFormatEXT;
-        
-        public static unsafe void VertexArrayVertexAttribIFormatEXT(uint vaobj, uint attribindex, int size, VertexAttribIType type, uint relativeoffset)
-        {
-            _glVertexArrayVertexAttribIFormatEXT(vaobj, attribindex, size, type, relativeoffset);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, int, VertexAttribType, int, long, void> _glVertexArrayVertexAttribIOffsetEXT;
-        
-        public static unsafe void VertexArrayVertexAttribIOffsetEXT(uint vaobj, uint buffer, uint index, int size, VertexAttribType type, int stride, long offset)
-        {
-            _glVertexArrayVertexAttribIOffsetEXT(vaobj, buffer, index, size, type, stride, offset);
-        }
-        
-        public static unsafe delegate*<uint, uint, int, VertexAttribLType, uint, void> _glVertexArrayVertexAttribLFormatEXT;
-        
-        public static unsafe void VertexArrayVertexAttribLFormatEXT(uint vaobj, uint attribindex, int size, VertexAttribLType type, uint relativeoffset)
-        {
-            _glVertexArrayVertexAttribLFormatEXT(vaobj, attribindex, size, type, relativeoffset);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, int, VertexAttribLType, int, long, void> _glVertexArrayVertexAttribLOffsetEXT;
-        
-        public static unsafe void VertexArrayVertexAttribLOffsetEXT(uint vaobj, uint buffer, uint index, int size, VertexAttribLType type, int stride, long offset)
-        {
-            _glVertexArrayVertexAttribLOffsetEXT(vaobj, buffer, index, size, type, stride, offset);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, int, VertexAttribPointerType, byte, int, long, void> _glVertexArrayVertexAttribOffsetEXT;
-        
-        public static unsafe void VertexArrayVertexAttribOffsetEXT(uint vaobj, uint buffer, uint index, int size, VertexAttribPointerType type, byte normalized, int stride, long offset)
-        {
-            _glVertexArrayVertexAttribOffsetEXT(vaobj, buffer, index, size, type, normalized, stride, offset);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, void> _glVertexArrayVertexBindingDivisorEXT;
-        
-        public static unsafe void VertexArrayVertexBindingDivisorEXT(uint vaobj, uint bindingindex, uint divisor)
-        {
-            _glVertexArrayVertexBindingDivisorEXT(vaobj, bindingindex, divisor);
         }
         
         public static unsafe delegate*<uint, uint, uint, long, int, void> _glVertexArrayVertexBuffer;
@@ -20383,32 +6586,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexArrayVertexBuffers(vaobj, first, count, (IntPtr)buffers, (IntPtr)offsets, (IntPtr)strides);
         }
         
-        public static unsafe delegate*<uint, uint, int, VertexPointerType, int, long, void> _glVertexArrayVertexOffsetEXT;
-        
-        public static unsafe void VertexArrayVertexOffsetEXT(uint vaobj, uint buffer, int size, VertexPointerType type, int stride, long offset)
-        {
-            _glVertexArrayVertexOffsetEXT(vaobj, buffer, size, type, stride, offset);
-        }
-        
         public static unsafe delegate*<uint, double, void> _glVertexAttrib1d;
         
         public static unsafe void VertexAttrib1d(uint index, double x)
         {
             _glVertexAttrib1d(index, x);
-        }
-        
-        public static unsafe delegate*<uint, double, void> _glVertexAttrib1dARB;
-        
-        public static unsafe void VertexAttrib1dARB(uint index, double x)
-        {
-            _glVertexAttrib1dARB(index, x);
-        }
-        
-        public static unsafe delegate*<uint, double, void> _glVertexAttrib1dNV;
-        
-        public static unsafe void VertexAttrib1dNV(uint index, double x)
-        {
-            _glVertexAttrib1dNV(index, x);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib1dv;
@@ -20418,39 +6600,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib1dv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib1dvARB;
-        
-        public static unsafe void VertexAttrib1dvARB(uint index, ref double v)
-        {
-            _glVertexAttrib1dvARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib1dvNV;
-        
-        public static unsafe void VertexAttrib1dvNV(uint index, ref double v)
-        {
-            _glVertexAttrib1dvNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, float, void> _glVertexAttrib1f;
         
         public static unsafe void VertexAttrib1f(uint index, float x)
         {
             _glVertexAttrib1f(index, x);
-        }
-        
-        public static unsafe delegate*<uint, float, void> _glVertexAttrib1fARB;
-        
-        public static unsafe void VertexAttrib1fARB(uint index, float x)
-        {
-            _glVertexAttrib1fARB(index, x);
-        }
-        
-        public static unsafe delegate*<uint, float, void> _glVertexAttrib1fNV;
-        
-        public static unsafe void VertexAttrib1fNV(uint index, float x)
-        {
-            _glVertexAttrib1fNV(index, x);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib1fv;
@@ -20460,53 +6614,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib1fv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib1fvARB;
-        
-        public static unsafe void VertexAttrib1fvARB(uint index, ref float v)
-        {
-            _glVertexAttrib1fvARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib1fvNV;
-        
-        public static unsafe void VertexAttrib1fvNV(uint index, ref float v)
-        {
-            _glVertexAttrib1fvNV(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, ushort, void> _glVertexAttrib1hNV;
-        
-        public static unsafe void VertexAttrib1hNV(uint index, ushort x)
-        {
-            _glVertexAttrib1hNV(index, x);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib1hvNV;
-        
-        public static unsafe void VertexAttrib1hvNV(uint index, ref ushort v)
-        {
-            _glVertexAttrib1hvNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, short, void> _glVertexAttrib1s;
         
         public static unsafe void VertexAttrib1s(uint index, short x)
         {
             _glVertexAttrib1s(index, x);
-        }
-        
-        public static unsafe delegate*<uint, short, void> _glVertexAttrib1sARB;
-        
-        public static unsafe void VertexAttrib1sARB(uint index, short x)
-        {
-            _glVertexAttrib1sARB(index, x);
-        }
-        
-        public static unsafe delegate*<uint, short, void> _glVertexAttrib1sNV;
-        
-        public static unsafe void VertexAttrib1sNV(uint index, short x)
-        {
-            _glVertexAttrib1sNV(index, x);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib1sv;
@@ -20516,39 +6628,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib1sv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib1svARB;
-        
-        public static unsafe void VertexAttrib1svARB(uint index, ref short v)
-        {
-            _glVertexAttrib1svARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib1svNV;
-        
-        public static unsafe void VertexAttrib1svNV(uint index, ref short v)
-        {
-            _glVertexAttrib1svNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, double, double, void> _glVertexAttrib2d;
         
         public static unsafe void VertexAttrib2d(uint index, double x, double y)
         {
             _glVertexAttrib2d(index, x, y);
-        }
-        
-        public static unsafe delegate*<uint, double, double, void> _glVertexAttrib2dARB;
-        
-        public static unsafe void VertexAttrib2dARB(uint index, double x, double y)
-        {
-            _glVertexAttrib2dARB(index, x, y);
-        }
-        
-        public static unsafe delegate*<uint, double, double, void> _glVertexAttrib2dNV;
-        
-        public static unsafe void VertexAttrib2dNV(uint index, double x, double y)
-        {
-            _glVertexAttrib2dNV(index, x, y);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib2dv;
@@ -20558,39 +6642,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib2dv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib2dvARB;
-        
-        public static unsafe void VertexAttrib2dvARB(uint index, ref double v)
-        {
-            _glVertexAttrib2dvARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib2dvNV;
-        
-        public static unsafe void VertexAttrib2dvNV(uint index, ref double v)
-        {
-            _glVertexAttrib2dvNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, float, float, void> _glVertexAttrib2f;
         
         public static unsafe void VertexAttrib2f(uint index, float x, float y)
         {
             _glVertexAttrib2f(index, x, y);
-        }
-        
-        public static unsafe delegate*<uint, float, float, void> _glVertexAttrib2fARB;
-        
-        public static unsafe void VertexAttrib2fARB(uint index, float x, float y)
-        {
-            _glVertexAttrib2fARB(index, x, y);
-        }
-        
-        public static unsafe delegate*<uint, float, float, void> _glVertexAttrib2fNV;
-        
-        public static unsafe void VertexAttrib2fNV(uint index, float x, float y)
-        {
-            _glVertexAttrib2fNV(index, x, y);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib2fv;
@@ -20600,53 +6656,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib2fv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib2fvARB;
-        
-        public static unsafe void VertexAttrib2fvARB(uint index, ref float v)
-        {
-            _glVertexAttrib2fvARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib2fvNV;
-        
-        public static unsafe void VertexAttrib2fvNV(uint index, ref float v)
-        {
-            _glVertexAttrib2fvNV(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, ushort, ushort, void> _glVertexAttrib2hNV;
-        
-        public static unsafe void VertexAttrib2hNV(uint index, ushort x, ushort y)
-        {
-            _glVertexAttrib2hNV(index, x, y);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib2hvNV;
-        
-        public static unsafe void VertexAttrib2hvNV(uint index, ref ushort v)
-        {
-            _glVertexAttrib2hvNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, short, short, void> _glVertexAttrib2s;
         
         public static unsafe void VertexAttrib2s(uint index, short x, short y)
         {
             _glVertexAttrib2s(index, x, y);
-        }
-        
-        public static unsafe delegate*<uint, short, short, void> _glVertexAttrib2sARB;
-        
-        public static unsafe void VertexAttrib2sARB(uint index, short x, short y)
-        {
-            _glVertexAttrib2sARB(index, x, y);
-        }
-        
-        public static unsafe delegate*<uint, short, short, void> _glVertexAttrib2sNV;
-        
-        public static unsafe void VertexAttrib2sNV(uint index, short x, short y)
-        {
-            _glVertexAttrib2sNV(index, x, y);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib2sv;
@@ -20656,39 +6670,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib2sv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib2svARB;
-        
-        public static unsafe void VertexAttrib2svARB(uint index, ref short v)
-        {
-            _glVertexAttrib2svARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib2svNV;
-        
-        public static unsafe void VertexAttrib2svNV(uint index, ref short v)
-        {
-            _glVertexAttrib2svNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, double, double, double, void> _glVertexAttrib3d;
         
         public static unsafe void VertexAttrib3d(uint index, double x, double y, double z)
         {
             _glVertexAttrib3d(index, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, double, double, double, void> _glVertexAttrib3dARB;
-        
-        public static unsafe void VertexAttrib3dARB(uint index, double x, double y, double z)
-        {
-            _glVertexAttrib3dARB(index, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, double, double, double, void> _glVertexAttrib3dNV;
-        
-        public static unsafe void VertexAttrib3dNV(uint index, double x, double y, double z)
-        {
-            _glVertexAttrib3dNV(index, x, y, z);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib3dv;
@@ -20698,39 +6684,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib3dv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib3dvARB;
-        
-        public static unsafe void VertexAttrib3dvARB(uint index, ref double v)
-        {
-            _glVertexAttrib3dvARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib3dvNV;
-        
-        public static unsafe void VertexAttrib3dvNV(uint index, ref double v)
-        {
-            _glVertexAttrib3dvNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, float, float, float, void> _glVertexAttrib3f;
         
         public static unsafe void VertexAttrib3f(uint index, float x, float y, float z)
         {
             _glVertexAttrib3f(index, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, void> _glVertexAttrib3fARB;
-        
-        public static unsafe void VertexAttrib3fARB(uint index, float x, float y, float z)
-        {
-            _glVertexAttrib3fARB(index, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, void> _glVertexAttrib3fNV;
-        
-        public static unsafe void VertexAttrib3fNV(uint index, float x, float y, float z)
-        {
-            _glVertexAttrib3fNV(index, x, y, z);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib3fv;
@@ -20740,53 +6698,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib3fv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib3fvARB;
-        
-        public static unsafe void VertexAttrib3fvARB(uint index, ref float v)
-        {
-            _glVertexAttrib3fvARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib3fvNV;
-        
-        public static unsafe void VertexAttrib3fvNV(uint index, ref float v)
-        {
-            _glVertexAttrib3fvNV(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, ushort, ushort, ushort, void> _glVertexAttrib3hNV;
-        
-        public static unsafe void VertexAttrib3hNV(uint index, ushort x, ushort y, ushort z)
-        {
-            _glVertexAttrib3hNV(index, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib3hvNV;
-        
-        public static unsafe void VertexAttrib3hvNV(uint index, ref ushort v)
-        {
-            _glVertexAttrib3hvNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, short, short, short, void> _glVertexAttrib3s;
         
         public static unsafe void VertexAttrib3s(uint index, short x, short y, short z)
         {
             _glVertexAttrib3s(index, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, short, short, short, void> _glVertexAttrib3sARB;
-        
-        public static unsafe void VertexAttrib3sARB(uint index, short x, short y, short z)
-        {
-            _glVertexAttrib3sARB(index, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, short, short, short, void> _glVertexAttrib3sNV;
-        
-        public static unsafe void VertexAttrib3sNV(uint index, short x, short y, short z)
-        {
-            _glVertexAttrib3sNV(index, x, y, z);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib3sv;
@@ -20796,32 +6712,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib3sv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib3svARB;
-        
-        public static unsafe void VertexAttrib3svARB(uint index, ref short v)
-        {
-            _glVertexAttrib3svARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib3svNV;
-        
-        public static unsafe void VertexAttrib3svNV(uint index, ref short v)
-        {
-            _glVertexAttrib3svNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4Nbv;
         
         public static unsafe void VertexAttrib4Nbv(uint index, ref sbyte v)
         {
             _glVertexAttrib4Nbv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4NbvARB;
-        
-        public static unsafe void VertexAttrib4NbvARB(uint index, ref sbyte v)
-        {
-            _glVertexAttrib4NbvARB(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4Niv;
@@ -20831,25 +6726,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib4Niv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4NivARB;
-        
-        public static unsafe void VertexAttrib4NivARB(uint index, ref int v)
-        {
-            _glVertexAttrib4NivARB(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4Nsv;
         
         public static unsafe void VertexAttrib4Nsv(uint index, ref short v)
         {
             _glVertexAttrib4Nsv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4NsvARB;
-        
-        public static unsafe void VertexAttrib4NsvARB(uint index, ref short v)
-        {
-            _glVertexAttrib4NsvARB(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, byte, byte, byte, byte, void> _glVertexAttrib4Nub;
@@ -20859,25 +6740,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib4Nub(index, x, y, z, w);
         }
         
-        public static unsafe delegate*<uint, byte, byte, byte, byte, void> _glVertexAttrib4NubARB;
-        
-        public static unsafe void VertexAttrib4NubARB(uint index, byte x, byte y, byte z, byte w)
-        {
-            _glVertexAttrib4NubARB(index, x, y, z, w);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4Nubv;
         
         public static unsafe void VertexAttrib4Nubv(uint index, ref byte v)
         {
             _glVertexAttrib4Nubv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4NubvARB;
-        
-        public static unsafe void VertexAttrib4NubvARB(uint index, ref byte v)
-        {
-            _glVertexAttrib4NubvARB(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4Nuiv;
@@ -20887,25 +6754,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib4Nuiv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4NuivARB;
-        
-        public static unsafe void VertexAttrib4NuivARB(uint index, ref uint v)
-        {
-            _glVertexAttrib4NuivARB(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4Nusv;
         
         public static unsafe void VertexAttrib4Nusv(uint index, ref ushort v)
         {
             _glVertexAttrib4Nusv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4NusvARB;
-        
-        public static unsafe void VertexAttrib4NusvARB(uint index, ref ushort v)
-        {
-            _glVertexAttrib4NusvARB(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4bv;
@@ -20915,32 +6768,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib4bv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4bvARB;
-        
-        public static unsafe void VertexAttrib4bvARB(uint index, ref sbyte v)
-        {
-            _glVertexAttrib4bvARB(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, double, double, double, double, void> _glVertexAttrib4d;
         
         public static unsafe void VertexAttrib4d(uint index, double x, double y, double z, double w)
         {
             _glVertexAttrib4d(index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, double, double, double, double, void> _glVertexAttrib4dARB;
-        
-        public static unsafe void VertexAttrib4dARB(uint index, double x, double y, double z, double w)
-        {
-            _glVertexAttrib4dARB(index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, double, double, double, double, void> _glVertexAttrib4dNV;
-        
-        public static unsafe void VertexAttrib4dNV(uint index, double x, double y, double z, double w)
-        {
-            _glVertexAttrib4dNV(index, x, y, z, w);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4dv;
@@ -20950,39 +6782,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib4dv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4dvARB;
-        
-        public static unsafe void VertexAttrib4dvARB(uint index, ref double v)
-        {
-            _glVertexAttrib4dvARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4dvNV;
-        
-        public static unsafe void VertexAttrib4dvNV(uint index, ref double v)
-        {
-            _glVertexAttrib4dvNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, float, float, float, float, void> _glVertexAttrib4f;
         
         public static unsafe void VertexAttrib4f(uint index, float x, float y, float z, float w)
         {
             _glVertexAttrib4f(index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, float, void> _glVertexAttrib4fARB;
-        
-        public static unsafe void VertexAttrib4fARB(uint index, float x, float y, float z, float w)
-        {
-            _glVertexAttrib4fARB(index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, float, void> _glVertexAttrib4fNV;
-        
-        public static unsafe void VertexAttrib4fNV(uint index, float x, float y, float z, float w)
-        {
-            _glVertexAttrib4fNV(index, x, y, z, w);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4fv;
@@ -20992,46 +6796,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib4fv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4fvARB;
-        
-        public static unsafe void VertexAttrib4fvARB(uint index, ref float v)
-        {
-            _glVertexAttrib4fvARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4fvNV;
-        
-        public static unsafe void VertexAttrib4fvNV(uint index, ref float v)
-        {
-            _glVertexAttrib4fvNV(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, ushort, ushort, ushort, ushort, void> _glVertexAttrib4hNV;
-        
-        public static unsafe void VertexAttrib4hNV(uint index, ushort x, ushort y, ushort z, ushort w)
-        {
-            _glVertexAttrib4hNV(index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4hvNV;
-        
-        public static unsafe void VertexAttrib4hvNV(uint index, ref ushort v)
-        {
-            _glVertexAttrib4hvNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4iv;
         
         public static unsafe void VertexAttrib4iv(uint index, ref int v)
         {
             _glVertexAttrib4iv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4ivARB;
-        
-        public static unsafe void VertexAttrib4ivARB(uint index, ref int v)
-        {
-            _glVertexAttrib4ivARB(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, short, short, short, short, void> _glVertexAttrib4s;
@@ -21041,46 +6810,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib4s(index, x, y, z, w);
         }
         
-        public static unsafe delegate*<uint, short, short, short, short, void> _glVertexAttrib4sARB;
-        
-        public static unsafe void VertexAttrib4sARB(uint index, short x, short y, short z, short w)
-        {
-            _glVertexAttrib4sARB(index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, short, short, short, short, void> _glVertexAttrib4sNV;
-        
-        public static unsafe void VertexAttrib4sNV(uint index, short x, short y, short z, short w)
-        {
-            _glVertexAttrib4sNV(index, x, y, z, w);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4sv;
         
         public static unsafe void VertexAttrib4sv(uint index, ref short v)
         {
             _glVertexAttrib4sv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4svARB;
-        
-        public static unsafe void VertexAttrib4svARB(uint index, ref short v)
-        {
-            _glVertexAttrib4svARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4svNV;
-        
-        public static unsafe void VertexAttrib4svNV(uint index, ref short v)
-        {
-            _glVertexAttrib4svNV(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, byte, byte, byte, byte, void> _glVertexAttrib4ubNV;
-        
-        public static unsafe void VertexAttrib4ubNV(uint index, byte x, byte y, byte z, byte w)
-        {
-            _glVertexAttrib4ubNV(index, x, y, z, w);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4ubv;
@@ -21090,20 +6824,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib4ubv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4ubvARB;
-        
-        public static unsafe void VertexAttrib4ubvARB(uint index, ref byte v)
-        {
-            _glVertexAttrib4ubvARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4ubvNV;
-        
-        public static unsafe void VertexAttrib4ubvNV(uint index, ref byte v)
-        {
-            _glVertexAttrib4ubvNV(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4uiv;
         
         public static unsafe void VertexAttrib4uiv(uint index, ref uint v)
@@ -21111,32 +6831,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttrib4uiv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4uivARB;
-        
-        public static unsafe void VertexAttrib4uivARB(uint index, ref uint v)
-        {
-            _glVertexAttrib4uivARB(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4usv;
         
         public static unsafe void VertexAttrib4usv(uint index, ref ushort v)
         {
             _glVertexAttrib4usv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttrib4usvARB;
-        
-        public static unsafe void VertexAttrib4usvARB(uint index, ref ushort v)
-        {
-            _glVertexAttrib4usvARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, VertexAttribPointerType, byte, int, uint, uint, void> _glVertexAttribArrayObjectATI;
-        
-        public static unsafe void VertexAttribArrayObjectATI(uint index, int size, VertexAttribPointerType type, byte normalized, int stride, uint buffer, uint offset)
-        {
-            _glVertexAttribArrayObjectATI(index, size, type, normalized, stride, buffer, offset);
         }
         
         public static unsafe delegate*<uint, uint, void> _glVertexAttribBinding;
@@ -21153,46 +6852,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribDivisor(index, divisor);
         }
         
-        public static unsafe delegate*<uint, uint, void> _glVertexAttribDivisorANGLE;
-        
-        public static unsafe void VertexAttribDivisorANGLE(uint index, uint divisor)
-        {
-            _glVertexAttribDivisorANGLE(index, divisor);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glVertexAttribDivisorARB;
-        
-        public static unsafe void VertexAttribDivisorARB(uint index, uint divisor)
-        {
-            _glVertexAttribDivisorARB(index, divisor);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glVertexAttribDivisorEXT;
-        
-        public static unsafe void VertexAttribDivisorEXT(uint index, uint divisor)
-        {
-            _glVertexAttribDivisorEXT(index, divisor);
-        }
-        
-        public static unsafe delegate*<uint, uint, void> _glVertexAttribDivisorNV;
-        
-        public static unsafe void VertexAttribDivisorNV(uint index, uint divisor)
-        {
-            _glVertexAttribDivisorNV(index, divisor);
-        }
-        
         public static unsafe delegate*<uint, int, VertexAttribType, byte, uint, void> _glVertexAttribFormat;
         
         public static unsafe void VertexAttribFormat(uint attribindex, int size, VertexAttribType type, byte normalized, uint relativeoffset)
         {
             _glVertexAttribFormat(attribindex, size, type, normalized, relativeoffset);
-        }
-        
-        public static unsafe delegate*<uint, int, VertexAttribType, byte, int, void> _glVertexAttribFormatNV;
-        
-        public static unsafe void VertexAttribFormatNV(uint index, int size, VertexAttribType type, byte normalized, int stride)
-        {
-            _glVertexAttribFormatNV(index, size, type, normalized, stride);
         }
         
         public static unsafe delegate*<uint, int, void> _glVertexAttribI1i;
@@ -21202,25 +6866,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribI1i(index, x);
         }
         
-        public static unsafe delegate*<uint, int, void> _glVertexAttribI1iEXT;
-        
-        public static unsafe void VertexAttribI1iEXT(uint index, int x)
-        {
-            _glVertexAttribI1iEXT(index, x);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI1iv;
         
         public static unsafe void VertexAttribI1iv(uint index, ref int v)
         {
             _glVertexAttribI1iv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI1ivEXT;
-        
-        public static unsafe void VertexAttribI1ivEXT(uint index, ref int v)
-        {
-            _glVertexAttribI1ivEXT(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, uint, void> _glVertexAttribI1ui;
@@ -21230,25 +6880,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribI1ui(index, x);
         }
         
-        public static unsafe delegate*<uint, uint, void> _glVertexAttribI1uiEXT;
-        
-        public static unsafe void VertexAttribI1uiEXT(uint index, uint x)
-        {
-            _glVertexAttribI1uiEXT(index, x);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI1uiv;
         
         public static unsafe void VertexAttribI1uiv(uint index, ref uint v)
         {
             _glVertexAttribI1uiv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI1uivEXT;
-        
-        public static unsafe void VertexAttribI1uivEXT(uint index, ref uint v)
-        {
-            _glVertexAttribI1uivEXT(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, int, int, void> _glVertexAttribI2i;
@@ -21258,25 +6894,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribI2i(index, x, y);
         }
         
-        public static unsafe delegate*<uint, int, int, void> _glVertexAttribI2iEXT;
-        
-        public static unsafe void VertexAttribI2iEXT(uint index, int x, int y)
-        {
-            _glVertexAttribI2iEXT(index, x, y);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI2iv;
         
         public static unsafe void VertexAttribI2iv(uint index, ref int v)
         {
             _glVertexAttribI2iv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI2ivEXT;
-        
-        public static unsafe void VertexAttribI2ivEXT(uint index, ref int v)
-        {
-            _glVertexAttribI2ivEXT(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, uint, uint, void> _glVertexAttribI2ui;
@@ -21286,25 +6908,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribI2ui(index, x, y);
         }
         
-        public static unsafe delegate*<uint, uint, uint, void> _glVertexAttribI2uiEXT;
-        
-        public static unsafe void VertexAttribI2uiEXT(uint index, uint x, uint y)
-        {
-            _glVertexAttribI2uiEXT(index, x, y);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI2uiv;
         
         public static unsafe void VertexAttribI2uiv(uint index, ref uint v)
         {
             _glVertexAttribI2uiv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI2uivEXT;
-        
-        public static unsafe void VertexAttribI2uivEXT(uint index, ref uint v)
-        {
-            _glVertexAttribI2uivEXT(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, int, int, int, void> _glVertexAttribI3i;
@@ -21314,25 +6922,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribI3i(index, x, y, z);
         }
         
-        public static unsafe delegate*<uint, int, int, int, void> _glVertexAttribI3iEXT;
-        
-        public static unsafe void VertexAttribI3iEXT(uint index, int x, int y, int z)
-        {
-            _glVertexAttribI3iEXT(index, x, y, z);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI3iv;
         
         public static unsafe void VertexAttribI3iv(uint index, ref int v)
         {
             _glVertexAttribI3iv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI3ivEXT;
-        
-        public static unsafe void VertexAttribI3ivEXT(uint index, ref int v)
-        {
-            _glVertexAttribI3ivEXT(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, uint, uint, uint, void> _glVertexAttribI3ui;
@@ -21342,25 +6936,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribI3ui(index, x, y, z);
         }
         
-        public static unsafe delegate*<uint, uint, uint, uint, void> _glVertexAttribI3uiEXT;
-        
-        public static unsafe void VertexAttribI3uiEXT(uint index, uint x, uint y, uint z)
-        {
-            _glVertexAttribI3uiEXT(index, x, y, z);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI3uiv;
         
         public static unsafe void VertexAttribI3uiv(uint index, ref uint v)
         {
             _glVertexAttribI3uiv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI3uivEXT;
-        
-        public static unsafe void VertexAttribI3uivEXT(uint index, ref uint v)
-        {
-            _glVertexAttribI3uivEXT(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4bv;
@@ -21370,25 +6950,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribI4bv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4bvEXT;
-        
-        public static unsafe void VertexAttribI4bvEXT(uint index, ref sbyte v)
-        {
-            _glVertexAttribI4bvEXT(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, int, int, int, int, void> _glVertexAttribI4i;
         
         public static unsafe void VertexAttribI4i(uint index, int x, int y, int z, int w)
         {
             _glVertexAttribI4i(index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, int, int, int, int, void> _glVertexAttribI4iEXT;
-        
-        public static unsafe void VertexAttribI4iEXT(uint index, int x, int y, int z, int w)
-        {
-            _glVertexAttribI4iEXT(index, x, y, z, w);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4iv;
@@ -21398,25 +6964,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribI4iv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4ivEXT;
-        
-        public static unsafe void VertexAttribI4ivEXT(uint index, ref int v)
-        {
-            _glVertexAttribI4ivEXT(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4sv;
         
         public static unsafe void VertexAttribI4sv(uint index, ref short v)
         {
             _glVertexAttribI4sv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4svEXT;
-        
-        public static unsafe void VertexAttribI4svEXT(uint index, ref short v)
-        {
-            _glVertexAttribI4svEXT(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4ubv;
@@ -21426,25 +6978,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribI4ubv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4ubvEXT;
-        
-        public static unsafe void VertexAttribI4ubvEXT(uint index, ref byte v)
-        {
-            _glVertexAttribI4ubvEXT(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, uint, uint, uint, uint, void> _glVertexAttribI4ui;
         
         public static unsafe void VertexAttribI4ui(uint index, uint x, uint y, uint z, uint w)
         {
             _glVertexAttribI4ui(index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, uint, void> _glVertexAttribI4uiEXT;
-        
-        public static unsafe void VertexAttribI4uiEXT(uint index, uint x, uint y, uint z, uint w)
-        {
-            _glVertexAttribI4uiEXT(index, x, y, z, w);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4uiv;
@@ -21454,25 +6992,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribI4uiv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4uivEXT;
-        
-        public static unsafe void VertexAttribI4uivEXT(uint index, ref uint v)
-        {
-            _glVertexAttribI4uivEXT(index, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4usv;
         
         public static unsafe void VertexAttribI4usv(uint index, ref ushort v)
         {
             _glVertexAttribI4usv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribI4usvEXT;
-        
-        public static unsafe void VertexAttribI4usvEXT(uint index, ref ushort v)
-        {
-            _glVertexAttribI4usvEXT(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, int, VertexAttribIType, uint, void> _glVertexAttribIFormat;
@@ -21482,25 +7006,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribIFormat(attribindex, size, type, relativeoffset);
         }
         
-        public static unsafe delegate*<uint, int, VertexAttribIType, int, void> _glVertexAttribIFormatNV;
-        
-        public static unsafe void VertexAttribIFormatNV(uint index, int size, VertexAttribIType type, int stride)
-        {
-            _glVertexAttribIFormatNV(index, size, type, stride);
-        }
-        
         public static unsafe delegate*<uint, int, VertexAttribIType, int, IntPtr, void> _glVertexAttribIPointer;
         
         public static unsafe void VertexAttribIPointer(uint index, int size, VertexAttribIType type, int stride, IntPtr pointer)
         {
             _glVertexAttribIPointer(index, size, type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<uint, int, VertexAttribIType, int, IntPtr, void> _glVertexAttribIPointerEXT;
-        
-        public static unsafe void VertexAttribIPointerEXT(uint index, int size, VertexAttribIType type, int stride, IntPtr pointer)
-        {
-            _glVertexAttribIPointerEXT(index, size, type, stride, (IntPtr)pointer);
         }
         
         public static unsafe delegate*<uint, double, void> _glVertexAttribL1d;
@@ -21510,67 +7020,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribL1d(index, x);
         }
         
-        public static unsafe delegate*<uint, double, void> _glVertexAttribL1dEXT;
-        
-        public static unsafe void VertexAttribL1dEXT(uint index, double x)
-        {
-            _glVertexAttribL1dEXT(index, x);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL1dv;
         
         public static unsafe void VertexAttribL1dv(uint index, ref double v)
         {
             _glVertexAttribL1dv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL1dvEXT;
-        
-        public static unsafe void VertexAttribL1dvEXT(uint index, ref double v)
-        {
-            _glVertexAttribL1dvEXT(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, long, void> _glVertexAttribL1i64NV;
-        
-        public static unsafe void VertexAttribL1i64NV(uint index, long x)
-        {
-            _glVertexAttribL1i64NV(index, x);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL1i64vNV;
-        
-        public static unsafe void VertexAttribL1i64vNV(uint index, ref long v)
-        {
-            _glVertexAttribL1i64vNV(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, ulong, void> _glVertexAttribL1ui64ARB;
-        
-        public static unsafe void VertexAttribL1ui64ARB(uint index, ulong x)
-        {
-            _glVertexAttribL1ui64ARB(index, x);
-        }
-        
-        public static unsafe delegate*<uint, ulong, void> _glVertexAttribL1ui64NV;
-        
-        public static unsafe void VertexAttribL1ui64NV(uint index, ulong x)
-        {
-            _glVertexAttribL1ui64NV(index, x);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL1ui64vARB;
-        
-        public static unsafe void VertexAttribL1ui64vARB(uint index, ref ulong v)
-        {
-            _glVertexAttribL1ui64vARB(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL1ui64vNV;
-        
-        public static unsafe void VertexAttribL1ui64vNV(uint index, ref ulong v)
-        {
-            _glVertexAttribL1ui64vNV(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, double, double, void> _glVertexAttribL2d;
@@ -21580,53 +7034,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribL2d(index, x, y);
         }
         
-        public static unsafe delegate*<uint, double, double, void> _glVertexAttribL2dEXT;
-        
-        public static unsafe void VertexAttribL2dEXT(uint index, double x, double y)
-        {
-            _glVertexAttribL2dEXT(index, x, y);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL2dv;
         
         public static unsafe void VertexAttribL2dv(uint index, ref double v)
         {
             _glVertexAttribL2dv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL2dvEXT;
-        
-        public static unsafe void VertexAttribL2dvEXT(uint index, ref double v)
-        {
-            _glVertexAttribL2dvEXT(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, long, long, void> _glVertexAttribL2i64NV;
-        
-        public static unsafe void VertexAttribL2i64NV(uint index, long x, long y)
-        {
-            _glVertexAttribL2i64NV(index, x, y);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL2i64vNV;
-        
-        public static unsafe void VertexAttribL2i64vNV(uint index, ref long v)
-        {
-            _glVertexAttribL2i64vNV(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, ulong, ulong, void> _glVertexAttribL2ui64NV;
-        
-        public static unsafe void VertexAttribL2ui64NV(uint index, ulong x, ulong y)
-        {
-            _glVertexAttribL2ui64NV(index, x, y);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL2ui64vNV;
-        
-        public static unsafe void VertexAttribL2ui64vNV(uint index, ref ulong v)
-        {
-            _glVertexAttribL2ui64vNV(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, double, double, double, void> _glVertexAttribL3d;
@@ -21636,53 +7048,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribL3d(index, x, y, z);
         }
         
-        public static unsafe delegate*<uint, double, double, double, void> _glVertexAttribL3dEXT;
-        
-        public static unsafe void VertexAttribL3dEXT(uint index, double x, double y, double z)
-        {
-            _glVertexAttribL3dEXT(index, x, y, z);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL3dv;
         
         public static unsafe void VertexAttribL3dv(uint index, ref double v)
         {
             _glVertexAttribL3dv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL3dvEXT;
-        
-        public static unsafe void VertexAttribL3dvEXT(uint index, ref double v)
-        {
-            _glVertexAttribL3dvEXT(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, long, long, long, void> _glVertexAttribL3i64NV;
-        
-        public static unsafe void VertexAttribL3i64NV(uint index, long x, long y, long z)
-        {
-            _glVertexAttribL3i64NV(index, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL3i64vNV;
-        
-        public static unsafe void VertexAttribL3i64vNV(uint index, ref long v)
-        {
-            _glVertexAttribL3i64vNV(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, ulong, ulong, ulong, void> _glVertexAttribL3ui64NV;
-        
-        public static unsafe void VertexAttribL3ui64NV(uint index, ulong x, ulong y, ulong z)
-        {
-            _glVertexAttribL3ui64NV(index, x, y, z);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL3ui64vNV;
-        
-        public static unsafe void VertexAttribL3ui64vNV(uint index, ref ulong v)
-        {
-            _glVertexAttribL3ui64vNV(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, double, double, double, double, void> _glVertexAttribL4d;
@@ -21692,53 +7062,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribL4d(index, x, y, z, w);
         }
         
-        public static unsafe delegate*<uint, double, double, double, double, void> _glVertexAttribL4dEXT;
-        
-        public static unsafe void VertexAttribL4dEXT(uint index, double x, double y, double z, double w)
-        {
-            _glVertexAttribL4dEXT(index, x, y, z, w);
-        }
-        
         public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL4dv;
         
         public static unsafe void VertexAttribL4dv(uint index, ref double v)
         {
             _glVertexAttribL4dv(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL4dvEXT;
-        
-        public static unsafe void VertexAttribL4dvEXT(uint index, ref double v)
-        {
-            _glVertexAttribL4dvEXT(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, long, long, long, long, void> _glVertexAttribL4i64NV;
-        
-        public static unsafe void VertexAttribL4i64NV(uint index, long x, long y, long z, long w)
-        {
-            _glVertexAttribL4i64NV(index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL4i64vNV;
-        
-        public static unsafe void VertexAttribL4i64vNV(uint index, ref long v)
-        {
-            _glVertexAttribL4i64vNV(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, ulong, ulong, ulong, ulong, void> _glVertexAttribL4ui64NV;
-        
-        public static unsafe void VertexAttribL4ui64NV(uint index, ulong x, ulong y, ulong z, ulong w)
-        {
-            _glVertexAttribL4ui64NV(index, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glVertexAttribL4ui64vNV;
-        
-        public static unsafe void VertexAttribL4ui64vNV(uint index, ref ulong v)
-        {
-            _glVertexAttribL4ui64vNV(index, (IntPtr)v);
         }
         
         public static unsafe delegate*<uint, int, VertexAttribLType, uint, void> _glVertexAttribLFormat;
@@ -21748,25 +7076,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribLFormat(attribindex, size, type, relativeoffset);
         }
         
-        public static unsafe delegate*<uint, int, VertexAttribLType, int, void> _glVertexAttribLFormatNV;
-        
-        public static unsafe void VertexAttribLFormatNV(uint index, int size, VertexAttribLType type, int stride)
-        {
-            _glVertexAttribLFormatNV(index, size, type, stride);
-        }
-        
         public static unsafe delegate*<uint, int, VertexAttribLType, int, IntPtr, void> _glVertexAttribLPointer;
         
         public static unsafe void VertexAttribLPointer(uint index, int size, VertexAttribLType type, int stride, IntPtr pointer)
         {
             _glVertexAttribLPointer(index, size, type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<uint, int, VertexAttribLType, int, IntPtr, void> _glVertexAttribLPointerEXT;
-        
-        public static unsafe void VertexAttribLPointerEXT(uint index, int size, VertexAttribLType type, int stride, IntPtr pointer)
-        {
-            _glVertexAttribLPointerEXT(index, size, type, stride, (IntPtr)pointer);
         }
         
         public static unsafe delegate*<uint, VertexAttribPointerType, byte, uint, void> _glVertexAttribP1ui;
@@ -21825,13 +7139,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribP4uiv(index, type, normalized, (IntPtr)value);
         }
         
-        public static unsafe delegate*<uint, uint, int, void> _glVertexAttribParameteriAMD;
-        
-        public static unsafe void VertexAttribParameteriAMD(uint index, uint pname, int param)
-        {
-            _glVertexAttribParameteriAMD(index, pname, param);
-        }
-        
         public static unsafe delegate*<uint, int, VertexAttribPointerType, byte, int, IntPtr, void> _glVertexAttribPointer;
         
         public static unsafe void VertexAttribPointer(uint index, int size, VertexAttribPointerType type, byte normalized, int stride, IntPtr pointer)
@@ -21839,172 +7146,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexAttribPointer(index, size, type, normalized, stride, (IntPtr)pointer);
         }
         
-        public static unsafe delegate*<uint, int, VertexAttribPointerType, byte, int, IntPtr, void> _glVertexAttribPointerARB;
-        
-        public static unsafe void VertexAttribPointerARB(uint index, int size, VertexAttribPointerType type, byte normalized, int stride, IntPtr pointer)
-        {
-            _glVertexAttribPointerARB(index, size, type, normalized, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<uint, int, VertexAttribEnumNV, int, IntPtr, void> _glVertexAttribPointerNV;
-        
-        public static unsafe void VertexAttribPointerNV(uint index, int fsize, VertexAttribEnumNV type, int stride, IntPtr pointer)
-        {
-            _glVertexAttribPointerNV(index, fsize, type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs1dvNV;
-        
-        public static unsafe void VertexAttribs1dvNV(uint index, int count, ref double v)
-        {
-            _glVertexAttribs1dvNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs1fvNV;
-        
-        public static unsafe void VertexAttribs1fvNV(uint index, int count, ref float v)
-        {
-            _glVertexAttribs1fvNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs1hvNV;
-        
-        public static unsafe void VertexAttribs1hvNV(uint index, int n, ref ushort v)
-        {
-            _glVertexAttribs1hvNV(index, n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs1svNV;
-        
-        public static unsafe void VertexAttribs1svNV(uint index, int count, ref short v)
-        {
-            _glVertexAttribs1svNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs2dvNV;
-        
-        public static unsafe void VertexAttribs2dvNV(uint index, int count, out IntPtr v)
-        {
-            _glVertexAttribs2dvNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs2fvNV;
-        
-        public static unsafe void VertexAttribs2fvNV(uint index, int count, out IntPtr v)
-        {
-            _glVertexAttribs2fvNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs2hvNV;
-        
-        public static unsafe void VertexAttribs2hvNV(uint index, int n, ref ushort v)
-        {
-            _glVertexAttribs2hvNV(index, n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs2svNV;
-        
-        public static unsafe void VertexAttribs2svNV(uint index, int count, out IntPtr v)
-        {
-            _glVertexAttribs2svNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs3dvNV;
-        
-        public static unsafe void VertexAttribs3dvNV(uint index, int count, out IntPtr v)
-        {
-            _glVertexAttribs3dvNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs3fvNV;
-        
-        public static unsafe void VertexAttribs3fvNV(uint index, int count, out IntPtr v)
-        {
-            _glVertexAttribs3fvNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs3hvNV;
-        
-        public static unsafe void VertexAttribs3hvNV(uint index, int n, ref ushort v)
-        {
-            _glVertexAttribs3hvNV(index, n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs3svNV;
-        
-        public static unsafe void VertexAttribs3svNV(uint index, int count, out IntPtr v)
-        {
-            _glVertexAttribs3svNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs4dvNV;
-        
-        public static unsafe void VertexAttribs4dvNV(uint index, int count, out IntPtr v)
-        {
-            _glVertexAttribs4dvNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs4fvNV;
-        
-        public static unsafe void VertexAttribs4fvNV(uint index, int count, out IntPtr v)
-        {
-            _glVertexAttribs4fvNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs4hvNV;
-        
-        public static unsafe void VertexAttribs4hvNV(uint index, int n, ref ushort v)
-        {
-            _glVertexAttribs4hvNV(index, n, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs4svNV;
-        
-        public static unsafe void VertexAttribs4svNV(uint index, int count, out IntPtr v)
-        {
-            _glVertexAttribs4svNV(index, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glVertexAttribs4ubvNV;
-        
-        public static unsafe void VertexAttribs4ubvNV(uint index, int count, out IntPtr v)
-        {
-            _glVertexAttribs4ubvNV(index, count, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, uint, void> _glVertexBindingDivisor;
         
         public static unsafe void VertexBindingDivisor(uint bindingindex, uint divisor)
         {
             _glVertexBindingDivisor(bindingindex, divisor);
-        }
-        
-        public static unsafe delegate*<int, void> _glVertexBlendARB;
-        
-        public static unsafe void VertexBlendARB(int count)
-        {
-            _glVertexBlendARB(count);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, float, void> _glVertexBlendEnvfATI;
-        
-        public static unsafe void VertexBlendEnvfATI(VertexStreamATI pname, float param)
-        {
-            _glVertexBlendEnvfATI(pname, param);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, int, void> _glVertexBlendEnviATI;
-        
-        public static unsafe void VertexBlendEnviATI(VertexStreamATI pname, int param)
-        {
-            _glVertexBlendEnviATI(pname, param);
-        }
-        
-        public static unsafe delegate*<int, VertexPointerType, int, void> _glVertexFormatNV;
-        
-        public static unsafe void VertexFormatNV(int size, VertexPointerType type, int stride)
-        {
-            _glVertexFormatNV(size, type, stride);
         }
         
         public static unsafe delegate*<VertexPointerType, uint, void> _glVertexP2ui;
@@ -22056,314 +7202,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glVertexPointer(size, type, stride, (IntPtr)pointer);
         }
         
-        public static unsafe delegate*<int, VertexPointerType, int, int, IntPtr, void> _glVertexPointerEXT;
-        
-        public static unsafe void VertexPointerEXT(int size, VertexPointerType type, int stride, int count, IntPtr pointer)
-        {
-            _glVertexPointerEXT(size, type, stride, count, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<int, VertexPointerType, int, IntPtr, int, void> _glVertexPointerListIBM;
-        
-        public static unsafe void VertexPointerListIBM(int size, VertexPointerType type, int stride, out IntPtr pointer, int ptrstride)
-        {
-            _glVertexPointerListIBM(size, type, stride, (IntPtr)pointer, ptrstride);
-        }
-        
-        public static unsafe delegate*<int, VertexPointerType, IntPtr, void> _glVertexPointervINTEL;
-        
-        public static unsafe void VertexPointervINTEL(int size, VertexPointerType type, out IntPtr pointer)
-        {
-            _glVertexPointervINTEL(size, type, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, double, void> _glVertexStream1dATI;
-        
-        public static unsafe void VertexStream1dATI(VertexStreamATI stream, double x)
-        {
-            _glVertexStream1dATI(stream, x);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream1dvATI;
-        
-        public static unsafe void VertexStream1dvATI(VertexStreamATI stream, ref double coords)
-        {
-            _glVertexStream1dvATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, float, void> _glVertexStream1fATI;
-        
-        public static unsafe void VertexStream1fATI(VertexStreamATI stream, float x)
-        {
-            _glVertexStream1fATI(stream, x);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream1fvATI;
-        
-        public static unsafe void VertexStream1fvATI(VertexStreamATI stream, ref float coords)
-        {
-            _glVertexStream1fvATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, int, void> _glVertexStream1iATI;
-        
-        public static unsafe void VertexStream1iATI(VertexStreamATI stream, int x)
-        {
-            _glVertexStream1iATI(stream, x);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream1ivATI;
-        
-        public static unsafe void VertexStream1ivATI(VertexStreamATI stream, ref int coords)
-        {
-            _glVertexStream1ivATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, short, void> _glVertexStream1sATI;
-        
-        public static unsafe void VertexStream1sATI(VertexStreamATI stream, short x)
-        {
-            _glVertexStream1sATI(stream, x);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream1svATI;
-        
-        public static unsafe void VertexStream1svATI(VertexStreamATI stream, ref short coords)
-        {
-            _glVertexStream1svATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, double, double, void> _glVertexStream2dATI;
-        
-        public static unsafe void VertexStream2dATI(VertexStreamATI stream, double x, double y)
-        {
-            _glVertexStream2dATI(stream, x, y);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream2dvATI;
-        
-        public static unsafe void VertexStream2dvATI(VertexStreamATI stream, ref double coords)
-        {
-            _glVertexStream2dvATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, float, float, void> _glVertexStream2fATI;
-        
-        public static unsafe void VertexStream2fATI(VertexStreamATI stream, float x, float y)
-        {
-            _glVertexStream2fATI(stream, x, y);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream2fvATI;
-        
-        public static unsafe void VertexStream2fvATI(VertexStreamATI stream, ref float coords)
-        {
-            _glVertexStream2fvATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, int, int, void> _glVertexStream2iATI;
-        
-        public static unsafe void VertexStream2iATI(VertexStreamATI stream, int x, int y)
-        {
-            _glVertexStream2iATI(stream, x, y);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream2ivATI;
-        
-        public static unsafe void VertexStream2ivATI(VertexStreamATI stream, ref int coords)
-        {
-            _glVertexStream2ivATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, short, short, void> _glVertexStream2sATI;
-        
-        public static unsafe void VertexStream2sATI(VertexStreamATI stream, short x, short y)
-        {
-            _glVertexStream2sATI(stream, x, y);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream2svATI;
-        
-        public static unsafe void VertexStream2svATI(VertexStreamATI stream, ref short coords)
-        {
-            _glVertexStream2svATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, double, double, double, void> _glVertexStream3dATI;
-        
-        public static unsafe void VertexStream3dATI(VertexStreamATI stream, double x, double y, double z)
-        {
-            _glVertexStream3dATI(stream, x, y, z);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream3dvATI;
-        
-        public static unsafe void VertexStream3dvATI(VertexStreamATI stream, ref double coords)
-        {
-            _glVertexStream3dvATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, float, float, float, void> _glVertexStream3fATI;
-        
-        public static unsafe void VertexStream3fATI(VertexStreamATI stream, float x, float y, float z)
-        {
-            _glVertexStream3fATI(stream, x, y, z);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream3fvATI;
-        
-        public static unsafe void VertexStream3fvATI(VertexStreamATI stream, ref float coords)
-        {
-            _glVertexStream3fvATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, int, int, int, void> _glVertexStream3iATI;
-        
-        public static unsafe void VertexStream3iATI(VertexStreamATI stream, int x, int y, int z)
-        {
-            _glVertexStream3iATI(stream, x, y, z);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream3ivATI;
-        
-        public static unsafe void VertexStream3ivATI(VertexStreamATI stream, ref int coords)
-        {
-            _glVertexStream3ivATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, short, short, short, void> _glVertexStream3sATI;
-        
-        public static unsafe void VertexStream3sATI(VertexStreamATI stream, short x, short y, short z)
-        {
-            _glVertexStream3sATI(stream, x, y, z);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream3svATI;
-        
-        public static unsafe void VertexStream3svATI(VertexStreamATI stream, ref short coords)
-        {
-            _glVertexStream3svATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, double, double, double, double, void> _glVertexStream4dATI;
-        
-        public static unsafe void VertexStream4dATI(VertexStreamATI stream, double x, double y, double z, double w)
-        {
-            _glVertexStream4dATI(stream, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream4dvATI;
-        
-        public static unsafe void VertexStream4dvATI(VertexStreamATI stream, ref double coords)
-        {
-            _glVertexStream4dvATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, float, float, float, float, void> _glVertexStream4fATI;
-        
-        public static unsafe void VertexStream4fATI(VertexStreamATI stream, float x, float y, float z, float w)
-        {
-            _glVertexStream4fATI(stream, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream4fvATI;
-        
-        public static unsafe void VertexStream4fvATI(VertexStreamATI stream, ref float coords)
-        {
-            _glVertexStream4fvATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, int, int, int, int, void> _glVertexStream4iATI;
-        
-        public static unsafe void VertexStream4iATI(VertexStreamATI stream, int x, int y, int z, int w)
-        {
-            _glVertexStream4iATI(stream, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream4ivATI;
-        
-        public static unsafe void VertexStream4ivATI(VertexStreamATI stream, ref int coords)
-        {
-            _glVertexStream4ivATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, short, short, short, short, void> _glVertexStream4sATI;
-        
-        public static unsafe void VertexStream4sATI(VertexStreamATI stream, short x, short y, short z, short w)
-        {
-            _glVertexStream4sATI(stream, x, y, z, w);
-        }
-        
-        public static unsafe delegate*<VertexStreamATI, IntPtr, void> _glVertexStream4svATI;
-        
-        public static unsafe void VertexStream4svATI(VertexStreamATI stream, ref short coords)
-        {
-            _glVertexStream4svATI(stream, (IntPtr)coords);
-        }
-        
-        public static unsafe delegate*<int, VertexWeightPointerTypeEXT, int, IntPtr, void> _glVertexWeightPointerEXT;
-        
-        public static unsafe void VertexWeightPointerEXT(int size, VertexWeightPointerTypeEXT type, int stride, IntPtr pointer)
-        {
-            _glVertexWeightPointerEXT(size, type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<float, void> _glVertexWeightfEXT;
-        
-        public static unsafe void VertexWeightfEXT(float weight)
-        {
-            _glVertexWeightfEXT(weight);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glVertexWeightfvEXT;
-        
-        public static unsafe void VertexWeightfvEXT(ref float weight)
-        {
-            _glVertexWeightfvEXT((IntPtr)weight);
-        }
-        
-        public static unsafe delegate*<ushort, void> _glVertexWeighthNV;
-        
-        public static unsafe void VertexWeighthNV(ushort weight)
-        {
-            _glVertexWeighthNV(weight);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glVertexWeighthvNV;
-        
-        public static unsafe void VertexWeighthvNV(ref ushort weight)
-        {
-            _glVertexWeighthvNV((IntPtr)weight);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, IntPtr, uint> _glVideoCaptureNV;
-        
-        public static unsafe uint VideoCaptureNV(uint video_capture_slot, ref uint sequence_num, ref ulong capture_time)
-        {
-            return _glVideoCaptureNV(video_capture_slot, (IntPtr)sequence_num, (IntPtr)capture_time);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glVideoCaptureStreamParameterdvNV;
-        
-        public static unsafe void VideoCaptureStreamParameterdvNV(uint video_capture_slot, uint stream, uint pname, ref double @params)
-        {
-            _glVideoCaptureStreamParameterdvNV(video_capture_slot, stream, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glVideoCaptureStreamParameterfvNV;
-        
-        public static unsafe void VideoCaptureStreamParameterfvNV(uint video_capture_slot, uint stream, uint pname, ref float @params)
-        {
-            _glVideoCaptureStreamParameterfvNV(video_capture_slot, stream, pname, (IntPtr)@params);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, IntPtr, void> _glVideoCaptureStreamParameterivNV;
-        
-        public static unsafe void VideoCaptureStreamParameterivNV(uint video_capture_slot, uint stream, uint pname, ref int @params)
-        {
-            _glVideoCaptureStreamParameterivNV(video_capture_slot, stream, pname, (IntPtr)@params);
-        }
-        
         public static unsafe delegate*<int, int, int, int, void> _glViewport;
         
         public static unsafe void Viewport(int x, int y, int width, int height)
@@ -22378,39 +7216,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glViewportArrayv(first, count, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, int, IntPtr, void> _glViewportArrayvNV;
-        
-        public static unsafe void ViewportArrayvNV(uint first, int count, ref float v)
-        {
-            _glViewportArrayvNV(first, count, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glViewportArrayvOES;
-        
-        public static unsafe void ViewportArrayvOES(uint first, int count, ref float v)
-        {
-            _glViewportArrayvOES(first, count, (IntPtr)v);
-        }
-        
         public static unsafe delegate*<uint, float, float, float, float, void> _glViewportIndexedf;
         
         public static unsafe void ViewportIndexedf(uint index, float x, float y, float w, float h)
         {
             _glViewportIndexedf(index, x, y, w, h);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, float, void> _glViewportIndexedfOES;
-        
-        public static unsafe void ViewportIndexedfOES(uint index, float x, float y, float w, float h)
-        {
-            _glViewportIndexedfOES(index, x, y, w, h);
-        }
-        
-        public static unsafe delegate*<uint, float, float, float, float, void> _glViewportIndexedfNV;
-        
-        public static unsafe void ViewportIndexedfNV(uint index, float x, float y, float w, float h)
-        {
-            _glViewportIndexedfNV(index, x, y, w, h);
         }
         
         public static unsafe delegate*<uint, IntPtr, void> _glViewportIndexedfv;
@@ -22420,137 +7230,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glViewportIndexedfv(index, (IntPtr)v);
         }
         
-        public static unsafe delegate*<uint, IntPtr, void> _glViewportIndexedfvOES;
-        
-        public static unsafe void ViewportIndexedfvOES(uint index, ref float v)
-        {
-            _glViewportIndexedfvOES(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, IntPtr, void> _glViewportIndexedfvNV;
-        
-        public static unsafe void ViewportIndexedfvNV(uint index, ref float v)
-        {
-            _glViewportIndexedfvNV(index, (IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, float, float, void> _glViewportPositionWScaleNV;
-        
-        public static unsafe void ViewportPositionWScaleNV(uint index, float xcoeff, float ycoeff)
-        {
-            _glViewportPositionWScaleNV(index, xcoeff, ycoeff);
-        }
-        
-        public static unsafe delegate*<uint, uint, uint, uint, uint, void> _glViewportSwizzleNV;
-        
-        public static unsafe void ViewportSwizzleNV(uint index, uint swizzlex, uint swizzley, uint swizzlez, uint swizzlew)
-        {
-            _glViewportSwizzleNV(index, swizzlex, swizzley, swizzlez, swizzlew);
-        }
-        
-        public static unsafe delegate*<uint, uint, IntPtr, uint, IntPtr, IntPtr, void> _glWaitSemaphoreEXT;
-        
-        public static unsafe void WaitSemaphoreEXT(uint semaphore, uint numBufferBarriers, ref uint buffers, uint numTextureBarriers, ref uint textures, ref TextureLayout srcLayouts)
-        {
-            _glWaitSemaphoreEXT(semaphore, numBufferBarriers, (IntPtr)buffers, numTextureBarriers, (IntPtr)textures, (IntPtr)srcLayouts);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glWaitSemaphoreui64NVX;
-        
-        public static unsafe void WaitSemaphoreui64NVX(uint waitGpu, int fenceObjectCount, ref uint semaphoreArray, ref ulong fenceValueArray)
-        {
-            _glWaitSemaphoreui64NVX(waitGpu, fenceObjectCount, (IntPtr)semaphoreArray, (IntPtr)fenceValueArray);
-        }
-        
         public static unsafe delegate*<IntPtr, uint, ulong, void> _glWaitSync;
         
         public static unsafe void WaitSync(IntPtr sync, uint flags, ulong timeout)
         {
             _glWaitSync(sync, flags, timeout);
-        }
-        
-        public static unsafe delegate*<IntPtr, uint, ulong, void> _glWaitSyncAPPLE;
-        
-        public static unsafe void WaitSyncAPPLE(IntPtr sync, uint flags, ulong timeout)
-        {
-            _glWaitSyncAPPLE(sync, flags, timeout);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, IntPtr, void> _glWeightPathsNV;
-        
-        public static unsafe void WeightPathsNV(uint resultPath, int numPaths, ref uint paths, ref float weights)
-        {
-            _glWeightPathsNV(resultPath, numPaths, (IntPtr)paths, (IntPtr)weights);
-        }
-        
-        public static unsafe delegate*<int, WeightPointerTypeARB, int, IntPtr, void> _glWeightPointerARB;
-        
-        public static unsafe void WeightPointerARB(int size, WeightPointerTypeARB type, int stride, IntPtr pointer)
-        {
-            _glWeightPointerARB(size, type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<int, uint, int, IntPtr, void> _glWeightPointerOES;
-        
-        public static unsafe void WeightPointerOES(int size, uint type, int stride, IntPtr pointer)
-        {
-            _glWeightPointerOES(size, type, stride, (IntPtr)pointer);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glWeightbvARB;
-        
-        public static unsafe void WeightbvARB(int size, ref sbyte weights)
-        {
-            _glWeightbvARB(size, (IntPtr)weights);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glWeightdvARB;
-        
-        public static unsafe void WeightdvARB(int size, ref double weights)
-        {
-            _glWeightdvARB(size, (IntPtr)weights);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glWeightfvARB;
-        
-        public static unsafe void WeightfvARB(int size, ref float weights)
-        {
-            _glWeightfvARB(size, (IntPtr)weights);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glWeightivARB;
-        
-        public static unsafe void WeightivARB(int size, ref int weights)
-        {
-            _glWeightivARB(size, (IntPtr)weights);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glWeightsvARB;
-        
-        public static unsafe void WeightsvARB(int size, ref short weights)
-        {
-            _glWeightsvARB(size, (IntPtr)weights);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glWeightubvARB;
-        
-        public static unsafe void WeightubvARB(int size, ref byte weights)
-        {
-            _glWeightubvARB(size, (IntPtr)weights);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glWeightuivARB;
-        
-        public static unsafe void WeightuivARB(int size, ref uint weights)
-        {
-            _glWeightuivARB(size, (IntPtr)weights);
-        }
-        
-        public static unsafe delegate*<int, IntPtr, void> _glWeightusvARB;
-        
-        public static unsafe void WeightusvARB(int size, ref ushort weights)
-        {
-            _glWeightusvARB(size, (IntPtr)weights);
         }
         
         public static unsafe delegate*<double, double, void> _glWindowPos2d;
@@ -22560,39 +7244,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glWindowPos2d(x, y);
         }
         
-        public static unsafe delegate*<double, double, void> _glWindowPos2dARB;
-        
-        public static unsafe void WindowPos2dARB(double x, double y)
-        {
-            _glWindowPos2dARB(x, y);
-        }
-        
-        public static unsafe delegate*<double, double, void> _glWindowPos2dMESA;
-        
-        public static unsafe void WindowPos2dMESA(double x, double y)
-        {
-            _glWindowPos2dMESA(x, y);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glWindowPos2dv;
         
         public static unsafe void WindowPos2dv(ref double v)
         {
             _glWindowPos2dv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos2dvARB;
-        
-        public static unsafe void WindowPos2dvARB(ref double v)
-        {
-            _glWindowPos2dvARB((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos2dvMESA;
-        
-        public static unsafe void WindowPos2dvMESA(ref double v)
-        {
-            _glWindowPos2dvMESA((IntPtr)v);
         }
         
         public static unsafe delegate*<float, float, void> _glWindowPos2f;
@@ -22602,39 +7258,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glWindowPos2f(x, y);
         }
         
-        public static unsafe delegate*<float, float, void> _glWindowPos2fARB;
-        
-        public static unsafe void WindowPos2fARB(float x, float y)
-        {
-            _glWindowPos2fARB(x, y);
-        }
-        
-        public static unsafe delegate*<float, float, void> _glWindowPos2fMESA;
-        
-        public static unsafe void WindowPos2fMESA(float x, float y)
-        {
-            _glWindowPos2fMESA(x, y);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glWindowPos2fv;
         
         public static unsafe void WindowPos2fv(ref float v)
         {
             _glWindowPos2fv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos2fvARB;
-        
-        public static unsafe void WindowPos2fvARB(ref float v)
-        {
-            _glWindowPos2fvARB((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos2fvMESA;
-        
-        public static unsafe void WindowPos2fvMESA(ref float v)
-        {
-            _glWindowPos2fvMESA((IntPtr)v);
         }
         
         public static unsafe delegate*<int, int, void> _glWindowPos2i;
@@ -22644,39 +7272,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glWindowPos2i(x, y);
         }
         
-        public static unsafe delegate*<int, int, void> _glWindowPos2iARB;
-        
-        public static unsafe void WindowPos2iARB(int x, int y)
-        {
-            _glWindowPos2iARB(x, y);
-        }
-        
-        public static unsafe delegate*<int, int, void> _glWindowPos2iMESA;
-        
-        public static unsafe void WindowPos2iMESA(int x, int y)
-        {
-            _glWindowPos2iMESA(x, y);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glWindowPos2iv;
         
         public static unsafe void WindowPos2iv(ref int v)
         {
             _glWindowPos2iv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos2ivARB;
-        
-        public static unsafe void WindowPos2ivARB(ref int v)
-        {
-            _glWindowPos2ivARB((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos2ivMESA;
-        
-        public static unsafe void WindowPos2ivMESA(ref int v)
-        {
-            _glWindowPos2ivMESA((IntPtr)v);
         }
         
         public static unsafe delegate*<short, short, void> _glWindowPos2s;
@@ -22686,39 +7286,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glWindowPos2s(x, y);
         }
         
-        public static unsafe delegate*<short, short, void> _glWindowPos2sARB;
-        
-        public static unsafe void WindowPos2sARB(short x, short y)
-        {
-            _glWindowPos2sARB(x, y);
-        }
-        
-        public static unsafe delegate*<short, short, void> _glWindowPos2sMESA;
-        
-        public static unsafe void WindowPos2sMESA(short x, short y)
-        {
-            _glWindowPos2sMESA(x, y);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glWindowPos2sv;
         
         public static unsafe void WindowPos2sv(ref short v)
         {
             _glWindowPos2sv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos2svARB;
-        
-        public static unsafe void WindowPos2svARB(ref short v)
-        {
-            _glWindowPos2svARB((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos2svMESA;
-        
-        public static unsafe void WindowPos2svMESA(ref short v)
-        {
-            _glWindowPos2svMESA((IntPtr)v);
         }
         
         public static unsafe delegate*<double, double, double, void> _glWindowPos3d;
@@ -22728,39 +7300,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glWindowPos3d(x, y, z);
         }
         
-        public static unsafe delegate*<double, double, double, void> _glWindowPos3dARB;
-        
-        public static unsafe void WindowPos3dARB(double x, double y, double z)
-        {
-            _glWindowPos3dARB(x, y, z);
-        }
-        
-        public static unsafe delegate*<double, double, double, void> _glWindowPos3dMESA;
-        
-        public static unsafe void WindowPos3dMESA(double x, double y, double z)
-        {
-            _glWindowPos3dMESA(x, y, z);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glWindowPos3dv;
         
         public static unsafe void WindowPos3dv(ref double v)
         {
             _glWindowPos3dv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos3dvARB;
-        
-        public static unsafe void WindowPos3dvARB(ref double v)
-        {
-            _glWindowPos3dvARB((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos3dvMESA;
-        
-        public static unsafe void WindowPos3dvMESA(ref double v)
-        {
-            _glWindowPos3dvMESA((IntPtr)v);
         }
         
         public static unsafe delegate*<float, float, float, void> _glWindowPos3f;
@@ -22770,39 +7314,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glWindowPos3f(x, y, z);
         }
         
-        public static unsafe delegate*<float, float, float, void> _glWindowPos3fARB;
-        
-        public static unsafe void WindowPos3fARB(float x, float y, float z)
-        {
-            _glWindowPos3fARB(x, y, z);
-        }
-        
-        public static unsafe delegate*<float, float, float, void> _glWindowPos3fMESA;
-        
-        public static unsafe void WindowPos3fMESA(float x, float y, float z)
-        {
-            _glWindowPos3fMESA(x, y, z);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glWindowPos3fv;
         
         public static unsafe void WindowPos3fv(ref float v)
         {
             _glWindowPos3fv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos3fvARB;
-        
-        public static unsafe void WindowPos3fvARB(ref float v)
-        {
-            _glWindowPos3fvARB((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos3fvMESA;
-        
-        public static unsafe void WindowPos3fvMESA(ref float v)
-        {
-            _glWindowPos3fvMESA((IntPtr)v);
         }
         
         public static unsafe delegate*<int, int, int, void> _glWindowPos3i;
@@ -22812,39 +7328,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glWindowPos3i(x, y, z);
         }
         
-        public static unsafe delegate*<int, int, int, void> _glWindowPos3iARB;
-        
-        public static unsafe void WindowPos3iARB(int x, int y, int z)
-        {
-            _glWindowPos3iARB(x, y, z);
-        }
-        
-        public static unsafe delegate*<int, int, int, void> _glWindowPos3iMESA;
-        
-        public static unsafe void WindowPos3iMESA(int x, int y, int z)
-        {
-            _glWindowPos3iMESA(x, y, z);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glWindowPos3iv;
         
         public static unsafe void WindowPos3iv(ref int v)
         {
             _glWindowPos3iv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos3ivARB;
-        
-        public static unsafe void WindowPos3ivARB(ref int v)
-        {
-            _glWindowPos3ivARB((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos3ivMESA;
-        
-        public static unsafe void WindowPos3ivMESA(ref int v)
-        {
-            _glWindowPos3ivMESA((IntPtr)v);
         }
         
         public static unsafe delegate*<short, short, short, void> _glWindowPos3s;
@@ -22854,158 +7342,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
             _glWindowPos3s(x, y, z);
         }
         
-        public static unsafe delegate*<short, short, short, void> _glWindowPos3sARB;
-        
-        public static unsafe void WindowPos3sARB(short x, short y, short z)
-        {
-            _glWindowPos3sARB(x, y, z);
-        }
-        
-        public static unsafe delegate*<short, short, short, void> _glWindowPos3sMESA;
-        
-        public static unsafe void WindowPos3sMESA(short x, short y, short z)
-        {
-            _glWindowPos3sMESA(x, y, z);
-        }
-        
         public static unsafe delegate*<IntPtr, void> _glWindowPos3sv;
         
         public static unsafe void WindowPos3sv(ref short v)
         {
             _glWindowPos3sv((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos3svARB;
-        
-        public static unsafe void WindowPos3svARB(ref short v)
-        {
-            _glWindowPos3svARB((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos3svMESA;
-        
-        public static unsafe void WindowPos3svMESA(ref short v)
-        {
-            _glWindowPos3svMESA((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<double, double, double, double, void> _glWindowPos4dMESA;
-        
-        public static unsafe void WindowPos4dMESA(double x, double y, double z, double w)
-        {
-            _glWindowPos4dMESA(x, y, z, w);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos4dvMESA;
-        
-        public static unsafe void WindowPos4dvMESA(ref double v)
-        {
-            _glWindowPos4dvMESA((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<float, float, float, float, void> _glWindowPos4fMESA;
-        
-        public static unsafe void WindowPos4fMESA(float x, float y, float z, float w)
-        {
-            _glWindowPos4fMESA(x, y, z, w);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos4fvMESA;
-        
-        public static unsafe void WindowPos4fvMESA(ref float v)
-        {
-            _glWindowPos4fvMESA((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<int, int, int, int, void> _glWindowPos4iMESA;
-        
-        public static unsafe void WindowPos4iMESA(int x, int y, int z, int w)
-        {
-            _glWindowPos4iMESA(x, y, z, w);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos4ivMESA;
-        
-        public static unsafe void WindowPos4ivMESA(ref int v)
-        {
-            _glWindowPos4ivMESA((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<short, short, short, short, void> _glWindowPos4sMESA;
-        
-        public static unsafe void WindowPos4sMESA(short x, short y, short z, short w)
-        {
-            _glWindowPos4sMESA(x, y, z, w);
-        }
-        
-        public static unsafe delegate*<IntPtr, void> _glWindowPos4svMESA;
-        
-        public static unsafe void WindowPos4svMESA(ref short v)
-        {
-            _glWindowPos4svMESA((IntPtr)v);
-        }
-        
-        public static unsafe delegate*<uint, int, IntPtr, void> _glWindowRectanglesEXT;
-        
-        public static unsafe void WindowRectanglesEXT(uint mode, int count, ref int box)
-        {
-            _glWindowRectanglesEXT(mode, count, (IntPtr)box);
-        }
-        
-        public static unsafe delegate*<uint, uint, VertexShaderWriteMaskEXT, VertexShaderWriteMaskEXT, VertexShaderWriteMaskEXT, VertexShaderWriteMaskEXT, void> _glWriteMaskEXT;
-        
-        public static unsafe void WriteMaskEXT(uint res, uint @in, VertexShaderWriteMaskEXT outX, VertexShaderWriteMaskEXT outY, VertexShaderWriteMaskEXT outZ, VertexShaderWriteMaskEXT outW)
-        {
-            _glWriteMaskEXT(res, @in, outX, outY, outZ, outW);
-        }
-        
-        public static unsafe delegate*<ulong, uint, float, float, float, float, float, float, float, float, float, void> _glDrawVkImageNV;
-        
-        public static unsafe void DrawVkImageNV(ulong vkImage, uint sampler, float x0, float y0, float x1, float y1, float z, float s0, float t0, float s1, float t1)
-        {
-            _glDrawVkImageNV(vkImage, sampler, x0, y0, x1, y1, z, s0, t0, s1, t1);
-        }
-        
-        public static unsafe delegate*<IntPtr, GLVULKANPROCNV> _glGetVkProcAddrNV;
-        
-        public static unsafe GLVULKANPROCNV GetVkProcAddrNV(ref sbyte name)
-        {
-            return _glGetVkProcAddrNV((IntPtr)name);
-        }
-        
-        public static unsafe delegate*<ulong, void> _glWaitVkSemaphoreNV;
-        
-        public static unsafe void WaitVkSemaphoreNV(ulong vkSemaphore)
-        {
-            _glWaitVkSemaphoreNV(vkSemaphore);
-        }
-        
-        public static unsafe delegate*<ulong, void> _glSignalVkSemaphoreNV;
-        
-        public static unsafe void SignalVkSemaphoreNV(ulong vkSemaphore)
-        {
-            _glSignalVkSemaphoreNV(vkSemaphore);
-        }
-        
-        public static unsafe delegate*<ulong, void> _glSignalVkFenceNV;
-        
-        public static unsafe void SignalVkFenceNV(ulong vkFence)
-        {
-            _glSignalVkFenceNV(vkFence);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferParameterName, int, void> _glFramebufferParameteriMESA;
-        
-        public static unsafe void FramebufferParameteriMESA(FramebufferTarget target, FramebufferParameterName pname, int param)
-        {
-            _glFramebufferParameteriMESA(target, pname, param);
-        }
-        
-        public static unsafe delegate*<FramebufferTarget, FramebufferAttachmentParameterName, IntPtr, void> _glGetFramebufferParameterivMESA;
-        
-        public static unsafe void GetFramebufferParameterivMESA(FramebufferTarget target, FramebufferAttachmentParameterName pname, ref int @params)
-        {
-            _glGetFramebufferParameterivMESA(target, pname, (IntPtr)@params);
         }
     }
 }

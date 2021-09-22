@@ -22,7 +22,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         TextureMaxAnisotropy = unchecked((uint)0x84FE),
         
         TextureLodBias = unchecked((uint)0x8501),
-        
-        TextureUnnormalizedCoordinatesArm = unchecked((uint)0x8F6A),
     }
 }

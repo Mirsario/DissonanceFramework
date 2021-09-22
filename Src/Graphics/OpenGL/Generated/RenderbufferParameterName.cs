@@ -13,76 +13,24 @@ namespace Dissonance.Framework.Graphics.OpenGL
 {
     public enum RenderbufferParameterName : uint
     {
-        RenderbufferCoverageSamplesNv = unchecked((uint)0x8CAB),
-        
         RenderbufferSamples = unchecked((uint)0x8CAB),
-        
-        RenderbufferSamplesAngle = unchecked((uint)0x8CAB),
-        
-        RenderbufferSamplesApple = unchecked((uint)0x8CAB),
-        
-        RenderbufferSamplesExt = unchecked((uint)0x8CAB),
-        
-        RenderbufferSamplesNv = unchecked((uint)0x8CAB),
         
         RenderbufferWidth = unchecked((uint)0x8D42),
         
-        RenderbufferWidthExt = unchecked((uint)0x8D42),
-        
-        RenderbufferWidthOes = unchecked((uint)0x8D42),
-        
         RenderbufferHeight = unchecked((uint)0x8D43),
-        
-        RenderbufferHeightExt = unchecked((uint)0x8D43),
-        
-        RenderbufferHeightOes = unchecked((uint)0x8D43),
         
         RenderbufferInternalFormat = unchecked((uint)0x8D44),
         
-        RenderbufferInternalFormatExt = unchecked((uint)0x8D44),
-        
-        RenderbufferInternalFormatOes = unchecked((uint)0x8D44),
-        
         RenderbufferRedSize = unchecked((uint)0x8D50),
-        
-        RenderbufferRedSizeExt = unchecked((uint)0x8D50),
-        
-        RenderbufferRedSizeOes = unchecked((uint)0x8D50),
         
         RenderbufferGreenSize = unchecked((uint)0x8D51),
         
-        RenderbufferGreenSizeExt = unchecked((uint)0x8D51),
-        
-        RenderbufferGreenSizeOes = unchecked((uint)0x8D51),
-        
         RenderbufferBlueSize = unchecked((uint)0x8D52),
-        
-        RenderbufferBlueSizeExt = unchecked((uint)0x8D52),
-        
-        RenderbufferBlueSizeOes = unchecked((uint)0x8D52),
         
         RenderbufferAlphaSize = unchecked((uint)0x8D53),
         
-        RenderbufferAlphaSizeExt = unchecked((uint)0x8D53),
-        
-        RenderbufferAlphaSizeOes = unchecked((uint)0x8D53),
-        
         RenderbufferDepthSize = unchecked((uint)0x8D54),
         
-        RenderbufferDepthSizeExt = unchecked((uint)0x8D54),
-        
-        RenderbufferDepthSizeOes = unchecked((uint)0x8D54),
-        
         RenderbufferStencilSize = unchecked((uint)0x8D55),
-        
-        RenderbufferStencilSizeExt = unchecked((uint)0x8D55),
-        
-        RenderbufferStencilSizeOes = unchecked((uint)0x8D55),
-        
-        RenderbufferColorSamplesNv = unchecked((uint)0x8E10),
-        
-        RenderbufferSamplesImg = unchecked((uint)0x9133),
-        
-        RenderbufferStorageSamplesAmd = unchecked((uint)0x91B2),
     }
 }

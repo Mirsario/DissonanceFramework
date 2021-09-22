@@ -33,14 +33,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         Fixed = unchecked((uint)0x140C),
         
-        Int64Arb = unchecked((uint)0x140E),
-        
-        Int64Nv = unchecked((uint)0x140E),
-        
-        UnsignedInt64Arb = unchecked((uint)0x140F),
-        
-        UnsignedInt64Nv = unchecked((uint)0x140F),
-        
         UnsignedInt2101010Rev = unchecked((uint)0x8368),
         
         UnsignedInt10f11f11fRev = unchecked((uint)0x8C3B),

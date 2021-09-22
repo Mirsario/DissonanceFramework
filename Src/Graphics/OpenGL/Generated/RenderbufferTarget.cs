@@ -14,7 +14,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
     public enum RenderbufferTarget : uint
     {
         Renderbuffer = unchecked((uint)0x8D41),
-        
-        RenderbufferOes = unchecked((uint)0x8D41),
     }
 }

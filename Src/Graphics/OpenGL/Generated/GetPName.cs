@@ -153,15 +153,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         ModelviewStackDepth = unchecked((uint)0x0BA3),
         
-        Modelview0StackDepthExt = unchecked((uint)0x0BA3),
-        
         ProjectionStackDepth = unchecked((uint)0x0BA4),
         
         TextureStackDepth = unchecked((uint)0x0BA5),
         
         ModelviewMatrix = unchecked((uint)0x0BA6),
-        
-        Modelview0MatrixExt = unchecked((uint)0x0BA6),
         
         ProjectionMatrix = unchecked((uint)0x0BA7),
         
@@ -173,15 +169,9 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         AlphaTest = unchecked((uint)0x0BC0),
         
-        AlphaTestQcom = unchecked((uint)0x0BC0),
-        
         AlphaTestFunc = unchecked((uint)0x0BC1),
         
-        AlphaTestFuncQcom = unchecked((uint)0x0BC1),
-        
         AlphaTestRef = unchecked((uint)0x0BC2),
-        
-        AlphaTestRefQcom = unchecked((uint)0x0BC2),
         
         Dither = unchecked((uint)0x0BD0),
         
@@ -203,13 +193,7 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         DrawBuffer = unchecked((uint)0x0C01),
         
-        DrawBufferExt = unchecked((uint)0x0C01),
-        
         ReadBuffer = unchecked((uint)0x0C02),
-        
-        ReadBufferExt = unchecked((uint)0x0C02),
-        
-        ReadBufferNv = unchecked((uint)0x0C02),
         
         ScissorBox = unchecked((uint)0x0C10),
         
@@ -471,79 +455,27 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         BlendColor = unchecked((uint)0x8005),
         
-        BlendColorExt = unchecked((uint)0x8005),
-        
-        BlendEquationExt = unchecked((uint)0x8009),
-        
         BlendEquationRgb = unchecked((uint)0x8009),
-        
-        PackCmykHintExt = unchecked((uint)0x800E),
-        
-        UnpackCmykHintExt = unchecked((uint)0x800F),
-        
-        Convolution1dExt = unchecked((uint)0x8010),
-        
-        Convolution2dExt = unchecked((uint)0x8011),
-        
-        Separable2dExt = unchecked((uint)0x8012),
-        
-        PostConvolutionRedScaleExt = unchecked((uint)0x801C),
-        
-        PostConvolutionGreenScaleExt = unchecked((uint)0x801D),
-        
-        PostConvolutionBlueScaleExt = unchecked((uint)0x801E),
-        
-        PostConvolutionAlphaScaleExt = unchecked((uint)0x801F),
-        
-        PostConvolutionRedBiasExt = unchecked((uint)0x8020),
-        
-        PostConvolutionGreenBiasExt = unchecked((uint)0x8021),
-        
-        PostConvolutionBlueBiasExt = unchecked((uint)0x8022),
-        
-        PostConvolutionAlphaBiasExt = unchecked((uint)0x8023),
-        
-        HistogramExt = unchecked((uint)0x8024),
-        
-        MinmaxExt = unchecked((uint)0x802E),
         
         PolygonOffsetFill = unchecked((uint)0x8037),
         
         PolygonOffsetFactor = unchecked((uint)0x8038),
         
-        PolygonOffsetBiasExt = unchecked((uint)0x8039),
-        
-        RescaleNormalExt = unchecked((uint)0x803A),
-        
         TextureBinding1d = unchecked((uint)0x8068),
         
         TextureBinding2d = unchecked((uint)0x8069),
-        
-        Texture3dBindingExt = unchecked((uint)0x806A),
         
         TextureBinding3d = unchecked((uint)0x806A),
         
         PackSkipImages = unchecked((uint)0x806B),
         
-        PackSkipImagesExt = unchecked((uint)0x806B),
-        
         PackImageHeight = unchecked((uint)0x806C),
-        
-        PackImageHeightExt = unchecked((uint)0x806C),
         
         UnpackSkipImages = unchecked((uint)0x806D),
         
-        UnpackSkipImagesExt = unchecked((uint)0x806D),
-        
         UnpackImageHeight = unchecked((uint)0x806E),
         
-        UnpackImageHeightExt = unchecked((uint)0x806E),
-        
-        Texture3dExt = unchecked((uint)0x806F),
-        
         Max3dTextureSize = unchecked((uint)0x8073),
-        
-        Max3dTextureSizeExt = unchecked((uint)0x8073),
         
         VertexArray = unchecked((uint)0x8074),
         
@@ -563,13 +495,9 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         VertexArrayStride = unchecked((uint)0x807C),
         
-        VertexArrayCountExt = unchecked((uint)0x807D),
-        
         NormalArrayType = unchecked((uint)0x807E),
         
         NormalArrayStride = unchecked((uint)0x807F),
-        
-        NormalArrayCountExt = unchecked((uint)0x8080),
         
         ColorArraySize = unchecked((uint)0x8081),
         
@@ -577,13 +505,9 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         ColorArrayStride = unchecked((uint)0x8083),
         
-        ColorArrayCountExt = unchecked((uint)0x8084),
-        
         IndexArrayType = unchecked((uint)0x8085),
         
         IndexArrayStride = unchecked((uint)0x8086),
-        
-        IndexArrayCountExt = unchecked((uint)0x8087),
         
         TextureCoordArraySize = unchecked((uint)0x8088),
         
@@ -591,65 +515,15 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         TextureCoordArrayStride = unchecked((uint)0x808A),
         
-        TextureCoordArrayCountExt = unchecked((uint)0x808B),
-        
         EdgeFlagArrayStride = unchecked((uint)0x808C),
-        
-        EdgeFlagArrayCountExt = unchecked((uint)0x808D),
-        
-        InterlaceSgix = unchecked((uint)0x8094),
-        
-        DetailTexture2dBindingSgis = unchecked((uint)0x8096),
-        
-        MultisampleSgis = unchecked((uint)0x809D),
-        
-        SampleAlphaToMaskSgis = unchecked((uint)0x809E),
-        
-        SampleAlphaToOneSgis = unchecked((uint)0x809F),
-        
-        SampleMaskSgis = unchecked((uint)0x80A0),
         
         SampleBuffers = unchecked((uint)0x80A8),
         
-        SampleBuffersSgis = unchecked((uint)0x80A8),
-        
         Samples = unchecked((uint)0x80A9),
-        
-        SamplesSgis = unchecked((uint)0x80A9),
         
         SampleCoverageValue = unchecked((uint)0x80AA),
         
-        SampleMaskValueSgis = unchecked((uint)0x80AA),
-        
         SampleCoverageInvert = unchecked((uint)0x80AB),
-        
-        SampleMaskInvertSgis = unchecked((uint)0x80AB),
-        
-        SamplePatternSgis = unchecked((uint)0x80AC),
-        
-        ColorMatrixSgi = unchecked((uint)0x80B1),
-        
-        ColorMatrixStackDepthSgi = unchecked((uint)0x80B2),
-        
-        MaxColorMatrixStackDepthSgi = unchecked((uint)0x80B3),
-        
-        PostColorMatrixRedScaleSgi = unchecked((uint)0x80B4),
-        
-        PostColorMatrixGreenScaleSgi = unchecked((uint)0x80B5),
-        
-        PostColorMatrixBlueScaleSgi = unchecked((uint)0x80B6),
-        
-        PostColorMatrixAlphaScaleSgi = unchecked((uint)0x80B7),
-        
-        PostColorMatrixRedBiasSgi = unchecked((uint)0x80B8),
-        
-        PostColorMatrixGreenBiasSgi = unchecked((uint)0x80B9),
-        
-        PostColorMatrixBlueBiasSgi = unchecked((uint)0x80BA),
-        
-        PostColorMatrixAlphaBiasSgi = unchecked((uint)0x80BB),
-        
-        TextureColorTableSgi = unchecked((uint)0x80BC),
         
         BlendDstRgb = unchecked((uint)0x80C8),
         
@@ -659,105 +533,13 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         BlendSrcAlpha = unchecked((uint)0x80CB),
         
-        ColorTableSgi = unchecked((uint)0x80D0),
-        
-        PostConvolutionColorTableSgi = unchecked((uint)0x80D1),
-        
-        PostColorMatrixColorTableSgi = unchecked((uint)0x80D2),
-        
         MaxElementsVertices = unchecked((uint)0x80E8),
         
         MaxElementsIndices = unchecked((uint)0x80E9),
         
-        PointSizeMinSgis = unchecked((uint)0x8126),
-        
-        PointSizeMaxSgis = unchecked((uint)0x8127),
-        
         PointFadeThresholdSize = unchecked((uint)0x8128),
         
-        PointFadeThresholdSizeSgis = unchecked((uint)0x8128),
-        
-        DistanceAttenuationSgis = unchecked((uint)0x8129),
-        
-        FogFuncPointsSgis = unchecked((uint)0x812B),
-        
-        MaxFogFuncPointsSgis = unchecked((uint)0x812C),
-        
-        PackSkipVolumesSgis = unchecked((uint)0x8130),
-        
-        PackImageDepthSgis = unchecked((uint)0x8131),
-        
-        UnpackSkipVolumesSgis = unchecked((uint)0x8132),
-        
-        UnpackImageDepthSgis = unchecked((uint)0x8133),
-        
-        Texture4dSgis = unchecked((uint)0x8134),
-        
-        Max4dTextureSizeSgis = unchecked((uint)0x8138),
-        
-        PixelTexGenSgix = unchecked((uint)0x8139),
-        
-        PixelTileBestAlignmentSgix = unchecked((uint)0x813E),
-        
-        PixelTileCacheIncrementSgix = unchecked((uint)0x813F),
-        
-        PixelTileWidthSgix = unchecked((uint)0x8140),
-        
-        PixelTileHeightSgix = unchecked((uint)0x8141),
-        
-        PixelTileGridWidthSgix = unchecked((uint)0x8142),
-        
-        PixelTileGridHeightSgix = unchecked((uint)0x8143),
-        
-        PixelTileGridDepthSgix = unchecked((uint)0x8144),
-        
-        PixelTileCacheSizeSgix = unchecked((uint)0x8145),
-        
-        SpriteSgix = unchecked((uint)0x8148),
-        
-        SpriteModeSgix = unchecked((uint)0x8149),
-        
-        SpriteAxisSgix = unchecked((uint)0x814A),
-        
-        SpriteTranslationSgix = unchecked((uint)0x814B),
-        
-        Texture4dBindingSgis = unchecked((uint)0x814F),
-        
-        MaxClipmapDepthSgix = unchecked((uint)0x8177),
-        
-        MaxClipmapVirtualDepthSgix = unchecked((uint)0x8178),
-        
-        PostTextureFilterBiasRangeSgix = unchecked((uint)0x817B),
-        
-        PostTextureFilterScaleRangeSgix = unchecked((uint)0x817C),
-        
-        ReferencePlaneSgix = unchecked((uint)0x817D),
-        
-        ReferencePlaneEquationSgix = unchecked((uint)0x817E),
-        
-        IrInstrument1Sgix = unchecked((uint)0x817F),
-        
-        InstrumentMeasurementsSgix = unchecked((uint)0x8181),
-        
-        CalligraphicFragmentSgix = unchecked((uint)0x8183),
-        
-        FramezoomSgix = unchecked((uint)0x818B),
-        
-        FramezoomFactorSgix = unchecked((uint)0x818C),
-        
-        MaxFramezoomFactorSgix = unchecked((uint)0x818D),
-        
-        GenerateMipmapHintSgis = unchecked((uint)0x8192),
-        
-        DeformationsMaskSgix = unchecked((uint)0x8196),
-        
-        FogOffsetSgix = unchecked((uint)0x8198),
-        
-        FogOffsetValueSgix = unchecked((uint)0x8199),
-        
         LightModelColorControl = unchecked((uint)0x81F8),
-        
-        SharedTexturePaletteExt = unchecked((uint)0x81FB),
         
         MajorVersion = unchecked((uint)0x821B),
         
@@ -805,62 +587,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         MaxLabelLength = unchecked((uint)0x82E8),
         
-        ConvolutionHintSgix = unchecked((uint)0x8316),
-        
-        AsyncMarkerSgix = unchecked((uint)0x8329),
-        
-        PixelTexGenModeSgix = unchecked((uint)0x832B),
-        
-        AsyncHistogramSgix = unchecked((uint)0x832C),
-        
-        MaxAsyncHistogramSgix = unchecked((uint)0x832D),
-        
-        PixelTextureSgis = unchecked((uint)0x8353),
-        
-        AsyncTexImageSgix = unchecked((uint)0x835C),
-        
-        AsyncDrawPixelsSgix = unchecked((uint)0x835D),
-        
-        AsyncReadPixelsSgix = unchecked((uint)0x835E),
-        
-        MaxAsyncTexImageSgix = unchecked((uint)0x835F),
-        
-        MaxAsyncDrawPixelsSgix = unchecked((uint)0x8360),
-        
-        MaxAsyncReadPixelsSgix = unchecked((uint)0x8361),
-        
-        VertexPreclipSgix = unchecked((uint)0x83EE),
-        
-        VertexPreclipHintSgix = unchecked((uint)0x83EF),
-        
-        FragmentLightingSgix = unchecked((uint)0x8400),
-        
-        FragmentColorMaterialSgix = unchecked((uint)0x8401),
-        
-        FragmentColorMaterialFaceSgix = unchecked((uint)0x8402),
-        
-        FragmentColorMaterialParameterSgix = unchecked((uint)0x8403),
-        
-        MaxFragmentLightsSgix = unchecked((uint)0x8404),
-        
-        MaxActiveLightsSgix = unchecked((uint)0x8405),
-        
-        LightEnvModeSgix = unchecked((uint)0x8407),
-        
-        FragmentLightModelLocalViewerSgix = unchecked((uint)0x8408),
-        
-        FragmentLightModelTwoSideSgix = unchecked((uint)0x8409),
-        
-        FragmentLightModelAmbientSgix = unchecked((uint)0x840A),
-        
-        FragmentLightModelNormalInterpolationSgix = unchecked((uint)0x840B),
-        
-        FragmentLight0Sgix = unchecked((uint)0x840C),
-        
-        PackResampleSgix = unchecked((uint)0x842E),
-        
-        UnpackResampleSgix = unchecked((uint)0x842F),
-        
         AliasedPointSizeRange = unchecked((uint)0x846D),
         
         AliasedLineWidthRange = unchecked((uint)0x846E),
@@ -880,10 +606,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         TextureBindingCubeMap = unchecked((uint)0x8514),
         
         MaxCubeMapTextureSize = unchecked((uint)0x851C),
-        
-        PackSubsampleRateSgix = unchecked((uint)0x85A0),
-        
-        UnpackSubsampleRateSgix = unchecked((uint)0x85A1),
         
         VertexArrayBinding = unchecked((uint)0x85B5),
         
@@ -993,10 +715,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         TransformFeedbackBufferBinding = unchecked((uint)0x8C8F),
         
-        MotionEstimationSearchBlockXQcom = unchecked((uint)0x8C90),
-        
-        MotionEstimationSearchBlockYQcom = unchecked((uint)0x8C91),
-        
         StencilBackRef = unchecked((uint)0x8CA3),
         
         StencilBackValueMask = unchecked((uint)0x8CA4),
@@ -1034,10 +752,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         MaxTessControlUniformBlocks = unchecked((uint)0x8E89),
         
         MaxTessEvaluationUniformBlocks = unchecked((uint)0x8E8A),
-        
-        FetchPerSampleArm = unchecked((uint)0x8F65),
-        
-        FragmentShaderFramebufferFetchMrtArm = unchecked((uint)0x8F66),
         
         PrimitiveRestartIndex = unchecked((uint)0x8F9E),
         
@@ -1122,23 +836,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         MaxFramebufferLayers = unchecked((uint)0x9317),
         
         MaxFramebufferSamples = unchecked((uint)0x9318),
-        
-        NumDeviceUuidsExt = unchecked((uint)0x9596),
-        
-        DeviceUuidExt = unchecked((uint)0x9597),
-        
-        DriverUuidExt = unchecked((uint)0x9598),
-        
-        DeviceLuidExt = unchecked((uint)0x9599),
-        
-        DeviceNodeMaskExt = unchecked((uint)0x959A),
-        
-        ShadingRateImagePerPrimitiveNv = unchecked((uint)0x95B1),
-        
-        ShadingRateImagePaletteCountNv = unchecked((uint)0x95B2),
-        
-        MaxTimelineSemaphoreValueDifferenceNv = unchecked((uint)0x95B6),
-        
-        ShadingRateQcom = unchecked((uint)0x96A4),
     }
 }

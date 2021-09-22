@@ -28,15 +28,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         OutOfMemory = unchecked((uint)0x0505),
         
         InvalidFramebufferOperation = unchecked((uint)0x0506),
-        
-        InvalidFramebufferOperationExt = unchecked((uint)0x0506),
-        
-        InvalidFramebufferOperationOes = unchecked((uint)0x0506),
-        
-        TableTooLargeExt = unchecked((uint)0x8031),
-        
-        TableTooLarge = unchecked((uint)0x8031),
-        
-        TextureTooLargeExt = unchecked((uint)0x8065),
     }
 }

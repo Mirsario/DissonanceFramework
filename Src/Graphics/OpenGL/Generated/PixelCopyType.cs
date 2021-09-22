@@ -15,14 +15,8 @@ namespace Dissonance.Framework.Graphics.OpenGL
     {
         Color = unchecked((uint)0x1800),
         
-        ColorExt = unchecked((uint)0x1800),
-        
         Depth = unchecked((uint)0x1801),
         
-        DepthExt = unchecked((uint)0x1801),
-        
         Stencil = unchecked((uint)0x1802),
-        
-        StencilExt = unchecked((uint)0x1802),
     }
 }

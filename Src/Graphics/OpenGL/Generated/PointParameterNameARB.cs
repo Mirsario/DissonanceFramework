@@ -13,12 +13,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
 {
     public enum PointParameterNameARB : uint
     {
-        PointSizeMinExt = unchecked((uint)0x8126),
-        
-        PointSizeMaxExt = unchecked((uint)0x8127),
-        
         PointFadeThresholdSize = unchecked((uint)0x8128),
-        
-        PointFadeThresholdSizeExt = unchecked((uint)0x8128),
     }
 }

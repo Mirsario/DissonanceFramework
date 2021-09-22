@@ -14,7 +14,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
     public enum SeparableTargetEXT : uint
     {
         Separable2d = unchecked((uint)0x8012),
-        
-        Separable2dExt = unchecked((uint)0x8012),
     }
 }

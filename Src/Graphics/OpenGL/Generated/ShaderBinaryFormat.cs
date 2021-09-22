@@ -13,16 +13,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
 {
     public enum ShaderBinaryFormat : uint
     {
-        SgxBinaryImg = unchecked((uint)0x8C0A),
-        
-        MaliShaderBinaryArm = unchecked((uint)0x8F60),
-        
-        ShaderBinaryViv = unchecked((uint)0x8FC4),
-        
-        ShaderBinaryDmp = unchecked((uint)0x9250),
-        
-        GccsoShaderBinaryFj = unchecked((uint)0x9260),
-        
         ShaderBinaryFormatSpirV = unchecked((uint)0x9551),
     }
 }

@@ -20,7 +20,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         LightModelAmbient = unchecked((uint)0x0B53),
         
         LightModelColorControl = unchecked((uint)0x81F8),
-        
-        LightModelColorControlExt = unchecked((uint)0x81F8),
     }
 }

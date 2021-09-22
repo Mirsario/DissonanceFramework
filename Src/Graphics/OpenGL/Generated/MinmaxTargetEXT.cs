@@ -14,7 +14,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
     public enum MinmaxTargetEXT : uint
     {
         Minmax = unchecked((uint)0x802E),
-        
-        MinmaxExt = unchecked((uint)0x802E),
     }
 }

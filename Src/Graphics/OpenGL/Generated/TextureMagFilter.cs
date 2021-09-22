@@ -16,25 +16,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         Nearest = unchecked((uint)0x2600),
         
         Linear = unchecked((uint)0x2601),
-        
-        LinearDetailSgis = unchecked((uint)0x8097),
-        
-        LinearDetailAlphaSgis = unchecked((uint)0x8098),
-        
-        LinearDetailColorSgis = unchecked((uint)0x8099),
-        
-        LinearSharpenSgis = unchecked((uint)0x80AD),
-        
-        LinearSharpenAlphaSgis = unchecked((uint)0x80AE),
-        
-        LinearSharpenColorSgis = unchecked((uint)0x80AF),
-        
-        Filter4Sgis = unchecked((uint)0x8146),
-        
-        PixelTexGenQCeilingSgix = unchecked((uint)0x8184),
-        
-        PixelTexGenQRoundSgix = unchecked((uint)0x8185),
-        
-        PixelTexGenQFloorSgix = unchecked((uint)0x8186),
     }
 }

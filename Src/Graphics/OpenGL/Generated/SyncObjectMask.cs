@@ -14,7 +14,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
     public enum SyncObjectMask : uint
     {
         SyncFlushCommandsBit = unchecked((uint)0x00000001),
-        
-        SyncFlushCommandsBitApple = unchecked((uint)0x00000001),
     }
 }

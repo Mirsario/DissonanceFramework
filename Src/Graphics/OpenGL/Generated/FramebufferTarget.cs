@@ -18,7 +18,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         DrawFramebuffer = unchecked((uint)0x8CA9),
         
         Framebuffer = unchecked((uint)0x8D40),
-        
-        FramebufferOes = unchecked((uint)0x8D40),
     }
 }

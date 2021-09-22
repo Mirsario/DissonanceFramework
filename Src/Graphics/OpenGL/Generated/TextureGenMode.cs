@@ -18,13 +18,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         ObjectLinear = unchecked((uint)0x2401),
         
         SphereMap = unchecked((uint)0x2402),
-        
-        EyeDistanceToPointSgis = unchecked((uint)0x81F0),
-        
-        ObjectDistanceToPointSgis = unchecked((uint)0x81F1),
-        
-        EyeDistanceToLineSgis = unchecked((uint)0x81F2),
-        
-        ObjectDistanceToLineSgis = unchecked((uint)0x81F3),
     }
 }

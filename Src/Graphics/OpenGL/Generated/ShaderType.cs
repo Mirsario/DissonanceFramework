@@ -15,11 +15,7 @@ namespace Dissonance.Framework.Graphics.OpenGL
     {
         FragmentShader = unchecked((uint)0x8B30),
         
-        FragmentShaderArb = unchecked((uint)0x8B30),
-        
         VertexShader = unchecked((uint)0x8B31),
-        
-        VertexShaderArb = unchecked((uint)0x8B31),
         
         GeometryShader = unchecked((uint)0x8DD9),
         

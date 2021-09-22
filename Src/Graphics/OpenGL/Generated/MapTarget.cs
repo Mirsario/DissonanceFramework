@@ -48,9 +48,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         Map2Vertex3 = unchecked((uint)0x0DB7),
         
         Map2Vertex4 = unchecked((uint)0x0DB8),
-        
-        GeometryDeformationSgix = unchecked((uint)0x8194),
-        
-        TextureDeformationSgix = unchecked((uint)0x8195),
     }
 }

@@ -29,38 +29,18 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         Quads = unchecked((uint)0x0007),
         
-        QuadsExt = unchecked((uint)0x0007),
-        
         QuadStrip = unchecked((uint)0x0008),
         
         Polygon = unchecked((uint)0x0009),
         
         LinesAdjacency = unchecked((uint)0x000A),
         
-        LinesAdjacencyArb = unchecked((uint)0x000A),
-        
-        LinesAdjacencyExt = unchecked((uint)0x000A),
-        
         LineStripAdjacency = unchecked((uint)0x000B),
-        
-        LineStripAdjacencyArb = unchecked((uint)0x000B),
-        
-        LineStripAdjacencyExt = unchecked((uint)0x000B),
         
         TrianglesAdjacency = unchecked((uint)0x000C),
         
-        TrianglesAdjacencyArb = unchecked((uint)0x000C),
-        
-        TrianglesAdjacencyExt = unchecked((uint)0x000C),
-        
         TriangleStripAdjacency = unchecked((uint)0x000D),
         
-        TriangleStripAdjacencyArb = unchecked((uint)0x000D),
-        
-        TriangleStripAdjacencyExt = unchecked((uint)0x000D),
-        
         Patches = unchecked((uint)0x000E),
-        
-        PatchesExt = unchecked((uint)0x000E),
     }
 }

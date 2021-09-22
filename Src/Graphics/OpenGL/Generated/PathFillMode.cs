@@ -14,11 +14,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
     public enum PathFillMode : uint
     {
         Invert = unchecked((uint)0x150A),
-        
-        PathFillModeNv = unchecked((uint)0x9080),
-        
-        CountUpNv = unchecked((uint)0x9088),
-        
-        CountDownNv = unchecked((uint)0x9089),
     }
 }

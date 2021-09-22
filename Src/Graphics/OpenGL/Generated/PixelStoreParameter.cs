@@ -19,15 +19,9 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         UnpackRowLength = unchecked((uint)0x0CF2),
         
-        UnpackRowLengthExt = unchecked((uint)0x0CF2),
-        
         UnpackSkipRows = unchecked((uint)0x0CF3),
         
-        UnpackSkipRowsExt = unchecked((uint)0x0CF3),
-        
         UnpackSkipPixels = unchecked((uint)0x0CF4),
-        
-        UnpackSkipPixelsExt = unchecked((uint)0x0CF4),
         
         UnpackAlignment = unchecked((uint)0x0CF5),
         
@@ -45,50 +39,10 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         PackSkipImages = unchecked((uint)0x806B),
         
-        PackSkipImagesExt = unchecked((uint)0x806B),
-        
         PackImageHeight = unchecked((uint)0x806C),
-        
-        PackImageHeightExt = unchecked((uint)0x806C),
         
         UnpackSkipImages = unchecked((uint)0x806D),
         
-        UnpackSkipImagesExt = unchecked((uint)0x806D),
-        
         UnpackImageHeight = unchecked((uint)0x806E),
-        
-        UnpackImageHeightExt = unchecked((uint)0x806E),
-        
-        PackSkipVolumesSgis = unchecked((uint)0x8130),
-        
-        PackImageDepthSgis = unchecked((uint)0x8131),
-        
-        UnpackSkipVolumesSgis = unchecked((uint)0x8132),
-        
-        UnpackImageDepthSgis = unchecked((uint)0x8133),
-        
-        PixelTileWidthSgix = unchecked((uint)0x8140),
-        
-        PixelTileHeightSgix = unchecked((uint)0x8141),
-        
-        PixelTileGridWidthSgix = unchecked((uint)0x8142),
-        
-        PixelTileGridHeightSgix = unchecked((uint)0x8143),
-        
-        PixelTileGridDepthSgix = unchecked((uint)0x8144),
-        
-        PixelTileCacheSizeSgix = unchecked((uint)0x8145),
-        
-        PackResampleSgix = unchecked((uint)0x842E),
-        
-        UnpackResampleSgix = unchecked((uint)0x842F),
-        
-        PackSubsampleRateSgix = unchecked((uint)0x85A0),
-        
-        UnpackSubsampleRateSgix = unchecked((uint)0x85A1),
-        
-        PackResampleOml = unchecked((uint)0x8984),
-        
-        UnpackResampleOml = unchecked((uint)0x8985),
     }
 }

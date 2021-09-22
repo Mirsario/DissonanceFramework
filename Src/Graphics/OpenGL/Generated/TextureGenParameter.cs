@@ -18,13 +18,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         ObjectPlane = unchecked((uint)0x2501),
         
         EyePlane = unchecked((uint)0x2502),
-        
-        EyePointSgis = unchecked((uint)0x81F4),
-        
-        ObjectPointSgis = unchecked((uint)0x81F5),
-        
-        EyeLineSgis = unchecked((uint)0x81F6),
-        
-        ObjectLineSgis = unchecked((uint)0x81F7),
     }
 }

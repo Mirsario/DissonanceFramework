@@ -14,7 +14,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
     public enum BufferPointerNameARB : uint
     {
         BufferMapPointer = unchecked((uint)0x88BD),
-        
-        BufferMapPointerArb = unchecked((uint)0x88BD),
     }
 }

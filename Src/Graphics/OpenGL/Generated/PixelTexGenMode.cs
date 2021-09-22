@@ -22,13 +22,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         Luminance = unchecked((uint)0x1909),
         
         LuminanceAlpha = unchecked((uint)0x190A),
-        
-        PixelTexGenAlphaReplaceSgix = unchecked((uint)0x8187),
-        
-        PixelTexGenAlphaNoReplaceSgix = unchecked((uint)0x8188),
-        
-        PixelTexGenAlphaLsSgix = unchecked((uint)0x8189),
-        
-        PixelTexGenAlphaMsSgix = unchecked((uint)0x818A),
     }
 }

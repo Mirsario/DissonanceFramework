@@ -15,11 +15,7 @@ namespace Dissonance.Framework.Graphics.OpenGL
     {
         FramebufferAttachmentColorEncoding = unchecked((uint)0x8210),
         
-        FramebufferAttachmentColorEncodingExt = unchecked((uint)0x8210),
-        
         FramebufferAttachmentComponentType = unchecked((uint)0x8211),
-        
-        FramebufferAttachmentComponentTypeExt = unchecked((uint)0x8211),
         
         FramebufferAttachmentRedSize = unchecked((uint)0x8212),
         
@@ -35,50 +31,14 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         FramebufferAttachmentObjectType = unchecked((uint)0x8CD0),
         
-        FramebufferAttachmentObjectTypeExt = unchecked((uint)0x8CD0),
-        
-        FramebufferAttachmentObjectTypeOes = unchecked((uint)0x8CD0),
-        
         FramebufferAttachmentObjectName = unchecked((uint)0x8CD1),
-        
-        FramebufferAttachmentObjectNameExt = unchecked((uint)0x8CD1),
-        
-        FramebufferAttachmentObjectNameOes = unchecked((uint)0x8CD1),
         
         FramebufferAttachmentTextureLevel = unchecked((uint)0x8CD2),
         
-        FramebufferAttachmentTextureLevelExt = unchecked((uint)0x8CD2),
-        
-        FramebufferAttachmentTextureLevelOes = unchecked((uint)0x8CD2),
-        
         FramebufferAttachmentTextureCubeMapFace = unchecked((uint)0x8CD3),
-        
-        FramebufferAttachmentTextureCubeMapFaceExt = unchecked((uint)0x8CD3),
-        
-        FramebufferAttachmentTextureCubeMapFaceOes = unchecked((uint)0x8CD3),
-        
-        FramebufferAttachmentTexture3dZoffsetExt = unchecked((uint)0x8CD4),
-        
-        FramebufferAttachmentTexture3dZoffsetOes = unchecked((uint)0x8CD4),
         
         FramebufferAttachmentTextureLayer = unchecked((uint)0x8CD4),
         
-        FramebufferAttachmentTextureLayerExt = unchecked((uint)0x8CD4),
-        
-        FramebufferAttachmentTextureSamplesExt = unchecked((uint)0x8D6C),
-        
         FramebufferAttachmentLayered = unchecked((uint)0x8DA7),
-        
-        FramebufferAttachmentLayeredArb = unchecked((uint)0x8DA7),
-        
-        FramebufferAttachmentLayeredExt = unchecked((uint)0x8DA7),
-        
-        FramebufferAttachmentLayeredOes = unchecked((uint)0x8DA7),
-        
-        FramebufferAttachmentTextureScaleImg = unchecked((uint)0x913F),
-        
-        FramebufferAttachmentTextureNumViewsOvr = unchecked((uint)0x9630),
-        
-        FramebufferAttachmentTextureBaseViewIndexOvr = unchecked((uint)0x9632),
     }
 }

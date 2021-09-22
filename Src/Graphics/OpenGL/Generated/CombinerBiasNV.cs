@@ -14,7 +14,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
     public enum CombinerBiasNV : uint
     {
         None = unchecked((uint)0),
-        
-        BiasByNegativeOneHalfNv = unchecked((uint)0x8541),
     }
 }

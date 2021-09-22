@@ -15,8 +15,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
     {
         Modelview = unchecked((uint)0x1700),
         
-        Modelview0Ext = unchecked((uint)0x1700),
-        
         Projection = unchecked((uint)0x1701),
         
         Texture = unchecked((uint)0x1702),

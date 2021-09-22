@@ -15,34 +15,18 @@ namespace Dissonance.Framework.Graphics.OpenGL
     {
         MapReadBit = unchecked((uint)0x0001),
         
-        MapReadBitExt = unchecked((uint)0x0001),
-        
         MapWriteBit = unchecked((uint)0x0002),
-        
-        MapWriteBitExt = unchecked((uint)0x0002),
         
         MapInvalidateRangeBit = unchecked((uint)0x0004),
         
-        MapInvalidateRangeBitExt = unchecked((uint)0x0004),
-        
         MapInvalidateBufferBit = unchecked((uint)0x0008),
-        
-        MapInvalidateBufferBitExt = unchecked((uint)0x0008),
         
         MapFlushExplicitBit = unchecked((uint)0x0010),
         
-        MapFlushExplicitBitExt = unchecked((uint)0x0010),
-        
         MapUnsynchronizedBit = unchecked((uint)0x0020),
-        
-        MapUnsynchronizedBitExt = unchecked((uint)0x0020),
         
         MapPersistentBit = unchecked((uint)0x0040),
         
-        MapPersistentBitExt = unchecked((uint)0x0040),
-        
         MapCoherentBit = unchecked((uint)0x0080),
-        
-        MapCoherentBitExt = unchecked((uint)0x0080),
     }
 }

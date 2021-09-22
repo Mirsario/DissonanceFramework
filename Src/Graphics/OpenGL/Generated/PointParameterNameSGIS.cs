@@ -15,34 +15,10 @@ namespace Dissonance.Framework.Graphics.OpenGL
     {
         PointSizeMin = unchecked((uint)0x8126),
         
-        PointSizeMinArb = unchecked((uint)0x8126),
-        
-        PointSizeMinExt = unchecked((uint)0x8126),
-        
-        PointSizeMinSgis = unchecked((uint)0x8126),
-        
         PointSizeMax = unchecked((uint)0x8127),
-        
-        PointSizeMaxArb = unchecked((uint)0x8127),
-        
-        PointSizeMaxExt = unchecked((uint)0x8127),
-        
-        PointSizeMaxSgis = unchecked((uint)0x8127),
         
         PointFadeThresholdSize = unchecked((uint)0x8128),
         
-        PointFadeThresholdSizeArb = unchecked((uint)0x8128),
-        
-        PointFadeThresholdSizeExt = unchecked((uint)0x8128),
-        
-        PointFadeThresholdSizeSgis = unchecked((uint)0x8128),
-        
-        DistanceAttenuationExt = unchecked((uint)0x8129),
-        
-        DistanceAttenuationSgis = unchecked((uint)0x8129),
-        
         PointDistanceAttenuation = unchecked((uint)0x8129),
-        
-        PointDistanceAttenuationArb = unchecked((uint)0x8129),
     }
 }

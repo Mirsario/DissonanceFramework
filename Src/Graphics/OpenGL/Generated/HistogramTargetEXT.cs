@@ -15,10 +15,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
     {
         Histogram = unchecked((uint)0x8024),
         
-        HistogramExt = unchecked((uint)0x8024),
-        
         ProxyHistogram = unchecked((uint)0x8025),
-        
-        ProxyHistogramExt = unchecked((uint)0x8025),
     }
 }

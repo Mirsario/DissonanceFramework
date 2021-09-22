@@ -18,7 +18,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         True = unchecked((uint)1),
         
         FixedOnly = unchecked((uint)0x891D),
-        
-        FixedOnlyArb = unchecked((uint)0x891D),
     }
 }

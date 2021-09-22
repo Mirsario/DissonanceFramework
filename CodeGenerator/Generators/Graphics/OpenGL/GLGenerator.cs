@@ -103,6 +103,38 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 				throw new InvalidOperationException($"Cpp compilation had errors:\r\n{string.Join("\r\n", cppCompilation.Diagnostics.Messages.Where(m => m.Type == CppLogMessageType.Error).Select(m => m.Text))}");
 			}
 
+			// Collect lists of functions and enums referenced in versions
+
+			var enabledFunctions = new HashSet<string>(); 
+			var enabledEnumItems = new HashSet<string>(); 
+
+			foreach (var xmlFeature in xml.Root.Elements("feature")) {
+				string api = xmlFeature.Attribute("api").Value;
+
+				if (api != "gl") {
+					continue;
+				}
+
+				string directive = xmlFeature.Attribute("name").Value;
+				var versionNumber = new Version(xmlFeature.Attribute("number").Value);
+
+				foreach (var xmlRequire in xmlFeature.Elements("require")) {
+					foreach (var xmlEnum in xmlRequire.Elements("enum")) {
+						enabledEnumItems.Add(xmlEnum.Attribute("name").Value);
+					}
+
+					foreach (var xmlCommand in xmlRequire.Elements("command")) {
+						enabledFunctions.Add(xmlCommand.Attribute("name").Value);
+					}
+				}
+
+				/*
+				foreach (var removeElement in featureElement.Elements("remove")) {
+					HandleFeatureSet(removeElement, true);
+				}
+				*/
+			}
+
 			// Parse enums
 
 			var cppEnums = new Dictionary<string, (CppEnum cppEnum, HashSet<string> knownEntries)>();
@@ -114,6 +146,11 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 
 				foreach (var xmlEnum in xmlEnums.Elements("enum")) {
 					string enumItemName = xmlEnum.Attribute("name").Value;
+
+					if (!enabledEnumItems.Contains(enumItemName)) {
+						continue;
+					}
+
 					string enumItemValue = xmlEnum.Attribute("value").Value;
 					string[] enumItemGroups = xmlEnum.Attribute("group")?.Value?.Split(',');
 
@@ -154,6 +191,10 @@ namespace CodeGenerator.Generators.Graphics.OpenGL
 				foreach (var xmlCommand in xmlCommands.Elements("command")) {
 					var xmlProto = xmlCommand.Element("proto");
 					string functionName = xmlProto.Element("name").Value;
+
+					if (!enabledFunctions.Contains(functionName)) {
+						continue;
+					}
 
 					var cppFunction = new CppFunction(functionName) {
 						LinkageKind = CppLinkageKind.Internal

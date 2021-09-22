@@ -20,7 +20,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         StencilBufferBit = unchecked((uint)0x00000400),
         
         ColorBufferBit = unchecked((uint)0x00004000),
-        
-        CoverageBufferBitNv = unchecked((uint)0x00008000),
     }
 }

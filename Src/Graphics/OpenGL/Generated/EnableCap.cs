@@ -147,21 +147,7 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         Light7 = unchecked((uint)0x4007),
         
-        Convolution1dExt = unchecked((uint)0x8010),
-        
-        Convolution2dExt = unchecked((uint)0x8011),
-        
-        Separable2dExt = unchecked((uint)0x8012),
-        
-        HistogramExt = unchecked((uint)0x8024),
-        
-        MinmaxExt = unchecked((uint)0x802E),
-        
         PolygonOffsetFill = unchecked((uint)0x8037),
-        
-        RescaleNormalExt = unchecked((uint)0x803A),
-        
-        Texture3dExt = unchecked((uint)0x806F),
         
         VertexArray = unchecked((uint)0x8074),
         
@@ -175,87 +161,21 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         EdgeFlagArray = unchecked((uint)0x8079),
         
-        InterlaceSgix = unchecked((uint)0x8094),
-        
         Multisample = unchecked((uint)0x809D),
-        
-        MultisampleSgis = unchecked((uint)0x809D),
         
         SampleAlphaToCoverage = unchecked((uint)0x809E),
         
-        SampleAlphaToMaskSgis = unchecked((uint)0x809E),
-        
         SampleAlphaToOne = unchecked((uint)0x809F),
-        
-        SampleAlphaToOneSgis = unchecked((uint)0x809F),
         
         SampleCoverage = unchecked((uint)0x80A0),
         
-        SampleMaskSgis = unchecked((uint)0x80A0),
-        
-        TextureColorTableSgi = unchecked((uint)0x80BC),
-        
         ColorTable = unchecked((uint)0x80D0),
-        
-        ColorTableSgi = unchecked((uint)0x80D0),
         
         PostConvolutionColorTable = unchecked((uint)0x80D1),
         
-        PostConvolutionColorTableSgi = unchecked((uint)0x80D1),
-        
         PostColorMatrixColorTable = unchecked((uint)0x80D2),
         
-        PostColorMatrixColorTableSgi = unchecked((uint)0x80D2),
-        
-        Texture4dSgis = unchecked((uint)0x8134),
-        
-        PixelTexGenSgix = unchecked((uint)0x8139),
-        
-        SpriteSgix = unchecked((uint)0x8148),
-        
-        ReferencePlaneSgix = unchecked((uint)0x817D),
-        
-        IrInstrument1Sgix = unchecked((uint)0x817F),
-        
-        CalligraphicFragmentSgix = unchecked((uint)0x8183),
-        
-        FramezoomSgix = unchecked((uint)0x818B),
-        
-        FogOffsetSgix = unchecked((uint)0x8198),
-        
-        SharedTexturePaletteExt = unchecked((uint)0x81FB),
-        
         DebugOutputSynchronous = unchecked((uint)0x8242),
-        
-        AsyncHistogramSgix = unchecked((uint)0x832C),
-        
-        PixelTextureSgis = unchecked((uint)0x8353),
-        
-        AsyncTexImageSgix = unchecked((uint)0x835C),
-        
-        AsyncDrawPixelsSgix = unchecked((uint)0x835D),
-        
-        AsyncReadPixelsSgix = unchecked((uint)0x835E),
-        
-        FragmentLightingSgix = unchecked((uint)0x8400),
-        
-        FragmentColorMaterialSgix = unchecked((uint)0x8401),
-        
-        FragmentLight0Sgix = unchecked((uint)0x840C),
-        
-        FragmentLight1Sgix = unchecked((uint)0x840D),
-        
-        FragmentLight2Sgix = unchecked((uint)0x840E),
-        
-        FragmentLight3Sgix = unchecked((uint)0x840F),
-        
-        FragmentLight4Sgix = unchecked((uint)0x8410),
-        
-        FragmentLight5Sgix = unchecked((uint)0x8411),
-        
-        FragmentLight6Sgix = unchecked((uint)0x8412),
-        
-        FragmentLight7Sgix = unchecked((uint)0x8413),
         
         ProgramPointSize = unchecked((uint)0x8642),
         
@@ -273,14 +193,8 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         SampleMask = unchecked((uint)0x8E51),
         
-        FetchPerSampleArm = unchecked((uint)0x8F65),
-        
         PrimitiveRestart = unchecked((uint)0x8F9D),
         
         DebugOutput = unchecked((uint)0x92E0),
-        
-        ShadingRateImagePerPrimitiveNv = unchecked((uint)0x95B1),
-        
-        ShadingRatePreserveAspectRatioQcom = unchecked((uint)0x96A5),
     }
 }

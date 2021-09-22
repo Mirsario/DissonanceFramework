@@ -19,29 +19,15 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         VertexArrayPointer = unchecked((uint)0x808E),
         
-        VertexArrayPointerExt = unchecked((uint)0x808E),
-        
         NormalArrayPointer = unchecked((uint)0x808F),
-        
-        NormalArrayPointerExt = unchecked((uint)0x808F),
         
         ColorArrayPointer = unchecked((uint)0x8090),
         
-        ColorArrayPointerExt = unchecked((uint)0x8090),
-        
         IndexArrayPointer = unchecked((uint)0x8091),
-        
-        IndexArrayPointerExt = unchecked((uint)0x8091),
         
         TextureCoordArrayPointer = unchecked((uint)0x8092),
         
-        TextureCoordArrayPointerExt = unchecked((uint)0x8092),
-        
         EdgeFlagArrayPointer = unchecked((uint)0x8093),
-        
-        EdgeFlagArrayPointerExt = unchecked((uint)0x8093),
-        
-        InstrumentBufferPointerSgix = unchecked((uint)0x8180),
         
         DebugCallbackFunction = unchecked((uint)0x8244),
         

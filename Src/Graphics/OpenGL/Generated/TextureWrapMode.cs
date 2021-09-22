@@ -21,15 +21,7 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         ClampToBorder = unchecked((uint)0x812D),
         
-        ClampToBorderArb = unchecked((uint)0x812D),
-        
-        ClampToBorderNv = unchecked((uint)0x812D),
-        
-        ClampToBorderSgis = unchecked((uint)0x812D),
-        
         ClampToEdge = unchecked((uint)0x812F),
-        
-        ClampToEdgeSgis = unchecked((uint)0x812F),
         
         MirroredRepeat = unchecked((uint)0x8370),
     }

@@ -55,12 +55,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         MultisampleBit = unchecked((uint)0x20000000),
         
-        MultisampleBitArb = unchecked((uint)0x20000000),
-        
-        MultisampleBitExt = unchecked((uint)0x20000000),
-        
-        MultisampleBit3dfx = unchecked((uint)0x20000000),
-        
         AllAttribBits = unchecked((uint)0xFFFFFFFF),
     }
 }

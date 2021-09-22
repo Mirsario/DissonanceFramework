@@ -13,12 +13,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
 {
     public enum ClampColorTargetARB : uint
     {
-        ClampVertexColorArb = unchecked((uint)0x891A),
-        
-        ClampFragmentColorArb = unchecked((uint)0x891B),
-        
         ClampReadColor = unchecked((uint)0x891C),
-        
-        ClampReadColorArb = unchecked((uint)0x891C),
     }
 }

@@ -19,19 +19,11 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         BufferSize = unchecked((uint)0x8764),
         
-        BufferSizeArb = unchecked((uint)0x8764),
-        
         BufferUsage = unchecked((uint)0x8765),
-        
-        BufferUsageArb = unchecked((uint)0x8765),
         
         BufferAccess = unchecked((uint)0x88BB),
         
-        BufferAccessArb = unchecked((uint)0x88BB),
-        
         BufferMapped = unchecked((uint)0x88BC),
-        
-        BufferMappedArb = unchecked((uint)0x88BC),
         
         BufferAccessFlags = unchecked((uint)0x911F),
         

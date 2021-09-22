@@ -21,28 +21,12 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         None = unchecked((uint)0),
         
-        NoneOes = unchecked((uint)0),
-        
         True = unchecked((uint)1),
         
         One = unchecked((uint)1),
         
         InvalidIndex = unchecked((uint)0xFFFFFFFF),
         
-        AllPixelsAmd = unchecked((uint)0xFFFFFFFF),
-        
         TimeoutIgnored = unchecked((uint)0xFFFFFFFFFFFFFFFF),
-        
-        TimeoutIgnoredApple = unchecked((uint)0xFFFFFFFFFFFFFFFF),
-        
-        VersionEsCl10 = unchecked((uint)1),
-        
-        VersionEsCm11 = unchecked((uint)1),
-        
-        VersionEsCl11 = unchecked((uint)1),
-        
-        UuidSizeExt = unchecked((uint)16),
-        
-        LuidSizeExt = unchecked((uint)8),
     }
 }

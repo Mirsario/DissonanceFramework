@@ -13,32 +13,16 @@ namespace Dissonance.Framework.Graphics.OpenGL
 {
     public enum ColorTableTargetSGI : uint
     {
-        TextureColorTableSgi = unchecked((uint)0x80BC),
-        
-        ProxyTextureColorTableSgi = unchecked((uint)0x80BD),
-        
         ColorTable = unchecked((uint)0x80D0),
-        
-        ColorTableSgi = unchecked((uint)0x80D0),
         
         PostConvolutionColorTable = unchecked((uint)0x80D1),
         
-        PostConvolutionColorTableSgi = unchecked((uint)0x80D1),
-        
         PostColorMatrixColorTable = unchecked((uint)0x80D2),
-        
-        PostColorMatrixColorTableSgi = unchecked((uint)0x80D2),
         
         ProxyColorTable = unchecked((uint)0x80D3),
         
-        ProxyColorTableSgi = unchecked((uint)0x80D3),
-        
         ProxyPostConvolutionColorTable = unchecked((uint)0x80D4),
         
-        ProxyPostConvolutionColorTableSgi = unchecked((uint)0x80D4),
-        
         ProxyPostColorMatrixColorTable = unchecked((uint)0x80D5),
-        
-        ProxyPostColorMatrixColorTableSgi = unchecked((uint)0x80D5),
     }
 }

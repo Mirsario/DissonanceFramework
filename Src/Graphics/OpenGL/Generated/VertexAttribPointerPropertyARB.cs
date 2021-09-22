@@ -14,7 +14,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
     public enum VertexAttribPointerPropertyARB : uint
     {
         VertexAttribArrayPointer = unchecked((uint)0x8645),
-        
-        VertexAttribArrayPointerArb = unchecked((uint)0x8645),
     }
 }

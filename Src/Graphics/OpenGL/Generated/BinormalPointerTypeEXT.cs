@@ -22,7 +22,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         Float = unchecked((uint)0x1406),
         
         Double = unchecked((uint)0x140A),
-        
-        DoubleExt = unchecked((uint)0x140A),
     }
 }

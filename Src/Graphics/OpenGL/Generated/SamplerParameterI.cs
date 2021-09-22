@@ -26,7 +26,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
         TextureCompareMode = unchecked((uint)0x884C),
         
         TextureCompareFunc = unchecked((uint)0x884D),
-        
-        TextureUnnormalizedCoordinatesArm = unchecked((uint)0x8F6A),
     }
 }

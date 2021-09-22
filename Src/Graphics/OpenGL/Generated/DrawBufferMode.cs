@@ -15,8 +15,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
     {
         None = unchecked((uint)0),
         
-        NoneOes = unchecked((uint)0),
-        
         FrontLeft = unchecked((uint)0x0400),
         
         FrontRight = unchecked((uint)0x0401),

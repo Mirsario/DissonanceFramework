@@ -13,10 +13,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
 {
     public enum PathColor : uint
     {
-        PrimaryColorNv = unchecked((uint)0x852C),
-        
-        SecondaryColorNv = unchecked((uint)0x852D),
-        
         PrimaryColor = unchecked((uint)0x8577),
     }
 }

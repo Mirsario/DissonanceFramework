@@ -14,11 +14,5 @@ namespace Dissonance.Framework.Graphics.OpenGL
     public enum CombinerScaleNV : uint
     {
         None = unchecked((uint)0),
-        
-        ScaleByTwoNv = unchecked((uint)0x853E),
-        
-        ScaleByFourNv = unchecked((uint)0x853F),
-        
-        ScaleByOneHalfNv = unchecked((uint)0x8540),
     }
 }

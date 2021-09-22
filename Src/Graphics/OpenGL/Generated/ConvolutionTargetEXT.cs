@@ -15,10 +15,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
     {
         Convolution1d = unchecked((uint)0x8010),
         
-        Convolution1dExt = unchecked((uint)0x8010),
-        
         Convolution2d = unchecked((uint)0x8011),
-        
-        Convolution2dExt = unchecked((uint)0x8011),
     }
 }

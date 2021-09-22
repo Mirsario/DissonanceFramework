@@ -23,8 +23,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         TextureBorderColor = unchecked((uint)0x1004),
         
-        TextureBorderColorNv = unchecked((uint)0x1004),
-        
         TextureBorder = unchecked((uint)0x1005),
         
         TextureMagFilter = unchecked((uint)0x2800),
@@ -49,93 +47,19 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         TexturePriority = unchecked((uint)0x8066),
         
-        TexturePriorityExt = unchecked((uint)0x8066),
-        
         TextureResident = unchecked((uint)0x8067),
-        
-        TextureDepthExt = unchecked((uint)0x8071),
         
         TextureWrapR = unchecked((uint)0x8072),
         
-        TextureWrapRExt = unchecked((uint)0x8072),
-        
-        TextureWrapROes = unchecked((uint)0x8072),
-        
-        DetailTextureLevelSgis = unchecked((uint)0x809A),
-        
-        DetailTextureModeSgis = unchecked((uint)0x809B),
-        
-        DetailTextureFuncPointsSgis = unchecked((uint)0x809C),
-        
-        SharpenTextureFuncPointsSgis = unchecked((uint)0x80B0),
-        
-        ShadowAmbientSgix = unchecked((uint)0x80BF),
-        
-        DualTextureSelectSgis = unchecked((uint)0x8124),
-        
-        QuadTextureSelectSgis = unchecked((uint)0x8125),
-        
-        Texture4dsizeSgis = unchecked((uint)0x8136),
-        
-        TextureWrapQSgis = unchecked((uint)0x8137),
-        
         TextureMinLod = unchecked((uint)0x813A),
-        
-        TextureMinLodSgis = unchecked((uint)0x813A),
         
         TextureMaxLod = unchecked((uint)0x813B),
         
-        TextureMaxLodSgis = unchecked((uint)0x813B),
-        
         TextureBaseLevel = unchecked((uint)0x813C),
-        
-        TextureBaseLevelSgis = unchecked((uint)0x813C),
         
         TextureMaxLevel = unchecked((uint)0x813D),
         
-        TextureMaxLevelSgis = unchecked((uint)0x813D),
-        
-        TextureFilter4SizeSgis = unchecked((uint)0x8147),
-        
-        TextureClipmapCenterSgix = unchecked((uint)0x8171),
-        
-        TextureClipmapFrameSgix = unchecked((uint)0x8172),
-        
-        TextureClipmapOffsetSgix = unchecked((uint)0x8173),
-        
-        TextureClipmapVirtualDepthSgix = unchecked((uint)0x8174),
-        
-        TextureClipmapLodOffsetSgix = unchecked((uint)0x8175),
-        
-        TextureClipmapDepthSgix = unchecked((uint)0x8176),
-        
-        PostTextureFilterBiasSgix = unchecked((uint)0x8179),
-        
-        PostTextureFilterScaleSgix = unchecked((uint)0x817A),
-        
-        TextureLodBiasSSgix = unchecked((uint)0x818E),
-        
-        TextureLodBiasTSgix = unchecked((uint)0x818F),
-        
-        TextureLodBiasRSgix = unchecked((uint)0x8190),
-        
         GenerateMipmap = unchecked((uint)0x8191),
-        
-        GenerateMipmapSgis = unchecked((uint)0x8191),
-        
-        TextureCompareSgix = unchecked((uint)0x819A),
-        
-        TextureCompareOperatorSgix = unchecked((uint)0x819B),
-        
-        TextureLequalRSgix = unchecked((uint)0x819C),
-        
-        TextureGequalRSgix = unchecked((uint)0x819D),
-        
-        TextureMaxClampSSgix = unchecked((uint)0x8369),
-        
-        TextureMaxClampTSgix = unchecked((uint)0x836A),
-        
-        TextureMaxClampRSgix = unchecked((uint)0x836B),
         
         TextureLodBias = unchecked((uint)0x8501),
         
@@ -153,12 +77,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         TextureSwizzleRgba = unchecked((uint)0x8E46),
         
-        TextureUnnormalizedCoordinatesArm = unchecked((uint)0x8F6A),
-        
         DepthStencilTextureMode = unchecked((uint)0x90EA),
-        
-        TextureTilingExt = unchecked((uint)0x9580),
-        
-        TextureFoveatedCutoffDensityQcom = unchecked((uint)0x96A0),
     }
 }

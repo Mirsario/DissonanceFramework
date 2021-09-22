@@ -25,8 +25,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         Red = unchecked((uint)0x1903),
         
-        RedExt = unchecked((uint)0x1903),
-        
         Green = unchecked((uint)0x1904),
         
         Blue = unchecked((uint)0x1905),
@@ -41,19 +39,9 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         LuminanceAlpha = unchecked((uint)0x190A),
         
-        AbgrExt = unchecked((uint)0x8000),
-        
-        CmykExt = unchecked((uint)0x800C),
-        
-        CmykaExt = unchecked((uint)0x800D),
-        
         Bgr = unchecked((uint)0x80E0),
         
         Bgra = unchecked((uint)0x80E1),
-        
-        Ycrcb422Sgix = unchecked((uint)0x81BB),
-        
-        Ycrcb444Sgix = unchecked((uint)0x81BC),
         
         Rg = unchecked((uint)0x8227),
         

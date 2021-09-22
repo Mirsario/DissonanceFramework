@@ -21,125 +21,59 @@ namespace Dissonance.Framework.Graphics.OpenGL
         
         Double = unchecked((uint)0x140A),
         
-        Int64Arb = unchecked((uint)0x140E),
-        
-        Int64Nv = unchecked((uint)0x140E),
-        
-        UnsignedInt64Arb = unchecked((uint)0x140F),
-        
-        UnsignedInt64Nv = unchecked((uint)0x140F),
-        
         FloatVec2 = unchecked((uint)0x8B50),
-        
-        FloatVec2Arb = unchecked((uint)0x8B50),
         
         FloatVec3 = unchecked((uint)0x8B51),
         
-        FloatVec3Arb = unchecked((uint)0x8B51),
-        
         FloatVec4 = unchecked((uint)0x8B52),
-        
-        FloatVec4Arb = unchecked((uint)0x8B52),
         
         IntVec2 = unchecked((uint)0x8B53),
         
-        IntVec2Arb = unchecked((uint)0x8B53),
-        
         IntVec3 = unchecked((uint)0x8B54),
-        
-        IntVec3Arb = unchecked((uint)0x8B54),
         
         IntVec4 = unchecked((uint)0x8B55),
         
-        IntVec4Arb = unchecked((uint)0x8B55),
-        
         Bool = unchecked((uint)0x8B56),
-        
-        BoolArb = unchecked((uint)0x8B56),
         
         BoolVec2 = unchecked((uint)0x8B57),
         
-        BoolVec2Arb = unchecked((uint)0x8B57),
-        
         BoolVec3 = unchecked((uint)0x8B58),
-        
-        BoolVec3Arb = unchecked((uint)0x8B58),
         
         BoolVec4 = unchecked((uint)0x8B59),
         
-        BoolVec4Arb = unchecked((uint)0x8B59),
-        
         FloatMat2 = unchecked((uint)0x8B5A),
-        
-        FloatMat2Arb = unchecked((uint)0x8B5A),
         
         FloatMat3 = unchecked((uint)0x8B5B),
         
-        FloatMat3Arb = unchecked((uint)0x8B5B),
-        
         FloatMat4 = unchecked((uint)0x8B5C),
-        
-        FloatMat4Arb = unchecked((uint)0x8B5C),
         
         Sampler1d = unchecked((uint)0x8B5D),
         
-        Sampler1dArb = unchecked((uint)0x8B5D),
-        
         Sampler2d = unchecked((uint)0x8B5E),
-        
-        Sampler2dArb = unchecked((uint)0x8B5E),
         
         Sampler3d = unchecked((uint)0x8B5F),
         
-        Sampler3dArb = unchecked((uint)0x8B5F),
-        
-        Sampler3dOes = unchecked((uint)0x8B5F),
-        
         SamplerCube = unchecked((uint)0x8B60),
-        
-        SamplerCubeArb = unchecked((uint)0x8B60),
         
         Sampler1dShadow = unchecked((uint)0x8B61),
         
-        Sampler1dShadowArb = unchecked((uint)0x8B61),
-        
         Sampler2dShadow = unchecked((uint)0x8B62),
-        
-        Sampler2dShadowArb = unchecked((uint)0x8B62),
-        
-        Sampler2dShadowExt = unchecked((uint)0x8B62),
         
         Sampler2dRect = unchecked((uint)0x8B63),
         
-        Sampler2dRectArb = unchecked((uint)0x8B63),
-        
         Sampler2dRectShadow = unchecked((uint)0x8B64),
-        
-        Sampler2dRectShadowArb = unchecked((uint)0x8B64),
         
         FloatMat2x3 = unchecked((uint)0x8B65),
         
-        FloatMat2x3Nv = unchecked((uint)0x8B65),
-        
         FloatMat2x4 = unchecked((uint)0x8B66),
-        
-        FloatMat2x4Nv = unchecked((uint)0x8B66),
         
         FloatMat3x2 = unchecked((uint)0x8B67),
         
-        FloatMat3x2Nv = unchecked((uint)0x8B67),
-        
         FloatMat3x4 = unchecked((uint)0x8B68),
-        
-        FloatMat3x4Nv = unchecked((uint)0x8B68),
         
         FloatMat4x2 = unchecked((uint)0x8B69),
         
-        FloatMat4x2Nv = unchecked((uint)0x8B69),
-        
         FloatMat4x3 = unchecked((uint)0x8B6A),
-        
-        FloatMat4x3Nv = unchecked((uint)0x8B6A),
         
         SamplerBuffer = unchecked((uint)0x8DC2),
         
@@ -204,18 +138,6 @@ namespace Dissonance.Framework.Graphics.OpenGL
         DoubleMat4x2 = unchecked((uint)0x8F4D),
         
         DoubleMat4x3 = unchecked((uint)0x8F4E),
-        
-        Int64Vec2Arb = unchecked((uint)0x8FE9),
-        
-        Int64Vec3Arb = unchecked((uint)0x8FEA),
-        
-        Int64Vec4Arb = unchecked((uint)0x8FEB),
-        
-        UnsignedInt64Vec2Arb = unchecked((uint)0x8FF5),
-        
-        UnsignedInt64Vec3Arb = unchecked((uint)0x8FF6),
-        
-        UnsignedInt64Vec4Arb = unchecked((uint)0x8FF7),
         
         DoubleVec2 = unchecked((uint)0x8FFC),
         
