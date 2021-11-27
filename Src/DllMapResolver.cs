@@ -63,7 +63,11 @@ namespace Dissonance.Framework
 					throw new ArgumentException($"'{Path.GetFileName(usedConfigPath)}' - Found {maps.Count()} possible mapping candidates for dll '{name}'.");
 				}
 
-				return NativeLibrary.Load(map.Attribute("target").Value);
+				string targetPath = map.Attribute("target").Value;
+				string usedConfigDirectory = Path.GetDirectoryName(usedConfigPath);
+				string nativeLibraryPath = Path.GetFullPath(Path.Combine(usedConfigDirectory, targetPath));
+
+				return NativeLibrary.Load(nativeLibraryPath);
 			});
 		}
 
