@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using System.Threading;
-using Dissonance.Framework.Graphics;
+using Dissonance.Framework.Graphics.OpenGL;
 using Dissonance.Framework.Windowing;
 
 namespace Test
@@ -12,40 +12,42 @@ namespace Test
 
 		public static bool Fullscreen = false;
 
-		static void Main()
+		unsafe static void Main()
 		{
 			Console.WriteLine($"Working directory: '{Path.GetFullPath(".")}'.");
 
-			PrepareGLFW();
-			PrepareOpenGL();
 			PrepareOpenAL();
+			PrepareGlfw();
+			PrepareOpenGL();
 
-			//double timePrev = 0d;
-
-			CheckGLErrors();
-
-			float[] points = {
+			Span<float> points = stackalloc[] {
 				 0.0f,   0.5f,  0.0f,
 				 0.5f,  -0.5f,  0.0f,
 				-0.5f,  -0.5f,  0.0f
 			};
 
 			uint vbo = GL.GenBuffer();
-			GL.BindBuffer(BufferTarget.ArrayBuffer, vbo);
-			GL.BufferData(BufferTarget.ArrayBuffer, points.Length * sizeof(float), points, BufferUsageHint.StaticDraw);
+
+			fixed (float* pointsPtr = points) {
+				GL.BindBuffer(BufferTargetARB.ArrayBuffer, vbo);
+				GL.BufferData(BufferTargetARB.ArrayBuffer, (IntPtr)(points.Length * sizeof(float)), pointsPtr, BufferUsageARB.StaticDraw);
+			}
 
 			uint vao = GL.GenVertexArray();
+
 			GL.BindVertexArray(vao);
 			GL.EnableVertexAttribArray(0);
-			GL.BindBuffer(BufferTarget.ArrayBuffer, vbo);
-			GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 0, IntPtr.Zero);
+			GL.BindBuffer(BufferTargetARB.ArrayBuffer, vbo);
+			GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 0, null);
 
-			string vertexShader = @"#version 330 core
+			string vertexShader = @"
+#version 330 core
 in vec3 vertex;
 void main() {
 	gl_Position = vec4(vertex,1.0);
 }";
-			string fragmentShader = @"#version 330 core
+			string fragmentShader = @"
+#version 330 core
 out vec4 color;
 void main() {
 	color = vec4(1.0,0.5,0.0,1.0);
@@ -64,14 +66,14 @@ void main() {
 			GL.AttachShader(program, fs);
 			GL.LinkProgram(program);
 
-			while(GLFW.WindowShouldClose(window) == 0) {
-				GLFW.PollEvents();
+			while(Glfw.WindowShouldClose(window) == 0) {
+				Glfw.PollEvents();
 
-				double time = GLFW.GetTime();
+				double time = Glfw.GetTime();
 				//double deltaTime = time-timePrev;
 				//timePrev = time;
 
-				GLFW.GetFramebufferSize(window, out int width, out int height);
+				Glfw.GetFramebufferSize(window, out int width, out int height);
 
 				GL.Viewport(0, 0, width, height);
 
@@ -81,25 +83,40 @@ void main() {
 				colorG = Math.Max(colorG, 0.9f);
 				colorB = Math.Max(colorB, 0.9f);
 
-				GL.ClearColor(colorR, colorG, colorB); //GL.ClearColor(70/255f,130/255f,180/255f);
+				GL.ClearColor(colorR, colorG, colorB, 1f);
 				GL.Clear(ClearBufferMask.ColorBufferBit);
 
 				GL.UseProgram(program);
 				GL.BindVertexArray(vao);
 				GL.DrawArrays(PrimitiveType.Triangles, 0, points.Length / 3);
 
-				GLFW.SwapBuffers(window);
+				Glfw.SwapBuffers(window);
 
 				CheckGLErrors();
 
 				Thread.Sleep(1);
 			}
 
+			Console.ReadLine();
+
 			UnloadOpenAL();
-			UnloadGLFW();
+			UnloadGlfw();
 		}
 
-		public static float Lerp(float a, float b, float time) => a + (b - a) * Clamp01(time);
-		public static float Clamp01(float value) => value < 0f ? 0f : value > 1f ? 1f : value;
+		private static (float r, float g, float b) GetRainbowColor(float progress)
+		{
+			float div = Math.Abs(progress % 1) * 6f;
+			float ascending = div % 1;
+			float descending = 1f - ascending;
+
+			return (int)div switch {
+				0 => (255f, ascending, 0f),
+				1 => (descending, 255f, 0f),
+				2 => (0f, 255f, ascending),
+				3 => (0f, descending, 255f),
+				4 => (ascending, 0f, 255f),
+				_ => (255f, 0f, descending),
+			};
+		}
 	}
 }

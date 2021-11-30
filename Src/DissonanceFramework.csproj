@@ -8,8 +8,7 @@
 	<RootNamespace>Dissonance.Framework</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	<TieredCompilation>false</TieredCompilation>
-	<ApplicationIcon />
-	<StartupObject />
+	<LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -22,7 +21,7 @@
 
   <ItemGroup>
 	<EmbeddedResource Include="DissonanceFramework.dll.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 

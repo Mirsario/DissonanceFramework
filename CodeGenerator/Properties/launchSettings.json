@@ -2,7 +2,8 @@
   "profiles": {
     "CodeGenerator": {
       "commandName": "Project",
-      "commandLineArgs": "../../../../Src/"
+      "commandLineArgs": "../Src/Windowing/",
+      "workingDirectory": "."
     }
   }
 }
